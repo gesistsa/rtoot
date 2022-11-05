@@ -7,14 +7,15 @@
 #' @export
 #'
 get_token <- function(instance = "mastodon.social"){
-  base_url <- paste0("https://",instance)
-  dest <- "/api/v1/apps"
-  auth1 <- httr::POST(paste0(base_url,dest),body=list(
+  url <- httr::parse_url("")
+  url$hostname <- instance
+  url$scheme <- "https"
+  auth1 <- httr::POST(httr::modify_url(url = url, path = "/api/v1/apps"),body=list(
     client_name="rtoot package",
     redirect_uris="urn:ietf:wg:oauth:2.0:oob",
     scopes="read write follow"))
 
-  auth2 <- httr::POST(paste0(base_url,"oauth/token"),body=list(
+  auth2 <- httr::POST(httr::modify_url(url = url, path = "oauth/token"),body=list(
     client_id=httr::content(auth1)$client_id ,
     client_secret=httr::content(auth1)$client_secret,
     redirect_uri='urn:ietf:wg:oauth:2.0:oob',
