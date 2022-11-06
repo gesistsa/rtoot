@@ -14,4 +14,14 @@ get_instances  <-  function(n = 20) {
   df[1:n,]
 }
 
+#' @export
+print.rtoot_client <- function(x,...){
+  cat("<mastodon client>")
+  invisible(x)
+}
 
+#' @export
+print.rtoot_bearer <- function(x,...){
+  cat("<mastodon bearer token>")
+  invisible(x)
+}
