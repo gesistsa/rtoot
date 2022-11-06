@@ -1,6 +1,19 @@
 ## Endpoints under
 ## https://docs.joinmastodon.org/methods/timelines/
 
+make_get_request <- function(token, path, params, ...) {
+  url <- prepare_url(token$instance)
+  request_results <- httr::GET(httr::modify_url(url, path = path),
+                               httr::add_headers(Authorization = paste('Bearer', token$bearer)),
+                               query = params)
+  
+  status_code <- httr::status_code(request_results)
+  if (!status_code %in% c(200)) {
+    stop(paste("something went wrong. Status code:", status_code))
+  }
+  return(httr::content(request_results))
+}
+
 #' Get the public timeline
 #'
 #' Query the instance for the public timeline
@@ -20,8 +33,6 @@
 #' @references
 #' https://docs.joinmastodon.org/methods/timelines/
 get_public_timeline <- function(local = FALSE, remote = FALSE, only_media = FALSE, max_id, since_id, min_id, limit = 20L, token = NULL) {
-  stopifnot(!missing(token))
-  url <- prepare_url(token$instance)
   params <- list(local = local, remote = remote, only_media = only_media, limit = limit)
   if (!missing(max_id)) {
     params$max_id <- max_id
@@ -32,15 +43,7 @@ get_public_timeline <- function(local = FALSE, remote = FALSE, only_media = FALS
   if (!missing(min_id)) {
     params$min_id <- min_id
   }
-  request_results <- httr::GET(httr::modify_url(url, path = "/api/v1/timelines/public"),
-                               httr::add_headers(Authorization = paste('Bearer', token$bearer)),
-                               query = params)
-  
-  status_code <- httr::status_code(request_results)
-  if (!status_code %in% c(200)) {
-    stop(paste("something went wrong. Status code:", status_code))
-  }
-  return(httr::content(request_results))
+  make_get_request(token = token, path = "/api/v1/timelines/public", params = params)
 }
 
 ## A helper function to flatten a status
