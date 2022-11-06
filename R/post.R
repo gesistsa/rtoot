@@ -29,10 +29,18 @@ post_toot <- function(
   }
   stopifnot(is.character(status), length(status) == 1)
   if(!is.null(media)){
-
-  # TODO with upload_media_to_mastodon
+    check_media(media,alt_text)
+    media_id_string <- character(length(media))
+    for(i in seq_along(media)){
+      media_id_string[[i]] <- upload_media_to_mastodon(media[[i]],alt_text[[i]],token)
+    }
+    media_id_string <- paste(media_id_string, collapse = ",")
+    params <- list(
+      status = status,
+      "media_ids[]"= media_id_string
+    )
   } else{
-    params <- list("status" = status)
+    params <- list(status = status)
   }
   if(!is.null(in_reply_to_id)){
     params[["in_reply_to_id"]] <- in_reply_to_id
@@ -59,6 +67,36 @@ post_toot <- function(
   invisible(r)
 }
 
-upload_media_to_mastodon <- function(){
+upload_media_to_mastodon <- function(media,alt_text,token){
+  url <- prepare_url(token$instance)
+  params <- list(file=httr::upload_file(media),description = alt_text)
+  r <- httr::POST(httr::modify_url(url = url, path = "api/v1/media"),
+                  body=params,
+                  httr::add_headers(Authorization = paste0("Bearer ",token$bearer)))
+  httr::content(r)$id
+}
 
+check_media <- function(media, alt_text) {
+  if (!is.character(media) | !is.character(alt_text)) {
+    stop("Media and alt_text must be character vectors.", call. = FALSE)
+  }
+  # media_type <- tools::file_ext(media)
+  # if (length(media) > 4) {
+  #   stop("At most 4 images per plot can be uploaded.", call. = FALSE)
+  # }
+  #
+  # if (media_type %in% c("gif", "mp4") && length(media) > 1) {
+  #   stop("Cannot upload more than one gif or video per tweet.", call. = TRUE)
+  # }
+
+  if (!is.null(alt_text) && length(alt_text) != length(media)) {
+    stop("Alt text for media isn't provided for each image.", call. = TRUE)
+  }
+  # if (!any(media_type %in% c("jpg", "jpeg", "png", "gif", "mp4"))) {
+  #   stop("Media type format not recognized.", call. = TRUE)
+  # }
+
+  if (any(nchar(alt_text) > 1000)) {
+    stop("Alt text cannot be longer than 1000 characters.", call. = TRUE)
+  }
 }
