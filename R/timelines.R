@@ -42,3 +42,13 @@ get_public_timeline <- function(local = FALSE, remote = FALSE, only_media = FALS
   }
   return(httr::content(request_results))
 }
+
+## A helper function to flatten a status
+flatten_status <- function(status) {
+  for (i in seq_along(status)) {
+    if (length(status[[i]]) > 1) {
+      class(status[[i]]) <- c("rtoot_status_field", names(status)[i], class(status[[i]]))
+    }
+  }
+  return(status)
+}
