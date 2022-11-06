@@ -40,7 +40,6 @@ create_bearer <- function(client, type = "public"){
       redirect_uri='urn:ietf:wg:oauth:2.0:oob',
       grant_type='client_credentials'
     ))
-    bearer <- list(bearer = httr::content(auth2)$access_token)
   } else if(type == "user"){
     httr::BROWSE(httr::modify_url(url = url, path = "oauth/authorize"),query=list(
       client_id=client$client_id ,
@@ -49,8 +48,16 @@ create_bearer <- function(client, type = "public"){
       response_type="code"
     ))
     auth_code <- readline(prompt = "enter authorization code: ")
-    bearer <- list("bearer" = auth_code)
+    auth2 <- httr::POST(httr::modify_url(url = url, path = "oauth/token"),body=list(
+      client_id=client$client_id ,
+      client_secret=client$client_secret,
+      redirect_uri='urn:ietf:wg:oauth:2.0:oob',
+      grant_type='authorization_code',
+      code = auth_code,
+      scope = "read write follow"
+    ))
   }
+  bearer <- list(bearer = httr::content(auth2)$access_token)
   bearer$type <- type
   bearer$instance <- client$instance
   class(bearer) <- "rtoot_bearer"
@@ -66,6 +73,7 @@ verify_credentials <- function(token){
   acc <- httr::GET(httr::modify_url(url = url, path = "api/v1/accounts/verify_credentials"),
              httr::add_headers(Authorization = paste0("Bearer ",token$bearer))
   )
+  acc
 }
 
 
