@@ -4,12 +4,10 @@
 \alias{create_bearer}
 \title{get a bearer token for the mastodon api}
 \usage{
-create_bearer(client, instance = "mastodon.social")
+create_bearer(client)
 }
 \arguments{
 \item{client}{rtoot client object created with \link{get_client}}
-
-\item{instance}{server name}
 }
 \value{
 a maatodon bearer token

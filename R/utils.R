@@ -16,12 +16,12 @@ get_instances  <-  function(n = 20) {
 
 #' @export
 print.rtoot_client <- function(x,...){
-  cat("<mastodon client>")
+  cat("<mastodon client> for instance: ", x$instance, "\n")
   invisible(x)
 }
 
 #' @export
 print.rtoot_bearer <- function(x,...){
-  cat("<mastodon bearer token>")
+  cat("<mastodon bearer token> for instance: ", x$instance, "\n")
   invisible(x)
 }
