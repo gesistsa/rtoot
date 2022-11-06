@@ -1,3 +1,4 @@
+## login described at https://docs.joinmastodon.org/client/authorized/
 #' register a mastodon client
 #'
 #' @param instance server name
@@ -21,31 +22,64 @@ get_client <- function(instance = "mastodon.social"){
 #' get a bearer token for the mastodon api
 #'
 #' @param client rtoot client object created with [get_client]
-#'
-#' @return a maatodon bearer token
+#' @param type one of "public" or "user". See details
+#' @details TBA
+#' @return a mastodon bearer token
 #' @export
 #'
-create_bearer <- function(client){
+create_bearer <- function(client, type = "public"){
+  type <- match.arg(type,c("public","user"))
   if(!inherits(client,"rtoot_client")){
     stop("client is not an object of type rtoot_client")
   }
   url <- prepare_url(client$instance)
-
-  auth2 <- httr::POST(httr::modify_url(url = url, path = "oauth/token"),body=list(
-    client_id=client$client_id ,
-    client_secret=client$client_secret,
-    redirect_uri='urn:ietf:wg:oauth:2.0:oob',
-    grant_type='client_credentials'
-  ))
+  if(type=="public"){
+    auth2 <- httr::POST(httr::modify_url(url = url, path = "oauth/token"),body=list(
+      client_id=client$client_id ,
+      client_secret=client$client_secret,
+      redirect_uri='urn:ietf:wg:oauth:2.0:oob',
+      grant_type='client_credentials'
+    ))
+  } else if(type == "user"){
+    httr::BROWSE(httr::modify_url(url = url, path = "oauth/authorize"),query=list(
+      client_id=client$client_id ,
+      redirect_uri='urn:ietf:wg:oauth:2.0:oob',
+      scope='read write follow',
+      response_type="code"
+    ))
+    auth_code <- readline(prompt = "enter authorization code: ")
+    auth2 <- httr::POST(httr::modify_url(url = url, path = "oauth/token"),body=list(
+      client_id=client$client_id ,
+      client_secret=client$client_secret,
+      redirect_uri='urn:ietf:wg:oauth:2.0:oob',
+      grant_type='authorization_code',
+      code = auth_code,
+      scope = "read write follow"
+    ))
+  }
   bearer <- list(bearer = httr::content(auth2)$access_token)
+  bearer$type <- type
   bearer$instance <- client$instance
   class(bearer) <- "rtoot_bearer"
   bearer
 }
 
-prepare_url <- function(instance){
-  url <- httr::parse_url("")
-  url$hostname <- instance
-  url$scheme <- "https"
-  url
+
+#' verify mastodon credentials
+#'
+#' @param token user bearer token
+#'
+#' @return mastodon account
+#' @export
+verify_credentials <- function(token){
+  if(!inherits(token,"rtoot_bearer")){
+    stop("token is not an object of type rtoot_bearer")
+  }
+  url <- prepare_url(token$instance)
+  acc <- httr::GET(httr::modify_url(url = url, path = "api/v1/accounts/verify_credentials"),
+             httr::add_headers(Authorization = paste0("Bearer ",token$bearer))
+  )
+  acc
 }
+
+

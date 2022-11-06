@@ -4,14 +4,19 @@
 \alias{create_bearer}
 \title{get a bearer token for the mastodon api}
 \usage{
-create_bearer(client)
+create_bearer(client, type = "public")
 }
 \arguments{
 \item{client}{rtoot client object created with \link{get_client}}
+
+\item{type}{one of "public" or "user". See details}
 }
 \value{
-a maatodon bearer token
+a mastodon bearer token
 }
 \description{
 get a bearer token for the mastodon api
+}
+\details{
+TBA
 }

@@ -11,7 +11,7 @@
 #' @param since_id character, Return results newer than this id
 #' @param min_id character, Return results immediately newer than this id
 #' @param limit integer, Maximum number of results to return
-#' @param bearer bearer token from [create_bearer()]
+#' @inheritParams post_toot
 #' @return a list of statuses
 #' @export
 #' @examples
@@ -19,9 +19,9 @@
 #' get_public_timeline(bearer = bearer)
 #' @references
 #' https://docs.joinmastodon.org/methods/timelines/
-get_public_timeline <- function(local = FALSE, remote = FALSE, only_media = FALSE, max_id, since_id, min_id, limit = 20L, bearer) {
-  stopifnot(!missing(bearer))
-  url <- prepare_url(bearer$instance)
+get_public_timeline <- function(local = FALSE, remote = FALSE, only_media = FALSE, max_id, since_id, min_id, limit = 20L, token = NULL) {
+  stopifnot(!missing(token))
+  url <- prepare_url(token$instance)
   params <- list(local = local, remote = remote, only_media = only_media, limit = limit)
   if (!missing(max_id)) {
     params$max_id <- max_id
@@ -33,7 +33,7 @@ get_public_timeline <- function(local = FALSE, remote = FALSE, only_media = FALS
     params$min_id <- min_id
   }
   request_results <- httr::GET(httr::modify_url(url, path = "/api/v1/timelines/public"),
-                               httr::add_headers(Authorization = paste('Bearer', bearer$bearer)),
+                               httr::add_headers(Authorization = paste('Bearer', token$bearer)),
                                query = params)
   
   status_code <- httr::status_code(request_results)

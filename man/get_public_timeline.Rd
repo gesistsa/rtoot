@@ -12,7 +12,7 @@ get_public_timeline(
   since_id,
   min_id,
   limit = 20L,
-  bearer
+  token = NULL
 )
 }
 \arguments{
@@ -30,7 +30,7 @@ get_public_timeline(
 
 \item{limit}{integer, Maximum number of results to return}
 
-\item{bearer}{bearer token from \code{\link[=create_bearer]{create_bearer()}}}
+\item{token}{user bearer token}
 }
 \value{
 a list of statuses
