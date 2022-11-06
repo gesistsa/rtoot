@@ -1,0 +1,44 @@
+---
+title: "Authentication with rtoot"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Authentication with rtoot}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(rtoot)
+```
+
+Authentication happens in two stepps with `rtoot`. First, a client id and secret need to be created
+```{r client,eval=FALSE}
+client <- get_client(instance = "mastodon.social")
+```
+
+The instance parameter should be set to a valid fediverse instance. A list of instances can be obtained with
+`get_instances()`.
+
+With the client id and secret, a bearer token can be created. There are two types of bearer tokens. A public one, which can be used to access public data, or a user based one, which also allows to act on behalf of a user. Generally, we recommend to create a user based token, since it has a larger scope.
+
+```{r bearer,eval=FALSE}
+token <- create_bearer(client, type = "user")
+```
+
+If you create a user based token, a browser will open and you need to authenticate your account. Copy the 
+authentication code shown and paste it into the prompt in the RStudio console.
+
+To not re-authenticate every time, you can save the created token.
+```{r save_bearer,eval=FALSE}
+save_auth_rtoot(token)
+```
+
+
+
