@@ -1,12 +1,12 @@
 
-#' get a token for the mastodon api
+#' get a bearer token for the mastodon api
 #'
 #' @param instance server name
 #'
 #' @return bearer token
 #' @export
 #'
-get_token <- function(instance = "mastodon.social"){
+create_bearer <- function(instance = "mastodon.social"){
   url <- httr::parse_url("")
   url$hostname <- instance
   url$scheme <- "https"
