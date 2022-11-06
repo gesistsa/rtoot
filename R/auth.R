@@ -53,8 +53,6 @@ create_bearer <- function(client, type = "public"){
   }
   bearer$type <- type
   bearer$instance <- client$instance
-  bearer$client_id <- client$client_id
-  bearer$client_secret <- client$client_secret
   class(bearer) <- "rtoot_bearer"
   bearer
 }
