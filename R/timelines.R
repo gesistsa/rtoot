@@ -7,7 +7,7 @@ make_get_request <- function(token, path, params, ...) {
   request_results <- httr::GET(httr::modify_url(url, path = path),
                                httr::add_headers(Authorization = paste('Bearer', token$bearer)),
                                query = params)
-  
+
   status_code <- httr::status_code(request_results)
   if (!status_code %in% c(200)) {
     stop(paste("something went wrong. Status code:", status_code))
@@ -26,6 +26,7 @@ make_get_request <- function(token, path, params, ...) {
 #' get_status(id = "109298295023649405", token = token)
 #' @export
 get_status <- function(id, token = NULL) {
+  token <- check_token_rtoot(token)
   path <- paste0("/api/v1/statuses/", id)
   make_get_request(token = token, path = path, params = list())
 }
@@ -48,7 +49,9 @@ get_status <- function(id, token = NULL) {
 #' get_public_timeline(bearer = bearer)
 #' @references
 #' https://docs.joinmastodon.org/methods/timelines/
-get_public_timeline <- function(local = FALSE, remote = FALSE, only_media = FALSE, max_id, since_id, min_id, limit = 20L, token = NULL) {
+get_public_timeline <- function(local = FALSE, remote = FALSE, only_media = FALSE,
+                                max_id, since_id, min_id, limit = 20L, token = NULL) {
+  token <- check_token_rtoot(token)
   params <- list(local = local, remote = remote, only_media = only_media, limit = limit)
   if (!missing(max_id)) {
     params$max_id <- max_id

@@ -4,7 +4,7 @@
 \alias{verify_credentials}
 \title{verify mastodon credentials}
 \usage{
-verify_credentials(token)
+verify_credentials(token = NULL)
 }
 \arguments{
 \item{token}{user bearer token}

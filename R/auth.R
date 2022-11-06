@@ -71,9 +71,9 @@ create_bearer <- function(client, type = "public"){
 #'
 #' @return mastodon account
 #' @export
-verify_credentials <- function(token){
-  if(!inherits(token,"rtoot_bearer")){
-    stop("token is not an object of type rtoot_bearer")
+verify_credentials <- function(token=NULL){
+  if(is.null(token)){
+    token <- get_auth_rtoot()
   }
   url <- prepare_url(token$instance)
   acc <- httr::GET(httr::modify_url(url = url, path = "api/v1/accounts/verify_credentials"),
@@ -82,4 +82,49 @@ verify_credentials <- function(token){
   acc
 }
 
+#' save a bearer token to file
+#'
+#' @param token bearer token created with [create_bearer]
+#'
+#' @export
+save_auth_rtoot <- function(token){
+  if(!inherits(token,"rtoot_bearer")){
+    stop("token is not an object of type rtoot_bearer")
+  }
+  dir.create(auth_path_rtoot(), showWarnings = FALSE, recursive = TRUE)
+  out_file <- auth_path_rtoot("default.rds")
+  saveRDS(token,out_file)
+  invisible(token)
+}
 
+get_auth_rtoot <- function(){
+  path <- file.path(tools::R_user_dir("rtoot", "config"), "default.rds")
+  if(!file.exists(path)){
+    stop("no token found in default location. Use save_auth_rtoot(token) with a token created from create_bearer()")
+  }
+  readRDS(path)
+}
+
+auth_path_rtoot <- function(...){
+  path <- tools::R_user_dir("rtoot", "config")
+  file.path(path,...)
+}
+
+is_auth_rtoot <- function(token){
+  if(!inherits(token,"rtoot_bearer")){
+    return(FALSE)
+  } else{
+    return(TRUE)
+  }
+}
+
+check_token_rtoot <- function(token = NULL){
+  if(!is.null(token)){
+    if(!is_auth_rtoot(token)){
+      stop("token is not an object of type rtoot_bearer")
+    }
+  } else{
+    token <- get_auth_rtoot()
+  }
+  return(token)
+}

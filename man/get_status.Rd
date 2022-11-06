@@ -13,8 +13,8 @@ get_status(id, token = NULL)
 }
 \value{
 a status
-bearer <- create_bearer(get_client(instance = "social.tchncs.de"), type = "user")
-get_status(id = "109298295023649405")
+token <- create_bearer(get_client(instance = "social.tchncs.de"), type = "user")
+get_status(id = "109298295023649405", token = token)
 }
 \description{
 Query the instance for a specific status

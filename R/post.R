@@ -24,9 +24,8 @@ post_toot <- function(
     scheduled_at = NULL,
     language = NULL){
 
-  if(!inherits(token,"rtoot_bearer")){
-    stop("token is not an object of type rtoot_bearer")
-  }
+  token <- check_token_rtoot(token)
+
   stopifnot(is.character(status), length(status) == 1)
   if(!is.null(media)){
     check_media(media,alt_text)
