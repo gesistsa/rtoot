@@ -51,7 +51,7 @@ post_toot <- function(
   visibility <- match.arg(visibility,c("public", "unlisted", "private", "direct"))
   params[["visibility"]] <- visibility
   if(!is.null(scheduled_at)){
-    params[["schedule_at"]] <- schedule_at
+    params[["scheduled_at"]] <- scheduled_at
   }
   if(!is.null(language)){
     params[["language"]] <- language

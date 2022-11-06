@@ -20,3 +20,6 @@ get a bearer token for the mastodon api
 \details{
 TBA
 }
+\references{
+https://docs.joinmastodon.org/client/authorized/
+}

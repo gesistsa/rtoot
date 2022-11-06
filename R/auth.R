@@ -4,6 +4,7 @@
 #' @param instance server name
 #'
 #' @return an rtoot client object
+#' @references https://docs.joinmastodon.org/client/token/#creating-our-application
 #' @export
 #'
 get_client <- function(instance = "mastodon.social"){
@@ -25,6 +26,7 @@ get_client <- function(instance = "mastodon.social"){
 #' @param type one of "public" or "user". See details
 #' @details TBA
 #' @return a mastodon bearer token
+#' @references https://docs.joinmastodon.org/client/authorized/
 #' @export
 #'
 create_bearer <- function(client, type = "public"){

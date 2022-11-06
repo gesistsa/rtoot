@@ -15,3 +15,6 @@ an rtoot client object
 \description{
 register a mastodon client
 }
+\references{
+https://docs.joinmastodon.org/client/token/#creating-our-application
+}
