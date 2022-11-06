@@ -1,4 +1,5 @@
 ## Endpoints under
+## https://docs.joinmastodon.org/methods/statuses/
 ## https://docs.joinmastodon.org/methods/timelines/
 
 make_get_request <- function(token, path, params, ...) {
@@ -12,6 +13,21 @@ make_get_request <- function(token, path, params, ...) {
     stop(paste("something went wrong. Status code:", status_code))
   }
   return(httr::content(request_results))
+}
+
+#' View specific status
+#'
+#' Query the instance for a specific status
+#'
+#' @param id character, Local ID of a status in the database
+#' @inheritParams post_toot
+#' @return a status
+#' token <- create_bearer(get_client(instance = "social.tchncs.de"), type = "user")
+#' get_status(id = "109298295023649405", token = token)
+#' @export
+get_status <- function(id, token = NULL) {
+  path <- paste0("/api/v1/statuses/", id)
+  make_get_request(token = token, path = path, params = list())
 }
 
 #' Get the public timeline
