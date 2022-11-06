@@ -65,6 +65,12 @@ create_bearer <- function(client, type = "public"){
 }
 
 
+#' verify mastodon credentials
+#'
+#' @param token user bearer token
+#'
+#' @return mastodon account
+#' @export
 verify_credentials <- function(token){
   if(!inherits(token,"rtoot_bearer")){
     stop("token is not an object of type rtoot_bearer")
