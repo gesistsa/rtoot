@@ -130,3 +130,18 @@ get_account_lists <- function(id,token = NULL, parse = TRUE){
   }
   return(output) #TODO: probably need to format
 }
+
+#' Find out whether a given account is followed, blocked, muted, etc.
+#' @inheritParams get_account_statuses
+#' @param ids vector of account ids
+#' @details this functions needs a user level auth token
+#' @return relationships
+#' @export
+get_account_relationships <- function(ids,token = NULL, parse = TRUE){
+  path <- "/api/v1/accounts/relationships"
+  ids_lst <- lapply(ids,identity)
+  names(ids_lst) <- rep("id[]",length(ids_lst))
+  params <- ids_lst
+  output <- make_get_request(token = token,path = path, params = params)
+  dplyr::bind_rows(output)
+}
