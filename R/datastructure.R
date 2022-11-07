@@ -15,16 +15,16 @@ format_date <- function(x, format = "%Y-%m-%dT%H:%M:%OS", tz = "UTC") {
 
 ## order the columns as in the `empty` below
 
-parse_status <- function(status, as_tibble = TRUE, parse_date = TRUE) {
+parse_status <- function(status, parse_date = TRUE) {
   ## Make sure the output is like this
-  empty <- data.frame(id = NA_character_, uri = NA_character_, created_at = NA_character_, content = NA_character_, visibility = NA_character_, sensitive = NA, spoiler_text = NA_character_, reblogs_count = 0, favourites_count = 0, replies_count = 0, url = NA_character_, in_reply_to_id = NA_character_, in_reply_to_account_id = NA_character_, language = NA_character_, text = NA_character_, application = I(list(list())), poll = I(list(list())), card = I(list(list())), account = I(list(list())), reblog = I(list(list())), media_attachments = I(list(list())), mentions = I(list(list())), tags = I(list(list())), emojis = I(list(list())), favourited = NA, reblogged = NA, muted = NA, bookmarked = NA, pinned = NA)
+  empty <- tibble::tibble(id = NA_character_, uri = NA_character_, created_at = NA_character_, content = NA_character_, visibility = NA_character_, sensitive = NA, spoiler_text = NA_character_, reblogs_count = 0, favourites_count = 0, replies_count = 0, url = NA_character_, in_reply_to_id = NA_character_, in_reply_to_account_id = NA_character_, language = NA_character_, text = NA_character_, application = I(list(list())), poll = I(list(list())), card = I(list(list())), account = I(list(list())), reblog = I(list(list())), media_attachments = I(list(list())), mentions = I(list(list())), tags = I(list(list())), emojis = I(list(list())), favourited = NA, reblogged = NA, muted = NA, bookmarked = NA, pinned = NA)
   if (is.null(status)) {
     output <- empty
   } else {
     singular_fields <- c("id", "uri", "created_at", "content", "visibility", "sensitive", "spoiler_text", "reblogs_count", "favourites_count", "replies_count", "url", "in_reply_to_id", "in_reply_to_account_id", "language", "text")
     singular_list <- lapply(status[singular_fields], function(x) ifelse(is.null(x), NA, x))
     names(singular_list) <- singular_fields
-    output <- as.data.frame(singular_list)
+    output <- tibble::tibble(as.data.frame(singular_list))
     if (parse_date) {
       output$created_at <- format_date(output$created_at)
     }
@@ -43,13 +43,11 @@ parse_status <- function(status, as_tibble = TRUE, parse_date = TRUE) {
         output[["reblog"]][[1]] <- parse_status(status[["reblog"]])
       }
     }
-
     for (field in c("media_attachments", "mentions", "tags", "emojis")) {
-      output[[field]]  <- I(list(list()))
-      if (has_name_(status, field)) {
-        if (length(status[[field]]) != 0) {
-          output[[field]] <- status[[field]]
-        }
+      if (has_name_(status, field) & length(status[[field]]) != 0) {
+          output[[field]] <- list(dplyr::bind_rows(status[[field]]))
+      } else {
+        output[[field]]  <- I(list(list()))
       }
     }
     for (field in c("favourited", "reblogged", "muted", "bookmarked", "pinned")) {
@@ -60,9 +58,6 @@ parse_status <- function(status, as_tibble = TRUE, parse_date = TRUE) {
         }
       }  
     }
-  }
-  if (as_tibble) {
-    output <- tibble::as_tibble(output)
   }
   output
 }
