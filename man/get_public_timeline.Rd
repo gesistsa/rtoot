@@ -13,7 +13,8 @@ get_public_timeline(
   min_id,
   limit = 20L,
   instance = NULL,
-  token = NULL
+  token = NULL,
+  anonymous = FALSE
 )
 }
 \arguments{
@@ -34,6 +35,8 @@ get_public_timeline(
 \item{instance}{character, the server name of the instance where the status is located. If \code{NULL}, the same instance used to obtain the token is used.}
 
 \item{token}{user bearer token}
+
+\item{anonymous}{some API calls do not need a token. Setting anonymous to TRUE allows to make an anonymous call if possible.}
 }
 \value{
 a list of statuses

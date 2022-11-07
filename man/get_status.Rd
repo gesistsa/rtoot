@@ -4,7 +4,7 @@
 \alias{get_status}
 \title{View specific status}
 \usage{
-get_status(id, instance = NULL, token = NULL)
+get_status(id, instance = NULL, token = NULL, anonymous = FALSE)
 }
 \arguments{
 \item{id}{character, Local ID of a status in the database}
@@ -12,6 +12,8 @@ get_status(id, instance = NULL, token = NULL)
 \item{instance}{character, the server name of the instance where the status is located. If \code{NULL}, the same instance used to obtain the token is used.}
 
 \item{token}{user bearer token}
+
+\item{anonymous}{some API calls do not need a token. Setting anonymous to TRUE allows to make an anonymous call if possible.}
 }
 \value{
 a status

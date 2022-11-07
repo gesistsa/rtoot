@@ -2,15 +2,22 @@
 ## https://docs.joinmastodon.org/methods/statuses/
 ## https://docs.joinmastodon.org/methods/timelines/
 
-make_get_request <- function(token, path, params, instance = NULL, ...) {
-  token <- check_token_rtoot(token)
+make_get_request <- function(token, path, params, instance = NULL, anonymous = FALSE, ...) {
+  if (is.null(instance) && anonymous) {
+    stop("provide either an instance or a token")
+  }
+
   if (is.null(instance)) {
+    token <- check_token_rtoot(token)
     url <- prepare_url(token$instance)
+    config <- httr::add_headers(Authorization = paste('Bearer', token$bearer))
   } else {
     url <- prepare_url(instance)
+    config = list()
   }
+
   request_results <- httr::GET(httr::modify_url(url, path = path),
-                               httr::add_headers(Authorization = paste('Bearer', token$bearer)),
+                               config,
                                query = params)
 
   status_code <- httr::status_code(request_results)
@@ -26,14 +33,16 @@ make_get_request <- function(token, path, params, instance = NULL, ...) {
 #'
 #' @param id character, Local ID of a status in the database
 #' @param instance character, the server name of the instance where the status is located. If `NULL`, the same instance used to obtain the token is used.
+#' @param anonymous some API calls do not need a token. Setting anonymous to TRUE allows to make an anonymous call if possible.
 #' @inheritParams post_toot
 #' @return a status
 #' token <- create_bearer(get_client(instance = "social.tchncs.de"), type = "user")
 #' get_status(id = "109298295023649405", token = token)
 #' @export
-get_status <- function(id, instance = NULL, token = NULL) {
+get_status <- function(id, instance = NULL, token = NULL, anonymous = FALSE) {
+  # if (!anonymous) token <- check_token_rtoot(token) # TODO:check if this is needed. I do not think so
   path <- paste0("/api/v1/statuses/", id)
-  make_get_request(token = token, path = path, params = list(), instance = instance)
+  make_get_request(token = token, path = path, params = list(), instance = instance, anonymous = anonymous)
 }
 
 #' Get the public timeline
@@ -56,7 +65,7 @@ get_status <- function(id, instance = NULL, token = NULL) {
 #' @references
 #' https://docs.joinmastodon.org/methods/timelines/
 get_public_timeline <- function(local = FALSE, remote = FALSE, only_media = FALSE,
-                                max_id, since_id, min_id, limit = 20L, instance = NULL, token = NULL) {
+                                max_id, since_id, min_id, limit = 20L, instance = NULL, token = NULL, anonymous = FALSE) {
   params <- list(local = local, remote = remote, only_media = only_media, limit = limit)
   if (!missing(max_id)) {
     params$max_id <- max_id
@@ -67,5 +76,5 @@ get_public_timeline <- function(local = FALSE, remote = FALSE, only_media = FALS
   if (!missing(min_id)) {
     params$min_id <- min_id
   }
-  make_get_request(token = token, path = "/api/v1/timelines/public", params = params, instance = instance)
+  make_get_request(token = token, path = "/api/v1/timelines/public", params = params, instance = instance, anonymous = anonymous)
 }
