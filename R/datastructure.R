@@ -29,7 +29,7 @@ parse_status <- function(status, parse_date = TRUE) {
       output$created_at <- format_date(output$created_at)
     }
     ## TODO: We need to have a data structure for "account" in the future
-    for (field in c("application", "poll", "card", "account")) {
+    for (field in c("application", "poll", "card")) {
       output[[field]]  <- I(list(list()))
       if (has_name_(status, field)) {
         if (!is.null(status[[field]])) {
@@ -37,6 +37,7 @@ parse_status <- function(status, parse_date = TRUE) {
         }
       }
     }
+    output[["account"]] <- list(parse_account(status[["account"]]))
     output[["reblog"]] <- I(list(list()))
     if (has_name_(status, "reblog")) {
       if (!is.null(status[["reblog"]])) {
@@ -56,7 +57,56 @@ parse_status <- function(status, parse_date = TRUE) {
         if (!is.null(status[[field]])) {
           output[[field]] <- status[[field]]
         }
-      }  
+      }
+    }
+  }
+  output
+}
+
+parse_account <- function(account,parse_date = TRUE){
+  empty <- tibble::tibble(
+    id = NA_character_,
+    username = NA_character_,
+    acct = NA_character_,
+    created_at = NA_character_,
+    display_name = NA_character_,
+    locked = NA,
+    bot = NA,
+    discoverable = NA,
+    group = NA,
+    note = NA_character_,
+    url = NA_character_,
+    avatar = NA_character_,
+    avatar_static = NA_character_,
+    header = NA_character_,
+    header_static = NA_character_,
+    follower_count = NA_integer_,
+    following_count = NA_integer_,
+    statuses_count = NA_integer_,
+    last_status_at = NA_character_,
+    emojis = I(list(list())),
+    fields = I(list(list()))
+  )
+  if (is.null(account)) {
+    output <- empty
+  } else {
+    singular_fields <- c("id", "username", "acct", "display_name", "locked", "bot",
+                         "discoverable", "group", "created_at", "note", "url", "avatar",
+                         "avatar_static", "header", "header_static", "followers_count",
+                         "following_count", "statuses_count", "last_status_at")
+    singular_list <- lapply(account[singular_fields], function(x) ifelse(is.null(x), NA, x))
+    names(singular_list) <- singular_fields
+    output <- tibble::tibble(as.data.frame(singular_list))
+    if (parse_date) {
+      output$created_at <- format_date(output$created_at)
+      output$last_status_at <- format_date(output$last_status_at)
+    }
+    for (field in c("fields", "emojis")) {
+      if (has_name_(account, field) & length(account[[field]]) != 0) {
+        output[[field]] <- list(dplyr::bind_rows(account[[field]]))
+      } else {
+        output[[field]]  <- I(list(list()))
+      }
     }
   }
   output
