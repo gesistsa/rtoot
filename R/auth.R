@@ -5,12 +5,17 @@
 #'   create authentication for your user (e.g., if you want to post from R or
 #'   query your followers).
 #' @param name give the token a name, in case you want to store more than one.
+#' @param path path to store the token in. The default is to store tokens in the
+#'   path returned by `tools::R_user_dir("rtoot", "config")`.
+#'
+#' @details If either `name` or `path` are set to `FALSE`, the token is only
+#'   returned and not saved.
 #'
 #' @return A bearer token
 #' @examples
 #' auth_setup("mastodon.social", "public")
 #' @export
-auth_setup <- function(instance = NULL, type = NULL, name = NULL) {
+auth_setup <- function(instance = NULL, type = NULL, name = NULL, path = NULL) {
   while (is.null(instance) || instance == "") {
     instance <- readline(prompt = "On which instance do you want to authenticate (e.g., \"mastodon.social\")?")
   }
@@ -20,7 +25,7 @@ auth_setup <- function(instance = NULL, type = NULL, name = NULL) {
   }
   token <- create_token(client, type = type)
   verify_credentials(token)
-  token_path <- save_auth_rtoot(token, name)
+  if (!isFALSE(name) && !isFALSE(path)) token_path <- save_auth_rtoot(token, name)
   options("rtoot_token" = token_path)
   check_token_rtoot(token)
 }
@@ -32,8 +37,6 @@ auth_setup <- function(instance = NULL, type = NULL, name = NULL) {
 #'
 #' @return an rtoot client object
 #' @references https://docs.joinmastodon.org/client/token/#creating-our-application
-#' @export
-#'
 get_client <- function(instance = "mastodon.social"){
   url <- prepare_url(instance)
   auth1 <- httr::POST(httr::modify_url(url = url, path = "/api/v1/apps"),body=list(
@@ -54,8 +57,6 @@ get_client <- function(instance = "mastodon.social"){
 #' @details TBA
 #' @return a mastodon bearer token
 #' @references https://docs.joinmastodon.org/client/authorized/
-#' @export
-#'
 create_token <- function(client, type = "public"){
   type <- match.arg(type,c("public","user"))
   if(!inherits(client,"rtoot_client")){
@@ -101,9 +102,6 @@ create_token <- function(client, type = "public"){
 #' verify mastodon credentials
 #'
 #' @param token user bearer token
-#'
-#' @return mastodon account
-#' @export
 verify_credentials <- function(token) {
   if(!is_auth_rtoot(token)){
     stop("token is not an object of type rtoot_bearer")
@@ -126,8 +124,6 @@ verify_credentials <- function(token) {
 #' @param token bearer token created with [create_token]
 #' @param name A file name (if you want to store more than one token).
 #' @param path A path where the token is stored.
-#'
-#' @export
 save_auth_rtoot <- function(token, name = NULL, path = NULL){
   if(!is_auth_rtoot(token)){
     stop("token is not an object of type rtoot_bearer")

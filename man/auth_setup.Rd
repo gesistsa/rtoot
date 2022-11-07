@@ -4,7 +4,7 @@
 \alias{auth_setup}
 \title{Authenticate with a Mastodon instance}
 \usage{
-auth_setup(instance = NULL, type = NULL, name = NULL)
+auth_setup(instance = NULL, type = NULL, name = NULL, path = NULL)
 }
 \arguments{
 \item{instance}{a public instance of Mastodon (e.g., mastodon.social).}
@@ -14,12 +14,19 @@ create authentication for your user (e.g., if you want to post from R or
 query your followers).}
 
 \item{name}{give the token a name, in case you want to store more than one.}
+
+\item{path}{path to store the token in. The default is to store tokens in the
+path returned by \code{tools::R_user_dir("rtoot", "config")}.}
 }
 \value{
 A bearer token
 }
 \description{
 Authenticate with a Mastodon instance
+}
+\details{
+If either \code{name} or \code{path} are set to \code{FALSE}, the token is only
+returned and not saved.
 }
 \examples{
 auth_setup("mastodon.social", "public")
