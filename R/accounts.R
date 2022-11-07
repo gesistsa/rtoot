@@ -35,3 +35,23 @@ search_accounts <- function(query,limit = 40,instance = NULL, token = NULL, anon
   }
   return(output)
 }
+
+#' Get statuses from a user
+#'
+#' @param id character, local ID of a user (this is not the username)
+#' @inheritParams get_status
+#' @inheritParams post_toot
+#' @details  For anonymous calls only public statuses are returned. If a user token is supplied also private statuses the user is authorized to see are returned
+#' @return statuses
+#' @export
+get_account_statuses <- function(id,instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE){
+  path <- paste0("api/v1/accounts/",id,"/statuses")
+  params <- list()
+  output <- make_get_request(token = token,path = path,
+                             instance = instance, params = params,
+                             anonymous = anonymous)
+  if (isTRUE(parse)) {
+    output <- dplyr::bind_rows(lapply(output, parse_status))
+  }
+  return(output)
+}
