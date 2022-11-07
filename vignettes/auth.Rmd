@@ -14,31 +14,35 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
+When a function in `rtoot` can't find a valid token on your computer, it automatically starts authentication.
+If you want to start the process manually, you can do so by calling:
+
+```{r auth, eval=FALSE}
 library(rtoot)
+auth_setup()
 ```
 
-Authentication happens in two stepps with `rtoot`. First, a client id and secret need to be created
-```{r client,eval=FALSE}
-client <- get_client(instance = "mastodon.social")
+By default, the token is stored in a directory R has determined to make sense for you and it is called "rtoot_token.rds".
+So you do not need to worry about it if you are only using `rtoot` on your local machine and you are only using one token.
+
+If you do not change the `path` argument of `auth_setup()` the tokens get stored in the location returned by `tools::R_user_dir("rtoot", "config")`.
+Look there, if you want to copy a token to a different computer (ideally in the directory returned by `tools::R_user_dir("rtoot", "config")` on the new machine).
+
+If you want to use multiple tokens, you should change the name of the file the token is saved in:
+
+```{r name, eval=FALSE}
+auth_setup(name = "account1.rds")
 ```
 
-The instance parameter should be set to a valid fediverse instance. A list of instances can be obtained with
-`get_instances()`.
+To use this token, you can either read it into your environment and provide it to each function:
 
-With the client id and secret, a bearer token can be created. There are two types of bearer tokens. A public one, which can be used to access public data, or a user based one, which also allows to act on behalf of a user. Generally, we recommend to create a user based token, since it has a larger scope.
-
-```{r bearer,eval=FALSE}
-token <- create_bearer(client, type = "user")
+```{r token, eval=FALSE}
+token <- readRDS(paste0(tools::R_user_dir("rtoot", "config"), "account1.rds"))
+get_status(id = "109297677620300632", instance = "mastodon.social", token = token)
 ```
 
-If you create a user based token, a browser will open and you need to authenticate your account. Copy the 
-authentication code shown and paste it into the prompt in the RStudio console.
+Or you can set the default token in the options at the start of a session:
 
-To not re-authenticate every time, you can save the created token.
-```{r save_bearer,eval=FALSE}
-save_auth_rtoot(token)
+```{r options, eval=FALSE}
+options("rtoot_token" = paste0(tools::R_user_dir("rtoot", "config"), "account1.rds"))
 ```
-
-
-
