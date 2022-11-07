@@ -33,10 +33,11 @@ post_toot <- function(
     for(i in seq_along(media)){
       media_id_string[[i]] <- upload_media_to_mastodon(media[[i]],alt_text[[i]],token)
     }
-    media_id_string <- paste(media_id_string, collapse = ",")
-    params <- list(
+    media_id_string <- lapply(media_id_string,identity) #paste(media_id_string, collapse = ",")
+    names(media_id_string) <- rep("media_ids[]",length(media_id_string))
+    params <- c(
       status = status,
-      "media_ids[]"= media_id_string
+      media_id_string
     )
   } else{
     params <- list(status = status)
