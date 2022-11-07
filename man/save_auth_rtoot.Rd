@@ -4,10 +4,14 @@
 \alias{save_auth_rtoot}
 \title{save a bearer token to file}
 \usage{
-save_auth_rtoot(token)
+save_auth_rtoot(token, name = NULL, path = NULL)
 }
 \arguments{
-\item{token}{bearer token created with \link{create_bearer}}
+\item{token}{bearer token created with \link{create_token}}
+
+\item{name}{A file name (if you want to store more than one token).}
+
+\item{path}{A path where the token is stored.}
 }
 \description{
 save a bearer token to file
