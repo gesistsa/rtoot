@@ -16,7 +16,7 @@ search_accounts(
 \arguments{
 \item{query}{character, search string}
 
-\item{limit}{numbre of search results to return. Defaults to 40}
+\item{limit}{number of search results to return. Defaults to 40}
 
 \item{instance}{character, the server name of the instance where the status is located. If \code{NULL}, the same instance used to obtain the token is used.}
 

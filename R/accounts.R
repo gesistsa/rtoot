@@ -19,7 +19,7 @@ get_account <- function(id,instance = NULL, token = NULL, anonymous = FALSE, par
 #' Search the instance for a specific user
 #'
 #' @param query character, search string
-#' @param limit numbre of search results to return. Defaults to 40
+#' @param limit number of search results to return. Defaults to 40
 #' @inheritParams get_status
 #' @inheritParams post_toot
 #' @return accounts
@@ -54,4 +54,79 @@ get_account_statuses <- function(id,instance = NULL, token = NULL, anonymous = F
     output <- dplyr::bind_rows(lapply(output, parse_status))
   }
   return(output)
+}
+
+#' Get followers of a user
+#' @inheritParams get_account_statuses
+#' @param max_id character, Return results older than this id
+#' @param since_id character, Return results newer than this id
+#' @param limit integer, maximum number of results to return. Defaults to 40.
+#' @details this functions needs a user level auth token
+#' @return followers
+#' @export
+get_account_followers <- function(id,max_id,since_id,limit = 40, token = NULL, parse = TRUE){
+  path <- paste0("api/v1/accounts/",id,"/followers")
+  params <- list(limit = limit)
+  if (!missing(max_id)) {
+    params$max_id <- max_id
+  }
+  if (!missing(since_id)) {
+    params$since_id <- since_id
+  }
+  output <- make_get_request(token = token, path = path, params = params)
+  if (isTRUE(parse)) {
+    output <- dplyr::bind_rows(lapply(output, parse_account))
+  }
+  return(output)
+}
+#' Get accounts a user follows
+#' @inheritParams get_account_statuses
+#' @inheritParams get_account_followers
+#' @details this functions needs a user level auth token
+#' @return followers
+#' @export
+get_account_following <- function(id,max_id,since_id,limit = 40, token = NULL, parse = TRUE){
+  path <- paste0("api/v1/accounts/",id,"/following")
+  params <- list(limit = limit)
+  if (!missing(max_id)) {
+    params$max_id <- max_id
+  }
+  if (!missing(since_id)) {
+    params$since_id <- since_id
+  }
+  output <- make_get_request(token = token, path = path, params = params)
+  if (isTRUE(parse)) {
+    output <- dplyr::bind_rows(lapply(output, parse_account))
+  }
+  return(output)
+}
+
+#' Get featured tags of a user
+#' @inheritParams get_account_statuses
+#' @details this functions needs a user level auth token
+#' @return featured_tags
+#' @export
+get_account_featured_tags <- function(id,token = NULL, parse = TRUE){
+  path <- paste0("api/v1/accounts/",id,"/featured_tags")
+  params <- list()
+  output <- make_get_request(token = token,path = path, params = params)
+  if (isTRUE(parse)) {
+    output <- dplyr::bind_rows(output)
+  }
+  return(output)
+}
+
+#' Get lists containing the user
+#' @inheritParams get_account_statuses
+#' @details this functions needs a user level auth token
+#' @return lists
+#' @export
+get_account_lists <- function(id,token = NULL, parse = TRUE){
+  path <- paste0("api/v1/accounts/",id,"/lists")
+  params <- list()
+  output <- make_get_request(token = token,path = path, params = params)
+  if (isTRUE(parse)) {
+    # output <- dplyr::bind_rows(lapply(output, parse_status))
+  }
+  return(output) #TODO: probably need to format
 }
