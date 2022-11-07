@@ -145,3 +145,95 @@ get_account_relationships <- function(ids,token = NULL, parse = TRUE){
   output <- make_get_request(token = token,path = path, params = params)
   dplyr::bind_rows(output)
 }
+
+
+#' Get bookmarks of user
+#' @inheritParams get_account_statuses
+#' @inheritParams get_account_followers
+#' @details this functions needs a user level auth token
+#' @return bookmarked statuses
+#' @export
+get_account_bookmarks <- function(id,max_id,since_id,min_id,limit = 40, token = NULL, parse = TRUE){
+  path <- paste0("api/v1/accounts/",id,"/bookmarks")
+  params <- list(limit = limit)
+  if (!missing(max_id)) {
+    params$max_id <- max_id
+  }
+  if (!missing(since_id)) {
+    params$since_id <- since_id
+  }
+  if (!missing(min_id)) {
+    params$since_id <- min_id
+  }
+  output <- make_get_request(token = token, path = path, params = params)
+  if (isTRUE(parse)) {
+    output <- dplyr::bind_rows(lapply(output, parse_status))
+  }
+  return(output)
+}
+
+#' Get favourites of user
+#' @inheritParams get_account_statuses
+#' @inheritParams get_account_followers
+#' @details this functions needs a user level auth token
+#' @return favourited statuses
+#' @export
+get_account_favourites <- function(id,max_id,min_id,limit = 40, token = NULL, parse = TRUE){
+  path <- paste0("api/v1/accounts/",id,"/favourites")
+  params <- list(limit = limit)
+  if (!missing(max_id)) {
+    params$max_id <- max_id
+  }
+  if (!missing(min_id)) {
+    params$min_id <- min_id
+  }
+  output <- make_get_request(token = token, path = path, params = params)
+  if (isTRUE(parse)) {
+    output <- dplyr::bind_rows(lapply(output, parse_status))
+  }
+  return(output)
+}
+
+#' Get blocks of user
+#' @inheritParams get_account_statuses
+#' @inheritParams get_account_followers
+#' @details this functions needs a user level auth token
+#' @return blocked users
+#' @export
+get_account_blocks <- function(id,max_id,since_id,limit = 40, token = NULL, parse = TRUE){
+  path <- paste0("api/v1/accounts/",id,"/blocks")
+  params <- list(limit = limit)
+  if (!missing(max_id)) {
+    params$max_id <- max_id
+  }
+  if (!missing(min_id)) {
+    params$since_id <- since_id
+  }
+  output <- make_get_request(token = token, path = path, params = params)
+  if (isTRUE(parse)) {
+    output <- dplyr::bind_rows(lapply(output, parse_account))
+  }
+  return(output)
+}
+
+#' Get mutes of user
+#' @inheritParams get_account_statuses
+#' @inheritParams get_account_followers
+#' @details this functions needs a user level auth token
+#' @return muted users
+#' @export
+get_account_mutes <- function(id,max_id,since_id,limit = 40, token = NULL, parse = TRUE){
+  path <- paste0("api/v1/accounts/",id,"/mutes")
+  params <- list(limit = limit)
+  if (!missing(max_id)) {
+    params$max_id <- max_id
+  }
+  if (!missing(min_id)) {
+    params$since_id <- since_id
+  }
+  output <- make_get_request(token = token, path = path, params = params)
+  if (isTRUE(parse)) {
+    output <- dplyr::bind_rows(lapply(output, parse_account))
+  }
+  return(output)
+}
