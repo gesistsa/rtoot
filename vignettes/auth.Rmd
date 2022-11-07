@@ -31,18 +31,18 @@ Look there, if you want to copy a token to a different computer (ideally in the 
 If you want to use multiple tokens, you should change the name of the file the token is saved in:
 
 ```{r name, eval=FALSE}
-auth_setup(name = "account1.rds")
+auth_setup(name = "account1")
 ```
 
 To use this token, you can either read it into your environment and provide it to each function:
 
 ```{r token, eval=FALSE}
-token <- readRDS(paste0(tools::R_user_dir("rtoot", "config"), "account1.rds"))
+token <- readRDS(file.path(tools::R_user_dir("rtoot", "config"), "account1.rds"))
 get_status(id = "109297677620300632", instance = "mastodon.social", token = token)
 ```
 
 Or you can set the default token in the options at the start of a session:
 
 ```{r options, eval=FALSE}
-options("rtoot_token" = paste0(tools::R_user_dir("rtoot", "config"), "account1.rds"))
+options("rtoot_token" = file.path(tools::R_user_dir("rtoot", "config"), "account1.rds"))
 ```

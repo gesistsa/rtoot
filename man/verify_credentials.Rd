@@ -9,9 +9,6 @@ verify_credentials(token)
 \arguments{
 \item{token}{user bearer token}
 }
-\value{
-mastodon account
-}
 \description{
 verify mastodon credentials
 }
