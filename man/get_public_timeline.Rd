@@ -14,7 +14,8 @@ get_public_timeline(
   limit = 20L,
   instance = NULL,
   token = NULL,
-  anonymous = FALSE
+  anonymous = FALSE,
+  parse = TRUE
 )
 }
 \arguments{
@@ -37,16 +38,23 @@ get_public_timeline(
 \item{token}{user bearer token}
 
 \item{anonymous}{some API calls do not need a token. Setting anonymous to TRUE allows to make an anonymous call if possible.}
+
+\item{parse}{logical, if \code{TRUE}, the default, returns a tibble. Use \code{FALSE}  to return the "raw" list corresponding to the JSON returned from the Mastodon API.}
 }
 \value{
-a list of statuses
+statuses
 }
 \description{
 Query the instance for the public timeline
 }
 \examples{
-bearer <- create_bearer(instance = "social.tchncs.de")
-get_public_timeline(bearer = bearer)
+\dontrun{
+token <- create_token(instance = "social.tchncs.de")
+## as tibble
+get_public_timeline(token = token)
+## as list
+get_public_timeline(token = token, parse = FALSE)
+}
 }
 \references{
 https://docs.joinmastodon.org/methods/timelines/

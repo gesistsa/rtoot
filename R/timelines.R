@@ -34,15 +34,23 @@ make_get_request <- function(token, path, params, instance = NULL, anonymous = F
 #' @param id character, Local ID of a status in the database
 #' @param instance character, the server name of the instance where the status is located. If `NULL`, the same instance used to obtain the token is used.
 #' @param anonymous some API calls do not need a token. Setting anonymous to TRUE allows to make an anonymous call if possible.
+#' @param parse logical, if `TRUE`, the default, returns a tibble. Use `FALSE`  to return the "raw" list corresponding to the JSON returned from the Mastodon API.
 #' @inheritParams post_toot
 #' @return a status
-#' token <- create_bearer(get_client(instance = "social.tchncs.de"), type = "user")
+#' @examples
+#' \dontrun{
+#' token <- create_token(get_client(instance = "social.tchncs.de"), type = "user")
 #' get_status(id = "109298295023649405", token = token)
+#' }
 #' @export
-get_status <- function(id, instance = NULL, token = NULL, anonymous = FALSE) {
+get_status <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
   # if (!anonymous) token <- check_token_rtoot(token) # TODO:check if this is needed. I do not think so
   path <- paste0("/api/v1/statuses/", id)
-  make_get_request(token = token, path = path, params = list(), instance = instance, anonymous = anonymous)
+  output <- make_get_request(token = token, path = path, params = list(), instance = instance, anonymous = anonymous)
+  if (isTRUE(parse)) {
+    output <- parse_status(output)
+  }
+  return(output)
 }
 
 #' Get the public timeline
@@ -57,15 +65,20 @@ get_status <- function(id, instance = NULL, token = NULL, anonymous = FALSE) {
 #' @param limit integer, Maximum number of results to return
 #' @inheritParams post_toot
 #' @inheritParams get_status
-#' @return a list of statuses
+#' @return statuses
 #' @export
 #' @examples
-#' bearer <- create_bearer(instance = "social.tchncs.de")
-#' get_public_timeline(bearer = bearer)
+#' \dontrun{
+#' token <- create_token(instance = "social.tchncs.de")
+#' ## as tibble
+#' get_public_timeline(token = token)
+#' ## as list
+#' get_public_timeline(token = token, parse = FALSE)
+#' }
 #' @references
 #' https://docs.joinmastodon.org/methods/timelines/
 get_public_timeline <- function(local = FALSE, remote = FALSE, only_media = FALSE,
-                                max_id, since_id, min_id, limit = 20L, instance = NULL, token = NULL, anonymous = FALSE) {
+                                max_id, since_id, min_id, limit = 20L, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
   params <- list(local = local, remote = remote, only_media = only_media, limit = limit)
   if (!missing(max_id)) {
     params$max_id <- max_id
@@ -76,5 +89,9 @@ get_public_timeline <- function(local = FALSE, remote = FALSE, only_media = FALS
   if (!missing(min_id)) {
     params$min_id <- min_id
   }
-  make_get_request(token = token, path = "/api/v1/timelines/public", params = params, instance = instance, anonymous = anonymous)
+  output <- make_get_request(token = token, path = "/api/v1/timelines/public", params = params, instance = instance, anonymous = anonymous)
+  if (isTRUE(parse)) {
+    output <- dplyr::bind_rows(lapply(output, parse_status))
+  }
+  return(output)
 }

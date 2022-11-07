@@ -4,7 +4,7 @@
 \alias{get_status}
 \title{View specific status}
 \usage{
-get_status(id, instance = NULL, token = NULL, anonymous = FALSE)
+get_status(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE)
 }
 \arguments{
 \item{id}{character, Local ID of a status in the database}
@@ -14,12 +14,18 @@ get_status(id, instance = NULL, token = NULL, anonymous = FALSE)
 \item{token}{user bearer token}
 
 \item{anonymous}{some API calls do not need a token. Setting anonymous to TRUE allows to make an anonymous call if possible.}
+
+\item{parse}{logical, if \code{TRUE}, the default, returns a tibble. Use \code{FALSE}  to return the "raw" list corresponding to the JSON returned from the Mastodon API.}
 }
 \value{
 a status
-token <- create_bearer(get_client(instance = "social.tchncs.de"), type = "user")
-get_status(id = "109298295023649405", token = token)
 }
 \description{
 Query the instance for a specific status
+}
+\examples{
+\dontrun{
+token <- create_token(get_client(instance = "social.tchncs.de"), type = "user")
+get_status(id = "109298295023649405", token = token)
+}
 }
