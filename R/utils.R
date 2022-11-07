@@ -4,7 +4,7 @@
 #' @details the results are sorted by user count
 #' @return data frame of fediverse instances
 #' @export
-get_instances  <-  function(n = 20) {
+get_fedi_instances  <-  function(n = 20) {
   pages <- ceiling(n/20)
   df <- data.frame()
   for(i in seq_along(pages)){
