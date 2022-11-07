@@ -32,7 +32,7 @@ devtools::install_github("schochastics/rtoot")
 
 ## Roadmap
 
-This package is in a very early stage
+This package is in a very early stage. Use at own risk (API might still change)
 
 ## Code of Conduct
   
