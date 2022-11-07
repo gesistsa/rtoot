@@ -58,3 +58,11 @@ test_that("Is and Isn't reblog", {
   expect_false(length(res2$reblog[[1]]) == 0)
   expect_equal(res2$reblog[[1]]$account[[1]]$username, "JBGruber")
 })
+
+test_that("date parsing", {
+  status1 <- readRDS("../testdata/status/not_reblog.RDS")
+  res1 <- parse_status(status1, parse_date = TRUE)
+  res2 <- parse_status(status1, parse_date = FALSE)
+  expect_true("POSIXlt" %in% class(res1$created_at))
+  expect_false("POSIXlt" %in% class(res2$created_at))
+})
