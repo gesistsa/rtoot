@@ -130,3 +130,52 @@ get_hashtag_timeline <- function(hashtag = "rstats", local = FALSE, only_media =
   return(output)
 }
 
+#' Get home and list timelines
+#'
+#' Query the instance for the timeline from either followed users or a specific list. These functions can only be called with a user token from [create_token()].
+#' @param list_id character, Local ID of the list in the database.
+#' @inherit get_public_timeline
+#' @export
+#' @examples
+#' \dontrun{
+#' token <- create_token(instance = "social.tchncs.de")
+#' get_home_timeline()
+#' }
+get_home_timeline <- function(local = FALSE, max_id, since_id, min_id, limit = 20L, token = NULL, parse = TRUE) {
+  params <- list(local = local, limit = limit)
+  if (!missing(max_id)) {
+    params$max_id <- max_id
+  }
+  if (!missing(since_id)) {
+    params$since_id <- since_id
+  }
+  if (!missing(min_id)) {
+    params$min_id <- min_id
+  }
+  output <- make_get_request(token = token, path = "/api/v1/timelines/home", params = params, instance = NULL, anonymous = FALSE)
+  if (isTRUE(parse)) {
+    output <- dplyr::bind_rows(lapply(output, parse_status))
+  }
+  return(output)
+}
+
+#' @rdname get_home_timeline
+#' @export
+get_list_timeline <- function(list_id, max_id, since_id, min_id, limit = 20L, token = NULL, parse = TRUE) {
+  params <- list(limit = limit)
+  if (!missing(max_id)) {
+    params$max_id <- max_id
+  }
+  if (!missing(since_id)) {
+    params$since_id <- since_id
+  }
+  if (!missing(min_id)) {
+    params$min_id <- min_id
+  }
+  path <- paste0("/api/v1/timelines/list/", list_id)
+  output <- make_get_request(token = token, path = path, params = params, instance = NULL, anonymous = FALSE)
+  if (isTRUE(parse)) {
+    output <- dplyr::bind_rows(lapply(output, parse_status))
+  }
+  return(output)
+}
