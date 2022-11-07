@@ -95,3 +95,38 @@ get_public_timeline <- function(local = FALSE, remote = FALSE, only_media = FALS
   }
   return(output)
 }
+
+#' Get hashtag timeline
+#'
+#' Query the instance for the timeline of a specific hashtag
+#' @param hashtag character, Content of a #hashtag. The hash is optional
+#' @inherit get_public_timeline
+#' @export
+#' @examples
+#' \dontrun{
+#' token <- create_token(instance = "social.tchncs.de")
+#' get_hashtag_timeline(hashtag = "#ichbinhanna", token = token)
+#' ## anonymously
+#' get_public_timeline(hashtag = "ichbinhanna", instance = "mastodon.social", anonymous = TRUE)
+#' }
+get_hashtag_timeline <- function(hashtag = "rstats", local = FALSE, only_media = FALSE,
+                                 max_id, since_id, min_id, limit = 20L, instance = NULL,
+                                 token = NULL, anonymous = FALSE, parse = TRUE) {
+  params <- list(local = local, only_media = only_media, limit = limit)
+  if (!missing(max_id)) {
+    params$max_id <- max_id
+  }
+  if (!missing(since_id)) {
+    params$since_id <- since_id
+  }
+  if (!missing(min_id)) {
+    params$min_id <- min_id
+  }
+  path <- paste0("/api/v1/timelines/tag/", gsub("^#+", "", hashtag))
+  output <- make_get_request(token = token, path = path, params = params, instance = instance, anonymous = anonymous)
+  if (isTRUE(parse)) {
+    output <- dplyr::bind_rows(lapply(output, parse_status))
+  }
+  return(output)
+}
+
