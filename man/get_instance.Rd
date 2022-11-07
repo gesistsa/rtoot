@@ -7,6 +7,7 @@
 \alias{get_instance_activity}
 \alias{get_instance_emoji}
 \alias{get_instance_directory}
+\alias{get_instance_trends}
 \title{Get various information about a specific instance}
 \usage{
 get_instance_general(instance = NULL, token = NULL, anonymous = TRUE)
@@ -26,6 +27,13 @@ get_instance_directory(
   local = FALSE,
   anonymous = TRUE
 )
+
+get_instance_trends(
+  instance = NULL,
+  token = NULL,
+  limit = 10,
+  anonymous = TRUE
+)
 }
 \arguments{
 \item{instance}{character, the server name of the instance where the status is located. If \code{NULL}, the same instance used to obtain the token is used.}
@@ -43,7 +51,7 @@ get_instance_directory(
 \item{local}{logical. Show only local accounts?}
 }
 \value{
-list of instance details
+instance details depending on call function
 }
 \description{
 Get various information about a specific instance
@@ -55,5 +63,6 @@ Get various information about a specific instance
 \item{get_instance_activity}{Shows the weekly activity of the instance (3 months)}
 \item{get_instance_emoji}{Lists custom emojis available on the instance}
 \item{get_instance_directory}{A directory of profiles that the instance is aware of}
+\item{get_instance_trends}{Tags that are being used more frequently within the past week}
 }
 }

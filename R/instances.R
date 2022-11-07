@@ -30,8 +30,9 @@ get_fedi_instances  <-  function(n = 20) {
 #'   \item{get_instance_activity}{Shows the weekly activity of the instance (3 months)}
 #'   \item{get_instance_emoji}{Lists custom emojis available on the instance}
 #'   \item{get_instance_directory}{A directory of profiles that the instance is aware of}
+#'   \item{get_instance_trends}{Tags that are being used more frequently within the past week}
 #' }
-#' @return list of instance details
+#' @return instance details depending on call function
 #' @export
 get_instance_general <- function(instance = NULL,token = NULL, anonymous = TRUE){
   request_results <- make_get_request(token = token,path = "/api/v1/instance",
@@ -58,7 +59,7 @@ get_instance_activity <- function(instance = NULL,token = NULL, anonymous = TRUE
 
   tbl <- dplyr::bind_rows(request_results)
   tbl <- dplyr::mutate(tbl,dplyr::across(dplyr::everything(),as.integer))
-  tbl$week <- as.POSIXct(tbl$week,origin="1970-01-01")
+  tbl$week <- as.POSIXct(tbl$week,origin="1970-01-01",tz = "UTC")
   tbl
 }
 
@@ -78,7 +79,23 @@ get_instance_directory <- function(instance = NULL, token = NULL,
                                    local = FALSE, anonymous = TRUE){
   params <- list(local = local, offset = offset, order = order, limit = limit)
   request_results <- make_get_request(token = token,path = "/api/v1/directory",
-                                      instance = instance,params = params,
+                                      instance = instance, params = params,
                                       anonymous = anonymous)
   request_results #TODO: format with account parser
+}
+
+#' @rdname get_instance
+#' @export
+get_instance_trends <- function(instance = NULL, token = NULL, limit = 10,anonymous = TRUE){
+  params <- list(limit = limit)
+  request_results <- make_get_request(token = token,path = "/api/v1/trends",
+                                      instance = instance, params = params,
+                                      anonymous = anonymous)
+  tbl <- dplyr::bind_rows(request_results)
+  tbl$day <- vapply(tbl$history,function(x) as.numeric(x$day),0.)
+  tbl$day <- as.Date(as.POSIXct(as.numeric(tbl$day),origin="1970-01-01"))
+  tbl$accounts <- vapply(tbl$history,function(x) as.integer(x$accounts),0L)
+  tbl$uses <- vapply(tbl$history,function(x) as.integer(x$uses),0L)
+  tbl$history <- NULL
+  tbl
 }
