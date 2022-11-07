@@ -2,7 +2,8 @@
 
 S3method(print,rtoot_bearer)
 S3method(print,rtoot_client)
-export(create_bearer)
+export(auth_setup)
+export(create_token)
 export(get_client)
 export(get_fedi_instances)
 export(get_instance_activity)
