@@ -100,3 +100,30 @@ check_media <- function(media, alt_text) {
     stop("Alt text cannot be longer than 1000 characters.", call. = TRUE)
   }
 }
+
+#' Perform actions on an account
+#' @inheritParams post_toot
+#' @param action character, one of "(un)follow","(un)block", "(un)mute", "(un)pin","note"
+#' @param comment character (if action="note"), The comment to be set on that user. Provide an empty string or leave out this parameter to clear the currently set note.
+#' @return nothing
+#' @export
+post_user <- function(id,action = "follow",comment = "",token = NULL){
+  token <- check_token_rtoot(token)
+  action <- match.arg(action,c("follow","unfollow","block","unblock",
+                               "mute","unmute","pin","unpin","note"))
+  path <- paste0("/api/v1/accounts/",id,"/",action)
+  if(action=="note"){
+    params <- list(comment = comment)
+  } else{
+    params <- list()
+  }
+
+  url <- prepare_url(token$instance)
+  r <- httr::POST(httr::modify_url(url = url, path = "api/v1/statuses"),
+                  body=params,
+                  httr::add_headers(Authorization = paste0("Bearer ",token$bearer)))
+  if(httr::status_code(r)==200L){
+    message("successfully performed action on user")
+  }
+  invisible(r)
+}
