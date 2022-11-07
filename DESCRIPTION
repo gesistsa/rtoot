@@ -16,5 +16,6 @@ Imports:
     jsonlite
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    rstudioapi
 VignetteBuilder: knitr

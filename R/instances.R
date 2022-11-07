@@ -39,7 +39,7 @@ get_instance_general <- function(instance = NULL,token = NULL){
   if (!status_code %in% c(200)) {
     stop(paste("something went wrong. Status code:", status_code))
   }
-  httr::content(request_results)
+  httr::content(request_results) #TODO:format?
 }
 
 #' @rdname get_instance

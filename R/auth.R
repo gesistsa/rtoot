@@ -21,7 +21,7 @@ auth_setup <- function(instance = NULL, type = NULL, name = NULL, path = NULL) {
   }
   client <- get_client(instance = instance)
   if (!isTRUE(type %in% c("public", "user"))) {
-    type <- c("public", "user")[menu(c("public", "user"), title = "What type of token do you want?")]
+    type <- c("public", "user")[utils::menu(c("public", "user"), title = "What type of token do you want?")]
   }
   token <- create_token(client, type = type)
   if (!isFALSE(name) && !isFALSE(path)) token_path <- save_auth_rtoot(token, name, path)
@@ -77,7 +77,7 @@ create_token <- function(client, type = "public"){
       scope='read write follow',
       response_type="code"
     ))
-    if (require("rstudioapi", quietly = TRUE)) {
+    if (requireNamespace("rstudioapi", quietly = TRUE)) {
       auth_code <- rstudioapi::askForPassword(prompt = "enter authorization code: ")
     } else {
       auth_code <- readline(prompt = "enter authorization code: ")
@@ -162,7 +162,7 @@ get_auth_rtoot <- function(){
 
 is_auth_rtoot <- function(token) inherits(token, "rtoot_bearer")
 
-#' check if a token is available and return one if not
+# check if a token is available and return one if not
 check_token_rtoot <- function(token = NULL) {
 
   selection <- NULL
@@ -172,7 +172,7 @@ check_token_rtoot <- function(token = NULL) {
     token_path <- options("rtoot_token")$rtoot_token
 
     if (length(token_path) == 0) {
-      token_path <- head(list.files(tools::R_user_dir("rtoot", "config"),
+      token_path <- utils::head(list.files(tools::R_user_dir("rtoot", "config"),
                                     full.names = TRUE,
                                     pattern = ".rds",
                                     ignore.case = TRUE), 1L)
@@ -183,7 +183,7 @@ check_token_rtoot <- function(token = NULL) {
       token <- readRDS(token_path)
     } else {
       if (interactive()) {
-        selection <- menu(
+        selection <- utils::menu(
           c("yes", "no"),
           title = "This seems to be the first time you are using rtoot. Do you want to authenticate now?"
         )
@@ -199,7 +199,7 @@ check_token_rtoot <- function(token = NULL) {
     }
   } else if (!is_auth_rtoot(token)) {
     if (interactive()) {
-      selection <- menu(
+      selection <- utils::menu(
         c("yes", "no"),
         title = "Your token is invalid. Do you want to authenticate now?"
       )
