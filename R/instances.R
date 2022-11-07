@@ -7,11 +7,11 @@
 get_fedi_instances  <-  function(n = 20) {
   pages <- ceiling(n/20)
   df <- data.frame()
-  for(i in seq_along(pages)){
+  for(i in seq_len(pages)){
     tmp <- jsonlite::fromJSON("https://api.index.community/api/instances?sortField=userCount&sortDirection=desc&page=",i)$instances
     df <- rbind(df,as.data.frame(do.call(rbind, lapply(tmp, rbind))))
   }
-  df[1:n,]
+  df[seq_len(n),]
 }
 
 #' Get various information about a specific instance
