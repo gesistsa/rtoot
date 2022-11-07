@@ -72,7 +72,9 @@ get_instance_activity <- function(instance = NULL,token = NULL){
     stop(paste("something went wrong. Status code:", status_code))
   }
   tbl <- dplyr::bind_rows(httr::content(request_results))
-  dplyr::mutate(tbl,dplyr::across(dplyr::everything(),as.numeric))
+  tbl <- dplyr::mutate(tbl,dplyr::across(dplyr::everything(),as.integer))
+  tbl$week <- as.POSIXct(tbl$week,origin="1970-01-01")
+  tbl
 }
 
 #' @rdname get_instance
