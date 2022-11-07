@@ -107,7 +107,7 @@ get_public_timeline <- function(local = FALSE, remote = FALSE, only_media = FALS
 #' token <- create_token(instance = "social.tchncs.de")
 #' get_hashtag_timeline(hashtag = "#ichbinhanna", token = token)
 #' ## anonymously
-#' get_public_timeline(hashtag = "ichbinhanna", instance = "mastodon.social", anonymous = TRUE)
+#' get_hashtag_timeline(hashtag = "ichbinhanna", instance = "mastodon.social", anonymous = TRUE)
 #' }
 get_hashtag_timeline <- function(hashtag = "rstats", local = FALSE, only_media = FALSE,
                                  max_id, since_id, min_id, limit = 20L, instance = NULL,

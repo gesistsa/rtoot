@@ -52,7 +52,7 @@ Query the instance for the timeline of a specific hashtag
 token <- create_token(instance = "social.tchncs.de")
 get_hashtag_timeline(hashtag = "#ichbinhanna", token = token)
 ## anonymously
-get_public_timeline(hashtag = "ichbinhanna", instance = "mastodon.social", anonymous = TRUE)
+get_hashtag_timeline(hashtag = "ichbinhanna", instance = "mastodon.social", anonymous = TRUE)
 }
 }
 \references{
