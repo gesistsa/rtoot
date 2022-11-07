@@ -4,6 +4,9 @@
 # rtoot <img src="man/figures/logo.png" align="right"/>
 
 <!-- badges: start -->
+
+[![CRAN
+status](https://www.r-pkg.org/badges/version/rtoot)](https://CRAN.R-project.org/package=rtoot)
 <!-- badges: end -->
 
 Interact with the [mastodon API](https://docs.joinmastodon.org/api/)

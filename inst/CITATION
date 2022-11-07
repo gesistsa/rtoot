@@ -1,0 +1,11 @@
+citHeader("To cite rtoot in publications use:")
+
+citEntry(
+  entry    = "Manual",
+  title    = "rtoot: Collecting and analyzing Mastodon data",
+  author   = personList(as.person("David Schoch"),as.person("Chung-hong Chan")),
+  note     = "R package version 0.0.0.9999",
+  year     = "2022",
+  url      = "https://github.com/schochastics/rtoot",
+  textVersion = "Schoch David and Chan Chung-hong (2022) rtoot: Collecting and analyzing Mastodon data. R package version 0.0.0.9999, <https://github.com/schochastics/rtoot>"
+)
