@@ -6,20 +6,41 @@
 \alias{get_instance_peers}
 \alias{get_instance_activity}
 \alias{get_instance_emoji}
+\alias{get_instance_directory}
 \title{Get various information about a specific instance}
 \usage{
-get_instance_general(instance = NULL, token = NULL)
+get_instance_general(instance = NULL, token = NULL, anonymous = TRUE)
 
-get_instance_peers(instance = NULL, token = NULL)
+get_instance_peers(instance = NULL, token = NULL, anonymous = TRUE)
 
-get_instance_activity(instance = NULL, token = NULL)
+get_instance_activity(instance = NULL, token = NULL, anonymous = TRUE)
 
-get_instance_emoji(instance = NULL, token = NULL)
+get_instance_emoji(instance = NULL, token = NULL, anonymous = TRUE)
+
+get_instance_directory(
+  instance = NULL,
+  token = NULL,
+  offset = 0,
+  limit = 40,
+  order = "active",
+  local = FALSE,
+  anonymous = TRUE
+)
 }
 \arguments{
 \item{instance}{character, the server name of the instance where the status is located. If \code{NULL}, the same instance used to obtain the token is used.}
 
 \item{token}{user bearer token}
+
+\item{anonymous}{logical Should the API call be made anonymously? Defaults to TRUE but some instances might need authentication here}
+
+\item{offset}{How many accounts to skip before returning results. Default 0.}
+
+\item{limit}{integer, Maximum number of results to return}
+
+\item{order}{'active' to sort by most recently posted statuses (default) or 'new' to sort by most recently created profiles.}
+
+\item{local}{logical. Show only local accounts?}
 }
 \value{
 list of instance details
@@ -33,5 +54,6 @@ Get various information about a specific instance
 \item{get_instance_peers}{Returns the peers of an instance}
 \item{get_instance_activity}{Shows the weekly activity of the instance (3 months)}
 \item{get_instance_emoji}{Lists custom emojis available on the instance}
+\item{get_instance_directory}{A directory of profiles that the instance is aware of}
 }
 }

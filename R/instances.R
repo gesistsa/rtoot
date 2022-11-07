@@ -15,9 +15,13 @@ get_fedi_instances  <-  function(n = 20) {
 }
 
 #' Get various information about a specific instance
-#'
+#' @param anonymous logical Should the API call be made anonymously? Defaults to TRUE but some instances might need authentication here
+#' @param local logical. Show only local accounts?
+#' @param offset How many accounts to skip before returning results. Default 0.
+#' @param order 'active' to sort by most recently posted statuses (default) or 'new' to sort by most recently created profiles.
 #' @inheritParams post_toot
 #' @inheritParams get_status
+#' @inheritParams get_public_timeline
 #' @name get_instance
 #' @details
 #' \describe{
@@ -25,53 +29,34 @@ get_fedi_instances  <-  function(n = 20) {
 #'   \item{get_instance_peers}{Returns the peers of an instance}
 #'   \item{get_instance_activity}{Shows the weekly activity of the instance (3 months)}
 #'   \item{get_instance_emoji}{Lists custom emojis available on the instance}
+#'   \item{get_instance_directory}{A directory of profiles that the instance is aware of}
 #' }
 #' @return list of instance details
 #' @export
-get_instance_general <- function(instance = NULL,token = NULL){
-  if(is.null(instance)){
-    token <- check_token_rtoot(token)
-    instance <- token$instance
-  }
-  url <- prepare_url(instance)
-  request_results <- httr::GET(httr::modify_url(url = url, path = "/api/v1/instance"))
-  status_code <- httr::status_code(request_results)
-  if (!status_code %in% c(200)) {
-    stop(paste("something went wrong. Status code:", status_code))
-  }
-  httr::content(request_results) #TODO:format?
+get_instance_general <- function(instance = NULL,token = NULL, anonymous = TRUE){
+  request_results <- make_get_request(token = token,path = "/api/v1/instance",
+                                      instance = instance,params = list(),
+                                      anonymous = anonymous)
+  request_results #TODO:format?
 }
 
 #' @rdname get_instance
 #' @export
-get_instance_peers <- function(instance = NULL,token = NULL){
-  if(is.null(instance)){
-    token <- check_token_rtoot(token)
-    instance <- token$instance
-  }
-  url <- prepare_url(instance)
-  request_results <- httr::GET(httr::modify_url(url = url, path = "/api/v1/instance/peers"))
-  status_code <- httr::status_code(request_results)
-  if (!status_code %in% c(200)) {
-    stop(paste("something went wrong. Status code:", status_code))
-  }
-  unlist(httr::content(request_results))
+get_instance_peers <- function(instance = NULL,token = NULL, anonymous = TRUE){
+  request_results <- make_get_request(token = token,path = "/api/v1/instance/peers",
+                                      instance = instance,params = list(),
+                                      anonymous = anonymous)
+  unlist(request_results)
 }
 
 #' @rdname get_instance
 #' @export
-get_instance_activity <- function(instance = NULL,token = NULL){
-  if(is.null(instance)){
-    token <- check_token_rtoot(token)
-    instance <- token$instance
-  }
-  url <- prepare_url(instance)
-  request_results <- httr::GET(httr::modify_url(url = url, path = "/api/v1/instance/activity"))
-  status_code <- httr::status_code(request_results)
-  if (!status_code %in% c(200)) {
-    stop(paste("something went wrong. Status code:", status_code))
-  }
-  tbl <- dplyr::bind_rows(httr::content(request_results))
+get_instance_activity <- function(instance = NULL,token = NULL, anonymous = TRUE){
+  request_results <- make_get_request(token = token,path = "/api/v1/instance/activity",
+                                      instance = instance,params = list(),
+                                      anonymous = anonymous)
+
+  tbl <- dplyr::bind_rows(request_results)
   tbl <- dplyr::mutate(tbl,dplyr::across(dplyr::everything(),as.integer))
   tbl$week <- as.POSIXct(tbl$week,origin="1970-01-01")
   tbl
@@ -79,16 +64,21 @@ get_instance_activity <- function(instance = NULL,token = NULL){
 
 #' @rdname get_instance
 #' @export
-get_instance_emoji <- function(instance = NULL,token = NULL){
-  if(is.null(instance)){
-    token <- check_token_rtoot(token)
-    instance <- token$instance
-  }
-  url <- prepare_url(instance)
-  request_results <- httr::GET(httr::modify_url(url = url, path = "/api/v1/custom_emojis"))
-  status_code <- httr::status_code(request_results)
-  if (!status_code %in% c(200)) {
-    stop(paste("something went wrong. Status code:", status_code))
-  }
-  dplyr::bind_rows(httr::content(request_results))
+get_instance_emoji <- function(instance = NULL,token = NULL, anonymous = TRUE){
+  request_results <- make_get_request(token = token,path = "/api/v1/custom_emojis",
+                                      instance = instance,params = list(),
+                                      anonymous = anonymous)
+  dplyr::bind_rows(request_results)
+}
+
+#' @rdname get_instance
+#' @export
+get_instance_directory <- function(instance = NULL, token = NULL,
+                                   offset = 0, limit = 40, order = "active",
+                                   local = FALSE, anonymous = TRUE){
+  params <- list(local = local, offset = offset, order = order, limit = limit)
+  request_results <- make_get_request(token = token,path = "/api/v1/directory",
+                                      instance = instance,params = params,
+                                      anonymous = anonymous)
+  request_results #TODO: format with account parser
 }
