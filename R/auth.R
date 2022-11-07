@@ -107,11 +107,21 @@ verify_credentials <- function(token) {
   if(!is_auth_rtoot(token)){
     stop("token is not an object of type rtoot_bearer")
   }
+  type <- token$type
   url <- prepare_url(token$instance)
+  if(type=="user"){
   acc <- httr::GET(
     httr::modify_url(url = url, path = "api/v1/accounts/verify_credentials"),
     httr::add_headers(Authorization = paste0("Bearer ",token$bearer))
   )
+  } else if(type=="public"){
+    acc <- httr::GET(
+      httr::modify_url(url = url, path = "api/v1/apps/verify_credentials"),
+      httr::add_headers(Authorization = paste0("Bearer ",token$bearer))
+    )
+  } else{
+    stop("unknown token type")
+  }
   success <- isTRUE(acc[["status_code"]] == 200L)
   if (success) {
     message("Token of type \"", token$type, "\" for instance ", token$instance, " is valid")
