@@ -24,9 +24,9 @@ auth_setup <- function(instance = NULL, type = NULL, name = NULL, path = NULL) {
     type <- c("public", "user")[menu(c("public", "user"), title = "What type of token do you want?")]
   }
   token <- create_token(client, type = type)
-  verify_credentials(token)
-  if (!isFALSE(name) && !isFALSE(path)) token_path <- save_auth_rtoot(token, name)
+  if (!isFALSE(name) && !isFALSE(path)) token_path <- save_auth_rtoot(token, name, path)
   options("rtoot_token" = token_path)
+  verify_credentials(token) # this should be further up before saving, but seems to often fail
   check_token_rtoot(token)
 }
 
@@ -102,6 +102,7 @@ create_token <- function(client, type = "public"){
 #' verify mastodon credentials
 #'
 #' @param token user bearer token
+#' @export
 verify_credentials <- function(token) {
   if(!is_auth_rtoot(token)){
     stop("token is not an object of type rtoot_bearer")
