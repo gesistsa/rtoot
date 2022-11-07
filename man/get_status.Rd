@@ -4,10 +4,12 @@
 \alias{get_status}
 \title{View specific status}
 \usage{
-get_status(id, token = NULL)
+get_status(id, instance = NULL, token = NULL)
 }
 \arguments{
 \item{id}{character, Local ID of a status in the database}
+
+\item{instance}{character, the server name of the instance where the status is located. If \code{NULL}, the same instance used to obtain the token is used.}
 
 \item{token}{user bearer token}
 }

@@ -12,6 +12,7 @@ get_public_timeline(
   since_id,
   min_id,
   limit = 20L,
+  instance = NULL,
   token = NULL
 )
 }
@@ -29,6 +30,8 @@ get_public_timeline(
 \item{min_id}{character, Return results immediately newer than this id}
 
 \item{limit}{integer, Maximum number of results to return}
+
+\item{instance}{character, the server name of the instance where the status is located. If \code{NULL}, the same instance used to obtain the token is used.}
 
 \item{token}{user bearer token}
 }
