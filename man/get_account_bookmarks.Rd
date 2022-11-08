@@ -21,6 +21,8 @@ get_account_bookmarks(
 
 \item{since_id}{character, Return results newer than this id}
 
+\item{min_id}{character, Return results younger than this id}
+
 \item{limit}{integer, maximum number of results to return. Defaults to 40.}
 
 \item{token}{user bearer token}

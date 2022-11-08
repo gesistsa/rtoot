@@ -18,6 +18,8 @@ get_account_favourites(
 
 \item{max_id}{character, Return results older than this id}
 
+\item{min_id}{character, Return results younger than this id}
+
 \item{limit}{integer, maximum number of results to return. Defaults to 40.}
 
 \item{token}{user bearer token}

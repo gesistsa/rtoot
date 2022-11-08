@@ -150,6 +150,7 @@ get_account_relationships <- function(ids,token = NULL, parse = TRUE){
 #' Get bookmarks of user
 #' @inheritParams get_account_statuses
 #' @inheritParams get_account_followers
+#' @param min_id character, Return results younger than this id
 #' @details this functions needs a user level auth token
 #' @return bookmarked statuses
 #' @export
@@ -175,6 +176,7 @@ get_account_bookmarks <- function(id,max_id,since_id,min_id,limit = 40, token = 
 #' Get favourites of user
 #' @inheritParams get_account_statuses
 #' @inheritParams get_account_followers
+#' @param min_id character, Return results younger than this id
 #' @details this functions needs a user level auth token
 #' @return favourited statuses
 #' @export

@@ -7,6 +7,8 @@
 post_user(id, action = "follow", comment = "", token = NULL)
 }
 \arguments{
+\item{id}{character, user id to perform the action on}
+
 \item{action}{character, one of "(un)follow","(un)block", "(un)mute", "(un)pin","note"}
 
 \item{comment}{character (if action="note"), The comment to be set on that user. Provide an empty string or leave out this parameter to clear the currently set note.}
