@@ -12,4 +12,5 @@ test_that("get_account", {
   })
   expect_false("tbl_df" %in% class(x))
   expect_equal(id, x$id)
+  ## Doesn't test instance and anonymous; see test_search_accounts.R
 })
