@@ -25,7 +25,7 @@ make_get_request <- function(token, path, params, instance = NULL, anonymous = F
     stop(paste("something went wrong. Status code:", status_code))
   }
   output <- httr::content(request_results)
-  headers <- httr::headers(request_results)
+  headers <- parse_header(httr::headers(request_results))
   attr(output, "headers") <- headers
   return(output)
 }
@@ -52,33 +52,42 @@ make_get_request <- function(token, path, params, instance = NULL, anonymous = F
 get_status <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
   # if (!anonymous) token <- check_token_rtoot(token) # TODO:check if this is needed. I do not think so
   path <- paste0("/api/v1/statuses/", id)
-  output <- make_get_request(token = token, path = path, params = list(), instance = instance, anonymous = anonymous)
-  if (isTRUE(parse)) {
-    output <- parse_status(output)
-  }
-  return(output)
+  params <- list()
+  # output <- make_get_request(token = token, path = path, params = list(), instance = instance, anonymous = anonymous)
+  # if (isTRUE(parse)) {
+  #   output <- parse_status(output)
+  # }
+  # return(output)
+  process_request(token = token,path = path,instance = instance,params = params,
+                  anonymous = anonymous,parse = parse,FUN = parse_status)
 }
 
 #' @rdname get_status
 #' @export
 get_reblogged_by <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
   path <- paste0("/api/v1/statuses/", id, "/reblogged_by")
-  output <- make_get_request(token = token, path = path, params = list(), instance = instance, anonymous = anonymous)
-  if (isTRUE(parse)) {
-    output <- dplyr::bind_rows(lapply(output, parse_account))
-  }
-  return(output)
+  params <- list()
+  # output <- make_get_request(token = token, path = path, params = list(), instance = instance, anonymous = anonymous)
+  # if (isTRUE(parse)) {
+  #   output <- dplyr::bind_rows(lapply(output, parse_account))
+  # }
+  # return(output)
+  process_request(token = token,path = path,instance = instance,params = params,
+                  anonymous = anonymous,parse = parse,FUN = parse_account)
 }
 
 #' @rdname get_status
 #' @export
 get_favourited_by <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
   path <- paste0("/api/v1/statuses/", id, "/favourited_by")
-  output <- make_get_request(token = token, path = path, params = list(), instance = instance, anonymous = anonymous)
-  if (isTRUE(parse)) {
-    output <- dplyr::bind_rows(lapply(output, parse_account))
-  }
-  return(output)
+  params <- list()
+  # output <- make_get_request(token = token, path = path, params = list(), instance = instance, anonymous = anonymous)
+  # if (isTRUE(parse)) {
+  #   output <- dplyr::bind_rows(lapply(output, parse_account))
+  # }
+  # return(output)
+  process_request(token = token,path = path,instance = instance,params = params,
+                  anonymous = anonymous,parse = parse,FUN = parse_account)
 }
 
 #' View statuses above and below this status in the thread
@@ -119,11 +128,13 @@ get_context <- function(id, instance = NULL, token = NULL, anonymous = FALSE, pa
 #' }
 get_poll <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
   path <- paste0("/api/v1/polls/", id)
-  output <- make_get_request(token = token, path = path, params = list(), instance = instance, anonymous = anonymous)
-  if (isTRUE(parse)) {
-    output <- parse_poll(output)
-  }
-  return(output)
+  # output <- make_get_request(token = token, path = path, params = list(), instance = instance, anonymous = anonymous)
+  # if (isTRUE(parse)) {
+  #   output <- parse_poll(output)
+  # }
+  # return(output)
+  process_request(token = token,path = path,instance = instance,params = params,
+                  anonymous = anonymous,parse = parse,FUN = parse_poll)
 }
 
 #' Get the public timeline
@@ -162,11 +173,14 @@ get_public_timeline <- function(local = FALSE, remote = FALSE, only_media = FALS
   if (!missing(min_id)) {
     params$min_id <- min_id
   }
-  output <- make_get_request(token = token, path = "/api/v1/timelines/public", params = params, instance = instance, anonymous = anonymous)
-  if (isTRUE(parse)) {
-    output <- dplyr::bind_rows(lapply(output, parse_status))
-  }
-  return(output)
+  path = "/api/v1/timelines/public"
+  # output <- make_get_request(token = token, path = "/api/v1/timelines/public", params = params, instance = instance, anonymous = anonymous)
+  # if (isTRUE(parse)) {
+  #   output <- dplyr::bind_rows(lapply(output, parse_status))
+  # }
+  # return(output)
+  process_request(token = token,path = path,instance = instance,params = params,
+                  anonymous = anonymous,parse = parse,FUN = parse_status)
 }
 
 #' Get hashtag timeline
@@ -196,11 +210,13 @@ get_hashtag_timeline <- function(hashtag = "rstats", local = FALSE, only_media =
     params$min_id <- min_id
   }
   path <- paste0("/api/v1/timelines/tag/", gsub("^#+", "", hashtag))
-  output <- make_get_request(token = token, path = path, params = params, instance = instance, anonymous = anonymous)
-  if (isTRUE(parse)) {
-    output <- dplyr::bind_rows(lapply(output, parse_status))
-  }
-  return(output)
+  # output <- make_get_request(token = token, path = path, params = params, instance = instance, anonymous = anonymous)
+  # if (isTRUE(parse)) {
+  #   output <- dplyr::bind_rows(lapply(output, parse_status))
+  # }
+  # return(output)
+  process_request(token = token,path = path,instance = instance,params = params,
+                  anonymous = anonymous,parse = parse,FUN = parse_status)
 }
 
 #' Get home and list timelines
@@ -225,11 +241,14 @@ get_home_timeline <- function(local = FALSE, max_id, since_id, min_id, limit = 2
   if (!missing(min_id)) {
     params$min_id <- min_id
   }
-  output <- make_get_request(token = token, path = "/api/v1/timelines/home", params = params, instance = NULL, anonymous = FALSE)
-  if (isTRUE(parse)) {
-    output <- dplyr::bind_rows(lapply(output, parse_status))
-  }
-  return(output)
+  path = "/api/v1/timelines/home"
+  # output <- make_get_request(token = token, path = "/api/v1/timelines/home", params = params, instance = NULL, anonymous = FALSE)
+  # if (isTRUE(parse)) {
+  #   output <- dplyr::bind_rows(lapply(output, parse_status))
+  # }
+  # return(output)
+  process_request(token = token,path = path,params = params,
+                  parse = parse,FUN = parse_status)
 }
 
 #' @rdname get_home_timeline
@@ -246,9 +265,11 @@ get_list_timeline <- function(list_id, max_id, since_id, min_id, limit = 20L, to
     params$min_id <- min_id
   }
   path <- paste0("/api/v1/timelines/list/", list_id)
-  output <- make_get_request(token = token, path = path, params = params, instance = NULL, anonymous = FALSE)
-  if (isTRUE(parse)) {
-    output <- dplyr::bind_rows(lapply(output, parse_status))
-  }
-  return(output)
+  # output <- make_get_request(token = token, path = path, params = params, instance = NULL, anonymous = FALSE)
+  # if (isTRUE(parse)) {
+  #   output <- dplyr::bind_rows(lapply(output, parse_status))
+  # }
+  # return(output)
+  process_request(token = token,path = path,params = params,
+                  parse = parse,FUN = parse_status)
 }

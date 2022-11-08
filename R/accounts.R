@@ -8,13 +8,16 @@
 get_account <- function(id,instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE){
   path <- paste0("api/v1/accounts/",id)
   params <- list()
-  output <- make_get_request(token = token,path = path,
-                                      instance = instance, params = params,
-                                      anonymous = anonymous)
-  if (isTRUE(parse)) {
-    output <- parse_account(output)
-  }
-  return(output)
+  # output <- make_get_request(token = token,path = path,
+  #                                     instance = instance, params = params,
+  #                                     anonymous = anonymous)
+  # if (isTRUE(parse)) {
+  #   output <- parse_account(output)
+  # }
+  # return(output)
+  process_request(token = token,path = path,instance = instance,
+                  params = params, anonymous = anonymous,
+                  parse = parse, FUN = parse_account)
 }
 
 #' Search the instance for a specific user
@@ -28,13 +31,16 @@ get_account <- function(id,instance = NULL, token = NULL, anonymous = FALSE, par
 search_accounts <- function(query,limit = 40,instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE){
   path <- "/api/v1/accounts/search"
   params <- list(q=query,limit = limit)
-  output <- make_get_request(token = token,path = path,
-                                      instance = instance, params = params,
-                                      anonymous = anonymous)
-  if (isTRUE(parse)) {
-    output <- dplyr::bind_rows(lapply(output, parse_account))
-  }
-  return(output)
+  # output <- make_get_request(token = token,path = path,
+  #                                     instance = instance, params = params,
+  #                                     anonymous = anonymous)
+  # if (isTRUE(parse)) {
+  #   output <- dplyr::bind_rows(lapply(output, parse_account))
+  # }
+  # return(output)
+  process_request(token = token,path = path,instance = instance,
+                  params = params, anonymous = anonymous,
+                  parse = parse, FUN = parse_account)
 }
 
 #' Get statuses from a user
@@ -48,13 +54,16 @@ search_accounts <- function(query,limit = 40,instance = NULL, token = NULL, anon
 get_account_statuses <- function(id,instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE){
   path <- paste0("api/v1/accounts/",id,"/statuses")
   params <- list()
-  output <- make_get_request(token = token,path = path,
-                             instance = instance, params = params,
-                             anonymous = anonymous)
-  if (isTRUE(parse)) {
-    output <- dplyr::bind_rows(lapply(output, parse_status))
-  }
-  return(output)
+  # output <- make_get_request(token = token,path = path,
+  #                            instance = instance, params = params,
+  #                            anonymous = anonymous)
+  # if (isTRUE(parse)) {
+  #   output <- dplyr::bind_rows(lapply(output, parse_status))
+  # }
+  # return(output)
+  process_request(token = token,path = path,instance = instance,
+                  params = params, anonymous = anonymous,
+                  parse = parse, FUN = parse_status)
 }
 
 #' Get followers of a user
@@ -74,11 +83,9 @@ get_account_followers <- function(id,max_id,since_id,limit = 40, token = NULL, p
   if (!missing(since_id)) {
     params$since_id <- since_id
   }
-  output <- make_get_request(token = token, path = path, params = params)
-  if (isTRUE(parse)) {
-    output <- dplyr::bind_rows(lapply(output, parse_account))
-  }
-  return(output)
+  process_request(token = token,path = path,
+                  params = params,
+                  parse = parse, FUN = parse_account)
 }
 #' Get accounts a user follows
 #' @inheritParams get_account_statuses
@@ -95,11 +102,14 @@ get_account_following <- function(id,max_id,since_id,limit = 40, token = NULL, p
   if (!missing(since_id)) {
     params$since_id <- since_id
   }
-  output <- make_get_request(token = token, path = path, params = params)
-  if (isTRUE(parse)) {
-    output <- dplyr::bind_rows(lapply(output, parse_account))
-  }
-  return(output)
+  # output <- make_get_request(token = token, path = path, params = params)
+  # if (isTRUE(parse)) {
+  #   output <- dplyr::bind_rows(lapply(output, parse_account))
+  # }
+  # return(output)
+  process_request(token = token,path = path,
+                  params = params,
+                  parse = parse, FUN = parse_account)
 }
 
 #' Get featured tags of a user
@@ -110,11 +120,14 @@ get_account_following <- function(id,max_id,since_id,limit = 40, token = NULL, p
 get_account_featured_tags <- function(id,token = NULL, parse = TRUE){
   path <- paste0("api/v1/accounts/",id,"/featured_tags")
   params <- list()
-  output <- make_get_request(token = token,path = path, params = params)
-  if (isTRUE(parse)) {
-    output <- dplyr::bind_rows(output)
-  }
-  return(output)
+  # output <- make_get_request(token = token,path = path, params = params)
+  # if (isTRUE(parse)) {
+  #   output <- dplyr::bind_rows(output)
+  # }
+  # return(output)
+  process_request(token = token,path = path,
+                  params = params,
+                  parse = parse, FUN = identity)
 }
 
 #' Get lists containing the user
@@ -125,11 +138,14 @@ get_account_featured_tags <- function(id,token = NULL, parse = TRUE){
 get_account_lists <- function(id,token = NULL, parse = TRUE){
   path <- paste0("api/v1/accounts/",id,"/lists")
   params <- list()
-  output <- make_get_request(token = token,path = path, params = params)
-  if (isTRUE(parse)) {
-    # output <- dplyr::bind_rows(lapply(output, parse_status))
-  }
-  return(output) #TODO: probably need to format
+  # output <- make_get_request(token = token,path = path, params = params)
+  # if (isTRUE(parse)) {
+  #   # output <- dplyr::bind_rows(lapply(output, parse_status))
+  # }
+  # return(output) #TODO: probably need to format
+  process_request(token = token,path = path,
+                  params = params,
+                  parse = parse, FUN = identity)
 }
 
 #' Find out whether a given account is followed, blocked, muted, etc.
@@ -143,8 +159,11 @@ get_account_relationships <- function(ids,token = NULL, parse = TRUE){
   ids_lst <- lapply(ids,identity)
   names(ids_lst) <- rep("id[]",length(ids_lst))
   params <- ids_lst
-  output <- make_get_request(token = token,path = path, params = params)
-  dplyr::bind_rows(output)
+  # output <- make_get_request(token = token,path = path, params = params)
+  # dplyr::bind_rows(output)
+  process_request(token = token,path = path,
+                  params = params,
+                  parse = parse, FUN = identity)
 }
 
 
@@ -155,8 +174,8 @@ get_account_relationships <- function(ids,token = NULL, parse = TRUE){
 #' @details this functions needs a user level auth token
 #' @return bookmarked statuses
 #' @export
-get_account_bookmarks <- function(id,max_id,since_id,min_id,limit = 40, token = NULL, parse = TRUE){
-  path <- paste0("api/v1/accounts/",id,"/bookmarks")
+get_account_bookmarks <- function(max_id,since_id,min_id,limit = 40, token = NULL, parse = TRUE){
+  path <- paste0("api/v1/bookmarks")
   params <- list(limit = limit)
   if (!missing(max_id)) {
     params$max_id <- max_id
@@ -167,11 +186,14 @@ get_account_bookmarks <- function(id,max_id,since_id,min_id,limit = 40, token = 
   if (!missing(min_id)) {
     params$since_id <- min_id
   }
-  output <- make_get_request(token = token, path = path, params = params)
-  if (isTRUE(parse)) {
-    output <- dplyr::bind_rows(lapply(output, parse_status))
-  }
-  return(output)
+  # output <- make_get_request(token = token, path = path, params = params)
+  # if (isTRUE(parse)) {
+  #   output <- dplyr::bind_rows(lapply(output, parse_status))
+  # }
+  # return(output)
+  process_request(token = token,path = path,
+                  params = params,
+                  parse = parse, FUN = parse_status)
 }
 
 #' Get favourites of user
@@ -181,8 +203,8 @@ get_account_bookmarks <- function(id,max_id,since_id,min_id,limit = 40, token = 
 #' @details this functions needs a user level auth token
 #' @return favourited statuses
 #' @export
-get_account_favourites <- function(id,max_id,min_id,limit = 40, token = NULL, parse = TRUE){
-  path <- paste0("api/v1/accounts/",id,"/favourites")
+get_account_favourites <- function(max_id,min_id,limit = 40, token = NULL, parse = TRUE){
+  path <- paste0("api/v1/favourites")
   params <- list(limit = limit)
   if (!missing(max_id)) {
     params$max_id <- max_id
@@ -190,11 +212,14 @@ get_account_favourites <- function(id,max_id,min_id,limit = 40, token = NULL, pa
   if (!missing(min_id)) {
     params$min_id <- min_id
   }
-  output <- make_get_request(token = token, path = path, params = params)
-  if (isTRUE(parse)) {
-    output <- dplyr::bind_rows(lapply(output, parse_status))
-  }
-  return(output)
+  # output <- make_get_request(token = token, path = path, params = params)
+  # if (isTRUE(parse)) {
+  #   output <- dplyr::bind_rows(lapply(output, parse_status))
+  # }
+  # return(output)
+  process_request(token = token,path = path,
+                  params = params,
+                  parse = parse, FUN = parse_status)
 }
 
 #' Get blocks of user
@@ -203,8 +228,8 @@ get_account_favourites <- function(id,max_id,min_id,limit = 40, token = NULL, pa
 #' @details this functions needs a user level auth token
 #' @return blocked users
 #' @export
-get_account_blocks <- function(id,max_id,since_id,limit = 40, token = NULL, parse = TRUE){
-  path <- paste0("api/v1/accounts/",id,"/blocks")
+get_account_blocks <- function(max_id,since_id,limit = 40, token = NULL, parse = TRUE){
+  path <- paste0("api/v1/blocks")
   params <- list(limit = limit)
   if (!missing(max_id)) {
     params$max_id <- max_id
@@ -212,11 +237,14 @@ get_account_blocks <- function(id,max_id,since_id,limit = 40, token = NULL, pars
   if (!missing(since_id)) {
     params$since_id <- since_id
   }
-  output <- make_get_request(token = token, path = path, params = params)
-  if (isTRUE(parse)) {
-    output <- dplyr::bind_rows(lapply(output, parse_account))
-  }
-  return(output)
+  # output <- make_get_request(token = token, path = path, params = params)
+  # if (isTRUE(parse)) {
+  #   output <- dplyr::bind_rows(lapply(output, parse_account))
+  # }
+  # return(output)
+  process_request(token = token,path = path,
+                  params = params,
+                  parse = parse, FUN = parse_account)
 }
 
 #' Get mutes of user
@@ -225,8 +253,8 @@ get_account_blocks <- function(id,max_id,since_id,limit = 40, token = NULL, pars
 #' @details this functions needs a user level auth token
 #' @return muted users
 #' @export
-get_account_mutes <- function(id,max_id,since_id,limit = 40, token = NULL, parse = TRUE){
-  path <- paste0("api/v1/accounts/",id,"/mutes")
+get_account_mutes <- function(max_id,since_id,limit = 40, token = NULL, parse = TRUE){
+  path <- paste0("api/v1/mutes")
   params <- list(limit = limit)
   if (!missing(max_id)) {
     params$max_id <- max_id
@@ -234,9 +262,12 @@ get_account_mutes <- function(id,max_id,since_id,limit = 40, token = NULL, parse
   if (!missing(since_id)) {
     params$since_id <- since_id
   }
-  output <- make_get_request(token = token, path = path, params = params)
-  if (isTRUE(parse)) {
-    output <- dplyr::bind_rows(lapply(output, parse_account))
-  }
-  return(output)
+  # output <- make_get_request(token = token, path = path, params = params)
+  # if (isTRUE(parse)) {
+  #   output <- dplyr::bind_rows(lapply(output, parse_account))
+  # }
+  # return(output)
+  process_request(token = token,path = path,
+                  params = params,
+                  parse = parse, FUN = parse_account)
 }
