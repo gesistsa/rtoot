@@ -1,0 +1,59 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://social.tchncs.de/api/v1/accounts/search?q=Kudusch&limit=40
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: Bearer <<<MASTODON TOKEN>>>
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      cache-control: no-store
+      content-encoding: gzip
+      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
+        ''none''; font-src ''self'' https://social.tchncs.de; img-src ''self'' https:
+        data: blob: https://social.tchncs.de; style-src ''self'' https://social.tchncs.de
+        ''nonce-CbmGLHGc7svpuy+Fcf6WpQ==''; media-src ''self'' https: data: https://social.tchncs.de;
+        frame-src ''self'' https:; manifest-src ''self'' https://social.tchncs.de;
+        connect-src ''self'' data: blob: https://social.tchncs.de https://f2.tchncs.de
+        wss://social.tchncs.de; script-src ''self'' https://social.tchncs.de ''unsafe-eval'';
+        child-src ''self'' blob: https://social.tchncs.de; worker-src ''self'' blob:
+        https://social.tchncs.de'
+      content-type: application/json; charset=utf-8
+      date: Tue, 08 Nov 2022 18:13:04 GMT
+      etag: W/"e804271b8fdf7937f5c7e7cd827c9d5c"
+      permissions-policy:
+      - interest-cohort=()
+      - interest-cohort=()
+      server: Mastodon
+      strict-transport-security: max-age=63072000; includeSubDomains
+      vary: Accept-Encoding, Origin
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '287'
+      x-ratelimit-reset: '2022-11-08T18:15:00.621008Z'
+      x-request-id: 9b1609ec-5aab-4497-b01f-24b90a603da0
+      x-runtime: '0.032268'
+      x-xss-protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: '[{"id":"5358","username":"Kudusch","acct":"Kudusch","display_name":"Kudusch","locked":false,"bot":false,"discoverable":true,"group":false,"created_at":"2017-04-04T00:00:00.000Z","note":"\u003cp\u003eWenn
+        die Revolution kommt, laut klopfen; ich schlafe hinten.\u003c/p\u003e\u003cp\u003e(Computational)
+        Social Science | Conspiracy Theories | PhD life\u003c/p\u003e","url":"https://social.tchncs.de/@Kudusch","avatar":"https://f2.tchncs.de/accounts/avatars/000/005/358/original/384095273f5718fb.png","avatar_static":"https://f2.tchncs.de/accounts/avatars/000/005/358/original/384095273f5718fb.png","header":"https://f2.tchncs.de/accounts/headers/000/005/358/original/65cc01bbc3cdd5f2.jpeg","header_static":"https://f2.tchncs.de/accounts/headers/000/005/358/original/65cc01bbc3cdd5f2.jpeg","followers_count":64,"following_count":68,"statuses_count":179,"last_status_at":"2022-11-08","emojis":[],"fields":[{"name":"Website","value":"\u003ca
+        href=\"https://kudusch.de\" target=\"_blank\" rel=\"nofollow noopener noreferrer
+        me\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003ekudusch.de\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":"2018-12-27T17:30:58.258+00:00"},{"name":"Twitter","value":"\u003ca
+        href=\"https://twitter.com/Kudusch\" target=\"_blank\" rel=\"nofollow noopener
+        noreferrer me\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003etwitter.com/Kudusch\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":null}]},{"id":"109301993842875051","username":"kudusch","acct":"kudusch@mastodon.social","display_name":"","locked":false,"bot":false,"discoverable":false,"group":false,"created_at":"2022-08-01T00:00:00.000Z","note":"","url":"https://mastodon.social/@kudusch","avatar":"https://social.tchncs.de/avatars/original/missing.png","avatar_static":"https://social.tchncs.de/avatars/original/missing.png","header":"https://social.tchncs.de/headers/original/missing.png","header_static":"https://social.tchncs.de/headers/original/missing.png","followers_count":0,"following_count":1,"statuses_count":0,"last_status_at":null,"emojis":[],"fields":[]}]'
+  recorded_at: 2022-11-08 18:13:04 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.2
