@@ -24,7 +24,10 @@ make_get_request <- function(token, path, params, instance = NULL, anonymous = F
   if (!status_code %in% c(200)) {
     stop(paste("something went wrong. Status code:", status_code))
   }
-  return(httr::content(request_results))
+  output <- httr::content(request_results)
+  headers <- httr::headers(request_results)
+  attr(output, "headers") <- headers
+  return(output)
 }
 
 #' View information about a specific status
@@ -79,7 +82,7 @@ get_favourited_by <- function(id, instance = NULL, token = NULL, anonymous = FAL
 }
 
 #' View statuses above and below this status in the thread
-#' 
+#'
 #' Query the instance for information about the context of a specific status. A context contains statuses above and below a status in a thread.
 #' @inheritParams get_status
 #' @param parse logical, logical, if `TRUE`, the default, returns a named list of two tibbles, representing the ancestors (statuses above the status) and descendants (statuses below the status). Use `FALSE`  to return the "raw" list corresponding to the JSON returned from the Mastodon API.
