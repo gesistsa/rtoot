@@ -14,6 +14,7 @@ get_account <- function(id,instance = NULL, token = NULL, anonymous = FALSE, par
   if (isTRUE(parse)) {
     output <- parse_account(output)
   }
+  return(output)
 }
 
 #' Search the instance for a specific user
