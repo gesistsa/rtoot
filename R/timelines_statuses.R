@@ -30,7 +30,7 @@ make_get_request <- function(token, path, params, instance = NULL, anonymous = F
 #' View information about a specific status
 #'
 #' Query the instance for information about a specific status. [get_status] returns complete information of a status.
-#' [get_reblogged_by] returns who boosted a given status.
+#' [get_reblogged_by] returns who boosted a given status. [get_favourited_by] returns who favourited a given status.
 #'
 #' @param id character, Local ID of a status in the database
 #' @param instance character, the server name of the instance where the status is located. If `NULL`, the same instance used to obtain the token is used.
@@ -43,6 +43,7 @@ make_get_request <- function(token, path, params, instance = NULL, anonymous = F
 #' token <- create_token(get_client(instance = "social.tchncs.de"), type = "user")
 #' get_status(id = "109298295023649405", token = token)
 #' get_reblogged_by(id = "109294719267373593", instance = "mastodon.social")
+#' get_favourited_by(id = "109294719267373593", instance = "mastodon.social")
 #' }
 #' @export
 get_status <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
@@ -59,6 +60,17 @@ get_status <- function(id, instance = NULL, token = NULL, anonymous = FALSE, par
 #' @export
 get_reblogged_by <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
   path <- paste0("/api/v1/statuses/", id, "/reblogged_by")
+  output <- make_get_request(token = token, path = path, params = list(), instance = instance, anonymous = anonymous)
+  if (isTRUE(parse)) {
+    output <- dplyr::bind_rows(lapply(output, parse_account))
+  }
+  return(output)
+}
+
+#' @rdname get_status
+#' @export
+get_favourited_by <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
+  path <- paste0("/api/v1/statuses/", id, "/favourited_by")
   output <- make_get_request(token = token, path = path, params = list(), instance = instance, anonymous = anonymous)
   if (isTRUE(parse)) {
     output <- dplyr::bind_rows(lapply(output, parse_account))

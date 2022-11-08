@@ -3,11 +3,20 @@
 \name{get_status}
 \alias{get_status}
 \alias{get_reblogged_by}
+\alias{get_favourited_by}
 \title{View information about a specific status}
 \usage{
 get_status(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE)
 
 get_reblogged_by(
+  id,
+  instance = NULL,
+  token = NULL,
+  anonymous = FALSE,
+  parse = TRUE
+)
+
+get_favourited_by(
   id,
   instance = NULL,
   token = NULL,
@@ -31,12 +40,13 @@ a status or a list of users
 }
 \description{
 Query the instance for information about a specific status. \link{get_status} returns complete information of a status.
-\link{get_reblogged_by} returns who boosted a given status.
+\link{get_reblogged_by} returns who boosted a given status. \link{get_favourited_by} returns who favourited a given status.
 }
 \examples{
 \dontrun{
 token <- create_token(get_client(instance = "social.tchncs.de"), type = "user")
 get_status(id = "109298295023649405", token = token)
 get_reblogged_by(id = "109294719267373593", instance = "mastodon.social")
+get_favourited_by(id = "109294719267373593", instance = "mastodon.social")
 }
 }
