@@ -19,6 +19,7 @@ Suggests:
     knitr,
     rmarkdown,
     testthat (>= 3.0.0),
-    rstudioapi
+    rstudioapi,
+    vcr (>= 0.6.0)
 VignetteBuilder: knitr
 Config/testthat/edition: 3
