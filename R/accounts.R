@@ -208,7 +208,7 @@ get_account_blocks <- function(id,max_id,since_id,limit = 40, token = NULL, pars
   if (!missing(max_id)) {
     params$max_id <- max_id
   }
-  if (!missing(min_id)) {
+  if (!missing(since_id)) {
     params$since_id <- since_id
   }
   output <- make_get_request(token = token, path = path, params = params)
@@ -230,7 +230,7 @@ get_account_mutes <- function(id,max_id,since_id,limit = 40, token = NULL, parse
   if (!missing(max_id)) {
     params$max_id <- max_id
   }
-  if (!missing(min_id)) {
+  if (!missing(since_id)) {
     params$since_id <- since_id
   }
   output <- make_get_request(token = token, path = path, params = params)
