@@ -78,6 +78,51 @@ get_favourited_by <- function(id, instance = NULL, token = NULL, anonymous = FAL
   return(output)
 }
 
+#' View statuses above and below this status in the thread
+#' 
+#' Query the instance for information about the context of a specific status. A context contains statuses above and below a status in a thread.
+#' @inheritParams get_status
+#' @param parse logical, logical, if `TRUE`, the default, returns a named list of two tibbles, representing the ancestors (statuses above the status) and descendants (statuses below the status). Use `FALSE`  to return the "raw" list corresponding to the JSON returned from the Mastodon API.
+#' @export
+#' @examples
+#' \dontrun{
+#' token <- create_token(get_client(instance = "social.tchncs.de"), type = "user")
+#' get_context(id = "109294719267373593", instance = "mastodon.social", token = token)
+#' }
+get_context <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
+  path <- paste0("/api/v1/statuses/", id, "/context")
+  output <- make_get_request(token = token, path = path, params = list(), instance = instance, anonymous = anonymous)
+  if (isTRUE(parse)) {
+    ## The endpoint always returns both ancestors and descendants. A empty tibble is generated if there is nothing.
+    temp_output <- list()
+    temp_output$ancestors <- dplyr::bind_rows(lapply(output$ancestors, parse_status))
+    temp_output$descendants <- dplyr::bind_rows(lapply(output$descendants, parse_status))
+    output <- temp_output
+  }
+  return(output)
+}
+
+#' View a poll
+#'
+#' View a polls attached to statuses. To discover poll ID, you will need to use [get_status()] and look into the `poll`.
+#' @param id character, ID of the poll in the database
+#' @inheritParams get_status
+#' @return a poll
+#' @export
+#' @examples
+#' \dontrun{
+#' token <- create_token(get_client(instance = "social.tchncs.de"), type = "user")
+#' get_poll(id = "105976", token = token)
+#' }
+get_poll <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
+  path <- paste0("/api/v1/polls/", id)
+  output <- make_get_request(token = token, path = path, params = list(), instance = instance, anonymous = anonymous)
+  if (isTRUE(parse)) {
+    output <- parse_poll(output)
+  }
+  return(output)
+}
+
 #' Get the public timeline
 #'
 #' Query the instance for the public timeline

@@ -28,12 +28,15 @@ parse_status <- function(status, parse_date = TRUE) {
     if (parse_date) {
       output$created_at <- format_date(output$created_at)
     }
-    ## TODO: We need to have a data structure for "account" in the future
     for (field in c("application", "poll", "card")) {
       output[[field]]  <- I(list(list()))
       if (has_name_(status, field)) {
         if (!is.null(status[[field]])) {
-          output[[field]][[1]] <- status[[field]]
+          if (field != "poll") { ##haskish for now
+            output[[field]][[1]] <- status[[field]]
+          } else {
+            output[[field]] <- list(parse_poll(status[[field]]))
+          }
         }
       }
     }
@@ -104,6 +107,36 @@ parse_account <- function(account,parse_date = TRUE){
     for (field in c("fields", "emojis")) {
       if (has_name_(account, field) & length(account[[field]]) != 0) {
         output[[field]] <- list(dplyr::bind_rows(account[[field]]))
+      } else {
+        output[[field]]  <- I(list(list()))
+      }
+    }
+  }
+  output
+}
+
+## https://docs.joinmastodon.org/entities/poll/
+parse_poll <- function(poll, parse_date = TRUE) {
+  empty <- tibble::tibble(
+                     id = NA_character_, expires_at = NA_character_,
+                     expired = NA, multiple = NA,
+                     votes_count = NA, voters_count = NA,
+                     voted = NA, own_votes = I(list(list())),
+                     options = I(list(list())),
+                     emojis = I(list(list())))
+  if (is.null(poll)) {
+    output <- empty
+  } else {
+    singular_fields <- c("id", "expires_at", "expired", "multiple", "votes_count", "voters_count", "voted")
+    singular_list <- lapply(poll[singular_fields], function(x) ifelse(is.null(x), NA, x))
+    names(singular_list) <- singular_fields
+    output <- tibble::tibble(as.data.frame(singular_list))
+    if (parse_date) {
+      output$expires_at <- format_date(output$expires_at)
+    }
+    for (field in c("own_votes", "options", "emojis")) {
+      if (has_name_(poll, field) & length(poll[[field]]) != 0) {
+        output[[field]] <- list(dplyr::bind_rows(poll[[field]]))
       } else {
         output[[field]]  <- I(list(list()))
       }
