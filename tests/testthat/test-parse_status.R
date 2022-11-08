@@ -47,13 +47,36 @@ test_that("With and without personal fields", {
   expect_true(!is.na(res2$pinned))
 })
 
+test_that("parse_poll", {
+  status <- readRDS("../testdata/status/poll.RDS")
+  empty_poll<- tibble::tibble(
+                         id = NA_character_, expires_at = NA_character_,
+                         expired = NA, multiple = NA,
+                         votes_count = NA, voters_count = NA,
+                         voted = NA, own_votes = I(list(list())),
+                         options = I(list(list())),
+                         emojis = I(list(list())))
+  expect_equal(parse_poll(NULL), empty_poll)
+  expect_true("tbl_df" %in% class(parse_status(NULL)))
+  expect_error(parse_poll(status$poll), NA)
+  expect_equal(colnames(empty_poll), colnames(parse_poll(status$poll)))
+})
+
 test_that("With and without poll", {
+  empty_poll<- tibble::tibble(
+                         id = NA_character_, expires_at = NA_character_,
+                         expired = NA, multiple = NA,
+                         votes_count = NA, voters_count = NA,
+                         voted = NA, own_votes = I(list(list())),
+                         options = I(list(list())),
+                         emojis = I(list(list())))
   status1 <- readRDS("../testdata/status/not_reblog.RDS")
   status2 <- readRDS("../testdata/status/poll.RDS")
   res1 <- parse_status(status1)
   res2 <- parse_status(status2)
   expect_equal(length(res1$poll[[1]]), 0)
   expect_false(length(res2$poll[[1]]) == 0)
+  expect_equal(colnames(res2$poll[[1]]), colnames(empty_poll))
 })
 
 test_that("Is and Isn't reblog", {
