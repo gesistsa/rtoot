@@ -1,17 +1,18 @@
 ## tests for all instance functions
 
-##test_that("get_fedi_instances", {
-  ## can't use vcr to test because it doesn't use httr
-  ##skip_on_cran()
-  ##skip_on_ci()
-  ## x <- get_fedi_instances()
-  ## expect_true(nrow(x) > 0)
-  ## expect_true("data.frame" %in% class(x))
-  ## ## #29
-  ## x <- get_fedi_instances(n = 22)
-  ## expect_true(nrow(x) > 20)
-  ## expect_true("data.frame" %in% class(x))
-##})
+test_that("get_fedi_instances", {
+  vcr::use_cassette("get_fedi_instances_default", {
+    x <- get_fedi_instances()
+  })
+  expect_true(nrow(x) > 0)
+  expect_true("tbl_df" %in% class(x))
+  ## #29
+  vcr::use_cassette("get_fedi_instances_pr29", {
+    x <- get_fedi_instances(n = 22)
+  })
+  expect_true(nrow(x) > 20)
+  expect_true("tbl_df" %in% class(x))
+})
 
 test_that("get_instance_general", {
   vcr::use_cassette("get_instance_general_default", {

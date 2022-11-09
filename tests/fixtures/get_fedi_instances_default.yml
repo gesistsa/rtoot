@@ -1,0 +1,196 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://api.index.community/api/instances?sortField=userCount&sortDirection=desc&page=1
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      cache-control: max-age=0, private, must-revalidate
+      content-type: application/json; charset=utf-8
+      date: Wed, 09 Nov 2022 11:02:46 GMT
+      server: Cowboy
+      x-request-id: FyXlrN3fVUP0ahQBdAkh
+      content-length: '17755'
+    body:
+      encoding: ''
+      file: no
+      string: "{\"instances\":[{\"description\":\"Server run by the main developers
+        of the project <img alt=\\\"\U0001F418\\\" src=\\\"https://mastodon.social/emoji/1f418.svg\\\"
+        /> It is not focused on any particular niche interest - everyone is welcome
+        as long as you follow our code of conduct!\",\"insularity\":0.0,\"name\":\"mastodon.social\",\"statusCount\":30833830,\"statusesPerDay\":86.32724723566923,\"statusesPerUserPerDay\":1.5285624757316676e-4,\"type\":\"mastodon\",\"userCount\":564761,\"version\":\"3.4.1\"},{\"description\":\"\",\"insularity\":null,\"name\":\"joindiaspora.com\",\"statusCount\":2947739,\"statusesPerDay\":null,\"statusesPerUserPerDay\":null,\"type\":\"diaspora\",\"userCount\":316346,\"version\":\"1.0.0-dev-p86674b41\"},{\"description\":\"\U0001F3A8
+        Freely share all types of art. This instance welcomes any depiction expressed
+        as a piece of fiction in subject or setting. Re-posting is discouraged.<br
+        /><br />\\r\\n✅ Uncensored 2D drawings &amp; 3D models<br />\\r\\n✅ Zero guidelines
+        on fictional characters<br />\\r\\n❌ No real life photographic pornography<br
+        />\\r\\n❌ <a href=\\\"https://baraag.net/about/more\\\">No illegal content*</a><br
+        /><br />\\r\\n\\r\\n\U0001F51E Preview the local timeline of this instance
+        <a href=\\\"https://tusktowall.darthvid.com/?instance=baraag.net\\\">here</a><br
+        />\\r\\nBy viewing any content at baraag.net, you agree to the <a href=\\\"https://baraag.net/terms\\\">Terms
+        of Service</a>\\r\\n<br /><br />\U0001F4E7 E-mail confirmations are sometimes
+        not sent to outlook. Please use another e-mail for sign-up. \\r\\n\",\"insularity\":0.9699570815450643,\"name\":\"baraag.net\",\"statusCount\":7042707,\"statusesPerDay\":821.9828361258684,\"statusesPerUserPerDay\":0.0028848892387378818,\"type\":\"mastodon\",\"userCount\":284927,\"version\":\"3.5.3\"},{\"description\":\"Mastodon日本鯖です．\",\"insularity\":0.010570824524312896,\"name\":\"mstdn.jp\",\"statusCount\":61612391,\"statusesPerDay\":19485.808799206086,\"statusesPerUserPerDay\":0.08428081539096322,\"type\":\"mastodon\",\"userCount\":231201,\"version\":\"3.5.1\"},{\"description\":\"Generalistic
+        and moderated instance.<br />\\r\\nEveryone is welcome as long as you follow
+        our code of conduct!<br />\\r\\nRead the Code of Conduct before signing up
+        please!<br />\\r\\nFeel free to join us in this adventure!<br />\\r\\nUp since
+        04/04/2017. ✅\\r\\n\\r\\n利用規約・プライバシーポリシーは以下をご覧ください。<br />\\r\\n<a href=\\\"https://legal.bunsan.social\\\">https://legal.bunsan.social</a>\\r\\n<br
+        />\\r\\nLegal and privacy policy is below:<br />\\r\\n<a href=\\\"https://translate.google.co.jp/translate?hl=ja&amp;sl=ja&amp;tl=en&amp;u=https%3A%2F%2Flegal.bunsan.social%2F\\\">https://translate.google.co.jp/translate?hl=ja&amp;sl=ja&amp;tl=en&amp;u=https%3A%2F%2Flegal.bunsan.social%2F</a>\\r\\n\",\"insularity\":0.0,\"name\":\"mastodon.cloud\",\"statusCount\":4468647,\"statusesPerDay\":2746.9304201211835,\"statusesPerUserPerDay\":0.012280625984089697,\"type\":\"mastodon\",\"userCount\":223680,\"version\":\"3.4.6\"},{\"description\":\"\",\"insularity\":null,\"name\":\"test.diasp.org\",\"statusCount\":831728,\"statusesPerDay\":null,\"statusesPerUserPerDay\":null,\"type\":\"diaspora\",\"userCount\":105472,\"version\":\"0.7.18.0-p7f1c57ff\"},{\"description\":\"\",\"insularity\":null,\"name\":\"diasp.org\",\"statusCount\":831728,\"statusesPerDay\":null,\"statusesPerUserPerDay\":null,\"type\":\"diaspora\",\"userCount\":105472,\"version\":\"0.7.18.0-p7f1c57ff\"},{\"description\":\"\",\"insularity\":null,\"name\":\"gc2.jp\",\"statusCount\":920583,\"statusesPerDay\":null,\"statusesPerUserPerDay\":null,\"type\":\"mastodon\",\"userCount\":100171,\"version\":\"3.5.3\"},{\"description\":\"\",\"insularity\":1.0,\"name\":\"brighteon.social\",\"statusCount\":2181431,\"statusesPerDay\":79.54567905090808,\"statusesPerUserPerDay\":0.0016411999474067029,\"type\":\"brighteon\",\"userCount\":48468,\"version\":\"3.4.6\"},{\"description\":\"\",\"insularity\":null,\"name\":\"staging-do.brighteon.social\",\"statusCount\":2069566,\"statusesPerDay\":null,\"statusesPerUserPerDay\":null,\"type\":\"brighteon\",\"userCount\":47788,\"version\":\"3.4.6\"},{\"description\":\"C.IM
+        is a general, mainly English-speaking Mastodon instance. CIM is the abbreviation
+        for Creation, Innovation and Motivation.\",\"insularity\":null,\"name\":\"c.im\",\"statusCount\":225305,\"statusesPerDay\":null,\"statusesPerUserPerDay\":null,\"type\":\"mastodon\",\"userCount\":47242,\"version\":\"3.5.3\"},{\"description\":\"\",\"insularity\":null,\"name\":\"staging.brighteon.social\",\"statusCount\":1898460,\"statusesPerDay\":0.5076307158885672,\"statusesPerUserPerDay\":1.0822298125795574e-5,\"type\":\"brighteon\",\"userCount\":46906,\"version\":\"3.4.6\"},{\"description\":\"BitTube
+        is a blockchain based video streaming platform using P2P (BitTorrent) directly
+        in the web browser with WebTorrent and Airtime reward system where users earn
+        TUBE cryptocyrrency. Check out https://bittube.app\",\"insularity\":null,\"name\":\"bittube.video\",\"statusCount\":132819,\"statusesPerDay\":null,\"statusesPerUserPerDay\":null,\"type\":\"peertube\",\"userCount\":43998,\"version\":\"3.3.0\"},{\"description\":\"En
+        Français :\\r\\nMastodon.top est une instance mastodon publique et ouverte,
+        hébergée par <a href=\\\"https://virtubox.net/fr\\\">VirtuBox</a>. Notre instance
+        est stable, régulièrement mise à jour et accessible\\r\\n    à tous. Visitez
+        notre page <a href=\\\"https://mastodon.top/about/more\\\">à propos</a> si
+        vous\\r\\n    souhaitez avoir plus d'informations concernant les règles de
+        l'instance ou sur notre politique de modération.\\r\\n<hr />\\r\\nIn English
+        : \\r\\n<p>Mastodon.top is a public and open instance hosted by <a href=\\\"https://virtubox.net\\\">VirtuBox</a>.
+        Our instance is updated with each new release of mastodon. Visit our <a href=\\\"https://mastodon.top/about/more\\\">about
+        page</a> to learn more about the rules of the instance and our moderation
+        policy.</p>\",\"insularity\":0.3288409703504043,\"name\":\"mastodon.top\",\"statusCount\":332496,\"statusesPerDay\":1919.7625525599801,\"statusesPerUserPerDay\":0.044713230524280424,\"type\":\"mastodon\",\"userCount\":42935,\"version\":\"3.5.3\"},{\"description\":\"\",\"insularity\":null,\"name\":\"diaspora-fr.org\",\"statusCount\":181861,\"statusesPerDay\":null,\"statusesPerUserPerDay\":null,\"type\":\"diaspora\",\"userCount\":40139,\"version\":\"0.7.99.0-p32b676ee\"},{\"description\":\"Fosstodon
+        is an English speaking Mastodon instance that is dedicated to Free &amp; Open
+        Source Software, or FOSS as many call it.\\r\\n\\r\\nFosstodon is for people
+        who are interested in open source technology and the awesome community around
+        it. Whether that be Linux, open source software like Firefox, or Mastodon
+        itself. If you're interested in technology, Fosstodon is a great place to
+        start.\\r\\n\\r\\nWe're not just techies on Fosstodon though! We like to think
+        of tech as the hobby that brings us all together, but it doesn't define us.
+        That's why we encourage all our members to post about whatever interests them,
+        not just tech (so long as it is allowed under our CoC).\",\"insularity\":0.0,\"name\":\"fosstodon.org\",\"statusCount\":1117954,\"statusesPerDay\":3363.6922327535467,\"statusesPerUserPerDay\":0.08395797306193957,\"type\":\"mastodon\",\"userCount\":40064,\"version\":\"3.5.3\"},{\"description\":\"\",\"insularity\":null,\"name\":\"diasp.eu\",\"statusCount\":555302,\"statusesPerDay\":null,\"statusesPerUserPerDay\":null,\"type\":\"diaspora\",\"userCount\":39171,\"version\":\"0.7.17.0-pba142fd5\"},{\"description\":\"Bienvenue
+        dans le media fédéré de la <a href=\\\"https://www.laquadrature.net/\\\">Quadrature
+        du Net</a> association de défense des libertés.\\r\\n<br />\\r\\nTout compte
+        créé ici pourra a priori discuter avec l'ensemble des autres instances de
+        Mastodon de la fédération, et sera visible sur les autres instances.\\r\\n\",\"insularity\":0.0,\"name\":\"mamot.fr\",\"statusCount\":5895122,\"statusesPerDay\":1864.0200449057954,\"statusesPerUserPerDay\":0.04830694391649507,\"type\":\"mastodon\",\"userCount\":38587,\"version\":\"3.5.1\"},{\"description\":\"Mastodon.uno
+        è il social network generalista Italiano parte della più grande rete internazionale
+        di social interconnessi liberi ed open source: Il Fediverso, un neologismo
+        composto dall'unione di due parole \\\"federazione\\\" e \\\"universo\\\".\\r\\nÈ
+        un nome comune per i social network federati che funzionano con software libero
+        aperto su più di 6000 server in tutto il mondo e che al momento supera i 4
+        milioni di iscritti. Storicamente, questo termine ha incluso solo le piattaforme
+        di microblogging che supportavano un insieme di protocolli chiamati OStatus.
+        Con la comparsa e l'ampia adozione di un nuovo protocollo standard chiamato
+        ActivityPub si è creata un grande numero di nuovi progetti liberi che intendono
+        dare un'alternativa ai social commerciali. \\r\\n\\r\\nI social network del
+        Fediverso sono molto differenti rispetto alle piattaforme mainstream (Facebook,
+        Twitter, Instagram, Pinterest, ecc). In primo luogo, tutte le reti federate
+        sono sviluppate da comunità di persone in tutto il mondo, indipendentemente
+        da qualsiasi società o istituzione ufficiale. Questo significa che puoi partecipare
+        allo sviluppo e alla crescita del Fediverse. Tutte le competenze sono preziose:
+        diffondere la parola, invitare amici sono attività molto gradite. Un'altra
+        differenza di questi social network dai silos aziendali è il principio della
+        federazione. Le reti principali concentrano milioni di utenti sui loro server.
+        Questo dà loro il pericoloso potere di controllare le informazioni e di accumulare
+        i dati privati degli utenti, utilizzandoli a scopo di lucro commerciale (e
+        chissà quali altr scopii). Le reti Fediverse sono progettate per essere gestite
+        da chiunque: sei libero di scegliere e registrarti su qualsiasi server che
+        ti piace, puoi scegliere la persona che si occuperà dei tuoi dati - l'amministratore
+        del tuo server. Se hai una ottima conoscenza tecnica, puoi amministrare il
+        tuo server per i tuoi amici e la tua famiglia, collegandoti a tuo piacimento
+        con migliaia di altri server indipendenti attraverso il web. In un certo senso,
+        Fediverse è un universo autonomo dove il potere e i dati sono decentralizzati
+        e sparsi in più paesi, mentre i siti web aziendali tradizionali si sono fatti
+        ciascuno un imperatore (o un tiranno?) del proprio enorme impero, circondati
+        da alte recinzioni, e riservano a se stessi tutte le decisioni, il controllo
+        dei dati e la censura.\\r\\n\\r\\nMastodon.uno è interconnesso con tutte le
+        reti federate ed è interoperabile con ognuna di loro fancente capo al \\\"Fediverso\\\"
+        ed è la community italiana ad essere consigliata dal sito ufficiale di mastodon
+        in quanto segue rigidi criteri di affidabilità fra cui: ci sono più di un
+        responsabile tecnico disponibile 24h in caso di problemi, garazie nel mantenere
+        il sito attivo online, moderazione attiva contro azioni discrimitorie e di
+        odio.\\r\\nMastodon.uno è inoltre una delle poche istanze in cui è attiva
+        la ricerca sul testo, che è disattivata nella maggior parte delle istanze
+        in quanto richiede un'enorme potenza di calcolo. \\r\\n\\r\\n<br />\\r\\n<br
+        />\\r\\n\\r\\nMastodon non ti obbliga a iscriverti con il tuo nome e cognome
+        o con il tuo numero di telefono, puoi mantenere la tua privacy ed utilizzare
+        qualsiasi nome, abbiamo solo bisogno di una email per la verifica.\\r\\nOppure
+        al contrario se desideri avere un account con una identità vericata/verificabile
+        basta inserire un piccolo script che trovi nel tuo <a href=\\\"https://mastodon.uno/settings/profile\\\">
+        pannello di modifica del profilo</a> all'interno della home del tuo sito.\\r\\nOppure
+        utilizzando l'app open source keybase per verificare la propria identità su
+        più social: <a></a>keybase su mastodon.uno, keybase è una piattaforma con
+        cui si può confermare che diversi profili social facciano capo a sé (per intenderci
+        confermi gli account che gestisci), in modo sicuro utilizzando la crittografia.\\r\\n\\r\\n
+        \\r\\nI social commerciali come facebook e twitter negli ultimi anni si sono
+        distinti per la capacità di disseminare disinformazione, teorie cospirazioniste
+        e con lo scandalo Cambridge Analytica, la manipolazione dell'opinione pubblica.
+        Inoltre le fake news, gli haters, la profilatura e la vendita dei dati personali
+        a scopi commerciali. Questi ed altri sono i fenomeni problematici emersi solo
+        negli ultimi anni attorno e dentro ai social network commerciali, Facebook
+        in primis.<br />\\r\\nFacebook, Twitter eGoogle esistono vendendo i tuoi dati
+        a terzi inserzionisti per sovvenzionare i servizi che ricevi gratuitamente,
+        ma questo è molto negativo per la privacy degli utenti, perché le aziende
+        sono incentivate ad abusare il più possibile della tua privacy. L'alternativa
+        è il modello di Mastodon... abbiamo una certa percentuale di utenti che donano
+        ed è questo che ci sostiene.<br />\\r\\n\\r\\nI social come facebook e twitter
+        devono rispondere ai loro azionisti e aumentarne i profitti, usano gli algoritmi
+        per creare la bolla di filtraggio: una gabbia rassicurante all’interno della
+        quale, grazie all’intervento dei dati profilati di ogni utente, vediamo quasi
+        esclusivamente contenuti che confermano quelle che già sono le nostre credenze.
+        \\r\\n<br /><br />\\r\\nLungi dal mantenere la promessa originaria del web,
+        ovvero offrire agli utenti un’informazione libera e diversificata, Facebook
+        e compagnia non farebbero che mostrarci quello che vogliamo vedere, tenendoci
+        spesso al riparo da informazioni che potrebbero incrinare le nostre certezze
+        e rendere la nostra esperienza sui social media meno confortevole, questo
+        rendere sempre più piacevole il trascorrere il tempo nei social ha come effetto
+        un aumentando della permanenza e la dipendenza da social.\\r\\n<br /><br />\\r\\nSe
+        è vero che i social hanno accorciato le distante e favorito lo scambio e la
+        comunicazione a distanza, è altrettanto vero che il prezzo da pagare in termini
+        di rinuncia alla privacy e controllo sociale è davvero troppo alto.\\r\\n<br
+        /><br />\\r\\nSimile a Twitter nelle funzionalità, le caratteristiche di Mastodon
+        Italia sono profondamente e concettualmente molto diverse, al punto di farne
+        una sorta di anti-Facebook.\\r\\nAnzitutto la tutela dell'anonimato, questione
+        maggiormente critica se consideriamo la creatura di Mark Zuckerberg. Mastodon,
+        invece, è pensato e sviluppato per non pubblicare né conservare alcun dato
+        sensibile, a tutela della privacy degli utenti. In questo senso, dunque, non
+        profila e non detiene alcun dato personali a scopi commerciali o politici,
+        non utilizza pubblicità o script che potrebbero profilare gli utenti e venderli
+        per scopi commerciali ma si mantiene con le donazioni su Patreon. \\r\\n<br
+        />\\r\\nIl software Mastodon non monitora tutto quel genere di informazioni
+        che invece vengono registrare da piattaforme sociali correlate come Twitter,
+        Instagram o Facebook: non calcola chi secondo lui potrebbe diventar mio amico/a.
+        Non registra i millisecondi su cui mi soffermo su un’immagine, gli errori
+        di battitura, i like, il tasso di engagement o il tipo di relazione che intercorre
+        tra me ed un altro utente, quale sia il mio lavoro, i luoghi che visito. Non
+        geolocalizza la mia posizione.  Come vedremo, Mastodon manco mi chiede come
+        mi chiamo e non mi obbliga nemmanco a comunicargli tutti i numeri nella mia
+        Rubrica. Inoltre, come vedremo, puoi far sì che non sia in grado di leggere
+        quel che tu scrivi. Il software Mastodon, insomma, raccoglie giusto le informazioni
+        tecniche necessarie a funzionare.\\r\\n<br />\\r\\nMastodon non é legato a
+        doppio filo al tuo telefono o ad una singola app, per cui puoi accederci attraverso
+        una delle app per android e iphone gratuite e open source, ma anche se il
+        telefono l’avessi perso o distrutto potrai utilizzarlo. In effetti si può
+        benissimo usare Mastodon su PC Linux, Windows, Mac e su qualsiasi altro dispositivo
+        via Browser senza mai dover dare il tuo numero di telefono.\\r\\n\\r\\n<br
+        />Il software utilizzato dai server Mastodon é F.L.O.S.S. ossia aperto, libero
+        e verificabile da chiunque. Qualsiasi persona capace di programmare può verificare
+        ciò che il software Mastodon fa, esattamente come un meccanico che può aprire
+        un cofano, vedere il motore, trovarne i difetti, metterci le mani e migliorarlo\\r\\n<br
+        />Mastodon, inoltre, viene gestito in modo collettivo, senza un vero e proprio
+        padrone, ogni contenuto inserito rimane di proprietà dell'utente, può essere
+        esportato e salvato per intero e utilizzato per altre piattaforme compatibili,
+        in questo modo non si perderanno mai i contatti e i contenuti creati.\\r\\n<br
+        />\\r\\nMastodon.uno è autogestito ed autofinanziato, non è una società che
+        cerca di creare profitto dalla tua vita e dai tuoi contenuti. \\r\\nIl tuo
+        supporto via Patreon o Liberapay è fondamentale per mantenere questo servizio
+        attivo ed efficiente. \\r\\n\\r\\n<br />\\r\\n<br />\\r\\n<a href=\\\"https://liberapay.com/mastodonitalia\\\"><img
+        src=\\\"https://cdn.mstdn.social/mstdn-social/media_attachments/files/000/211/371/small/4cd4c0cf8bf8c3ef.png\\\"
+        /></a>\\r\\n<a href=\\\"https://patreon.com/mastodonitalia\\\"><img src=\\\"https://cdn.mstdn.social/mstdn-social/media_attachments/files/000/211/370/original/99c06a1ef57d074c.png\\\"
+        /></a>\\r\\n<br />\\r\\n<br />\\r\\n<br /><br />\\r\\nPuoi seguire Mastodon.uno
+        sui profili ufficiali: <br />\\r\\n<a href=\\\"https://matrix.to/#/#mastodon:mozilla.org?via=mozilla.org\\\">Matrix</a>&gt;
+        \\r\\n<a href=\\\"https://noblogo.org/mastodon/\\\">NoBlogo</a>&gt; <br />\\r\\n<a
+        href=\\\"https://mastodon.uno/@mastodon/\\\">Mastodon</a>&gt; <br />\\r\\n<a
+        href=\\\"https://peertube.uno/accounts/mastodon/video-channels\\\">Peertube</a>&gt;
+        <br /><a href=\\\"https://twitter.com/mastodonitalia\\\">Twitter</a>&gt; <br
+        />\\r\\n<a href=\\\"https://pixelfed.uno/mastodon\\\">Pixelfed</a>&gt;.<br
+        />\",\"insularity\":0.6521106259097526,\"name\":\"mastodon.uno\",\"statusCount\":421979,\"statusesPerDay\":4547.649370227278,\"statusesPerUserPerDay\":0.12427988003463265,\"type\":\"mastodon\",\"userCount\":36592,\"version\":\"3.5.3\"},{\"description\":\"\",\"insularity\":null,\"name\":\"diasp.in\",\"statusCount\":31558,\"statusesPerDay\":null,\"statusesPerUserPerDay\":null,\"type\":\"diaspora\",\"userCount\":32964,\"version\":\"0.7.15.0\"}],\"pageNumber\":1,\"pageSize\":20,\"totalEntries\":2961,\"totalPages\":149}"
+  recorded_at: 2022-11-09 11:02:47 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.2
