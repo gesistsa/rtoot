@@ -21,3 +21,11 @@ no return value, called for site effects
 \description{
 Perform actions on an account
 }
+\examples{
+\dontrun{
+#follow a user
+post_user("xxxxxx",action = "follow")
+#unfollow a user
+post_user("xxxxxx",action = "unfollow")
+}
+}

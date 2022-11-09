@@ -44,3 +44,11 @@ no return value, called for site effects
 \description{
 Post status update to user's Mastodon account
 }
+\examples{
+\dontrun{
+# post a simple status
+post_toot("my first rtoot #rstats")
+# post a media file with alt text
+post_toot("look at this pic",media = "path/to/image",alt_text = "describe image")
+}
+}

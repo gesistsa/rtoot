@@ -11,6 +11,13 @@
 #' @param scheduled_at ISO 8601 Datetime at which to schedule a status. Must be at least 5 minutes in the future.
 #' @param language ISO 639 language code for this status.
 #' @return no return value, called for site effects
+#' @examples
+#' \dontrun{
+#' # post a simple status
+#' post_toot("my first rtoot #rstats")
+#' # post a media file with alt text
+#' post_toot("look at this pic",media = "path/to/image",alt_text = "describe image")
+#' }
 #' @export
 post_toot <- function(
     status = "my first rtoot #rstats",
@@ -96,6 +103,13 @@ check_media <- function(media, alt_text) {
 #' @param action character, one of "(un)follow","(un)block", "(un)mute", "(un)pin","note"
 #' @param comment character (if action="note"), The comment to be set on that user. Provide an empty string or leave out this parameter to clear the currently set note.
 #' @return no return value, called for site effects
+#' @examples
+#' \dontrun{
+#' #follow a user
+#' post_user("xxxxxx",action = "follow")
+#' #unfollow a user
+#' post_user("xxxxxx",action = "unfollow")
+#' }
 #' @export
 post_user <- function(id,action = "follow",comment = "",token = NULL){
   token <- check_token_rtoot(token)
