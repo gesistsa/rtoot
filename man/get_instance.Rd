@@ -69,3 +69,12 @@ Get various information about a specific instance
 \item{get_instance_trends}{Tags that are being used more frequently within the past week}
 }
 }
+\examples{
+\dontrun{
+ get_instance_general("mastodon.social")
+ get_instance_activity("mastodon.social")
+ get_instance_emoji("mastodon.social")
+ get_instance_peers("mastodon.social")
+ get_instance_directory("mastodon.social",limit=2)
+}
+}

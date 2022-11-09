@@ -39,6 +39,14 @@ get_fedi_instances  <-  function(n = 20) {
 #'   \item{get_instance_trends}{Tags that are being used more frequently within the past week}
 #' }
 #' @return instance details as list or tibble depending on call function
+#' @examples
+#' \dontrun{
+#'  get_instance_general("mastodon.social")
+#'  get_instance_activity("mastodon.social")
+#'  get_instance_emoji("mastodon.social")
+#'  get_instance_peers("mastodon.social")
+#'  get_instance_directory("mastodon.social",limit=2)
+#' }
 #' @export
 get_instance_general <- function(instance = NULL,token = NULL, anonymous = TRUE){
   request_results <- make_get_request(token = token,path = "/api/v1/instance",
