@@ -23,7 +23,7 @@ get_fedi_instances  <-  function(n = 20) {
 #' @param order 'active' to sort by most recently posted statuses (default) or 'new' to sort by most recently created profiles.
 #' @inheritParams post_toot
 #' @inheritParams get_status
-#' @inheritParams get_public_timeline
+#' @inheritParams get_timeline_public
 #' @name get_instance
 #' @details
 #' \describe{

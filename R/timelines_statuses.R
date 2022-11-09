@@ -127,13 +127,13 @@ get_poll <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse
 #' \dontrun{
 #' token <- create_token(instance = "social.tchncs.de")
 #' ## as tibble
-#' get_public_timeline(token = token)
+#' get_timeline_public(token = token)
 #' ## as list
-#' get_public_timeline(token = token, parse = FALSE)
+#' get_timeline_public(token = token, parse = FALSE)
 #' }
 #' @references
 #' https://docs.joinmastodon.org/methods/timelines/
-get_public_timeline <- function(local = FALSE, remote = FALSE, only_media = FALSE,
+get_timeline_public <- function(local = FALSE, remote = FALSE, only_media = FALSE,
                                 max_id, since_id, min_id, limit = 20L, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
   params <- list(local = local, remote = remote, only_media = only_media, limit = limit)
   if (!missing(max_id)) {
@@ -159,16 +159,16 @@ get_public_timeline <- function(local = FALSE, remote = FALSE, only_media = FALS
 #'
 #' Query the instance for the timeline of a specific hashtag
 #' @param hashtag character, Content of a #hashtag. The hash is optional
-#' @inherit get_public_timeline
+#' @inherit get_timeline_public
 #' @export
 #' @examples
 #' \dontrun{
 #' token <- create_token(instance = "social.tchncs.de")
-#' get_hashtag_timeline(hashtag = "#ichbinhanna", token = token)
+#' get_timeline_hashtag(hashtag = "#ichbinhanna", token = token)
 #' ## anonymously
-#' get_hashtag_timeline(hashtag = "ichbinhanna", instance = "mastodon.social", anonymous = TRUE)
+#' get_timeline_hashtag(hashtag = "ichbinhanna", instance = "mastodon.social", anonymous = TRUE)
 #' }
-get_hashtag_timeline <- function(hashtag = "rstats", local = FALSE, only_media = FALSE,
+get_timeline_hashtag <- function(hashtag = "rstats", local = FALSE, only_media = FALSE,
                                  max_id, since_id, min_id, limit = 20L, instance = NULL,
                                  token = NULL, anonymous = FALSE, parse = TRUE) {
   params <- list(local = local, only_media = only_media, limit = limit)
@@ -195,14 +195,14 @@ get_hashtag_timeline <- function(hashtag = "rstats", local = FALSE, only_media =
 #'
 #' Query the instance for the timeline from either followed users or a specific list. These functions can only be called with a user token from [create_token()].
 #' @param list_id character, Local ID of the list in the database.
-#' @inherit get_public_timeline
+#' @inherit get_timeline_public
 #' @export
 #' @examples
 #' \dontrun{
 #' token <- create_token(instance = "social.tchncs.de")
-#' get_home_timeline()
+#' get_timeline_home()
 #' }
-get_home_timeline <- function(local = FALSE, max_id, since_id, min_id, limit = 20L, token = NULL, parse = TRUE) {
+get_timeline_home <- function(local = FALSE, max_id, since_id, min_id, limit = 20L, token = NULL, parse = TRUE) {
   params <- list(local = local, limit = limit)
   if (!missing(max_id)) {
     params$max_id <- max_id
@@ -223,9 +223,9 @@ get_home_timeline <- function(local = FALSE, max_id, since_id, min_id, limit = 2
                   parse = parse,FUN = v(parse_status))
 }
 
-#' @rdname get_home_timeline
+#' @rdname get_timeline_home
 #' @export
-get_list_timeline <- function(list_id, max_id, since_id, min_id, limit = 20L, token = NULL, parse = TRUE) {
+get_timeline_list <- function(list_id, max_id, since_id, min_id, limit = 20L, token = NULL, parse = TRUE) {
   params <- list(limit = limit)
   if (!missing(max_id)) {
     params$max_id <- max_id

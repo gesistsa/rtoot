@@ -34,7 +34,7 @@ The mastodon API allows different access levels. Setting up a token with your ow
 
 In contrast to twitter, mastodon is not a single instance, but a federation of different servers.
 You sign up at a specific server (say "mastodon.social") but can still communicate with others from other servers (say "fosstodon.org"). The existence of different instances makes API calls more complex.
-For example, some calls can only be made within your own instance (e.g `get_home_timeline()`), others can access all instances but you need to specify the instance as a parameter (e.g. `get_public_timeline()`). 
+For example, some calls can only be made within your own instance (e.g `get_timeline_home()`), others can access all instances but you need to specify the instance as a parameter (e.g. `get_timeline_public()`). 
 
 A list of active instances can be obtained with `get_fedi_instances()`. The results are sorted by number of users.
 
@@ -53,21 +53,21 @@ get_instance_trends(instance = "mastodon.social")
 
 ## Get toots
 
-To get the most recent toots of a specific instance use `get_public_timeline()`
+To get the most recent toots of a specific instance use `get_timeline_public()`
 ```{r, eval = FALSE}
-get_public_timeline(instance = "mastodon.social")
+get_timeline_public(instance = "mastodon.social")
 ```
 
-To get the most recent toots containing a specific hashtag use `get_hashtag_timeline()`
+To get the most recent toots containing a specific hashtag use `get_timeline_hashtag()`
 
 ```{r, eval = FALSE}
-get_hashtag_timeline(hashtag = "rstats", instance = "mastodon.social")
+get_timeline_hashtag(hashtag = "rstats", instance = "mastodon.social")
 ```
 
-The function `get_home_timeline()` allows you to get the most recent toots from your own timeline.
+The function `get_timeline_home()` allows you to get the most recent toots from your own timeline.
 
 ```{r, eval = FALSE}
-get_home_timeline()
+get_timeline_home()
 ```
 
 ## Get accounts
