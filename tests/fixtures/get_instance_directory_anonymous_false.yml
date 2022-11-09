@@ -1,0 +1,92 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://social.tchncs.de/api/v1/directory?local=FALSE&offset=0&order=active&limit=3
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      cache-control: no-store
+      content-encoding: gzip
+      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
+        ''none''; font-src ''self'' https://social.tchncs.de; img-src ''self'' https:
+        data: blob: https://social.tchncs.de; style-src ''self'' https://social.tchncs.de
+        ''nonce-pPxIR0oIRVPRfgE466yvSw==''; media-src ''self'' https: data: https://social.tchncs.de;
+        frame-src ''self'' https:; manifest-src ''self'' https://social.tchncs.de;
+        connect-src ''self'' data: blob: https://social.tchncs.de https://f2.tchncs.de
+        wss://social.tchncs.de; script-src ''self'' https://social.tchncs.de ''unsafe-eval'';
+        child-src ''self'' blob: https://social.tchncs.de; worker-src ''self'' blob:
+        https://social.tchncs.de'
+      content-type: application/json; charset=utf-8
+      date: Wed, 09 Nov 2022 10:36:48 GMT
+      etag: W/"a9e12e6b0e717fc0dc638c620cbd272f"
+      permissions-policy:
+      - interest-cohort=()
+      - interest-cohort=()
+      server: Mastodon
+      strict-transport-security: max-age=63072000; includeSubDomains
+      vary: Accept-Encoding, Origin
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '292'
+      x-ratelimit-reset: '2022-11-09T10:40:00.352578Z'
+      x-request-id: 404575c1-e9cc-4d15-aa11-bf26d8762afb
+      x-runtime: '0.424978'
+      x-xss-protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: '[{"id":"109281623035321972","username":"nonsequitur","acct":"nonsequitur@mastodon.ie","display_name":"Stíofán
+        MacThomáis","locked":false,"bot":false,"discoverable":true,"group":false,"created_at":"2022-04-26T00:00:00.000Z","note":"\u003cp\u003eThere''s
+        no place like ::1\u003c/p\u003e","url":"https://mastodon.ie/@nonsequitur","avatar":"https://f2.tchncs.de/cache/accounts/avatars/109/281/623/035/321/972/original/4f1f3be00c9077a0.png","avatar_static":"https://f2.tchncs.de/cache/accounts/avatars/109/281/623/035/321/972/original/4f1f3be00c9077a0.png","header":"https://f2.tchncs.de/cache/accounts/headers/109/281/623/035/321/972/original/dc2e843f5ab26bbd.jpg","header_static":"https://f2.tchncs.de/cache/accounts/headers/109/281/623/035/321/972/original/dc2e843f5ab26bbd.jpg","followers_count":125,"following_count":162,"statuses_count":337,"last_status_at":"2022-11-09","emojis":[],"fields":[]},{"id":"109279950079019042","username":"MattCrumpFun","acct":"MattCrumpFun@bbs.crumplab.com","display_name":"Matt
+        Crump (fun stuff)","locked":false,"bot":false,"discoverable":true,"group":false,"created_at":"2022-11-02T00:00:00.000Z","note":"\u003cp\u003eSharing
+        visual things, mostly \u003ca href=\"https://bbs.crumplab.com/tags/drawing\"
+        class=\"mention hashtag\" rel=\"nofollow noopener noreferrer\" target=\"_blank\"\u003e#\u003cspan\u003edrawing\u003c/span\u003e\u003c/a\u003e
+        \u003ca href=\"https://bbs.crumplab.com/tags/digitalart\" class=\"mention
+        hashtag\" rel=\"nofollow noopener noreferrer\" target=\"_blank\"\u003e#\u003cspan\u003edigitalart\u003c/span\u003e\u003c/a\u003e
+        \u003ca href=\"https://bbs.crumplab.com/tags/painting\" class=\"mention hashtag\"
+        rel=\"nofollow noopener noreferrer\" target=\"_blank\"\u003e#\u003cspan\u003epainting\u003c/span\u003e\u003c/a\u003e
+        sometimes \u003ca href=\"https://bbs.crumplab.com/tags/generativeart\" class=\"mention
+        hashtag\" rel=\"nofollow noopener noreferrer\" target=\"_blank\"\u003e#\u003cspan\u003egenerativeart\u003c/span\u003e\u003c/a\u003e
+        \u003ca href=\"https://bbs.crumplab.com/tags/MastoArt\" class=\"mention hashtag\"
+        rel=\"nofollow noopener noreferrer\" target=\"_blank\"\u003e#\u003cspan\u003eMastoArt\u003c/span\u003e\u003c/a\u003e
+        \u003ca href=\"https://bbs.crumplab.com/tags/illustration\" class=\"mention
+        hashtag\" rel=\"nofollow noopener noreferrer\" target=\"_blank\"\u003e#\u003cspan\u003eillustration\u003c/span\u003e\u003c/a\u003e
+        and other fun projects\u003c/p\u003e\u003cp\u003eMain: \u003cspan class=\"h-card\"\u003e\u003ca
+        href=\"https://bbs.crumplab.com/@MattCrump\" class=\"u-url mention\" rel=\"nofollow
+        noopener noreferrer\" target=\"_blank\"\u003e@\u003cspan\u003eMattCrump\u003c/span\u003e\u003c/a\u003e\u003c/span\u003e\u003cbr\u003eMusic/audio
+        Alt: \u003cspan class=\"h-card\"\u003e\u003ca href=\"https://bbs.crumplab.com/@homophony\"
+        class=\"u-url mention\" rel=\"nofollow noopener noreferrer\" target=\"_blank\"\u003e@\u003cspan\u003ehomophony\u003c/span\u003e\u003c/a\u003e\u003c/span\u003e\u003c/p\u003e","url":"https://bbs.crumplab.com/@MattCrumpFun","avatar":"https://f2.tchncs.de/cache/accounts/avatars/109/279/950/079/019/042/original/eefd22b31ccd58fd.jpeg","avatar_static":"https://f2.tchncs.de/cache/accounts/avatars/109/279/950/079/019/042/original/eefd22b31ccd58fd.jpeg","header":"https://f2.tchncs.de/cache/accounts/headers/109/279/950/079/019/042/original/8db70cd7e21c329c.jpeg","header_static":"https://f2.tchncs.de/cache/accounts/headers/109/279/950/079/019/042/original/8db70cd7e21c329c.jpeg","followers_count":44,"following_count":89,"statuses_count":71,"last_status_at":"2022-11-09","emojis":[],"fields":[{"name":"Main","value":"\u003ca
+        href=\"https://bbs.crumplab.com/@MattCrump\" rel=\"nofollow noopener noreferrer\"
+        target=\"_blank\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003ebbs.crumplab.com/@MattCrump\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":null},{"name":"Art","value":"\u003ca
+        href=\"https://crumplab.com/things/\" rel=\"nofollow noopener noreferrer\"
+        target=\"_blank\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003ecrumplab.com/things/\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":null},{"name":"Music","value":"\u003cspan
+        class=\"h-card\"\u003e\u003ca href=\"https://bbs.crumplab.com/@homophony\"
+        class=\"u-url mention\" rel=\"nofollow noopener noreferrer\" target=\"_blank\"\u003e@\u003cspan\u003ehomophony\u003c/span\u003e\u003c/a\u003e\u003c/span\u003e","verified_at":null}]},{"id":"109247343687883058","username":"FrVaBe","acct":"FrVaBe@mastodon.social","display_name":"Franz
+        van Betteraey","locked":false,"bot":false,"discoverable":true,"group":false,"created_at":"2022-10-28T00:00:00.000Z","note":"\u003cp\u003eFamilie,
+        Kinder, Softwareentwicklung rund um Java, Fahrradfahren im Alltag, Umwelt
+        und Soziales - Aachen | NRW\u003c/p\u003e","url":"https://mastodon.social/@FrVaBe","avatar":"https://f2.tchncs.de/cache/accounts/avatars/109/247/343/687/883/058/original/99779f676b5b0430.jpg","avatar_static":"https://f2.tchncs.de/cache/accounts/avatars/109/247/343/687/883/058/original/99779f676b5b0430.jpg","header":"https://f2.tchncs.de/cache/accounts/headers/109/247/343/687/883/058/original/eba8951b7ab85403.jpg","header_static":"https://f2.tchncs.de/cache/accounts/headers/109/247/343/687/883/058/original/eba8951b7ab85403.jpg","followers_count":63,"following_count":94,"statuses_count":134,"last_status_at":"2022-11-09","emojis":[],"fields":[{"name":"Homepage","value":"\u003ca
+        href=\"http://frvabe.van-betteraey.de/about.html\" rel=\"nofollow noopener
+        noreferrer\" target=\"_blank\"\u003e\u003cspan class=\"invisible\"\u003ehttp://\u003c/span\u003e\u003cspan
+        class=\"ellipsis\"\u003efrvabe.van-betteraey.de/about.\u003c/span\u003e\u003cspan
+        class=\"invisible\"\u003ehtml\u003c/span\u003e\u003c/a\u003e","verified_at":"2022-11-07T18:02:33.710+00:00"},{"name":"LinkedIn","value":"\u003ca
+        href=\"https://www.linkedin.com/in/frvabe/\" rel=\"nofollow noopener noreferrer\"
+        target=\"_blank\"\u003e\u003cspan class=\"invisible\"\u003ehttps://www.\u003c/span\u003e\u003cspan
+        class=\"\"\u003elinkedin.com/in/frvabe/\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":null},{"name":"Xing","value":"\u003ca
+        href=\"https://www.xing.com/profile/Franz_vanBetteraey\" rel=\"nofollow noopener
+        noreferrer\" target=\"_blank\"\u003e\u003cspan class=\"invisible\"\u003ehttps://www.\u003c/span\u003e\u003cspan
+        class=\"ellipsis\"\u003exing.com/profile/Franz_vanBett\u003c/span\u003e\u003cspan
+        class=\"invisible\"\u003eeraey\u003c/span\u003e\u003c/a\u003e","verified_at":null}]}]'
+  recorded_at: 2022-11-09 10:36:48 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.2

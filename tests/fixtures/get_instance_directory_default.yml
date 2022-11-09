@@ -1,0 +1,67 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://mastodon.social/api/v1/directory?local=FALSE&offset=0&order=active&limit=3
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      cache-control: no-store
+      content-encoding: gzip
+      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
+        ''none''; font-src ''self'' https://static-cdn.mastodon.social; img-src ''self''
+        https: data: blob: https://static-cdn.mastodon.social; style-src ''self''
+        https://static-cdn.mastodon.social ''nonce-A6Q6t8FWAjctgoinKq4lxA==''; media-src
+        ''self'' https: data: https://static-cdn.mastodon.social; frame-src ''self''
+        https:; manifest-src ''self'' https://static-cdn.mastodon.social; connect-src
+        ''self'' data: blob: https://static-cdn.mastodon.social https://files.mastodon.social
+        wss://mastodon.social; script-src ''self'' https://static-cdn.mastodon.social
+        ''unsafe-eval''; child-src ''self'' blob: https://static-cdn.mastodon.social;
+        worker-src ''self'' blob: https://static-cdn.mastodon.social'
+      content-type: application/json; charset=utf-8
+      date: Wed, 09 Nov 2022 10:36:48 GMT
+      etag: W/"8d65f6913a7db1ee690f677cff4e0de9"
+      permissions-policy: interest-cohort=()
+      server: Mastodon
+      strict-transport-security: max-age=63072000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      - Origin
+      x-cached: MISS
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '298'
+      x-ratelimit-reset: '2022-11-09T10:40:00.268828Z'
+      x-request-id: 6812d98f-af54-4dac-97ff-1883ad854790
+      x-runtime: '1.973252'
+      x-xss-protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: "[{\"id\":\"1112628\",\"username\":\"usmank756\",\"acct\":\"usmank756@mstdn.nere9.help\",\"display_name\":\"あんこう＠不眠\",\"locked\":true,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2020-02-16T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eNo
+        Music, No Life で No Ramen, No Lifeな平成から抜け出せないオタク。\\u003c/p\\u003e\\u003cp\\u003eトゥートは基本非公開。\\u003cbr\\u003e鍵はスパム避けですので、フォロリクお気軽にどうぞ。\\u003c/p\\u003e\\u003cp\\u003eHTL、LTL、FTLともにふぁぼ飛ばします。驚かせてしまったら申し訳ございません。\\u003c/p\\u003e\\u003cp\\u003eアイコンは「カスタムキャスト」で作成しました。\\u003c/p\\u003e\",\"url\":\"https://mstdn.nere9.help/@usmank756\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/001/112/628/original/f3d8122e5a2431f0.jpeg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/001/112/628/original/f3d8122e5a2431f0.jpeg\",\"header\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"header_static\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"followers_count\":25,\"following_count\":31,\"statuses_count\":6141,\"last_status_at\":\"2022-11-09\",\"emojis\":[],\"fields\":[]},{\"id\":\"1261497\",\"username\":\"sussexsquad\",\"acct\":\"sussexsquad@botsin.space\",\"display_name\":\"SussexSquad\",\"locked\":false,\"bot\":true,\"discoverable\":true,\"group\":false,\"created_at\":\"2020-08-15T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eSussexSquad
+        Informational Bot\\u003c/p\\u003e\\u003cp\\u003eFetch tweets looking for common
+        hashtags, and toots them all\\u003c/p\\u003e\\u003cp\\u003eUsing:\\u003cbr\\u003e-
+        a Raspberry Pi (\\u003ca href=\\\"https://www.raspberrypi.org\\\" rel=\\\"nofollow
+        noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003eraspberrypi.org\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e)\\u003cbr\\u003e-
+        Tootbot (a copy robot \\u003ca href=\\\"https://git.qoto.org/m33/tootbot-py\\\"
+        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003egit.qoto.org/m33/tootbot-py\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e)\\u003cbr\\u003e-
+        Nitter.net (a free and open source alternative Twitter front-end focused on
+        privacy \\u003ca href=\\\"https://nitter.net/about\\\" rel=\\\"nofollow noopener
+        noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003enitter.net/about\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e)\\u003cbr\\u003e-
+        Botsin.space (mastodon instance)\\u003c/p\\u003e\",\"url\":\"https://botsin.space/@sussexsquad\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/001/261/497/original/d9c89b07fa10dc93.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/001/261/497/original/d9c89b07fa10dc93.png\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/001/261/497/original/a5649c5e5ffb189d.png\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/001/261/497/original/a5649c5e5ffb189d.png\",\"followers_count\":7,\"following_count\":0,\"statuses_count\":263166,\"last_status_at\":\"2022-11-09\",\"emojis\":[],\"fields\":[]},{\"id\":\"1206271\",\"username\":\"kumori\",\"acct\":\"kumori@bgme.me\",\"display_name\":\"冷凍鮭魚雲（你的黃老闆上線了！）\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2020-05-07T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e龟虾毛来看一眼就死，我头都拧爆你，死无全尸。博主傻逼，慎重关注。圖片請勿轉出長毛象以外。关注人太多可能不会回关，请见谅。对图片或者书名作者感兴趣尽管问，在线看到秒回，也可以用提问箱。是一朵雲☁️可以叫我kumo，雲雲。黄老板是一个人设，她活在正常世界线，世界末日她都会看心情正常发黄图惹，但她不姓黄。永遠喜歡羽佐間正義/增田俊樹❤️特攝❤️落亂/忍者亂太郎Forever，四年推\U0001F49CTF頭文字D遊戲王❤️玩了BuddyMissionBond就是永远的兄弟！初めて会った時、あなたをこんなに好きになるとは思わなかった。\\u003c/p\\u003e\",\"url\":\"https://bgme.me/@kumori\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/001/206/271/original/9424b405974a479c.jpeg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/001/206/271/original/9424b405974a479c.jpeg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/001/206/271/original/7f17dffb26e875fe.jpeg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/001/206/271/original/7f17dffb26e875fe.jpeg\",\"followers_count\":654,\"following_count\":353,\"statuses_count\":20047,\"last_status_at\":\"2022-11-09\",\"emojis\":[],\"fields\":[{\"name\":\"圖片請勿轉出\",\"value\":\"長毛象以外\",\"verified_at\":null},{\"name\":\"二次元\",\"value\":\"子供番愛好/旧作情怀\",\"verified_at\":null},{\"name\":\"聲優\",\"value\":\"永遠喜歡增田俊樹\",\"verified_at\":null},{\"name\":\"愛好\",\"value\":\"綠帽文學bot\",\"verified_at\":null}]}]"
+  recorded_at: 2022-11-09 10:36:48 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.2

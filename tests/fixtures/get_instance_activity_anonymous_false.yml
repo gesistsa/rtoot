@@ -1,0 +1,50 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://social.tchncs.de/api/v1/instance/activity
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      cache-control: max-age=86400, public
+      content-encoding: gzip
+      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
+        ''none''; font-src ''self'' https://social.tchncs.de; img-src ''self'' https:
+        data: blob: https://social.tchncs.de; style-src ''self'' https://social.tchncs.de
+        ''nonce-KlB+FdFK94DKzzZZS8pryQ==''; media-src ''self'' https: data: https://social.tchncs.de;
+        frame-src ''self'' https:; manifest-src ''self'' https://social.tchncs.de;
+        connect-src ''self'' data: blob: https://social.tchncs.de https://f2.tchncs.de
+        wss://social.tchncs.de; script-src ''self'' https://social.tchncs.de ''unsafe-eval'';
+        child-src ''self'' blob: https://social.tchncs.de; worker-src ''self'' blob:
+        https://social.tchncs.de'
+      content-type: application/json; charset=utf-8
+      date: Wed, 09 Nov 2022 10:36:45 GMT
+      etag: W/"086f7c548e9caab7597effceeb602b51"
+      permissions-policy:
+      - interest-cohort=()
+      - interest-cohort=()
+      server: Mastodon
+      strict-transport-security: max-age=63072000; includeSubDomains
+      vary: Accept-Encoding, Origin
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '297'
+      x-ratelimit-reset: '2022-11-09T10:40:00.873052Z'
+      x-request-id: 99b5c6c6-d616-4dcf-9e42-7cae6f8e8461
+      x-runtime: '0.003525'
+      x-xss-protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: '[{"week":"1667983104","statuses":"1406","logins":"622","registrations":"15"},{"week":"1667378304","statuses":"34311","logins":"3801","registrations":"581"},{"week":"1666773504","statuses":"23742","logins":"3033","registrations":"374"},{"week":"1666168704","statuses":"8911","logins":"2070","registrations":"31"},{"week":"1665563904","statuses":"9204","logins":"2065","registrations":"31"},{"week":"1664959104","statuses":"10178","logins":"2142","registrations":"55"},{"week":"1664354304","statuses":"8563","logins":"2036","registrations":"23"},{"week":"1663749504","statuses":"8671","logins":"2094","registrations":"39"},{"week":"1663144704","statuses":"9024","logins":"2077","registrations":"32"},{"week":"1662539904","statuses":"9040","logins":"2084","registrations":"44"},{"week":"1661935104","statuses":"9353","logins":"2104","registrations":"27"},{"week":"1661330304","statuses":"10005","logins":"2111","registrations":"26"}]'
+  recorded_at: 2022-11-09 10:36:45 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.2
