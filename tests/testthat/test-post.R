@@ -40,9 +40,11 @@ test_that("post_toot, real", {
   })
 })
 
-## test_that("post_user", {
-##   vcr::use_cassette("post_user_pin", {
-##     expect_error(post_user("32487", action = "follow", token = fake_token), NA)
-##   })
-## post_user("5358", action = "unpin", token = fake_token)
-## })
+test_that("post_user", {
+  ## defensive
+  expect_error(post_user("5358", action = "promotehimtoprofessor", token = fake_token))
+  vcr::use_cassette("post_user_pin", {
+    ## Thanks Tim, you are the best!
+    expect_error(post_user("5358", action = "pin", token = fake_token), NA)
+  })
+})
