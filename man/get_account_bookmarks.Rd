@@ -5,7 +5,6 @@
 \title{Get bookmarks of user}
 \usage{
 get_account_bookmarks(
-  id,
   max_id,
   since_id,
   min_id,
@@ -15,8 +14,6 @@ get_account_bookmarks(
 )
 }
 \arguments{
-\item{id}{character, local ID of a user (this is not the username)}
-
 \item{max_id}{character, Return results older than this id}
 
 \item{since_id}{character, Return results newer than this id}

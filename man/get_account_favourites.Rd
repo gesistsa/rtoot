@@ -4,18 +4,9 @@
 \alias{get_account_favourites}
 \title{Get favourites of user}
 \usage{
-get_account_favourites(
-  id,
-  max_id,
-  min_id,
-  limit = 40,
-  token = NULL,
-  parse = TRUE
-)
+get_account_favourites(max_id, min_id, limit = 40, token = NULL, parse = TRUE)
 }
 \arguments{
-\item{id}{character, local ID of a user (this is not the username)}
-
 \item{max_id}{character, Return results older than this id}
 
 \item{min_id}{character, Return results younger than this id}

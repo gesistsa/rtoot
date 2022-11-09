@@ -25,7 +25,8 @@ get_instance_directory(
   limit = 40,
   order = "active",
   local = FALSE,
-  anonymous = TRUE
+  anonymous = TRUE,
+  parse = TRUE
 )
 
 get_instance_trends(
@@ -49,6 +50,8 @@ get_instance_trends(
 \item{order}{'active' to sort by most recently posted statuses (default) or 'new' to sort by most recently created profiles.}
 
 \item{local}{logical. Show only local accounts?}
+
+\item{parse}{logical, if \code{TRUE}, the default, returns a tibble. Use \code{FALSE}  to return the "raw" list corresponding to the JSON returned from the Mastodon API.}
 }
 \value{
 instance details depending on call function

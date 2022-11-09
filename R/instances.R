@@ -78,12 +78,12 @@ get_instance_emoji <- function(instance = NULL,token = NULL, anonymous = TRUE){
 #' @export
 get_instance_directory <- function(instance = NULL, token = NULL,
                                    offset = 0, limit = 40, order = "active",
-                                   local = FALSE, anonymous = TRUE){
+                                   local = FALSE, anonymous = TRUE, parse = TRUE){
   params <- list(local = local, offset = offset, order = order, limit = limit)
-  request_results <- make_get_request(token = token,path = "/api/v1/directory",
-                                      instance = instance, params = params,
-                                      anonymous = anonymous)
-  request_results #TODO: format with account parser
+  process_request(token = token,path = "/api/v1/directory",
+                  instance = instance, params = params,
+                  anonymous = anonymous, parse = parse,
+                  FUN = v(parse_account))
 }
 
 #' @rdname get_instance

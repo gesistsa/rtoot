@@ -63,15 +63,20 @@ test_that("get_instance_emoji", {
 })
 
 test_that("get_instance_directory", {
-  ## CHANGE ME AFTER ADDING PARSING
   vcr::use_cassette("get_instance_directory_default", {
     x <- get_instance_directory(instance = "mastodon.social", limit = 3)
+  })
+  expect_true("tbl_df" %in% class(x))
+  expect_true(nrow(x) != 0)
+  vcr::use_cassette("get_instance_directory_noparse", {
+    x <- get_instance_directory(instance = "mastodon.social", limit = 3, parse = FALSE)
   })
   expect_false("tbl_df" %in% class(x))
   vcr::use_cassette("get_instance_directory_anonymous_false", {
     x <- get_instance_directory(instance = "social.tchncs.de", anonymous = FALSE, limit = 3)
   })
-  expect_false("tbl_df" %in% class(x))
+  expect_true("tbl_df" %in% class(x))
+  expect_true(nrow(x) != 0)  
 })
 
 test_that("get_instance_trends", {

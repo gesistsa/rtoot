@@ -4,18 +4,9 @@
 \alias{get_account_blocks}
 \title{Get blocks of user}
 \usage{
-get_account_blocks(
-  id,
-  max_id,
-  since_id,
-  limit = 40,
-  token = NULL,
-  parse = TRUE
-)
+get_account_blocks(max_id, since_id, limit = 40, token = NULL, parse = TRUE)
 }
 \arguments{
-\item{id}{character, local ID of a user (this is not the username)}
-
 \item{max_id}{character, Return results older than this id}
 
 \item{since_id}{character, Return results newer than this id}
