@@ -41,7 +41,7 @@ get_reblogged_by <- function(id, instance = NULL, token = NULL, anonymous = FALS
   # }
   # return(output)
   process_request(token = token,path = path,instance = instance,params = params,
-                  anonymous = anonymous,parse = parse,FUN = parse_account)
+                  anonymous = anonymous,parse = parse,FUN = v(parse_account))
 }
 
 #' @rdname get_status
@@ -55,7 +55,7 @@ get_favourited_by <- function(id, instance = NULL, token = NULL, anonymous = FAL
   # }
   # return(output)
   process_request(token = token,path = path,instance = instance,params = params,
-                  anonymous = anonymous,parse = parse,FUN = parse_account)
+                  anonymous = anonymous,parse = parse,FUN = v(parse_account))
 }
 
 #' View statuses above and below this status in the thread
@@ -71,15 +71,19 @@ get_favourited_by <- function(id, instance = NULL, token = NULL, anonymous = FAL
 #' }
 get_context <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
   path <- paste0("/api/v1/statuses/", id, "/context")
-  output <- make_get_request(token = token, path = path, params = list(), instance = instance, anonymous = anonymous)
-  if (isTRUE(parse)) {
-    ## The endpoint always returns both ancestors and descendants. A empty tibble is generated if there is nothing.
-    temp_output <- list()
-    temp_output$ancestors <- dplyr::bind_rows(lapply(output$ancestors, parse_status))
-    temp_output$descendants <- dplyr::bind_rows(lapply(output$descendants, parse_status))
-    output <- temp_output
-  }
-  return(output)
+  params <- list()
+  # output <- make_get_request(token = token, path = path, params = list(), instance = instance, anonymous = anonymous)
+  # if (isTRUE(parse)) {
+  #   ## The endpoint always returns both ancestors and descendants. A empty tibble is generated if there is nothing.
+  #   temp_output <- list()
+  #   temp_output$ancestors <- dplyr::bind_rows(lapply(output$ancestors, parse_status))
+  #   temp_output$descendants <- dplyr::bind_rows(lapply(output$descendants, parse_status))
+  #   output <- temp_output
+  # }
+  # return(output)
+  process_request(token = token,path = path,instance = instance,params = params,
+                  anonymous = anonymous,parse = parse,FUN = parse_context)
+
 }
 
 #' View a poll
@@ -148,7 +152,7 @@ get_public_timeline <- function(local = FALSE, remote = FALSE, only_media = FALS
   # }
   # return(output)
   process_request(token = token,path = path,instance = instance,params = params,
-                  anonymous = anonymous,parse = parse,FUN = parse_status)
+                  anonymous = anonymous,parse = parse,FUN = v(parse_status))
 }
 
 #' Get hashtag timeline
@@ -184,7 +188,7 @@ get_hashtag_timeline <- function(hashtag = "rstats", local = FALSE, only_media =
   # }
   # return(output)
   process_request(token = token,path = path,instance = instance,params = params,
-                  anonymous = anonymous,parse = parse,FUN = parse_status)
+                  anonymous = anonymous,parse = parse,FUN = v(parse_status))
 }
 
 #' Get home and list timelines
@@ -216,7 +220,7 @@ get_home_timeline <- function(local = FALSE, max_id, since_id, min_id, limit = 2
   # }
   # return(output)
   process_request(token = token,path = path,params = params,
-                  parse = parse,FUN = parse_status)
+                  parse = parse,FUN = v(parse_status))
 }
 
 #' @rdname get_home_timeline
@@ -239,5 +243,5 @@ get_list_timeline <- function(list_id, max_id, since_id, min_id, limit = 20L, to
   # }
   # return(output)
   process_request(token = token,path = path,params = params,
-                  parse = parse,FUN = parse_status)
+                  parse = parse,FUN = v(parse_status))
 }

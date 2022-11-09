@@ -40,7 +40,7 @@ search_accounts <- function(query,limit = 40,instance = NULL, token = NULL, anon
   # return(output)
   process_request(token = token,path = path,instance = instance,
                   params = params, anonymous = anonymous,
-                  parse = parse, FUN = parse_account)
+                  parse = parse, FUN = v(parse_account))
 }
 
 #' Get statuses from a user
@@ -63,7 +63,7 @@ get_account_statuses <- function(id,instance = NULL, token = NULL, anonymous = F
   # return(output)
   process_request(token = token,path = path,instance = instance,
                   params = params, anonymous = anonymous,
-                  parse = parse, FUN = parse_status)
+                  parse = parse, FUN = v(parse_status))
 }
 
 #' Get followers of a user
@@ -85,7 +85,7 @@ get_account_followers <- function(id,max_id,since_id,limit = 40, token = NULL, p
   }
   process_request(token = token,path = path,
                   params = params,
-                  parse = parse, FUN = parse_account)
+                  parse = parse, FUN = v(parse_account))
 }
 #' Get accounts a user follows
 #' @inheritParams get_account_statuses
@@ -109,7 +109,7 @@ get_account_following <- function(id,max_id,since_id,limit = 40, token = NULL, p
   # return(output)
   process_request(token = token,path = path,
                   params = params,
-                  parse = parse, FUN = parse_account)
+                  parse = parse, FUN = v(parse_account))
 }
 
 #' Get featured tags of a user
@@ -127,7 +127,7 @@ get_account_featured_tags <- function(id,token = NULL, parse = TRUE){
   # return(output)
   process_request(token = token,path = path,
                   params = params,
-                  parse = parse, FUN = identity)
+                  parse = parse, FUN = v(identity))
 }
 
 #' Get lists containing the user
@@ -145,7 +145,7 @@ get_account_lists <- function(id,token = NULL, parse = TRUE){
   # return(output) #TODO: probably need to format
   process_request(token = token,path = path,
                   params = params,
-                  parse = parse, FUN = identity)
+                  parse = parse, FUN = v(identity))
 }
 
 #' Find out whether a given account is followed, blocked, muted, etc.
@@ -163,7 +163,7 @@ get_account_relationships <- function(ids,token = NULL, parse = TRUE){
   # dplyr::bind_rows(output)
   process_request(token = token,path = path,
                   params = params,
-                  parse = parse, FUN = identity)
+                  parse = parse, FUN = v(identity))
 }
 
 
@@ -193,7 +193,7 @@ get_account_bookmarks <- function(max_id,since_id,min_id,limit = 40, token = NUL
   # return(output)
   process_request(token = token,path = path,
                   params = params,
-                  parse = parse, FUN = parse_status)
+                  parse = parse, FUN = v(parse_status))
 }
 
 #' Get favourites of user
@@ -219,7 +219,7 @@ get_account_favourites <- function(max_id,min_id,limit = 40, token = NULL, parse
   # return(output)
   process_request(token = token,path = path,
                   params = params,
-                  parse = parse, FUN = parse_status)
+                  parse = parse, FUN = v(parse_status))
 }
 
 #' Get blocks of user
@@ -244,7 +244,7 @@ get_account_blocks <- function(max_id,since_id,limit = 40, token = NULL, parse =
   # return(output)
   process_request(token = token,path = path,
                   params = params,
-                  parse = parse, FUN = parse_account)
+                  parse = parse, FUN = v(parse_account))
 }
 
 #' Get mutes of user
@@ -269,5 +269,5 @@ get_account_mutes <- function(max_id,since_id,limit = 40, token = NULL, parse = 
   # return(output)
   process_request(token = token,path = path,
                   params = params,
-                  parse = parse, FUN = parse_account)
+                  parse = parse, FUN = v(parse_account))
 }

@@ -86,14 +86,23 @@ process_request <- function(token = NULL,
                              anonymous = anonymous)
   if (isTRUE(parse)) {
     header <- attr(output,"headers")
-    if(length(output)<1){
-      output <- tibble::tibble()
-    } else if(length(output[[1]])==1){ #TODO:fragile?
-      output <- FUN(output)
-    } else{
-      output <- dplyr::bind_rows(lapply(output, FUN))
-    }
+    # if(length(output)<1){
+    #   output <- tibble::tibble()
+    # } else if(length(output[[1]])==1){ #TODO:fragile?
+    #   output <- FUN(output)
+    # } else{
+    #   output <- dplyr::bind_rows(lapply(output, FUN))
+    # }
+    output <- FUN(output)
     attr(output,"headers") <- header
   }
   return(output)
+}
+
+##vectorize function
+v <- function(FUN) {
+  v_FUN <- function(x) {
+    dplyr::bind_rows(lapply(x, FUN))
+  }
+  return(v_FUN)
 }
