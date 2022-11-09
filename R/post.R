@@ -120,8 +120,8 @@ post_user <- function(id,action = "follow",comment = "",token = NULL){
   }
 
   url <- prepare_url(token$instance)
-  r <- httr::POST(httr::modify_url(url = url, path = "api/v1/statuses"),
-                  body=params,
+  r <- httr::POST(httr::modify_url(url = url, path = path),
+                  body = params,
                   httr::add_headers(Authorization = paste0("Bearer ",token$bearer)))
   if(httr::status_code(r)==200L){
     message("successfully performed action on user")
