@@ -144,3 +144,10 @@ parse_poll <- function(poll, parse_date = TRUE) {
   }
   output
 }
+
+parse_context <- function(output) {
+  temp_output <- list()
+  temp_output$ancestors <- dplyr::bind_rows(lapply(output$ancestors, parse_status))
+  temp_output$descendants <- dplyr::bind_rows(lapply(output$descendants, parse_status))
+  temp_output
+}
