@@ -6,10 +6,12 @@
 #' @export
 get_fedi_instances  <-  function(n = 20) {
   pages <- ceiling(n/20)
-  df <- data.frame()
+  df <- tibble::tibble()
   for(i in seq_len(pages)){
-    tmp <- jsonlite::fromJSON("https://api.index.community/api/instances?sortField=userCount&sortDirection=desc&page=",i)$instances
-    df <- rbind(df,as.data.frame(do.call(rbind, lapply(tmp, rbind))))
+    tmp <- make_get_request(token = NULL, path = "/api/instances",
+                            instance = "api.index.community", params = list(sortField = "userCount", sortDirection = "desc", page = i),
+                            anonymous = TRUE)
+    df <- dplyr::bind_rows(df, dplyr::bind_rows(tmp$instance))
   }
   df[seq_len(n),]
 }
@@ -76,12 +78,12 @@ get_instance_emoji <- function(instance = NULL,token = NULL, anonymous = TRUE){
 #' @export
 get_instance_directory <- function(instance = NULL, token = NULL,
                                    offset = 0, limit = 40, order = "active",
-                                   local = FALSE, anonymous = TRUE){
+                                   local = FALSE, anonymous = TRUE, parse = TRUE){
   params <- list(local = local, offset = offset, order = order, limit = limit)
-  request_results <- make_get_request(token = token,path = "/api/v1/directory",
-                                      instance = instance, params = params,
-                                      anonymous = anonymous)
-  request_results #TODO: format with account parser
+  process_request(token = token,path = "/api/v1/directory",
+                  instance = instance, params = params,
+                  anonymous = anonymous, parse = parse,
+                  FUN = v(parse_account))
 }
 
 #' @rdname get_instance

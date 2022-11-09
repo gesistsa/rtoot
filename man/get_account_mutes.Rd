@@ -4,11 +4,9 @@
 \alias{get_account_mutes}
 \title{Get mutes of user}
 \usage{
-get_account_mutes(id, max_id, since_id, limit = 40, token = NULL, parse = TRUE)
+get_account_mutes(max_id, since_id, limit = 40, token = NULL, parse = TRUE)
 }
 \arguments{
-\item{id}{character, local ID of a user (this is not the username)}
-
 \item{max_id}{character, Return results older than this id}
 
 \item{since_id}{character, Return results newer than this id}

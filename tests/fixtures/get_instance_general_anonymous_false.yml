@@ -1,0 +1,73 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://social.tchncs.de/api/v1/instance
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      cache-control: max-age=180, public
+      content-encoding: gzip
+      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
+        ''none''; font-src ''self'' https://social.tchncs.de; img-src ''self'' https:
+        data: blob: https://social.tchncs.de; style-src ''self'' https://social.tchncs.de
+        ''nonce-puxAJ4dI0jOs9cyVIXF6kg==''; media-src ''self'' https: data: https://social.tchncs.de;
+        frame-src ''self'' https:; manifest-src ''self'' https://social.tchncs.de;
+        connect-src ''self'' data: blob: https://social.tchncs.de https://f2.tchncs.de
+        wss://social.tchncs.de; script-src ''self'' https://social.tchncs.de ''unsafe-eval'';
+        child-src ''self'' blob: https://social.tchncs.de; worker-src ''self'' blob:
+        https://social.tchncs.de'
+      content-type: application/json; charset=utf-8
+      date: Wed, 09 Nov 2022 10:29:15 GMT
+      etag: W/"41e8c0de6f35a426f4577adb47285c28"
+      permissions-policy:
+      - interest-cohort=()
+      - interest-cohort=()
+      server: Mastodon
+      strict-transport-security: max-age=63072000; includeSubDomains
+      vary: Accept-Encoding, Origin
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '298'
+      x-ratelimit-reset: '2022-11-09T10:30:00.900071Z'
+      x-request-id: eca1c105-948f-4d79-a830-dab60db74233
+      x-runtime: '0.003474'
+      x-xss-protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: "{\"uri\":\"social.tchncs.de\",\"title\":\"Mastodon\",\"short_description\":\"\",\"description\":\"One
+        of the first Mastodon instances, there is no specific topic we're into, just
+        enjoy your time!\",\"email\":\"milan@tchncs.de\",\"version\":\"3.5.3\",\"urls\":{\"streaming_api\":\"wss://social.tchncs.de\"},\"stats\":{\"user_count\":18442,\"status_count\":1660070,\"domain_count\":21532},\"thumbnail\":\"https://social.tchncs.de/packs/media/images/preview-5df98290371ead9a70bc3cd4733bbfa7.jpg\",\"languages\":[\"en\"],\"registrations\":true,\"approval_required\":false,\"invites_enabled\":true,\"configuration\":{\"statuses\":{\"max_characters\":500,\"max_media_attachments\":4,\"characters_reserved_per_url\":23},\"media_attachments\":{\"supported_mime_types\":[\"image/jpeg\",\"image/png\",\"image/gif\",\"video/webm\",\"video/mp4\",\"video/quicktime\",\"video/ogg\",\"audio/wave\",\"audio/wav\",\"audio/x-wav\",\"audio/x-pn-wave\",\"audio/ogg\",\"audio/vorbis\",\"audio/mpeg\",\"audio/mp3\",\"audio/webm\",\"audio/flac\",\"audio/aac\",\"audio/m4a\",\"audio/x-m4a\",\"audio/mp4\",\"audio/3gpp\",\"video/x-ms-asf\"],\"image_size_limit\":10485760,\"image_matrix_limit\":16777216,\"video_size_limit\":41943040,\"video_frame_rate_limit\":60,\"video_matrix_limit\":2304000},\"polls\":{\"max_options\":4,\"max_characters_per_option\":50,\"min_expiration\":300,\"max_expiration\":2629746}},\"contact_account\":{\"id\":\"1833\",\"username\":\"milan\",\"acct\":\"milan\",\"display_name\":\"Milan\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2017-01-26T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eOdd
+        humor and very Milan - autodidactic SysAdmin and Photodude,\\u003cbr /\\u003ealso
+        very Admin of tchncs.de and \\u003cspan class=\\\"h-card\\\"\\u003e\\u003ca
+        href=\\\"https://social.tchncs.de/@illunaminetest\\\" class=\\\"u-url mention\\\"\\u003e@\\u003cspan\\u003eillunaminetest\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e.\\u003c/p\\u003e\\u003cp\\u003e:archlinux:
+        :debian: :apple_inc: :onewheelpintxy: \U0001F463\\u003c/p\\u003e\\u003cp\\u003eIf
+        I don\\u0026#39;t answer, please ask again.\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@milan\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/000/001/833/original/c504474d6a70ecde.jpg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/000/001/833/original/c504474d6a70ecde.jpg\",\"header\":\"https://f2.tchncs.de/accounts/headers/000/001/833/original/9d4972ba0c3addb2.jpg\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/000/001/833/original/9d4972ba0c3addb2.jpg\",\"followers_count\":7848,\"following_count\":401,\"statuses_count\":26056,\"last_status_at\":\"2022-11-09\",\"emojis\":[{\"shortcode\":\"archlinux\",\"url\":\"https://f2.tchncs.de/custom_emojis/images/000/001/244/original/c6d5301ff3b22b81.png\",\"static_url\":\"https://f2.tchncs.de/custom_emojis/images/000/001/244/static/c6d5301ff3b22b81.png\",\"visible_in_picker\":true},{\"shortcode\":\"debian\",\"url\":\"https://f2.tchncs.de/custom_emojis/images/000/001/246/original/debian.png\",\"static_url\":\"https://f2.tchncs.de/custom_emojis/images/000/001/246/static/debian.png\",\"visible_in_picker\":true},{\"shortcode\":\"apple_inc\",\"url\":\"https://f2.tchncs.de/custom_emojis/images/000/018/666/original/f3c3ecc49deb1f9a.png\",\"static_url\":\"https://f2.tchncs.de/custom_emojis/images/000/018/666/static/f3c3ecc49deb1f9a.png\",\"visible_in_picker\":true},{\"shortcode\":\"onewheelpintxy\",\"url\":\"https://f2.tchncs.de/custom_emojis/images/000/700/694/original/bca42815f4cfc75b.png\",\"static_url\":\"https://f2.tchncs.de/custom_emojis/images/000/700/694/static/bca42815f4cfc75b.png\",\"visible_in_picker\":true},{\"shortcode\":\"tchncs\",\"url\":\"https://f2.tchncs.de/custom_emojis/images/000/000/388/original/tchncs.png\",\"static_url\":\"https://f2.tchncs.de/custom_emojis/images/000/000/388/static/tchncs.png\",\"visible_in_picker\":true}],\"fields\":[{\"name\":\"Is
+        :tchncs: alive?\",\"value\":\"\\u003ca href=\\\"https://status.tchncs.de\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener noreferrer me\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003estatus.tchncs.de\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2018-10-31T08:19:08.980+00:00\"},{\"name\":\"\U0001F680
+        Donate\",\"value\":\"\\u003ca href=\\\"https://tchncs.de/donate\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003etchncs.de/donate\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2018-10-31T08:42:57.090+00:00\"},{\"name\":\"\U0001F920Hire
+        me\",\"value\":\"\\u003ca href=\\\"https://milan-ihl.de\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003emilan-ihl.de\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2018-10-31T08:56:53.919+00:00\"},{\"name\":\"OpenPGP\",\"value\":\"801038133C9B498305FD6FFD5E1AE9635F532C4A\",\"verified_at\":null}]},\"rules\":[{\"id\":\"1\",\"text\":\"Be
+        nice to each other\"},{\"id\":\"2\",\"text\":\"Do not publish advertisements\"},{\"id\":\"3\",\"text\":\"Do
+        not publish conspiracy myths\"},{\"id\":\"4\",\"text\":\"Do not publish content
+        illegal in Germany and/or France, such as holocaust denial or Nazi symbolism\"},{\"id\":\"5\",\"text\":\"Do
+        not publish content promoting the ideology of National Socialism\"},{\"id\":\"6\",\"text\":\"Do
+        not publish content that is hateful towards specific individuals or groups,
+        or intended to cause or incite harm\"}]}"
+  recorded_at: 2022-11-09 10:29:15 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.2

@@ -1,0 +1,51 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://social.tchncs.de/api/v1/trends?limit=10
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      cache-control: no-store
+      content-encoding: gzip
+      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
+        ''none''; font-src ''self'' https://social.tchncs.de; img-src ''self'' https:
+        data: blob: https://social.tchncs.de; style-src ''self'' https://social.tchncs.de
+        ''nonce-P1mT8dNaMOkuA9rrWhfp2g==''; media-src ''self'' https: data: https://social.tchncs.de;
+        frame-src ''self'' https:; manifest-src ''self'' https://social.tchncs.de;
+        connect-src ''self'' data: blob: https://social.tchncs.de https://f2.tchncs.de
+        wss://social.tchncs.de; script-src ''self'' https://social.tchncs.de ''unsafe-eval'';
+        child-src ''self'' blob: https://social.tchncs.de; worker-src ''self'' blob:
+        https://social.tchncs.de'
+      content-type: application/json; charset=utf-8
+      date: Wed, 09 Nov 2022 10:36:46 GMT
+      etag: W/"b8f54da69adec25baa71a938b01d7d69"
+      link: <https://social.tchncs.de/api/v1/trends/tags?limit=10&offset=10>; rel="next"
+      permissions-policy:
+      - interest-cohort=()
+      - interest-cohort=()
+      server: Mastodon
+      strict-transport-security: max-age=63072000; includeSubDomains
+      vary: Accept-Encoding, Origin
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '293'
+      x-ratelimit-reset: '2022-11-09T10:40:00.147108Z'
+      x-request-id: d896c72d-d3df-470e-b328-4f29169531e3
+      x-runtime: '0.020629'
+      x-xss-protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: '[{"name":"mytopshelf","url":"https://social.tchncs.de/tags/mytopshelf","history":[{"day":"1667952000","accounts":"17","uses":"21"},{"day":"1667865600","accounts":"48","uses":"50"},{"day":"1667779200","accounts":"0","uses":"0"},{"day":"1667692800","accounts":"0","uses":"0"},{"day":"1667606400","accounts":"0","uses":"0"},{"day":"1667520000","accounts":"0","uses":"0"},{"day":"1667433600","accounts":"0","uses":"0"}]},{"name":"keinvergessen","url":"https://social.tchncs.de/tags/keinvergessen","history":[{"day":"1667952000","accounts":"18","uses":"18"},{"day":"1667865600","accounts":"1","uses":"1"},{"day":"1667779200","accounts":"7","uses":"7"},{"day":"1667692800","accounts":"2","uses":"2"},{"day":"1667606400","accounts":"2","uses":"2"},{"day":"1667520000","accounts":"5","uses":"7"},{"day":"1667433600","accounts":"0","uses":"0"}]},{"name":"electionday","url":"https://social.tchncs.de/tags/electionday","history":[{"day":"1667952000","accounts":"33","uses":"50"},{"day":"1667865600","accounts":"95","uses":"113"},{"day":"1667779200","accounts":"6","uses":"7"},{"day":"1667692800","accounts":"4","uses":"4"},{"day":"1667606400","accounts":"0","uses":"0"},{"day":"1667520000","accounts":"0","uses":"0"},{"day":"1667433600","accounts":"0","uses":"0"}]},{"name":"niemalsvergessen","url":"https://social.tchncs.de/tags/niemalsvergessen","history":[{"day":"1667952000","accounts":"15","uses":"16"},{"day":"1667865600","accounts":"1","uses":"1"},{"day":"1667779200","accounts":"0","uses":"0"},{"day":"1667692800","accounts":"1","uses":"1"},{"day":"1667606400","accounts":"0","uses":"0"},{"day":"1667520000","accounts":"1","uses":"1"},{"day":"1667433600","accounts":"0","uses":"0"}]},{"name":"niewieder","url":"https://social.tchncs.de/tags/niewieder","history":[{"day":"1667952000","accounts":"41","uses":"48"},{"day":"1667865600","accounts":"7","uses":"7"},{"day":"1667779200","accounts":"1","uses":"1"},{"day":"1667692800","accounts":"0","uses":"0"},{"day":"1667606400","accounts":"2","uses":"2"},{"day":"1667520000","accounts":"0","uses":"0"},{"day":"1667433600","accounts":"1","uses":"1"}]},{"name":"novemberpogrome","url":"https://social.tchncs.de/tags/novemberpogrome","history":[{"day":"1667952000","accounts":"23","uses":"25"},{"day":"1667865600","accounts":"3","uses":"5"},{"day":"1667779200","accounts":"1","uses":"3"},{"day":"1667692800","accounts":"1","uses":"1"},{"day":"1667606400","accounts":"0","uses":"0"},{"day":"1667520000","accounts":"0","uses":"0"},{"day":"1667433600","accounts":"1","uses":"1"}]},{"name":"mittwoch","url":"https://social.tchncs.de/tags/mittwoch","history":[{"day":"1667952000","accounts":"17","uses":"17"},{"day":"1667865600","accounts":"2","uses":"2"},{"day":"1667779200","accounts":"0","uses":"0"},{"day":"1667692800","accounts":"0","uses":"0"},{"day":"1667606400","accounts":"0","uses":"0"},{"day":"1667520000","accounts":"0","uses":"0"},{"day":"1667433600","accounts":"0","uses":"0"}]},{"name":"mauerfall","url":"https://social.tchncs.de/tags/mauerfall","history":[{"day":"1667952000","accounts":"11","uses":"15"},{"day":"1667865600","accounts":"1","uses":"1"},{"day":"1667779200","accounts":"0","uses":"0"},{"day":"1667692800","accounts":"0","uses":"0"},{"day":"1667606400","accounts":"0","uses":"0"},{"day":"1667520000","accounts":"0","uses":"0"},{"day":"1667433600","accounts":"0","uses":"0"}]},{"name":"ivoted","url":"https://social.tchncs.de/tags/ivoted","history":[{"day":"1667952000","accounts":"3","uses":"3"},{"day":"1667865600","accounts":"36","uses":"38"},{"day":"1667779200","accounts":"2","uses":"2"},{"day":"1667692800","accounts":"0","uses":"0"},{"day":"1667606400","accounts":"0","uses":"0"},{"day":"1667520000","accounts":"0","uses":"0"},{"day":"1667433600","accounts":"0","uses":"0"}]},{"name":"RemoveMyContentFromSearchEngines","url":"https://social.tchncs.de/tags/RemoveMyContentFromSearchEngines","history":[{"day":"1667952000","accounts":"22","uses":"25"},{"day":"1667865600","accounts":"3","uses":"3"},{"day":"1667779200","accounts":"5","uses":"16"},{"day":"1667692800","accounts":"0","uses":"0"},{"day":"1667606400","accounts":"0","uses":"0"},{"day":"1667520000","accounts":"0","uses":"0"},{"day":"1667433600","accounts":"0","uses":"0"}]}]'
+  recorded_at: 2022-11-09 10:36:46 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.2

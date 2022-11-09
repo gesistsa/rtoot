@@ -15,7 +15,6 @@ Depends:
 Imports: 
     dplyr,
     httr,
-    jsonlite,
     tibble
 Suggests: 
     knitr,
