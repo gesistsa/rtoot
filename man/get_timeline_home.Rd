@@ -52,6 +52,9 @@ Query the instance for the timeline from either followed users or a specific lis
 \dontrun{
 get_timeline_home()
 }
+\dontrun{
+get_timeline_list("<listid>")
+}
 }
 \references{
 https://docs.joinmastodon.org/methods/timelines/

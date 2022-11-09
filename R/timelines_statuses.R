@@ -183,6 +183,10 @@ get_timeline_home <- function(local = FALSE, max_id, since_id, min_id, limit = 2
 
 #' @rdname get_timeline_home
 #' @export
+#' @examples
+#' \dontrun{
+#' get_timeline_list("<listid>")
+#' }
 get_timeline_list <- function(list_id, max_id, since_id, min_id, limit = 20L, token = NULL, parse = TRUE) {
   params <- list(limit = limit)
   if (!missing(max_id)) {
