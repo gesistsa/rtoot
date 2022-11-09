@@ -1,0 +1,51 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://social.tchncs.de/api/v1/accounts/relationships?id%5B%5D=109281650341067731
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: Bearer <<<MASTODON TOKEN>>>
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      cache-control: no-store
+      content-encoding: gzip
+      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
+        ''none''; font-src ''self'' https://social.tchncs.de; img-src ''self'' https:
+        data: blob: https://social.tchncs.de; style-src ''self'' https://social.tchncs.de
+        ''nonce-eXWcSLoHOqEMetjYKRQzfw==''; media-src ''self'' https: data: https://social.tchncs.de;
+        frame-src ''self'' https:; manifest-src ''self'' https://social.tchncs.de;
+        connect-src ''self'' data: blob: https://social.tchncs.de https://f2.tchncs.de
+        wss://social.tchncs.de; script-src ''self'' https://social.tchncs.de ''unsafe-eval'';
+        child-src ''self'' blob: https://social.tchncs.de; worker-src ''self'' blob:
+        https://social.tchncs.de'
+      content-type: application/json; charset=utf-8
+      date: Wed, 09 Nov 2022 09:47:40 GMT
+      etag: W/"8a778d86809295dd4884adab2929cf7b"
+      permissions-policy:
+      - interest-cohort=()
+      - interest-cohort=()
+      server: Mastodon
+      strict-transport-security: max-age=63072000; includeSubDomains
+      vary: Accept-Encoding, Origin
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '296'
+      x-ratelimit-reset: '2022-11-09T09:50:00.721984Z'
+      x-request-id: 39161da7-0e7b-4fe8-8dc2-b6e3c37a9689
+      x-runtime: '0.010665'
+      x-xss-protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: '[{"id":"109281650341067731","following":false,"showing_reblogs":false,"notifying":false,"followed_by":false,"blocking":false,"blocked_by":false,"muting":false,"muting_notifications":false,"requested":false,"domain_blocking":false,"endorsed":false,"note":""}]'
+  recorded_at: 2022-11-09 09:47:40 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.2
