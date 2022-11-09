@@ -12,3 +12,9 @@ verify_credentials(token)
 \description{
 verify mastodon credentials
 }
+\examples{
+\dontrun{
+#read a token from a file
+verify_credentials(token)
+}
+}
