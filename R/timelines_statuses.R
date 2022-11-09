@@ -105,7 +105,7 @@ get_poll <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse
   #   output <- parse_poll(output)
   # }
   # return(output)
-  process_request(token = token,path = path,instance = instance,params = params,
+  process_request(token = token,path = path,instance = instance,params = list(),
                   anonymous = anonymous,parse = parse,FUN = parse_poll)
 }
 
