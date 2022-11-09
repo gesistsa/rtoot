@@ -7,6 +7,10 @@
 
 [![CRAN
 status](https://www.r-pkg.org/badges/version/rtoot)](https://CRAN.R-project.org/package=rtoot)
+[![R-CMD-check](https://github.com/schochastics/rtoot/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/schochastics/rtoot/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/schochastics/rtoot/branch/master/graph/badge.svg)](https://app.codecov.io/gh/schochastics/rtoot?branch=master)
+
 <!-- badges: end -->
 
 Interact with the [mastodon API](https://docs.joinmastodon.org/api/)
