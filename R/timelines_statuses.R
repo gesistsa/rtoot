@@ -3,7 +3,7 @@
 #' Query the instance for information about a specific status. [get_status] returns complete information of a status.
 #' [get_reblogged_by] returns who boosted a given status. [get_favourited_by] returns who favourited a given status.
 #'
-#' @param id character, Local ID of a status in the database
+#' @param id character, local ID of a status in the database
 #' @param instance character, the server name of the instance where the status is located. If `NULL`, the same instance used to obtain the token is used.
 #' @param anonymous some API calls do not need a token. Setting anonymous to TRUE allows to make an anonymous call if possible.
 #' @param parse logical, if `TRUE`, the default, returns a tibble. Use `FALSE`  to return the "raw" list corresponding to the JSON returned from the Mastodon API.
@@ -11,21 +11,16 @@
 #' @return a status or a list of users
 #' @examples
 #' \dontrun{
-#' token <- create_token(get_client(instance = "social.tchncs.de"), type = "user")
-#' get_status(id = "109298295023649405", token = token)
-#' get_reblogged_by(id = "109294719267373593", instance = "mastodon.social")
-#' get_favourited_by(id = "109294719267373593", instance = "mastodon.social")
+#' get_status(id = "109298295023649405")
+#' get_reblogged_by(id = "109294719267373593")
+#' get_favourited_by(id = "109294719267373593")
 #' }
 #' @export
 get_status <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
-  # if (!anonymous) token <- check_token_rtoot(token) # TODO:check if this is needed. I do not think so
+
   path <- paste0("/api/v1/statuses/", id)
   params <- list()
-  # output <- make_get_request(token = token, path = path, params = list(), instance = instance, anonymous = anonymous)
-  # if (isTRUE(parse)) {
-  #   output <- parse_status(output)
-  # }
-  # return(output)
+
   process_request(token = token,path = path,instance = instance,params = params,
                   anonymous = anonymous,parse = parse,FUN = parse_status)
 }
@@ -35,11 +30,7 @@ get_status <- function(id, instance = NULL, token = NULL, anonymous = FALSE, par
 get_reblogged_by <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
   path <- paste0("/api/v1/statuses/", id, "/reblogged_by")
   params <- list()
-  # output <- make_get_request(token = token, path = path, params = list(), instance = instance, anonymous = anonymous)
-  # if (isTRUE(parse)) {
-  #   output <- dplyr::bind_rows(lapply(output, parse_account))
-  # }
-  # return(output)
+
   process_request(token = token,path = path,instance = instance,params = params,
                   anonymous = anonymous,parse = parse,FUN = v(parse_account))
 }
@@ -49,11 +40,7 @@ get_reblogged_by <- function(id, instance = NULL, token = NULL, anonymous = FALS
 get_favourited_by <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
   path <- paste0("/api/v1/statuses/", id, "/favourited_by")
   params <- list()
-  # output <- make_get_request(token = token, path = path, params = list(), instance = instance, anonymous = anonymous)
-  # if (isTRUE(parse)) {
-  #   output <- dplyr::bind_rows(lapply(output, parse_account))
-  # }
-  # return(output)
+
   process_request(token = token,path = path,instance = instance,params = params,
                   anonymous = anonymous,parse = parse,FUN = v(parse_account))
 }
@@ -62,25 +49,16 @@ get_favourited_by <- function(id, instance = NULL, token = NULL, anonymous = FAL
 #'
 #' Query the instance for information about the context of a specific status. A context contains statuses above and below a status in a thread.
 #' @inheritParams get_status
-#' @param parse logical, logical, if `TRUE`, the default, returns a named list of two tibbles, representing the ancestors (statuses above the status) and descendants (statuses below the status). Use `FALSE`  to return the "raw" list corresponding to the JSON returned from the Mastodon API.
+#' @param parse logical, if `TRUE`, the default, returns a named list of two tibbles, representing the ancestors (statuses above the status) and descendants (statuses below the status). Use `FALSE`  to return the "raw" list corresponding to the JSON returned from the Mastodon API.
 #' @export
 #' @examples
 #' \dontrun{
-#' token <- create_token(get_client(instance = "social.tchncs.de"), type = "user")
-#' get_context(id = "109294719267373593", instance = "mastodon.social", token = token)
+#' get_context(id = "109294719267373593", instance = "mastodon.social")
 #' }
 get_context <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
   path <- paste0("/api/v1/statuses/", id, "/context")
   params <- list()
-  # output <- make_get_request(token = token, path = path, params = list(), instance = instance, anonymous = anonymous)
-  # if (isTRUE(parse)) {
-  #   ## The endpoint always returns both ancestors and descendants. A empty tibble is generated if there is nothing.
-  #   temp_output <- list()
-  #   temp_output$ancestors <- dplyr::bind_rows(lapply(output$ancestors, parse_status))
-  #   temp_output$descendants <- dplyr::bind_rows(lapply(output$descendants, parse_status))
-  #   output <- temp_output
-  # }
-  # return(output)
+
   process_request(token = token,path = path,instance = instance,params = params,
                   anonymous = anonymous,parse = parse,FUN = parse_context)
 
@@ -95,16 +73,11 @@ get_context <- function(id, instance = NULL, token = NULL, anonymous = FALSE, pa
 #' @export
 #' @examples
 #' \dontrun{
-#' token <- create_token(get_client(instance = "social.tchncs.de"), type = "user")
-#' get_poll(id = "105976", token = token)
+#' get_poll(id = "105976")
 #' }
 get_poll <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
   path <- paste0("/api/v1/polls/", id)
-  # output <- make_get_request(token = token, path = path, params = list(), instance = instance, anonymous = anonymous)
-  # if (isTRUE(parse)) {
-  #   output <- parse_poll(output)
-  # }
-  # return(output)
+
   process_request(token = token,path = path,instance = instance,params = list(),
                   anonymous = anonymous,parse = parse,FUN = parse_poll)
 }
@@ -125,11 +98,10 @@ get_poll <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse
 #' @export
 #' @examples
 #' \dontrun{
-#' token <- create_token(instance = "social.tchncs.de")
 #' ## as tibble
-#' get_timeline_public(token = token)
+#' get_timeline_public()
 #' ## as list
-#' get_timeline_public(token = token, parse = FALSE)
+#' get_timeline_public(parse = FALSE)
 #' }
 #' @references
 #' https://docs.joinmastodon.org/methods/timelines/
@@ -146,11 +118,7 @@ get_timeline_public <- function(local = FALSE, remote = FALSE, only_media = FALS
     params$min_id <- min_id
   }
   path = "/api/v1/timelines/public"
-  # output <- make_get_request(token = token, path = "/api/v1/timelines/public", params = params, instance = instance, anonymous = anonymous)
-  # if (isTRUE(parse)) {
-  #   output <- dplyr::bind_rows(lapply(output, parse_status))
-  # }
-  # return(output)
+
   process_request(token = token,path = path,instance = instance,params = params,
                   anonymous = anonymous,parse = parse,FUN = v(parse_status))
 }
@@ -163,8 +131,7 @@ get_timeline_public <- function(local = FALSE, remote = FALSE, only_media = FALS
 #' @export
 #' @examples
 #' \dontrun{
-#' token <- create_token(instance = "social.tchncs.de")
-#' get_timeline_hashtag(hashtag = "#ichbinhanna", token = token)
+#' get_timeline_hashtag(hashtag = "#ichbinhanna")
 #' ## anonymously
 #' get_timeline_hashtag(hashtag = "ichbinhanna", instance = "mastodon.social", anonymous = TRUE)
 #' }
@@ -182,11 +149,7 @@ get_timeline_hashtag <- function(hashtag = "rstats", local = FALSE, only_media =
     params$min_id <- min_id
   }
   path <- paste0("/api/v1/timelines/tag/", gsub("^#+", "", hashtag))
-  # output <- make_get_request(token = token, path = path, params = params, instance = instance, anonymous = anonymous)
-  # if (isTRUE(parse)) {
-  #   output <- dplyr::bind_rows(lapply(output, parse_status))
-  # }
-  # return(output)
+
   process_request(token = token,path = path,instance = instance,params = params,
                   anonymous = anonymous,parse = parse,FUN = v(parse_status))
 }
@@ -199,7 +162,6 @@ get_timeline_hashtag <- function(hashtag = "rstats", local = FALSE, only_media =
 #' @export
 #' @examples
 #' \dontrun{
-#' token <- create_token(instance = "social.tchncs.de")
 #' get_timeline_home()
 #' }
 get_timeline_home <- function(local = FALSE, max_id, since_id, min_id, limit = 20L, token = NULL, parse = TRUE) {
@@ -214,11 +176,7 @@ get_timeline_home <- function(local = FALSE, max_id, since_id, min_id, limit = 2
     params$min_id <- min_id
   }
   path = "/api/v1/timelines/home"
-  # output <- make_get_request(token = token, path = "/api/v1/timelines/home", params = params, instance = NULL, anonymous = FALSE)
-  # if (isTRUE(parse)) {
-  #   output <- dplyr::bind_rows(lapply(output, parse_status))
-  # }
-  # return(output)
+
   process_request(token = token,path = path,params = params,
                   parse = parse,FUN = v(parse_status))
 }
@@ -237,11 +195,7 @@ get_timeline_list <- function(list_id, max_id, since_id, min_id, limit = 20L, to
     params$min_id <- min_id
   }
   path <- paste0("/api/v1/timelines/list/", list_id)
-  # output <- make_get_request(token = token, path = path, params = params, instance = NULL, anonymous = FALSE)
-  # if (isTRUE(parse)) {
-  #   output <- dplyr::bind_rows(lapply(output, parse_status))
-  # }
-  # return(output)
+
   process_request(token = token,path = path,params = params,
                   parse = parse,FUN = v(parse_status))
 }

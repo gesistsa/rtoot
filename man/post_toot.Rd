@@ -18,28 +18,28 @@ post_toot(
 )
 }
 \arguments{
-\item{status}{Character, toot status. Must be 500 characters or less.}
+\item{status}{character, toot status. Must be 500 characters or less.}
 
-\item{media}{add media to post (not working yet)}
+\item{media}{character, path to media to add to post}
 
-\item{alt_text}{A plain-text description of the media, for accessibility purposes.}
+\item{alt_text}{character, a plain-text description of the media, for accessibility purposes.}
 
-\item{token}{user bearer token}
+\item{token}{user bearer token (read from file by default)}
 
-\item{in_reply_to_id}{ID of the status being replied to, if status is a reply}
+\item{in_reply_to_id}{character, ID of the status being replied to, if status is a reply}
 
-\item{sensitive}{logical. Mark status and attached media as sensitive?}
+\item{sensitive}{logical, mark status and attached media as sensitive?}
 
-\item{spoiler_text}{Text to be shown as a warning or subject before the actual content. Statuses are generally collapsed behind this field.}
+\item{spoiler_text}{character, text to be shown as a warning or subject before the actual content. Statuses are generally collapsed behind this field.}
 
-\item{visibility}{Visibility of the posted status. One of public (default), unlisted, private, direct.}
+\item{visibility}{character, Visibility of the posted status. One of public (default), unlisted, private, direct.}
 
 \item{scheduled_at}{ISO 8601 Datetime at which to schedule a status. Must be at least 5 minutes in the future.}
 
 \item{language}{ISO 639 language code for this status.}
 }
 \value{
-nothing
+no return value, called for site effects
 }
 \description{
 Post status update to user's Mastodon account

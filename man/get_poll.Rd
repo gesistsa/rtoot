@@ -11,7 +11,7 @@ get_poll(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE)
 
 \item{instance}{character, the server name of the instance where the status is located. If \code{NULL}, the same instance used to obtain the token is used.}
 
-\item{token}{user bearer token}
+\item{token}{user bearer token (read from file by default)}
 
 \item{anonymous}{some API calls do not need a token. Setting anonymous to TRUE allows to make an anonymous call if possible.}
 
@@ -25,7 +25,6 @@ View a polls attached to statuses. To discover poll ID, you will need to use \co
 }
 \examples{
 \dontrun{
-token <- create_token(get_client(instance = "social.tchncs.de"), type = "user")
-get_poll(id = "105976", token = token)
+get_poll(id = "105976")
 }
 }

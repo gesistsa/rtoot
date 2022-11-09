@@ -7,7 +7,7 @@
 verify_credentials(token)
 }
 \arguments{
-\item{token}{user bearer token}
+\item{token}{bearer token, either public or user level}
 }
 \description{
 verify mastodon credentials

@@ -11,7 +11,7 @@ get_account(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE)
 
 \item{instance}{character, the server name of the instance where the status is located. If \code{NULL}, the same instance used to obtain the token is used.}
 
-\item{token}{user bearer token}
+\item{token}{user bearer token (read from file by default)}
 
 \item{anonymous}{some API calls do not need a token. Setting anonymous to TRUE allows to make an anonymous call if possible.}
 
@@ -22,4 +22,9 @@ an account
 }
 \description{
 Query the instance for a specific user
+}
+\examples{
+\dontrun{
+get_account("109302436954721982")
+}
 }

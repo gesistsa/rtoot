@@ -25,11 +25,11 @@ get_favourited_by(
 )
 }
 \arguments{
-\item{id}{character, Local ID of a status in the database}
+\item{id}{character, local ID of a status in the database}
 
 \item{instance}{character, the server name of the instance where the status is located. If \code{NULL}, the same instance used to obtain the token is used.}
 
-\item{token}{user bearer token}
+\item{token}{user bearer token (read from file by default)}
 
 \item{anonymous}{some API calls do not need a token. Setting anonymous to TRUE allows to make an anonymous call if possible.}
 
@@ -44,9 +44,8 @@ Query the instance for information about a specific status. \link{get_status} re
 }
 \examples{
 \dontrun{
-token <- create_token(get_client(instance = "social.tchncs.de"), type = "user")
-get_status(id = "109298295023649405", token = token)
-get_reblogged_by(id = "109294719267373593", instance = "mastodon.social")
-get_favourited_by(id = "109294719267373593", instance = "mastodon.social")
+get_status(id = "109298295023649405")
+get_reblogged_by(id = "109294719267373593")
+get_favourited_by(id = "109294719267373593")
 }
 }

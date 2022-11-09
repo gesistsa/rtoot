@@ -39,7 +39,7 @@ get_instance_trends(
 \arguments{
 \item{instance}{character, the server name of the instance where the status is located. If \code{NULL}, the same instance used to obtain the token is used.}
 
-\item{token}{user bearer token}
+\item{token}{user bearer token (read from file by default)}
 
 \item{anonymous}{logical Should the API call be made anonymously? Defaults to TRUE but some instances might need authentication here}
 

@@ -9,12 +9,12 @@ get_account_relationships(ids, token = NULL, parse = TRUE)
 \arguments{
 \item{ids}{vector of account ids}
 
-\item{token}{user bearer token}
+\item{token}{user bearer token (read from file by default)}
 
 \item{parse}{logical, if \code{TRUE}, the default, returns a tibble. Use \code{FALSE}  to return the "raw" list corresponding to the JSON returned from the Mastodon API.}
 }
 \value{
-relationships
+tibble or list of relationships
 }
 \description{
 Find out whether a given account is followed, blocked, muted, etc.

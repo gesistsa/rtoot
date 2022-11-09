@@ -1,4 +1,4 @@
-## stole from rtweet
+## taken from rtweet
 
 has_name_ <- function(x, name) isTRUE(name %in% names(x))
 

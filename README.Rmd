@@ -18,25 +18,116 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/rtoot)](https://CRAN.R-project.org/package=rtoot)
 [![R-CMD-check](https://github.com/schochastics/rtoot/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/schochastics/rtoot/actions/workflows/R-CMD-check.yaml)
-[![Codecov test coverage](https://codecov.io/gh/schochastics/rtoot/branch/master/graph/badge.svg)](https://app.codecov.io/gh/schochastics/rtoot?branch=master)
+[![Codecov test coverage](https://codecov.io/gh/schochastics/rtoot/branch/main/graph/badge.svg)](https://app.codecov.io/gh/schochastics/rtoot?branch=main)
 
 <!-- badges: end -->
 
-Interact with the [mastodon API](https://docs.joinmastodon.org/api/) from R
+Interact with the [mastodon API](https://docs.joinmastodon.org/api/) from R.  
+Get started by reading `vignette("rtoot")`.
 
-*(There is already such a package available [here](https://github.com/ThomasChln/mastodon), but it doesn't seem to be maintained)*
+
 
 ## Installation
 
-You can install the development version of rtoot like so:
+You can install the development version of rtoot from GitHub:
 
 ```{r install, eval=FALSE}
 devtools::install_github("schochastics/rtoot")
 ```
 
-## Roadmap
+## Authenticate
 
-This package is in a very early stage. Use at own risk (API might still change)
+First you should set up your own credentials (see also `vignette("auth")`)
+
+```{r aut, eval=FALSE}
+auth_setup()
+```
+The mastodon API allows different access levels. Setting up a token with your own account grants you the most access. 
+
+## Instances
+
+In contrast to twitter, mastodon is not a single instance, but a federation of different servers.
+You sign up at a specific server (say "mastodon.social") but can still communicate with others from other servers (say "fosstodon.org"). The existence of different instances makes API calls more complex.
+For example, some calls can only be made within your own instance (e.g `get_timeline_home()`), others can access all instances but you need to specify the instance as a parameter (e.g. `get_timeline_public()`). 
+
+A list of active instances can be obtained with `get_fedi_instances()`. The results are sorted by number of users.
+
+General information about an instance can be obtained with `get_instance_general()`
+
+```{r, eval = FALSE}
+get_instance_general(instance = "mastodon.social")
+```
+
+`get_instance_activity()` shows the activity for the last three months and `get_instance_trends()` the trending hashtags of the week.
+
+```{r, eval = FALSE}
+get_instance_activity(instance = "mastodon.social")
+get_instance_trends(instance = "mastodon.social")
+```
+
+## Get toots
+
+To get the most recent toots of a specific instance use `get_timeline_public()`
+```{r, eval = FALSE}
+get_timeline_public(instance = "mastodon.social")
+```
+
+To get the most recent toots containing a specific hashtag use `get_timeline_hashtag()`
+
+```{r, eval = FALSE}
+get_timeline_hashtag(hashtag = "rstats", instance = "mastodon.social")
+```
+
+The function `get_timeline_home()` allows you to get the most recent toots from your own timeline.
+
+```{r, eval = FALSE}
+get_timeline_home()
+```
+
+## Get accounts
+
+`rtoot` exposes several account level endpoints. Most require the account id instead of the username as an input. There is, to our knowledge, no straightforward way of obtaining the account id. With the package you can get the id via `search_accounts()`.
+
+```{r, eval=FALSE}
+search_accounts("schochastics")
+```
+
+*(Future versions will allow to use the username and user id interchangeably)*
+
+Using the id, you can get the followers and following users with `get_account_followers()` and
+`get_account_following()` and statuses with `get_account_statuses()`.
+
+```{r, eval = FALSE}
+id <- "109302436954721982"
+get_account_followers(id)
+get_account_following(id)
+get_account_statuses(id)
+```
+
+
+## Posting statuses
+
+You can post toots with:
+```{r, eval = FALSE}
+post_toot(status = "my first rtoot #rstats")
+```
+
+It can also include media and alt_text.
+
+```{r, eval = FALSE}
+post_toot(status = "my first rtoot #rstats", media="path/to/media", 
+          alt_text = "description of media")
+```
+
+You can mark the toot as sensitive by setting `sensitive = TRUE` and add a spoiler text with `spoiler_text`.
+
+
+## Pagination
+
+Most functions only return up to 40 results. The current version of `rtoot` does not 
+support pagination out of the box (but it is planned for later). there is a workaround which can be found
+in the [wiki](https://github.com/schochastics/rtoot/wiki/Pagination)
+ 
 
 ## Code of Conduct
   

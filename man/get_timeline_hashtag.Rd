@@ -35,7 +35,7 @@ get_timeline_hashtag(
 
 \item{instance}{character, the server name of the instance where the status is located. If \code{NULL}, the same instance used to obtain the token is used.}
 
-\item{token}{user bearer token}
+\item{token}{user bearer token (read from file by default)}
 
 \item{anonymous}{some API calls do not need a token. Setting anonymous to TRUE allows to make an anonymous call if possible.}
 
@@ -49,8 +49,7 @@ Query the instance for the timeline of a specific hashtag
 }
 \examples{
 \dontrun{
-token <- create_token(instance = "social.tchncs.de")
-get_timeline_hashtag(hashtag = "#ichbinhanna", token = token)
+get_timeline_hashtag(hashtag = "#ichbinhanna")
 ## anonymously
 get_timeline_hashtag(hashtag = "ichbinhanna", instance = "mastodon.social", anonymous = TRUE)
 }

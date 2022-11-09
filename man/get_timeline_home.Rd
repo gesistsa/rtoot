@@ -36,7 +36,7 @@ get_timeline_list(
 
 \item{limit}{integer, Maximum number of results to return}
 
-\item{token}{user bearer token}
+\item{token}{user bearer token (read from file by default)}
 
 \item{parse}{logical, if \code{TRUE}, the default, returns a tibble. Use \code{FALSE}  to return the "raw" list corresponding to the JSON returned from the Mastodon API.}
 
@@ -50,7 +50,6 @@ Query the instance for the timeline from either followed users or a specific lis
 }
 \examples{
 \dontrun{
-token <- create_token(instance = "social.tchncs.de")
 get_timeline_home()
 }
 }

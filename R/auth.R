@@ -101,7 +101,7 @@ create_token <- function(client, type = "public"){
 
 #' verify mastodon credentials
 #'
-#' @param token user bearer token
+#' @param token bearer token, either public or user level
 #' @export
 verify_credentials <- function(token) {
   if(!is_auth_rtoot(token)){

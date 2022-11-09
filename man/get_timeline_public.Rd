@@ -35,7 +35,7 @@ get_timeline_public(
 
 \item{instance}{character, the server name of the instance where the status is located. If \code{NULL}, the same instance used to obtain the token is used.}
 
-\item{token}{user bearer token}
+\item{token}{user bearer token (read from file by default)}
 
 \item{anonymous}{some API calls do not need a token. Setting anonymous to TRUE allows to make an anonymous call if possible.}
 
@@ -49,11 +49,10 @@ Query the instance for the public timeline
 }
 \examples{
 \dontrun{
-token <- create_token(instance = "social.tchncs.de")
 ## as tibble
-get_timeline_public(token = token)
+get_timeline_public()
 ## as list
-get_timeline_public(token = token, parse = FALSE)
+get_timeline_public(parse = FALSE)
 }
 }
 \references{

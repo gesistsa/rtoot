@@ -9,12 +9,12 @@ get_account_featured_tags(id, token = NULL, parse = TRUE)
 \arguments{
 \item{id}{character, local ID of a user (this is not the username)}
 
-\item{token}{user bearer token}
+\item{token}{user bearer token (read from file by default)}
 
 \item{parse}{logical, if \code{TRUE}, the default, returns a tibble. Use \code{FALSE}  to return the "raw" list corresponding to the JSON returned from the Mastodon API.}
 }
 \value{
-featured_tags
+tibble or list of featured_tags
 }
 \description{
 Get featured tags of a user

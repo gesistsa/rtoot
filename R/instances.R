@@ -2,8 +2,12 @@
 #'
 #' @param n number of servers to show
 #' @details the results are sorted by user count
-#' @return data frame of fediverse instances
+#' @return tibble of fediverse instances
 #' @export
+#' @examples
+#' \dontrun{
+#' get_fedi_instances(n = 5)
+#' }
 get_fedi_instances  <-  function(n = 20) {
   pages <- ceiling(n/20)
   df <- tibble::tibble()
@@ -11,14 +15,14 @@ get_fedi_instances  <-  function(n = 20) {
     tmp <- make_get_request(token = NULL, path = "/api/instances",
                             instance = "api.index.community", params = list(sortField = "userCount", sortDirection = "desc", page = i),
                             anonymous = TRUE)
-    df <- dplyr::bind_rows(df, dplyr::bind_rows(tmp$instance))
+    df <- dplyr::bind_rows(df, dplyr::bind_rows(tmp$instances))
   }
   df[seq_len(n),]
 }
 
 #' Get various information about a specific instance
-#' @param anonymous logical Should the API call be made anonymously? Defaults to TRUE but some instances might need authentication here
-#' @param local logical. Show only local accounts?
+#' @param anonymous logical, should the API call be made anonymously? Defaults to TRUE but some instances might need authentication here
+#' @param local logical, show only local accounts?
 #' @param offset How many accounts to skip before returning results. Default 0.
 #' @param order 'active' to sort by most recently posted statuses (default) or 'new' to sort by most recently created profiles.
 #' @inheritParams post_toot
@@ -34,7 +38,7 @@ get_fedi_instances  <-  function(n = 20) {
 #'   \item{get_instance_directory}{A directory of profiles that the instance is aware of}
 #'   \item{get_instance_trends}{Tags that are being used more frequently within the past week}
 #' }
-#' @return instance details depending on call function
+#' @return instance details as list or tibble depending on call function
 #' @export
 get_instance_general <- function(instance = NULL,token = NULL, anonymous = TRUE){
   request_results <- make_get_request(token = token,path = "/api/v1/instance",

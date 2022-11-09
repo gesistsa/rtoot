@@ -22,12 +22,12 @@ get_account_following(
 
 \item{limit}{integer, maximum number of results to return. Defaults to 40.}
 
-\item{token}{user bearer token}
+\item{token}{user bearer token (read from file by default)}
 
 \item{parse}{logical, if \code{TRUE}, the default, returns a tibble. Use \code{FALSE}  to return the "raw" list corresponding to the JSON returned from the Mastodon API.}
 }
 \value{
-followers
+tibble or list of accounts a user follows
 }
 \description{
 Get accounts a user follows

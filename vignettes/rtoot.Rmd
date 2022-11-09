@@ -28,7 +28,7 @@ First you should set up your own credentials (see also the vignette on [authenti
 ```{r aut, eval=FALSE}
 auth_setup()
 ```
-The mastodon API allows different access levels. Setting up a token with your own account grants you the most access. Most functions have three parameters that deal with authentication (or the lack thereof):
+The mastodon API allows different access levels. Setting up a token with your own account grants you the most access. 
 
 ## Instances
 

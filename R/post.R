@@ -1,16 +1,16 @@
 #' Post status update to user's Mastodon account
 #'
-#' @param status Character, toot status. Must be 500 characters or less.
-#' @param media add media to post (not working yet)
-#' @param alt_text A plain-text description of the media, for accessibility purposes.
-#' @param token user bearer token
-#' @param in_reply_to_id ID of the status being replied to, if status is a reply
-#' @param sensitive  logical. Mark status and attached media as sensitive?
-#' @param spoiler_text Text to be shown as a warning or subject before the actual content. Statuses are generally collapsed behind this field.
-#' @param visibility Visibility of the posted status. One of public (default), unlisted, private, direct.
+#' @param status character, toot status. Must be 500 characters or less.
+#' @param media character, path to media to add to post
+#' @param alt_text character, a plain-text description of the media, for accessibility purposes.
+#' @param token user bearer token (read from file by default)
+#' @param in_reply_to_id character, ID of the status being replied to, if status is a reply
+#' @param sensitive  logical, mark status and attached media as sensitive?
+#' @param spoiler_text character, text to be shown as a warning or subject before the actual content. Statuses are generally collapsed behind this field.
+#' @param visibility character, Visibility of the posted status. One of public (default), unlisted, private, direct.
 #' @param scheduled_at ISO 8601 Datetime at which to schedule a status. Must be at least 5 minutes in the future.
 #' @param language ISO 639 language code for this status.
-#' @return nothing
+#' @return no return value, called for site effects
 #' @export
 post_toot <- function(
     status = "my first rtoot #rstats",
@@ -80,21 +80,10 @@ check_media <- function(media, alt_text) {
   if (!is.character(media) | !is.character(alt_text)) {
     stop("Media and alt_text must be character vectors.", call. = FALSE)
   }
-  # media_type <- tools::file_ext(media)
-  # if (length(media) > 4) {
-  #   stop("At most 4 images per plot can be uploaded.", call. = FALSE)
-  # }
-  #
-  # if (media_type %in% c("gif", "mp4") && length(media) > 1) {
-  #   stop("Cannot upload more than one gif or video per tweet.", call. = TRUE)
-  # }
 
   if (!is.null(alt_text) && length(alt_text) != length(media)) {
     stop("Alt text for media isn't provided for each image.", call. = TRUE)
   }
-  # if (!any(media_type %in% c("jpg", "jpeg", "png", "gif", "mp4"))) {
-  #   stop("Media type format not recognized.", call. = TRUE)
-  # }
 
   if (any(nchar(alt_text) > 1000)) {
     stop("Alt text cannot be longer than 1000 characters.", call. = TRUE)
@@ -106,7 +95,7 @@ check_media <- function(media, alt_text) {
 #' @param id character, user id to perform the action on
 #' @param action character, one of "(un)follow","(un)block", "(un)mute", "(un)pin","note"
 #' @param comment character (if action="note"), The comment to be set on that user. Provide an empty string or leave out this parameter to clear the currently set note.
-#' @return nothing
+#' @return no return value, called for site effects
 #' @export
 post_user <- function(id,action = "follow",comment = "",token = NULL){
   token <- check_token_rtoot(token)

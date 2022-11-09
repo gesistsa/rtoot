@@ -13,10 +13,10 @@ post_user(id, action = "follow", comment = "", token = NULL)
 
 \item{comment}{character (if action="note"), The comment to be set on that user. Provide an empty string or leave out this parameter to clear the currently set note.}
 
-\item{token}{user bearer token}
+\item{token}{user bearer token (read from file by default)}
 }
 \value{
-nothing
+no return value, called for site effects
 }
 \description{
 Perform actions on an account

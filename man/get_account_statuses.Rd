@@ -17,18 +17,23 @@ get_account_statuses(
 
 \item{instance}{character, the server name of the instance where the status is located. If \code{NULL}, the same instance used to obtain the token is used.}
 
-\item{token}{user bearer token}
+\item{token}{user bearer token (read from file by default)}
 
 \item{anonymous}{some API calls do not need a token. Setting anonymous to TRUE allows to make an anonymous call if possible.}
 
 \item{parse}{logical, if \code{TRUE}, the default, returns a tibble. Use \code{FALSE}  to return the "raw" list corresponding to the JSON returned from the Mastodon API.}
 }
 \value{
-statuses
+tibble or list of statuses
 }
 \description{
 Get statuses from a user
 }
 \details{
 For anonymous calls only public statuses are returned. If a user token is supplied also private statuses the user is authorized to see are returned
+}
+\examples{
+\dontrun{
+get_account_statuses("109302436954721982")
+}
 }

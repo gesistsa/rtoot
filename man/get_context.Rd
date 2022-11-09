@@ -7,22 +7,21 @@
 get_context(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE)
 }
 \arguments{
-\item{id}{character, Local ID of a status in the database}
+\item{id}{character, local ID of a status in the database}
 
 \item{instance}{character, the server name of the instance where the status is located. If \code{NULL}, the same instance used to obtain the token is used.}
 
-\item{token}{user bearer token}
+\item{token}{user bearer token (read from file by default)}
 
 \item{anonymous}{some API calls do not need a token. Setting anonymous to TRUE allows to make an anonymous call if possible.}
 
-\item{parse}{logical, logical, if \code{TRUE}, the default, returns a named list of two tibbles, representing the ancestors (statuses above the status) and descendants (statuses below the status). Use \code{FALSE}  to return the "raw" list corresponding to the JSON returned from the Mastodon API.}
+\item{parse}{logical, if \code{TRUE}, the default, returns a named list of two tibbles, representing the ancestors (statuses above the status) and descendants (statuses below the status). Use \code{FALSE}  to return the "raw" list corresponding to the JSON returned from the Mastodon API.}
 }
 \description{
 Query the instance for information about the context of a specific status. A context contains statuses above and below a status in a thread.
 }
 \examples{
 \dontrun{
-token <- create_token(get_client(instance = "social.tchncs.de"), type = "user")
-get_context(id = "109294719267373593", instance = "mastodon.social", token = token)
+get_context(id = "109294719267373593", instance = "mastodon.social")
 }
 }

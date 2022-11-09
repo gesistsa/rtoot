@@ -53,7 +53,6 @@ prepare_url <- function(instance){
 
 # process the header of a get request
 parse_header <- function(header){
-  # rate limit fields should always be present but the link field is not always there
   df <- tibble::tibble(rate_limit=header[["x-ratelimit-limit"]],
                        rate_remaining=header[["x-ratelimit-remaining"]],
                        rate_reset=format_date(header[["x-ratelimit-reset"]]))
@@ -86,13 +85,7 @@ process_request <- function(token = NULL,
                              anonymous = anonymous)
   if (isTRUE(parse)) {
     header <- attr(output,"headers")
-    # if(length(output)<1){
-    #   output <- tibble::tibble()
-    # } else if(length(output[[1]])==1){ #TODO:fragile?
-    #   output <- FUN(output)
-    # } else{
-    #   output <- dplyr::bind_rows(lapply(output, FUN))
-    # }
+
     output <- FUN(output)
     attr(output,"headers") <- header
   }
