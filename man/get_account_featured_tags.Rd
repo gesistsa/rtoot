@@ -22,3 +22,8 @@ Get featured tags of a user
 \details{
 this functions needs a user level auth token
 }
+\examples{
+\dontrun{
+get_account_featured_tags("109302436954721982")
+}
+}

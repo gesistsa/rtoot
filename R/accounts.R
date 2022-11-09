@@ -46,11 +46,11 @@ search_accounts <- function(query,limit = 40,instance = NULL, token = NULL, anon
 #' @inheritParams post_toot
 #' @details  For anonymous calls only public statuses are returned. If a user token is supplied also private statuses the user is authorized to see are returned
 #' @return tibble or list of statuses
-#' @export
 #' @examples
 #' \dontrun{
 #' get_account_statuses("109302436954721982")
 #' }
+#' @export
 get_account_statuses <- function(id,instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE){
   path <- paste0("api/v1/accounts/",id,"/statuses")
   params <- list()
@@ -67,6 +67,10 @@ get_account_statuses <- function(id,instance = NULL, token = NULL, anonymous = F
 #' @param limit integer, maximum number of results to return. Defaults to 40.
 #' @details this functions needs a user level auth token
 #' @return tibble or list of followers
+#' @examples
+#' \dontrun{
+#' get_account_followers("109302436954721982")
+#' }
 #' @export
 get_account_followers <- function(id,max_id,since_id,limit = 40, token = NULL, parse = TRUE){
   path <- paste0("api/v1/accounts/",id,"/followers")
@@ -86,6 +90,10 @@ get_account_followers <- function(id,max_id,since_id,limit = 40, token = NULL, p
 #' @inheritParams get_account_followers
 #' @details this functions needs a user level auth token
 #' @return tibble or list of accounts a user follows
+#' @examples
+#' \dontrun{
+#' get_account_following("109302436954721982")
+#' }
 #' @export
 get_account_following <- function(id,max_id,since_id,limit = 40, token = NULL, parse = TRUE){
   path <- paste0("api/v1/accounts/",id,"/following")
@@ -106,6 +114,10 @@ get_account_following <- function(id,max_id,since_id,limit = 40, token = NULL, p
 #' @inheritParams get_account_statuses
 #' @details this functions needs a user level auth token
 #' @return tibble or list of featured_tags
+#' @examples
+#' \dontrun{
+#' get_account_featured_tags("109302436954721982")
+#' }
 #' @export
 get_account_featured_tags <- function(id,token = NULL, parse = TRUE){
   path <- paste0("api/v1/accounts/",id,"/featured_tags")
@@ -120,6 +132,10 @@ get_account_featured_tags <- function(id,token = NULL, parse = TRUE){
 #' @inheritParams get_account_statuses
 #' @details this functions needs a user level auth token
 #' @return tibble or list of lists
+#' @examples
+#' \dontrun{
+#' get_account_lists("109302436954721982")
+#' }
 #' @export
 get_account_lists <- function(id,token = NULL, parse = TRUE){
   path <- paste0("api/v1/accounts/",id,"/lists")
@@ -135,6 +151,11 @@ get_account_lists <- function(id,token = NULL, parse = TRUE){
 #' @param ids vector of account ids
 #' @details this functions needs a user level auth token
 #' @return tibble or list of relationships
+#' @examples
+#' \dontrun{
+#' fol <- get_account_followers("109302436954721982")
+#' get_account_relationships(fol$id)
+#' }
 #' @export
 get_account_relationships <- function(ids,token = NULL, parse = TRUE){
   path <- "/api/v1/accounts/relationships"
@@ -154,6 +175,10 @@ get_account_relationships <- function(ids,token = NULL, parse = TRUE){
 #' @param min_id character, Return results younger than this id
 #' @details this functions needs a user level auth token
 #' @return bookmarked statuses
+#' @examples
+#' \dontrun{
+#' get_account_followers("109302436954721982")
+#' }
 #' @export
 get_account_bookmarks <- function(max_id,since_id,min_id,limit = 40, token = NULL, parse = TRUE){
   path <- paste0("api/v1/bookmarks")
@@ -179,6 +204,11 @@ get_account_bookmarks <- function(max_id,since_id,min_id,limit = 40, token = NUL
 #' @param min_id character, Return results younger than this id
 #' @details this functions needs a user level auth token
 #' @return tibble or list of favourited statuses
+#' @examples
+#' \dontrun{
+#' # needs user level token
+#' get_account_favourites()
+#' }
 #' @export
 get_account_favourites <- function(max_id,min_id,limit = 40, token = NULL, parse = TRUE){
   path <- paste0("api/v1/favourites")
@@ -200,6 +230,11 @@ get_account_favourites <- function(max_id,min_id,limit = 40, token = NULL, parse
 #' @inheritParams get_account_followers
 #' @details this functions needs a user level auth token
 #' @return tibble or list of blocked users
+#' @examples
+#' \dontrun{
+#' # needs user level token
+#' get_account_blocks()
+#' }
 #' @export
 get_account_blocks <- function(max_id,since_id,limit = 40, token = NULL, parse = TRUE){
   path <- paste0("api/v1/blocks")
@@ -221,6 +256,11 @@ get_account_blocks <- function(max_id,since_id,limit = 40, token = NULL, parse =
 #' @inheritParams get_account_followers
 #' @details this functions needs a user level auth token
 #' @return tibble or list of muted users
+#' @examples
+#' \dontrun{
+#' # needs user level token
+#' get_account_mutes()
+#' }
 #' @export
 get_account_mutes <- function(max_id,since_id,limit = 40, token = NULL, parse = TRUE){
   path <- paste0("api/v1/mutes")

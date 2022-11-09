@@ -22,3 +22,9 @@ Find out whether a given account is followed, blocked, muted, etc.
 \details{
 this functions needs a user level auth token
 }
+\examples{
+\dontrun{
+fol <- get_account_followers("109302436954721982")
+get_account_relationships(fol$id)
+}
+}

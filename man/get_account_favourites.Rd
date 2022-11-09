@@ -26,3 +26,9 @@ Get favourites of user
 \details{
 this functions needs a user level auth token
 }
+\examples{
+\dontrun{
+# needs user level token
+get_account_favourites()
+}
+}

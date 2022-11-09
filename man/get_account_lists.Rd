@@ -22,3 +22,8 @@ Get lists containing the user
 \details{
 this functions needs a user level auth token
 }
+\examples{
+\dontrun{
+get_account_lists("109302436954721982")
+}
+}

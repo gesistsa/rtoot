@@ -35,3 +35,8 @@ Get accounts a user follows
 \details{
 this functions needs a user level auth token
 }
+\examples{
+\dontrun{
+get_account_following("109302436954721982")
+}
+}
