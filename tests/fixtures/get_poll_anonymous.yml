@@ -1,0 +1,56 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://mastodon.social/api/v1/polls/286799
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      cache-control: no-store
+      content-encoding: gzip
+      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
+        ''none''; font-src ''self'' https://static-cdn.mastodon.social; img-src ''self''
+        https: data: blob: https://static-cdn.mastodon.social; style-src ''self''
+        https://static-cdn.mastodon.social ''nonce-0aBHgGUVH7ZWjk9UlNSrlg==''; media-src
+        ''self'' https: data: https://static-cdn.mastodon.social; frame-src ''self''
+        https:; manifest-src ''self'' https://static-cdn.mastodon.social; connect-src
+        ''self'' data: blob: https://static-cdn.mastodon.social https://files.mastodon.social
+        wss://mastodon.social; script-src ''self'' https://static-cdn.mastodon.social
+        ''unsafe-eval''; child-src ''self'' blob: https://static-cdn.mastodon.social;
+        worker-src ''self'' blob: https://static-cdn.mastodon.social'
+      content-type: application/json; charset=utf-8
+      date: Wed, 09 Nov 2022 08:46:15 GMT
+      etag: W/"9ab1e8d5d75527ccc937b8a4a5ac456b"
+      permissions-policy: interest-cohort=()
+      server: Mastodon
+      strict-transport-security: max-age=63072000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      - Origin
+      x-cached: MISS
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '297'
+      x-ratelimit-reset: '2022-11-09T08:50:00.168989Z'
+      x-request-id: 1961c84d-4ed8-46de-982a-cdc4b2d43e16
+      x-runtime: '0.102590'
+      x-xss-protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: '{"id":"286799","expires_at":"2022-11-09T19:54:55.599Z","expired":false,"multiple":false,"votes_count":64,"voters_count":64,"options":[{"title":"small
+        telescope approach (d33% of orig paper)","votes_count":10},{"title":"lower
+        CI of original effect","votes_count":7},{"title":"precision based (width of
+        CI for new effect)","votes_count":4},{"title":"Smallest Effect Size of Interest
+        (SESOI)","votes_count":43}],"emojis":[]}'
+  recorded_at: 2022-11-09 08:46:15 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.2
