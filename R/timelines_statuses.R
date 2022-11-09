@@ -1,35 +1,3 @@
-## Endpoints under
-## https://docs.joinmastodon.org/methods/statuses/
-## https://docs.joinmastodon.org/methods/timelines/
-
-make_get_request <- function(token, path, params, instance = NULL, anonymous = FALSE, ...) {
-  if (is.null(instance) && anonymous) {
-    stop("provide either an instance or a token")
-  }
-
-  if (is.null(instance)) {
-    token <- check_token_rtoot(token)
-    url <- prepare_url(token$instance)
-    config <- httr::add_headers(Authorization = paste('Bearer', token$bearer))
-  } else {
-    url <- prepare_url(instance)
-    config = list()
-  }
-
-  request_results <- httr::GET(httr::modify_url(url, path = path),
-                               config,
-                               query = params)
-
-  status_code <- httr::status_code(request_results)
-  if (!status_code %in% c(200)) {
-    stop(paste("something went wrong. Status code:", status_code))
-  }
-  output <- httr::content(request_results)
-  headers <- parse_header(httr::headers(request_results))
-  attr(output, "headers") <- headers
-  return(output)
-}
-
 #' View information about a specific status
 #'
 #' Query the instance for information about a specific status. [get_status] returns complete information of a status.
