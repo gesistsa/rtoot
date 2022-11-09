@@ -10,11 +10,16 @@ get_fedi_instances(n = 20)
 \item{n}{number of servers to show}
 }
 \value{
-data frame of fediverse instances
+tibble of fediverse instances
 }
 \description{
 Get a list of fediverse servers
 }
 \details{
 the results are sorted by user count
+}
+\examples{
+\dontrun{
+get_fedi_instances(n = 5)
+}
 }

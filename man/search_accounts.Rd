@@ -28,11 +28,12 @@ search_accounts(
 }
 \value{
 a tibble ir list of accounts
-#' @examples
-\dontrun{
-search_accounts("schochastics")
-}
 }
 \description{
 Search the instance for a specific user
+}
+\examples{
+\dontrun{
+search_accounts("schochastics")
+}
 }

@@ -41,7 +41,7 @@ get_instance_trends(
 
 \item{token}{user bearer token (read from file by default)}
 
-\item{anonymous}{logical Should the API call be made anonymously? Defaults to TRUE but some instances might need authentication here}
+\item{anonymous}{logical, should the API call be made anonymously? Defaults to TRUE but some instances might need authentication here}
 
 \item{offset}{How many accounts to skip before returning results. Default 0.}
 
@@ -49,12 +49,12 @@ get_instance_trends(
 
 \item{order}{'active' to sort by most recently posted statuses (default) or 'new' to sort by most recently created profiles.}
 
-\item{local}{logical. Show only local accounts?}
+\item{local}{logical, show only local accounts?}
 
 \item{parse}{logical, if \code{TRUE}, the default, returns a tibble. Use \code{FALSE}  to return the "raw" list corresponding to the JSON returned from the Mastodon API.}
 }
 \value{
-instance details depending on call function
+instance details as list or tibble depending on call function
 }
 \description{
 Get various information about a specific instance

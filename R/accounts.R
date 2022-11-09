@@ -25,7 +25,7 @@ get_account <- function(id,instance = NULL, token = NULL, anonymous = FALSE, par
 #' @inheritParams get_status
 #' @inheritParams post_toot
 #' @return a tibble ir list of accounts
-#' #' @examples
+#' @examples
 #' \dontrun{
 #' search_accounts("schochastics")
 #' }
