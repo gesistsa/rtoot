@@ -17,6 +17,9 @@ get_context(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE)
 
 \item{parse}{logical, if \code{TRUE}, the default, returns a named list of two tibbles, representing the ancestors (statuses above the status) and descendants (statuses below the status). Use \code{FALSE}  to return the "raw" list corresponding to the JSON returned from the Mastodon API.}
 }
+\value{
+context of a toot as tibble or list
+}
 \description{
 Query the instance for information about the context of a specific status. A context contains statuses above and below a status in a thread.
 }

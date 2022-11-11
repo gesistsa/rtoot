@@ -50,6 +50,7 @@ get_favourited_by <- function(id, instance = NULL, token = NULL, anonymous = FAL
 #' Query the instance for information about the context of a specific status. A context contains statuses above and below a status in a thread.
 #' @inheritParams get_status
 #' @param parse logical, if `TRUE`, the default, returns a named list of two tibbles, representing the ancestors (statuses above the status) and descendants (statuses below the status). Use `FALSE`  to return the "raw" list corresponding to the JSON returned from the Mastodon API.
+#' @return context of a toot as tibble or list
 #' @export
 #' @examples
 #' \dontrun{

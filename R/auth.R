@@ -81,7 +81,7 @@ create_token <- function(client, type = "public"){
     if (requireNamespace("rstudioapi", quietly = TRUE)) {
       if (rstudioapi::isAvailable()) {
         passFun <- rstudioapi::askForPassword
-      } 
+      }
     }
     auth_code <- passFun(prompt = "enter authorization code: ")
     auth2 <- httr::POST(httr::modify_url(url = url, path = "oauth/token"),body=list(
@@ -104,6 +104,7 @@ create_token <- function(client, type = "public"){
 #' verify mastodon credentials
 #'
 #' @param token bearer token, either public or user level
+#' @return success or failure message of the verification process
 #' @examples
 #' \dontrun{
 #' #read a token from a file
@@ -135,6 +136,7 @@ verify_credentials <- function(token) {
   } else {
     stop("Token not valid. Use auth_setup() to create a token")
   }
+  invisible(acc)
 }
 
 #' save a bearer token to file
@@ -214,6 +216,4 @@ check_token_rtoot <- function(token = NULL) {
       selection <- 2L
     }
   }
-
-  invisible(token)
 }

@@ -9,6 +9,9 @@ verify_credentials(token)
 \arguments{
 \item{token}{bearer token, either public or user level}
 }
+\value{
+success or failure message of the verification process
+}
 \description{
 verify mastodon credentials
 }
