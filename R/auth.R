@@ -17,7 +17,7 @@
 #' @export
 auth_setup <- function(instance = NULL, type = NULL, name = NULL, path = NULL) {
   while (is.null(instance) || instance == "") {
-    instance <- readline(prompt = "On which instance do you want to authenticate (e.g., \"mastodon.social\")?")
+    instance <- readline(prompt = "On which instance do you want to authenticate (e.g., \"mastodon.social\")? ")
   }
   client <- get_client(instance = instance)
   if (!isTRUE(type %in% c("public", "user"))) {
@@ -76,12 +76,14 @@ create_token <- function(client, type = "public"){
       redirect_uri='urn:ietf:wg:oauth:2.0:oob',
       scope='read write follow',
       response_type="code"
-    ))
+      ))
+    passFun <- readline
     if (requireNamespace("rstudioapi", quietly = TRUE)) {
-      auth_code <- rstudioapi::askForPassword(prompt = "enter authorization code: ")
-    } else {
-      auth_code <- readline(prompt = "enter authorization code: ")
+      if (rstudioapi::isAvailable()) {
+        passFun <- rstudioapi::askForPassword
+      } 
     }
+    auth_code <- passFun(prompt = "enter authorization code: ")
     auth2 <- httr::POST(httr::modify_url(url = url, path = "oauth/token"),body=list(
       client_id=client$client_id ,
       client_secret=client$client_secret,
