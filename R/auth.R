@@ -216,4 +216,6 @@ check_token_rtoot <- function(token = NULL) {
       selection <- 2L
     }
   }
+
+  invisible(token)
 }
