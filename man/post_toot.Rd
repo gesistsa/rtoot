@@ -14,7 +14,8 @@ post_toot(
   spoiler_text = NULL,
   visibility = "public",
   scheduled_at = NULL,
-  language = NULL
+  language = NULL,
+  verbose = TRUE
 )
 }
 \arguments{
@@ -37,6 +38,8 @@ post_toot(
 \item{scheduled_at}{ISO 8601 Datetime at which to schedule a status. Must be at least 5 minutes in the future.}
 
 \item{language}{ISO 639 language code for this status.}
+
+\item{verbose}{logical whether to display messages}
 }
 \value{
 no return value, called for site effects

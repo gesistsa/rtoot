@@ -1,0 +1,49 @@
+http_interactions:
+- request:
+    method: post
+    uri: https://emacs.ch/api/v1/accounts/109337044410360200/pin
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: Bearer <<<MASTODON TOKEN>>>
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      cache-control: no-store
+      content-encoding: gzip
+      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
+        ''none''; font-src ''self'' https://emacs.ch; img-src ''self'' https: data:
+        blob: https://emacs.ch; style-src ''self'' https://emacs.ch ''nonce-s5sxVSnJXDMNUPSFF0xx6g=='';
+        media-src ''self'' https: data: https://emacs.ch; frame-src ''self'' https:;
+        manifest-src ''self'' https://emacs.ch; connect-src ''self'' data: blob: https://emacs.ch
+        https://emacs.ch wss://emacs.ch; script-src ''self'' https://emacs.ch ''wasm-unsafe-eval'';
+        child-src ''self'' blob: https://emacs.ch; worker-src ''self'' blob: https://emacs.ch'
+      content-type: application/json; charset=utf-8
+      date: Tue, 15 Nov 2022 18:12:24 GMT
+      etag: W/"71fc28ed1faf9b0390808ead5c4527f1"
+      permissions-policy: interest-cohort=()
+      server: Mastodon
+      strict-transport-security: max-age=63072000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      - Origin
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '276'
+      x-ratelimit-reset: '2022-11-15T18:15:00.511173Z'
+      x-request-id: 441d3e11-2a78-44f3-91e8-76de6e743a72
+      x-runtime: '0.033891'
+      x-xss-protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: '{"id":"109337044410360200","following":true,"showing_reblogs":true,"notifying":false,"languages":null,"followed_by":true,"blocking":false,"blocked_by":false,"muting":false,"muting_notifications":false,"requested":false,"domain_blocking":false,"endorsed":true,"note":""}'
+  recorded_at: 2022-11-15 18:12:24 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.2

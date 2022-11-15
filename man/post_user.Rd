@@ -4,7 +4,7 @@
 \alias{post_user}
 \title{Perform actions on an account}
 \usage{
-post_user(id, action = "follow", comment = "", token = NULL)
+post_user(id, action = "follow", comment = "", token = NULL, verbose = TRUE)
 }
 \arguments{
 \item{id}{character, user id to perform the action on}
@@ -14,6 +14,8 @@ post_user(id, action = "follow", comment = "", token = NULL)
 \item{comment}{character (if action="note"), The comment to be set on that user. Provide an empty string or leave out this parameter to clear the currently set note.}
 
 \item{token}{user bearer token (read from file by default)}
+
+\item{verbose}{logical whether to display messages}
 }
 \value{
 no return value, called for site effects

@@ -120,15 +120,16 @@ create_token <- function(client, type = "public"){
 #' Verify mastodon credentials
 #'
 #' @param token bearer token, either public or user level
-#' @return success or failure message of the verification process
+#' @return Raise an error if the token is not valid. Return the response from the verification API invisibly otherwise.
 #' @details If you have created your token as an environment variable, use `verify_envvar` to verify your token.
+#' @inheritParams auth_setup
 #' @examples
 #' \dontrun{
 #' #read a token from a file
 #' verify_credentials(token)
 #' }
 #' @export
-verify_credentials <- function(token) {
+verify_credentials <- function(token, verbose = TRUE) {
   if(!is_auth_rtoot(token)){
     stop("token is not an object of type rtoot_bearer")
   }
@@ -149,7 +150,7 @@ verify_credentials <- function(token) {
   }
   success <- isTRUE(acc[["status_code"]] == 200L)
   if (success) {
-    message("Token of type \"", token$type, "\" for instance ", token$instance, " is valid")
+    sayif(verbose, "Token of type \"", token$type, "\" for instance ", token$instance, " is valid")
   } else {
     stop("Token not valid. Use auth_setup() to create a token")
   }
@@ -158,9 +159,9 @@ verify_credentials <- function(token) {
 
 #' @export
 #' @rdname verify_credentials
-verify_envvar <- function() {
+verify_envvar <- function(verbose = TRUE) {
   token <- get_token_from_envvar()
-  verify_credentials(token)
+  verify_credentials(token, verbose = verbose)
 }
 
 #' save a bearer token to file

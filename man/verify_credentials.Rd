@@ -5,15 +5,17 @@
 \alias{verify_envvar}
 \title{Verify mastodon credentials}
 \usage{
-verify_credentials(token)
+verify_credentials(token, verbose = TRUE)
 
-verify_envvar()
+verify_envvar(verbose = TRUE)
 }
 \arguments{
 \item{token}{bearer token, either public or user level}
+
+\item{verbose}{logical whether to display messages}
 }
 \value{
-success or failure message of the verification process
+Raise an error if the token is not valid. Return the response from the verification API invisibly otherwise.
 }
 \description{
 Verify mastodon credentials
