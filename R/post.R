@@ -11,6 +11,7 @@
 #' @param scheduled_at ISO 8601 Datetime at which to schedule a status. Must be at least 5 minutes in the future.
 #' @param language ISO 639 language code for this status.
 #' @return no return value, called for site effects
+#' @inheritParams auth_setup
 #' @examples
 #' \dontrun{
 #' # post a simple status
@@ -29,7 +30,8 @@ post_toot <- function(
     spoiler_text = NULL,
     visibility = "public",
     scheduled_at = NULL,
-    language = NULL){
+    language = NULL,
+    verbose = TRUE){
 
   token <- check_token_rtoot(token)
 
@@ -69,7 +71,7 @@ post_toot <- function(
                   body=params,
                   httr::add_headers(Authorization = paste0("Bearer ",token$bearer)))
   if(httr::status_code(r)==200L){
-    message("Your toot has been posted!")
+    sayif(verbose, "Your toot has been posted!")
   }
   invisible(r)
 }
@@ -103,6 +105,7 @@ check_media <- function(media, alt_text) {
 #' @param action character, one of "(un)follow","(un)block", "(un)mute", "(un)pin","note"
 #' @param comment character (if action="note"), The comment to be set on that user. Provide an empty string or leave out this parameter to clear the currently set note.
 #' @return no return value, called for site effects
+#' @inheritParams auth_setup
 #' @examples
 #' \dontrun{
 #' #follow a user
@@ -111,7 +114,7 @@ check_media <- function(media, alt_text) {
 #' post_user("xxxxxx",action = "unfollow")
 #' }
 #' @export
-post_user <- function(id,action = "follow",comment = "",token = NULL){
+post_user <- function(id,action = "follow",comment = "",token = NULL, verbose = TRUE){
   token <- check_token_rtoot(token)
   action <- match.arg(action,c("follow","unfollow","block","unblock",
                                "mute","unmute","pin","unpin","note"))
@@ -127,7 +130,7 @@ post_user <- function(id,action = "follow",comment = "",token = NULL){
                   body = params,
                   httr::add_headers(Authorization = paste0("Bearer ",token$bearer)))
   if(httr::status_code(r)==200L){
-    message("successfully performed action on user")
+    sayif(verbose, "successfully performed action on user")
   }
   invisible(r)
 }
