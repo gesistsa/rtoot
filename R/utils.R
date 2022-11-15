@@ -73,16 +73,35 @@ parse_header <- function(header){
 
 #process a get request and parse output
 process_request <- function(token = NULL,
-                path,
-                instance = NULL,
-                params,
-                anonymous = FALSE,
-                parse = TRUE,
-                FUN = identity
+                            path,
+                            instance = NULL,
+                            params,
+                            anonymous = FALSE,
+                            parse = TRUE,
+                            FUN = identity,
+                            n = 1L,
+                            page_size=40L
 ){
-  output <- make_get_request(token = token,path = path,
-                             instance = instance, params = params,
-                             anonymous = anonymous)
+  # if since_id is provided we page forward, otherwise we page backwards
+  if(!is.null(params[["since_id"]])){
+    pager <- "since_id"
+  } else{
+    pager <- "max_id"
+  }
+  pages <- ceiling(n/page_size)
+  output <- vector("list")
+  for(i in seq_len(pages)){
+    tmp <- make_get_request(token = token,path = path,
+                            instance = instance, params = params,
+                            anonymous = anonymous)
+    output <- c(output,tmp)
+    attr(output,"headers") <- attr(tmp,"headers")
+    if(is.null(attr(tmp,"headers")[[pager]])){
+      break
+    }
+    params[[pager]] <- attr(tmp,"headers")[[pager]]
+  }
+
   if (isTRUE(parse)) {
     header <- attr(output,"headers")
 
@@ -91,6 +110,7 @@ process_request <- function(token = NULL,
   }
   return(output)
 }
+
 
 ##vectorize function
 v <- function(FUN) {

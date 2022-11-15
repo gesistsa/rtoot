@@ -95,9 +95,10 @@ get_account_followers <- function(id,max_id,since_id,limit = 40, token = NULL, p
 #' get_account_following("109302436954721982")
 #' }
 #' @export
-get_account_following <- function(id,max_id,since_id,limit = 40, token = NULL, parse = TRUE){
+get_account_following <- function(id,max_id,since_id,limit = 40L, token = NULL, parse = TRUE){
   path <- paste0("api/v1/accounts/",id,"/following")
-  params <- list(limit = limit)
+  n <- limit
+  params <- list(limit = min(limit,40))
   if (!missing(max_id)) {
     params$max_id <- max_id
   }
@@ -106,8 +107,8 @@ get_account_following <- function(id,max_id,since_id,limit = 40, token = NULL, p
   }
 
   process_request(token = token,path = path,
-                  params = params,
-                  parse = parse, FUN = v(parse_account))
+                   params = params,
+                   parse = parse, FUN = v(parse_account),n = n,page_size = 40L)
 }
 
 #' Get featured tags of a user
