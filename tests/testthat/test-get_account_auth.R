@@ -4,10 +4,9 @@
 ## get_account_favourites, get_account_blocks,
 ## get_account_mutes
 
-fake_token <- list(bearer = Sys.getenv("RTOOT_DEFAULT_TOKEN"))
+fake_token <- rtoot:::get_token_from_envvar("RTOOT_DEFAULT_TOKEN", check_stop = FALSE)
 fake_token$type <- "user"
 fake_token$instance <- "social.tchncs.de"
-class(fake_token) <- "rtoot_bearer"
 
 id <- "109281650341067731"
 

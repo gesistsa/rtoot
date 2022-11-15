@@ -1,7 +1,6 @@
-fake_token <- list(bearer = Sys.getenv("RTOOT_DEFAULT_TOKEN"))
+fake_token <- rtoot:::get_token_from_envvar("RTOOT_DEFAULT_TOKEN", check_stop = FALSE)
 fake_token$type <- "user"
 fake_token$instance <- "social.tchncs.de"
-class(fake_token) <- "rtoot_bearer"
 
 test_that("get_account", {
   vcr::use_cassette("get_account_default", {
