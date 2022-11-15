@@ -31,15 +31,13 @@ auth_setup <- function(instance = NULL, type = NULL, name = NULL, path = NULL, c
   token <- create_token(client, type = type)
   if (!isFALSE(name) && !isFALSE(path)) {
     token_path <- save_auth_rtoot(token, name, path)
+    options("rtoot_token" = token_path)
   }
-  options("rtoot_token" = token_path)
   verify_credentials(token) # this should be further up before saving, but seems to often fail
-  if (clipboard) {
-    convert_token_to_envvar(token)
-    return(invisible(token))
-  } else {
-    check_token_rtoot(token)
+  if (isTRUE(clipboard)) {
+    convert_token_to_envvar(token, clipboard = TRUE)
   }
+  check_token_rtoot(token)
 }
 
 ## login described at https://docs.joinmastodon.org/client/authorized/
