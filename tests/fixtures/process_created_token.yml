@@ -1,0 +1,48 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://emacs.ch/api/v1/accounts/verify_credentials
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: Bearer <<<MASTODON TOKEN>>>
+  response:
+    status:
+      status_code: 401
+      category: Client error
+      reason: Unauthorized
+      message: 'Client error: (401) Unauthorized'
+    headers:
+      date: Tue, 15 Nov 2022 14:02:14 GMT
+      content-type: application/json; charset=utf-8
+      server: Mastodon
+      x-frame-options: DENY
+      x-content-type-options: nosniff
+      x-xss-protection: '0'
+      permissions-policy: interest-cohort=()
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '299'
+      x-ratelimit-reset: '2022-11-15T14:05:00.375122Z'
+      cache-control: no-store
+      pragma: no-cache
+      www-authenticate: Bearer realm="Doorkeeper", error="invalid_token", error_description="The
+        access token is invalid"
+      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
+        ''none''; font-src ''self'' https://emacs.ch; img-src ''self'' https: data:
+        blob: https://emacs.ch; style-src ''self'' https://emacs.ch ''nonce-zObAiQrvdd94TojC9LPPWw=='';
+        media-src ''self'' https: data: https://emacs.ch; frame-src ''self'' https:;
+        manifest-src ''self'' https://emacs.ch; connect-src ''self'' data: blob: https://emacs.ch
+        https://emacs.ch wss://emacs.ch; script-src ''self'' https://emacs.ch ''wasm-unsafe-eval'';
+        child-src ''self'' blob: https://emacs.ch; worker-src ''self'' blob: https://emacs.ch'
+      x-request-id: a4bc1535-e0f6-44c8-bb22-b2d8a3f8033d
+      x-runtime: '0.008651'
+      strict-transport-security: max-age=63072000; includeSubDomains
+      vary: Origin
+    body:
+      encoding: ''
+      file: no
+      string: '{"error":"The access token is invalid"}'
+  recorded_at: 2022-11-15 14:02:14 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.2

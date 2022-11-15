@@ -99,3 +99,9 @@ v <- function(FUN) {
   }
   return(v_FUN)
 }
+
+sayif <- function(verbose, ...) {
+  if (isTRUE(verbose)) {
+    message(...)
+  }
+}

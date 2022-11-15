@@ -5,7 +5,7 @@ test_that("convert_token_to_envvar", {
   fake_token$type <- "user"
   fake_token$instance <- paste0(rep("b", 10), collapse = "")
   class(fake_token) <- "rtoot_bearer"
-  x <- convert_token_to_envvar(fake_token, message = FALSE, clipboard = FALSE)
+  x <- convert_token_to_envvar(fake_token, clipboard = FALSE, verbose = FALSE)
   expected_output <- paste0("RTOOT_DEFAULT_TOKEN=\"",
                             paste0(rep("a", 43), collapse = ""),
                             ";user;",
@@ -23,8 +23,8 @@ test_that("convert_token_to_envvar (clipboard)", {
                             paste0(rep("a", 43), collapse = ""),
                             ";user;",
                             paste0(rep("b", 10), collapse = ""), "\"")  
-  expect_message(convert_token_to_envvar(fake_token, message = TRUE, clipboard = TRUE))
-  x <- convert_token_to_envvar(fake_token, message = FALSE, clipboard = TRUE)
+  expect_message(convert_token_to_envvar(fake_token, clipboard = TRUE, verbose = TRUE))
+  x <- convert_token_to_envvar(fake_token, clipboard = TRUE, verbose = FALSE)
   clipboard_content <- clipr::read_clip()
   expect_equal(clipr::read_clip(), expected_output)
   expect_equal(x, expected_output)
