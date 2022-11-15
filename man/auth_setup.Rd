@@ -9,7 +9,8 @@ auth_setup(
   type = NULL,
   name = NULL,
   path = NULL,
-  clipboard = FALSE
+  clipboard = FALSE,
+  verbose = TRUE
 )
 }
 \arguments{
@@ -25,6 +26,8 @@ query your followers).}
 path returned by \code{tools::R_user_dir("rtoot", "config")}.}
 
 \item{clipboard}{logical, whether to export the token to the clipboard}
+
+\item{verbose}{logical whether to display messages}
 }
 \value{
 A bearer token

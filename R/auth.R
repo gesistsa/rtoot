@@ -8,6 +8,7 @@
 #' @param path path to store the token in. The default is to store tokens in the
 #'   path returned by `tools::R_user_dir("rtoot", "config")`.
 #' @param clipboard logical, whether to export the token to the clipboard
+#' @param verbose logical whether to display messages
 #' @details If either `name` or `path` are set to `FALSE`, the token is only
 #'   returned and not saved. If you would like to save your token as an environment variable,
 #'   please set `clipboard` to `TRUE`. Your token will be copied to clipboard in the environment variable
@@ -20,7 +21,7 @@
 #' auth_setup("mastodon.social", "public")
 #' }
 #' @export
-auth_setup <- function(instance = NULL, type = NULL, name = NULL, path = NULL, clipboard = FALSE) {
+auth_setup <- function(instance = NULL, type = NULL, name = NULL, path = NULL, clipboard = FALSE, verbose = TRUE) {
   while (is.null(instance) || instance == "") {
     instance <- readline(prompt = "On which instance do you want to authenticate (e.g., \"mastodon.social\")? ")
   }
@@ -28,14 +29,20 @@ auth_setup <- function(instance = NULL, type = NULL, name = NULL, path = NULL, c
   if (!isTRUE(type %in% c("public", "user"))) {
     type <- c("public", "user")[utils::menu(c("public", "user"), title = "What type of token do you want?")]
   }
-  token <- create_token(client, type = type)
+  token <- process_created_token(create_token(client, type = type), name = name, path = path, clipboard = clipboard, verify = TRUE)
+  return(token) ## explicit
+}
+
+process_created_token <- function(token, name = NULL, path = NULL, clipboard = FALSE, verify = TRUE, verbose = TRUE) {
   if (!isFALSE(name) && !isFALSE(path)) {
     token_path <- save_auth_rtoot(token, name, path)
     options("rtoot_token" = token_path)
   }
-  verify_credentials(token) # this should be further up before saving, but seems to often fail
+  if (isTRUE(verify)) {
+    verify_credentials(token) # this should be further up before saving, but seems to often fail
+  }
   if (isTRUE(clipboard)) {
-    convert_token_to_envvar(token, clipboard = TRUE)
+    convert_token_to_envvar(token = token, clipboard = TRUE, verbose = verbose)
   }
   check_token_rtoot(token)
 }
@@ -190,7 +197,6 @@ is_auth_rtoot <- function(token) inherits(token, "rtoot_bearer")
 
 #' Convert token to environment variable
 #' @inheritParams verify_credentials
-#' @param message logical whether to display message
 #' @inheritParams auth_setup
 #' @return Token (in environment variable format), invisibily
 #' @examples
@@ -200,19 +206,15 @@ is_auth_rtoot <- function(token) inherits(token, "rtoot_bearer")
 #' envvar
 #' }
 #' @export
-convert_token_to_envvar <- function(token, message = TRUE, clipboard = TRUE) {
+convert_token_to_envvar <- function(token, clipboard = TRUE, verbose = TRUE) {
   envvar_string <- paste0("RTOOT_DEFAULT_TOKEN=\"", token$bearer, ";", token$type, ";", token$instance, "\"")
   if (isTRUE(clipboard)) {
     if (clipr::clipr_available()) {
       clipr::write_clip(envvar_string)
-      if (message) {
-        message("Token (in environment variable format) has been copied to clipboard.")
+      sayif(verbose, "Token (in environment variable format) has been copied to clipboard.")
       }
-    } else {
-      if (message) {
-        message("Clipboard is not available.")
-      }
-    }
+  } else {
+    sayif(verbose, "Clipboard is not available.")
   }
   return(invisible(envvar_string))
 }

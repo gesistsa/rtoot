@@ -4,14 +4,14 @@
 \alias{convert_token_to_envvar}
 \title{Convert token to environment variable}
 \usage{
-convert_token_to_envvar(token, message = TRUE, clipboard = TRUE)
+convert_token_to_envvar(token, clipboard = TRUE, verbose = TRUE)
 }
 \arguments{
 \item{token}{bearer token, either public or user level}
 
-\item{message}{logical whether to display message}
-
 \item{clipboard}{logical, whether to export the token to the clipboard}
+
+\item{verbose}{logical whether to display messages}
 }
 \value{
 Token (in environment variable format), invisibily
