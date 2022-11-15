@@ -4,7 +4,15 @@
 \alias{get_account_mutes}
 \title{Get mutes of user}
 \usage{
-get_account_mutes(max_id, since_id, limit = 40, token = NULL, parse = TRUE)
+get_account_mutes(
+  max_id,
+  since_id,
+  limit = 40L,
+  token = NULL,
+  parse = TRUE,
+  retryonratelimit = TRUE,
+  verbose = TRUE
+)
 }
 \arguments{
 \item{max_id}{character, Return results older than this id}
@@ -16,6 +24,10 @@ get_account_mutes(max_id, since_id, limit = 40, token = NULL, parse = TRUE)
 \item{token}{user bearer token (read from file by default)}
 
 \item{parse}{logical, if \code{TRUE}, the default, returns a tibble. Use \code{FALSE}  to return the "raw" list corresponding to the JSON returned from the Mastodon API.}
+
+\item{retryonratelimit}{If TRUE, and a rate limit is exhausted, will wait until it refreshes. Most Mastodon rate limits refresh every 5 minutes. If FALSE, and the rate limit is exceeded, the function will terminate early with a warning; you'll still get back all results received up to that point.}
+
+\item{verbose}{logical whether to display messages}
 }
 \value{
 tibble or list of muted users
@@ -24,7 +36,7 @@ tibble or list of muted users
 Get mutes of user
 }
 \details{
-this functions needs a user level auth token
+this functions needs a user level auth token. If limit>40, automatic pagination is used. You may get more results than requested.
 }
 \examples{
 \dontrun{

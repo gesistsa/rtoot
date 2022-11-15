@@ -80,7 +80,9 @@ process_request <- function(token = NULL,
                             parse = TRUE,
                             FUN = identity,
                             n = 1L,
-                            page_size=40L
+                            page_size = 40L,
+                            retryonratelimit = TRUE,
+                            verbose = TRUE
 ){
   # if since_id is provided we page forward, otherwise we page backwards
   if(!is.null(params[["since_id"]])){
@@ -94,6 +96,17 @@ process_request <- function(token = NULL,
     tmp <- make_get_request(token = token,path = path,
                             instance = instance, params = params,
                             anonymous = anonymous)
+
+    if(rate_limit_remaining(tmp)==0){
+      if(isTRUE(retryonratelimit)){
+        wait_until(attr(tmp,"headers")[["rate_reset"]],verbose)
+      } else{
+        output <- c(output,tmp)
+        attr(output,"headers") <- attr(tmp,"headers")
+        sayif(verbose,"rate limit reached and `retryonratelimit=FALSE`. returning current results.")
+        break
+      }
+    }
     output <- c(output,tmp)
     attr(output,"headers") <- attr(tmp,"headers")
     if(is.null(attr(tmp,"headers")[[pager]])){
@@ -123,5 +136,28 @@ v <- function(FUN) {
 sayif <- function(verbose, ...) {
   if (isTRUE(verbose)) {
     message(...)
+  }
+}
+
+# inspired by rtweet
+wait_until <- function(until,verbose = TRUE){
+  until <- as.numeric(until)
+  seconds <- ceiling(until - unclass(Sys.time()))
+  if(seconds>0){
+    sayif(verbose,"Rate limit exceeded, waiting for ",seconds," seconds")
+    Sys.sleep(seconds)
+  }
+  return(invisible())
+}
+
+rate_limit_remaining <- function(object){
+  if(is.null(attr(object,"headers"))){
+    stop("no header information found")
+  }
+  header <- attr(object,"headers")
+  if(is.null(header[["rate_remaining"]])){
+    stop("no rate limit information found")
+  } else{
+    return(as.numeric(header[["rate_remaining"]]))
   }
 }

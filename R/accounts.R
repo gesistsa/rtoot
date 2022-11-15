@@ -65,16 +65,24 @@ get_account_statuses <- function(id,instance = NULL, token = NULL, anonymous = F
 #' @param max_id character, Return results older than this id
 #' @param since_id character, Return results newer than this id
 #' @param limit integer, maximum number of results to return. Defaults to 40.
-#' @details this functions needs a user level auth token
+#' @param retryonratelimit If TRUE, and a rate limit is exhausted, will wait until it refreshes. Most Mastodon rate limits refresh every 5 minutes. If FALSE, and the rate limit is exceeded, the function will terminate early with a warning; you'll still get back all results received up to that point.
+#' @inheritParams auth_setup
+#' @details this functions needs a user level auth token. If limit>40, automatic pagination is used. You may get more results than requested.
 #' @return tibble or list of followers
 #' @examples
 #' \dontrun{
 #' get_account_followers("109302436954721982")
 #' }
 #' @export
-get_account_followers <- function(id,max_id,since_id,limit = 40, token = NULL, parse = TRUE){
+get_account_followers <- function(id,max_id,since_id,
+                                  limit = 40L,
+                                  token = NULL,
+                                  parse = TRUE,
+                                  retryonratelimit = TRUE,
+                                  verbose = TRUE){
   path <- paste0("api/v1/accounts/",id,"/followers")
-  params <- list(limit = limit)
+  n <- limit
+  params <- list(limit = min(limit,40L))
   if (!missing(max_id)) {
     params$max_id <- max_id
   }
@@ -83,22 +91,29 @@ get_account_followers <- function(id,max_id,since_id,limit = 40, token = NULL, p
   }
   process_request(token = token,path = path,
                   params = params,
-                  parse = parse, FUN = v(parse_account))
+                  parse = parse, FUN = v(parse_account),
+                  n = n, page_size = 40L,
+                  retryonratelimit = retryonratelimit,
+                  verbose = verbose)
 }
 #' Get accounts a user follows
 #' @inheritParams get_account_statuses
 #' @inheritParams get_account_followers
-#' @details this functions needs a user level auth token
+#' @inheritParams auth_setup
+#' @inherit get_account_followers details
 #' @return tibble or list of accounts a user follows
 #' @examples
 #' \dontrun{
 #' get_account_following("109302436954721982")
 #' }
 #' @export
-get_account_following <- function(id,max_id,since_id,limit = 40L, token = NULL, parse = TRUE){
+get_account_following <- function(id,max_id,since_id,limit = 40L,
+                                  token = NULL, parse = TRUE,
+                                  retryonratelimit = TRUE,
+                                  verbose = TRUE){
   path <- paste0("api/v1/accounts/",id,"/following")
   n <- limit
-  params <- list(limit = min(limit,40))
+  params <- list(limit = min(limit,40L))
   if (!missing(max_id)) {
     params$max_id <- max_id
   }
@@ -107,8 +122,10 @@ get_account_following <- function(id,max_id,since_id,limit = 40L, token = NULL, 
   }
 
   process_request(token = token,path = path,
-                   params = params,
-                   parse = parse, FUN = v(parse_account),n = n,page_size = 40L)
+                  params = params,
+                  parse = parse, FUN = v(parse_account),
+                  n = n,page_size = 40L, retryonratelimit = retryonratelimit,
+                  verbose = verbose)
 }
 
 #' Get featured tags of a user
@@ -173,17 +190,22 @@ get_account_relationships <- function(ids,token = NULL, parse = TRUE){
 #' Get bookmarks of user
 #' @inheritParams get_account_statuses
 #' @inheritParams get_account_followers
+#' @inheritParams auth_setup
 #' @param min_id character, Return results younger than this id
-#' @details this functions needs a user level auth token
+#' @inherit get_account_followers details
 #' @return bookmarked statuses
 #' @examples
 #' \dontrun{
 #' get_account_followers("109302436954721982")
 #' }
 #' @export
-get_account_bookmarks <- function(max_id,since_id,min_id,limit = 40, token = NULL, parse = TRUE){
+get_account_bookmarks <- function(max_id,since_id,min_id,limit = 40L,
+                                  token = NULL, parse = TRUE,
+                                  retryonratelimit = TRUE,
+                                  verbose = TRUE){
   path <- paste0("api/v1/bookmarks")
-  params <- list(limit = limit)
+  n <- limit
+  params <- list(limit = min(limit,40L))
   if (!missing(max_id)) {
     params$max_id <- max_id
   }
@@ -196,14 +218,17 @@ get_account_bookmarks <- function(max_id,since_id,min_id,limit = 40, token = NUL
 
   process_request(token = token,path = path,
                   params = params,
-                  parse = parse, FUN = v(parse_status))
+                  parse = parse, FUN = v(parse_status),n = n,
+                  page_size = 40L,retryonratelimit = retryonratelimit,
+                  verbose = verbose)
 }
 
 #' Get favourites of user
 #' @inheritParams get_account_statuses
 #' @inheritParams get_account_followers
+#' @inheritParams auth_setup
 #' @param min_id character, Return results younger than this id
-#' @details this functions needs a user level auth token
+#' @inherit get_account_followers details
 #' @return tibble or list of favourited statuses
 #' @examples
 #' \dontrun{
@@ -211,9 +236,13 @@ get_account_bookmarks <- function(max_id,since_id,min_id,limit = 40, token = NUL
 #' get_account_favourites()
 #' }
 #' @export
-get_account_favourites <- function(max_id,min_id,limit = 40, token = NULL, parse = TRUE){
+get_account_favourites <- function(max_id,min_id,limit = 40L,
+                                   token = NULL, parse = TRUE,
+                                   retryonratelimit = TRUE,
+                                   verbose = TRUE){
   path <- paste0("api/v1/favourites")
-  params <- list(limit = limit)
+  n <- limit
+  params <- list(limit = min(limit,40L))
   if (!missing(max_id)) {
     params$max_id <- max_id
   }
@@ -223,13 +252,16 @@ get_account_favourites <- function(max_id,min_id,limit = 40, token = NULL, parse
 
   process_request(token = token,path = path,
                   params = params,
-                  parse = parse, FUN = v(parse_status))
+                  parse = parse, FUN = v(parse_status),n = n,
+                  page_size = 40L,retryonratelimit = retryonratelimit,
+                  verbose = verbose)
 }
 
 #' Get blocks of user
 #' @inheritParams get_account_statuses
 #' @inheritParams get_account_followers
-#' @details this functions needs a user level auth token
+#' @inheritParams auth_setup
+#' @inherit get_account_followers details
 #' @return tibble or list of blocked users
 #' @examples
 #' \dontrun{
@@ -237,9 +269,13 @@ get_account_favourites <- function(max_id,min_id,limit = 40, token = NULL, parse
 #' get_account_blocks()
 #' }
 #' @export
-get_account_blocks <- function(max_id,since_id,limit = 40, token = NULL, parse = TRUE){
+get_account_blocks <- function(max_id,since_id,limit = 40L,
+                               token = NULL, parse = TRUE,
+                               retryonratelimit = TRUE,
+                               verbose = TRUE){
   path <- paste0("api/v1/blocks")
-  params <- list(limit = limit)
+  n <- limit
+  params <- list(limit = min(limit,40L))
   if (!missing(max_id)) {
     params$max_id <- max_id
   }
@@ -249,13 +285,16 @@ get_account_blocks <- function(max_id,since_id,limit = 40, token = NULL, parse =
 
   process_request(token = token,path = path,
                   params = params,
-                  parse = parse, FUN = v(parse_account))
+                  parse = parse, FUN = v(parse_account), n = n,
+                  page_size = 40L,retryonratelimit = retryonratelimit,
+                  verbose = verbose)
 }
 
 #' Get mutes of user
 #' @inheritParams get_account_statuses
 #' @inheritParams get_account_followers
-#' @details this functions needs a user level auth token
+#' @inheritParams auth_setup
+#' @inherit get_account_followers details
 #' @return tibble or list of muted users
 #' @examples
 #' \dontrun{
@@ -263,9 +302,13 @@ get_account_blocks <- function(max_id,since_id,limit = 40, token = NULL, parse =
 #' get_account_mutes()
 #' }
 #' @export
-get_account_mutes <- function(max_id,since_id,limit = 40, token = NULL, parse = TRUE){
+get_account_mutes <- function(max_id,since_id,limit = 40L,
+                              token = NULL, parse = TRUE,
+                              retryonratelimit = TRUE,
+                              verbose = TRUE){
   path <- paste0("api/v1/mutes")
-  params <- list(limit = limit)
+  n <- limit
+  params <- list(limit = min(limit,40L))
   if (!missing(max_id)) {
     params$max_id <- max_id
   }
@@ -275,5 +318,7 @@ get_account_mutes <- function(max_id,since_id,limit = 40, token = NULL, parse = 
 
   process_request(token = token,path = path,
                   params = params,
-                  parse = parse, FUN = v(parse_account))
+                  parse = parse, FUN = v(parse_account),
+                  n = n, page_size = 40L, retryonratelimit = retryonratelimit,
+                  verbose = verbose)
 }

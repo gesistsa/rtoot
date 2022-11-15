@@ -12,7 +12,9 @@ get_timeline_home(
   min_id,
   limit = 20L,
   token = NULL,
-  parse = TRUE
+  parse = TRUE,
+  retryonratelimit = TRUE,
+  verbose = TRUE
 )
 
 get_timeline_list(
@@ -22,7 +24,9 @@ get_timeline_list(
   min_id,
   limit = 20L,
   token = NULL,
-  parse = TRUE
+  parse = TRUE,
+  retryonratelimit = TRUE,
+  verbose = TRUE
 )
 }
 \arguments{
@@ -39,6 +43,10 @@ get_timeline_list(
 \item{token}{user bearer token (read from file by default)}
 
 \item{parse}{logical, if \code{TRUE}, the default, returns a tibble. Use \code{FALSE}  to return the "raw" list corresponding to the JSON returned from the Mastodon API.}
+
+\item{retryonratelimit}{If TRUE, and a rate limit is exhausted, will wait until it refreshes. Most Mastodon rate limits refresh every 5 minutes. If FALSE, and the rate limit is exceeded, the function will terminate early with a warning; you'll still get back all results received up to that point.}
+
+\item{verbose}{logical whether to display messages}
 
 \item{list_id}{character, Local ID of the list in the database.}
 }

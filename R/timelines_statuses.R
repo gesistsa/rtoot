@@ -93,6 +93,8 @@ get_poll <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse
 #' @param since_id character, Return results newer than this id
 #' @param min_id character, Return results immediately newer than this id
 #' @param limit integer, Maximum number of results to return
+#' @param retryonratelimit If TRUE, and a rate limit is exhausted, will wait until it refreshes. Most Mastodon rate limits refresh every 5 minutes. If FALSE, and the rate limit is exceeded, the function will terminate early with a warning; you'll still get back all results received up to that point.
+#' @param verbose logical whether to display messages
 #' @inheritParams post_toot
 #' @inheritParams get_status
 #' @return statuses
@@ -107,8 +109,12 @@ get_poll <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse
 #' @references
 #' https://docs.joinmastodon.org/methods/timelines/
 get_timeline_public <- function(local = FALSE, remote = FALSE, only_media = FALSE,
-                                max_id, since_id, min_id, limit = 20L, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
-  params <- list(local = local, remote = remote, only_media = only_media, limit = limit)
+                                max_id, since_id, min_id, limit = 20L,
+                                instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE,
+                                retryonratelimit = TRUE,verbose = TRUE) {
+  params <- list(local = local, remote = remote,
+                 only_media = only_media, limit = min(limit,40))
+  n <- limit
   if (!missing(max_id)) {
     params$max_id <- max_id
   }
@@ -121,7 +127,10 @@ get_timeline_public <- function(local = FALSE, remote = FALSE, only_media = FALS
   path = "/api/v1/timelines/public"
 
   process_request(token = token,path = path,instance = instance,params = params,
-                  anonymous = anonymous,parse = parse,FUN = v(parse_status))
+                  anonymous = anonymous,parse = parse,FUN = v(parse_status),
+                  n = n, page_size = 40L,
+                  retryonratelimit = retryonratelimit,
+                  verbose = verbose)
 }
 
 #' Get hashtag timeline
@@ -138,8 +147,10 @@ get_timeline_public <- function(local = FALSE, remote = FALSE, only_media = FALS
 #' }
 get_timeline_hashtag <- function(hashtag = "rstats", local = FALSE, only_media = FALSE,
                                  max_id, since_id, min_id, limit = 20L, instance = NULL,
-                                 token = NULL, anonymous = FALSE, parse = TRUE) {
-  params <- list(local = local, only_media = only_media, limit = limit)
+                                 token = NULL, anonymous = FALSE, parse = TRUE,
+                                 retryonratelimit = TRUE,verbose = TRUE) {
+  n <- limit
+  params <- list(local = local, only_media = only_media, limit = min(limit,40L))
   if (!missing(max_id)) {
     params$max_id <- max_id
   }
@@ -152,7 +163,9 @@ get_timeline_hashtag <- function(hashtag = "rstats", local = FALSE, only_media =
   path <- paste0("/api/v1/timelines/tag/", gsub("^#+", "", hashtag))
 
   process_request(token = token,path = path,instance = instance,params = params,
-                  anonymous = anonymous,parse = parse,FUN = v(parse_status))
+                  anonymous = anonymous,parse = parse,FUN = v(parse_status),
+                  n = n, page_size = 40L, retryonratelimit = retryonratelimit,
+                  verbose = verbose)
 }
 
 #' Get home and list timelines
@@ -165,8 +178,10 @@ get_timeline_hashtag <- function(hashtag = "rstats", local = FALSE, only_media =
 #' \dontrun{
 #' get_timeline_home()
 #' }
-get_timeline_home <- function(local = FALSE, max_id, since_id, min_id, limit = 20L, token = NULL, parse = TRUE) {
-  params <- list(local = local, limit = limit)
+get_timeline_home <- function(local = FALSE, max_id, since_id, min_id, limit = 20L,
+                              token = NULL, parse = TRUE,retryonratelimit = TRUE,verbose = TRUE) {
+  n <- limit
+  params <- list(local = local, limit = min(limit,40L))
   if (!missing(max_id)) {
     params$max_id <- max_id
   }
@@ -179,7 +194,10 @@ get_timeline_home <- function(local = FALSE, max_id, since_id, min_id, limit = 2
   path = "/api/v1/timelines/home"
 
   process_request(token = token,path = path,params = params,
-                  parse = parse,FUN = v(parse_status))
+                  parse = parse,FUN = v(parse_status),
+                  n = n, page_size = 40L,
+                  retryonratelimit = retryonratelimit,
+                  verbose = verbose)
 }
 
 #' @rdname get_timeline_home
@@ -188,8 +206,11 @@ get_timeline_home <- function(local = FALSE, max_id, since_id, min_id, limit = 2
 #' \dontrun{
 #' get_timeline_list("<listid>")
 #' }
-get_timeline_list <- function(list_id, max_id, since_id, min_id, limit = 20L, token = NULL, parse = TRUE) {
-  params <- list(limit = limit)
+get_timeline_list <- function(list_id, max_id, since_id, min_id,
+                              limit = 20L, token = NULL, parse = TRUE,
+                              retryonratelimit = TRUE,verbose = TRUE) {
+  n <- limit
+  params <- list(limit = min(limit,40L))
   if (!missing(max_id)) {
     params$max_id <- max_id
   }
@@ -202,5 +223,8 @@ get_timeline_list <- function(list_id, max_id, since_id, min_id, limit = 20L, to
   path <- paste0("/api/v1/timelines/list/", list_id)
 
   process_request(token = token,path = path,params = params,
-                  parse = parse,FUN = v(parse_status))
+                  parse = parse,FUN = v(parse_status),
+                  n = n, page_size = 40L,
+                  retryonratelimit = retryonratelimit,
+                  verbose = verbose)
 }

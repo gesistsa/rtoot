@@ -15,7 +15,9 @@ get_timeline_hashtag(
   instance = NULL,
   token = NULL,
   anonymous = FALSE,
-  parse = TRUE
+  parse = TRUE,
+  retryonratelimit = TRUE,
+  verbose = TRUE
 )
 }
 \arguments{
@@ -40,6 +42,10 @@ get_timeline_hashtag(
 \item{anonymous}{some API calls do not need a token. Setting anonymous to TRUE allows to make an anonymous call if possible.}
 
 \item{parse}{logical, if \code{TRUE}, the default, returns a tibble. Use \code{FALSE}  to return the "raw" list corresponding to the JSON returned from the Mastodon API.}
+
+\item{retryonratelimit}{If TRUE, and a rate limit is exhausted, will wait until it refreshes. Most Mastodon rate limits refresh every 5 minutes. If FALSE, and the rate limit is exceeded, the function will terminate early with a warning; you'll still get back all results received up to that point.}
+
+\item{verbose}{logical whether to display messages}
 }
 \value{
 statuses
