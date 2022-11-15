@@ -4,7 +4,13 @@
 \alias{auth_setup}
 \title{Authenticate with a Mastodon instance}
 \usage{
-auth_setup(instance = NULL, type = NULL, name = NULL, path = NULL)
+auth_setup(
+  instance = NULL,
+  type = NULL,
+  name = NULL,
+  path = NULL,
+  clipboard = FALSE
+)
 }
 \arguments{
 \item{instance}{a public instance of Mastodon (e.g., mastodon.social).}
@@ -17,6 +23,8 @@ query your followers).}
 
 \item{path}{path to store the token in. The default is to store tokens in the
 path returned by \code{tools::R_user_dir("rtoot", "config")}.}
+
+\item{clipboard}{logical, whether to export the token to the clipboard}
 }
 \value{
 A bearer token
@@ -26,8 +34,16 @@ Authenticate with a Mastodon instance
 }
 \details{
 If either \code{name} or \code{path} are set to \code{FALSE}, the token is only
-returned and not saved.
+returned and not saved. If you would like to save your token as an environment variable,
+please set \code{clipboard} to \code{TRUE}. Your token will be copied to clipboard in the environment variable
+format. Please paste it into your environment file, e.g. ".Renviron", and restart
+your R session.
 }
 \examples{
+\dontrun{
 auth_setup("mastodon.social", "public")
+}
+}
+\seealso{
+\code{\link[=verify_credentials]{verify_credentials()}}, \code{\link[=convert_token_to_envvar]{convert_token_to_envvar()}}
 }

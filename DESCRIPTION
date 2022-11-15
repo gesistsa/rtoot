@@ -13,6 +13,7 @@ RoxygenNote: 7.2.1
 Depends:
     R (>= 3.6)
 Imports: 
+    clipr,
     dplyr,
     httr,
     tibble

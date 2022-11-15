@@ -7,15 +7,20 @@
 #' @param name give the token a name, in case you want to store more than one.
 #' @param path path to store the token in. The default is to store tokens in the
 #'   path returned by `tools::R_user_dir("rtoot", "config")`.
-#'
+#' @param clipboard logical, whether to export the token to the clipboard
 #' @details If either `name` or `path` are set to `FALSE`, the token is only
-#'   returned and not saved.
-#'
+#'   returned and not saved. If you would like to save your token as an environment variable,
+#'   please set `clipboard` to `TRUE`. Your token will be copied to clipboard in the environment variable
+#'   format. Please paste it into your environment file, e.g. ".Renviron", and restart
+#'   your R session.
 #' @return A bearer token
+#' @seealso [verify_credentials()], [convert_token_to_envvar()]
 #' @examples
+#' \dontrun{
 #' auth_setup("mastodon.social", "public")
+#' }
 #' @export
-auth_setup <- function(instance = NULL, type = NULL, name = NULL, path = NULL) {
+auth_setup <- function(instance = NULL, type = NULL, name = NULL, path = NULL, clipboard = FALSE) {
   while (is.null(instance) || instance == "") {
     instance <- readline(prompt = "On which instance do you want to authenticate (e.g., \"mastodon.social\")? ")
   }
@@ -24,10 +29,17 @@ auth_setup <- function(instance = NULL, type = NULL, name = NULL, path = NULL) {
     type <- c("public", "user")[utils::menu(c("public", "user"), title = "What type of token do you want?")]
   }
   token <- create_token(client, type = type)
-  if (!isFALSE(name) && !isFALSE(path)) token_path <- save_auth_rtoot(token, name, path)
+  if (!isFALSE(name) && !isFALSE(path)) {
+    token_path <- save_auth_rtoot(token, name, path)
+  }
   options("rtoot_token" = token_path)
   verify_credentials(token) # this should be further up before saving, but seems to often fail
-  check_token_rtoot(token)
+  if (clipboard) {
+    convert_token_to_envvar(token)
+    return(invisible(token))
+  } else {
+    check_token_rtoot(token)
+  }
 }
 
 ## login described at https://docs.joinmastodon.org/client/authorized/
@@ -100,11 +112,11 @@ create_token <- function(client, type = "public"){
   bearer
 }
 
-
-#' verify mastodon credentials
+#' Verify mastodon credentials
 #'
 #' @param token bearer token, either public or user level
 #' @return success or failure message of the verification process
+#' @details If you have created your token as an environment variable, use `verify_envvar` to verify your token.
 #' @examples
 #' \dontrun{
 #' #read a token from a file
@@ -139,6 +151,13 @@ verify_credentials <- function(token) {
   invisible(acc)
 }
 
+#' @export
+#' @rdname verify_credentials
+verify_envvar <- function() {
+  token <- get_token_from_envvar()
+  verify_credentials(token)
+}
+
 #' save a bearer token to file
 #'
 #' @param token bearer token created with [create_token]
@@ -171,15 +190,77 @@ get_auth_rtoot <- function(){
 
 is_auth_rtoot <- function(token) inherits(token, "rtoot_bearer")
 
+#' Convert token to environment variable
+#' @inheritParams verify_credentials
+#' @param message logical whether to display message
+#' @inheritParams auth_setup
+#' @return Token (in environment variable format), invisibily
+#' @examples
+#' \dontrun{
+#' x <- auth_setup("mastodon.social", "public")
+#' envvar <- convert_token_to_envvar(x)
+#' envvar
+#' }
+#' @export
+convert_token_to_envvar <- function(token, message = TRUE, clipboard = TRUE) {
+  envvar_string <- paste0("RTOOT_DEFAULT_TOKEN=\"", token$bearer, ";", token$type, ";", token$instance, "\"")
+  if (isTRUE(clipboard)) {
+    if (clipr::clipr_available()) {
+      clipr::write_clip(envvar_string)
+      if (message) {
+        message("Token (in environment variable format) has been copied to clipboard.")
+      }
+    } else {
+      if (message) {
+        message("Clipboard is not available.")
+      }
+    }
+  }
+  return(invisible(envvar_string))
+}
+
+get_token_from_envvar <- function(envvar = "RTOOT_DEFAULT_TOKEN", check_stop = TRUE) {
+  dummy <- list(bearer = "")
+  dummy$type <- ""
+  dummy$instance <- ""
+  class(dummy) <- "rtoot_bearer"
+  if (Sys.getenv(envvar) == "") {
+    if (check_stop) {
+      stop("envvar not found.")
+    } else {
+      ## warn the testers
+      message("You should do software testing with the `RTOOT_DEFAULT_TOKEN` envvar!\nRead: https://github.com/schochastics/rtoot/wiki/vcr")
+      return(dummy)
+    }
+  }
+  res <- strsplit(x = Sys.getenv(envvar), split = ";")[[1]]
+  if (length(res) != 3) {
+    if (check_stop) {
+      stop("Your envvar is malformed")
+    } else {
+      return(NULL)
+    }
+  }
+  bearer <- list(bearer = res[1])
+  bearer$type <- res[2]
+  bearer$instance <- res[3]
+  class(bearer) <- "rtoot_bearer"
+  bearer
+}
+
 # check if a token is available and return one if not
+## it checks the envvar RTOOT_DEFAULT_TOKEN first; then RDS;
 check_token_rtoot <- function(token = NULL) {
-
   selection <- NULL
-
   if(is.null(token)){
-
+    if (Sys.getenv("RTOOT_DEFAULT_TOKEN") != "") {
+      token <- get_token_from_envvar("RTOOT_DEFAULT_TOKEN", check_stop = FALSE)
+      if (!is.null(token)) {
+        return(token)
+      }
+      ## the envvar is malformed, go to the legacy RDS method.
+    }
     token_path <- options("rtoot_token")$rtoot_token
-
     if (length(token_path) == 0) {
       token_path <- utils::head(list.files(tools::R_user_dir("rtoot", "config"),
                                     full.names = TRUE,
@@ -216,6 +297,5 @@ check_token_rtoot <- function(token = NULL) {
       selection <- 2L
     }
   }
-
   invisible(token)
 }

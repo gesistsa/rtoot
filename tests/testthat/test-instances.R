@@ -1,9 +1,7 @@
 ## tests for all instance functions
-
-fake_token <- list(bearer = Sys.getenv("RTOOT_DEFAULT_TOKEN"))
+fake_token <- rtoot:::get_token_from_envvar("RTOOT_DEFAULT_TOKEN", check_stop = FALSE)
 fake_token$type <- "user"
 fake_token$instance <- "social.tchncs.de"
-class(fake_token) <- "rtoot_bearer"
 
 test_that("get_fedi_instances", {
   vcr::use_cassette("get_fedi_instances_default", {
