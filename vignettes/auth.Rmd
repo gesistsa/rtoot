@@ -14,6 +14,8 @@ knitr::opts_chunk$set(
 )
 ```
 
+# Obtain and use a token
+
 When a function in `rtoot` can't find a valid token on your computer, it automatically starts authentication.
 If you want to start the process manually, you can do so by calling:
 
@@ -46,3 +48,20 @@ Or you can set the default token in the options at the start of a session:
 ```{r options, eval=FALSE}
 options("rtoot_token" = file.path(tools::R_user_dir("rtoot", "config"), "account1.rds"))
 ```
+
+# Environment variable
+
+For advanced users, you can also store your token as an environment variable (envvar). You can either obtain a token by calling
+
+```{r clipboard, eval = FALSE}
+auth_setup(clipboard = TRUE)
+```
+
+Or, if you already have a token
+
+```{r convert, eval = FALSE}
+token <- readRDS(file.path(tools::R_user_dir("rtoot", "config"), "account1.rds"))
+content <- convert_token_to_envvar(token)
+```
+
+Paste the content from clipboard to your configuration file. If you don't have access to clipboard, inspect `content`.
