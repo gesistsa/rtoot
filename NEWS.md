@@ -1,8 +1,8 @@
 # rtoot (development version)
 
-# rtoot 0.1.0
+* possible to set token via environment variable (#68)
 
-# rtoots 0.0.0.9000
+# rtoot 0.1.0
 
 * Added a `NEWS.md` file to track changes to the package.
 
