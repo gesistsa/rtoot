@@ -142,10 +142,11 @@ a spoiler text with `spoiler_text`.
 
 ## Pagination
 
-Most functions only return up to 40 results. The current version of
-`rtoot` does not support pagination out of the box (but it is planned
-for later). there is a workaround which can be found in the
-[wiki](https://github.com/schochastics/rtoot/wiki/Pagination)
+All relevant functions in the package support pagination of results if
+the `limit` parameter is larger than the default page size (which is 40
+in most cases). In this case, you may get more results than requested
+since the pages are always fetched as a whole. If you for example
+request 70 records, you will get 80 back, given that many records exist.
 
 ## Code of Conduct
 
