@@ -141,8 +141,7 @@ sayif <- function(verbose, ...) {
 
 # inspired by rtweet
 wait_until <- function(until, from = Sys.time(), verbose = TRUE){
-  until <- as.numeric(until)
-  seconds <- ceiling(until - unclass(from))
+  seconds <- ceiling(as.numeric(until) - unclass(from))
   if(seconds>0){
     sayif(verbose,"Rate limit exceeded, waiting for ",seconds," seconds")
     Sys.sleep(seconds)
