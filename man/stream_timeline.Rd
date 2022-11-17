@@ -15,7 +15,7 @@ stream_timeline_public(
   instance = NULL,
   token = NULL,
   anonymous = FALSE,
-  parse = TRUE
+  verbose = TRUE
 )
 
 stream_timeline_hashtag(
@@ -27,7 +27,7 @@ stream_timeline_hashtag(
   instance = NULL,
   token = NULL,
   anonymous = FALSE,
-  parse = TRUE
+  verbose = TRUE
 )
 
 stream_timeline_list(
@@ -38,7 +38,7 @@ stream_timeline_list(
   instance = NULL,
   token = NULL,
   anonymous = FALSE,
-  parse = TRUE
+  verbose = TRUE
 )
 }
 \arguments{
@@ -56,7 +56,7 @@ stream_timeline_list(
 
 \item{anonymous}{logical, should the API call be made anonymously? Defaults to TRUE but some instances might need authentication here}
 
-\item{parse}{logical, if \code{TRUE}, the default, returns a tibble. Use \code{FALSE}  to return the "raw" list corresponding to the JSON returned from the Mastodon API.}
+\item{verbose}{logical whether to display messages}
 }
 \description{
 Collect live streams of Mastodon data
