@@ -282,21 +282,20 @@ check_token_rtoot <- function(token = NULL) {
         selection <- 2L
       }
     }
-
-    if (isTRUE(selection == 1L)) {
-      token <- auth_setup()
-    } else if (isTRUE(selection == 2L)) {
-      stop("No token found. Please run auth_setup() to authenticate.")
-    }
   } else if (!is_auth_rtoot(token)) {
     if (interactive()) {
       selection <- utils::menu(
         c("yes", "no"),
         title = "Your token is invalid. Do you want to authenticate now?"
-      )
+        )
     } else {
       selection <- 2L
     }
+  }
+  if (isTRUE(selection == 1L)) {
+    token <- auth_setup()
+  } else if (isTRUE(selection == 2L)) {
+    stop("No token found. Please run auth_setup() to authenticate.")
   }
   invisible(token)
 }
