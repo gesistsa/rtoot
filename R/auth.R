@@ -185,15 +185,6 @@ save_auth_rtoot <- function(token, name = NULL, path = NULL){
   invisible(out_file)
 }
 
-get_auth_rtoot <- function(){
-
-  path <- file.path(tools::R_user_dir("rtoot", "config"), "default.rds")
-  if(!file.exists(path)){
-    stop("no token found in default location. Use save_auth_rtoot(token) with a token created from create_token()")
-  }
-  readRDS(path)
-}
-
 is_auth_rtoot <- function(token) inherits(token, "rtoot_bearer")
 
 #' Convert token to environment variable
