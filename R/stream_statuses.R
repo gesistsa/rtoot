@@ -48,7 +48,9 @@ stream_timeline_public <- function(
   params <- list()
 
   quiet_interrupt(
-    stream_toots(timeout,file_name, append, token, path, params, instance, anonymous)
+    stream_toots(timeout = timeout, file_name = file_name, append = append, token = token,
+                 path = path, params = params, instance = instance, anonymous = anonymous,
+                 verbose = verbose)
   )
   invisible(NULL)
 }
@@ -73,7 +75,9 @@ stream_timeline_hashtag <- function(
   params <- list(tag = gsub("^#+", "", hashtag))
 
   quiet_interrupt(
-    stream_toots(timeout,file_name, append, token, path, params, instance, anonymous)
+    stream_toots(timeout = timeout, file_name = file_name, append = append, token = token,
+                 path = path, params = params, instance = instance, anonymous = anonymous,
+                 verbose = verbose)
   )
   invisible(NULL)
 }
@@ -94,7 +98,9 @@ stream_timeline_list <- function(
   params <- list(list = list_id)
 
   quiet_interrupt(
-    stream_toots(timeout,file_name, append, token, path, params, instance, anonymous)
+    stream_toots(timeout = timeout, file_name = file_name, append = append, token = token,
+                 path = path, params = params, instance = instance, anonymous = anonymous,
+                 verbose = verbose)
   )
   invisible(NULL)
 }
@@ -133,9 +139,8 @@ stream_toots <- function(timeout,file_name = NULL, append, token, path, params,
 
   if(is.null(file_name)){
     file_name <- tempfile(pattern = "stream_toots", fileext = ".json")
-    message("Writting to ",file_name)
   }
-
+  sayif(verbose, "Writing to ",file_name)
   url <- httr::modify_url(url,path = path,query = params)
 
   stopifnot(is.numeric(timeout), timeout > 0)
@@ -155,7 +160,9 @@ stream_toots <- function(timeout,file_name = NULL, append, token, path, params,
       line <- complete_line(line)
       writeLines(line,output)
       n_seen <- n_seen + length(line)
-      cat("streamed toots: ",n_seen,"\r")
+      if (isTRUE(verbose)) {
+        cat("streamed toots: ",n_seen,"\r")
+      }
     }
   }
   on.exit({
