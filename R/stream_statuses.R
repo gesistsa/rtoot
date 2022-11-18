@@ -10,8 +10,8 @@
 #' @inheritParams get_instance
 #' @details
 #' \describe{
-#'   \item{stream_timeline_public}{stream all statuses}
-#'   \item{stream_timeline_hashtag}{stream all statuses containing a specific hashtag }
+#'   \item{stream_timeline_public}{stream all public statuses on any instance}
+#'   \item{stream_timeline_hashtag}{stream all statuses containing a specific hashtag}
 #'   \item{stream_timeline_list}{stream the statuses of a list}
 #' }
 #' @export
@@ -28,6 +28,8 @@
 #' # stream hashtag timeline of mastodon.social  for 30 seconds
 #' stream_timeline_hashtag("rstats", timeout = 30, local = TRUE,
 #'    instance = "fosstodon.org", file_name = "rstats_foss.json")
+#' # json files can be parsed with parse_stream()
+#' parse_stream("rstats_foss.json")
 #' }
 stream_timeline_public <- function(
     timeout = 30,
@@ -131,6 +133,7 @@ stream_toots <- function(timeout,file_name = NULL, append, token, path, params,
 
   if(is.null(file_name)){
     file_name <- tempfile(pattern = "stream_toots", fileext = ".json")
+    message("Writting to ",file_name)
   }
 
   url <- httr::modify_url(url,path = path,query = params)

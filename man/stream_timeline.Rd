@@ -67,8 +67,8 @@ Collect live streams of Mastodon data
 }
 \details{
 \describe{
-\item{stream_timeline_public}{stream all statuses}
-\item{stream_timeline_hashtag}{stream all statuses containing a specific hashtag }
+\item{stream_timeline_public}{stream all public statuses on any instance}
+\item{stream_timeline_hashtag}{stream all statuses containing a specific hashtag}
 \item{stream_timeline_list}{stream the statuses of a list}
 }
 }
@@ -85,5 +85,7 @@ stream_timeline_hashtag("rstats", timeout = 30, file_name = "rstats_public.json"
 # stream hashtag timeline of mastodon.social  for 30 seconds
 stream_timeline_hashtag("rstats", timeout = 30, local = TRUE,
    instance = "fosstodon.org", file_name = "rstats_foss.json")
+# json files can be parsed with parse_stream()
+parse_stream("rstats_foss.json")
 }
 }
