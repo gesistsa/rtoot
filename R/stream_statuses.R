@@ -68,7 +68,7 @@ stream_timeline_hashtag <- function(
   if(isTRUE(local)){
     path <- paste0(path,"/local")
   }
-  params <- list(tag = hashtag)
+  params <- list(tag = gsub("^#+", "", hashtag))
 
   quiet_interrupt(
     stream_toots(timeout,file_name, append, token, path, params, instance, anonymous)
