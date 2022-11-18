@@ -20,12 +20,14 @@
 #' # stream public timeline for 30 seconds
 #' stream_timeline_public(timeout = 30,file_name = "public.json")
 #' # stream timeline of mastodon.social  for 30 seconds
-#' stream_timeline_public(timeout = 30, local = TRUE, instance = "mastodon.social",file_name = "social.json")
+#' stream_timeline_public(timeout = 30, local = TRUE,
+#'    instance = "mastodon.social", file_name = "social.json")
 #'
 #' # stream hashtag timeline for 30 seconds
 #' stream_timeline_hashtag("rstats", timeout = 30, file_name = "rstats_public.json")
 #' # stream hashtag timeline of mastodon.social  for 30 seconds
-#' stream_timeline_hashtag("rstats", timeout = 30, local = TRUE, instance = "fosstodon.org", file_name = "rstats_foss.json")
+#' stream_timeline_hashtag("rstats", timeout = 30, local = TRUE,
+#'    instance = "fosstodon.org", file_name = "rstats_foss.json")
 #' }
 stream_timeline_public <- function(
     timeout = 30,
@@ -42,10 +44,6 @@ stream_timeline_public <- function(
     path <- paste0(path,"/local")
   }
   params <- list()
-
-  if(is.null(file_name)){
-    file_name <- tempfile(pattern = "stream_toots", fileext = ".json")
-  }
 
   quiet_interrupt(
     stream_toots(timeout,file_name, append, token, path, params, instance, anonymous)
@@ -70,11 +68,12 @@ stream_timeline_hashtag <- function(
   if(isTRUE(local)){
     path <- paste0(path,"/local")
   }
-  params = (tag = hashtag)
+  params <- list(tag = hashtag)
 
-  if(is.null(file_name)){
-    file_name <- tempfile(pattern = "stream_toots", fileext = ".json")
-  }
+  quiet_interrupt(
+    stream_toots(timeout,file_name, append, token, path, params, instance, anonymous)
+  )
+  invisible(NULL)
 }
 
 #' @rdname stream_timeline
@@ -92,9 +91,10 @@ stream_timeline_list <- function(
   path <- "api/v1/streaming/list"
   params <- list(list = list_id)
 
-  if(is.null(file_name)){
-    file_name <- tempfile(pattern = "stream_toots", fileext = ".json")
-  }
+  quiet_interrupt(
+    stream_toots(timeout,file_name, append, token, path, params, instance, anonymous)
+  )
+  invisible(NULL)
 }
 
 #' Parser of Mastodon stream
@@ -129,6 +129,10 @@ stream_toots <- function(timeout,file_name = NULL, append, token, path, params,
     url <- prepare_url(instance)
   }
 
+  if(is.null(file_name)){
+    file_name <- tempfile(pattern = "stream_toots", fileext = ".json")
+  }
+
   url <- httr::modify_url(url,path = path,query = params)
 
   stopifnot(is.numeric(timeout), timeout > 0)
@@ -138,7 +142,8 @@ stream_toots <- function(timeout,file_name = NULL, append, token, path, params,
   con <- curl::curl(url,handle = h)
   open(output,open = if (append) "ab" else "b")
   open(con = con, "rb", blocking = FALSE)
-
+  sayif(verbose,"Streaming toots until ",stop_time)
+  n_seen <- 0
   while(isIncomplete(con) && Sys.time() < stop_time){
     buf <- readLines(con,warn = FALSE)
     if(length(buf)){
@@ -146,6 +151,8 @@ stream_toots <- function(timeout,file_name = NULL, append, token, path, params,
       line <- gsub("^data:\\s+","",line)
       line <- complete_line(line)
       writeLines(line,output)
+      n_seen <- n_seen + length(line)
+      cat("streamed toots: ",n_seen,"\r")
     }
   }
   on.exit({
