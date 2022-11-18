@@ -16,8 +16,10 @@ Depends:
     R (>= 3.6)
 Imports: 
     clipr,
+    curl,
     dplyr,
     httr,
+    jsonlite,
     tibble
 Suggests: 
     knitr,

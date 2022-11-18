@@ -1,12 +1,32 @@
 #' Collect live streams of Mastodon data
 #' @name stream_timeline
 #' @param timeout Integer, Number of seconds to stream toots for. Stream indefinitely with timeout = Inf. The stream can be interrupted at any time, and file_name will still be a valid file.
-#' @param local	 logical, Show only local statuses?
+#' @param local	 logical, Show only local statuses (either statuses from your instance or the one provided in `instance`)?
 #' @param file_name character, name of file. If not specified, will write to a temporary file stream_toots*.json.
 #' @param append logical, if TRUE will append to the end of file_name; if FALSE, will overwrite.
 #' @param verbose logical whether to display messages
+#' @param list_id character, id of list to stream
+#' @param hashtag character, hashtag to stream
 #' @inheritParams get_instance
+#' @details
+#' \describe{
+#'   \item{stream_timeline_public}{stream all statuses}
+#'   \item{stream_timeline_hashtag}{stream all statuses containing a specific hashtag }
+#'   \item{stream_timeline_list}{stream the statuses of a list}
+#' }
 #' @export
+#' @examples
+#' \dontrun{
+#' # stream public timeline for 30 seconds
+#' stream_timeline_public(timeout = 30)
+#' # stream timeline of mastodon.social  for 30 seconds
+#' stream_timeline_public(timeout = 30, local = TRUE, instance = "mastodon.social")
+#'
+#' # stream hashtag timeline for 30 seconds
+#' stream_timeline_hashtag("rstats", timeout = 30)
+#' # stream hashtag timeline of mastodon.social  for 30 seconds
+#' stream_timeline_hashtag("rstats", timeout = 30, local = TRUE, instance = "fosstodon.org")
+#' }
 stream_timeline_public <- function(
     timeout = 30,
     local = FALSE,
@@ -91,8 +111,7 @@ stream_timeline_list <- function(
 parse_stream <- function(path){
   json <- readLines(path)
   tbl <- dplyr::bind_rows(lapply(json,function(x) parse_status(jsonlite::fromJSON(x))))
-  dplyr::arrange(tbl,created_at)
-
+  tbl[order(tbl[["created_at"]]),]
 }
 
 
@@ -122,7 +141,7 @@ stream_toots <- function(timeout,file_name = NULL, append, token, path, params,
   open(con = con, "rb", blocking = FALSE)
 
   while(isIncomplete(con) && Sys.time() < stop_time){
-    buf <- readLines(con)
+    buf <- readLines(con,warn = FALSE)
     if(length(buf)){
       line <- buf[grepl("created_at",buf)] # This seems unstable but rtweet does something similar
       line <- gsub("^data:\\s+","",line)

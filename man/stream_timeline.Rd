@@ -44,7 +44,7 @@ stream_timeline_list(
 \arguments{
 \item{timeout}{Integer, Number of seconds to stream toots for. Stream indefinitely with timeout = Inf. The stream can be interrupted at any time, and file_name will still be a valid file.}
 
-\item{local}{logical, Show only local statuses?}
+\item{local}{logical, Show only local statuses (either statuses from your instance or the one provided in \code{instance})?}
 
 \item{file_name}{character, name of file. If not specified, will write to a temporary file stream_toots*.json.}
 
@@ -57,7 +57,31 @@ stream_timeline_list(
 \item{anonymous}{logical, should the API call be made anonymously? Defaults to TRUE but some instances might need authentication here}
 
 \item{verbose}{logical whether to display messages}
+
+\item{hashtag}{character, hashtag to stream}
+
+\item{list_id}{character, id of list to stream}
 }
 \description{
 Collect live streams of Mastodon data
+}
+\details{
+\describe{
+\item{stream_timeline_public}{stream all statuses}
+\item{stream_timeline_hashtag}{stream all statuses containing a specific hashtag }
+\item{stream_timeline_list}{stream the statuses of a list}
+}
+}
+\examples{
+\dontrun{
+# stream public timeline for 30 seconds
+stream_timeline_public(timeout = 30)
+# stream timeline of mastodon.social  for 30 seconds
+stream_timeline_public(timeout = 30, local = TRUE, instance = "mastodon.social")
+
+# stream hashtag timeline for 30 seconds
+stream_timeline_hashtag("rstats", timeout = 30)
+# stream hashtag timeline of mastodon.social  for 30 seconds
+stream_timeline_hashtag("rstats", timeout = 30, local = TRUE, instance = "fosstodon.org")
+}
 }
