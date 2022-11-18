@@ -1,0 +1,47 @@
+---
+title: "Live streaming toots"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Live streaming toots}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, eval=FALSE}
+library("rtoot")
+```
+
+The package allows to access three different streams of Mastodon data. 
+Public timelines via `stream_timeline_public()`, timelines from a given hashtag via `stream_timeline_hashtag()` and timelines from lists via `stream_timeline_list()`.
+
+## Specifying parameters
+
+By default, all functions stream statuses for 30 seconds. This can be adjusted via the parameter `timeout`. If set to `Inf`, data is streamed indefinitely. The parameter `file_name` is used to specify to which file the data should be written. If non is provided, a temporary file is created. However, we recommend to always set this parameter explicitely. 
+
+For `stream_timeline_public()` and `stream_timeline_hashtag()`, you can also decide if you want to
+stream globally, or from a specific instance. If you want to stream from a specific instance, set `local=TRUE` and set `instance` to the desired instance. If instance is NULL, then the function uses the instance you obtained a token from (see vignette on  [authentication](auth.html)).
+
+## Streaming and parsing
+
+Once parameters are specified, you can start the desired stream. 
+Streaming will occupy your current instance of R until the specified time has elapsed or any error occurs. Streaming itself shouldn't be very memory intensive so you can start a new R instance in parallel.
+
+```{r eval=FALSE}
+#stream a minute of all statuses
+stream_timeline_public(timeout = 60, file_name = "public.json")
+
+#stream a minute of all statuses using the rstats hashtag
+stream_timeline_public(hashtag = "rstats", timeout = 60, file_name = "public.json")
+```
+
+If `verbose=TRUE`, the functions will indicate when streaming is supposed to stop and the number of statuses that have been written to file.
+
+Note that in contrast to `rtweet`, the streaming functions never directly return any data. 
+This can be done afterwards using `parse_stream()` which reads in the json and converts it to a data frame. Note that this process can take a while depending on the number of statuses in the file.

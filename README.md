@@ -33,6 +33,9 @@ You can install the development version of rtoot from GitHub:
 devtools::install_github("schochastics/rtoot")
 ```
 
+*(The current dev version has many more features than the current
+version on CRAN)*
+
 ## Authenticate
 
 First you should set up your own credentials (see also
@@ -139,6 +142,31 @@ post_toot(status = "my first rtoot #rstats", media="path/to/media",
 
 You can mark the toot as sensitive by setting `sensitive = TRUE` and add
 a spoiler text with `spoiler_text`.
+
+## Streaming
+
+`rtoot` allows to stream statuses from three different streams. To get
+any public status on any instance use `stream_timeline_public()`
+
+``` r
+stream_timeline_public(timeout = 30,file_name = "public.json")
+```
+
+the timeout parameter is the time in seconds data should be streamed
+(set to `Inf` for indefinite streaming). If just the local timeline is
+needed, use `local=TRUE` and set an instance (or use your own provided
+by the token).
+
+`stream_timeline_hashtag()` streams all statuses containing a specific
+hashtag
+
+``` r
+stream_timeline_hashtag("rstats", timeout = 30, file_name = "rstats_public.json")
+```
+
+The statuses are directly written to file as json. The function
+`parse_stream()` can be used to read in and convert a json to a data
+frame.
 
 ## Pagination
 
