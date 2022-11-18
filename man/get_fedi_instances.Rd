@@ -16,7 +16,7 @@ tibble of fediverse instances
 Get a list of fediverse servers
 }
 \details{
-the results are sorted by user count
+the results are sorted by user count. The function sometimes fails unexpectedly for n>100. Try to rerun your request in that case or use a smaller n.
 }
 \examples{
 \dontrun{

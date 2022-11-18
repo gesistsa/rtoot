@@ -1,7 +1,7 @@
 #' Get a list of fediverse servers
 #'
 #' @param n number of servers to show
-#' @details the results are sorted by user count
+#' @details the results are sorted by user count. The function sometimes fails unexpectedly for n>100. Try to rerun your request in that case or use a smaller n.
 #' @return tibble of fediverse instances
 #' @export
 #' @examples
@@ -16,6 +16,7 @@ get_fedi_instances  <-  function(n = 20) {
                             instance = "api.index.community", params = list(sortField = "userCount", sortDirection = "desc", page = i),
                             anonymous = TRUE)
     df <- dplyr::bind_rows(df, dplyr::bind_rows(tmp$instances))
+    Sys.sleep(stats::runif(1,1,2))
   }
   df[seq_len(n),]
 }
