@@ -18,14 +18,14 @@
 #' @examples
 #' \dontrun{
 #' # stream public timeline for 30 seconds
-#' stream_timeline_public(timeout = 30)
+#' stream_timeline_public(timeout = 30,file_name = "public.json")
 #' # stream timeline of mastodon.social  for 30 seconds
-#' stream_timeline_public(timeout = 30, local = TRUE, instance = "mastodon.social")
+#' stream_timeline_public(timeout = 30, local = TRUE, instance = "mastodon.social",file_name = "social.json")
 #'
 #' # stream hashtag timeline for 30 seconds
-#' stream_timeline_hashtag("rstats", timeout = 30)
+#' stream_timeline_hashtag("rstats", timeout = 30, file_name = "rstats_public.json")
 #' # stream hashtag timeline of mastodon.social  for 30 seconds
-#' stream_timeline_hashtag("rstats", timeout = 30, local = TRUE, instance = "fosstodon.org")
+#' stream_timeline_hashtag("rstats", timeout = 30, local = TRUE, instance = "fosstodon.org", file_name = "rstats_foss.json")
 #' }
 stream_timeline_public <- function(
     timeout = 30,
@@ -120,13 +120,13 @@ stream_toots <- function(timeout,file_name = NULL, append, token, path, params,
   if (is.null(instance) && anonymous) {
     stop("provide either an instance or a token")
   }
+  h <- curl::new_handle(verbose = FALSE)
   if (is.null(instance)) {
     token <- check_token_rtoot(token)
     url <- prepare_url(token$instance)
-    config <- httr::add_headers(Authorization = paste('Bearer', token$bearer))
+    curl::handle_setheaders(h, "Authorization" = paste0("Bearer ",token$bearer))
   } else {
     url <- prepare_url(instance)
-    config = list()
   }
 
   url <- httr::modify_url(url,path = path,query = params)
@@ -134,9 +134,8 @@ stream_toots <- function(timeout,file_name = NULL, append, token, path, params,
   stopifnot(is.numeric(timeout), timeout > 0)
   stop_time <- Sys.time() + timeout
 
-  #TODO: add handle with bearer
   output <- file(file_name)
-  con <- curl::curl(url)
+  con <- curl::curl(url,handle = h)
   open(output,open = if (append) "ab" else "b")
   open(con = con, "rb", blocking = FALSE)
 
