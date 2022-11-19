@@ -160,3 +160,17 @@ rate_limit_remaining <- function(object){
     return(as.numeric(header[["rate_remaining"]]))
   }
 }
+
+## A kind of drop-in replacement of utils::menu, with a plus
+rtoot_menu <- function(choices = c("yes", "no"), title, default = 2L, verbose = TRUE) {
+  if (!is.null(options("rtoot_cheatcode")$rtoot_cheatcode)) {
+    if (options("rtoot_cheatcode")$rtoot_cheatcode == "uuddlrlrba") {
+      sayif(verbose, title)
+      return(options("rtoot_cheat_answer")$rtoot_cheat_answer) ### VW-Style cheating!
+    }
+  }
+  if (isFALSE(interactive())) {
+    return(default)
+  }
+  return(utils::menu(choices = choices, title = title))
+}

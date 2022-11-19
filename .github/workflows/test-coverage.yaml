@@ -26,6 +26,11 @@ jobs:
           extra-packages: any::covr
           needs: coverage
 
+      - name: Install xclip
+        run: |
+          sudo apt-get install xclip -y
+        shell: bash
+
       - name: Test coverage
         run: |
           covr::codecov(
