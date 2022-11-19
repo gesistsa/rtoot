@@ -6,7 +6,14 @@
 \alias{get_favourited_by}
 \title{View information about a specific status}
 \usage{
-get_status(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE)
+get_status(
+  id,
+  instance = NULL,
+  token = NULL,
+  anonymous = FALSE,
+  parse = TRUE,
+  limit = 20
+)
 
 get_reblogged_by(
   id,
@@ -34,6 +41,8 @@ get_favourited_by(
 \item{anonymous}{some API calls do not need a token. Setting anonymous to TRUE allows to make an anonymous call if possible.}
 
 \item{parse}{logical, if \code{TRUE}, the default, returns a tibble. Use \code{FALSE}  to return the "raw" list corresponding to the JSON returned from the Mastodon API.}
+
+\item{limit}{integer number of toots to return, maximum of 40. If greater than 40 will return a max of 40. Defaults to 20.}
 }
 \value{
 a status or a list of users

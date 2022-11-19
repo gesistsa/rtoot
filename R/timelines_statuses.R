@@ -7,6 +7,7 @@
 #' @param instance character, the server name of the instance where the status is located. If `NULL`, the same instance used to obtain the token is used.
 #' @param anonymous some API calls do not need a token. Setting anonymous to TRUE allows to make an anonymous call if possible.
 #' @param parse logical, if `TRUE`, the default, returns a tibble. Use `FALSE`  to return the "raw" list corresponding to the JSON returned from the Mastodon API.
+#' @param limit integer number of toots to return, maximum of 40. If greater than 40 will return a max of 40. Defaults to 20.
 #' @inheritParams post_toot
 #' @return a status or a list of users
 #' @examples
@@ -16,13 +17,14 @@
 #' get_favourited_by(id = "109294719267373593")
 #' }
 #' @export
-get_status <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
-
-  path <- paste0("/api/v1/statuses/", id)
-  params <- list()
-
-  process_request(token = token,path = path,instance = instance,params = params,
-                  anonymous = anonymous,parse = parse,FUN = parse_status)
+get_status <- function(id, instance = NULL, token = NULL, anonymous = FALSE,
+                        parse = TRUE, limit = 20)
+{
+  path <- paste0("api/v1/accounts/", id, "/statuses")
+  params <- list(limit = limit)
+  process_request(token = token, path = path, instance = instance,
+                  params = params, anonymous = anonymous, parse = parse,
+                  FUN = v(parse_status))
 }
 
 #' @rdname get_status
