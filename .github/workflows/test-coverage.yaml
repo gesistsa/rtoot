@@ -25,10 +25,15 @@ jobs:
         with:
           extra-packages: any::covr
           needs: coverage
-
-      - name: Install xclip
+      - name: Install and run XVFB
         run: |
-          sudo apt-get install xclip -y
+          sudo apt-get install -y xvfb
+          sudo /usr/bin/Xvfb :99.0 -screen 0 1280x1024x24 &
+          sleep 3
+        shell: bash
+      - name: Install xclip
+        run: |          
+          sudo apt-get install -y xsel
         shell: bash
 
       - name: Test coverage
