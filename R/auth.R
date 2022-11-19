@@ -242,7 +242,7 @@ get_token_from_envvar <- function(envvar = "RTOOT_DEFAULT_TOKEN", check_stop = T
 
 # check if a token is available and return one if not
 ## it checks the envvar RTOOT_DEFAULT_TOKEN first; then RDS;
-check_token_rtoot <- function(token = NULL) {
+check_token_rtoot <- function(token = NULL, verbose = TRUE) {
   selection <- NULL
   if(is.null(token)){
     if (Sys.getenv("RTOOT_DEFAULT_TOKEN") != "") {
@@ -264,24 +264,12 @@ check_token_rtoot <- function(token = NULL) {
     if (isTRUE(file.exists(token_path))) {
       token <- readRDS(token_path)
     } else {
-      if (interactive()) {
-        selection <- utils::menu(
-          c("yes", "no"),
-          title = "This seems to be the first time you are using rtoot. Do you want to authenticate now?"
-        )
-      } else {
-        selection <- 2L
-      }
+      selection <- rtoot_menu(title = "This seems to be the first time you are using rtoot. Do you want to authenticate now?",
+                              default = 2L, verbose = verbose)
     }
   } else if (!is_auth_rtoot(token)) {
-    if (interactive()) {
-      selection <- utils::menu(
-        c("yes", "no"),
-        title = "Your token is invalid. Do you want to authenticate now?"
-        )
-    } else {
-      selection <- 2L
-    }
+    selection <- rtoot_menu(title = "Your token is invalid. Do you want to authenticate now?", default = 2L,
+                            verbose = verbose)
   }
   if (isTRUE(selection == 1L)) {
     token <- auth_setup()
