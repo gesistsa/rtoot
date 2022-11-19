@@ -29,6 +29,8 @@ jobs:
       - name: Install xclip
         run: |
           sudo apt-get install xclip -y
+          uptime | xclip -i -sel p -f | xclip -i -sel c
+          xclip -o -sel clipboard
         shell: bash
 
       - name: Test coverage
