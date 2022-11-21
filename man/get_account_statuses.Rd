@@ -6,14 +6,34 @@
 \usage{
 get_account_statuses(
   id,
+  max_id,
+  since_id,
+  min_id,
+  limit = 20L,
+  exclude_reblogs = FALSE,
+  hashtag,
   instance = NULL,
   token = NULL,
   anonymous = FALSE,
-  parse = TRUE
+  parse = TRUE,
+  retryonratelimit = TRUE,
+  verbose = TRUE
 )
 }
 \arguments{
 \item{id}{character, local ID of a user (this is not the username)}
+
+\item{max_id}{character, Return results older than this id}
+
+\item{since_id}{character, Return results newer than this id}
+
+\item{min_id}{character, Return results immediately newer than this id}
+
+\item{limit}{integer, Maximum number of results to return}
+
+\item{exclude_reblogs}{logical, Whether to filter out boosts from the response.}
+
+\item{hashtag}{character, filter for statuses using a specific hashtag.}
 
 \item{instance}{character, the server name of the instance where the status is located. If \code{NULL}, the same instance used to obtain the token is used.}
 
@@ -22,6 +42,10 @@ get_account_statuses(
 \item{anonymous}{some API calls do not need a token. Setting anonymous to TRUE allows to make an anonymous call if possible.}
 
 \item{parse}{logical, if \code{TRUE}, the default, returns a tibble. Use \code{FALSE}  to return the "raw" list corresponding to the JSON returned from the Mastodon API.}
+
+\item{retryonratelimit}{If TRUE, and a rate limit is exhausted, will wait until it refreshes. Most Mastodon rate limits refresh every 5 minutes. If FALSE, and the rate limit is exceeded, the function will terminate early with a warning; you'll still get back all results received up to that point.}
+
+\item{verbose}{logical whether to display messages}
 }
 \value{
 tibble or list of statuses
