@@ -26,3 +26,33 @@ test_that("stream, when append=TRUE", {
   expect_true(second_n > first_n)
   unlink(tmp_file)
 })
+
+test_that("stream, when append=FALSE", {
+  skip_on_ci()
+  skip_if_offline()
+  skip_if(Sys.getenv("RTOOT_TEST_STREAM") != "yes")
+  tmp_file <- tempfile(fileext = ".json")
+  expect_false(file.exists(tmp_file))
+  ## #96
+  expect_error(stream_timeline_public(timeout = 2, file_name = tmp_file, token = fake_token, instance = "fosstodon.org", verbose = FALSE, append = FALSE), NA)
+  expect_true(file.exists(tmp_file))
+  first_batch <- parse_stream(tmp_file)
+  first_n <- nrow(first_batch)
+  expect_true(first_n > 0)
+  stream_timeline_public(timeout = 2, file_name = tmp_file, token = fake_token, instance = "fosstodon.org", verbose = FALSE, append = FALSE)
+  second_batch <- parse_stream(tmp_file)
+  expect_false(any(first_batch$id %in% second_batch$id))
+  unlink(tmp_file)
+})
+
+test_that("parse_stream", {
+  expect_error(x <- parse_stream("../testdata/mastodonsocial.json"), NA)
+  expect_equal(48, nrow(x))
+  expect_true("tbl_df" %in% class(x))
+  ## corner case
+  tmp <- tempfile(fileext = ".json")
+  z <- file.create(tmp)
+  expect_error(x <- parse_stream(tmp), NA)
+  expect_equal(0, nrow(x))
+  expect_true("tbl_df" %in% class(x))
+})
