@@ -1,7 +1,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://social.tchncs.de/api/v1/accounts/109281650341067731/statuses
+    uri: https://social.tchncs.de/api/v1/accounts/109281650341067731/statuses?limit=20&exclude_reblogs=FALSE
     body:
       encoding: ''
       string: ''

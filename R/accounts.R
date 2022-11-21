@@ -44,6 +44,10 @@ search_accounts <- function(query,limit = 40,instance = NULL, token = NULL, anon
 #' @param id character, local ID of a user (this is not the username)
 #' @inheritParams get_status
 #' @inheritParams post_toot
+#' @inheritParams get_timeline_home
+#' @param exclude_reblogs logical, Whether to filter out boosts from the response.
+#' @param hashtag character, filter for statuses using a specific hashtag.
+#' @param retryonratelimit If TRUE, and a rate limit is exhausted, will wait until it refreshes. Most Mastodon rate limits refresh every 5 minutes. If FALSE, and the rate limit is exceeded, the function will terminate early with a warning; you'll still get back all results received up to that point.
 #' @details  For anonymous calls only public statuses are returned. If a user token is supplied also private statuses the user is authorized to see are returned
 #' @return tibble or list of statuses
 #' @examples
@@ -51,13 +55,34 @@ search_accounts <- function(query,limit = 40,instance = NULL, token = NULL, anon
 #' get_account_statuses("109302436954721982")
 #' }
 #' @export
-get_account_statuses <- function(id,instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE){
+get_account_statuses <- function(id, max_id,since_id,min_id, limit = 20L,
+                                 exclude_reblogs = FALSE, hashtag,
+                                 instance = NULL,
+                                 token = NULL,
+                                 anonymous = FALSE,
+                                 parse = TRUE,
+                                 retryonratelimit = TRUE,verbose = TRUE){
   path <- paste0("api/v1/accounts/",id,"/statuses")
-  params <- list()
-
+  n <- limit
+  params <- list(limit = min(limit,20L),exclude_reblogs = exclude_reblogs)
+  if (!missing(max_id)) {
+    params$max_id <- max_id
+  }
+  if (!missing(since_id)) {
+    params$since_id <- since_id
+  }
+  if (!missing(min_id)) {
+    params$since_id <- min_id
+  }
+  if (!missing(hashtag)) {
+    params$tagged <- gsub("^#+", "", hashtag)
+  }
   process_request(token = token,path = path,instance = instance,
                   params = params, anonymous = anonymous,
-                  parse = parse, FUN = v(parse_status))
+                  parse = parse, FUN = v(parse_status),
+                  n = n, page_size = 20L,
+                  retryonratelimit = retryonratelimit,
+                  verbose = verbose)
 }
 
 #' Get followers of a user

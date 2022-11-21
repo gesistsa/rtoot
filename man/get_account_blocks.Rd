@@ -19,7 +19,7 @@ get_account_blocks(
 
 \item{since_id}{character, Return results newer than this id}
 
-\item{limit}{integer, maximum number of results to return. Defaults to 40.}
+\item{limit}{integer, Maximum number of results to return}
 
 \item{token}{user bearer token (read from file by default)}
 
