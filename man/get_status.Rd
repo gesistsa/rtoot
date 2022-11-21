@@ -42,7 +42,7 @@ get_favourited_by(
 
 \item{parse}{logical, if \code{TRUE}, the default, returns a tibble. Use \code{FALSE}  to return the "raw" list corresponding to the JSON returned from the Mastodon API.}
 
-\item{limit}{integer number of toots to return, maximum of 40. If greater than 40 will return a max of 40. Defaults to 20.}
+\item{limit}{integer, number of toots to return. API maximum is 40. If limit of greater than 40 is entered, returns a max of 40. Defaults to 20.}
 }
 \value{
 a status or a list of users

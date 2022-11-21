@@ -7,7 +7,7 @@
 #' @param instance character, the server name of the instance where the status is located. If `NULL`, the same instance used to obtain the token is used.
 #' @param anonymous some API calls do not need a token. Setting anonymous to TRUE allows to make an anonymous call if possible.
 #' @param parse logical, if `TRUE`, the default, returns a tibble. Use `FALSE`  to return the "raw" list corresponding to the JSON returned from the Mastodon API.
-#' @param limit integer number of toots to return, maximum of 40. If greater than 40 will return a max of 40. Defaults to 20.
+#' @param limit integer, number of toots to return. API maximum is 40. If limit of greater than 40 is entered, returns a max of 40. Defaults to 20.
 #' @inheritParams post_toot
 #' @return a status or a list of users
 #' @examples

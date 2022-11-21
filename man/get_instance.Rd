@@ -45,7 +45,7 @@ get_instance_trends(
 
 \item{offset}{How many accounts to skip before returning results. Default 0.}
 
-\item{limit}{integer number of toots to return, maximum of 40. If greater than 40 will return a max of 40. Defaults to 20.}
+\item{limit}{integer, number of toots to return. API maximum is 40. If limit of greater than 40 is entered, returns a max of 40. Defaults to 20.}
 
 \item{order}{'active' to sort by most recently posted statuses (default) or 'new' to sort by most recently created profiles.}
 
