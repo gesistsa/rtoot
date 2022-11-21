@@ -125,6 +125,9 @@ parse_stream <- function(path){
 
 stream_toots <- function(timeout,file_name = NULL, append, token, path, params,
                                 instance = NULL, anonymous = FALSE, verbose = TRUE,...){
+  if (!is.numeric(timeout)) stop("timeout must be numeric", call. = FALSE)
+  if (timeout<0) stop("timeout must be greater equal 0", call. = FALSE)
+
   if (is.null(instance) && anonymous) {
     stop("provide either an instance or a token")
   }
@@ -139,16 +142,16 @@ stream_toots <- function(timeout,file_name = NULL, append, token, path, params,
 
   if(is.null(file_name)){
     file_name <- tempfile(pattern = "stream_toots", fileext = ".json")
+    append <- TRUE
   }
   sayif(verbose, "Writing to ",file_name)
   url <- httr::modify_url(url,path = path,query = params)
 
-  stopifnot(is.numeric(timeout), timeout > 0)
   stop_time <- Sys.time() + timeout
 
   output <- file(file_name)
   con <- curl::curl(url,handle = h)
-  open(output,open = if (append) "ab" else "b")
+  open(output,open = if (append) "aw" else "w")
   open(con = con, "rb", blocking = FALSE)
   sayif(verbose,"Streaming toots until ",stop_time)
   n_seen <- 0
