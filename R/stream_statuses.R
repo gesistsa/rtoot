@@ -118,6 +118,9 @@ stream_timeline_list <- function(
 #' }
 parse_stream <- function(path){
   json <- readLines(path)
+  if (length(json) == 0) {
+    return(tibble::tibble())
+  }
   tbl <- dplyr::bind_rows(lapply(json,function(x) parse_status(jsonlite::fromJSON(x))))
   tbl[order(tbl[["created_at"]]),]
 }
