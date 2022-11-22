@@ -30,11 +30,11 @@ get_account <- function(id,instance = NULL, token = NULL, anonymous = FALSE, par
 #' search_accounts("schochastics")
 #' }
 #' @export
-search_accounts <- function(query,limit = 40,instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE){
+search_accounts <- function(query,limit = 40, token = NULL, anonymous = FALSE, parse = TRUE){
   path <- "/api/v1/accounts/search"
   params <- list(q=query,limit = limit)
 
-  process_request(token = token,path = path,instance = instance,
+  process_request(token = token,path = path, instance = NULL,
                   params = params, anonymous = anonymous,
                   parse = parse, FUN = v(parse_account))
 }

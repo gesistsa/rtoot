@@ -7,7 +7,6 @@
 search_accounts(
   query,
   limit = 40,
-  instance = NULL,
   token = NULL,
   anonymous = FALSE,
   parse = TRUE
@@ -17,8 +16,6 @@ search_accounts(
 \item{query}{character, search string}
 
 \item{limit}{number of search results to return. Defaults to 40}
-
-\item{instance}{character, the server name of the instance where the status is located. If \code{NULL}, the same instance used to obtain the token is used.}
 
 \item{token}{user bearer token (read from file by default)}
 
