@@ -105,8 +105,9 @@ post_toot(status = "my first rtoot #rstats", media="path/to/media",
           alt_text = "description of media")
 ```
 
-You can mark the toot as sensitive by setting `sensitive = TRUE` and add a spoiler text with `spoiler_text`.
+You can mark the toot as sensitive by setting `sensitive = TRUE` and add a spoiler text with `spoiler_text`.  
 
+*Be aware that excessive automated posting is frowned upon (or even against the ToS) in many instances. Make sure to check the ToS of your instance and be mindful when using this function.*
 
 ## Pagination
 
