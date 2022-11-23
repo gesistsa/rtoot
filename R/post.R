@@ -1,5 +1,5 @@
 #' Post status update to user's Mastodon account
-#'
+#' @description Be aware that excessive automated posting is frowned upon (or even against the ToS) in many instances. Make sure to check the ToS of your instance and be mindful when using this function.
 #' @param status character, toot status. Must be 500 characters or less.
 #' @param media character, path to media to add to post
 #' @param alt_text character, a plain-text description of the media, for accessibility purposes.

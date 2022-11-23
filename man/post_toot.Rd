@@ -45,7 +45,7 @@ post_toot(
 no return value, called for site effects
 }
 \description{
-Post status update to user's Mastodon account
+Be aware that excessive automated posting is frowned upon (or even against the ToS) in many instances. Make sure to check the ToS of your instance and be mindful when using this function.
 }
 \examples{
 \dontrun{
