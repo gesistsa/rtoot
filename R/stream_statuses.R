@@ -107,10 +107,10 @@ stream_timeline_list <- function(
 
 #' Parser of Mastodon stream
 #'
-#' Converts Mastodon stream data (JSON file) into parsed tibble.
+#' Converts Mastodon stream data (JSON file) into a parsed tibble.
 #' @param path Character, name of JSON file with data collected by any [stream_timeline] function.
 #' @export
-#' @details The stream sometimes returns invalid lines of json. These are automatically skipped.
+#' @details The stream sometimes returns invalid lines of json. These are automatically skipped. Parsing can be slow if your json contains a large amount of statuses
 #' @seealso `stream_timeline_public()`, `stream_timeline_hashtag()`,`stream_timeline_list()`
 #' @examples
 #' \dontrun{

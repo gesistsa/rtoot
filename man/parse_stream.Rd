@@ -10,10 +10,10 @@ parse_stream(path)
 \item{path}{Character, name of JSON file with data collected by any \link{stream_timeline} function.}
 }
 \description{
-Converts Mastodon stream data (JSON file) into parsed tibble.
+Converts Mastodon stream data (JSON file) into a parsed tibble.
 }
 \details{
-The stream sometimes returns invalid lines of json. These are automatically skipped.
+The stream sometimes returns invalid lines of json. These are automatically skipped. Parsing can be slow if your json contains a large amount of statuses
 }
 \examples{
 \dontrun{
