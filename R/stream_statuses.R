@@ -128,7 +128,7 @@ parse_stream <- function(path){
 }
 
 validate_stream <- function(txt){
-  json_validated <- vapply(json, jsonlite::validate, TRUE)
+  json_validated <- vapply(txt, jsonlite::validate, TRUE)
   txt[json_validated]
 }
 
