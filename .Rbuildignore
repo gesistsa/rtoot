@@ -11,3 +11,4 @@ codecov.yml
 ^docs$
 ^pkgdown$
 ^data-raw$
+^tests/testdata/malformed.json$

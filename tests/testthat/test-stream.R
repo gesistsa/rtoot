@@ -56,3 +56,12 @@ test_that("parse_stream", {
   expect_equal(0, nrow(x))
   expect_true("tbl_df" %in% class(x))
 })
+
+test_that("parse_stream_malformed", {
+  ## issue 108
+  skip_if(!file.exists("../testdata/malformed.json"))
+  raw <- readLines("../testdata/malformed.json")
+  expect_equal(50, length(raw))
+  expect_error(x <- parse_stream("../testdata/malformed.json"), NA)
+  expect_equal(49, nrow(x))
+})
