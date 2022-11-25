@@ -110,6 +110,7 @@ stream_timeline_list <- function(
 #' Converts Mastodon stream data (JSON file) into parsed tibble.
 #' @param path Character, name of JSON file with data collected by any [stream_timeline] function.
 #' @export
+#' @details The stream sometimes returns invalid lines of json. These are automatically skipped.
 #' @seealso `stream_timeline_public()`, `stream_timeline_hashtag()`,`stream_timeline_list()`
 #' @examples
 #' \dontrun{
@@ -118,6 +119,7 @@ stream_timeline_list <- function(
 #' }
 parse_stream <- function(path){
   json <- readLines(path)
+  json <- validate_stream(json)
   if (length(json) == 0) {
     return(tibble::tibble())
   }
@@ -125,6 +127,10 @@ parse_stream <- function(path){
   tbl[order(tbl[["created_at"]]),]
 }
 
+validate_stream <- function(txt){
+  json_validated <- vapply(json, jsonlite::validate, TRUE)
+  txt[json_validated]
+}
 
 stream_toots <- function(timeout,file_name = NULL, append, token, path, params,
                                 instance = NULL, anonymous = FALSE, verbose = TRUE,...){

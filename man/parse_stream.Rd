@@ -12,6 +12,9 @@ parse_stream(path)
 \description{
 Converts Mastodon stream data (JSON file) into parsed tibble.
 }
+\details{
+The stream sometimes returns invalid lines of json. These are automatically skipped.
+}
 \examples{
 \dontrun{
 stream_timeline_public(1,file_name = "stream.json")
