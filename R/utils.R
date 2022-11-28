@@ -1,8 +1,7 @@
-#' @export
-print.rtoot_client <- function(x,...){
-  cat("<mastodon client> for instance:", x$instance, "\n")
-  invisible(x)
-}
+# print.rtoot_client <- function(x,...){
+#   cat("<mastodon client> for instance:", x$instance, "\n")
+#   invisible(x)
+# }
 
 #' @export
 print.rtoot_bearer <- function(x,...){
