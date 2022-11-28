@@ -13,8 +13,9 @@ navbar:
   bg: primary
   structure:
     left:  [intro, reference, articles, wiki, news]
-    right: github
+    right: [github]
   components:
     wiki:
+      text: Wiki
       href: https://github.com/schochastics/rtoot/wiki
       aria-label: Wiki
