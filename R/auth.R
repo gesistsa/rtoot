@@ -23,11 +23,11 @@
 #' @export
 auth_setup <- function(instance = NULL, type = NULL, name = NULL, path = NULL, clipboard = FALSE, verbose = TRUE) {
   while (is.null(instance) || instance == "") {
-    instance <- readline(prompt = "On which instance do you want to authenticate (e.g., \"mastodon.social\")? ")
+    instance <- rtoot_ask(prompt = "On which instance do you want to authenticate (e.g., \"mastodon.social\")? ", pass = FALSE)
   }
   client <- get_client(instance = instance)
   if (!isTRUE(type %in% c("public", "user"))) {
-    type <- c("public", "user")[utils::menu(c("public", "user"), title = "What type of token do you want?")]
+    type <- c("public", "user")[rtoot_menu(choices = c("public", "user"), title = "What type of token do you want?", verbose = TRUE)]
   }
   token <- process_created_token(create_token(client, type = type), name = name, path = path, clipboard = clipboard, verify = TRUE)
   return(token) ## explicit
@@ -94,13 +94,7 @@ create_token <- function(client, type = "public"){
       scope='read write follow',
       response_type="code"
       ))
-    passFun <- readline
-    if (requireNamespace("rstudioapi", quietly = TRUE)) {
-      if (rstudioapi::isAvailable()) {
-        passFun <- rstudioapi::askForPassword
-      }
-    }
-    auth_code <- passFun(prompt = "enter authorization code: ")
+    auth_code <- rtoot_ask(prompt = "enter authorization code: ", pass = TRUE, check_rstudio = TRUE, default = "")
     auth2 <- httr::POST(httr::modify_url(url = url, path = "oauth/token"),body=list(
       client_id=client$client_id ,
       client_secret=client$client_secret,

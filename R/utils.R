@@ -174,3 +174,24 @@ rtoot_menu <- function(choices = c("yes", "no"), title, default = 2L, verbose = 
   }
   return(utils::menu(choices = choices, title = title))
 }
+
+## A kind of drop-in replacement of base:readline, with a plus
+rtoot_ask <- function(prompt = "enter authorization code: ", pass = TRUE, check_rstudio = TRUE, default = "pass", verbose = TRUE) {
+  if (!is.null(options("rtoot_cheatcode")$rtoot_cheatcode)) {
+    if (options("rtoot_cheatcode")$rtoot_cheatcode == "uuddlrlrba") {
+      sayif(verbose, prompt)
+      return(options("rtoot_cheat_ask_answer")$rtoot_cheat_ask_answer)
+    }
+  }
+  if (isFALSE(interactive())) {
+    sayif(verbose, prompt)
+    return(default)
+  }
+  passFun <- readline
+  if (isTRUE(pass) && isTRUE(check_rstudio) && (requireNamespace("rstudioapi", quietly = TRUE))) {
+    if (rstudioapi::isAvailable()) {
+      passFun <- rstudioapi::askForPassword
+    }
+  }
+  return(passFun(prompt = prompt))
+}
