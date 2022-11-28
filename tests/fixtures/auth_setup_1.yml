@@ -1,0 +1,192 @@
+http_interactions:
+- request:
+    method: post
+    uri: https://emacs.ch/api/v1/apps
+    body:
+      encoding: ''
+      string: client_name=rtoot package,redirect_uris=urn:ietf:wg:oauth:2.0:oob,scopes=read
+        write follow
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      cache-control: no-store
+      content-encoding: gzip
+      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
+        ''none''; font-src ''self'' https://emacs.ch; img-src ''self'' https: data:
+        blob: https://emacs.ch; style-src ''self'' https://emacs.ch ''nonce-3ITRp4Wk4xrae+ZhW2UCCQ=='';
+        media-src ''self'' https: data: https://emacs.ch; frame-src ''self'' https:;
+        manifest-src ''self'' https://emacs.ch; connect-src ''self'' data: blob: https://emacs.ch
+        https://emacs.ch wss://emacs.ch; script-src ''self'' https://emacs.ch ''wasm-unsafe-eval'';
+        child-src ''self'' blob: https://emacs.ch; worker-src ''self'' blob: https://emacs.ch'
+      content-type: application/json; charset=utf-8
+      date: Mon, 28 Nov 2022 13:23:07 GMT
+      etag: W/"0d61ba85c54d1c98c94abd0f8930e543"
+      permissions-policy: interest-cohort=()
+      server: Mastodon
+      strict-transport-security: max-age=63072000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      - Origin
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '299'
+      x-ratelimit-reset: '2022-11-28T13:25:00.143417Z'
+      x-request-id: 896fd411-af67-4dad-83f5-ce41b54fa77e
+      x-runtime: '0.018009'
+      x-xss-protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: '{"id":"591","name":"rtoot package","website":null,"redirect_uri":"urn:ietf:wg:oauth:2.0:oob","client_id":"NhFeqmb5HsiZT5Vw9tQiHk3-5Ao2fIi7lJNEd7A8ACc","client_secret":"49G2pbGlrH_UluU5u2i2bqGTEz4mE3ePFk2UJ2Hm20I","vapid_key":"BIHyZ27zWZdWouMY4HI4xHDhRfshivPwVTsjtzQNl4rbYoX0l2j9HBvllsTB19JdBWrEpgAPBn_I1JQSwM5mi0M="}'
+  recorded_at: 2022-11-28 13:23:07 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.2
+- request:
+    method: post
+    uri: https://emacs.ch/oauth/token
+    body:
+      encoding: ''
+      string: client_id=NhFeqmb5HsiZT5Vw9tQiHk3-5Ao2fIi7lJNEd7A8ACc,client_secret=49G2pbGlrH_UluU5u2i2bqGTEz4mE3ePFk2UJ2Hm20I,redirect_uri=urn:ietf:wg:oauth:2.0:oob,grant_type=client_credentials
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      cache-control: no-store
+      content-encoding: gzip
+      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
+        ''none''; font-src ''self'' https://emacs.ch; img-src ''self'' https: data:
+        blob: https://emacs.ch; style-src ''self'' https://emacs.ch ''nonce-gFxdIC77wLgz/SyquYfetg=='';
+        media-src ''self'' https: data: https://emacs.ch; frame-src ''self'' https:;
+        manifest-src ''self'' https://emacs.ch; connect-src ''self'' data: blob: https://emacs.ch
+        https://emacs.ch wss://emacs.ch; script-src ''self'' https://emacs.ch ''wasm-unsafe-eval'';
+        child-src ''self'' blob: https://emacs.ch; worker-src ''self'' blob: https://emacs.ch'
+      content-type: application/json; charset=utf-8
+      date: Mon, 28 Nov 2022 13:23:07 GMT
+      etag: W/"0fa0a6f9df5a05d837b563deec0208e1"
+      permissions-policy: interest-cohort=()
+      pragma: no-cache
+      server: Mastodon
+      strict-transport-security: max-age=63072000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      - Origin
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-request-id: c0eafc85-e1f9-41f8-98a4-debefa5e6c91
+      x-runtime: '0.020072'
+      x-xss-protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: '{"access_token":"Xc_8fXw6ingZrx1HESYascm6UrqW7PRuhwPRW_1r76s","token_type":"Bearer","scope":"read","created_at":1669641787}'
+  recorded_at: 2022-11-28 13:23:07 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.2
+- request:
+    method: get
+    uri: https://emacs.ch/api/v1/apps/verify_credentials
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: Bearer Xc_8fXw6ingZrx1HESYascm6UrqW7PRuhwPRW_1r76s
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      cache-control: no-store
+      content-encoding: gzip
+      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
+        ''none''; font-src ''self'' https://emacs.ch; img-src ''self'' https: data:
+        blob: https://emacs.ch; style-src ''self'' https://emacs.ch ''nonce-kOIlX0xtAiQ+7llXN0qy0g=='';
+        media-src ''self'' https: data: https://emacs.ch; frame-src ''self'' https:;
+        manifest-src ''self'' https://emacs.ch; connect-src ''self'' data: blob: https://emacs.ch
+        https://emacs.ch wss://emacs.ch; script-src ''self'' https://emacs.ch ''wasm-unsafe-eval'';
+        child-src ''self'' blob: https://emacs.ch; worker-src ''self'' blob: https://emacs.ch'
+      content-type: application/json; charset=utf-8
+      date: Mon, 28 Nov 2022 13:23:07 GMT
+      etag: W/"b07c3251596e9d768a5c3472c8bad34d"
+      permissions-policy: interest-cohort=()
+      server: Mastodon
+      strict-transport-security: max-age=63072000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      - Origin
+      x-cached: MISS
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '298'
+      x-ratelimit-reset: '2022-11-28T13:25:00.333477Z'
+      x-request-id: a9bf0c87-b49f-436c-9302-ed368484d1f8
+      x-runtime: '0.009664'
+      x-xss-protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: '{"name":"rtoot package","website":null,"vapid_key":"BIHyZ27zWZdWouMY4HI4xHDhRfshivPwVTsjtzQNl4rbYoX0l2j9HBvllsTB19JdBWrEpgAPBn_I1JQSwM5mi0M="}'
+  recorded_at: 2022-11-28 13:23:07 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.2
+- request:
+    method: get
+    uri: https://emacs.ch/api/v1/apps/verify_credentials
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: Bearer Xc_8fXw6ingZrx1HESYascm6UrqW7PRuhwPRW_1r76s
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      cache-control: no-store
+      content-encoding: gzip
+      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
+        ''none''; font-src ''self'' https://emacs.ch; img-src ''self'' https: data:
+        blob: https://emacs.ch; style-src ''self'' https://emacs.ch ''nonce-RiGnzhz/8g33/Hnr7C2MFQ=='';
+        media-src ''self'' https: data: https://emacs.ch; frame-src ''self'' https:;
+        manifest-src ''self'' https://emacs.ch; connect-src ''self'' data: blob: https://emacs.ch
+        https://emacs.ch wss://emacs.ch; script-src ''self'' https://emacs.ch ''wasm-unsafe-eval'';
+        child-src ''self'' blob: https://emacs.ch; worker-src ''self'' blob: https://emacs.ch'
+      content-type: application/json; charset=utf-8
+      date: Mon, 28 Nov 2022 13:23:07 GMT
+      etag: W/"b07c3251596e9d768a5c3472c8bad34d"
+      permissions-policy: interest-cohort=()
+      server: Mastodon
+      strict-transport-security: max-age=63072000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      - Origin
+      x-cached: MISS
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '297'
+      x-ratelimit-reset: '2022-11-28T13:25:00.436312Z'
+      x-request-id: fa66100c-14a1-45ac-b35b-191936a2eceb
+      x-runtime: '0.008256'
+      x-xss-protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: '{"name":"rtoot package","website":null,"vapid_key":"BIHyZ27zWZdWouMY4HI4xHDhRfshivPwVTsjtzQNl4rbYoX0l2j9HBvllsTB19JdBWrEpgAPBn_I1JQSwM5mi0M="}'
+  recorded_at: 2022-11-28 13:23:07 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.2
