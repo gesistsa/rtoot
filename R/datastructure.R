@@ -112,7 +112,11 @@ parse_poll <- function(poll, parse_date = TRUE) {
     if (parse_date) {
       output$expires_at <- format_date(output$expires_at)
     }
-    for (field in c("own_votes", "options", "emojis")) {
+    output[["own_votes"]] <- I(list(list()))
+    if (has_name_(poll, "own_votes") & length(poll[["own_votes"]] != 0)) {
+      output[["own_votes"]] <- list(poll[["own_votes"]])
+    }
+    for (field in c("options", "emojis")) {
       if (has_name_(poll, field) & length(poll[[field]]) != 0) {
         output[[field]] <- list(dplyr::bind_rows(poll[[field]]))
       } else {

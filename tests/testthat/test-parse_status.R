@@ -96,3 +96,23 @@ test_that("date parsing", {
   expect_true("POSIXlt" %in% class(res1$created_at))
   expect_false("POSIXlt" %in% class(res2$created_at))
 })
+
+test_that("poll parsing with own_votes, issue #115", {
+  poll <- list(id = "615", expires_at = "2022-11-27T11:06:56.000Z", expired = TRUE, 
+               multiple = TRUE, votes_count = 86L, voters_count = 84L, voted = TRUE, 
+               own_votes = list(0L), options = list(list(title = "mu4e", 
+                                                         votes_count = 50L),
+                                                    list(title = "notmuch", votes_count = 20L), 
+                                                    list(title = "gnus", votes_count = 13L),
+                                                    list(title = "other (please comment)", 
+                                                         votes_count = 3L)),
+               emojis = list())
+  expect_error(parse_poll(poll), NA)
+  poll$own_votes <- list()
+  expect_error(parse_poll(poll), NA)
+  ## integration test
+  timeline <- readRDS("../testdata/timeline/timeline_with_poll115.RDS")
+  expect_error(s <- parse_status(timeline[[20]]), NA)
+  expect_equal(s$poll[[1]]$own_votes[[1]][[1]], 0)
+  expect_error(v(parse_status)(timeline), NA)
+})
