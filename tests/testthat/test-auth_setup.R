@@ -19,3 +19,13 @@ test_that("auth_setup, instance NULL type NULL", {
 options("rtoot_cheatcode" = NULL)
 options("rtoot_cheat_answer" = NULL)
 options("rtoot_cheat_ask_answer" = NULL)
+
+test_that("respect verbose, #113", {
+  ## https://github.com/schochastics/rtoot/issues/113
+  saved_token_path <- tempfile(fileext = ".rds")
+  vcr::use_cassette("auth_setup_verbose", {
+    expect_silent(token <- auth_setup(instance = "emacs.ch", type = "public", clipboard = FALSE, verbose = FALSE, path = saved_token_path))
+    expect_message(token <- auth_setup(instance = "emacs.ch", type = "public", clipboard = FALSE, verbose = TRUE, path = saved_token_path))
+  })
+  unlink(saved_token_path)
+})

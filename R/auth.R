@@ -29,7 +29,7 @@ auth_setup <- function(instance = NULL, type = NULL, name = NULL, path = NULL, c
   if (!isTRUE(type %in% c("public", "user"))) {
     type <- c("public", "user")[rtoot_menu(choices = c("public", "user"), title = "What type of token do you want?", verbose = TRUE)]
   }
-  token <- process_created_token(create_token(client, type = type), name = name, path = path, clipboard = clipboard, verify = TRUE)
+  token <- process_created_token(create_token(client, type = type), name = name, path = path, clipboard = clipboard, verify = TRUE, verbose = verbose)
   return(token) ## explicit
 }
 
@@ -39,12 +39,12 @@ process_created_token <- function(token, name = NULL, path = NULL, clipboard = F
     options("rtoot_token" = token_path)
   }
   if (isTRUE(verify)) {
-    verify_credentials(token) # this should be further up before saving, but seems to often fail
+    verify_credentials(token, verbose = verbose) # this should be further up before saving, but seems to often fail
   }
   if (isTRUE(clipboard)) {
     convert_token_to_envvar(token = token, clipboard = TRUE, verbose = verbose)
   }
-  check_token_rtoot(token)
+  check_token_rtoot(token, verbose = verbose)
 }
 
 ## login described at https://docs.joinmastodon.org/client/authorized/
