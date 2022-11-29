@@ -8,6 +8,8 @@
 \alias{get_instance_emoji}
 \alias{get_instance_directory}
 \alias{get_instance_trends}
+\alias{get_instance_rules}
+\alias{get_instance_blocks}
 \title{Get various information about a specific instance}
 \usage{
 get_instance_general(instance = NULL, token = NULL, anonymous = TRUE)
@@ -35,6 +37,10 @@ get_instance_trends(
   limit = 10,
   anonymous = TRUE
 )
+
+get_instance_rules(instance = NULL, token = NULL, anonymous = TRUE)
+
+get_instance_blocks(instance = NULL, token = NULL, anonymous = TRUE)
 }
 \arguments{
 \item{instance}{character, the server name of the instance where the status is located. If \code{NULL}, the same instance used to obtain the token is used.}
@@ -67,6 +73,8 @@ Get various information about a specific instance
 \item{get_instance_emoji}{Lists custom emojis available on the instance}
 \item{get_instance_directory}{A directory of profiles that the instance is aware of}
 \item{get_instance_trends}{Tags that are being used more frequently within the past week}
+\item{get_instance_rules}{Prints the rules of an instance}
+\item{get_instance_blocks}{List of domains that are blocked by an instance.}
 }
 }
 \examples{
@@ -75,6 +83,6 @@ Get various information about a specific instance
  get_instance_activity("mastodon.social")
  get_instance_emoji("mastodon.social")
  get_instance_peers("mastodon.social")
- get_instance_directory("mastodon.social",limit=2)
+ get_instance_directory("mastodon.social",limit = 2)
 }
 }
