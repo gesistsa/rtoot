@@ -63,7 +63,7 @@ get_context <- function(id, instance = NULL, token = NULL, anonymous = FALSE, pa
 #' get_poll(id = "105976")
 #' }
 get_poll <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
-  process_request(token = token,path = path <- paste0("/api/v1/polls/", id), instance = instance,
+  process_request(token = token,path = paste0("/api/v1/polls/", id), instance = instance,
                   anonymous = anonymous,parse = parse,FUN = parse_poll)
 }
 
@@ -101,8 +101,7 @@ get_timeline_public <- function(local = FALSE, remote = FALSE, only_media = FALS
                           max_id, since_id, min_id)
   process_request(token = token,path = "/api/v1/timelines/public",instance = instance,params = params,
                   anonymous = anonymous,parse = parse,FUN = v(parse_status),
-                  n = limit, page_size = 40L,
-                  retryonratelimit = retryonratelimit,
+                  n = limit, retryonratelimit = retryonratelimit,
                   verbose = verbose)
 }
 
@@ -126,7 +125,7 @@ get_timeline_hashtag <- function(hashtag = "rstats", local = FALSE, only_media =
   path <- paste0("/api/v1/timelines/tag/", gsub("^#+", "", hashtag))
   process_request(token = token,path = path,instance = instance,params = params,
                   anonymous = anonymous,parse = parse,FUN = v(parse_status),
-                  n = limit, page_size = 40L, retryonratelimit = retryonratelimit,
+                  n = limit, retryonratelimit = retryonratelimit,
                   verbose = verbose)
 }
 
@@ -145,8 +144,7 @@ get_timeline_home <- function(local = FALSE, max_id, since_id, min_id, limit = 2
   params <- handle_params(list(local = local, limit = min(limit,40L)), max_id, since_id, min_id)
   process_request(token = token,path = "/api/v1/timelines/home", params = params,
                   parse = parse,FUN = v(parse_status),
-                  n = limit, page_size = 40L,
-                  retryonratelimit = retryonratelimit,
+                  n = limit, retryonratelimit = retryonratelimit,
                   verbose = verbose)
 }
 
@@ -162,7 +160,6 @@ get_timeline_list <- function(list_id, max_id, since_id, min_id,
   params <- handle_params(list(limit = min(limit,40L)), max_id, since_id, min_id)
   process_request(token = token,path = paste0("/api/v1/timelines/list/", list_id), params = params,
                   parse = parse,FUN = v(parse_status),
-                  n = limit, page_size = 40L,
-                  retryonratelimit = retryonratelimit,
+                  n = limit, retryonratelimit = retryonratelimit,
                   verbose = verbose)
 }

@@ -94,8 +94,7 @@ get_account_followers <- function(id,max_id,since_id,
   process_request(token = token,path = paste0("api/v1/accounts/",id,"/followers"),
                   params = params,
                   parse = parse, FUN = v(parse_account),
-                  n = limit, page_size = 40L,
-                  retryonratelimit = retryonratelimit,
+                  n = limit, retryonratelimit = retryonratelimit,
                   verbose = verbose)
 }
 #' Get accounts a user follows
@@ -117,8 +116,7 @@ get_account_following <- function(id,max_id,since_id,limit = 40L,
   process_request(token = token,path = paste0("api/v1/accounts/",id,"/following"),
                   params = params,
                   parse = parse, FUN = v(parse_account),
-                  n = limit, page_size = 40L, retryonratelimit = retryonratelimit,
-                  verbose = verbose)
+                  n = limit, retryonratelimit = retryonratelimit, verbose = verbose)
 }
 
 #' Get featured tags of a user
@@ -189,8 +187,7 @@ get_account_bookmarks <- function(max_id,since_id,min_id,limit = 40L,
   process_request(token = token, path = "api/v1/bookmarks",
                   params = params,
                   parse = parse, FUN = v(parse_status), n = limit,
-                  page_size = 40L,retryonratelimit = retryonratelimit,
-                  verbose = verbose)
+                  retryonratelimit = retryonratelimit, verbose = verbose)
 }
 
 #' Get favourites of user
@@ -214,8 +211,7 @@ get_account_favourites <- function(max_id,min_id,limit = 40L,
   process_request(token = token,path = "api/v1/favourites",
                   params = params,
                   parse = parse, FUN = v(parse_status), n = limit,
-                  page_size = 40L,retryonratelimit = retryonratelimit,
-                  verbose = verbose)
+                  retryonratelimit = retryonratelimit, verbose = verbose)
 }
 
 #' Get blocks of user
@@ -238,8 +234,7 @@ get_account_blocks <- function(max_id,since_id,limit = 40L,
   process_request(token = token,path = "api/v1/blocks",
                   params = params,
                   parse = parse, FUN = v(parse_account), n = limit,
-                  page_size = 40L,retryonratelimit = retryonratelimit,
-                  verbose = verbose)
+                  retryonratelimit = retryonratelimit, verbose = verbose)
 }
 
 #' Get mutes of user
@@ -262,6 +257,6 @@ get_account_mutes <- function(max_id,since_id,limit = 40L,
   process_request(token = token,path = "api/v1/mutes",
                   params = params,
                   parse = parse, FUN = v(parse_account),
-                  n = limit, page_size = 40L, retryonratelimit = retryonratelimit,
+                  n = limit, retryonratelimit = retryonratelimit,
                   verbose = verbose)
 }
