@@ -103,8 +103,8 @@ test_that("get_instance_rules",{
   expect_true("tbl_df" %in% class(x))
 })
 
-test_that("get_instance_blocked",{
-  vcr::use_cassette("get_instance_blocked_default",{
+test_that("get_instance_blocks",{
+  vcr::use_cassette("get_instance_blocks_default",{
     x <- get_instance_blocks(instance = "social.tchncs.de", anonymous = TRUE)
   })
   expect_true(nrow(x) != 0)
