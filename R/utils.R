@@ -14,7 +14,7 @@ print.rtoot_bearer <- function(x,...){
 ## https://docs.joinmastodon.org/methods/statuses/
 ## https://docs.joinmastodon.org/methods/timelines/
 
-make_get_request <- function(token, path, params, instance = NULL, anonymous = FALSE, ...) {
+make_get_request <- function(token, path, params = list(), instance = NULL, anonymous = FALSE, ...) {
   if (is.null(instance) && anonymous) {
     stop("provide either an instance or a token")
   }
@@ -74,7 +74,7 @@ parse_header <- function(header){
 process_request <- function(token = NULL,
                             path,
                             instance = NULL,
-                            params,
+                            params = list(),
                             anonymous = FALSE,
                             parse = TRUE,
                             FUN = identity,
@@ -193,4 +193,17 @@ rtoot_ask <- function(prompt = "enter authorization code: ", pass = TRUE, check_
     }
   }
   return(passFun(prompt = prompt))
+}
+
+handle_params <- function(params, max_id, since_id, min_id) {
+    if (!missing(max_id)) {
+        params$max_id <- max_id
+    }
+    if (!missing(since_id)) {
+        params$since_id <- since_id
+    }
+    if (!missing(min_id)) {
+        params$min_id <- min_id
+    }
+    params
 }

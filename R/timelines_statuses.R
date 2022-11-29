@@ -17,31 +17,21 @@
 #' }
 #' @export
 get_status <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
-
-  path <- paste0("/api/v1/statuses/", id)
-  params <- list()
-
-  process_request(token = token,path = path,instance = instance,params = params,
+  process_request(token = token,path = paste0("/api/v1/statuses/", id),instance = instance,
                   anonymous = anonymous,parse = parse,FUN = parse_status)
 }
 
 #' @rdname get_status
 #' @export
 get_reblogged_by <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
-  path <- paste0("/api/v1/statuses/", id, "/reblogged_by")
-  params <- list()
-
-  process_request(token = token,path = path,instance = instance,params = params,
+  process_request(token = token,path = paste0("/api/v1/statuses/", id, "/reblogged_by"),instance = instance,
                   anonymous = anonymous,parse = parse,FUN = v(parse_account))
 }
 
 #' @rdname get_status
 #' @export
 get_favourited_by <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
-  path <- paste0("/api/v1/statuses/", id, "/favourited_by")
-  params <- list()
-
-  process_request(token = token,path = path,instance = instance,params = params,
+  process_request(token = token,path = paste0("/api/v1/statuses/", id, "/favourited_by"),instance = instance,
                   anonymous = anonymous,parse = parse,FUN = v(parse_account))
 }
 
@@ -57,12 +47,8 @@ get_favourited_by <- function(id, instance = NULL, token = NULL, anonymous = FAL
 #' get_context(id = "109294719267373593", instance = "mastodon.social")
 #' }
 get_context <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
-  path <- paste0("/api/v1/statuses/", id, "/context")
-  params <- list()
-
-  process_request(token = token,path = path,instance = instance,params = params,
+  process_request(token = token,path = paste0("/api/v1/statuses/", id, "/context"),instance = instance,
                   anonymous = anonymous,parse = parse,FUN = parse_context)
-
 }
 
 #' View a poll
@@ -77,9 +63,7 @@ get_context <- function(id, instance = NULL, token = NULL, anonymous = FALSE, pa
 #' get_poll(id = "105976")
 #' }
 get_poll <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
-  path <- paste0("/api/v1/polls/", id)
-
-  process_request(token = token,path = path,instance = instance,params = list(),
+  process_request(token = token,path = paste0("/api/v1/polls/", id), instance = instance,
                   anonymous = anonymous,parse = parse,FUN = parse_poll)
 }
 
@@ -112,24 +96,12 @@ get_timeline_public <- function(local = FALSE, remote = FALSE, only_media = FALS
                                 max_id, since_id, min_id, limit = 20L,
                                 instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE,
                                 retryonratelimit = TRUE,verbose = TRUE) {
-  params <- list(local = local, remote = remote,
-                 only_media = only_media, limit = min(limit,40))
-  n <- limit
-  if (!missing(max_id)) {
-    params$max_id <- max_id
-  }
-  if (!missing(since_id)) {
-    params$since_id <- since_id
-  }
-  if (!missing(min_id)) {
-    params$min_id <- min_id
-  }
-  path = "/api/v1/timelines/public"
-
-  process_request(token = token,path = path,instance = instance,params = params,
+  params <- handle_params(list(local = local, remote = remote,
+                               only_media = only_media, limit = min(limit,40)),
+                          max_id, since_id, min_id)
+  process_request(token = token,path = "/api/v1/timelines/public",instance = instance,params = params,
                   anonymous = anonymous,parse = parse,FUN = v(parse_status),
-                  n = n, page_size = 40L,
-                  retryonratelimit = retryonratelimit,
+                  n = limit, retryonratelimit = retryonratelimit,
                   verbose = verbose)
 }
 
@@ -149,22 +121,11 @@ get_timeline_hashtag <- function(hashtag = "rstats", local = FALSE, only_media =
                                  max_id, since_id, min_id, limit = 20L, instance = NULL,
                                  token = NULL, anonymous = FALSE, parse = TRUE,
                                  retryonratelimit = TRUE,verbose = TRUE) {
-  n <- limit
-  params <- list(local = local, only_media = only_media, limit = min(limit,40L))
-  if (!missing(max_id)) {
-    params$max_id <- max_id
-  }
-  if (!missing(since_id)) {
-    params$since_id <- since_id
-  }
-  if (!missing(min_id)) {
-    params$min_id <- min_id
-  }
+  params <- handle_params(list(local = local, only_media = only_media, limit = min(limit,40L)), max_id, since_id, min_id)
   path <- paste0("/api/v1/timelines/tag/", gsub("^#+", "", hashtag))
-
   process_request(token = token,path = path,instance = instance,params = params,
                   anonymous = anonymous,parse = parse,FUN = v(parse_status),
-                  n = n, page_size = 40L, retryonratelimit = retryonratelimit,
+                  n = limit, retryonratelimit = retryonratelimit,
                   verbose = verbose)
 }
 
@@ -180,23 +141,10 @@ get_timeline_hashtag <- function(hashtag = "rstats", local = FALSE, only_media =
 #' }
 get_timeline_home <- function(local = FALSE, max_id, since_id, min_id, limit = 20L,
                               token = NULL, parse = TRUE,retryonratelimit = TRUE,verbose = TRUE) {
-  n <- limit
-  params <- list(local = local, limit = min(limit,40L))
-  if (!missing(max_id)) {
-    params$max_id <- max_id
-  }
-  if (!missing(since_id)) {
-    params$since_id <- since_id
-  }
-  if (!missing(min_id)) {
-    params$min_id <- min_id
-  }
-  path = "/api/v1/timelines/home"
-
-  process_request(token = token,path = path,params = params,
+  params <- handle_params(list(local = local, limit = min(limit,40L)), max_id, since_id, min_id)
+  process_request(token = token,path = "/api/v1/timelines/home", params = params,
                   parse = parse,FUN = v(parse_status),
-                  n = n, page_size = 40L,
-                  retryonratelimit = retryonratelimit,
+                  n = limit, retryonratelimit = retryonratelimit,
                   verbose = verbose)
 }
 
@@ -209,22 +157,9 @@ get_timeline_home <- function(local = FALSE, max_id, since_id, min_id, limit = 2
 get_timeline_list <- function(list_id, max_id, since_id, min_id,
                               limit = 20L, token = NULL, parse = TRUE,
                               retryonratelimit = TRUE,verbose = TRUE) {
-  n <- limit
-  params <- list(limit = min(limit,40L))
-  if (!missing(max_id)) {
-    params$max_id <- max_id
-  }
-  if (!missing(since_id)) {
-    params$since_id <- since_id
-  }
-  if (!missing(min_id)) {
-    params$min_id <- min_id
-  }
-  path <- paste0("/api/v1/timelines/list/", list_id)
-
-  process_request(token = token,path = path,params = params,
+  params <- handle_params(list(limit = min(limit,40L)), max_id, since_id, min_id)
+  process_request(token = token,path = paste0("/api/v1/timelines/list/", list_id), params = params,
                   parse = parse,FUN = v(parse_status),
-                  n = n, page_size = 40L,
-                  retryonratelimit = retryonratelimit,
+                  n = limit, retryonratelimit = retryonratelimit,
                   verbose = verbose)
 }
