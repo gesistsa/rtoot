@@ -1,0 +1,58 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://social.tchncs.de/api/v1/instance/rules
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      cache-control: no-store
+      content-encoding: gzip
+      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
+        ''none''; font-src ''self'' https://social.tchncs.de; img-src ''self'' https:
+        data: blob: https://social.tchncs.de; style-src ''self'' https://social.tchncs.de
+        ''nonce-L40kTvL4U7WwPbNnPET0mA==''; media-src ''self'' https: data: https://social.tchncs.de;
+        frame-src ''self'' https:; manifest-src ''self'' https://social.tchncs.de;
+        connect-src ''self'' data: blob: https://social.tchncs.de https://f2.tchncs.de
+        wss://social.tchncs.de; script-src ''self'' https://social.tchncs.de ''wasm-unsafe-eval'';
+        child-src ''self'' blob: https://social.tchncs.de; worker-src ''self'' blob:
+        https://social.tchncs.de'
+      content-type: application/json; charset=utf-8
+      date: Tue, 29 Nov 2022 12:12:48 GMT
+      etag: W/"f07d72d0277e30ebfb1ed22ccfe244fb"
+      permissions-policy:
+      - interest-cohort=()
+      - interest-cohort=()
+      server: Mastodon
+      strict-transport-security: max-age=63072000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      - Origin
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '299'
+      x-ratelimit-reset: '2022-11-29T12:15:00.393410Z'
+      x-request-id: d05e2247-7175-415a-8c35-31c7ed95fc75
+      x-runtime: '0.009553'
+      x-xss-protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: '[{"id":"1","text":"Be nice to each other"},{"id":"2","text":"Do not
+        publish advertisements"},{"id":"3","text":"Do not publish conspiracy myths"},{"id":"4","text":"Do
+        not publish content illegal in Germany and/or France, such as holocaust denial
+        or Nazi symbolism"},{"id":"5","text":"Do not publish content promoting the
+        ideology of National Socialism"},{"id":"6","text":"Do not publish content
+        that is hateful towards specific individuals or groups, or intended to cause
+        or incite harm"}]'
+  recorded_at: 2022-11-29 12:13:08 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.2

@@ -1,0 +1,106 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://social.tchncs.de/api/v1/instance/domain_blocks
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      cache-control: no-store
+      content-encoding: gzip
+      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
+        ''none''; font-src ''self'' https://social.tchncs.de; img-src ''self'' https:
+        data: blob: https://social.tchncs.de; style-src ''self'' https://social.tchncs.de
+        ''nonce-MShkf8UG3fn1NQzkH5kOyQ==''; media-src ''self'' https: data: https://social.tchncs.de;
+        frame-src ''self'' https:; manifest-src ''self'' https://social.tchncs.de;
+        connect-src ''self'' data: blob: https://social.tchncs.de https://f2.tchncs.de
+        wss://social.tchncs.de; script-src ''self'' https://social.tchncs.de ''wasm-unsafe-eval'';
+        child-src ''self'' blob: https://social.tchncs.de; worker-src ''self'' blob:
+        https://social.tchncs.de'
+      content-type: application/json; charset=utf-8
+      date: Tue, 29 Nov 2022 12:25:29 GMT
+      etag: W/"5dd9bef452a40b172d9ee6f048d4461b"
+      permissions-policy:
+      - interest-cohort=()
+      - interest-cohort=()
+      server: Mastodon
+      strict-transport-security: max-age=63072000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      - Origin
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '298'
+      x-ratelimit-reset: '2022-11-29T12:30:00.070647Z'
+      x-request-id: d6a861e8-ed65-413f-bbc4-44de5cf0fc67
+      x-runtime: '0.012301'
+      x-xss-protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: '[{"domain":"dev-wiki.de","digest":"def4d2e153204d0ae1ded5b6ae6c35e7777eda93bf39da7bc53669ac13c8a129","severity":"silence","comment":"Not
+        properly moderated, admin seems empathize with corona myths.  "},{"domain":"gs.kawa-kun.com","digest":"77a0b101a224534a7bc7db793f2670431a3ff414d9bac23abfd7c38ba3e35096","severity":"silence","comment":"Considered
+        being lawless"},{"domain":"humblr.social","digest":"d886ef4cb80c77e2638c4f1bc162d06052f0b6d70428eee116bb52d93ec4bd6b","severity":"silence","comment":"Workaround
+        for instance-wide CW"},{"domain":"myfreecams.com","digest":"4d13e80e6cd7863d836618a0ee08e9f4b66d28671b9ec942f2b648177e9f83e7","severity":"silence","comment":"Workaround
+        for instance-wide CW"},{"domain":"pawoo.net","digest":"e7c641cf9cd8b5c4513e22d0dfd3f914835a16bd4011801dfa0976fedf61bf02","severity":"silence","comment":"Media-block
+        due to in germany illegal media"},{"domain":"sinblr.com","digest":"d77ba0c0b39011b7c894510db43047b5b3159a969e2ec887663744ba6924f01d","severity":"silence","comment":"workaround,
+        untagged nsfw content"},{"domain":"765racing.com","digest":"2857502859a31520ad5a21bcb31ab9a54ec08205ae129e8d6f6e753626484eaf","severity":"suspend","comment":"Considered
+        being lawless"},{"domain":"anim*.****ite","digest":"e7afdc8e99794b60044d2dc69853232fd88bf7767b08d57c06eae1dcdc2cf6d6","severity":"suspend","comment":"shitposting
+        instance, administration seems pro-pedophilia and lolicon-content"},{"domain":"bae.st","digest":"87acc08804bcc3b72254fcae7381f2e03a6cb117d2636480bf65125f88b42da6","severity":"suspend","comment":""},{"domain":"baraag.net","digest":"a3da30d2dfb76009289509cb3f35abd0a43b0736f0abf1ddd17c05685902a6fb","severity":"suspend","comment":"much
+        unmoderated loli content and related"},{"domain":"brands.town","digest":"8a6c5f9ea165f8d3d2f73f35bd420f09454829f8cd7f8c250a348c175badc817","severity":"suspend","comment":"spam
+        / copyright violations / impersonation (funny tho)"},{"domain":"brighteon.social","digest":"0be5721be2346e0b892e6cc0db706b6b950a0d215d9d5481e851785571a89067","severity":"suspend","comment":"hatespeech,
+        misinformation, shitposting, ..."},{"domain":"childpawn.shop","digest":"fc17daf8d2dbc999aa1da044992bff67c4e2f565aabe6bc1f15d74473eff9507","severity":"suspend","comment":"loli/pedophilia,
+        racist content"},{"domain":"crypto-group-buy.com","digest":"4861b07e6450e2a5a862124420db543c46fcc7d280c8e0d5e07b2d388ea1e636","severity":"suspend","comment":"spam"},{"domain":"degenerates.fail","digest":"a61fbbd27becc4c23ca5307f89703853c3538aff5839e8dab161221939a536de","severity":"suspend","comment":"considered
+        being lawless"},{"domain":"exited.eu","digest":"ced9128fc7e5eb0398245e58610c1c006e01ac879e7cb66c6880d2e43174e89b","severity":"suspend","comment":"Considered
+        being lawless"},{"domain":"fedichive.tk","digest":"d6809fe37cd400946160ffb69fd29ab6d5b92ec5bc30c60d1660b02296ec4da3","severity":"suspend","comment":"Spam"},{"domain":"feminism.lgbt","digest":"3542c488b41ce94a2cf9737bfe67c35252941a42af092ac4078634bc36578491","severity":"suspend","comment":"Selfprotection
+        (errors, down) - suspicious activity"},{"domain":"freeatlantis.com","digest":"23414c6b236b245c662efa05db8662743261e08cf154237d5190a6ec26887e1c","severity":"suspend","comment":"fake
+        news / propaganda"},{"domain":"freecu*********t.com","digest":"7f26b4fd2707a70492f35ba6383d8f42f991474a9072f13e2c50bf5915fb9709","severity":"suspend","comment":"shitposting
+        instance, bad moderation"},{"domain":"freefedifollowers.ga","digest":"55c7e62758bbff9205c11efab25bddf0437423e64fd99c110d76e3479e7ee8f1","severity":"suspend","comment":"Spam
+        / Harmful administration activities"},{"domain":"freespeechextremist.com","digest":"a67a3f85d90881ae32716d0eaf5a348b53096e07ea38a20797d74824074e281b","severity":"suspend","comment":"Workaround
+        for instance-wide CW"},{"domain":"friendica.eskimo.com","digest":"8be74977142a1008ea8c5173c60cb33a1bda7c5ef794b0d38ddef69b5c266b79","severity":"suspend","comment":"admin
+        appears to be openly racist"},{"domain":"gab.ai","digest":"a32ca19226c88a08be5483053f71ccacae76506b60c9ac14174bbc50d9fc3705","severity":"suspend","comment":"Considered
+        being lawless"},{"domain":"gab.com","digest":"e8bd7afb2125b7ea5e1b885fac2a657d817eec289ed870aa3d1d0acbe6aded8f","severity":"suspend","comment":"Considered
+        being lawless"},{"domain":"gameliberty.club","digest":"75e80dd194bc635186cf0b4a07524d7746b4b261cbd5fb15007189e4fccfbbb6","severity":"suspend","comment":"Suspicious
+        or harmful administration activity / considered lawless"},{"domain":"getwild.online","digest":"7c17b88f4b78606d5094cea655284679a380525cd7642a6c1ef24de5a0cc2a24","severity":"suspend","comment":"dedicated
+        to porn, not properly enforcing nsfw. rejecting media would be useless as
+        pretty much only media is posted."},{"domain":"gitmo.life","digest":"ce478739d7d3627cbde08e6276b80d459a2bbf842b2698a195684f581ac8defa","severity":"suspend","comment":"considered
+        being lawless"},{"domain":"hentai.baby","digest":"55ae7fc705dc6b408085ba34c7f0172ffce1fad11c707ca900f49475dad3a352","severity":"suspend","comment":"loli"},{"domain":"iddqd.social","digest":"8b92d2bc4447cf5475ec0a688c1894ae5ccc720c034e46c2855ac808909172c9","severity":"suspend","comment":"multiple
+        rule violations"},{"domain":"kenfm.de","digest":"bffe6724c620cd252569678f9cdee5a1da51f23ec7d2ce45508ad10f0499d3ff","severity":"suspend","comment":"Verschwörungs-Mythen
+        und Hetze"},{"domain":"kitty.town","digest":"83b5c39377a7ddfe05e1b10512a9c3c84f997e1a1bc8b4eb2abc2845755d4c64","severity":"suspend","comment":"Suspicious
+        or harmful administration activity"},{"domain":"kiwifarms.cc","digest":"8c07b582ccad117d4fa14d4acca0d6977a0a737eb00e0f6a1ddf08228532e708","severity":"suspend","comment":"Workaround
+        for instance-wide CW"},{"domain":"loli.pizza","digest":"1522dc9020fbf0ce2a1433a49bc9e026b3042b4570707dc61c980d33af128203","severity":"suspend","comment":"Not
+        well moderated, allows loli content - even \"boosted\" by admin"},{"domain":"masto.glx-consulting.com","digest":"99175a148ba5f37647e0e8e7e797066bcd36797e93eba8c488bb5811289977e4","severity":"suspend","comment":"Excessive
+        spread of conspiracy myths"},{"domain":"meld.de","digest":"7285a20cadbf9bca0510d695df0c45492700cf11b9a1a55f6004149fd2afdea7","severity":"suspend","comment":"Conspiracy
+        instance"},{"domain":"mstdn.foxfam.club","digest":"ae63b259151df535f1d408367458f52f8aaecbf48c21080eb778703d3a4f703f","severity":"suspend","comment":"appears
+        to be 100% rss bots ... and a ton."},{"domain":"my.dirtyhobby.xyz","digest":"89c918c5efd375789869f7068c6cf47389909ff281a514fa4a60d6f17bda3eb2","severity":"suspend","comment":"unmoderated
+        content"},{"domain":"nazi.social","digest":"a9defb603c0ff2a974c51fcfbf46f19f40f4214f492dbd7e21f0459f283b1902","severity":"suspend","comment":""},{"domain":"neckbeard.xyz","digest":"19452ff02670099643197b3fec15c0d43e42a3dbbe83b0fb4d039d5f77d1932e","severity":"suspend","comment":"considered
+        lawless: shitposter instance seemingly allowing loli/conspiracy/hatespeech
+        content "},{"domain":"newjack.city","digest":"43f46e704409dbeab808c27b5d78ab5164d9bc52a2d06bef7907dca30935ea5e","severity":"suspend","comment":"Considered
+        being lawless"},{"domain":"noagendasocial.com","digest":"03862ed4050b1d6c7b914e369284d75f9cffd17288e13d6587dad5ee51599be5","severity":"suspend","comment":"hatespeech,
+        misinformation, shitposting, ..."},{"domain":"nobodyhasthe.biz","digest":"95896a6fa94fa220d15314771a5757484f1e531a7a0a8ce6bee5d178a1e9966a","severity":"suspend","comment":"national
+        socialism, and more"},{"domain":"ns.auction","digest":"458e6284e52fbebf33c2be2ffef00653fab79f8b4c0ff2da5ce4d0e4653dd925","severity":"suspend","comment":"Unmoderated
+        racism"},{"domain":"pl.smuglo.li","digest":"843729dbdb7430e3ff2364c5fbb6a40df3fe8ea2bf439adb13a7072b691c257e","severity":"suspend","comment":"Considered
+        being lawless"},{"domain":"poa.st","digest":"24f316abb4ecb518311996750acba82970a678e00927266e09e51705267836c2","severity":"suspend","comment":"Self-described
+        as shitposting-instance, much racist content"},{"domain":"posting.lolicon.rocks","digest":"0bdc61adc504242126851f09de2a68f2e6821cc9843e618fd843a5cabf284fea","severity":"suspend","comment":"multiple
+        rule violations by users and admins (such as symbols of national socialism)"},{"domain":"querdenken-711.de","digest":"8eeee5a7e282bb5cbcf6e2f6d6db74b2d4e3ca2dbb21e7abfb4188c047e8a861","severity":"suspend","comment":"dedicated
+        to conspiracy myths"},{"domain":"radiosocial.org","digest":"e662672d14b94b33a85de581cb83125a38f266e52e98158c16ae8c82600c9db1","severity":"suspend","comment":"discontinued
+        instance, block to avoid errors"},{"domain":"sealion.club","digest":"c90dc2eff751603d479d7011e24177a1a3b450a47bb87063d3e295cc33675f85","severity":"suspend","comment":"Considered
+        being lawless"},{"domain":"search.fedi.app","digest":"15e9b52c5fa83bfbe8a8c258bacf9af2c6fc96b7c899bd3ce38e4bbcd760d913","severity":"suspend","comment":""},{"domain":"shitposter.club","digest":"a456580c35ff79445118613dc23cabcc61f4f43ba6d777faaaa667d3de7262c4","severity":"suspend","comment":"Considered
+        being lawless"},{"domain":"sleepy.cafe","digest":"98828c9a5c00114ac673ea4e7c1979599af51ce8ead9d9689a862c1a3e01bef3","severity":"suspend","comment":"shitposting
+        / harassment / nazistuff"},{"domain":"sneed.social","digest":"b86a99c713273468fcdc199bc6b11902dadd1e77960309c606817b00455473ed","severity":"suspend","comment":"shitposting/nazism/hatespeech
+        instance"},{"domain":"social.ancreport.com","digest":"90ef730c962b6bbfb855bc673ec7af634bcdc3bf33b5830709a481f75a427f92","severity":"suspend","comment":"spam
+        and loli content, overall content violates multiple rules"},{"domain":"social.hatthieves.es","digest":"8c8275efb10967a4b75e55e22fa97be182e47a0a0887d2e478a05b905291f8c4","severity":"suspend","comment":"Suspicious
+        or harmful administration activity / considered lawless"},{"domain":"socnet.softgirl.online","digest":"947af47d7e18a94cd7b561e4ee482572d0e1aa899b2aae0d39646b90f91079ba","severity":"suspend","comment":"spam"},{"domain":"solagg.com","digest":"02eeb2d1ddbf3ed33ba965a3ca6c57982afa149dd7e27f50ec47e2e184a09191","severity":"suspend","comment":"spam,
+        possibly harmful activities, will re-review"},{"domain":"twitter.1d4.us","digest":"0c6b4fdf03346b1449ed0a697fe2e4a54a04706ff21e09593e1e4ffc0fb02d22","severity":"suspend","comment":"spam"},{"domain":"varishangout.net","digest":"f2b2f6302c7d4204817a15a4111516493c18c567249af5c3642b1b85352fab1e","severity":"suspend","comment":"loli/weapons/shitpost"},{"domain":"witches.town","digest":"5fceb2569b3e41035b1cfdf9d14e7945efdf2af68ca43cbbdc01fe3acef2db76","severity":"suspend","comment":"Selfprotection
+        (errors) due to instance discontinuation"},{"domain":"youjo.love","digest":"793c2d609d9705168d06554967add315acba674b8b3f5fbedcea86881da7ba6f","severity":"suspend","comment":""}]'
+  recorded_at: 2022-11-29 12:25:31 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.2

@@ -38,6 +38,8 @@ get_fedi_instances  <-  function(n = 20) {
 #'   \item{get_instance_emoji}{Lists custom emojis available on the instance}
 #'   \item{get_instance_directory}{A directory of profiles that the instance is aware of}
 #'   \item{get_instance_trends}{Tags that are being used more frequently within the past week}
+#'   \item{get_instance_rules}{Prints the rules of an instance}
+#'   \item{get_instance_blocks}{List of domains that are blocked by an instance.}
 #' }
 #' @return instance details as list or tibble depending on call function
 #' @examples
@@ -46,7 +48,7 @@ get_fedi_instances  <-  function(n = 20) {
 #'  get_instance_activity("mastodon.social")
 #'  get_instance_emoji("mastodon.social")
 #'  get_instance_peers("mastodon.social")
-#'  get_instance_directory("mastodon.social",limit=2)
+#'  get_instance_directory("mastodon.social",limit = 2)
 #' }
 #' @export
 get_instance_general <- function(instance = NULL,token = NULL, anonymous = TRUE){
@@ -114,3 +116,27 @@ get_instance_trends <- function(instance = NULL, token = NULL, limit = 10,anonym
   tbl$history <- NULL
   tbl
 }
+
+#' @rdname get_instance
+#' @export
+get_instance_rules <- function(instance = NULL, token = NULL, anonymous = TRUE){
+  params <- list()
+  request_results <- make_get_request(token = token,path = "/api/v1/instance/rules",
+                                      instance = instance, params = params,
+                                      anonymous = anonymous)
+  tbl <- dplyr::bind_rows(request_results)
+  tbl
+}
+
+#' @rdname get_instance
+#' @export
+get_instance_blocks <- function(instance = NULL, token = NULL, anonymous = TRUE){
+  params <- list()
+  request_results <- make_get_request(token = token,path = "api/v1/instance/domain_blocks",
+                                      instance = instance, params = params,
+                                      anonymous = anonymous)
+  tbl <- dplyr::bind_rows(request_results)
+  tbl
+}
+
+
