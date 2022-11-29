@@ -52,18 +52,16 @@ get_fedi_instances  <-  function(n = 20) {
 #' }
 #' @export
 get_instance_general <- function(instance = NULL,token = NULL, anonymous = TRUE){
-  request_results <- make_get_request(token = token,path = "/api/v1/instance",
-                                      instance = instance,params = list(),
-                                      anonymous = anonymous)
-  request_results #TODO:format?
+  make_get_request(token = token,path = "/api/v1/instance",
+                   instance = instance,
+                   anonymous = anonymous) #TODO:format?
 }
 
 #' @rdname get_instance
 #' @export
 get_instance_peers <- function(instance = NULL,token = NULL, anonymous = TRUE){
   request_results <- make_get_request(token = token,path = "/api/v1/instance/peers",
-                                      instance = instance,params = list(),
-                                      anonymous = anonymous)
+                                      instance = instance, anonymous = anonymous)
   unlist(request_results)
 }
 
@@ -71,9 +69,7 @@ get_instance_peers <- function(instance = NULL,token = NULL, anonymous = TRUE){
 #' @export
 get_instance_activity <- function(instance = NULL,token = NULL, anonymous = TRUE){
   request_results <- make_get_request(token = token,path = "/api/v1/instance/activity",
-                                      instance = instance,params = list(),
-                                      anonymous = anonymous)
-
+                                      instance = instance, anonymous = anonymous)
   tbl <- dplyr::bind_rows(request_results)
   tbl <- dplyr::mutate(tbl,dplyr::across(dplyr::everything(),as.integer))
   tbl$week <- as.POSIXct(tbl$week,origin="1970-01-01",tz = "UTC")
@@ -84,8 +80,7 @@ get_instance_activity <- function(instance = NULL,token = NULL, anonymous = TRUE
 #' @export
 get_instance_emoji <- function(instance = NULL,token = NULL, anonymous = TRUE){
   request_results <- make_get_request(token = token,path = "/api/v1/custom_emojis",
-                                      instance = instance,params = list(),
-                                      anonymous = anonymous)
+                                      instance = instance, anonymous = anonymous)
   dplyr::bind_rows(request_results)
 }
 
@@ -120,10 +115,8 @@ get_instance_trends <- function(instance = NULL, token = NULL, limit = 10,anonym
 #' @rdname get_instance
 #' @export
 get_instance_rules <- function(instance = NULL, token = NULL, anonymous = TRUE){
-  params <- list()
   request_results <- make_get_request(token = token,path = "/api/v1/instance/rules",
-                                      instance = instance, params = params,
-                                      anonymous = anonymous)
+                                      instance = instance, anonymous = anonymous)
   tbl <- dplyr::bind_rows(request_results)
   tbl
 }
@@ -131,10 +124,8 @@ get_instance_rules <- function(instance = NULL, token = NULL, anonymous = TRUE){
 #' @rdname get_instance
 #' @export
 get_instance_blocks <- function(instance = NULL, token = NULL, anonymous = TRUE){
-  params <- list()
   request_results <- make_get_request(token = token,path = "api/v1/instance/domain_blocks",
-                                      instance = instance, params = params,
-                                      anonymous = anonymous)
+                                      instance = instance, anonymous = anonymous)
   tbl <- dplyr::bind_rows(request_results)
   tbl
 }
