@@ -194,3 +194,16 @@ rtoot_ask <- function(prompt = "enter authorization code: ", pass = TRUE, check_
   }
   return(passFun(prompt = prompt))
 }
+
+handle_params <- function(params, max_id, since_id, min_id) {
+    if (!missing(max_id)) {
+        params$max_id <- max_id
+    }
+    if (!missing(since_id)) {
+        params$since_id <- since_id
+    }
+    if (!missing(min_id)) {
+        params$min_id <- min_id
+    }
+    params
+}

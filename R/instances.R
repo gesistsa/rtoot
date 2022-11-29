@@ -129,5 +129,3 @@ get_instance_blocks <- function(instance = NULL, token = NULL, anonymous = TRUE)
   tbl <- dplyr::bind_rows(request_results)
   tbl
 }
-
-

@@ -57,22 +57,13 @@ get_account_statuses <- function(id, max_id,since_id,min_id, limit = 20L,
                                  anonymous = FALSE,
                                  parse = TRUE,
                                  retryonratelimit = TRUE,verbose = TRUE){
-  path <- paste0("api/v1/accounts/",id,"/statuses")
   n <- limit
-  params <- list(limit = min(limit,20L),exclude_reblogs = exclude_reblogs)
-  if (!missing(max_id)) {
-    params$max_id <- max_id
-  }
-  if (!missing(since_id)) {
-    params$since_id <- since_id
-  }
-  if (!missing(min_id)) {
-    params$since_id <- min_id
-  }
+  params <- handle_params(list(limit = min(limit,20L),exclude_reblogs = exclude_reblogs), max_id, since_id, min_id)
   if (!missing(hashtag)) {
     params$tagged <- gsub("^#+", "", hashtag)
   }
-  process_request(token = token,path = path,instance = instance,
+  process_request(token = token,path = paste0("api/v1/accounts/",id,"/statuses"),
+                  instance = instance,
                   params = params, anonymous = anonymous,
                   parse = parse, FUN = v(parse_status),
                   n = n, page_size = 20L,
@@ -100,16 +91,9 @@ get_account_followers <- function(id,max_id,since_id,
                                   parse = TRUE,
                                   retryonratelimit = TRUE,
                                   verbose = TRUE){
-  path <- paste0("api/v1/accounts/",id,"/followers")
   n <- limit
-  params <- list(limit = min(limit,40L))
-  if (!missing(max_id)) {
-    params$max_id <- max_id
-  }
-  if (!missing(since_id)) {
-    params$since_id <- since_id
-  }
-  process_request(token = token,path = path,
+  params <- handle_params(list(limit = min(limit,40L)), max_id, since_id)
+  process_request(token = token,path = paste0("api/v1/accounts/",id,"/followers"),
                   params = params,
                   parse = parse, FUN = v(parse_account),
                   n = n, page_size = 40L,
@@ -131,16 +115,9 @@ get_account_following <- function(id,max_id,since_id,limit = 40L,
                                   token = NULL, parse = TRUE,
                                   retryonratelimit = TRUE,
                                   verbose = TRUE){
-  path <- paste0("api/v1/accounts/",id,"/following")
   n <- limit
-  params <- list(limit = min(limit,40L))
-  if (!missing(max_id)) {
-    params$max_id <- max_id
-  }
-  if (!missing(since_id)) {
-    params$since_id <- since_id
-  }
-  process_request(token = token,path = path,
+  params <- handle_params(list(limit = min(limit,40L)), max_id, since_id)
+  process_request(token = token,path = paste0("api/v1/accounts/",id,"/following"),
                   params = params,
                   parse = parse, FUN = v(parse_account),
                   n = n,page_size = 40L, retryonratelimit = retryonratelimit,
@@ -195,7 +172,6 @@ get_account_relationships <- function(ids,token = NULL, parse = TRUE){
                   parse = parse, FUN = v(identity))
 }
 
-
 #' Get bookmarks of user
 #' @inheritParams get_account_statuses
 #' @inheritParams get_account_followers
@@ -213,17 +189,7 @@ get_account_bookmarks <- function(max_id,since_id,min_id,limit = 40L,
                                   retryonratelimit = TRUE,
                                   verbose = TRUE){
   n <- limit
-  params <- list(limit = min(limit,40L))
-  if (!missing(max_id)) {
-    params$max_id <- max_id
-  }
-  if (!missing(since_id)) {
-    params$since_id <- since_id
-  }
-  if (!missing(min_id)) {
-    params$since_id <- min_id
-  }
-
+  params <- handle_params(list(limit = min(limit,40L)), max_id, since_id, min_id)
   process_request(token = token, path = "api/v1/bookmarks",
                   params = params,
                   parse = parse, FUN = v(parse_status),n = n,
@@ -249,14 +215,7 @@ get_account_favourites <- function(max_id,min_id,limit = 40L,
                                    retryonratelimit = TRUE,
                                    verbose = TRUE){
   n <- limit
-  params <- list(limit = min(limit,40L))
-  if (!missing(max_id)) {
-    params$max_id <- max_id
-  }
-  if (!missing(min_id)) {
-    params$min_id <- min_id
-  }
-
+  params <- handle_params(list(limit = min(limit,40L)), max_id = max_id, min_id = min_id)
   process_request(token = token,path = "api/v1/favourites",
                   params = params,
                   parse = parse, FUN = v(parse_status),n = n,
@@ -281,14 +240,7 @@ get_account_blocks <- function(max_id,since_id,limit = 40L,
                                retryonratelimit = TRUE,
                                verbose = TRUE){
   n <- limit
-  params <- list(limit = min(limit,40L))
-  if (!missing(max_id)) {
-    params$max_id <- max_id
-  }
-  if (!missing(since_id)) {
-    params$since_id <- since_id
-  }
-
+  params <- handle_params(list(limit = min(limit,40L)), max_id, since_id)
   process_request(token = token,path = "api/v1/blocks",
                   params = params,
                   parse = parse, FUN = v(parse_account), n = n,
@@ -313,14 +265,7 @@ get_account_mutes <- function(max_id,since_id,limit = 40L,
                               retryonratelimit = TRUE,
                               verbose = TRUE){
   n <- limit
-  params <- list(limit = min(limit,40L))
-  if (!missing(max_id)) {
-    params$max_id <- max_id
-  }
-  if (!missing(since_id)) {
-    params$since_id <- since_id
-  }
-
+  params <- handle_params(list(limit = min(limit,40L)), max_id, since_id)
   process_request(token = token,path = "api/v1/mutes",
                   params = params,
                   parse = parse, FUN = v(parse_account),
