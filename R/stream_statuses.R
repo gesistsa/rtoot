@@ -15,6 +15,7 @@
 #'   \item{stream_timeline_list}{stream the statuses of a list}
 #' }
 #' @export
+#' @return does not return anything. Statuses are written to file
 #' @examples
 #' \dontrun{
 #' # stream public timeline for 30 seconds
@@ -112,6 +113,7 @@ stream_timeline_list <- function(
 #' @export
 #' @details The stream sometimes returns invalid lines of json. These are automatically skipped. Parsing can be slow if your json contains a large amount of statuses
 #' @seealso `stream_timeline_public()`, `stream_timeline_hashtag()`,`stream_timeline_list()`
+#' @return a tibble of statuses
 #' @examples
 #' \dontrun{
 #' stream_timeline_public(1,file_name = "stream.json")

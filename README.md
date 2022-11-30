@@ -33,9 +33,6 @@ You can install the development version of rtoot from GitHub:
 devtools::install_github("schochastics/rtoot")
 ```
 
-*(The current dev version has many more features than the current
-version on CRAN)*
-
 ## Authenticate
 
 First you should set up your own credentials (see also

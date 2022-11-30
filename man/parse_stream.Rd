@@ -9,6 +9,9 @@ parse_stream(path)
 \arguments{
 \item{path}{Character, name of JSON file with data collected by any \link{stream_timeline} function.}
 }
+\value{
+a tibble of statuses
+}
 \description{
 Converts Mastodon stream data (JSON file) into a parsed tibble.
 }

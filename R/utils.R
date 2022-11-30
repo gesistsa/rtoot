@@ -25,7 +25,7 @@ make_get_request <- function(token, path, params = list(), instance = NULL, anon
     config <- httr::add_headers(Authorization = paste('Bearer', token$bearer))
   } else {
     url <- prepare_url(instance)
-    config = list()
+    config <- list()
   }
 
   request_results <- httr::GET(httr::modify_url(url, path = path),

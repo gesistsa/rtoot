@@ -1,15 +1,14 @@
-## Resubmission of Initial Submission
+## Update from 0.1.0 to 0.2.0
 
-This is the Resubmission of the initial submission of the rtoot package.
-This submission fixes the missing return values in two functions.
+This update includes new functions to live stream toots and pagination of results as well
+as ratelimit checking
+
 *(dontrun examples are used to not make unnecessary API calls)*
 
 # Test environments
-* ubuntu 20.04, R 4.2.1
+* ubuntu 20.04, R 4.2.2
 * win-builder (devel and release)
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
-
-* This is a new release.
+0 errors | 0 warnings | 0 notes

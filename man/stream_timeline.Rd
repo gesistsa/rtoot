@@ -62,6 +62,9 @@ stream_timeline_list(
 
 \item{list_id}{character, id of list to stream}
 }
+\value{
+does not return anything. Statuses are written to file
+}
 \description{
 Collect live streams of Mastodon data
 }
