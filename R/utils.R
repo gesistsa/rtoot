@@ -154,7 +154,7 @@ rate_limit_remaining <- function(object){
   }
   header <- attr(object,"headers")
   if(is.null(header[["rate_remaining"]])){
-    warning("no rate limit information found. Setting it to the default")
+    warning("no rate limit information found. Setting it to the default",call. = FALSE)
     return(300)
   } else{
     return(as.numeric(header[["rate_remaining"]]))
