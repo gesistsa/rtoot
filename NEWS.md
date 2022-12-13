@@ -1,3 +1,7 @@
+# rtoot 0.2.0.9000
+
+* dont throw an error when no ratelimit is found (#95)
+
 # rtoot 0.2.0
 
 * possible to set token via environment variable (#68)
