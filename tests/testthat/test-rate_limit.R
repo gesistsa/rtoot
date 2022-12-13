@@ -23,7 +23,7 @@ test_that("rate_limit_remaining", {
   y <- x
   newheader <- attr(x, "headers")[, c("rate_limit", "rate_reset", "max_id")]
   attr(y, "headers") <- newheader
-  expect_error(rate_limit_remaining(y))
+  expect_warning(rate_limit_remaining(y))
   z <- data.frame(x = c(1,2,3,4))
   expect_error(rate_limit_remaining(z))
 })
