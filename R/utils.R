@@ -9,6 +9,36 @@ print.rtoot_bearer <- function(x,...){
   invisible(x)
 }
 
+#' Query Mastodon API
+#'
+#' This is a minimalistic interface for querying the Mastodon API. This function is for advanced users who want to query
+#' the Mastodon API for endpoints that the R functions are not yet implemented.
+#' Please also note that the API responses will not be parsed as tibble. Refer to the official API documentation for endpoints and parameters.
+#' @param endpoint character, a Mastodon API endpoint. Currently, only endpoints using GET are supported
+#' @param ... Name-value pairs giving API parameters.
+#' @param params list, API parameters to be submitted
+#' @inheritParams get_timeline_public
+#' @return a list
+#' @export
+#' @references https://docs.joinmastodon.org/methods/
+#' @examples
+#' \dontrun{
+#' rtoot(endpoint = "api/v1/notifications")
+#' rtoot(endpoint = "api/v1/notifications", limit = 8)
+#' ## same
+#' rtoot(endpoint = "api/v1/notifications", params = list(limit = 8))
+#' rtoot(endpoint = "api/v1/followed_tags")
+#' ## reimplement `get_timeline_public`
+#' rtoot(endpoint = "api/v1/timelines/public", instance = "emacs.ch", local = TRUE, anonymous = TRUE)
+#' }
+rtoot <- function(endpoint, ..., params = list(), token = NULL, instance = NULL,
+                  anonymous = FALSE) {
+  if (missing(endpoint)) {
+    stop("Please provide an `endpoint`", call. = FALSE)
+  }
+  params <- c(list(...), params)
+  make_get_request(token = token, path = endpoint, params = params, instance = instance, anonymous = anonymous)
+}
 
 ## Endpoints under
 ## https://docs.joinmastodon.org/methods/statuses/
@@ -16,9 +46,8 @@ print.rtoot_bearer <- function(x,...){
 
 make_get_request <- function(token, path, params = list(), instance = NULL, anonymous = FALSE, ...) {
   if (is.null(instance) && anonymous) {
-    stop("provide either an instance or a token")
+    stop("provide either an instance or a token", call. = FALSE)
   }
-
   if (is.null(instance)) {
     token <- check_token_rtoot(token)
     url <- prepare_url(token$instance)
@@ -34,7 +63,7 @@ make_get_request <- function(token, path, params = list(), instance = NULL, anon
 
   status_code <- httr::status_code(request_results)
   if (!status_code %in% c(200)) {
-    stop(paste("something went wrong. Status code:", status_code))
+    stop(paste("something went wrong. Status code:", status_code), call. = FALSE)
   }
   output <- httr::content(request_results)
   headers <- parse_header(httr::headers(request_results))

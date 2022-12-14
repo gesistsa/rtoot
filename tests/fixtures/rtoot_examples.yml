@@ -1,0 +1,754 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://emacs.ch/api/v1/notifications?limit=2
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: Bearer <<<MASTODON TOKEN>>>
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      cache-control: no-store
+      content-encoding: gzip
+      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
+        ''none''; font-src ''self'' https://emacs.ch; img-src ''self'' https: data:
+        blob: https://emacs.ch; style-src ''self'' https://emacs.ch ''nonce-/EKcME6Qdu1JYvic/ZtFMg=='';
+        media-src ''self'' https: data: https://emacs.ch; frame-src ''self'' https:;
+        manifest-src ''self'' https://emacs.ch; connect-src ''self'' data: blob: https://emacs.ch
+        https://emacs.ch wss://emacs.ch; script-src ''self'' https://emacs.ch ''wasm-unsafe-eval'';
+        child-src ''self'' blob: https://emacs.ch; worker-src ''self'' blob: https://emacs.ch'
+      content-type: application/json; charset=utf-8
+      date: Wed, 14 Dec 2022 15:31:15 GMT
+      etag: W/"9ef6b472ccab4a91d72c55dea6a413f2"
+      link: <https://emacs.ch/api/v1/notifications?limit=2&max_id=28962>; rel="next",
+        <https://emacs.ch/api/v1/notifications?limit=2&min_id=29507>; rel="prev"
+      permissions-policy: interest-cohort=()
+      server: Mastodon
+      strict-transport-security: max-age=63072000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      - Origin
+      x-cached: MISS
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '299'
+      x-ratelimit-reset: '2022-12-14T15:35:00.568716Z'
+      x-request-id: 81692afa-b6f8-4323-bfed-9e3eca49fdde
+      x-runtime: '0.108560'
+      x-xss-protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: "[{\"id\":\"29507\",\"type\":\"mention\",\"created_at\":\"2022-12-14T15:22:41.704Z\",\"account\":{\"id\":\"109340273243348918\",\"username\":\"Mehrad\",\"acct\":\"Mehrad@fosstodon.org\",\"display_name\":\"Mehrad
+        :kdenew: :emacs: \U0001F1EA\U0001F1FA\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2021-01-16T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eBioinformatician\U0001F9EC
+        during the day, Data Scientist\U0001F4C8 in the afternoon, and Linux\U0001F427
+        hobbyist at night. Federation and E2EE advocate. Interested in Data Analysis,
+        Machine Learning, and FOSS/FLOSS.\\u003c/p\\u003e\\u003cp\\u003eLanguages:\\u003cbr\\u003e\U0001F5E3\\u003cbr\\u003e|_
+        \U0001F1EE\U0001F1F7: Native\\u003cbr\\u003e|_ [\U0001F1FA\U0001F1F8\U0001F1EC\U0001F1E7]:
+        Almost native\\u003cbr\\u003e|_ \U0001F1EB\U0001F1EE: In Progress \U0001F605\\u003c/p\\u003e\\u003cp\\u003e\U0001F916\\u003cbr\\u003e|_
+        :rstats: : Primary\\u003cbr\\u003e|_ :python: : Know my way around\\u003cbr\\u003e|_
+        \U0001F42A: Oldie but Goodie\\u003cbr\\u003e|_ :rust: : Just got Started\\u003c/p\\u003e\\u003cp\\u003eSome
+        of my interests in machine-readable format:\\u003cbr\\u003e\\u003ca href=\\\"https://fosstodon.org/tags/Rstats\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eRstats\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/Bioinformatics\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eBioinformatics\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/MachineLearning\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eMachineLearning\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://fosstodon.org/@Mehrad\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/340/273/243/348/918/original/1b1d98b3156f7336.jpeg\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/340/273/243/348/918/original/1b1d98b3156f7336.jpeg\",\"header\":\"https://emacs.ch/system/cache/accounts/headers/109/340/273/243/348/918/original/d4533c95a0ac50e2.jpg\",\"header_static\":\"https://emacs.ch/system/cache/accounts/headers/109/340/273/243/348/918/original/d4533c95a0ac50e2.jpg\",\"followers_count\":655,\"following_count\":333,\"statuses_count\":2294,\"last_status_at\":\"2022-12-14\",\"emojis\":[{\"shortcode\":\"rstats\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/258/original/b647f542a130bb33.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/258/static/b647f542a130bb33.png\",\"visible_in_picker\":true},{\"shortcode\":\"python\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/261/original/fbabe070f98a1faf.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/261/static/fbabe070f98a1faf.png\",\"visible_in_picker\":true},{\"shortcode\":\"rust\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/260/original/6a98eb3a0da2da40.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/260/static/6a98eb3a0da2da40.png\",\"visible_in_picker\":true},{\"shortcode\":\"kdenew\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/001/524/original/d21646d639f75550.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/001/524/static/d21646d639f75550.png\",\"visible_in_picker\":true},{\"shortcode\":\"emacs\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/369/original/7da2e466bbe36081.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/369/static/7da2e466bbe36081.png\",\"visible_in_picker\":true}],\"fields\":[{\"name\":\"Homepage\",\"value\":\"\\u003ca
+        href=\\\"https://mehrad.ai\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003emehrad.ai\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-12-01T07:59:16.839+00:00\"},{\"name\":\"Keyoxide\",\"value\":\"\\u003ca
+        href=\\\"https://keyoxide.org/CB93FCEFE52A3C267102600A7B379DF59540FF83\\\"
+        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ekeyoxide.org/CB93FCEFE52A3C267\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e102600A7B379DF59540FF83\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-12-01T07:59:16.853+00:00\"},{\"name\":\"Matrix\",\"value\":\"\\u003cspan
+        class=\\\"h-card\\\"\\u003e\\u003ca href=\\\"https://fosstodon.org/@Mehrad\\\"
+        class=\\\"u-url mention\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e@\\u003cspan\\u003eMehrad\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e:kde.org\",\"verified_at\":null},{\"name\":\"XMPP\",\"value\":\"mehrad@snopyta.org\",\"verified_at\":null}]},\"status\":{\"id\":\"109512711265679659\",\"created_at\":\"2022-12-14T15:22:40.000Z\",\"in_reply_to_id\":\"109512670192448827\",\"in_reply_to_account_id\":\"109337011845249544\",\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"unlisted\",\"language\":\"en\",\"uri\":\"https://fosstodon.org/users/Mehrad/statuses/109512711223706989\",\"url\":\"https://fosstodon.org/@Mehrad/109512711223706989\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003e\\u003cspan
+        class=\\\"h-card\\\"\\u003e\\u003ca href=\\\"https://emacs.ch/@chainsawriot\\\"
+        class=\\\"u-url mention\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e@\\u003cspan\\u003echainsawriot\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e
+        \\u003c/p\\u003e\\u003cp\\u003eThanks for the comment. I think I partially
+        replied to this in the following:\\u003c/p\\u003e\\u003cp\\u003e\\u003ca href=\\\"https://fosstodon.org/@Mehrad/109512655388344591\\\"
+        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003efosstodon.org/@Mehrad/10951265\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e5388344591\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003eI
+        agree that it is a but too early, but that's the feeling I have \U0001F644
+        \ I really like RStudio and I have even taught R to my students using it.
+        I don't want to see such a good tool to loose its touch on FLOSS and join
+        the opaque irresponsive corporate world\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109340273243348918\",\"username\":\"Mehrad\",\"acct\":\"Mehrad@fosstodon.org\",\"display_name\":\"Mehrad
+        :kdenew: :emacs: \U0001F1EA\U0001F1FA\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2021-01-16T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eBioinformatician\U0001F9EC
+        during the day, Data Scientist\U0001F4C8 in the afternoon, and Linux\U0001F427
+        hobbyist at night. Federation and E2EE advocate. Interested in Data Analysis,
+        Machine Learning, and FOSS/FLOSS.\\u003c/p\\u003e\\u003cp\\u003eLanguages:\\u003cbr\\u003e\U0001F5E3\\u003cbr\\u003e|_
+        \U0001F1EE\U0001F1F7: Native\\u003cbr\\u003e|_ [\U0001F1FA\U0001F1F8\U0001F1EC\U0001F1E7]:
+        Almost native\\u003cbr\\u003e|_ \U0001F1EB\U0001F1EE: In Progress \U0001F605\\u003c/p\\u003e\\u003cp\\u003e\U0001F916\\u003cbr\\u003e|_
+        :rstats: : Primary\\u003cbr\\u003e|_ :python: : Know my way around\\u003cbr\\u003e|_
+        \U0001F42A: Oldie but Goodie\\u003cbr\\u003e|_ :rust: : Just got Started\\u003c/p\\u003e\\u003cp\\u003eSome
+        of my interests in machine-readable format:\\u003cbr\\u003e\\u003ca href=\\\"https://fosstodon.org/tags/Rstats\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eRstats\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/Bioinformatics\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eBioinformatics\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/MachineLearning\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eMachineLearning\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://fosstodon.org/@Mehrad\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/340/273/243/348/918/original/1b1d98b3156f7336.jpeg\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/340/273/243/348/918/original/1b1d98b3156f7336.jpeg\",\"header\":\"https://emacs.ch/system/cache/accounts/headers/109/340/273/243/348/918/original/d4533c95a0ac50e2.jpg\",\"header_static\":\"https://emacs.ch/system/cache/accounts/headers/109/340/273/243/348/918/original/d4533c95a0ac50e2.jpg\",\"followers_count\":655,\"following_count\":333,\"statuses_count\":2294,\"last_status_at\":\"2022-12-14\",\"emojis\":[{\"shortcode\":\"rstats\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/258/original/b647f542a130bb33.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/258/static/b647f542a130bb33.png\",\"visible_in_picker\":true},{\"shortcode\":\"python\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/261/original/fbabe070f98a1faf.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/261/static/fbabe070f98a1faf.png\",\"visible_in_picker\":true},{\"shortcode\":\"rust\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/260/original/6a98eb3a0da2da40.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/260/static/6a98eb3a0da2da40.png\",\"visible_in_picker\":true},{\"shortcode\":\"kdenew\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/001/524/original/d21646d639f75550.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/001/524/static/d21646d639f75550.png\",\"visible_in_picker\":true},{\"shortcode\":\"emacs\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/369/original/7da2e466bbe36081.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/369/static/7da2e466bbe36081.png\",\"visible_in_picker\":true}],\"fields\":[{\"name\":\"Homepage\",\"value\":\"\\u003ca
+        href=\\\"https://mehrad.ai\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003emehrad.ai\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-12-01T07:59:16.839+00:00\"},{\"name\":\"Keyoxide\",\"value\":\"\\u003ca
+        href=\\\"https://keyoxide.org/CB93FCEFE52A3C267102600A7B379DF59540FF83\\\"
+        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ekeyoxide.org/CB93FCEFE52A3C267\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e102600A7B379DF59540FF83\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-12-01T07:59:16.853+00:00\"},{\"name\":\"Matrix\",\"value\":\"\\u003cspan
+        class=\\\"h-card\\\"\\u003e\\u003ca href=\\\"https://fosstodon.org/@Mehrad\\\"
+        class=\\\"u-url mention\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e@\\u003cspan\\u003eMehrad\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e:kde.org\",\"verified_at\":null},{\"name\":\"XMPP\",\"value\":\"mehrad@snopyta.org\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[{\"id\":\"109337011845249544\",\"username\":\"chainsawriot\",\"url\":\"https://emacs.ch/@chainsawriot\",\"acct\":\"chainsawriot\"}],\"tags\":[],\"emojis\":[],\"card\":{\"url\":\"https://fosstodon.org/@Mehrad/109512655388344591\",\"title\":\"Mehrad
+        :kdenew: :emacs: \U0001F1EA\U0001F1FA (@Mehrad@fosstodon.org)\",\"description\":\"@eliocamp@mastodon.social
+        \\nThanks, the NEWS.md was a nice suggestion.\\n\\nAbout the image you shared,
+        it is not from the RStudio Server page:\\nhttps://posit.co/products/open-source/rstudio-server/\\n\\ninstead
+        it is from the desktop client:\\nhttps://posit.co/download/rstudio-desktop/\\n\\nThey
+        should either copy it to the server page as well, or put it in the top page
+        where both Server and Desktop are presented:\\n\\nhttps://posit.co/downloads/\\n\\nIt
+        seems like a bad (sloppy or careless) design. Don't you agree?\\n\\n@MikeMahoney218\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"Fosstodon\",\"provider_url\":\"\",\"html\":\"\",\"width\":400,\"height\":400,\"image\":\"https://emacs.ch/system/cache/preview_cards/images/000/116/614/original/c3b2e3219305372a.jpeg\",\"embed_url\":\"\",\"blurhash\":\"USJHmya|0zoeI9j[X9fQAHay%1a|E0fQt7ju\"},\"poll\":null}},{\"id\":\"28962\",\"type\":\"favourite\",\"created_at\":\"2022-12-13T14:50:07.420Z\",\"account\":{\"id\":\"109359257038444868\",\"username\":\"barocio\",\"acct\":\"barocio\",\"display_name\":\"Alejandro
+        Barocio A.\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-17T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eChristian,
+        teacher (middle school), gnu/linux and emacs enthusiast, mexican.\\u003c/p\\u003e\",\"url\":\"https://emacs.ch/@barocio\",\"avatar\":\"https://emacs.ch/system/accounts/avatars/109/359/257/038/444/868/original/edc28ffb3c3eb7c6.jpg\",\"avatar_static\":\"https://emacs.ch/system/accounts/avatars/109/359/257/038/444/868/original/edc28ffb3c3eb7c6.jpg\",\"header\":\"https://emacs.ch/system/accounts/headers/109/359/257/038/444/868/original/d82c0f7f84e19484.jpg\",\"header_static\":\"https://emacs.ch/system/accounts/headers/109/359/257/038/444/868/original/d82c0f7f84e19484.jpg\",\"followers_count\":49,\"following_count\":39,\"statuses_count\":281,\"last_status_at\":\"2022-12-14\",\"noindex\":false,\"emojis\":[],\"fields\":[]},\"status\":{\"id\":\"109506838838151037\",\"created_at\":\"2022-12-13T14:29:14.736Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":true,\"spoiler_text\":\"Classical
+        music\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://emacs.ch/users/chainsawriot/statuses/109506838838151037\",\"url\":\"https://emacs.ch/@chainsawriot/109506838838151037\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":1,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"pinned\":false,\"content\":\"\\u003cp\\u003eListening
+        to Kubelik\\u0026#39;s Dvorak Sym 9 Em is quite a fantastic experience.\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"application\":{\"name\":\"Web\",\"website\":null},\"account\":{\"id\":\"109337011845249544\",\"username\":\"chainsawriot\",\"acct\":\"chainsawriot\",\"display_name\":\"chainsawriot\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-13T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://emacs.ch/@chainsawriot\",\"avatar\":\"https://emacs.ch/system/accounts/avatars/109/337/011/845/249/544/original/00fc3aabc87d3564.jpg\",\"avatar_static\":\"https://emacs.ch/system/accounts/avatars/109/337/011/845/249/544/original/00fc3aabc87d3564.jpg\",\"header\":\"https://emacs.ch/headers/original/missing.png\",\"header_static\":\"https://emacs.ch/headers/original/missing.png\",\"followers_count\":247,\"following_count\":123,\"statuses_count\":136,\"last_status_at\":\"2022-12-14\",\"noindex\":true,\"emojis\":[{\"shortcode\":\"emacs\",\"url\":\"https://emacs.ch/system/custom_emojis/images/000/000/358/original/9f320443168e793f.png\",\"static_url\":\"https://emacs.ch/system/custom_emojis/images/000/000/358/static/9f320443168e793f.png\",\"visible_in_picker\":true}],\"fields\":[{\"name\":\"Stack\",\"value\":\":emacs:,
+        R, stumpwm, linux, firefox\",\"verified_at\":null},{\"name\":\"Research Interests\",\"value\":\"Keine
+        Ahnung\",\"verified_at\":null},{\"name\":\"Web\",\"value\":\"\\u003ca href=\\\"https://chainsawriot.com/about/\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener noreferrer me\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003echainsawriot.com/about/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-11-14T12:22:07.327+00:00\"}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null}}]"
+  recorded_at: 2022-12-14 15:31:16 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.2
+- request:
+    method: get
+    uri: https://emacs.ch/api/v1/notifications?limit=3
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: Bearer <<<MASTODON TOKEN>>>
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      cache-control: no-store
+      content-encoding: gzip
+      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
+        ''none''; font-src ''self'' https://emacs.ch; img-src ''self'' https: data:
+        blob: https://emacs.ch; style-src ''self'' https://emacs.ch ''nonce-u/deQREg0eriG8RnEt/ZOw=='';
+        media-src ''self'' https: data: https://emacs.ch; frame-src ''self'' https:;
+        manifest-src ''self'' https://emacs.ch; connect-src ''self'' data: blob: https://emacs.ch
+        https://emacs.ch wss://emacs.ch; script-src ''self'' https://emacs.ch ''wasm-unsafe-eval'';
+        child-src ''self'' blob: https://emacs.ch; worker-src ''self'' blob: https://emacs.ch'
+      content-type: application/json; charset=utf-8
+      date: Wed, 14 Dec 2022 15:31:15 GMT
+      etag: W/"241f9c83b33766bf405dea8f18ce9083"
+      link: <https://emacs.ch/api/v1/notifications?limit=3&max_id=28869>; rel="next",
+        <https://emacs.ch/api/v1/notifications?limit=3&min_id=29507>; rel="prev"
+      permissions-policy: interest-cohort=()
+      server: Mastodon
+      strict-transport-security: max-age=63072000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      - Origin
+      x-cached: MISS
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '298'
+      x-ratelimit-reset: '2022-12-14T15:35:00.835262Z'
+      x-request-id: 776beb30-4555-4400-b59d-2753f2e64768
+      x-runtime: '0.128151'
+      x-xss-protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: "[{\"id\":\"29507\",\"type\":\"mention\",\"created_at\":\"2022-12-14T15:22:41.704Z\",\"account\":{\"id\":\"109340273243348918\",\"username\":\"Mehrad\",\"acct\":\"Mehrad@fosstodon.org\",\"display_name\":\"Mehrad
+        :kdenew: :emacs: \U0001F1EA\U0001F1FA\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2021-01-16T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eBioinformatician\U0001F9EC
+        during the day, Data Scientist\U0001F4C8 in the afternoon, and Linux\U0001F427
+        hobbyist at night. Federation and E2EE advocate. Interested in Data Analysis,
+        Machine Learning, and FOSS/FLOSS.\\u003c/p\\u003e\\u003cp\\u003eLanguages:\\u003cbr\\u003e\U0001F5E3\\u003cbr\\u003e|_
+        \U0001F1EE\U0001F1F7: Native\\u003cbr\\u003e|_ [\U0001F1FA\U0001F1F8\U0001F1EC\U0001F1E7]:
+        Almost native\\u003cbr\\u003e|_ \U0001F1EB\U0001F1EE: In Progress \U0001F605\\u003c/p\\u003e\\u003cp\\u003e\U0001F916\\u003cbr\\u003e|_
+        :rstats: : Primary\\u003cbr\\u003e|_ :python: : Know my way around\\u003cbr\\u003e|_
+        \U0001F42A: Oldie but Goodie\\u003cbr\\u003e|_ :rust: : Just got Started\\u003c/p\\u003e\\u003cp\\u003eSome
+        of my interests in machine-readable format:\\u003cbr\\u003e\\u003ca href=\\\"https://fosstodon.org/tags/Rstats\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eRstats\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/Bioinformatics\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eBioinformatics\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/MachineLearning\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eMachineLearning\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://fosstodon.org/@Mehrad\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/340/273/243/348/918/original/1b1d98b3156f7336.jpeg\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/340/273/243/348/918/original/1b1d98b3156f7336.jpeg\",\"header\":\"https://emacs.ch/system/cache/accounts/headers/109/340/273/243/348/918/original/d4533c95a0ac50e2.jpg\",\"header_static\":\"https://emacs.ch/system/cache/accounts/headers/109/340/273/243/348/918/original/d4533c95a0ac50e2.jpg\",\"followers_count\":655,\"following_count\":333,\"statuses_count\":2294,\"last_status_at\":\"2022-12-14\",\"emojis\":[{\"shortcode\":\"rstats\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/258/original/b647f542a130bb33.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/258/static/b647f542a130bb33.png\",\"visible_in_picker\":true},{\"shortcode\":\"python\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/261/original/fbabe070f98a1faf.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/261/static/fbabe070f98a1faf.png\",\"visible_in_picker\":true},{\"shortcode\":\"rust\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/260/original/6a98eb3a0da2da40.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/260/static/6a98eb3a0da2da40.png\",\"visible_in_picker\":true},{\"shortcode\":\"kdenew\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/001/524/original/d21646d639f75550.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/001/524/static/d21646d639f75550.png\",\"visible_in_picker\":true},{\"shortcode\":\"emacs\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/369/original/7da2e466bbe36081.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/369/static/7da2e466bbe36081.png\",\"visible_in_picker\":true}],\"fields\":[{\"name\":\"Homepage\",\"value\":\"\\u003ca
+        href=\\\"https://mehrad.ai\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003emehrad.ai\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-12-01T07:59:16.839+00:00\"},{\"name\":\"Keyoxide\",\"value\":\"\\u003ca
+        href=\\\"https://keyoxide.org/CB93FCEFE52A3C267102600A7B379DF59540FF83\\\"
+        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ekeyoxide.org/CB93FCEFE52A3C267\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e102600A7B379DF59540FF83\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-12-01T07:59:16.853+00:00\"},{\"name\":\"Matrix\",\"value\":\"\\u003cspan
+        class=\\\"h-card\\\"\\u003e\\u003ca href=\\\"https://fosstodon.org/@Mehrad\\\"
+        class=\\\"u-url mention\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e@\\u003cspan\\u003eMehrad\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e:kde.org\",\"verified_at\":null},{\"name\":\"XMPP\",\"value\":\"mehrad@snopyta.org\",\"verified_at\":null}]},\"status\":{\"id\":\"109512711265679659\",\"created_at\":\"2022-12-14T15:22:40.000Z\",\"in_reply_to_id\":\"109512670192448827\",\"in_reply_to_account_id\":\"109337011845249544\",\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"unlisted\",\"language\":\"en\",\"uri\":\"https://fosstodon.org/users/Mehrad/statuses/109512711223706989\",\"url\":\"https://fosstodon.org/@Mehrad/109512711223706989\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003e\\u003cspan
+        class=\\\"h-card\\\"\\u003e\\u003ca href=\\\"https://emacs.ch/@chainsawriot\\\"
+        class=\\\"u-url mention\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e@\\u003cspan\\u003echainsawriot\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e
+        \\u003c/p\\u003e\\u003cp\\u003eThanks for the comment. I think I partially
+        replied to this in the following:\\u003c/p\\u003e\\u003cp\\u003e\\u003ca href=\\\"https://fosstodon.org/@Mehrad/109512655388344591\\\"
+        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003efosstodon.org/@Mehrad/10951265\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e5388344591\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003eI
+        agree that it is a but too early, but that's the feeling I have \U0001F644
+        \ I really like RStudio and I have even taught R to my students using it.
+        I don't want to see such a good tool to loose its touch on FLOSS and join
+        the opaque irresponsive corporate world\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109340273243348918\",\"username\":\"Mehrad\",\"acct\":\"Mehrad@fosstodon.org\",\"display_name\":\"Mehrad
+        :kdenew: :emacs: \U0001F1EA\U0001F1FA\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2021-01-16T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eBioinformatician\U0001F9EC
+        during the day, Data Scientist\U0001F4C8 in the afternoon, and Linux\U0001F427
+        hobbyist at night. Federation and E2EE advocate. Interested in Data Analysis,
+        Machine Learning, and FOSS/FLOSS.\\u003c/p\\u003e\\u003cp\\u003eLanguages:\\u003cbr\\u003e\U0001F5E3\\u003cbr\\u003e|_
+        \U0001F1EE\U0001F1F7: Native\\u003cbr\\u003e|_ [\U0001F1FA\U0001F1F8\U0001F1EC\U0001F1E7]:
+        Almost native\\u003cbr\\u003e|_ \U0001F1EB\U0001F1EE: In Progress \U0001F605\\u003c/p\\u003e\\u003cp\\u003e\U0001F916\\u003cbr\\u003e|_
+        :rstats: : Primary\\u003cbr\\u003e|_ :python: : Know my way around\\u003cbr\\u003e|_
+        \U0001F42A: Oldie but Goodie\\u003cbr\\u003e|_ :rust: : Just got Started\\u003c/p\\u003e\\u003cp\\u003eSome
+        of my interests in machine-readable format:\\u003cbr\\u003e\\u003ca href=\\\"https://fosstodon.org/tags/Rstats\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eRstats\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/Bioinformatics\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eBioinformatics\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/MachineLearning\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eMachineLearning\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://fosstodon.org/@Mehrad\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/340/273/243/348/918/original/1b1d98b3156f7336.jpeg\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/340/273/243/348/918/original/1b1d98b3156f7336.jpeg\",\"header\":\"https://emacs.ch/system/cache/accounts/headers/109/340/273/243/348/918/original/d4533c95a0ac50e2.jpg\",\"header_static\":\"https://emacs.ch/system/cache/accounts/headers/109/340/273/243/348/918/original/d4533c95a0ac50e2.jpg\",\"followers_count\":655,\"following_count\":333,\"statuses_count\":2294,\"last_status_at\":\"2022-12-14\",\"emojis\":[{\"shortcode\":\"rstats\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/258/original/b647f542a130bb33.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/258/static/b647f542a130bb33.png\",\"visible_in_picker\":true},{\"shortcode\":\"python\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/261/original/fbabe070f98a1faf.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/261/static/fbabe070f98a1faf.png\",\"visible_in_picker\":true},{\"shortcode\":\"rust\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/260/original/6a98eb3a0da2da40.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/260/static/6a98eb3a0da2da40.png\",\"visible_in_picker\":true},{\"shortcode\":\"kdenew\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/001/524/original/d21646d639f75550.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/001/524/static/d21646d639f75550.png\",\"visible_in_picker\":true},{\"shortcode\":\"emacs\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/369/original/7da2e466bbe36081.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/000/369/static/7da2e466bbe36081.png\",\"visible_in_picker\":true}],\"fields\":[{\"name\":\"Homepage\",\"value\":\"\\u003ca
+        href=\\\"https://mehrad.ai\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003emehrad.ai\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-12-01T07:59:16.839+00:00\"},{\"name\":\"Keyoxide\",\"value\":\"\\u003ca
+        href=\\\"https://keyoxide.org/CB93FCEFE52A3C267102600A7B379DF59540FF83\\\"
+        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ekeyoxide.org/CB93FCEFE52A3C267\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e102600A7B379DF59540FF83\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-12-01T07:59:16.853+00:00\"},{\"name\":\"Matrix\",\"value\":\"\\u003cspan
+        class=\\\"h-card\\\"\\u003e\\u003ca href=\\\"https://fosstodon.org/@Mehrad\\\"
+        class=\\\"u-url mention\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e@\\u003cspan\\u003eMehrad\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e:kde.org\",\"verified_at\":null},{\"name\":\"XMPP\",\"value\":\"mehrad@snopyta.org\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[{\"id\":\"109337011845249544\",\"username\":\"chainsawriot\",\"url\":\"https://emacs.ch/@chainsawriot\",\"acct\":\"chainsawriot\"}],\"tags\":[],\"emojis\":[],\"card\":{\"url\":\"https://fosstodon.org/@Mehrad/109512655388344591\",\"title\":\"Mehrad
+        :kdenew: :emacs: \U0001F1EA\U0001F1FA (@Mehrad@fosstodon.org)\",\"description\":\"@eliocamp@mastodon.social
+        \\nThanks, the NEWS.md was a nice suggestion.\\n\\nAbout the image you shared,
+        it is not from the RStudio Server page:\\nhttps://posit.co/products/open-source/rstudio-server/\\n\\ninstead
+        it is from the desktop client:\\nhttps://posit.co/download/rstudio-desktop/\\n\\nThey
+        should either copy it to the server page as well, or put it in the top page
+        where both Server and Desktop are presented:\\n\\nhttps://posit.co/downloads/\\n\\nIt
+        seems like a bad (sloppy or careless) design. Don't you agree?\\n\\n@MikeMahoney218\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"Fosstodon\",\"provider_url\":\"\",\"html\":\"\",\"width\":400,\"height\":400,\"image\":\"https://emacs.ch/system/cache/preview_cards/images/000/116/614/original/c3b2e3219305372a.jpeg\",\"embed_url\":\"\",\"blurhash\":\"USJHmya|0zoeI9j[X9fQAHay%1a|E0fQt7ju\"},\"poll\":null}},{\"id\":\"28962\",\"type\":\"favourite\",\"created_at\":\"2022-12-13T14:50:07.420Z\",\"account\":{\"id\":\"109359257038444868\",\"username\":\"barocio\",\"acct\":\"barocio\",\"display_name\":\"Alejandro
+        Barocio A.\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-17T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eChristian,
+        teacher (middle school), gnu/linux and emacs enthusiast, mexican.\\u003c/p\\u003e\",\"url\":\"https://emacs.ch/@barocio\",\"avatar\":\"https://emacs.ch/system/accounts/avatars/109/359/257/038/444/868/original/edc28ffb3c3eb7c6.jpg\",\"avatar_static\":\"https://emacs.ch/system/accounts/avatars/109/359/257/038/444/868/original/edc28ffb3c3eb7c6.jpg\",\"header\":\"https://emacs.ch/system/accounts/headers/109/359/257/038/444/868/original/d82c0f7f84e19484.jpg\",\"header_static\":\"https://emacs.ch/system/accounts/headers/109/359/257/038/444/868/original/d82c0f7f84e19484.jpg\",\"followers_count\":49,\"following_count\":39,\"statuses_count\":281,\"last_status_at\":\"2022-12-14\",\"noindex\":false,\"emojis\":[],\"fields\":[]},\"status\":{\"id\":\"109506838838151037\",\"created_at\":\"2022-12-13T14:29:14.736Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":true,\"spoiler_text\":\"Classical
+        music\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://emacs.ch/users/chainsawriot/statuses/109506838838151037\",\"url\":\"https://emacs.ch/@chainsawriot/109506838838151037\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":1,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"pinned\":false,\"content\":\"\\u003cp\\u003eListening
+        to Kubelik\\u0026#39;s Dvorak Sym 9 Em is quite a fantastic experience.\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"application\":{\"name\":\"Web\",\"website\":null},\"account\":{\"id\":\"109337011845249544\",\"username\":\"chainsawriot\",\"acct\":\"chainsawriot\",\"display_name\":\"chainsawriot\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-13T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://emacs.ch/@chainsawriot\",\"avatar\":\"https://emacs.ch/system/accounts/avatars/109/337/011/845/249/544/original/00fc3aabc87d3564.jpg\",\"avatar_static\":\"https://emacs.ch/system/accounts/avatars/109/337/011/845/249/544/original/00fc3aabc87d3564.jpg\",\"header\":\"https://emacs.ch/headers/original/missing.png\",\"header_static\":\"https://emacs.ch/headers/original/missing.png\",\"followers_count\":247,\"following_count\":123,\"statuses_count\":136,\"last_status_at\":\"2022-12-14\",\"noindex\":true,\"emojis\":[{\"shortcode\":\"emacs\",\"url\":\"https://emacs.ch/system/custom_emojis/images/000/000/358/original/9f320443168e793f.png\",\"static_url\":\"https://emacs.ch/system/custom_emojis/images/000/000/358/static/9f320443168e793f.png\",\"visible_in_picker\":true}],\"fields\":[{\"name\":\"Stack\",\"value\":\":emacs:,
+        R, stumpwm, linux, firefox\",\"verified_at\":null},{\"name\":\"Research Interests\",\"value\":\"Keine
+        Ahnung\",\"verified_at\":null},{\"name\":\"Web\",\"value\":\"\\u003ca href=\\\"https://chainsawriot.com/about/\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener noreferrer me\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003echainsawriot.com/about/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-11-14T12:22:07.327+00:00\"}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null}},{\"id\":\"28869\",\"type\":\"favourite\",\"created_at\":\"2022-12-13T08:49:38.152Z\",\"account\":{\"id\":\"109449567593368791\",\"username\":\"cphoffmann\",\"acct\":\"cphoffmann@mstdn.social\",\"display_name\":\"cphoffmann\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-24T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eProf
+        @ Uni Leipzig\\u003cbr\\u003eCommunication Management \\u0026amp; Political
+        Communication\\u003c/p\\u003e\",\"url\":\"https://mstdn.social/@cphoffmann\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/449/567/593/368/791/original/6a574716c6e72cb0.png\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/449/567/593/368/791/original/6a574716c6e72cb0.png\",\"header\":\"https://emacs.ch/headers/original/missing.png\",\"header_static\":\"https://emacs.ch/headers/original/missing.png\",\"followers_count\":40,\"following_count\":100,\"statuses_count\":3,\"last_status_at\":\"2022-12-03\",\"emojis\":[],\"fields\":[]},\"status\":{\"id\":\"109502623453312403\",\"created_at\":\"2022-12-12T20:37:13.064Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://emacs.ch/users/chainsawriot/statuses/109502623453312403\",\"url\":\"https://emacs.ch/@chainsawriot/109502623453312403\",\"replies_count\":1,\"reblogs_count\":3,\"favourites_count\":5,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"pinned\":false,\"content\":\"\\u003cp\\u003eNew
+        paper: Whose research benefits more from Twitter? On Twitter-worthiness of
+        communication research and its role in reinforcing disparities of the field\\u003c/p\\u003e\\u003cp\\u003ewith
+        Jing Zeng (Utrecht) and \\u003cspan class=\\\"h-card\\\"\\u003e\\u003ca href=\\\"https://mastodontech.de/@mss7676\\\"
+        class=\\\"u-url mention\\\"\\u003e@\\u003cspan\\u003emss7676\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e
+        (Zurich)\\u003c/p\\u003e\\u003cp\\u003e\\u003ca href=\\\"https://doi.org/10.1371/journal.pone.0278840\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener noreferrer\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003edoi.org/10.1371/journal.pone.0\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e278840\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"application\":{\"name\":\"Web\",\"website\":null},\"account\":{\"id\":\"109337011845249544\",\"username\":\"chainsawriot\",\"acct\":\"chainsawriot\",\"display_name\":\"chainsawriot\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-13T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://emacs.ch/@chainsawriot\",\"avatar\":\"https://emacs.ch/system/accounts/avatars/109/337/011/845/249/544/original/00fc3aabc87d3564.jpg\",\"avatar_static\":\"https://emacs.ch/system/accounts/avatars/109/337/011/845/249/544/original/00fc3aabc87d3564.jpg\",\"header\":\"https://emacs.ch/headers/original/missing.png\",\"header_static\":\"https://emacs.ch/headers/original/missing.png\",\"followers_count\":247,\"following_count\":123,\"statuses_count\":136,\"last_status_at\":\"2022-12-14\",\"noindex\":true,\"emojis\":[{\"shortcode\":\"emacs\",\"url\":\"https://emacs.ch/system/custom_emojis/images/000/000/358/original/9f320443168e793f.png\",\"static_url\":\"https://emacs.ch/system/custom_emojis/images/000/000/358/static/9f320443168e793f.png\",\"visible_in_picker\":true}],\"fields\":[{\"name\":\"Stack\",\"value\":\":emacs:,
+        R, stumpwm, linux, firefox\",\"verified_at\":null},{\"name\":\"Research Interests\",\"value\":\"Keine
+        Ahnung\",\"verified_at\":null},{\"name\":\"Web\",\"value\":\"\\u003ca href=\\\"https://chainsawriot.com/about/\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener noreferrer me\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003echainsawriot.com/about/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-11-14T12:22:07.327+00:00\"}]},\"media_attachments\":[],\"mentions\":[{\"id\":\"109337044402181249\",\"username\":\"mss7676\",\"url\":\"https://mastodontech.de/@mss7676\",\"acct\":\"mss7676@mastodontech.de\"}],\"tags\":[],\"emojis\":[],\"card\":{\"url\":\"https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0278840\",\"title\":\"Whose
+        research benefits more from Twitter? On Twitter-worthiness of communication
+        research and its role in reinforcing disparities of the field\",\"description\":\"Twitter
+        has become an important promotional tool for scholarly work, but individual
+        academic publications have varied degrees of visibility on the platform. We
+        explain this variation through the concept of Twitter-worthiness: factors
+        making certain academic publications more likely to be visible on Twitter.
+        Using publications from communication studies as our analytical case, we conduct
+        statistical analyses of 32187 articles spanning 82 journals. Findings show
+        that publications from G12 countries, covering social media topics and published
+        open access tend to be mentioned more on Twitter. Similar to prior studies,
+        this study demonstrates that Twitter mentions are associated with peer citations.
+        Nevertheless, Twitter also has the potential to reinforce pre-existing disparities
+        between communication research communities, especially between researchers
+        from developed and less-developed regions. Open access, however, does not
+        reinforce such disparities.\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"\",\"provider_url\":\"\",\"html\":\"\",\"width\":310,\"height\":400,\"image\":\"https://emacs.ch/system/cache/preview_cards/images/000/108/953/original/1fe71a8a7baf2917.png\",\"embed_url\":\"\",\"blurhash\":\"UyO43iay~qxuD%xuxuM{oft7M{fQWBfQj[t7\"},\"poll\":null}}]"
+  recorded_at: 2022-12-14 15:31:16 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.2
+- request:
+    method: get
+    uri: https://emacs.ch/api/v1/timelines/public?local=TRUE
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      cache-control: no-store
+      content-encoding: gzip
+      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
+        ''none''; font-src ''self'' https://emacs.ch; img-src ''self'' https: data:
+        blob: https://emacs.ch; style-src ''self'' https://emacs.ch ''nonce-CUrmyF+D57T2EM+za6f6hQ=='';
+        media-src ''self'' https: data: https://emacs.ch; frame-src ''self'' https:;
+        manifest-src ''self'' https://emacs.ch; connect-src ''self'' data: blob: https://emacs.ch
+        https://emacs.ch wss://emacs.ch; script-src ''self'' https://emacs.ch ''wasm-unsafe-eval'';
+        child-src ''self'' blob: https://emacs.ch; worker-src ''self'' blob: https://emacs.ch'
+      content-type: application/json; charset=utf-8
+      date: Wed, 14 Dec 2022 15:31:16 GMT
+      etag: W/"e800a11fcef95305e3b9030ef4d85fa2"
+      link: <https://emacs.ch/api/v1/timelines/public?local=TRUE&max_id=109509761980502503>;
+        rel="next", <https://emacs.ch/api/v1/timelines/public?local=TRUE&min_id=109512719300793343>;
+        rel="prev"
+      permissions-policy: interest-cohort=()
+      server: Mastodon
+      strict-transport-security: max-age=63072000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      - Origin
+      x-cached: MISS
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '299'
+      x-ratelimit-reset: '2022-12-14T15:35:00.159586Z'
+      x-request-id: 901b0165-2d10-4295-98bf-71fc173296b0
+      x-runtime: '0.259762'
+      x-xss-protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: "[{\"id\":\"109512719300793343\",\"created_at\":\"2022-12-14T15:24:43.481Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":true,\"spoiler_text\":\"Emacs,
+        Guix, Nix\",\"visibility\":\"public\",\"language\":\"es\",\"uri\":\"https://emacs.ch/users/barocio/statuses/109512719300793343\",\"url\":\"https://emacs.ch/@barocio/109512719300793343\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eIf
+        you use \\u003ca href=\\\"https://emacs.ch/tags/emacs\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eemacs\\u003c/span\\u003e\\u003c/a\\u003e
+        on \\u003ca href=\\\"https://emacs.ch/tags/Guix\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eGuix\\u003c/span\\u003e\\u003c/a\\u003e
+        or \\u003ca href=\\\"https://emacs.ch/tags/Nix\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eNix\\u003c/span\\u003e\\u003c/a\\u003e
+        how do you configure emacs?\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Tusky\",\"website\":\"https://tusky.app\"},\"account\":{\"id\":\"109359257038444868\",\"username\":\"barocio\",\"acct\":\"barocio\",\"display_name\":\"Alejandro
+        Barocio A.\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-17T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eChristian,
+        teacher (middle school), gnu/linux and emacs enthusiast, mexican.\\u003c/p\\u003e\",\"url\":\"https://emacs.ch/@barocio\",\"avatar\":\"https://emacs.ch/system/accounts/avatars/109/359/257/038/444/868/original/edc28ffb3c3eb7c6.jpg\",\"avatar_static\":\"https://emacs.ch/system/accounts/avatars/109/359/257/038/444/868/original/edc28ffb3c3eb7c6.jpg\",\"header\":\"https://emacs.ch/system/accounts/headers/109/359/257/038/444/868/original/d82c0f7f84e19484.jpg\",\"header_static\":\"https://emacs.ch/system/accounts/headers/109/359/257/038/444/868/original/d82c0f7f84e19484.jpg\",\"followers_count\":49,\"following_count\":39,\"statuses_count\":281,\"last_status_at\":\"2022-12-14\",\"noindex\":false,\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"emacs\",\"url\":\"https://emacs.ch/tags/emacs\"},{\"name\":\"guix\",\"url\":\"https://emacs.ch/tags/guix\"},{\"name\":\"nix\",\"url\":\"https://emacs.ch/tags/nix\"}],\"emojis\":[],\"card\":null,\"poll\":{\"id\":\"3079\",\"expires_at\":\"2022-12-15T15:24:43.462Z\",\"expired\":false,\"multiple\":false,\"votes_count\":0,\"voters_count\":0,\"options\":[{\"title\":\"Nix
+        home\",\"votes_count\":0},{\"title\":\"Guix home\",\"votes_count\":0},{\"title\":\"Emacs
+        init.el\",\"votes_count\":0}],\"emojis\":[]}},{\"id\":\"109512710071174310\",\"created_at\":\"2022-12-14T15:22:22.651Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":true,\"spoiler_text\":\"Emacs,
+        Guix, Nix\",\"visibility\":\"public\",\"language\":\"es\",\"uri\":\"https://emacs.ch/users/barocio/statuses/109512710071174310\",\"url\":\"https://emacs.ch/@barocio/109512710071174310\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eIf
+        you use \\u003ca href=\\\"https://emacs.ch/tags/emacs\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eemacs\\u003c/span\\u003e\\u003c/a\\u003e
+        on \\u003ca href=\\\"https://emacs.ch/tags/Guix\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eGuix\\u003c/span\\u003e\\u003c/a\\u003e
+        or \\u003ca href=\\\"https://emacs.ch/tags/Nix\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eNix\\u003c/span\\u003e\\u003c/a\\u003e
+        how do you use them?\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Tusky\",\"website\":\"https://tusky.app\"},\"account\":{\"id\":\"109359257038444868\",\"username\":\"barocio\",\"acct\":\"barocio\",\"display_name\":\"Alejandro
+        Barocio A.\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-17T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eChristian,
+        teacher (middle school), gnu/linux and emacs enthusiast, mexican.\\u003c/p\\u003e\",\"url\":\"https://emacs.ch/@barocio\",\"avatar\":\"https://emacs.ch/system/accounts/avatars/109/359/257/038/444/868/original/edc28ffb3c3eb7c6.jpg\",\"avatar_static\":\"https://emacs.ch/system/accounts/avatars/109/359/257/038/444/868/original/edc28ffb3c3eb7c6.jpg\",\"header\":\"https://emacs.ch/system/accounts/headers/109/359/257/038/444/868/original/d82c0f7f84e19484.jpg\",\"header_static\":\"https://emacs.ch/system/accounts/headers/109/359/257/038/444/868/original/d82c0f7f84e19484.jpg\",\"followers_count\":49,\"following_count\":39,\"statuses_count\":281,\"last_status_at\":\"2022-12-14\",\"noindex\":false,\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"emacs\",\"url\":\"https://emacs.ch/tags/emacs\"},{\"name\":\"guix\",\"url\":\"https://emacs.ch/tags/guix\"},{\"name\":\"nix\",\"url\":\"https://emacs.ch/tags/nix\"}],\"emojis\":[],\"card\":null,\"poll\":{\"id\":\"3078\",\"expires_at\":\"2022-12-15T15:22:22.640Z\",\"expired\":false,\"multiple\":true,\"votes_count\":0,\"voters_count\":0,\"options\":[{\"title\":\"GuixOS\",\"votes_count\":0},{\"title\":\"NixOS\",\"votes_count\":0},{\"title\":\"Guix
+        foreign installation\",\"votes_count\":0},{\"title\":\"Nix foreign installation\",\"votes_count\":0}],\"emojis\":[]}},{\"id\":\"109512639830820123\",\"created_at\":\"2022-12-14T15:04:30.855Z\",\"in_reply_to_id\":\"109506894017436700\",\"in_reply_to_account_id\":\"109359257038444868\",\"sensitive\":true,\"spoiler_text\":\"#Emacs,
+        #linux and #exwm specific\",\"visibility\":\"public\",\"language\":\"es\",\"uri\":\"https://emacs.ch/users/barocio/statuses/109512639830820123\",\"url\":\"https://emacs.ch/@barocio/109512639830820123\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eI
+        guess that situations like this have EXWM in a slow development. Maybe some
+        forks are useful/necessary!\\u003c/p\\u003e\\u003cp\\u003eThanks for voting!\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Tusky\",\"website\":\"https://tusky.app\"},\"account\":{\"id\":\"109359257038444868\",\"username\":\"barocio\",\"acct\":\"barocio\",\"display_name\":\"Alejandro
+        Barocio A.\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-17T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eChristian,
+        teacher (middle school), gnu/linux and emacs enthusiast, mexican.\\u003c/p\\u003e\",\"url\":\"https://emacs.ch/@barocio\",\"avatar\":\"https://emacs.ch/system/accounts/avatars/109/359/257/038/444/868/original/edc28ffb3c3eb7c6.jpg\",\"avatar_static\":\"https://emacs.ch/system/accounts/avatars/109/359/257/038/444/868/original/edc28ffb3c3eb7c6.jpg\",\"header\":\"https://emacs.ch/system/accounts/headers/109/359/257/038/444/868/original/d82c0f7f84e19484.jpg\",\"header_static\":\"https://emacs.ch/system/accounts/headers/109/359/257/038/444/868/original/d82c0f7f84e19484.jpg\",\"followers_count\":49,\"following_count\":39,\"statuses_count\":281,\"last_status_at\":\"2022-12-14\",\"noindex\":false,\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109512632394211877\",\"created_at\":\"2022-12-14T15:02:37.381Z\",\"in_reply_to_id\":\"109506850179936467\",\"in_reply_to_account_id\":\"109359257038444868\",\"sensitive\":true,\"spoiler_text\":\"#Emacs
+        specific\",\"visibility\":\"public\",\"language\":\"es\",\"uri\":\"https://emacs.ch/users/barocio/statuses/109512632394211877\",\"url\":\"https://emacs.ch/@barocio/109512632394211877\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eI
+        expected even less emacs 30 users. Maybe I will also make the jump.\\u003c/p\\u003e\\u003cp\\u003eThanks
+        for voting!\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Tusky\",\"website\":\"https://tusky.app\"},\"account\":{\"id\":\"109359257038444868\",\"username\":\"barocio\",\"acct\":\"barocio\",\"display_name\":\"Alejandro
+        Barocio A.\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-17T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eChristian,
+        teacher (middle school), gnu/linux and emacs enthusiast, mexican.\\u003c/p\\u003e\",\"url\":\"https://emacs.ch/@barocio\",\"avatar\":\"https://emacs.ch/system/accounts/avatars/109/359/257/038/444/868/original/edc28ffb3c3eb7c6.jpg\",\"avatar_static\":\"https://emacs.ch/system/accounts/avatars/109/359/257/038/444/868/original/edc28ffb3c3eb7c6.jpg\",\"header\":\"https://emacs.ch/system/accounts/headers/109/359/257/038/444/868/original/d82c0f7f84e19484.jpg\",\"header_static\":\"https://emacs.ch/system/accounts/headers/109/359/257/038/444/868/original/d82c0f7f84e19484.jpg\",\"followers_count\":49,\"following_count\":39,\"statuses_count\":281,\"last_status_at\":\"2022-12-14\",\"noindex\":false,\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109512626409712289\",\"created_at\":\"2022-12-14T15:01:06.065Z\",\"in_reply_to_id\":\"109506926189159220\",\"in_reply_to_account_id\":\"109359257038444868\",\"sensitive\":true,\"spoiler_text\":\"#Emacs
+        and #linux specific\",\"visibility\":\"public\",\"language\":\"es\",\"uri\":\"https://emacs.ch/users/barocio/statuses/109512626409712289\",\"url\":\"https://emacs.ch/@barocio/109512626409712289\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eInteresting
+        results. I expected to see more RedHat and Arch based and less D Brian and
+        Guix/Nix.\\u003c/p\\u003e\\u003cp\\u003eBut, also, there are probably cases
+        of foreign guix/nix installations.\\u003c/p\\u003e\\u003cp\\u003eThanks to
+        all those who voted!\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Tusky\",\"website\":\"https://tusky.app\"},\"account\":{\"id\":\"109359257038444868\",\"username\":\"barocio\",\"acct\":\"barocio\",\"display_name\":\"Alejandro
+        Barocio A.\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-17T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eChristian,
+        teacher (middle school), gnu/linux and emacs enthusiast, mexican.\\u003c/p\\u003e\",\"url\":\"https://emacs.ch/@barocio\",\"avatar\":\"https://emacs.ch/system/accounts/avatars/109/359/257/038/444/868/original/edc28ffb3c3eb7c6.jpg\",\"avatar_static\":\"https://emacs.ch/system/accounts/avatars/109/359/257/038/444/868/original/edc28ffb3c3eb7c6.jpg\",\"header\":\"https://emacs.ch/system/accounts/headers/109/359/257/038/444/868/original/d82c0f7f84e19484.jpg\",\"header_static\":\"https://emacs.ch/system/accounts/headers/109/359/257/038/444/868/original/d82c0f7f84e19484.jpg\",\"followers_count\":49,\"following_count\":39,\"statuses_count\":281,\"last_status_at\":\"2022-12-14\",\"noindex\":false,\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109512356958578421\",\"created_at\":\"2022-12-14T13:52:34.570Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://emacs.ch/users/yeti/statuses/109512356958578421\",\"url\":\"https://emacs.ch/@yeti/109512356958578421\",\"replies_count\":1,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":\"2022-12-14T13:55:09.770Z\",\"content\":\"\",\"reblog\":null,\"application\":{\"name\":\"Web\",\"website\":null},\"account\":{\"id\":\"109331289515690789\",\"username\":\"yeti\",\"acct\":\"yeti\",\"display_name\":\"yeti\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-12T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eI
+        repeatedly tried IMs from Identi.ca days to Mastodon and always ran away soon,
+        but I thought I\\u0026#39;d give it a retry using \\u003ca href=\\\"https://emacs.ch/tags/emacs\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eemacs\\u003c/span\\u003e\\u003c/a\\u003e
+        with \\u003ca href=\\\"https://emacs.ch/tags/mastodonel\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003emastodonel\\u003c/span\\u003e\\u003c/a\\u003e
+        and when I looked for a server emacs.ch just had shown up and still had exactly
+        1 user.\\u003c/p\\u003e\\u003cp\\u003eSometimes coincidence feels like a hint
+        for doing the right thing at the right time.\\u003cbr /\\u003e\\\\o/\\u003c/p\\u003e\\u003cp\\u003e20221115:
+        \ I do not follow people, I do follow tags.  Please use them in your public
+        posts.\\u003c/p\\u003e\\u003cp\\u003e20221118: \\u003ca href=\\\"https://emacs.ch/tags/nobot\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003enobot\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e20221212:
+        Enabled toot self destruct.\\u003c/p\\u003e\",\"url\":\"https://emacs.ch/@yeti\",\"avatar\":\"https://emacs.ch/system/accounts/avatars/109/331/289/515/690/789/original/e770e5b6cf4294cf.png\",\"avatar_static\":\"https://emacs.ch/system/accounts/avatars/109/331/289/515/690/789/original/e770e5b6cf4294cf.png\",\"header\":\"https://emacs.ch/system/accounts/headers/109/331/289/515/690/789/original/ba43ecb7272917cd.png\",\"header_static\":\"https://emacs.ch/system/accounts/headers/109/331/289/515/690/789/original/ba43ecb7272917cd.png\",\"followers_count\":36,\"following_count\":0,\"statuses_count\":18,\"last_status_at\":\"2022-12-14\",\"noindex\":false,\"emojis\":[],\"fields\":[{\"name\":\"u=rw\",\"value\":\"\U0001F1E9\U0001F1EA
+        \U0001F1EC\U0001F1E7\",\"verified_at\":null},{\"name\":\"pronouns\",\"value\":\"please
+        just use \\u0026quot;yeti\\u0026quot; instead\",\"verified_at\":null}]},\"media_attachments\":[{\"id\":\"109512364647197787\",\"type\":\"image\",\"url\":\"https://emacs.ch/system/media_attachments/files/109/512/364/647/197/787/original/b88d408b38e42936.png\",\"preview_url\":\"https://emacs.ch/system/media_attachments/files/109/512/364/647/197/787/small/b88d408b38e42936.png\",\"remote_url\":null,\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"original\":{\"width\":740,\"height\":408,\"size\":\"740x408\",\"aspect\":1.8137254901960784},\"small\":{\"width\":646,\"height\":356,\"size\":\"646x356\",\"aspect\":1.8146067415730338}},\"description\":null,\"blurhash\":\"U*Ndj[WCMxj]=@j[WDfP0Koft6WBoej@fQfP\"},{\"id\":\"109512365150324913\",\"type\":\"image\",\"url\":\"https://emacs.ch/system/media_attachments/files/109/512/365/150/324/913/original/784886724c0e6ef8.png\",\"preview_url\":\"https://emacs.ch/system/media_attachments/files/109/512/365/150/324/913/small/784886724c0e6ef8.png\",\"remote_url\":null,\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"original\":{\"width\":374,\"height\":401,\"size\":\"374x401\",\"aspect\":0.9326683291770573},\"small\":{\"width\":374,\"height\":401,\"size\":\"374x401\",\"aspect\":0.9326683291770573}},\"description\":null,\"blurhash\":\"U7R3QNo1?wx]t8ayRikCXTkDa0VsXOkCsXV@\"}],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109511891462642804\",\"created_at\":\"2022-12-14T11:54:11.665Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://emacs.ch/users/RogerBW/statuses/109511891462642804\",\"url\":\"https://emacs.ch/@RogerBW/109511891462642804\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":1,\"edited_at\":null,\"content\":\"\\u003cp\\u003eI
+        just completed \\u0026quot;Regolith Reservoir\\u0026quot; - Day 14 - Advent
+        of Code 2022 \\u003ca href=\\\"https://emacs.ch/tags/AdventOfCode\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eAdventOfCode\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://adventofcode.com/2022/day/14\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener noreferrer\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003eadventofcode.com/2022/day/14\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e in \\u003ca
+        href=\\\"https://emacs.ch/tags/PostScript\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ePostScript\\u003c/span\\u003e\\u003c/a\\u003e.
+        \\u003ca href=\\\"https://github.com/Firedrake/adventofcode2022/tree/main/14\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener noreferrer\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003egithub.com/Firedrake/adventofc\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003eode2022/tree/main/14\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Web\",\"website\":null},\"account\":{\"id\":\"109381879808498091\",\"username\":\"RogerBW\",\"acct\":\"RogerBW\",\"display_name\":\"Roger
+        BW\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-11-21T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003ca
+        href=\\\"https://emacs.ch/tags/Emacs\\\" class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eEmacs\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://emacs.ch/tags/Perl\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ePerl\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://emacs.ch/tags/Rustlang\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eRustlang\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://emacs.ch/tags/PostScript\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ePostScript\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://emacs.ch/tags/Linux\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eLinux\\u003c/span\\u003e\\u003c/a\\u003e
+        sysadmin, polyglot programming, \\u003ca href=\\\"https://emacs.ch/tags/boardgames\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eboardgames\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://emacs.ch/tags/RPGs\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eRPGs\\u003c/span\\u003e\\u003c/a\\u003e,
+        too many \\u003ca href=\\\"https://emacs.ch/tags/podcast\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003epodcast\\u003c/span\\u003e\\u003c/a\\u003e
+        s, 3d modelling and \\u003ca href=\\\"https://emacs.ch/tags/3dprinting\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003e3dprinting\\u003c/span\\u003e\\u003c/a\\u003e.\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://blog.firedrake.org/\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener noreferrer\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003eblog.firedrake.org/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003eHe/him or they/them.\\u003cbr /\\u003eHere\\u0026#39;s a nickel, kid.
+        Get yourself a better computer.\\u003cbr /\\u003eIf I unfollow you it\\u0026#39;s
+        probably for my mental health/distraction rather than anything you\\u0026#39;ve
+        done.\\u003c/p\\u003e\",\"url\":\"https://emacs.ch/@RogerBW\",\"avatar\":\"https://emacs.ch/system/accounts/avatars/109/381/879/808/498/091/original/b5278244c32ba246.png\",\"avatar_static\":\"https://emacs.ch/system/accounts/avatars/109/381/879/808/498/091/original/b5278244c32ba246.png\",\"header\":\"https://emacs.ch/system/accounts/headers/109/381/879/808/498/091/original/546bba731f3879ed.png\",\"header_static\":\"https://emacs.ch/system/accounts/headers/109/381/879/808/498/091/original/546bba731f3879ed.png\",\"followers_count\":75,\"following_count\":68,\"statuses_count\":243,\"last_status_at\":\"2022-12-14\",\"noindex\":false,\"emojis\":[],\"fields\":[{\"name\":\"Blog\",\"value\":\"\\u003ca
+        href=\\\"https://blog.firedrake.org/\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003eblog.firedrake.org/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-12-03T09:53:17.885+00:00\"}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"adventofcode\",\"url\":\"https://emacs.ch/tags/adventofcode\"},{\"name\":\"postscript\",\"url\":\"https://emacs.ch/tags/postscript\"}],\"emojis\":[],\"card\":{\"url\":\"https://adventofcode.com/2022/day/14\",\"title\":\"Day
+        14 - Advent of Code 2022\",\"description\":\"\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"\",\"provider_url\":\"\",\"html\":\"\",\"width\":0,\"height\":0,\"image\":null,\"embed_url\":\"\",\"blurhash\":null},\"poll\":null},{\"id\":\"109511687161969982\",\"created_at\":\"2022-12-14T11:02:14.293Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://emacs.ch/users/natharari/statuses/109511687161969982\",\"url\":\"https://emacs.ch/@natharari/109511687161969982\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":2,\"edited_at\":null,\"content\":\"\\u003cp\\u003eGot
+        the \\u003ca href=\\\"https://emacs.ch/tags/covid\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ecovid\\u003c/span\\u003e\\u003c/a\\u003e
+        booster. Now, the waiting.\\u003c/p\\u003e\\u003cp\\u003eLet\\u0026#39;s see
+        what\\u0026#39;s going on over here....\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Mastoot\",\"website\":\"https://apps.apple.com/app/mastoot/id1501485410\"},\"account\":{\"id\":\"109393861896261760\",\"username\":\"natharari\",\"acct\":\"natharari\",\"display_name\":\"Nathaniel
+        Harari\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-23T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eI\\u0026#39;m
+        no one of consequence.\\u003cbr /\\u003eBut, if you must know: He/Him\\u003cbr
+        /\\u003e\U0001F1FA\U0001F1F8\U0001F1EB\U0001F1F7\\u003cbr /\\u003e\U0001F943(Single
+        Malt)\\u003cbr /\\u003eI live in \\u003ca href=\\\"https://emacs.ch/tags/Paris\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eParis\\u003c/span\\u003e\\u003c/a\\u003e.\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://emacs.ch/tags/Emacs\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eEmacs\\u003c/span\\u003e\\u003c/a\\u003e
+        user.\\u003cbr /\\u003e\\u003ca href=\\\"https://emacs.ch/tags/Mac\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eMac\\u003c/span\\u003e\\u003c/a\\u003e
+        user\\u003c/p\\u003e\",\"url\":\"https://emacs.ch/@natharari\",\"avatar\":\"https://emacs.ch/system/accounts/avatars/109/393/861/896/261/760/original/035b02e29a60c699.jpeg\",\"avatar_static\":\"https://emacs.ch/system/accounts/avatars/109/393/861/896/261/760/original/035b02e29a60c699.jpeg\",\"header\":\"https://emacs.ch/system/accounts/headers/109/393/861/896/261/760/original/020876b6c8434403.jpeg\",\"header_static\":\"https://emacs.ch/system/accounts/headers/109/393/861/896/261/760/original/020876b6c8434403.jpeg\",\"followers_count\":89,\"following_count\":284,\"statuses_count\":773,\"last_status_at\":\"2022-12-14\",\"noindex\":false,\"emojis\":[],\"fields\":[{\"name\":\"Web:\",\"value\":\"\\u003ca
+        href=\\\"https://neurolog.dev\\\" target=\\\"_blank\\\" rel=\\\"nofollow noopener
+        noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003eneurolog.dev\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"covid\",\"url\":\"https://emacs.ch/tags/covid\"}],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109511490472313440\",\"created_at\":\"2022-12-14T10:12:13.043Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://emacs.ch/users/yeti/statuses/109511490472313440\",\"url\":\"https://emacs.ch/@yeti/109511490472313440\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eAnton
+        Petrov\\u003cbr /\\u003eParts of a Legendary Star Catalogue Finally Found
+        Hiding In Ancient Text\\u003cbr /\\u003e\\u003ca href=\\\"https://tube.cadence.moe/watch?v=ktzxaTotw-w\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener noreferrer\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003etube.cadence.moe/watch?v=ktzxa\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003eTotw-w\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://emacs.ch/tags/AntonPetrov\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eAntonPetrov\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/Hipparchus\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eHipparchus\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/Palimpsest\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ePalimpsest\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/StarCatalogue\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eStarCatalogue\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"mastodon.el\",\"website\":\"https://codeberg.org/martianh/mastodon.el\"},\"account\":{\"id\":\"109331289515690789\",\"username\":\"yeti\",\"acct\":\"yeti\",\"display_name\":\"yeti\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-12T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eI
+        repeatedly tried IMs from Identi.ca days to Mastodon and always ran away soon,
+        but I thought I\\u0026#39;d give it a retry using \\u003ca href=\\\"https://emacs.ch/tags/emacs\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eemacs\\u003c/span\\u003e\\u003c/a\\u003e
+        with \\u003ca href=\\\"https://emacs.ch/tags/mastodonel\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003emastodonel\\u003c/span\\u003e\\u003c/a\\u003e
+        and when I looked for a server emacs.ch just had shown up and still had exactly
+        1 user.\\u003c/p\\u003e\\u003cp\\u003eSometimes coincidence feels like a hint
+        for doing the right thing at the right time.\\u003cbr /\\u003e\\\\o/\\u003c/p\\u003e\\u003cp\\u003e20221115:
+        \ I do not follow people, I do follow tags.  Please use them in your public
+        posts.\\u003c/p\\u003e\\u003cp\\u003e20221118: \\u003ca href=\\\"https://emacs.ch/tags/nobot\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003enobot\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e20221212:
+        Enabled toot self destruct.\\u003c/p\\u003e\",\"url\":\"https://emacs.ch/@yeti\",\"avatar\":\"https://emacs.ch/system/accounts/avatars/109/331/289/515/690/789/original/e770e5b6cf4294cf.png\",\"avatar_static\":\"https://emacs.ch/system/accounts/avatars/109/331/289/515/690/789/original/e770e5b6cf4294cf.png\",\"header\":\"https://emacs.ch/system/accounts/headers/109/331/289/515/690/789/original/ba43ecb7272917cd.png\",\"header_static\":\"https://emacs.ch/system/accounts/headers/109/331/289/515/690/789/original/ba43ecb7272917cd.png\",\"followers_count\":36,\"following_count\":0,\"statuses_count\":18,\"last_status_at\":\"2022-12-14\",\"noindex\":false,\"emojis\":[],\"fields\":[{\"name\":\"u=rw\",\"value\":\"\U0001F1E9\U0001F1EA
+        \U0001F1EC\U0001F1E7\",\"verified_at\":null},{\"name\":\"pronouns\",\"value\":\"please
+        just use \\u0026quot;yeti\\u0026quot; instead\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"antonpetrov\",\"url\":\"https://emacs.ch/tags/antonpetrov\"},{\"name\":\"hipparchus\",\"url\":\"https://emacs.ch/tags/hipparchus\"},{\"name\":\"palimpsest\",\"url\":\"https://emacs.ch/tags/palimpsest\"},{\"name\":\"starcatalogue\",\"url\":\"https://emacs.ch/tags/starcatalogue\"}],\"emojis\":[],\"card\":{\"url\":\"https://tube.cadence.moe/watch?v=ktzxaTotw-w\",\"title\":\"Parts
+        of a Legendary Star Catalogue Finally Found Hiding In Ancient Text - CloudTube\",\"description\":\"\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"\",\"provider_url\":\"\",\"html\":\"\",\"width\":0,\"height\":0,\"image\":null,\"embed_url\":\"\",\"blurhash\":null},\"poll\":null},{\"id\":\"109511350328900156\",\"created_at\":\"2022-12-14T09:36:34.619Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://emacs.ch/users/louis/statuses/109511350328900156\",\"url\":\"https://emacs.ch/@louis/109511350328900156\",\"replies_count\":9,\"reblogs_count\":2,\"favourites_count\":3,\"edited_at\":null,\"content\":\"\\u003cp\\u003eAnyone
+        using \\u003ca href=\\\"https://emacs.ch/tags/Emacs\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eEmacs\\u003c/span\\u003e\\u003c/a\\u003e
+        to write actual letters? What packages are you using?\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Web\",\"website\":null},\"account\":{\"id\":\"109322230870544617\",\"username\":\"louis\",\"acct\":\"louis\",\"display_name\":\"Louis
+        Brauer :emacs:\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-11-11T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eAuthor
+        of \\u003ca href=\\\"https://emacs.ch/tags/Tuner\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eTuner\\u003c/span\\u003e\\u003c/a\\u003e
+        for Linux, the free/libre internet radio receiver with over 33k stations.\\u003c/p\\u003e\\u003cp\\u003eProfessional
+        full stack software developer \\u003ca href=\\\"https://emacs.ch/tags/Go\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eGo\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/JS\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eJS\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/Java\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eJava\\u003c/span\\u003e\\u003c/a\\u003e.\\u003c/p\\u003e\\u003cp\\u003eLove
+        \\u003ca href=\\\"https://emacs.ch/tags/Emacs\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eEmacs\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/GNU\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eGNU\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/SmallWeb\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eSmallWeb\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/CommonLisp\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eCommonLisp\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/Ruby\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eRuby\\u003c/span\\u003e\\u003c/a\\u003e.\\u003c/p\\u003e\\u003cp\\u003eI\\u0026#39;m
+        a very open minded guy in every sense and love a good debate. Gaining new
+        perspectives is what makes life interesting. I prefer encouraging environments
+        (like Mastodon) over FUD bathing (Twitter).\\u003c/p\\u003e\\u003cp\\u003eLiving
+        in Switzerland. Other hobbies: \\u003ca href=\\\"https://emacs.ch/tags/running\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003erunning\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/FireFighting\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFireFighting\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/StarTrek\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eStarTrek\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://emacs.ch/tags/fedi22\\\" class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003efedi22\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://emacs.ch/@louis\",\"avatar\":\"https://emacs.ch/system/accounts/avatars/109/322/230/870/544/617/original/a6e72db7f079c44b.jpeg\",\"avatar_static\":\"https://emacs.ch/system/accounts/avatars/109/322/230/870/544/617/original/a6e72db7f079c44b.jpeg\",\"header\":\"https://emacs.ch/system/accounts/headers/109/322/230/870/544/617/original/67fb61a93b7552b1.jpeg\",\"header_static\":\"https://emacs.ch/system/accounts/headers/109/322/230/870/544/617/original/67fb61a93b7552b1.jpeg\",\"followers_count\":644,\"following_count\":567,\"statuses_count\":985,\"last_status_at\":\"2022-12-14\",\"noindex\":false,\"emojis\":[{\"shortcode\":\"emacs\",\"url\":\"https://emacs.ch/system/custom_emojis/images/000/000/358/original/9f320443168e793f.png\",\"static_url\":\"https://emacs.ch/system/custom_emojis/images/000/000/358/static/9f320443168e793f.png\",\"visible_in_picker\":true}],\"fields\":[{\"name\":\"GitHub\",\"value\":\"\\u003ca
+        href=\\\"https://github.com/louis77\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003egithub.com/louis77\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-11-17T07:14:05.910+00:00\"},{\"name\":\"Tuner
+        for Linux\",\"value\":\"\\u003ca href=\\\"https://github.com/louis77/tuner\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener noreferrer me\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003egithub.com/louis77/tuner\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Languages\",\"value\":\"\U0001F1E9\U0001F1EA
+        (native), \U0001F1FA\U0001F1F8\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"emacs\",\"url\":\"https://emacs.ch/tags/emacs\"}],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109511320661301328\",\"created_at\":\"2022-12-14T09:29:01.928Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://emacs.ch/users/natharari/statuses/109511320661301328\",\"url\":\"https://emacs.ch/@natharari/109511320661301328\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":3,\"edited_at\":null,\"content\":\"\\u003cp\\u003eGoing
+        for my second \\u003ca href=\\\"https://emacs.ch/tags/Covid\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eCovid\\u003c/span\\u003e\\u003c/a\\u003e
+        booster shot today. \U0001F44D\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Web\",\"website\":null},\"account\":{\"id\":\"109393861896261760\",\"username\":\"natharari\",\"acct\":\"natharari\",\"display_name\":\"Nathaniel
+        Harari\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-23T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eI\\u0026#39;m
+        no one of consequence.\\u003cbr /\\u003eBut, if you must know: He/Him\\u003cbr
+        /\\u003e\U0001F1FA\U0001F1F8\U0001F1EB\U0001F1F7\\u003cbr /\\u003e\U0001F943(Single
+        Malt)\\u003cbr /\\u003eI live in \\u003ca href=\\\"https://emacs.ch/tags/Paris\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eParis\\u003c/span\\u003e\\u003c/a\\u003e.\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://emacs.ch/tags/Emacs\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eEmacs\\u003c/span\\u003e\\u003c/a\\u003e
+        user.\\u003cbr /\\u003e\\u003ca href=\\\"https://emacs.ch/tags/Mac\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eMac\\u003c/span\\u003e\\u003c/a\\u003e
+        user\\u003c/p\\u003e\",\"url\":\"https://emacs.ch/@natharari\",\"avatar\":\"https://emacs.ch/system/accounts/avatars/109/393/861/896/261/760/original/035b02e29a60c699.jpeg\",\"avatar_static\":\"https://emacs.ch/system/accounts/avatars/109/393/861/896/261/760/original/035b02e29a60c699.jpeg\",\"header\":\"https://emacs.ch/system/accounts/headers/109/393/861/896/261/760/original/020876b6c8434403.jpeg\",\"header_static\":\"https://emacs.ch/system/accounts/headers/109/393/861/896/261/760/original/020876b6c8434403.jpeg\",\"followers_count\":89,\"following_count\":284,\"statuses_count\":773,\"last_status_at\":\"2022-12-14\",\"noindex\":false,\"emojis\":[],\"fields\":[{\"name\":\"Web:\",\"value\":\"\\u003ca
+        href=\\\"https://neurolog.dev\\\" target=\\\"_blank\\\" rel=\\\"nofollow noopener
+        noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003eneurolog.dev\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"covid\",\"url\":\"https://emacs.ch/tags/covid\"}],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109511317911566609\",\"created_at\":\"2022-12-14T09:28:19.969Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://emacs.ch/users/natharari/statuses/109511317911566609\",\"url\":\"https://emacs.ch/@natharari/109511317911566609\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eGood
+        morning, \\u003ca href=\\\"https://emacs.ch/tags/Mastodonians\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eMastodonians\\u003c/span\\u003e\\u003c/a\\u003e
+        \U0001F600\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Web\",\"website\":null},\"account\":{\"id\":\"109393861896261760\",\"username\":\"natharari\",\"acct\":\"natharari\",\"display_name\":\"Nathaniel
+        Harari\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-23T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eI\\u0026#39;m
+        no one of consequence.\\u003cbr /\\u003eBut, if you must know: He/Him\\u003cbr
+        /\\u003e\U0001F1FA\U0001F1F8\U0001F1EB\U0001F1F7\\u003cbr /\\u003e\U0001F943(Single
+        Malt)\\u003cbr /\\u003eI live in \\u003ca href=\\\"https://emacs.ch/tags/Paris\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eParis\\u003c/span\\u003e\\u003c/a\\u003e.\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://emacs.ch/tags/Emacs\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eEmacs\\u003c/span\\u003e\\u003c/a\\u003e
+        user.\\u003cbr /\\u003e\\u003ca href=\\\"https://emacs.ch/tags/Mac\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eMac\\u003c/span\\u003e\\u003c/a\\u003e
+        user\\u003c/p\\u003e\",\"url\":\"https://emacs.ch/@natharari\",\"avatar\":\"https://emacs.ch/system/accounts/avatars/109/393/861/896/261/760/original/035b02e29a60c699.jpeg\",\"avatar_static\":\"https://emacs.ch/system/accounts/avatars/109/393/861/896/261/760/original/035b02e29a60c699.jpeg\",\"header\":\"https://emacs.ch/system/accounts/headers/109/393/861/896/261/760/original/020876b6c8434403.jpeg\",\"header_static\":\"https://emacs.ch/system/accounts/headers/109/393/861/896/261/760/original/020876b6c8434403.jpeg\",\"followers_count\":89,\"following_count\":284,\"statuses_count\":773,\"last_status_at\":\"2022-12-14\",\"noindex\":false,\"emojis\":[],\"fields\":[{\"name\":\"Web:\",\"value\":\"\\u003ca
+        href=\\\"https://neurolog.dev\\\" target=\\\"_blank\\\" rel=\\\"nofollow noopener
+        noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003eneurolog.dev\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"mastodonians\",\"url\":\"https://emacs.ch/tags/mastodonians\"}],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109511310445445437\",\"created_at\":\"2022-12-14T09:26:26.046Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://emacs.ch/users/candletrading/statuses/109511310445445437\",\"url\":\"https://emacs.ch/@candletrading/109511310445445437\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":\"2022-12-14T09:31:02.492Z\",\"content\":\"\\u003cp\\u003eand
+        a super legit Dance of the Sugar Plum Fairy \\u003ca href=\\\"https://emacs.ch/tags/Nutcracker\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eNutcracker\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/ballet\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eballet\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/EkaterinaKrysanova\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eEkaterinaKrysanova\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://www.youtube.com/watch?v=qx7FPqBcEC0\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener noreferrer\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
+        class=\\\"ellipsis\\\"\\u003eyoutube.com/watch?v=qx7FPqBcEC\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e0\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003ehad
+        no idea there were so many different versions/interpretations\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Web\",\"website\":null},\"account\":{\"id\":\"109349390450512190\",\"username\":\"candletrading\",\"acct\":\"candletrading\",\"display_name\":\"\U0001F5FF:emacs:♈\U0001F3B6\U0001F9FF\U0001F30C\U0001F56F️\U0001F375\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-11-15T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eDo
+        bears bear? Do bees bee?\\u003c/p\\u003e\",\"url\":\"https://emacs.ch/@candletrading\",\"avatar\":\"https://emacs.ch/system/accounts/avatars/109/349/390/450/512/190/original/87c0014834ef0bdb.jpg\",\"avatar_static\":\"https://emacs.ch/system/accounts/avatars/109/349/390/450/512/190/original/87c0014834ef0bdb.jpg\",\"header\":\"https://emacs.ch/system/accounts/headers/109/349/390/450/512/190/original/b121b11ee6da630e.jpeg\",\"header_static\":\"https://emacs.ch/system/accounts/headers/109/349/390/450/512/190/original/b121b11ee6da630e.jpeg\",\"followers_count\":12,\"following_count\":41,\"statuses_count\":43,\"last_status_at\":\"2022-12-14\",\"noindex\":true,\"emojis\":[{\"shortcode\":\"emacs\",\"url\":\"https://emacs.ch/system/custom_emojis/images/000/000/358/original/9f320443168e793f.png\",\"static_url\":\"https://emacs.ch/system/custom_emojis/images/000/000/358/static/9f320443168e793f.png\",\"visible_in_picker\":true}],\"fields\":[{\"name\":\"soundcloud\",\"value\":\"\\u003ca
+        href=\\\"https://soundcloud.com/poutdeviatorphobiaunlovel\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"ellipsis\\\"\\u003esoundcloud.com/poutdeviatorpho\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ebiaunlovel\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"previously\",\"value\":\"@storewidenastinessdrizzlyfetch@social.privacytools.io\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"nutcracker\",\"url\":\"https://emacs.ch/tags/nutcracker\"},{\"name\":\"ballet\",\"url\":\"https://emacs.ch/tags/ballet\"},{\"name\":\"ekaterinakrysanova\",\"url\":\"https://emacs.ch/tags/ekaterinakrysanova\"}],\"emojis\":[],\"card\":{\"url\":\"https://www.youtube.com/watch?v=qx7FPqBcEC0\",\"title\":\"Ekaterina
+        Krysanova - Dance of the Sugar Plum Fairy (Nutcracker), 07.01.2020\",\"description\":\"\",\"type\":\"video\",\"author_name\":\"EkaterinaKrysanovaUnOfficial\",\"author_url\":\"https://www.youtube.com/@EkaterinaKrysanovaUnOfficial\",\"provider_name\":\"YouTube\",\"provider_url\":\"https://www.youtube.com/\",\"html\":\"\\u003ciframe
+        width=\\\"200\\\" height=\\\"113\\\" src=\\\"https://www.youtube.com/embed/qx7FPqBcEC0?feature=oembed\\\"
+        frameborder=\\\"0\\\" allowfullscreen=\\\"\\\" title=\\\"Ekaterina Krysanova
+        - Dance of the Sugar Plum Fairy (Nutcracker), 07.01.2020\\\"\\u003e\\u003c/iframe\\u003e\",\"width\":200,\"height\":113,\"image\":\"https://emacs.ch/system/cache/preview_cards/images/000/115/251/original/c9464e757c4192e8.jpg\",\"embed_url\":\"\",\"blurhash\":\"UVBgPZx]RjofIUofj[ay8^ROt7WB%LV@WVkC\"},\"poll\":null},{\"id\":\"109511283578744752\",\"created_at\":\"2022-12-14T09:19:36.093Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://emacs.ch/users/candletrading/statuses/109511283578744752\",\"url\":\"https://emacs.ch/@candletrading/109511283578744752\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":\"2022-12-14T09:51:00.978Z\",\"content\":\"\\u003cp\\u003edamn,
+        i really went down a \\u003ca href=\\\"https://emacs.ch/tags/Nutcracker\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eNutcracker\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/ballet\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eballet\\u003c/span\\u003e\\u003c/a\\u003e
+        rabbithole tnght. couldn\\u0026#39;t find the version i have on yt, so here\\u0026#39;s
+        a nightcore\\u0026#39;d version of \\u003ca href=\\\"https://emacs.ch/tags/WaltzOfTheFlowers\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eWaltzOfTheFlowers\\u003c/span\\u003e\\u003c/a\\u003e
+        by \\u003ca href=\\\"https://emacs.ch/tags/NewYorkCityBallet\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eNewYorkCityBallet\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://www.youtube.com/watch?v=LKcZL8q1eBw\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener noreferrer\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
+        class=\\\"ellipsis\\\"\\u003eyoutube.com/watch?v=LKcZL8q1eB\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ew\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Web\",\"website\":null},\"account\":{\"id\":\"109349390450512190\",\"username\":\"candletrading\",\"acct\":\"candletrading\",\"display_name\":\"\U0001F5FF:emacs:♈\U0001F3B6\U0001F9FF\U0001F30C\U0001F56F️\U0001F375\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-11-15T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eDo
+        bears bear? Do bees bee?\\u003c/p\\u003e\",\"url\":\"https://emacs.ch/@candletrading\",\"avatar\":\"https://emacs.ch/system/accounts/avatars/109/349/390/450/512/190/original/87c0014834ef0bdb.jpg\",\"avatar_static\":\"https://emacs.ch/system/accounts/avatars/109/349/390/450/512/190/original/87c0014834ef0bdb.jpg\",\"header\":\"https://emacs.ch/system/accounts/headers/109/349/390/450/512/190/original/b121b11ee6da630e.jpeg\",\"header_static\":\"https://emacs.ch/system/accounts/headers/109/349/390/450/512/190/original/b121b11ee6da630e.jpeg\",\"followers_count\":12,\"following_count\":41,\"statuses_count\":43,\"last_status_at\":\"2022-12-14\",\"noindex\":true,\"emojis\":[{\"shortcode\":\"emacs\",\"url\":\"https://emacs.ch/system/custom_emojis/images/000/000/358/original/9f320443168e793f.png\",\"static_url\":\"https://emacs.ch/system/custom_emojis/images/000/000/358/static/9f320443168e793f.png\",\"visible_in_picker\":true}],\"fields\":[{\"name\":\"soundcloud\",\"value\":\"\\u003ca
+        href=\\\"https://soundcloud.com/poutdeviatorphobiaunlovel\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"ellipsis\\\"\\u003esoundcloud.com/poutdeviatorpho\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ebiaunlovel\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"previously\",\"value\":\"@storewidenastinessdrizzlyfetch@social.privacytools.io\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"nutcracker\",\"url\":\"https://emacs.ch/tags/nutcracker\"},{\"name\":\"ballet\",\"url\":\"https://emacs.ch/tags/ballet\"},{\"name\":\"waltzoftheflowers\",\"url\":\"https://emacs.ch/tags/waltzoftheflowers\"},{\"name\":\"newyorkcityballet\",\"url\":\"https://emacs.ch/tags/newyorkcityballet\"}],\"emojis\":[],\"card\":{\"url\":\"https://www.youtube.com/watch?v=LKcZL8q1eBw\",\"title\":\"George
+        Balanchine´s The Nutcracker - Waltz of the Flowers\",\"description\":\"\",\"type\":\"video\",\"author_name\":\"CMajorEntertainment\",\"author_url\":\"https://www.youtube.com/@CMajorEntertainment\",\"provider_name\":\"YouTube\",\"provider_url\":\"https://www.youtube.com/\",\"html\":\"\\u003ciframe
+        width=\\\"200\\\" height=\\\"113\\\" src=\\\"https://www.youtube.com/embed/LKcZL8q1eBw?feature=oembed\\\"
+        frameborder=\\\"0\\\" allowfullscreen=\\\"\\\" title=\\\"George Balanchine´s
+        The Nutcracker - Waltz of the Flowers\\\"\\u003e\\u003c/iframe\\u003e\",\"width\":200,\"height\":113,\"image\":\"https://emacs.ch/system/cache/preview_cards/images/000/115/252/original/988951d432cd1286.jpg\",\"embed_url\":\"\",\"blurhash\":\"UOD*6Rj[M|xaWAoLoLbF0|WVkANGxIWVbHsp\"},\"poll\":null},{\"id\":\"109511208637436749\",\"created_at\":\"2022-12-14T09:00:32.580Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://emacs.ch/users/holgerschurig/statuses/109511208637436749\",\"url\":\"https://emacs.ch/@holgerschurig/109511208637436749\",\"replies_count\":0,\"reblogs_count\":1,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eBlog
+        post: a simply method to link back from your static block page to Mastodon,
+        so that people can eventually reply.\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://holgerschurig.github.io/en/hugo-and-mastodon-comments/\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener noreferrer\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003eholgerschurig.github.io/en/hug\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003eo-and-mastodon-comments/\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://emacs.ch/tags/hugo\\\" class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ehugo\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/mastodon\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003emastodon\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"mastodon.el\",\"website\":\"https://codeberg.org/martianh/mastodon.el\"},\"account\":{\"id\":\"109502622139993381\",\"username\":\"holgerschurig\",\"acct\":\"holgerschurig\",\"display_name\":\"Holger
+        Schurig\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-12-12T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eHobby:
+        \\u003ca href=\\\"https://emacs.ch/tags/linux\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003elinux\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://emacs.ch/tags/emacs\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eemacs\\u003c/span\\u003e\\u003c/a\\u003e,
+        reading history novelles, \\u003ca href=\\\"https://emacs.ch/tags/hamradio\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ehamradio\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://emacs.ch/tags/sdr\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003esdr\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://emacs.ch/tags/embedded\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eembedded\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003eProgramming
+        languages: many, since I program since 1979. Currently mostly C++ with Qt,
+        C (small command line things, Firmware, Linux kernel stuff), Python3, Bash,
+        reluctantly Elisp, interested in Nim\\u003c/p\\u003e\\u003cp\\u003eProfessionally
+        I work for a producer of embedded electronics and rugged vehicle computers,
+        doing the Linux images, drivers, hardware test setup, firmware for µC in \\u003ca
+        href=\\\"https://emacs.ch/tags/zephyr\\\" class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ezephyr\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://emacs.ch/@holgerschurig\",\"avatar\":\"https://emacs.ch/avatars/original/missing.png\",\"avatar_static\":\"https://emacs.ch/avatars/original/missing.png\",\"header\":\"https://emacs.ch/headers/original/missing.png\",\"header_static\":\"https://emacs.ch/headers/original/missing.png\",\"followers_count\":9,\"following_count\":6,\"statuses_count\":18,\"last_status_at\":\"2022-12-14\",\"noindex\":false,\"emojis\":[],\"fields\":[{\"name\":\"GITHUB\",\"value\":\"\\u003ca
+        href=\\\"https://github.com/holgerschurig/\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003egithub.com/holgerschurig/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"LANGUAGES\",\"value\":\"\U0001F1E9\U0001F1EA
+        \ (native), \U0001F1EC\U0001F1E7\",\"verified_at\":null},{\"name\":\"WEBSITE\",\"value\":\"\\u003ca
+        href=\\\"https://holgerschurig.github.io/\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003eholgerschurig.github.io/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"hugo\",\"url\":\"https://emacs.ch/tags/hugo\"},{\"name\":\"mastodon\",\"url\":\"https://emacs.ch/tags/mastodon\"}],\"emojis\":[],\"card\":{\"url\":\"https://holgerschurig.github.io/en/hugo-and-mastodon-comments/\",\"title\":\"Comment
+        static hugo blog entry with Mastodon · Holger Schurig's Computer Calisthenics
+        \\u0026 Orthodontia\",\"description\":\"\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"\",\"provider_url\":\"\",\"html\":\"\",\"width\":0,\"height\":0,\"image\":null,\"embed_url\":\"\",\"blurhash\":null},\"poll\":null},{\"id\":\"109510439975085396\",\"created_at\":\"2022-12-14T05:45:03.725Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://emacs.ch/users/emacslife/statuses/109510439975085396\",\"url\":\"https://emacs.ch/@emacslife/109510439975085396\",\"replies_count\":0,\"reblogs_count\":2,\"favourites_count\":1,\"edited_at\":null,\"content\":\"\\u003cp\\u003eCameron
+        Desautels: git: Quick Multi-Line Commit Messages \\u003ca href=\\\"https://camdez.com/blog/2022/12/13/git-quick-multi-line-commit-messages/\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener noreferrer\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ecamdez.com/blog/2022/12/13/git\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e-quick-multi-line-commit-messages/\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"emacslife\",\"website\":\"https://github.com/edsu/feediverse\"},\"account\":{\"id\":\"109333840256987072\",\"username\":\"emacslife\",\"acct\":\"emacslife\",\"display_name\":\"Planet
+        Emacslife\",\"locked\":false,\"bot\":true,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-11-13T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eBot
+        account maintained by \\u003cspan class=\\\"h-card\\\"\\u003e\\u003ca href=\\\"https://emacs.ch/@sachac\\\"
+        class=\\\"u-url mention\\\"\\u003e@\\u003cspan\\u003esachac\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e
+        for the feed at \\u003ca href=\\\"https://planet.emacslife.com\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener noreferrer\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003eplanet.emacslife.com\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://emacs.ch/@emacslife\",\"avatar\":\"https://emacs.ch/avatars/original/missing.png\",\"avatar_static\":\"https://emacs.ch/avatars/original/missing.png\",\"header\":\"https://emacs.ch/headers/original/missing.png\",\"header_static\":\"https://emacs.ch/headers/original/missing.png\",\"followers_count\":493,\"following_count\":0,\"statuses_count\":72,\"last_status_at\":\"2022-12-14\",\"noindex\":false,\"emojis\":[],\"fields\":[{\"name\":\"Home\",\"value\":\"\\u003ca
+        href=\\\"https://planet.emacslife.com\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003eplanet.emacslife.com\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":{\"url\":\"https://camdez.com/blog/2022/12/13/git-quick-multi-line-commit-messages/\",\"title\":\"git:
+        Quick Multi-Line Commit Messages\",\"description\":\"I don’t know why I’m
+        quite so tickled by this, but today I learned\\nthat you can make multi-line
+        git commit messages by passing multiple\\n-m arguments:\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"camdez\",\"provider_url\":\"\",\"html\":\"\",\"width\":0,\"height\":0,\"image\":null,\"embed_url\":\"\",\"blurhash\":null},\"poll\":null},{\"id\":\"109509895111837792\",\"created_at\":\"2022-12-14T03:26:29.770Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://emacs.ch/users/RSSBot/statuses/109509895111837792\",\"url\":\"https://emacs.ch/@RSSBot/109509895111837792\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003er/emacs
+        - Top [MONTH]\\u003c/p\\u003e\\u003cp\\u003eYak Shaving....wildly hoping this
+        will entertain everyone :)\\u003cbr /\\u003e\\u003ca href=\\\"https://www.reddit.com/r/emacs/comments/zhcaga/yak_shavingwildly_hoping_this_will_entertain/\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener noreferrer\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ereddit.com/r/emacs/comments/zh\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ecaga/yak_shavingwildly_hoping_this_will_entertain/\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://emacs.ch/tags/emacs\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eemacs\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"rss\",\"website\":null},\"account\":{\"id\":\"109335818266438014\",\"username\":\"RSSBot\",\"acct\":\"RSSBot\",\"display_name\":\"Emacs
+        [RSS Bot]\",\"locked\":false,\"bot\":true,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-11-13T00:00:00.000Z\",\"note\":\"\\u003cp\\u003ePlease
+        also follow the:\\u003c/p\\u003e\\u003cp\\u003e- \\u003cspan class=\\\"h-card\\\"\\u003e\\u003ca
+        href=\\\"https://emacs.ch/@emacslife\\\" class=\\\"u-url mention\\\"\\u003e@\\u003cspan\\u003eemacslife\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e\\u003c/p\\u003e\",\"url\":\"https://emacs.ch/@RSSBot\",\"avatar\":\"https://emacs.ch/system/accounts/avatars/109/335/818/266/438/014/original/e9c4a4ec97ae9f28.png\",\"avatar_static\":\"https://emacs.ch/system/accounts/avatars/109/335/818/266/438/014/original/e9c4a4ec97ae9f28.png\",\"header\":\"https://emacs.ch/headers/original/missing.png\",\"header_static\":\"https://emacs.ch/headers/original/missing.png\",\"followers_count\":384,\"following_count\":3,\"statuses_count\":96,\"last_status_at\":\"2022-12-14\",\"noindex\":false,\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"emacs\",\"url\":\"https://emacs.ch/tags/emacs\"}],\"emojis\":[],\"card\":{\"url\":\"https://www.reddit.com/r/emacs/comments/zhcaga/yak_shavingwildly_hoping_this_will_entertain/\",\"title\":\"Yak
+        Shaving....wildly hoping this will entertain everyone :)\",\"description\":\"Posted
+        in r/emacs by u/unixbhaskar • 58 points and 16 comments\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"reddit\",\"provider_url\":\"\",\"html\":\"\",\"width\":256,\"height\":256,\"image\":\"https://emacs.ch/system/cache/preview_cards/images/000/101/836/original/7bf561c555eafabd.png\",\"embed_url\":\"\",\"blurhash\":\"UVT7Nmn$qFozwaf6XAf+c@fkpxfkcFf+Z$e.\"},\"poll\":null},{\"id\":\"109509895104945782\",\"created_at\":\"2022-12-14T03:26:29.668Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://emacs.ch/users/RSSBot/statuses/109509895104945782\",\"url\":\"https://emacs.ch/@RSSBot/109509895104945782\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003er/emacs
+        - Top [MONTH]\\u003c/p\\u003e\\u003cp\\u003eA co-worker sent this\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://www.reddit.com/r/emacs/comments/zkn7ab/a_coworker_sent_this/\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener noreferrer\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ereddit.com/r/emacs/comments/zk\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003en7ab/a_coworker_sent_this/\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://emacs.ch/tags/emacs\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eemacs\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"rss\",\"website\":null},\"account\":{\"id\":\"109335818266438014\",\"username\":\"RSSBot\",\"acct\":\"RSSBot\",\"display_name\":\"Emacs
+        [RSS Bot]\",\"locked\":false,\"bot\":true,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-11-13T00:00:00.000Z\",\"note\":\"\\u003cp\\u003ePlease
+        also follow the:\\u003c/p\\u003e\\u003cp\\u003e- \\u003cspan class=\\\"h-card\\\"\\u003e\\u003ca
+        href=\\\"https://emacs.ch/@emacslife\\\" class=\\\"u-url mention\\\"\\u003e@\\u003cspan\\u003eemacslife\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e\\u003c/p\\u003e\",\"url\":\"https://emacs.ch/@RSSBot\",\"avatar\":\"https://emacs.ch/system/accounts/avatars/109/335/818/266/438/014/original/e9c4a4ec97ae9f28.png\",\"avatar_static\":\"https://emacs.ch/system/accounts/avatars/109/335/818/266/438/014/original/e9c4a4ec97ae9f28.png\",\"header\":\"https://emacs.ch/headers/original/missing.png\",\"header_static\":\"https://emacs.ch/headers/original/missing.png\",\"followers_count\":384,\"following_count\":3,\"statuses_count\":96,\"last_status_at\":\"2022-12-14\",\"noindex\":false,\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"emacs\",\"url\":\"https://emacs.ch/tags/emacs\"}],\"emojis\":[],\"card\":{\"url\":\"https://www.reddit.com/r/emacs/comments/zkn7ab/a_coworker_sent_this/\",\"title\":\"A
+        co-worker sent this\",\"description\":\"Posted in r/emacs by u/das-not-so-bad
+        • 517 points and 25 comments\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"reddit\",\"provider_url\":\"\",\"html\":\"\",\"width\":140,\"height\":140,\"image\":\"https://emacs.ch/system/cache/preview_cards/images/000/114/388/original/4cee4b0c2152d847.jpg\",\"embed_url\":\"\",\"blurhash\":\"U99HLlM_8^x]?bozRPt8R4x]SPjE$fofOFV?\"},\"poll\":null},{\"id\":\"109509829761536171\",\"created_at\":\"2022-12-14T03:09:52.606Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":true,\"spoiler_text\":\"Long
+        COVID\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://emacs.ch/users/adam/statuses/109509829761536171\",\"url\":\"https://emacs.ch/@adam/109509829761536171\",\"replies_count\":1,\"reblogs_count\":2,\"favourites_count\":3,\"edited_at\":null,\"content\":\"\\u003cp\\u003e\\u003ca
+        href=\\\"https://med-mastodon.com/@WesElyMD/109509284278858564\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener noreferrer\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"ellipsis\\\"\\u003emed-mastodon.com/@WesElyMD/109\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e509284278858564\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003eVery
+        worthwhile post chain on (some of) what we know about Long COVID.\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://emacs.ch/tags/health\\\" class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ehealth\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/healthcare\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ehealthcare\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/covid\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ecovid\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/virus\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003evirus\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Tusky\",\"website\":\"https://tusky.app\"},\"account\":{\"id\":\"109381732132693867\",\"username\":\"adam\",\"acct\":\"adam\",\"display_name\":\"Adam\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-11-21T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eThinker
+        of thoughts. Curious, open, always exploring. Asks questions to learn.\\u003c/p\\u003e\\u003cp\\u003eMay
+        we all suffer less.\\u003c/p\\u003e\\u003cp\\u003e----------------------------------------\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://emacs.ch/tags/music\\\" class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003emusic\\u003c/span\\u003e\\u003c/a\\u003e:
+        Mainly \\u003ca href=\\\"https://emacs.ch/tags/metal\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003emetal\\u003c/span\\u003e\\u003c/a\\u003e.
+        Also \\u003ca href=\\\"https://emacs.ch/tags/pop\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003epop\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://emacs.ch/tags/hiphop\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ehiphop\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://emacs.ch/tags/rap\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003erap\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://emacs.ch/tags/folk\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003efolk\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://emacs.ch/tags/dubstep\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003edubstep\\u003c/span\\u003e\\u003c/a\\u003e.
+        Love harmonies and rhythm. \\u003ca href=\\\"https://emacs.ch/tags/drums\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003edrums\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/guitar\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eguitar\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/vocals\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003evocals\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/leadguitar\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eleadguitar\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://emacs.ch/tags/photography\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ephotography\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/movie\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003emovie\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/film\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003efilm\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/documentary\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003edocumentary\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://emacs.ch/tags/psychology\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003epsychology\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/philosophy\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ephilosophy\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/physics\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ephysics\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/biology\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ebiology\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/history\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ehistory\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/neuroscience\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eneuroscience\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/computerscience\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ecomputerscience\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/linguistics\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003elinguistics\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://emacs.ch/tags/book\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ebook\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/books\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ebooks\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/comic\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ecomic\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/comics\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ecomics\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://emacs.ch/tags/autism\\\" class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eautism\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/cptsd\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ecptsd\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/exvangelical\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eexvangelical\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://emacs.ch/tags/emacs\\\" class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eemacs\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/orgmode\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eorgmode\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/Thinkpad\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eThinkpad\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://emacs.ch/tags/FOSS\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFOSS\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://emacs.ch/@adam\",\"avatar\":\"https://emacs.ch/system/accounts/avatars/109/381/732/132/693/867/original/fc827f6631e0f684.jpg\",\"avatar_static\":\"https://emacs.ch/system/accounts/avatars/109/381/732/132/693/867/original/fc827f6631e0f684.jpg\",\"header\":\"https://emacs.ch/headers/original/missing.png\",\"header_static\":\"https://emacs.ch/headers/original/missing.png\",\"followers_count\":47,\"following_count\":278,\"statuses_count\":94,\"last_status_at\":\"2022-12-14\",\"noindex\":false,\"emojis\":[],\"fields\":[{\"name\":\"Personal
+        website\",\"value\":\"\\u003ca href=\\\"https://werling.info\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003ewerling.info\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Languages\",\"value\":\"EN,
+        DE, HU, (FR), (ES)\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"health\",\"url\":\"https://emacs.ch/tags/health\"},{\"name\":\"healthcare\",\"url\":\"https://emacs.ch/tags/healthcare\"},{\"name\":\"covid\",\"url\":\"https://emacs.ch/tags/covid\"},{\"name\":\"virus\",\"url\":\"https://emacs.ch/tags/virus\"}],\"emojis\":[],\"card\":{\"url\":\"https://med-mastodon.com/@WesElyMD/109509284278858564\",\"title\":\"Wes
+        Ely MD :verified: (@WesElyMD@med-mastodon.com)\",\"description\":\"Attached:
+        1 image\\n\\n1/\U0001F9F5Our speed in understanding Long COVID is accelerating‼️\\n \\nHere
+        I cover a smorgasbord of recent COVID data on…\\n\U0001F4CDBrain Aging \\n\U0001F4CDGenetics\\n\U0001F4CDEpidemiology\\n\U0001F4CDPEM\\n\U0001F4CDSelf-Protection\\n \\nKnowledge
+        is Power.\\n\\nWe are all at risk of losing Brain Power from #LongCOVID.\\n\\nLet’s
+        learn…\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"Med-Mastodon\",\"provider_url\":\"\",\"html\":\"\",\"width\":400,\"height\":296,\"image\":\"https://emacs.ch/system/cache/preview_cards/images/000/114/334/original/ca69b43e69db56ef.jpg\",\"embed_url\":\"\",\"blurhash\":\"UcQJDuof?^R*w^jZNGof%gWBV@kCRPWBx]Rj\"},\"poll\":null},{\"id\":\"109509761980502503\",\"created_at\":\"2022-12-14T02:52:38.345Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://emacs.ch/users/grizzzly/statuses/109509761980502503\",\"url\":\"https://emacs.ch/@grizzzly/109509761980502503\",\"replies_count\":0,\"reblogs_count\":2,\"favourites_count\":2,\"edited_at\":null,\"content\":\"\\u003cp\\u003eJust
+        created account on this server.  Been studying emacs on odyssey for a while
+        now.\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Web\",\"website\":null},\"account\":{\"id\":\"109509614397174281\",\"username\":\"grizzzly\",\"acct\":\"grizzzly\",\"display_name\":\"Grizzzly\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-12-14T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://emacs.ch/@grizzzly\",\"avatar\":\"https://emacs.ch/avatars/original/missing.png\",\"avatar_static\":\"https://emacs.ch/avatars/original/missing.png\",\"header\":\"https://emacs.ch/headers/original/missing.png\",\"header_static\":\"https://emacs.ch/headers/original/missing.png\",\"followers_count\":1,\"following_count\":3,\"statuses_count\":1,\"last_status_at\":\"2022-12-14\",\"noindex\":false,\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null}]"
+  recorded_at: 2022-12-14 15:31:16 GMT
+  recorded_with: vcr/1.1.0, webmockr/0.8.2

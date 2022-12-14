@@ -17,4 +17,5 @@
 #' Get started by reading `vignette("rtoot")`. and browse all vignettes with `browseVignettes(package = "rtoot")`
 #'
 #' @keywords internal
+#' @aliases rtoot-package
 "_PACKAGE"

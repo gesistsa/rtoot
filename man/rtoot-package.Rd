@@ -2,8 +2,8 @@
 % Please edit documentation in R/rtoot-package.R
 \docType{package}
 \name{rtoot-package}
-\alias{rtoot}
 \alias{rtoot-package}
+\alias{_PACKAGE}
 \title{rtoot: Collect Mastodon data from R}
 \description{
 rtoots provides a range of functions to interact with the Mastodon API.
