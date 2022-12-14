@@ -1,26 +1,33 @@
 #' Get a list of fediverse servers
 #'
+#' @param token token from instances.social (this is different from your Mastodon token!)
 #' @param n number of servers to show
-#' @details the results are sorted by user count. The function sometimes fails unexpectedly for n>100. Try to rerun your request in that case or use a smaller n.
+#' @param ... additional parameters for the instances.social API. See <https://instances.social/api/doc/>
+#' @details This function uses the API at instances.social and needs a separate token. Results are sorted by number of users
 #' @return tibble of fediverse instances
 #' @export
 #' @examples
 #' \dontrun{
 #' get_fedi_instances(n = 5)
 #' }
-get_fedi_instances  <-  function(n = 20) {
-  pages <- ceiling(n/20)
-  df <- tibble::tibble()
-  for(i in seq_len(pages)){
-    tmp <- make_get_request(token = NULL, path = "/api/instances",
-                            instance = "api.index.community", params = list(sortField = "userCount", sortDirection = "desc", page = i),
-                            anonymous = TRUE)
-    df <- dplyr::bind_rows(df, dplyr::bind_rows(tmp$instances))
-    Sys.sleep(stats::runif(1,1,2))
+get_fedi_instances  <-  function(token=NA,n = 20, ...) {
+  if(is.na(token)){
+    stop("a token from https://instances.social/api/token is needed for this function (different from Mastodon)",call. = FALSE)
   }
-  df[seq_len(n),]
+  config <- httr::add_headers(Authorization = paste('Bearer', token))
+  params <- list(count = n,sort_by="users",sort_order="desc",...)
+  request_results <- httr::GET("https://instances.social/api/1.0/instances/list",query = params,config)
+  status_code <- httr::status_code(request_results)
+  if (!status_code %in% c(200)) {
+    stop(paste("something went wrong. Status code:", status_code))
+  }
+  tbl <- dplyr::bind_rows(httr::content(request_results)$instances)
+  tbl[["info"]] <- NULL
+  tbl <- dplyr::distinct(tbl)
+  tbl[["users"]] <- as.integer(tbl[["users"]])
+  tbl[["statuses"]] <- as.integer(tbl[["statuses"]])
+  tbl
 }
-
 #' Get various information about a specific instance
 #' @param anonymous logical, should the API call be made anonymously? Defaults to TRUE but some instances might need authentication here
 #' @param local logical, show only local accounts?

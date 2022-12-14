@@ -3,18 +3,15 @@ fake_token <- rtoot:::get_token_from_envvar("RTOOT_DEFAULT_TOKEN", check_stop = 
 fake_token$type <- "user"
 fake_token$instance <- "social.tchncs.de"
 
-test_that("get_fedi_instances", {
+fake_token2 <- Sys.getenv("RTOOT_INSTANCES_SOCIAL_TOKEN")
+
+test_that("get_fedi_instances", {  
   vcr::use_cassette("get_fedi_instances_default", {
-    x <- get_fedi_instances()
+    x <- get_fedi_instances(token = fake_token2)
   })
-  expect_true(nrow(x) > 0)
+  expect_true(nrow(x) == 20)
   expect_true("tbl_df" %in% class(x))
-  ## #29
-  vcr::use_cassette("get_fedi_instances_pr29", {
-    x <- get_fedi_instances(n = 22)
-  })
-  expect_true(nrow(x) > 20)
-  expect_true("tbl_df" %in% class(x))
+  expect_error(get_fedi_instances(), "a token from")
 })
 
 test_that("get_instance_general", {
