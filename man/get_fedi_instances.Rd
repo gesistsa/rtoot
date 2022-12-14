@@ -4,10 +4,14 @@
 \alias{get_fedi_instances}
 \title{Get a list of fediverse servers}
 \usage{
-get_fedi_instances(n = 20)
+get_fedi_instances(token = "", n = 20, ...)
 }
 \arguments{
+\item{token}{token from instances.social (this is different from your Mastodon token!)}
+
 \item{n}{number of servers to show}
+
+\item{...}{additional parameters for the instances.social API. See \url{https://instances.social/api/doc/}}
 }
 \value{
 tibble of fediverse instances
@@ -16,7 +20,7 @@ tibble of fediverse instances
 Get a list of fediverse servers
 }
 \details{
-the results are sorted by user count. The function sometimes fails unexpectedly for n>100. Try to rerun your request in that case or use a smaller n.
+This function uses the API at instances.social and needs a separate token. Results are sorted by number of users
 }
 \examples{
 \dontrun{

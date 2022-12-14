@@ -1,6 +1,7 @@
 # rtoot 0.2.0.9000
 
 * dont throw an error when no ratelimit is found (#95)
+* switched API for `get_fedi_instances()` (#122)
 
 # rtoot 0.2.0
 
