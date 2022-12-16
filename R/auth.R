@@ -21,7 +21,7 @@
 #' auth_setup("mastodon.social", "public")
 #' }
 #' @export
-auth_setup <- function(instance = NULL, type = NULL, name = NULL, path = NULL, clipboard = FALSE, verbose = TRUE) {
+auth_setup <- function(instance = NULL, type = NULL, name = NULL, path = NULL, clipboard = FALSE, verbose = TRUE, browser=TRUE) {
   while (is.null(instance) || instance == "") {
     instance <- rtoot_ask(prompt = "On which instance do you want to authenticate (e.g., \"mastodon.social\")? ", pass = FALSE)
   }
@@ -29,7 +29,7 @@ auth_setup <- function(instance = NULL, type = NULL, name = NULL, path = NULL, c
   if (!isTRUE(type %in% c("public", "user"))) {
     type <- c("public", "user")[rtoot_menu(choices = c("public", "user"), title = "What type of token do you want?", verbose = TRUE)]
   }
-  token <- process_created_token(create_token(client, type = type), name = name, path = path, clipboard = clipboard, verify = TRUE, verbose = verbose)
+  token <- process_created_token(create_token(client, type = type, browser = browser), name = name, path = path, clipboard = clipboard, verify = TRUE, verbose = verbose)
   return(token) ## explicit
 }
 
@@ -74,7 +74,7 @@ get_client <- function(instance = "mastodon.social"){
 #' @details TBA
 #' @return a mastodon bearer token
 #' @references https://docs.joinmastodon.org/client/authorized/
-create_token <- function(client, type = "public"){
+create_token <- function(client, type = "public", browser=TRUE){
   type <- match.arg(type,c("public","user"))
   if(!inherits(client,"rtoot_client")){
     stop("client is not an object of type rtoot_client")
@@ -88,12 +88,17 @@ create_token <- function(client, type = "public"){
       grant_type='client_credentials'
     ))
   } else if(type == "user"){
-    httr::BROWSE(httr::modify_url(url = url, path = "oauth/authorize"),query=list(
+    url <- httr::modify_url(url = url, path = "oauth/authorize")
+    query <- list(
       client_id=client$client_id ,
       redirect_uri='urn:ietf:wg:oauth:2.0:oob',
       scope='read write follow',
-      response_type="code"
-      ))
+      response_type="code")
+    if(browser){
+      httr::BROWSE(url, query=query)
+    }else{
+      message(paste("Navigate to", httr::modify_url(url, query=query), "to obtain an authorization code"))
+    }
     auth_code <- rtoot_ask(prompt = "enter authorization code: ", pass = TRUE, check_rstudio = TRUE, default = "")
     auth2 <- httr::POST(httr::modify_url(url = url, path = "oauth/token"),body=list(
       client_id=client$client_id ,
