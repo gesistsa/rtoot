@@ -4,7 +4,7 @@
 \alias{get_fedi_instances}
 \title{Get a list of fediverse servers}
 \usage{
-get_fedi_instances(token = "", n = 20, ...)
+get_fedi_instances(token = NA, n = 20, ...)
 }
 \arguments{
 \item{token}{token from instances.social (this is different from your Mastodon token!)}
