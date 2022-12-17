@@ -4,12 +4,14 @@
 \alias{create_token}
 \title{get a bearer token for the mastodon api}
 \usage{
-create_token(client, type = "public")
+create_token(client, type = "public", browser = TRUE)
 }
 \arguments{
 \item{client}{rtoot client object created with \link{get_client}}
 
 \item{type}{one of "public" or "user". See details}
+
+\item{browser}{if \code{TRUE} (default) a browser window will be opened to authenticate, else the URL will be provided so you can copy/paste this into the browser yourself}
 }
 \value{
 a mastodon bearer token

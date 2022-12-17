@@ -9,6 +9,7 @@
 #'   path returned by `tools::R_user_dir("rtoot", "config")`.
 #' @param clipboard logical, whether to export the token to the clipboard
 #' @param verbose logical whether to display messages
+#' @param browser if `TRUE` (default) a browser window will be opened to authenticate, else the URL will be provided so you can copy/paste this into the browser yourself
 #' @details If either `name` or `path` are set to `FALSE`, the token is only
 #'   returned and not saved. If you would like to save your token as an environment variable,
 #'   please set `clipboard` to `TRUE`. Your token will be copied to clipboard in the environment variable
@@ -21,7 +22,7 @@
 #' auth_setup("mastodon.social", "public")
 #' }
 #' @export
-auth_setup <- function(instance = NULL, type = NULL, name = NULL, path = NULL, clipboard = FALSE, verbose = TRUE, browser=TRUE) {
+auth_setup <- function(instance = NULL, type = NULL, name = NULL, path = NULL, clipboard = FALSE, verbose = TRUE, browser = TRUE) {
   while (is.null(instance) || instance == "") {
     instance <- rtoot_ask(prompt = "On which instance do you want to authenticate (e.g., \"mastodon.social\")? ", pass = FALSE)
   }
@@ -71,6 +72,7 @@ get_client <- function(instance = "mastodon.social"){
 #'
 #' @param client rtoot client object created with [get_client]
 #' @param type one of "public" or "user". See details
+#' @param browser if `TRUE` (default) a browser window will be opened to authenticate, else the URL will be provided so you can copy/paste this into the browser yourself
 #' @details TBA
 #' @return a mastodon bearer token
 #' @references https://docs.joinmastodon.org/client/authorized/

@@ -10,7 +10,8 @@ auth_setup(
   name = NULL,
   path = NULL,
   clipboard = FALSE,
-  verbose = TRUE
+  verbose = TRUE,
+  browser = TRUE
 )
 }
 \arguments{
@@ -28,6 +29,8 @@ path returned by \code{tools::R_user_dir("rtoot", "config")}.}
 \item{clipboard}{logical, whether to export the token to the clipboard}
 
 \item{verbose}{logical whether to display messages}
+
+\item{browser}{if \code{TRUE} (default) a browser window will be opened to authenticate, else the URL will be provided so you can copy/paste this into the browser yourself}
 }
 \value{
 A bearer token
