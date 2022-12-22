@@ -111,47 +111,35 @@ process_request <- function(token = NULL,
                             page_size = 40L,
                             retryonratelimit = TRUE,
                             verbose = TRUE
-){
+) {
   # if since_id is provided we page forward, otherwise we page backwards
-  if(!is.null(params[["since_id"]])){
+  if(!is.null(params[["since_id"]])) {
     pager <- "since_id"
-  } else{
+  } else {
     pager <- "max_id"
   }
   pages <- ceiling(n/page_size)
   output <- vector("list")
   for(i in seq_len(pages)){
-    tmp <- make_get_request(token = token,path = path,
+    api_response <- make_get_request(token = token,path = path,
                             instance = instance, params = params,
                             anonymous = anonymous)
-
-    if(rate_limit_remaining(tmp)==0){
-      if(isTRUE(retryonratelimit)){
-        wait_until(attr(tmp,"headers")[["rate_reset"]],verbose)
-      } else{
-        output <- c(output,tmp)
-        attr(output,"headers") <- attr(tmp,"headers")
-        sayif(verbose,"rate limit reached and `retryonratelimit=FALSE`. returning current results.")
-        break
-      }
-    }
-    output <- c(output,tmp)
-    attr(output,"headers") <- attr(tmp,"headers")
-    if(is.null(attr(tmp,"headers")[[pager]])){
+    output <- c(output, api_response)
+    attr(output, "headers") <- attr(api_response, "headers")
+    if (break_process_request(api_response = api_response, retryonratelimit = retryonratelimit,
+                              verbose = verbose, pager = pager)) {
       break
     }
-    params[[pager]] <- attr(tmp,"headers")[[pager]]
+    params[[pager]] <- attr(api_response, "headers")[[pager]]
   }
-
   if (isTRUE(parse)) {
-    header <- attr(output,"headers")
+    header <- attr(output, "headers")
 
     output <- FUN(output)
-    attr(output,"headers") <- header
+    attr(output, "headers") <- header
   }
   return(output)
 }
-
 
 ##vectorize function
 v <- function(FUN) {
@@ -236,4 +224,20 @@ handle_params <- function(params, max_id, since_id, min_id) {
         params$min_id <- min_id
     }
     params
+}
+
+## a predicate to determine whether to break away from the for-loop of precess_request
+break_process_request <- function(api_response, retryonratelimit = FALSE, verbose = FALSE, pager = "max_id", from = Sys.time()) {
+  if (is.null(attr(api_response,"headers")[[pager]])) {
+    return(TRUE)
+  }
+  if (rate_limit_remaining(api_response) == 0 && isTRUE(retryonratelimit)) {
+    wait_until(until = attr(api_response,"headers")[["rate_reset"]], from = from, verbose = verbose)
+    return(FALSE)
+  }
+  if (rate_limit_remaining(api_response) == 0 && isFALSE(retryonratelimit)) {
+    sayif(verbose,"rate limit reached and `retryonratelimit=FALSE`. returning current results.")
+    return(TRUE)
+  }
+  return(FALSE)
 }
