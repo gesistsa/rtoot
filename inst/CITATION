@@ -4,8 +4,8 @@ citEntry(
   entry    = "Manual",
   title    = "rtoot: Collecting and analyzing Mastodon data",
   author   = personList(as.person("David Schoch"),as.person("Chung-hong Chan")),
-  note     = "R package version 0.1.0",
-  year     = "2022",
+  note     = "R package version 0.3.0",
+  year     = "2023",
   url      = "https://github.com/schochastics/rtoot",
-  textVersion = "Schoch David and Chan Chung-hong (2022) rtoot: Collecting and analyzing Mastodon data. R package version 0.1.0, <https://github.com/schochastics/rtoot>"
+  textVersion = "Schoch David and Chan Chung-hong (2023) rtoot: Collecting and analyzing Mastodon data. R package version 0.3.0, <https://github.com/schochastics/rtoot>"
 )
