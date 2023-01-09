@@ -1,7 +1,6 @@
-## Update from 0.1.0 to 0.2.0
+## Update from 0.2.0 to 0.3.0
 
-This update includes new functions to live stream toots and pagination of results as well
-as ratelimit checking
+This update includes internal changes and some bug fixes
 
 *(dontrun examples are used to not make unnecessary API calls)*
 
