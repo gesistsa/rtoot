@@ -38,7 +38,7 @@ get_instance_trends(
   anonymous = TRUE
 )
 
-get_instance_rules(instance = NULL, token = NULL, anonymous = TRUE)
+get_instance_rules(instance = NULL, token = NULL, anonymous = FALSE)
 
 get_instance_blocks(instance = NULL, token = NULL, anonymous = TRUE)
 }

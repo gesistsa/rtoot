@@ -121,9 +121,9 @@ get_instance_trends <- function(instance = NULL, token = NULL, limit = 10,anonym
 
 #' @rdname get_instance
 #' @export
-get_instance_rules <- function(instance = NULL, token = NULL, anonymous = TRUE){
-  request_results <- make_get_request(token = token,path = "/api/v1/instance/rules",
-                                      instance = instance, anonymous = anonymous)
+get_instance_rules <- function(instance = NULL, token = NULL, anonymous = FALSE){
+  params <- list(instance = instance)
+  request_results <- get_instance_general(instance = instance, token = token, anonymous = anonymous)$rules
   tbl <- dplyr::bind_rows(request_results)
   tbl
 }

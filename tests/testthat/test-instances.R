@@ -5,7 +5,7 @@ fake_token$instance <- "social.tchncs.de"
 
 fake_token2 <- Sys.getenv("RTOOT_INSTANCES_SOCIAL_TOKEN")
 
-test_that("get_fedi_instances", {  
+test_that("get_fedi_instances", {
   vcr::use_cassette("get_fedi_instances_default", {
     x <- get_fedi_instances(token = fake_token2)
   })

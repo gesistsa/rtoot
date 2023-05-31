@@ -1,3 +1,8 @@
+# rtoot 0.3.0.9000
+
+* Added proper citation (#133)
+* fixed `get_instance_rules` bug (#132)
+
 # rtoot 0.3.0
 
 * don't throw an error when no rate limit is found (#95)
