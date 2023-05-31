@@ -19,6 +19,14 @@ Interact with the [mastodon API](https://docs.joinmastodon.org/api/)
 from R.  
 Get started by reading `vignette("rtoot")`.
 
+Please cite this package as:
+
+Schoch, D. & Chan, C-h., (2023). Rtoot: Collecting and Analyzing
+Mastodon Data. Mobile Media & Communication,
+<https://doi.org/10.1177/20501579231176678>.
+
+For a BibTeX entry, use the output from `citation("rtoot")`.
+
 ## Installation
 
 To get the current released version from CRAN:
@@ -130,7 +138,7 @@ You can post toots with:
 post_toot(status = "my first rtoot #rstats")
 ```
 
-It can also include media and alt_text.
+It can also include media and alt\_text.
 
 ``` r
 post_toot(status = "my first rtoot #rstats", media="path/to/media", 
