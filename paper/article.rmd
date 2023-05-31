@@ -1,0 +1,242 @@
+---
+title: "rtoot: Collecting and Analyzing Mastodon Data"
+runninghead: Schoch & Chan.
+author:
+- name: David Schoch*
+  num: 1
+- name: Chung-hong Chan
+  num: 1
+address:
+- num: 1
+  org: GESIS Leibniz Institute for the Social Sciences
+corrauth: "David Schoch, GESIS Leibniz Institute for the Social Sciences."
+email: david.schoch@gesis.org
+abstract: "An implementation of calls designed to collect and organize Mastodon data via its Application Program Interfaces (API)."
+keywords: Mastodon; Social Media; Mobile Platform; API;
+classoption:
+  - Royal
+  - times
+bibliography: bibfile
+bibliographystyle: sageh
+output:
+  rticles::sage_article:
+    keep_tex: yes
+---
+
+# Solution: Access the Mastodon API
+
+Mastodon is a free and open source software which allows to run a self-hosted microblogging service, similar to Twitter. Servers running Mastodon can interoperate, meaning that their users can communicate across different instances. Together, all Mastodon instances form a large decentralized federation of social networking sites. Mastodon was first released in late 2016 but has not attracted as much attention by users and researchers compared to centralized social media platforms such as Twitter. Previous studies on Mastodon [e.g. @zulli:2020:R; @la:2022:NAI] classify it as an "alternative social media" platform, in contrast to "corporate social media" platforms such as Twitter. Due to the open source nature, Mastodon is also famous for being the technology behind far-right social media platforms Gab and Donald Trump's Truth Social. These far-right platforms have also captured certain academic attention [e.g. @zhou:2019:E;@zannettou:2018:WG].
+
+The Twitter takeover by Elon Musk in 2022, however, has changed this alternative ---if not fringe--- status of the technology and sparked a huge wave of new registrations for instances running Mastodon [@huang_2022]. Mastodon will become increasingly more relevant for communication scholars who study online behaviour and phenomena. It is important to note that Mastodon also is a mobile platform. Official mobile apps for the platform are recently released, although third-party mobile apps such as Tusky (Android) and Amaroq (iOS) have long been available.
+
+Data collection from instances running Mastodon can be facilitated through the official Mastodon API [@mastodonapi] [^foot]. The R package `rtoot`[^why] provides functions to authenticate for and interact with this API.
+
+[^why]: Before mid November 2022 (see <https://github.com/mastodon/mastodon/pull/18583>), a post on Mastodon was called a "toot", similar to a "tweet" on twitter. The R package to interact wit the Twitter API is called `rtweet` [@rtweet-package], hence we chose the name `rtoot`.
+
+
+[^foot]: Due to the decentralized nature of Mastodon, each instance has its own terms of service (ToS). Please check those terms to see whether this kind of cross-instance data collection is allowed. For instance, despite "scholar.social" allows API access, its ToS explicitly ban unapproved academic research. Also, you are not authorized to transfer these data to a third party, e.g. Google APIs. The research ethics is beyond the scope of this software presentation. Please consult @zimmer2017internet for general advice. Consult your ethics committees for specific. 
+
+# Functionality
+Many endpoints of the Mastodon API do not require authentication and calls can be made anonymously. 
+However, instances can decide to require authentication for some endpoints and user action endpoints, such as sending a post, require an access token. Setting up a token only needs to be done once and
+the function `auth_setup()` guides users to obtain such a token from a particular instance. 
+
+Most other functions in `rtoot` are organized into four groups: `get_instance_*()` functions for collecting data about an instance; `get_account_*()` functions for collecting data about a user account; `get_timeline_*()` functions for collecting timelines (a series of statuses); and `stream_timeline_*()` functions for accessing the streaming API. Some exceptions are `search_accounts()` and `post_toot()`.
+
+For instance, the following obtains a user access token from the "emacs.ch" instance. One can also obtain a public access token, which can only access public information.
+
+```r
+library(rtoot)
+auth_setup(instance = "emacs.ch", type = "user")
+```
+
+The following obtains information about the peers of the instance (other instances that this particular instance is aware of).
+
+```r
+get_instance_peers(instance = "emacs.ch")
+```
+
+The activity of an instance can be obtained via
+
+```r
+get_instance_activity(instance = "emacs.ch")
+```
+
+All `get_account_*()` functions require a user id instead of the user name as input. The only way to obtain the user id is to search for the user name. We have obtained the informed consent from the account owner of "chainsawriot" to collect data from his account.
+
+```r
+search_accounts(query = "chainsawriot")
+```
+
+The following obtains the content published by that account.
+
+```r
+get_account_statuses(id = "109337011845249544",
+                     instance = "emacs.ch")
+```
+
+The tibble returned from `get_account_statuses` and any `get_timeline_*` and `stream_timeline_*` function,  contains a list-column for the application used to post the status. To extract the name of the application, the following function can be used.
+
+```r
+extract_application <- function(application) {
+  if (length(application) == 0) {
+    return(NA)
+  } else {
+    return(application$name)
+  }
+}
+
+```
+
+This auxiliary functions allows to filter out statuses that were posted via a mobile device or directly compare mobile with web-based posts. For example, one can visualize the length of toots from a mobile device (iOS) and the web interface (Figure 1).
+
+```r
+library(tidyverse)
+x <- get_account_statuses(id = "109337011845249544",
+                         instance = "emacs.ch", limit = 30)
+x %>% mutate(interface = map_chr(application,
+                                 extract_application), 
+             length = nchar(content)) %>%
+    filter(!is.na(interface)) %>%
+    ggplot(aes(x = interface, y = length)) + 
+    geom_dotplot(binaxis = "y", stackdir = "center",
+                 dotsize = 0.5)
+```
+
+```{r, include = FALSE, eval = FALSE}
+## for generating this figure in the future
+library(rtoot)
+library(tidyverse)
+#x <- get_account_statuses(id = "109337011845249544",
+#                          instance = "emacs.ch", limit = 30)
+x <- readRDS("fig1_data.RDS")
+x %>% mutate(interface = map_chr(application, extract_application), 
+             length = nchar(content)) %>%
+    filter(!is.na(interface)) %>%
+    ggplot(aes(x = interface, y = length)) + 
+    geom_dotplot(binaxis='y', stackdir='center', dotsize = 0.5) -> f1
+suppressMessages(ggsave("fig1.pdf", f1, height = 3, width = 4))
+```
+
+```{r fig1, echo = FALSE, fig.cap = "Length of toots from different interfaces"}
+knitr::include_graphics("fig1.pdf")
+```
+
+More information can be found in the github wiki (<https://github.com/schochastics/rtoot/wiki/application>).
+
+# Availability of the software and tutorials
+
+`rtoot` is available on CRAN (<https://cran.r-project.org/web/packages/rtoot/index.html>) and from the official Github repository (<https://github.com/schochastics/rtoot>). The package contains tutorials on authentication, streaming, and a general introduction as vignettes. Additional tips on using the package are available from the official wiki (<https://github.com/schochastics/rtoot/wiki>) and the online documentation (<https://schochastics.github.io/rtoot/>).
+
+<!-- YAML header: -->
+
+<!-- ``` -->
+<!-- output: -->
+<!--   rticles::sim_article: -->
+<!--     keep_tex: TRUE -->
+<!-- ``` -->
+
+<!-- Configure the YAML header including the following elements: -->
+
+<!-- * `title`: Title -->
+
+<!-- * `runninghead`: Author last names, use _et al._ if there are three or more authors. -->
+
+<!-- * `author`: List of author(s) containing `name` and `num` -->
+
+<!-- * `corrauth`: Corresponding author's name and address. -->
+
+<!-- * `email`: Correspondence email -->
+
+<!-- * `abstract`: Limited to 200 words -->
+
+<!-- * `keywords`: Keywords for the article -->
+
+<!-- * `bibliography`: BibTeX `.bib` file -->
+
+<!-- * `bibliographystyle`: sageh or sagev -->
+
+<!-- * `classoption`: options of the `sagej` class -->
+
+<!-- ## Remarks -->
+
+<!-- 2. `bibliographystyle` -->
+
+<!-- 3. `classoption` -->
+
+<!-- 4. Keywords are separated by commas. -->
+
+<!-- # The Body of the Article -->
+
+<!-- ## Mathematics -->
+
+<!-- Use mathematics in Rmarkdown as usual. -->
+
+<!-- ## Figures and Tables -->
+
+<!-- Figures are supported from R code: -->
+
+<!-- ```{r plot-ref, fig.cap = "Fancy Caption\\label{fig:plot}", out.width='100%'} -->
+<!-- x = rnorm(10) -->
+<!-- y = rnorm(10) -->
+<!-- plot(x, y) -->
+<!-- ``` -->
+
+<!-- ...and can be referenced (Figure \ref{fig:plot}) by including the `\\label{}` tag in the `fig.cap` attribute of the R chunk: `fig.cap = "Fancy Caption\\label{fig:plot}"`. It is a quirky hack at the moment, see [here](https://github.com/yihui/knitr/issues/323). -->
+
+<!-- Analogously, use Rmarkdown to produce tables as usual: -->
+
+<!-- ```{r, results = "asis"} -->
+<!-- if (!require("xtable")) install.packages("xtable") -->
+<!-- xt <- xtable(head(cars), caption = "A table", label = "tab:table") -->
+<!-- print(xt, comment = FALSE) -->
+<!-- ``` -->
+
+<!-- Referenced via \ref{tab:table}. You can also use the YAML option `header-includes` to includes custom \LaTeX packages for tables (keep in mind that `pandoc` uses `longtables` by default, and it is hardcoded; some things may require including the package `longtable`). E.g., using `ctable`: -->
+<!-- ``` -->
+<!-- header-includes: -->
+<!-- - \usepackage{ctable} -->
+<!-- ``` -->
+<!-- Then, just write straight-up \LaTeX code and reference is as usual (`\ref{tab:ctable}`): -->
+<!-- ``` -->
+<!-- \ctable[cap = {Short caption}, -->
+<!--         caption = {A caption for this table.}, -->
+<!--         label={tab:ctable},] -->
+<!--         {cc} -->
+<!--         { -->
+<!--         \tnote[$\ast$]{Footnote 1} -->
+<!--         \tnote[$\dagger$]{Other footnote} -->
+<!--         \tnote[b]{Mistakes are possible.} -->
+<!--         }{ -->
+<!--         \FL -->
+<!--         COL 1\tmark[a] & COL 2\tmark[$\ast$] -->
+<!--         \ML -->
+<!--         6.92\tmark[$\dagger$] & 0.09781 \\ -->
+<!--         6.93\tmark[$\dagger$] & 0.09901 \\ -->
+<!--         97 & 2000 -->
+<!--         \LL -->
+<!-- } -->
+<!-- ``` -->
+
+<!-- It is also possible to set the `YAML` option `longtable: true` and use markdown tables (or the `knitr::kable` function): `knitr::kable(head(cars))` produces the same table as the `xtable` example presented before. -->
+
+<!-- ## Cross-referencing -->
+
+<!-- The use of the Rmarkdown equivalent of the \LaTeX cross-reference system -->
+<!-- for figures, tables, equations, etc., is encouraged (using `[@<name>]`, equivalent of `\ref{<name>}` and `\label{<name>}`). That works well for citations in Rmarkdown, not so well for figures and tables. In that case, it is possible to revert to standard \LaTeX syntax. -->
+
+<!-- ## Double Spacing -->
+
+<!-- If you need to double space your document for submission please use the `doublespace` option in the header. -->
+
+<!-- # Bibliography -->
+
+<!-- Link a `.bib` document via the YAML header, and bibliography will be printed at the very end (as usual). The default bibliography style is provided by Wiley as in `WileyNJD-AMA.bst`, do not delete that file. -->
+
+<!-- Use the Rmarkdown equivalent of the \LaTeX citation system using `[@<name>]`. Example: [@Taylor1937], [@Knupp1999; @Kamm2000]. -->
+
+<!-- To include all citation from the `.bib` file, add `\nocite{*}` before the end of the document. -->
+
+<!-- # Further information -->
+
+<!-- All \LaTeX enviroments supported by the main template are supported here as well; see the `.tex` sample file [here](http://onlinelibrary.wiley.com/journal/10.1002/(ISSN)1097-0258/homepage/la_tex_class_file.htm) for more details and example. -->
