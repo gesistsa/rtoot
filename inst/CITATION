@@ -1,7 +1,7 @@
 citHeader("To cite rtoot in publications use:")
 
 bibentry(
-  entry    = "article",
+  bibtype = "Article",
   title    = "Rtoot: Collecting and Analyzing Mastodon Data",
   author   = c(as.person("David Schoch"),as.person("Chung-hong Chan")),
   year     = "2023",
