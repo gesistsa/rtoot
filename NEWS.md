@@ -1,4 +1,4 @@
-# rtoot 0.3.0.9000
+# rtoot 0.3.1
 
 * Added proper citation (#133)
 * fixed `get_instance_rules` bug (#132)
