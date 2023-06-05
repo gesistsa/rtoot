@@ -1,6 +1,6 @@
-## Update from 0.3.0 to 0.3.1
+## Resubmission of update from 0.3.0 to 0.3.1
 
-This update includes a bug fix in `get_instance_rules()`
+fixed issues in file CITATION
 
 *(dontrun examples are used to not make unnecessary API calls)*
 

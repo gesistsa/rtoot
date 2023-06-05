@@ -1,12 +1,12 @@
 citHeader("To cite rtoot in publications use:")
 
-citEntry(
+bibentry(
   entry    = "article",
   title    = "Rtoot: Collecting and Analyzing Mastodon Data",
-  author   = personList(as.person("David Schoch"),as.person("Chung-hong Chan")),
+  author   = c(as.person("David Schoch"),as.person("Chung-hong Chan")),
   year     = "2023",
   url      = "https://github.com/schochastics/rtoot",
   journal = "Mobile Media & Communication",
-  doi = "https://doi.org/10.1177/20501579231176678",
+  doi = "10.1177/20501579231176678",
   textVersion = "Schoch, D. & Chan, C-h., (2023). Rtoot: Collecting and Analyzing Mastodon Data. Mobile Media & Communication."
 )
