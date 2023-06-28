@@ -44,8 +44,8 @@ Query the instance for information about a specific status. \link{get_status} re
 }
 \examples{
 \dontrun{
-get_status(id = "109298295023649405")
-get_reblogged_by(id = "109294719267373593")
-get_favourited_by(id = "109294719267373593")
+get_status(id = "109326579599502650")
+get_reblogged_by(id = "109326579599502650")
+get_favourited_by(id = "109326579599502650")
 }
 }

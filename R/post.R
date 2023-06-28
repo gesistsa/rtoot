@@ -134,3 +134,34 @@ post_user <- function(id,action = "follow",comment = "",token = NULL, verbose = 
   }
   invisible(r)
 }
+
+
+#' Perform actions on a status
+#' @inheritParams post_toot
+#' @param id character, status id to perform the action on
+#' @param action character, one of "(un)favourite","(un)reblog","(un)bookmark"
+#' @return no return value, called for site effects
+#' @inheritParams auth_setup
+#' @examples
+#' \dontrun{
+#' #favourite a status
+#' post_status("xxxxxx",action = "favourite")
+#' #unfavourite a user
+#' post_status("xxxxxx",action = "unfavourite")
+#' }
+#' @export
+post_status <- function(id,action = "favourite",token = NULL, verbose = TRUE){
+  token <- check_token_rtoot(token)
+  action <- match.arg(action,c("unfavourite", "favourite", "reblog", "unreblog", "bookmark", "unbookmark"))
+  path <- paste0("/api/v1/statuses/",id,"/",action)
+  params <- list()
+  
+  url <- prepare_url(token$instance)
+  r <- httr::POST(httr::modify_url(url = url, path = path),
+                  body = params,
+                  httr::add_headers(Authorization = paste0("Bearer ",token$bearer)))
+  if(httr::status_code(r)==200L){
+    sayif(verbose, "successfully performed action on status")
+  }
+  invisible(r)
+}

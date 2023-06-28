@@ -11,9 +11,9 @@
 #' @return a status or a list of users
 #' @examples
 #' \dontrun{
-#' get_status(id = "109298295023649405")
-#' get_reblogged_by(id = "109294719267373593")
-#' get_favourited_by(id = "109294719267373593")
+#' get_status(id = "109326579599502650")
+#' get_reblogged_by(id = "109326579599502650")
+#' get_favourited_by(id = "109326579599502650")
 #' }
 #' @export
 get_status <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
