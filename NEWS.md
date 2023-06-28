@@ -1,4 +1,4 @@
-# rtoot 0.3.1.9000
+# rtoot 0.3.2
 
 * added `post_status()` to favourite/bookmark/reblog statuses (#134)
 * fixed example in `get_status()` (#134)
