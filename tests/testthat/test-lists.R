@@ -9,3 +9,11 @@ test_that("get_list_accounts", {
   expect_true(nrow(x) == 2)
   expect_true("tbl_df" %in% class(x))
 })
+
+test_that("get_lists", {
+  vcr::use_cassette("get_lists", {
+    x <- get_lists(id = "7351", parse = TRUE, token = fake_token)
+  })
+  expect_true(nrow(x) == 1)
+  expect_true("tbl_df" %in% class(x))
+})

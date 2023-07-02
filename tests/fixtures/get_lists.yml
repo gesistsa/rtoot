@@ -1,0 +1,51 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://fosstodon.org/api/v1/lists/7351
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: Bearer <<<MASTODON TOKEN>>>
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      cache-control: private, no-store
+      cf-cache-status: DYNAMIC
+      cf-ray: 7e0981ecd9899113-FRA
+      content-encoding: br
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
+      content-type: application/json; charset=utf-8
+      date: Sun, 02 Jul 2023 20:06:08 GMT
+      etag: W/"2a532865da897fbd33c3dd455f8b0a2d"
+      nel: '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      permissions-policy: interest-cohort=()
+      referrer-policy: same-origin
+      report-to: '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=9fzzI3wPCCegypKV9s8bEAeW8TLApHii%2BF5y2hysd5HbIflyRylPxtQWkygCwy8BMnMXK8iAFHsuoXDO4ayvs5Yp568ZMKg2KdocH4Tprm25FDjEVe0wOMfh4siBcviyiP8WAGEnS3iOuuc%3D"}],"group":"cf-nel","max_age":604800}'
+      server: cloudflare
+      strict-transport-security:
+      - max-age=63072000; includeSubDomains
+      - max-age=31536000
+      vary:
+      - Accept-Encoding
+      - Origin
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '298'
+      x-ratelimit-reset: '2023-07-02T20:10:00.158365Z'
+      x-request-id: 080dd8bc-836d-46ef-b3bd-4690c7fd62c7
+      x-runtime: '0.008142'
+      x-xss-protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: '{"id":"7351","title":"rtoot devs","replies_policy":"list"}'
+  recorded_at: 2023-07-02 20:06:08 GMT
+  recorded_with: vcr/1.2.2, webmockr/0.9.0
