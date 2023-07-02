@@ -1,3 +1,7 @@
+# rtoot 0.3.2.9000
+
+* added support for lists (#135, #136)
+
 # rtoot 0.3.2
 
 * added `post_status()` to favourite/bookmark/reblog statuses (#134)

@@ -23,9 +23,9 @@ Perform actions on a status
 }
 \examples{
 \dontrun{
-#favourite a status
-post_status("xxxxxx",action = "favourite")
-#unfavourite a user
-post_status("xxxxxx",action = "unfavourite")
+# favourite a status
+post_status("xxxxxx", action = "favourite")
+# unfavourite a status
+post_status("xxxxxx", action = "unfavourite")
 }
 }

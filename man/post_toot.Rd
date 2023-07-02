@@ -52,6 +52,6 @@ Be aware that excessive automated posting is frowned upon (or even against the T
 # post a simple status
 post_toot("my first rtoot #rstats")
 # post a media file with alt text
-post_toot("look at this pic",media = "path/to/image",alt_text = "describe image")
+post_toot("look at this pic", media = "path/to/image", alt_text = "describe image")
 }
 }

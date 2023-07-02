@@ -1,0 +1,71 @@
+http_interactions:
+- request:
+    method: get
+    uri: https://fosstodon.org/api/v1/lists/7351/accounts?limit=2
+    body:
+      encoding: ''
+      string: ''
+    headers:
+      Accept: application/json, text/xml, application/xml, */*
+      Authorization: Bearer <<<MASTODON TOKEN>>>
+  response:
+    status:
+      status_code: 200
+      category: Success
+      reason: OK
+      message: 'Success: (200) OK'
+    headers:
+      cache-control: private, no-store
+      cf-cache-status: DYNAMIC
+      cf-ray: 7e0973c0584c1947-FRA
+      content-encoding: br
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
+      content-type: application/json; charset=utf-8
+      date: Sun, 02 Jul 2023 19:56:27 GMT
+      etag: W/"0212755cc6e08d4f2e4a1e243edd6a0d"
+      link: <https://fosstodon.org/api/v1/lists/7351/accounts?limit=2&max_id=109290786298388981>;
+        rel="next", <https://fosstodon.org/api/v1/lists/7351/accounts?limit=2&since_id=109337044562642770>;
+        rel="prev"
+      nel: '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      permissions-policy: interest-cohort=()
+      referrer-policy: same-origin
+      report-to: '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=tJ6TehvhV7VNlyJgTmSK9tzQmU2gWpJHZmR9cd6G5VOHO%2FDRdV0MC8yNyc45Yk6uKXqeUsvz5FIXRwcWPFuW2MhIqOdRacf3taY4Yb2%2BLzI%2Fe98dVxt7vAXc%2B1ZXTIgNQqZ0OYsdLqQa9%2BA%3D"}],"group":"cf-nel","max_age":604800}'
+      server: cloudflare
+      strict-transport-security:
+      - max-age=63072000; includeSubDomains
+      - max-age=31536000
+      vary:
+      - Accept-Encoding
+      - Origin
+      x-content-type-options: nosniff
+      x-frame-options: DENY
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '299'
+      x-ratelimit-reset: '2023-07-02T20:00:00.600067Z'
+      x-request-id: 2124c509-fe8a-4503-bcee-dd4a0b0621bc
+      x-runtime: '0.028103'
+      x-xss-protection: '0'
+    body:
+      encoding: ''
+      file: no
+      string: '[{"id":"109337044562642770","username":"chainsawriot","acct":"chainsawriot@emacs.ch","display_name":"chainsawriot","locked":false,"bot":false,"discoverable":false,"group":false,"created_at":"2022-11-13T00:00:00.000Z","note":"","url":"https://emacs.ch/@chainsawriot","avatar":"https://cdn.fosstodon.org/cache/accounts/avatars/109/337/044/562/642/770/original/2bac632b1ac10a90.jpg","avatar_static":"https://cdn.fosstodon.org/cache/accounts/avatars/109/337/044/562/642/770/original/2bac632b1ac10a90.jpg","header":"https://fosstodon.org/headers/original/missing.png","header_static":"https://fosstodon.org/headers/original/missing.png","followers_count":364,"following_count":149,"statuses_count":687,"last_status_at":"2023-07-01","emojis":[{"shortcode":"emacs","url":"https://cdn.fosstodon.org/cache/custom_emojis/images/000/767/981/original/9438886e34f6815a.png","static_url":"https://cdn.fosstodon.org/cache/custom_emojis/images/000/767/981/static/9438886e34f6815a.png","visible_in_picker":true}],"fields":[{"name":"Stack","value":":emacs:,
+        R, i3, linux, firefox","verified_at":null},{"name":"Research Interests","value":"Keine
+        Ahnung","verified_at":null},{"name":"Web","value":"\u003ca href=\"https://chainsawriot.com/about/\"
+        rel=\"nofollow noopener noreferrer\" target=\"_blank\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003echainsawriot.com/about/\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":"2023-05-15T17:54:13.262+00:00"}]},{"id":"109290786298388981","username":"JBGruber","acct":"JBGruber","display_name":"Johannes
+        B. Gruber","locked":false,"bot":false,"discoverable":true,"group":false,"created_at":"2022-11-05T00:00:00.000Z","note":"\u003cp\u003ePostdoc
+        researcher\u003cbr /\u003e@ Vrije Universiteit Amsterdam and the OPTED project
+        | previously @ European New School of Digital Studies (ENS) | PhD from University
+        of Glasgow | I study media framing of protest and develop tools for research
+        | text analysis + \u003ca href=\"https://fosstodon.org/tags/rstats\" class=\"mention
+        hashtag\" rel=\"tag\"\u003e#\u003cspan\u003erstats\u003c/span\u003e\u003c/a\u003e
+        enthusiast\u003c/p\u003e","url":"https://fosstodon.org/@JBGruber","avatar":"https://cdn.fosstodon.org/accounts/avatars/109/290/786/298/388/981/original/d36c2a0d6134bec5.jpg","avatar_static":"https://cdn.fosstodon.org/accounts/avatars/109/290/786/298/388/981/original/d36c2a0d6134bec5.jpg","header":"https://cdn.fosstodon.org/accounts/headers/109/290/786/298/388/981/original/de9bed082c024112.jpeg","header_static":"https://cdn.fosstodon.org/accounts/headers/109/290/786/298/388/981/original/de9bed082c024112.jpeg","followers_count":525,"following_count":242,"statuses_count":100,"last_status_at":"2023-06-20","noindex":true,"emojis":[],"roles":[],"fields":[{"name":"Website","value":"\u003ca
+        href=\"https://www.johannesbgruber.eu/\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer me\"\u003e\u003cspan class=\"invisible\"\u003ehttps://www.\u003c/span\u003e\u003cspan
+        class=\"\"\u003ejohannesbgruber.eu/\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":null},{"name":"GitHub","value":"\u003ca
+        href=\"https://github.com/JBGruber\" target=\"_blank\" rel=\"nofollow noopener
+        noreferrer me\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003egithub.com/JBGruber\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":null}]}]'
+  recorded_at: 2023-07-02 19:56:27 GMT
+  recorded_with: vcr/1.2.2, webmockr/0.9.0
