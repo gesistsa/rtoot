@@ -17,3 +17,16 @@ test_that("get_lists", {
   expect_true(nrow(x) == 1)
   expect_true("tbl_df" %in% class(x))
 })
+
+
+test_that("post_list_create", {
+  vcr::use_cassette("post_list_create", {
+    expect_message(post_list_create(title = "rtoot test", token = fake_token))
+  })
+})
+
+test_that("post_list_accounts", {
+  vcr::use_cassette("post_list_accounts", {
+    expect_message(post_list_accounts(id = 7354, account_ids = "109337044562642770", token = fake_token))
+  })
+})

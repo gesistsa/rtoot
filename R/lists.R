@@ -30,7 +30,7 @@ get_lists <- function(id = "", token = NULL, parse = TRUE) {
 #' @export
 post_list_create <- function(title, replies_policy = "list", token = NULL, verbose = TRUE) {
     token <- check_token_rtoot(token)
-    replies_policy <- match.arg(replies_policy, c("followed", "lists", "none"))
+    replies_policy <- match.arg(replies_policy, c("followed", "list", "none"))
     path <- "/api/v1/lists/"
     params <- list(title = title, replies_policy = replies_policy)
 
