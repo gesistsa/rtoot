@@ -80,13 +80,13 @@ test_that("post_user silent", {
   })
 })
 
-fake_token2 <- rtoot:::get_token_from_envvar("RTOOT_DEFAULT_TOKEN", check_stop = FALSE)
-fake_token2$type <- "user"
-fake_token2$instance <- "fosstodon.org"
+fake_token3 <- rtoot:::get_token_from_envvar("RTOOT_DEFAULT_TOKEN", check_stop = FALSE)
+fake_token3$type <- "user"
+fake_token3$instance <- "fosstodon.org"
 
 
 test_that("post_status", {
   vcr::use_cassette("post_status_success", {
-    expect_message(post_status("110632697682444411", action = "reblog"))
+    expect_message(post_status("110632697682444411", action = "reblog", token = fake_token3))
   })
 })
