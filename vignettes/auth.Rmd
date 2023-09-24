@@ -39,14 +39,14 @@ auth_setup(name = "account1")
 To use this token, you can either read it into your environment and provide it to each function:
 
 ```{r token, eval=FALSE}
-token <- readRDS(file.path(tools::R_user_dir("rtoot", "config"), "account1.rds"))
+token <- readRDS(file.path(tools::R_user_dir("rtoot", "config"), "rtoot_token.rds"))
 get_status(id = "109297677620300632", instance = "mastodon.social", token = token)
 ```
 
 Or you can set the default token in the options at the start of a session:
 
 ```{r options, eval=FALSE}
-options("rtoot_token" = file.path(tools::R_user_dir("rtoot", "config"), "account1.rds"))
+options("rtoot_token" = file.path(tools::R_user_dir("rtoot", "config"), "rtoot_token.rds"))
 ```
 
 # Environment variable
@@ -60,7 +60,7 @@ auth_setup(clipboard = TRUE)
 Or, if you already have a token
 
 ```{r convert, eval = FALSE}
-token <- readRDS(file.path(tools::R_user_dir("rtoot", "config"), "account1.rds"))
+token <- readRDS(file.path(tools::R_user_dir("rtoot", "config"), "rtoot_token.rds"))
 content <- convert_token_to_envvar(token)
 ```
 
