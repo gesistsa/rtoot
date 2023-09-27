@@ -9,9 +9,9 @@
 status](https://www.r-pkg.org/badges/version/rtoot)](https://CRAN.R-project.org/package=rtoot)
 [![CRAN
 Downloads](http://cranlogs.r-pkg.org/badges/rtoot)](https://CRAN.R-project.org/package=rtoot)
-[![R-CMD-check](https://github.com/schochastics/rtoot/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/schochastics/rtoot/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/gesistsa/rtoot/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gesistsa/rtoot/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
-coverage](https://codecov.io/gh/schochastics/rtoot/branch/main/graph/badge.svg)](https://app.codecov.io/gh/schochastics/rtoot?branch=main)
+coverage](https://codecov.io/gh/gesistsa/rtoot/branch/main/graph/badge.svg)](https://app.codecov.io/gh/gesistsa/rtoot?branch=main)
 
 <!-- badges: end -->
 
@@ -38,7 +38,7 @@ install.packages("rtoot")
 You can install the development version of rtoot from GitHub:
 
 ``` r
-devtools::install_github("schochastics/rtoot")
+remotes::install_github("gesistsa/rtoot")
 ```
 
 ## Authenticate
