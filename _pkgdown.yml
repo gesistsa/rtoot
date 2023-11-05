@@ -2,20 +2,29 @@ url: https://gesistsa.github.io/rtoot/
 template:
   bootstrap: 5
   bslib:
-    bg: "#F9F7F7"
-    fg: "#112D4E"
-    primary: "#3F72AF"
-    text-muted: "#FFFFFF"
-    base_font: {google: "Roboto"}
-    heading_font: {google: "Roboto Slab"}
-    code_font: {google: "JetBrains Mono"}
+    bg: '#F9F7F7'
+    fg: '#112D4E'
+    primary: '#3F72AF'
+    text-muted: '#FFFFFF'
+    base_font:
+      google: Roboto
+    heading_font:
+      google: Roboto Slab
+    code_font:
+      google: JetBrains Mono
 navbar:
   bg: primary
   structure:
-    left:  [intro, reference, articles, wiki, news]
-    right: [github]
+    left:
+    - intro
+    - reference
+    - articles
+    - wiki
+    - news
+    right: github
   components:
     wiki:
       text: Wiki
       href: https://github.com/gesistsa/rtoot/wiki
       aria-label: Wiki
+
