@@ -17,5 +17,5 @@ navbar:
   components:
     wiki:
       text: Wiki
-      href: https://github.com/schochastics/rtoot/wiki
+      href: https://github.com/gesistsa/rtoot/wiki
       aria-label: Wiki
