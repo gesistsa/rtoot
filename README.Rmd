@@ -6,10 +6,10 @@ output: github_document
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
+    collapse = TRUE,
+    comment = "#>",
+    fig.path = "man/figures/README-",
+    out.width = "100%"
 )
 ```
 
@@ -18,8 +18,8 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/rtoot)](https://CRAN.R-project.org/package=rtoot)
 [![CRAN Downloads](http://cranlogs.r-pkg.org/badges/rtoot)](https://CRAN.R-project.org/package=rtoot)
-[![R-CMD-check](https://github.com/schochastics/rtoot/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/schochastics/rtoot/actions/workflows/R-CMD-check.yaml)
-[![Codecov test coverage](https://codecov.io/gh/schochastics/rtoot/branch/main/graph/badge.svg)](https://app.codecov.io/gh/schochastics/rtoot?branch=main)
+[![R-CMD-check](https://github.com/gesistsa/rtoot/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gesistsa/rtoot/actions/workflows/R-CMD-check.yaml)
+[![Codecov test coverage](https://codecov.io/gh/gesistsa/rtoot/branch/main/graph/badge.svg)](https://app.codecov.io/gh/gesistsa/rtoot?branch=main)
 
 <!-- badges: end -->
 
@@ -127,8 +127,10 @@ post_toot(status = "my first rtoot #rstats")
 It can also include media and alt_text.
 
 ```{r, eval = FALSE}
-post_toot(status = "my first rtoot #rstats", media="path/to/media", 
-          alt_text = "description of media")
+post_toot(
+    status = "my first rtoot #rstats", media = "path/to/media",
+    alt_text = "description of media"
+)
 ```
 
 You can mark the toot as sensitive by setting `sensitive = TRUE` and add a spoiler text with `spoiler_text`.
@@ -140,7 +142,7 @@ You can mark the toot as sensitive by setting `sensitive = TRUE` and add a spoil
 `rtoot` allows to stream statuses from three different streams.
 To get any public status on any instance use `stream_timeline_public()`
 ```{r, eval = FALSE}
-stream_timeline_public(timeout = 30,file_name = "public.json")
+stream_timeline_public(timeout = 30, file_name = "public.json")
 ```
 the timeout parameter is the time in seconds data should be streamed (set to `Inf` for indefinite streaming). If just the local timeline is needed, use `local=TRUE` and set an instance (or use your own provided by the token).
 

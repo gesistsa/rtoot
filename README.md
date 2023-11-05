@@ -9,9 +9,9 @@
 status](https://www.r-pkg.org/badges/version/rtoot)](https://CRAN.R-project.org/package=rtoot)
 [![CRAN
 Downloads](http://cranlogs.r-pkg.org/badges/rtoot)](https://CRAN.R-project.org/package=rtoot)
-[![R-CMD-check](https://github.com/schochastics/rtoot/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/schochastics/rtoot/actions/workflows/R-CMD-check.yaml)
+[![R-CMD-check](https://github.com/gesistsa/rtoot/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gesistsa/rtoot/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
-coverage](https://codecov.io/gh/schochastics/rtoot/branch/main/graph/badge.svg)](https://app.codecov.io/gh/schochastics/rtoot?branch=main)
+coverage](https://codecov.io/gh/gesistsa/rtoot/branch/main/graph/badge.svg)](https://app.codecov.io/gh/gesistsa/rtoot?branch=main)
 
 <!-- badges: end -->
 
@@ -138,11 +138,13 @@ You can post toots with:
 post_toot(status = "my first rtoot #rstats")
 ```
 
-It can also include media and alt\_text.
+It can also include media and alt_text.
 
 ``` r
-post_toot(status = "my first rtoot #rstats", media="path/to/media", 
-          alt_text = "description of media")
+post_toot(
+    status = "my first rtoot #rstats", media = "path/to/media",
+    alt_text = "description of media"
+)
 ```
 
 You can mark the toot as sensitive by setting `sensitive = TRUE` and add
@@ -158,7 +160,7 @@ instance and be mindful when using this function.)*
 any public status on any instance use `stream_timeline_public()`
 
 ``` r
-stream_timeline_public(timeout = 30,file_name = "public.json")
+stream_timeline_public(timeout = 30, file_name = "public.json")
 ```
 
 the timeout parameter is the time in seconds data should be streamed
