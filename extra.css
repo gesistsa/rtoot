@@ -1,0 +1,8 @@
+.navbar-dark .navbar-nav .nav-link{
+  color: #FFFFFF;
+}
+
+.navbar-dark input[type="search"]{
+  background-color: #FFFFFF;
+  color:#112D4E;
+}
