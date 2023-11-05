@@ -23,9 +23,9 @@ Get started by reading \code{vignette("rtoot")}. and browse all vignettes with \
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://schochastics.github.io/rtoot/}
-  \item \url{https://github.com/schochastics/rtoot/}
-  \item Report bugs at \url{https://github.com/schochastics/rtoot/issues}
+  \item \url{https://gesistsa.github.io/rtoot/}
+  \item \url{https://github.com/gesistsa/rtoot/}
+  \item Report bugs at \url{https://github.com/gesistsa/rtoot/issues}
 }
 
 }

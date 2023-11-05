@@ -44,7 +44,7 @@ install.packages("rtoot")
 You can install the development version of rtoot from GitHub:
 
 ```{r install, eval=FALSE}
-devtools::install_github("schochastics/rtoot")
+remotes::install_github("gesistsa/rtoot")
 ```
 
 ## Authenticate
