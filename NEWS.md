@@ -1,3 +1,7 @@
+# rtoot 0.3.3.9000
+
+* added progress bar for long running queries (#141) by @chainsawriot
+
 # rtoot 0.3.3
 
 * added support for lists (#135, #136)
