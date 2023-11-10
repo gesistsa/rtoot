@@ -120,6 +120,9 @@ process_request <- function(token = NULL,
   }
   pages <- ceiling(n/page_size)
   output <- vector("list")
+  if (verbose) {
+    pb <- txtProgressBar(min = 1, max = pages, style = 3)
+  }
   for(i in seq_len(pages)){
     api_response <- make_get_request(token = token,path = path,
                             instance = instance, params = params,
@@ -131,6 +134,9 @@ process_request <- function(token = NULL,
       break
     }
     params[[pager]] <- attr(api_response, "headers")[[pager]]
+    if (verbose) {
+      setTxtProgressBar(pb, i)
+    }
   }
   if (isTRUE(parse)) {
     header <- attr(output, "headers")
