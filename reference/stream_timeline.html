@@ -166,16 +166,20 @@
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span><span class="co"># stream public timeline for 30 seconds</span></span></span>
-<span class="r-in"><span><span class="fu">stream_timeline_public</span><span class="op">(</span>timeout <span class="op">=</span> <span class="fl">30</span>,file_name <span class="op">=</span> <span class="st">"public.json"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">stream_timeline_public</span><span class="op">(</span>timeout <span class="op">=</span> <span class="fl">30</span>, file_name <span class="op">=</span> <span class="st">"public.json"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="co"># stream timeline of mastodon.social  for 30 seconds</span></span></span>
-<span class="r-in"><span><span class="fu">stream_timeline_public</span><span class="op">(</span>timeout <span class="op">=</span> <span class="fl">30</span>, local <span class="op">=</span> <span class="cn">TRUE</span>,</span></span>
-<span class="r-in"><span>   instance <span class="op">=</span> <span class="st">"mastodon.social"</span>, file_name <span class="op">=</span> <span class="st">"social.json"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">stream_timeline_public</span><span class="op">(</span></span></span>
+<span class="r-in"><span>    timeout <span class="op">=</span> <span class="fl">30</span>, local <span class="op">=</span> <span class="cn">TRUE</span>,</span></span>
+<span class="r-in"><span>    instance <span class="op">=</span> <span class="st">"mastodon.social"</span>, file_name <span class="op">=</span> <span class="st">"social.json"</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># stream hashtag timeline for 30 seconds</span></span></span>
 <span class="r-in"><span><span class="fu">stream_timeline_hashtag</span><span class="op">(</span><span class="st">"rstats"</span>, timeout <span class="op">=</span> <span class="fl">30</span>, file_name <span class="op">=</span> <span class="st">"rstats_public.json"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="co"># stream hashtag timeline of mastodon.social  for 30 seconds</span></span></span>
-<span class="r-in"><span><span class="fu">stream_timeline_hashtag</span><span class="op">(</span><span class="st">"rstats"</span>, timeout <span class="op">=</span> <span class="fl">30</span>, local <span class="op">=</span> <span class="cn">TRUE</span>,</span></span>
-<span class="r-in"><span>   instance <span class="op">=</span> <span class="st">"fosstodon.org"</span>, file_name <span class="op">=</span> <span class="st">"rstats_foss.json"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">stream_timeline_hashtag</span><span class="op">(</span><span class="st">"rstats"</span>,</span></span>
+<span class="r-in"><span>    timeout <span class="op">=</span> <span class="fl">30</span>, local <span class="op">=</span> <span class="cn">TRUE</span>,</span></span>
+<span class="r-in"><span>    instance <span class="op">=</span> <span class="st">"fosstodon.org"</span>, file_name <span class="op">=</span> <span class="st">"rstats_foss.json"</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="co"># json files can be parsed with parse_stream()</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="parse_stream.html">parse_stream</a></span><span class="op">(</span><span class="st">"rstats_foss.json"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
