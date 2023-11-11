@@ -129,7 +129,7 @@ process_request <- function(token = NULL,
     pages <- ceiling(n / page_size)
     output <- vector("list")
     if (verbose && pages > 1) {
-        pb <- txtProgressBar(min = 1, max = pages, style = 3)
+        pb <- utils::txtProgressBar(min = 1, max = pages, style = 3)
         show_progress <- TRUE
     } else {
         show_progress <- FALSE
@@ -150,7 +150,7 @@ process_request <- function(token = NULL,
         }
         params[[pager]] <- attr(api_response, "headers")[[pager]]
         if (verbose && show_progress) {
-            setTxtProgressBar(pb, i)
+            utils::setTxtProgressBar(pb, i)
         }
     }
     if (isTRUE(parse)) {

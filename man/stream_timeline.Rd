@@ -78,16 +78,20 @@ Collect live streams of Mastodon data
 \examples{
 \dontrun{
 # stream public timeline for 30 seconds
-stream_timeline_public(timeout = 30,file_name = "public.json")
+stream_timeline_public(timeout = 30, file_name = "public.json")
 # stream timeline of mastodon.social  for 30 seconds
-stream_timeline_public(timeout = 30, local = TRUE,
-   instance = "mastodon.social", file_name = "social.json")
+stream_timeline_public(
+    timeout = 30, local = TRUE,
+    instance = "mastodon.social", file_name = "social.json"
+)
 
 # stream hashtag timeline for 30 seconds
 stream_timeline_hashtag("rstats", timeout = 30, file_name = "rstats_public.json")
 # stream hashtag timeline of mastodon.social  for 30 seconds
-stream_timeline_hashtag("rstats", timeout = 30, local = TRUE,
-   instance = "fosstodon.org", file_name = "rstats_foss.json")
+stream_timeline_hashtag("rstats",
+    timeout = 30, local = TRUE,
+    instance = "fosstodon.org", file_name = "rstats_foss.json"
+)
 # json files can be parsed with parse_stream()
 parse_stream("rstats_foss.json")
 }

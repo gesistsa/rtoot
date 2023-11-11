@@ -13,3 +13,4 @@ codecov.yml
 ^data-raw$
 ^tests/testdata/malformed.json$
 ^paper$
+^.editorconfig$

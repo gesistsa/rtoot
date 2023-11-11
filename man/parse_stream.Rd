@@ -20,7 +20,7 @@ The stream sometimes returns invalid lines of json. These are automatically skip
 }
 \examples{
 \dontrun{
-stream_timeline_public(1,file_name = "stream.json")
+stream_timeline_public(1, file_name = "stream.json")
 parse_stream("stream.json")
 }
 }

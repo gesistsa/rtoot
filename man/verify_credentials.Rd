@@ -25,7 +25,7 @@ If you have created your token as an environment variable, use \code{verify_envv
 }
 \examples{
 \dontrun{
-#read a token from a file
+# read a token from a file
 verify_credentials(token)
 }
 }

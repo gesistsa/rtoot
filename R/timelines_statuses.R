@@ -17,22 +17,28 @@
 #' }
 #' @export
 get_status <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
-  process_request(token = token,path = paste0("/api/v1/statuses/", id),instance = instance,
-                  anonymous = anonymous,parse = parse,FUN = parse_status)
+    process_request(
+        token = token, path = paste0("/api/v1/statuses/", id), instance = instance,
+        anonymous = anonymous, parse = parse, FUN = parse_status
+    )
 }
 
 #' @rdname get_status
 #' @export
 get_reblogged_by <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
-  process_request(token = token,path = paste0("/api/v1/statuses/", id, "/reblogged_by"),instance = instance,
-                  anonymous = anonymous,parse = parse,FUN = v(parse_account))
+    process_request(
+        token = token, path = paste0("/api/v1/statuses/", id, "/reblogged_by"), instance = instance,
+        anonymous = anonymous, parse = parse, FUN = v(parse_account)
+    )
 }
 
 #' @rdname get_status
 #' @export
 get_favourited_by <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
-  process_request(token = token,path = paste0("/api/v1/statuses/", id, "/favourited_by"),instance = instance,
-                  anonymous = anonymous,parse = parse,FUN = v(parse_account))
+    process_request(
+        token = token, path = paste0("/api/v1/statuses/", id, "/favourited_by"), instance = instance,
+        anonymous = anonymous, parse = parse, FUN = v(parse_account)
+    )
 }
 
 #' View statuses above and below this status in the thread
@@ -47,8 +53,10 @@ get_favourited_by <- function(id, instance = NULL, token = NULL, anonymous = FAL
 #' get_context(id = "109294719267373593", instance = "mastodon.social")
 #' }
 get_context <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
-  process_request(token = token,path = paste0("/api/v1/statuses/", id, "/context"),instance = instance,
-                  anonymous = anonymous,parse = parse,FUN = parse_context)
+    process_request(
+        token = token, path = paste0("/api/v1/statuses/", id, "/context"), instance = instance,
+        anonymous = anonymous, parse = parse, FUN = parse_context
+    )
 }
 
 #' View a poll
@@ -63,8 +71,10 @@ get_context <- function(id, instance = NULL, token = NULL, anonymous = FALSE, pa
 #' get_poll(id = "105976")
 #' }
 get_poll <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE) {
-  process_request(token = token,path = paste0("/api/v1/polls/", id), instance = instance,
-                  anonymous = anonymous,parse = parse,FUN = parse_poll)
+    process_request(
+        token = token, path = paste0("/api/v1/polls/", id), instance = instance,
+        anonymous = anonymous, parse = parse, FUN = parse_poll
+    )
 }
 
 #' Get the public timeline
@@ -95,14 +105,20 @@ get_poll <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse
 get_timeline_public <- function(local = FALSE, remote = FALSE, only_media = FALSE,
                                 max_id, since_id, min_id, limit = 20L,
                                 instance = NULL, token = NULL, anonymous = FALSE, parse = TRUE,
-                                retryonratelimit = TRUE,verbose = TRUE) {
-  params <- handle_params(list(local = local, remote = remote,
-                               only_media = only_media, limit = min(limit,40)),
-                          max_id, since_id, min_id)
-  process_request(token = token,path = "/api/v1/timelines/public",instance = instance,params = params,
-                  anonymous = anonymous,parse = parse,FUN = v(parse_status),
-                  n = limit, retryonratelimit = retryonratelimit,
-                  verbose = verbose)
+                                retryonratelimit = TRUE, verbose = TRUE) {
+    params <- handle_params(
+        list(
+            local = local, remote = remote,
+            only_media = only_media, limit = min(limit, 40)
+        ),
+        max_id, since_id, min_id
+    )
+    process_request(
+        token = token, path = "/api/v1/timelines/public", instance = instance, params = params,
+        anonymous = anonymous, parse = parse, FUN = v(parse_status),
+        n = limit, retryonratelimit = retryonratelimit,
+        verbose = verbose
+    )
 }
 
 #' Get hashtag timeline
@@ -120,13 +136,15 @@ get_timeline_public <- function(local = FALSE, remote = FALSE, only_media = FALS
 get_timeline_hashtag <- function(hashtag = "rstats", local = FALSE, only_media = FALSE,
                                  max_id, since_id, min_id, limit = 20L, instance = NULL,
                                  token = NULL, anonymous = FALSE, parse = TRUE,
-                                 retryonratelimit = TRUE,verbose = TRUE) {
-  params <- handle_params(list(local = local, only_media = only_media, limit = min(limit,40L)), max_id, since_id, min_id)
-  path <- paste0("/api/v1/timelines/tag/", gsub("^#+", "", hashtag))
-  process_request(token = token,path = path,instance = instance,params = params,
-                  anonymous = anonymous,parse = parse,FUN = v(parse_status),
-                  n = limit, retryonratelimit = retryonratelimit,
-                  verbose = verbose)
+                                 retryonratelimit = TRUE, verbose = TRUE) {
+    params <- handle_params(list(local = local, only_media = only_media, limit = min(limit, 40L)), max_id, since_id, min_id)
+    path <- paste0("/api/v1/timelines/tag/", gsub("^#+", "", hashtag))
+    process_request(
+        token = token, path = path, instance = instance, params = params,
+        anonymous = anonymous, parse = parse, FUN = v(parse_status),
+        n = limit, retryonratelimit = retryonratelimit,
+        verbose = verbose
+    )
 }
 
 #' Get home and list timelines
@@ -140,12 +158,14 @@ get_timeline_hashtag <- function(hashtag = "rstats", local = FALSE, only_media =
 #' get_timeline_home()
 #' }
 get_timeline_home <- function(local = FALSE, max_id, since_id, min_id, limit = 20L,
-                              token = NULL, parse = TRUE,retryonratelimit = TRUE,verbose = TRUE) {
-  params <- handle_params(list(local = local, limit = min(limit,40L)), max_id, since_id, min_id)
-  process_request(token = token,path = "/api/v1/timelines/home", params = params,
-                  parse = parse,FUN = v(parse_status),
-                  n = limit, retryonratelimit = retryonratelimit,
-                  verbose = verbose)
+                              token = NULL, parse = TRUE, retryonratelimit = TRUE, verbose = TRUE) {
+    params <- handle_params(list(local = local, limit = min(limit, 40L)), max_id, since_id, min_id)
+    process_request(
+        token = token, path = "/api/v1/timelines/home", params = params,
+        parse = parse, FUN = v(parse_status),
+        n = limit, retryonratelimit = retryonratelimit,
+        verbose = verbose
+    )
 }
 
 #' @rdname get_timeline_home
@@ -156,10 +176,12 @@ get_timeline_home <- function(local = FALSE, max_id, since_id, min_id, limit = 2
 #' }
 get_timeline_list <- function(list_id, max_id, since_id, min_id,
                               limit = 20L, token = NULL, parse = TRUE,
-                              retryonratelimit = TRUE,verbose = TRUE) {
-  params <- handle_params(list(limit = min(limit,40L)), max_id, since_id, min_id)
-  process_request(token = token,path = paste0("/api/v1/timelines/list/", list_id), params = params,
-                  parse = parse,FUN = v(parse_status),
-                  n = limit, retryonratelimit = retryonratelimit,
-                  verbose = verbose)
+                              retryonratelimit = TRUE, verbose = TRUE) {
+    params <- handle_params(list(limit = min(limit, 40L)), max_id, since_id, min_id)
+    process_request(
+        token = token, path = paste0("/api/v1/timelines/list/", list_id), params = params,
+        parse = parse, FUN = v(parse_status),
+        n = limit, retryonratelimit = retryonratelimit,
+        verbose = verbose
+    )
 }
