@@ -101,14 +101,7 @@ create_token <- function(client, type = "public", browser = TRUE) {
         if (browser) {
             httr::BROWSE(url, query = query)
         } else {
-            nav_url <- httr::modify_url(url, query = query)
-            if (clipr::clipr_available()) {
-                clipr::write_clip(nav_url)
-                url_copied <- "[copied to clipboard]"
-            } else {
-                url_copied <- ""
-            }
-            message(paste("Navigate to", nav_url, url_copied, "to obtain an authorization code"))
+            message(paste("Navigate to", httr::modify_url(url, query = query), "to obtain an authorization code"))
         }
         auth_code <- rtoot_ask(prompt = "enter authorization code: ", pass = TRUE, check_rstudio = TRUE, default = "")
         auth2 <- httr::POST(httr::modify_url(url = url, path = "oauth/token"), body = list(
