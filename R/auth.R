@@ -101,7 +101,8 @@ create_token <- function(client, type = "public", browser = TRUE) {
         if (browser) {
             httr::BROWSE(url, query = query)
         } else {
-            message(paste("Navigate to", httr::modify_url(url, query = query), "to obtain an authorization code"))
+            message(paste("Navigate to", httr::modify_url(url, query = query), "to obtain an authorization code. Press Enter to the next step."))
+            rtoot_ask("", pass = FALSE, check_rstudio = FALSE)
         }
         auth_code <- rtoot_ask(prompt = "enter authorization code: ", pass = TRUE, check_rstudio = TRUE, default = "")
         auth2 <- httr::POST(httr::modify_url(url = url, path = "oauth/token"), body = list(
