@@ -267,6 +267,13 @@ break_process_request <- function(api_response, retryonratelimit = FALSE, verbos
 }
 
 ## a function to determine if input to readline has been quoted or not
-quoted_string <- function(x){
-    (grepl("^\"", x) && grepl("\"$", x)) || (grepl("^'", x) && grepl("'$", x))
+is_quoted_string <- function(x) {
+    grepl("^[\"'].+[\"']$", x)
+}
+
+process_instance <- function(x) {
+    if (!is_quoted_string(x)) {
+        return(x)
+    }
+    gsub("^['\"]+|['\"]+$", "", x)
 }

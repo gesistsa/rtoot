@@ -26,9 +26,7 @@ auth_setup <- function(instance = NULL, type = NULL, name = NULL, path = NULL, c
     while (is.null(instance) || instance == "") {
         instance <- rtoot_ask(prompt = "On which instance do you want to authenticate (e.g., \"mastodon.social\")? ", pass = FALSE)
     }
-    if(quoted_string(instance)){
-        instance <- substr(instance, 2, nchar(instance)-1)
-    }
+    instance <- process_instance(instance) #149
     client <- get_client(instance = instance)
     if (!isTRUE(type %in% c("public", "user"))) {
         type <- c("public", "user")[rtoot_menu(choices = c("public", "user"), title = "What type of token do you want?", verbose = TRUE)]
