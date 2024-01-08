@@ -1,4 +1,4 @@
-## Update from 0.3.2 to 0.3.3
+## Update from 0.3.3 to 0.3.4
 
 * small bug fixes and link redirects
 

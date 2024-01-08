@@ -1,4 +1,4 @@
-# rtoot 0.3.3.9000
+# rtoot 0.3.4
 
 * added progress bar for long running queries (#141) by @chainsawriot
 * added 429 check (#144)
