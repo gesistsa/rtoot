@@ -63,7 +63,7 @@ make_get_request <- function(token, path, params = list(), instance = NULL, anon
 
         status_code <- httr::status_code(request_results)
         if (!status_code %in% c(200, 429)) {
-            stop(paste("something went wrong. Status code:", status_code), call. = FALSE)
+            stop(paste("something went wrong in a call in the root package. Status code:", status_code), call. = FALSE)
         } else if (status_code == 429) {
             message("too many requests. Sleeping for 5 minutes")
             Sys.sleep(60 * 5)
