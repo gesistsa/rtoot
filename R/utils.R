@@ -237,15 +237,23 @@ rtoot_ask <- function(prompt = "enter authorization code: ", pass = TRUE, check_
     return(passFun(prompt = prompt))
 }
 
+handle_id <- function(x) {
+    ## Convert x to snowflake id if it is POSIXct
+    if (is(x, "POSIXct")) {
+        return(as.numeric(x) * (2^16) * 1000)
+    }
+    x
+}
+
 handle_params <- function(params, max_id, since_id, min_id) {
     if (!missing(max_id)) {
-        params$max_id <- max_id
+        params$max_id <- handle_id(max_id)
     }
     if (!missing(since_id)) {
-        params$since_id <- since_id
+        params$since_id <- handle_id(since_id)
     }
     if (!missing(min_id)) {
-        params$min_id <- min_id
+        params$min_id <- handle_id(min_id)
     }
     params
 }
