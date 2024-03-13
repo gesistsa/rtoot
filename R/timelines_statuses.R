@@ -83,14 +83,15 @@ get_poll <- function(id, instance = NULL, token = NULL, anonymous = FALSE, parse
 #' @param local logical, Show only local statuses?
 #' @param remote logical, Show only remote statuses?
 #' @param only_media logical, Show only statuses with media attached?
-#' @param max_id character, Return results older than this id
-#' @param since_id character, Return results newer than this id
-#' @param min_id character, Return results immediately newer than this id
+#' @param max_id character or `POSIXct` (date time), Return results older than this id
+#' @param since_id character or `POSIXct` (date time), Return results newer than this id
+#' @param min_id character or `POSIXct` (date time), Return results immediately newer than this id
 #' @param limit integer, Maximum number of results to return
 #' @param retryonratelimit If TRUE, and a rate limit is exhausted, will wait until it refreshes. Most Mastodon rate limits refresh every 5 minutes. If FALSE, and the rate limit is exceeded, the function will terminate early with a warning; you'll still get back all results received up to that point.
 #' @param verbose logical whether to display messages
 #' @inheritParams post_toot
 #' @inheritParams get_status
+#' @details `max_id`, `since_id`, and `min_id` can either be character or `POSIXct` (date time). If it is `POSXIct`, it will be converted to the so-called snowflake ID.
 #' @return statuses
 #' @export
 #' @examples
@@ -126,12 +127,16 @@ get_timeline_public <- function(local = FALSE, remote = FALSE, only_media = FALS
 #' Query the instance for the timeline of a specific hashtag
 #' @param hashtag character, Content of a #hashtag. The hash is optional
 #' @inherit get_timeline_public
+#' @inherit get_timeline_public details
 #' @export
 #' @examples
 #' \dontrun{
 #' get_timeline_hashtag(hashtag = "#ichbinhanna")
 #' ## anonymously
 #' get_timeline_hashtag(hashtag = "ichbinhanna", instance = "mastodon.social", anonymous = TRUE)
+#' ## Search for toots by date
+#' get_timeline_hashtag(hashtag = "ichbinhanna", instance = "mastodon.social", anonymous = TRUE,
+#' max_id = as.POSIXct("2024-03-01"))
 #' }
 get_timeline_hashtag <- function(hashtag = "rstats", local = FALSE, only_media = FALSE,
                                  max_id, since_id, min_id, limit = 20L, instance = NULL,
@@ -152,6 +157,7 @@ get_timeline_hashtag <- function(hashtag = "rstats", local = FALSE, only_media =
 #' Query the instance for the timeline from either followed users or a specific list. These functions can only be called with a user token from [create_token()].
 #' @param list_id character, Local ID of the list in the database.
 #' @inherit get_timeline_public
+#' @inherit get_timeline_public details
 #' @export
 #' @examples
 #' \dontrun{

@@ -44,6 +44,8 @@ search_accounts <- function(query, limit = 40, token = NULL, anonymous = FALSE, 
 #' @inheritParams get_status
 #' @inheritParams post_toot
 #' @inheritParams get_timeline_home
+#' @inheritParams get_timeline_public
+#' @inherit get_timeline_public details
 #' @param exclude_reblogs logical, Whether to filter out boosts from the response.
 #' @param hashtag character, filter for statuses using a specific hashtag.
 #' @param retryonratelimit If TRUE, and a rate limit is exhausted, will wait until it refreshes. Most Mastodon rate limits refresh every 5 minutes. If FALSE, and the rate limit is exceeded, the function will terminate early with a warning; you'll still get back all results received up to that point.
@@ -78,8 +80,8 @@ get_account_statuses <- function(id, max_id, since_id, min_id, limit = 20L,
 
 #' Get followers of a user
 #' @inheritParams get_account_statuses
-#' @param max_id character, Return results older than this id
-#' @param since_id character, Return results newer than this id
+#' @inheritParams get_timeline_public
+#' @inherit get_timeline_public details
 #' @param limit integer, maximum number of results to return. Defaults to 40.
 #' @param retryonratelimit If TRUE, and a rate limit is exhausted, will wait until it refreshes. Most Mastodon rate limits refresh every 5 minutes. If FALSE, and the rate limit is exceeded, the function will terminate early with a warning; you'll still get back all results received up to that point.
 #' @inheritParams auth_setup
@@ -109,6 +111,8 @@ get_account_followers <- function(id, max_id, since_id,
 #' @inheritParams get_account_statuses
 #' @inheritParams get_account_followers
 #' @inheritParams auth_setup
+#' @inheritParams get_timeline_public
+#' @inherit get_timeline_public details
 #' @inherit get_account_followers details
 #' @return tibble or list of accounts a user follows
 #' @examples
@@ -212,6 +216,8 @@ get_account_bookmarks <- function(max_id, since_id, min_id, limit = 40L,
 #' @inheritParams get_account_statuses
 #' @inheritParams get_account_followers
 #' @inheritParams auth_setup
+#' @inheritParams get_timeline_public
+#' @inherit get_timeline_public details
 #' @param min_id character, Return results younger than this id
 #' @inherit get_account_followers details
 #' @return tibble or list of favourited statuses
@@ -238,6 +244,8 @@ get_account_favourites <- function(max_id, min_id, limit = 40L,
 #' @inheritParams get_account_statuses
 #' @inheritParams get_account_followers
 #' @inheritParams auth_setup
+#' @inheritParams get_timeline_public
+#' @inherit get_timeline_public details
 #' @inherit get_account_followers details
 #' @return tibble or list of blocked users
 #' @examples
@@ -263,6 +271,8 @@ get_account_blocks <- function(max_id, since_id, limit = 40L,
 #' @inheritParams get_account_statuses
 #' @inheritParams get_account_followers
 #' @inheritParams auth_setup
+#' @inheritParams get_timeline_public
+#' @inherit get_timeline_public details
 #' @inherit get_account_followers details
 #' @return tibble or list of muted users
 #' @examples

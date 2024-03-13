@@ -27,11 +27,11 @@ get_timeline_public(
 
 \item{only_media}{logical, Show only statuses with media attached?}
 
-\item{max_id}{character, Return results older than this id}
+\item{max_id}{character or \code{POSIXct} (date time), Return results older than this id}
 
-\item{since_id}{character, Return results newer than this id}
+\item{since_id}{character or \code{POSIXct} (date time), Return results newer than this id}
 
-\item{min_id}{character, Return results immediately newer than this id}
+\item{min_id}{character or \code{POSIXct} (date time), Return results immediately newer than this id}
 
 \item{limit}{integer, Maximum number of results to return}
 
@@ -52,6 +52,9 @@ statuses
 }
 \description{
 Query the instance for the public timeline
+}
+\details{
+\code{max_id}, \code{since_id}, and \code{min_id} can either be character or \code{POSIXct} (date time). If it is \code{POSXIct}, it will be converted to the so-called snowflake ID.
 }
 \examples{
 \dontrun{

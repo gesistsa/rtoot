@@ -27,11 +27,11 @@ get_timeline_hashtag(
 
 \item{only_media}{logical, Show only statuses with media attached?}
 
-\item{max_id}{character, Return results older than this id}
+\item{max_id}{character or \code{POSIXct} (date time), Return results older than this id}
 
-\item{since_id}{character, Return results newer than this id}
+\item{since_id}{character or \code{POSIXct} (date time), Return results newer than this id}
 
-\item{min_id}{character, Return results immediately newer than this id}
+\item{min_id}{character or \code{POSIXct} (date time), Return results immediately newer than this id}
 
 \item{limit}{integer, Maximum number of results to return}
 
@@ -53,11 +53,17 @@ statuses
 \description{
 Query the instance for the timeline of a specific hashtag
 }
+\details{
+\code{max_id}, \code{since_id}, and \code{min_id} can either be character or \code{POSIXct} (date time). If it is \code{POSXIct}, it will be converted to the so-called snowflake ID.
+}
 \examples{
 \dontrun{
 get_timeline_hashtag(hashtag = "#ichbinhanna")
 ## anonymously
 get_timeline_hashtag(hashtag = "ichbinhanna", instance = "mastodon.social", anonymous = TRUE)
+## Search for toots by date
+get_timeline_hashtag(hashtag = "ichbinhanna", instance = "mastodon.social", anonymous = TRUE,
+max_id = as.POSIXct("2024-03-01"))
 }
 }
 \references{
