@@ -1,11 +1,11 @@
-pandoc: 2.19.2
+pandoc: 3.1.11
 pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   auth: auth.html
   rtoot: rtoot.html
   stream: stream.html
-last_built: 2024-01-16T09:48Z
+last_built: 2024-03-13T10:50Z
 urls:
   reference: https://gesistsa.github.io/rtoot/reference
   article: https://gesistsa.github.io/rtoot/articles
