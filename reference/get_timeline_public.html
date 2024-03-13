@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">rtoot</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.4</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.3.4.9000</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -96,15 +96,15 @@
 
 
 <dt>max_id</dt>
-<dd><p>character, Return results older than this id</p></dd>
+<dd><p>character or <code>POSIXct</code> (date time), Return results older than this id</p></dd>
 
 
 <dt>since_id</dt>
-<dd><p>character, Return results newer than this id</p></dd>
+<dd><p>character or <code>POSIXct</code> (date time), Return results newer than this id</p></dd>
 
 
 <dt>min_id</dt>
-<dd><p>character, Return results immediately newer than this id</p></dd>
+<dd><p>character or <code>POSIXct</code> (date time), Return results immediately newer than this id</p></dd>
 
 
 <dt>limit</dt>
@@ -140,6 +140,10 @@
     
 
 <p>statuses</p>
+    </div>
+    <div class="section level2">
+    <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
+    <p><code>max_id</code>, <code>since_id</code>, and <code>min_id</code> can either be character or <code>POSIXct</code> (date time). If it is <code>POSXIct</code>, it will be converted to the so-called snowflake ID.</p>
     </div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
