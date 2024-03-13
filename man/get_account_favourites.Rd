@@ -15,7 +15,7 @@ get_account_favourites(
 )
 }
 \arguments{
-\item{max_id}{character, Return results older than this id}
+\item{max_id}{character or \code{POSIXct} (date time), Return results older than this id}
 
 \item{min_id}{character, Return results younger than this id}
 

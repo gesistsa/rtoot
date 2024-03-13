@@ -15,9 +15,9 @@ get_account_blocks(
 )
 }
 \arguments{
-\item{max_id}{character, Return results older than this id}
+\item{max_id}{character or \code{POSIXct} (date time), Return results older than this id}
 
-\item{since_id}{character, Return results newer than this id}
+\item{since_id}{character or \code{POSIXct} (date time), Return results newer than this id}
 
 \item{limit}{integer, Maximum number of results to return}
 

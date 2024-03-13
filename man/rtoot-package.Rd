@@ -3,7 +3,6 @@
 \docType{package}
 \name{rtoot-package}
 \alias{rtoot-package}
-\alias{_PACKAGE}
 \title{rtoot: Collect Mastodon data from R}
 \description{
 rtoots provides a range of functions to interact with the Mastodon API.
@@ -40,6 +39,7 @@ Authors:
 Other contributors:
 \itemize{
   \item Johannes Gruber \email{JohannesB.Gruber@gmail.com} (\href{https://orcid.org/0000-0001-9177-1772}{ORCID}) [contributor]
+  \item Tim Schatto-Eckrodt \email{kudusch@posteo.de} (\href{https://orcid.org/0000-0003-1658-4373}{ORCID}) [contributor]
 }
 
 }

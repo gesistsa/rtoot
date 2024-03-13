@@ -1,3 +1,7 @@
+# rtoot 0.3.4.9000
+
+* fixed #153 by allowing POSIXct as `max_id`, `min_id` and `since_id` (#154) by @Kudusch
+
 # rtoot 0.3.4
 
 * added progress bar for long running queries (#141) by @chainsawriot
