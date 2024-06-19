@@ -1,0 +1,5 @@
+project:
+  title: rtoot
+  type: default
+  render:
+    - methodshub.qmd

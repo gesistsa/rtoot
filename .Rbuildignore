@@ -14,3 +14,11 @@ codecov.yml
 ^tests/testdata/malformed.json$
 ^paper$
 ^.editorconfig$
+^CITATION\.cff$
+^install\.R$
+^postBuild$
+^apt\.txt$
+^runtime\.txt$
+^_quarto\.yml$
+^\.quarto$
+^methodshub
