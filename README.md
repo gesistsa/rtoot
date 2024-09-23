@@ -8,7 +8,7 @@
 [![CRAN
 status](https://www.r-pkg.org/badges/version/rtoot)](https://CRAN.R-project.org/package=rtoot)
 [![CRAN
-Downloads](http://cranlogs.r-pkg.org/badges/rtoot)](https://CRAN.R-project.org/package=rtoot)
+Downloads](https://cranlogs.r-pkg.org/badges/rtoot)](https://CRAN.R-project.org/package=rtoot)
 [![R-CMD-check](https://github.com/gesistsa/rtoot/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gesistsa/rtoot/actions/workflows/R-CMD-check.yaml)
 [![Codecov test
 coverage](https://codecov.io/gh/gesistsa/rtoot/branch/main/graph/badge.svg)](https://app.codecov.io/gh/gesistsa/rtoot?branch=main)
@@ -138,7 +138,7 @@ You can post toots with:
 post_toot(status = "my first rtoot #rstats")
 ```
 
-It can also include media and alt\_text.
+It can also include media and alt_text.
 
 ``` r
 post_toot(
