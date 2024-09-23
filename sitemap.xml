@@ -1,153 +1,53 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/404.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/CODE_OF_CONDUCT.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/articles/auth.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/articles/rtoot.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/articles/stream.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/index.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/methodshub.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/news/index.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/auth_setup.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/convert_token_to_envvar.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/create_token.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/get_account.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/get_account_blocks.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/get_account_bookmarks.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/get_account_favourites.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/get_account_featured_tags.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/get_account_followers.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/get_account_following.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/get_account_lists.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/get_account_mutes.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/get_account_relationships.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/get_account_statuses.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/get_client.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/get_context.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/get_fedi_instances.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/get_instance.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/get_list_accounts.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/get_lists.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/get_poll.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/get_status.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/get_timeline_hashtag.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/get_timeline_home.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/get_timeline_public.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/parse_stream.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/post_list_accounts.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/post_list_create.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/post_status.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/post_toot.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/post_user.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/rtoot-package.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/rtoot.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/save_auth_rtoot.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/search_accounts.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/stream_timeline.html</loc>
-  </url>
-  <url>
-    <loc>https://gesistsa.github.io/rtoot/reference/verify_credentials.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://gesistsa.github.io/rtoot/404.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/CODE_OF_CONDUCT.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/LICENSE-text.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/LICENSE.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/articles/auth.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/articles/index.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/articles/rtoot.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/articles/stream.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/authors.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/index.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/methodshub.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/news/index.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/auth_setup.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/convert_token_to_envvar.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/create_token.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/get_account.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/get_account_blocks.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/get_account_bookmarks.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/get_account_favourites.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/get_account_featured_tags.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/get_account_followers.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/get_account_following.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/get_account_lists.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/get_account_mutes.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/get_account_relationships.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/get_account_statuses.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/get_client.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/get_context.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/get_fedi_instances.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/get_instance.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/get_list_accounts.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/get_lists.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/get_poll.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/get_status.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/get_timeline_hashtag.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/get_timeline_home.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/get_timeline_public.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/index.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/parse_stream.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/post_list_accounts.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/post_list_create.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/post_status.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/post_toot.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/post_user.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/rtoot-package.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/rtoot.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/save_auth_rtoot.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/search_accounts.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/stream_timeline.html</loc></url>
+<url><loc>https://gesistsa.github.io/rtoot/reference/verify_credentials.html</loc></url>
 </urlset>
+
