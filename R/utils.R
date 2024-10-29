@@ -230,7 +230,7 @@ rtoot_ask <- function(prompt = "enter authorization code: ", pass = TRUE, check_
     }
     passFun <- readline
     if (isTRUE(pass) && isTRUE(check_rstudio) && (requireNamespace("rstudioapi", quietly = TRUE))) {
-        if (rstudioapi::isAvailable()) {
+        if (rstudioapi::isAvailable() && rstudioapi::hasFun("askForPassword")) {
             passFun <- rstudioapi::askForPassword
         }
     }
