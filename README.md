@@ -16,8 +16,7 @@ coverage](https://codecov.io/gh/gesistsa/rtoot/branch/main/graph/badge.svg)](htt
 <!-- badges: end -->
 
 Interact with the [mastodon API](https://docs.joinmastodon.org/api/)
-from R.  
-Get started by reading `vignette("rtoot")`.
+from R. Get started by reading `vignette("rtoot")`.
 
 Please cite this package as:
 
@@ -191,5 +190,5 @@ request 70 records, you will get 80 back, given that many records exist.
 
 Please note that the rtoot project is released with a [Contributor Code
 of
-Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html).
+Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/).
 By contributing to this project, you agree to abide by its terms.

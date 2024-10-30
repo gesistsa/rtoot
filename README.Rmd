@@ -23,7 +23,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: end -->
 
-Interact with the [mastodon API](https://docs.joinmastodon.org/api/) from R.  
+Interact with the [mastodon API](https://docs.joinmastodon.org/api/) from R.
 Get started by reading `vignette("rtoot")`.
 
 Please cite this package as:
@@ -54,13 +54,13 @@ First you should set up your own credentials (see also `vignette("auth")`)
 ```{r aut, eval=FALSE}
 auth_setup()
 ```
-The mastodon API allows different access levels. Setting up a token with your own account grants you the most access. 
+The mastodon API allows different access levels. Setting up a token with your own account grants you the most access.
 
 ## Instances
 
 In contrast to twitter, mastodon is not a single instance, but a federation of different servers.
 You sign up at a specific server (say "mastodon.social") but can still communicate with others from other servers (say "fosstodon.org"). The existence of different instances makes API calls more complex.
-For example, some calls can only be made within your own instance (e.g `get_timeline_home()`), others can access all instances but you need to specify the instance as a parameter (e.g. `get_timeline_public()`). 
+For example, some calls can only be made within your own instance (e.g `get_timeline_home()`), others can access all instances but you need to specify the instance as a parameter (e.g. `get_timeline_public()`).
 
 A list of active instances can be obtained with `get_fedi_instances()`. The results are sorted by number of users.
 
@@ -137,7 +137,7 @@ You can mark the toot as sensitive by setting `sensitive = TRUE` and add a spoil
 
 *(Be aware that excessive automated posting is frowned upon (or even against the ToS) in many instances. Make sure to check the ToS of your instance and be mindful when using this function.)*
 
-## Streaming 
+## Streaming
 
 `rtoot` allows to stream statuses from three different streams.
 To get any public status on any instance use `stream_timeline_public()`
@@ -158,8 +158,8 @@ to read in and convert a json to a data frame.
 ## Pagination
 
 All relevant functions in the package support pagination of results if the `limit` parameter is larger than the default page size (which is 40 in most cases). In this case, you may get more results than requested since the pages are always fetched as a whole. If you for example request 70 records, you will get 80 back, given that many records exist.
- 
+
 
 ## Code of Conduct
-  
-Please note that the rtoot project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/1/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
+
+Please note that the rtoot project is released with a [Contributor Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/). By contributing to this project, you agree to abide by its terms.
