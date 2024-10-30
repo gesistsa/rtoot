@@ -239,7 +239,7 @@ rtoot_ask <- function(prompt = "enter authorization code: ", pass = TRUE, check_
 
 handle_id <- function(x) {
     ## Convert x to snowflake id if it is POSIXct
-    if (is(x, "POSIXct")) {
+    if (methods::is(x, "POSIXct")) {
         return(as.numeric(x) * (2^16) * 1000)
     }
     x

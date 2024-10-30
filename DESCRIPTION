@@ -21,6 +21,7 @@ Imports:
     dplyr,
     httr,
     jsonlite,
+    methods,
     tibble
 Suggests: 
     knitr,
