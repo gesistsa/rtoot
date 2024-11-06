@@ -83,6 +83,10 @@ upload_media_to_mastodon <- function(media, alt_text, token) {
         body = params,
         httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
     )
+    if (httr::status_code(r) != 200) {
+        stop(paste0("Error while uploading: ", media, ". Status Code:", httr::status_code(r)))
+    }
+
     httr::content(r)$id
 }
 
