@@ -42,7 +42,7 @@ rtoot(endpoint = "api/v1/notifications", limit = 8)
 rtoot(endpoint = "api/v1/notifications", params = list(limit = 8))
 rtoot(endpoint = "api/v1/followed_tags")
 ## reimplement `get_timeline_public`
-rtoot(endpoint = "api/v1/timelines/public", instance = "emacs.ch", local = TRUE, anonymous = TRUE)
+rtoot(endpoint = "api/v1/timelines/public", instance = "mastodon.social", local = TRUE, anonymous = TRUE)
 }
 }
 \references{

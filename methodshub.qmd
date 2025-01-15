@@ -69,11 +69,11 @@ Please refer to the ["Introduction to rtoot"](https://gesistsa.github.io/rtoot/a
 
 In general, one should first conduct the authentication to obtain an access token. This can be done with the provided function `auth_setup()`. For more information, please refer to the documentation on [authentication](https://gesistsa.github.io/rtoot/articles/auth.html).
 
-However, it is also possible to use some of functions with authentication. For example, it is possible to obtain the public timeline of a Mastodon instance, e.g. emacs.ch.
+However, it is also possible to use some of functions with authentication. For example, it is possible to obtain the public timeline of a Mastodon instance, e.g. sciences.social.
 
 ```{r}
 library(rtoot)
-get_timeline_public(instance = "emacs.ch")
+get_timeline_public(instance = "sciences.social")
 ```
 
 Other functions, e.g. `get_timeline_hashtag()`, `get_account_statuses()` require authentication.
@@ -86,7 +86,7 @@ Issue Tracker: [https://github.com/gesistsa/rtoot/issues](https://github.com/ges
 
 ## Publication
 
-1. Schoch, D., & Chan, C. H. (2023). Software presentation: Rtoot: Collecting and analyzing Mastodon data. Mobile Media & Communication, 11(3), 575-578. https://doi.org/10.1177/20501579231176678
+1. Schoch, D., & Chan, C. H. (2023). Software presentation: Rtoot: Collecting and analyzing Mastodon data. Mobile Media & Communication, 11(3), 575-578. <https://doi.org/10.1177/20501579231176678>
 
 <!-- ## Acknowledgements -->
 <!-- - Acknowledgements if any -->
