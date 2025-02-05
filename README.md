@@ -13,6 +13,8 @@ Downloads](https://cranlogs.r-pkg.org/badges/rtoot)](https://CRAN.R-project.org/
 [![Codecov test
 coverage](https://codecov.io/gh/gesistsa/rtoot/branch/main/graph/badge.svg)](https://app.codecov.io/gh/gesistsa/rtoot?branch=main)
 
+[![Codecov test
+coverage](https://codecov.io/gh/gesistsa/rtoot/graph/badge.svg)](https://app.codecov.io/gh/gesistsa/rtoot)
 <!-- badges: end -->
 
 Interact with the [mastodon API](https://docs.joinmastodon.org/api/)
@@ -137,7 +139,7 @@ You can post toots with:
 post_toot(status = "my first rtoot #rstats")
 ```
 
-It can also include media and alt_text.
+It can also include media and alt\_text.
 
 ``` r
 post_toot(
