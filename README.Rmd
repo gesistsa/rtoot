@@ -21,6 +21,7 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/gesistsa/rtoot/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/gesistsa/rtoot/actions/workflows/R-CMD-check.yaml)
 [![Codecov test coverage](https://codecov.io/gh/gesistsa/rtoot/branch/main/graph/badge.svg)](https://app.codecov.io/gh/gesistsa/rtoot?branch=main)
 
+[![Codecov test coverage](https://codecov.io/gh/gesistsa/rtoot/graph/badge.svg)](https://app.codecov.io/gh/gesistsa/rtoot)
 <!-- badges: end -->
 
 Interact with the [mastodon API](https://docs.joinmastodon.org/api/) from R.
