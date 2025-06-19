@@ -97,7 +97,7 @@ make_get_request <- function(
                 call. = FALSE
             )
         } else if (status_code == 429) {
-            message("too many requests. Sleeping for 5 minutes")
+            cli::cli_inform("too many requests. Sleeping for 5 minutes")
             Sys.sleep(60 * 5)
             count <- count + 1
         } else if (status_code == 200) {
@@ -218,7 +218,7 @@ v <- function(FUN) {
 
 sayif <- function(verbose, ...) {
     if (isTRUE(verbose)) {
-        message(...)
+        cli::cli_inform(paste(c(...), collapse = ""))
     }
 }
 

@@ -141,7 +141,7 @@ create_token <- function(client, type = "public", browser = TRUE) {
         if (browser) {
             httr::BROWSE(url, query = query)
         } else {
-            message(paste(
+            cli::cli_inform(paste(
                 "Navigate to",
                 httr::modify_url(url, query = query),
                 "to obtain an authorization code. Press Enter to the next step."
@@ -304,7 +304,7 @@ get_token_from_envvar <- function(
             stop("envvar not found.")
         } else {
             ## warn the testers
-            message(
+            cli::cli_inform(
                 "You should do software testing with the `RTOOT_DEFAULT_TOKEN` envvar!\nRead: https://github.com/schochastics/rtoot/wiki/vcr"
             )
             return(dummy)
