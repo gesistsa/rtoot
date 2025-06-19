@@ -34,8 +34,9 @@ post_toot <- function(
     verbose = TRUE
 ) {
     token <- check_token_rtoot(token)
-
-    stopifnot(is.character(status), length(status) == 1)
+    if (!is.character(status) || length(status) != 1) {
+        cli::cli_abort("`status` must be a string, it is a {typeof(status)} of length {length(status)}.")
+    }
     if (!is.null(media)) {
         check_media(media, alt_text)
         media_id_string <- character(length(media))
