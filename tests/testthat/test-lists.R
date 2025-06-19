@@ -1,10 +1,18 @@
-fake_token <- rtoot:::get_token_from_envvar("RTOOT_DEFAULT_TOKEN", check_stop = FALSE)
+fake_token <- rtoot:::get_token_from_envvar(
+  "RTOOT_DEFAULT_TOKEN",
+  check_stop = FALSE
+)
 fake_token$type <- "user"
 fake_token$instance <- "fosstodon.org"
 
 test_that("get_list_accounts", {
   vcr::use_cassette("get_list_accounts", {
-    x <- get_list_accounts(id = "7351", limit = 2, parse = TRUE, token = fake_token)
+    x <- get_list_accounts(
+      id = "7351",
+      limit = 2,
+      parse = TRUE,
+      token = fake_token
+    )
   })
   expect_true(nrow(x) == 2)
   expect_true("tbl_df" %in% class(x))
@@ -27,6 +35,10 @@ test_that("post_list_create", {
 
 test_that("post_list_accounts", {
   vcr::use_cassette("post_list_accounts", {
-    expect_message(post_list_accounts(id = 7354, account_ids = "109337044562642770", token = fake_token))
+    expect_message(post_list_accounts(
+      id = 7354,
+      account_ids = "109337044562642770",
+      token = fake_token
+    ))
   })
 })

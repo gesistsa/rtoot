@@ -1,5 +1,8 @@
 ## tests for all instance functions
-fake_token <- rtoot:::get_token_from_envvar("RTOOT_DEFAULT_TOKEN", check_stop = FALSE)
+fake_token <- rtoot:::get_token_from_envvar(
+  "RTOOT_DEFAULT_TOKEN",
+  check_stop = FALSE
+)
 fake_token$type <- "user"
 fake_token$instance <- "social.tchncs.de"
 
@@ -20,7 +23,11 @@ test_that("get_instance_general", {
   })
   expect_equal(x$uri, "mastodon.hk")
   vcr::use_cassette("get_instance_general_anonymous_false", {
-    x <- get_instance_general(instance = "social.tchncs.de", anonymous = FALSE, token = fake_token)
+    x <- get_instance_general(
+      instance = "social.tchncs.de",
+      anonymous = FALSE,
+      token = fake_token
+    )
   })
   expect_equal(x$uri, "social.tchncs.de")
 })
@@ -31,19 +38,30 @@ test_that("get_instance_peers", {
   })
   expect_true(length(x) != 0)
   vcr::use_cassette("get_instance_peers_anonymous_false", {
-    x <- get_instance_peers(instance = "social.tchncs.de", anonymous = FALSE, token = fake_token)
+    x <- get_instance_peers(
+      instance = "social.tchncs.de",
+      anonymous = FALSE,
+      token = fake_token
+    )
   })
   expect_true(length(x) != 0)
 })
 
 test_that("get_instance_activity", {
   vcr::use_cassette("get_instance_activity_default", {
-    x <- get_instance_activity(instance = "social.tchncs.de", token = fake_token)
+    x <- get_instance_activity(
+      instance = "social.tchncs.de",
+      token = fake_token
+    )
   })
   expect_true(nrow(x) != 0)
   expect_true("tbl_df" %in% class(x))
   vcr::use_cassette("get_instance_activity_anonymous_false", {
-    x <- get_instance_activity(instance = "social.tchncs.de", anonymous = FALSE, token = fake_token)
+    x <- get_instance_activity(
+      instance = "social.tchncs.de",
+      anonymous = FALSE,
+      token = fake_token
+    )
   })
   expect_true(nrow(x) != 0)
   expect_true("tbl_df" %in% class(x))
@@ -56,7 +74,11 @@ test_that("get_instance_emoji", {
   expect_true(nrow(x) != 0)
   expect_true("tbl_df" %in% class(x))
   vcr::use_cassette("get_instance_emoji_anonymous_false", {
-    x <- get_instance_emoji(instance = "social.tchncs.de", anonymous = FALSE, token = fake_token)
+    x <- get_instance_emoji(
+      instance = "social.tchncs.de",
+      anonymous = FALSE,
+      token = fake_token
+    )
   })
   expect_true(nrow(x) != 0)
   expect_true("tbl_df" %in% class(x))
@@ -64,16 +86,30 @@ test_that("get_instance_emoji", {
 
 test_that("get_instance_directory", {
   vcr::use_cassette("get_instance_directory_default", {
-    x <- get_instance_directory(instance = "mastodon.social", limit = 3, token = fake_token)
+    x <- get_instance_directory(
+      instance = "mastodon.social",
+      limit = 3,
+      token = fake_token
+    )
   })
   expect_true("tbl_df" %in% class(x))
   expect_true(nrow(x) != 0)
   vcr::use_cassette("get_instance_directory_noparse", {
-    x <- get_instance_directory(instance = "mastodon.social", limit = 3, parse = FALSE, token = fake_token)
+    x <- get_instance_directory(
+      instance = "mastodon.social",
+      limit = 3,
+      parse = FALSE,
+      token = fake_token
+    )
   })
   expect_false("tbl_df" %in% class(x))
   vcr::use_cassette("get_instance_directory_anonymous_false", {
-    x <- get_instance_directory(instance = "social.tchncs.de", anonymous = FALSE, limit = 3, token = fake_token)
+    x <- get_instance_directory(
+      instance = "social.tchncs.de",
+      anonymous = FALSE,
+      limit = 3,
+      token = fake_token
+    )
   })
   expect_true("tbl_df" %in% class(x))
   expect_true(nrow(x) != 0)
@@ -86,22 +122,26 @@ test_that("get_instance_trends", {
   expect_true(nrow(x) != 0)
   expect_true("tbl_df" %in% class(x))
   vcr::use_cassette("get_instance_trends_anonymous_false", {
-    x <- get_instance_trends(instance = "social.tchncs.de", anonymous = FALSE, token = fake_token)
+    x <- get_instance_trends(
+      instance = "social.tchncs.de",
+      anonymous = FALSE,
+      token = fake_token
+    )
   })
   expect_true(nrow(x) != 0)
   expect_true("tbl_df" %in% class(x))
 })
 
-test_that("get_instance_rules",{
-  vcr::use_cassette("get_instance_rules_default",{
+test_that("get_instance_rules", {
+  vcr::use_cassette("get_instance_rules_default", {
     x <- get_instance_rules(instance = "social.tchncs.de", anonymous = TRUE)
   })
   expect_true(nrow(x) != 0)
   expect_true("tbl_df" %in% class(x))
 })
 
-test_that("get_instance_blocks",{
-  vcr::use_cassette("get_instance_blocks_default",{
+test_that("get_instance_blocks", {
+  vcr::use_cassette("get_instance_blocks_default", {
     x <- get_instance_blocks(instance = "social.tchncs.de", anonymous = TRUE)
   })
   expect_true(nrow(x) != 0)
