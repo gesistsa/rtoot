@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# rtoot <img src="man/figures/logo.png" align="right"/>
+# rtoot <img src="man/figures/logo.png" align="right" alt="A hex logo showing a friendly cartoon mammoth with the caption 'rtoot'"/>
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/rtoot)](https://CRAN.R-project.org/package=rtoot)
