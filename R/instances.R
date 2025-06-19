@@ -12,7 +12,7 @@
 #' }
 get_fedi_instances <- function(token = NA, n = 20, ...) {
   if (is.na(token)) {
-    stop(
+    cli::cli_abort(
       "a token from https://instances.social/api/token is needed for this function (different from Mastodon)",
       call. = FALSE
     )
@@ -26,7 +26,7 @@ get_fedi_instances <- function(token = NA, n = 20, ...) {
   )
   status_code <- httr::status_code(request_results)
   if (!status_code %in% c(200)) {
-    stop(paste("something went wrong. Status code:", status_code))
+    cli::cli_abort(paste("something went wrong. Status code:", status_code))
   }
   tbl <- dplyr::bind_rows(httr::content(request_results)$instances)
   tbl[["info"]] <- NULL

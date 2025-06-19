@@ -41,7 +41,7 @@ rtoot <- function(
     anonymous = FALSE
 ) {
     if (missing(endpoint)) {
-        stop("Please provide an `endpoint`", call. = FALSE)
+        cli::cli_abort("Please provide an `endpoint`", call. = FALSE)
     }
     params <- c(list(...), params)
     make_get_request(
@@ -67,7 +67,7 @@ make_get_request <- function(
     ...
 ) {
     if (is.null(instance) && anonymous) {
-        stop("provide either an instance or a token", call. = FALSE)
+        cli::cli_abort("provide either an instance or a token", call. = FALSE)
     }
     if (is.null(instance)) {
         token <- check_token_rtoot(token)
@@ -82,7 +82,7 @@ make_get_request <- function(
     count <- 0
     while (TRUE) {
         if (count >= max_error) {
-            stop("Too many errors.")
+            cli::cli_abort("Too many errors.")
         }
         request_results <- httr::GET(
             httr::modify_url(url, path = path),
@@ -92,7 +92,7 @@ make_get_request <- function(
 
         status_code <- httr::status_code(request_results)
         if (!status_code %in% c(200, 429)) {
-            stop(
+            cli::cli_abort(
                 paste("Unable to make the request. Status Code: ", status_code),
                 call. = FALSE
             )
@@ -234,7 +234,7 @@ wait_until <- function(until, from = Sys.time(), verbose = TRUE) {
 
 rate_limit_remaining <- function(object) {
     if (is.null(attr(object, "headers"))) {
-        stop("no header information found")
+        cli::cli_abort("no header information found")
     }
     header <- attr(object, "headers")
     if (is.null(header[["rate_remaining"]])) {

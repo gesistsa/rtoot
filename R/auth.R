@@ -117,7 +117,7 @@ get_client <- function(instance = "mastodon.social") {
 create_token <- function(client, type = "public", browser = TRUE) {
     type <- match.arg(type, c("public", "user"))
     if (!inherits(client, "rtoot_client")) {
-        stop("client is not an object of type rtoot_client")
+        cli::cli_abort("client is not an object of type rtoot_client")
     }
     url <- prepare_url(client$instance)
     if (type == "public") {
@@ -187,7 +187,7 @@ create_token <- function(client, type = "public", browser = TRUE) {
 #' @export
 verify_credentials <- function(token, verbose = TRUE) {
     if (!is_auth_rtoot(token)) {
-        stop("token is not an object of type rtoot_bearer")
+        cli::cli_abort("token is not an object of type rtoot_bearer")
     }
     type <- token$type
     url <- prepare_url(token$instance)
@@ -208,7 +208,7 @@ verify_credentials <- function(token, verbose = TRUE) {
             httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
         )
     } else {
-        stop("unknown token type")
+        cli::cli_abort("unknown token type")
     }
     success <- isTRUE(acc[["status_code"]] == 200L)
     if (success) {
@@ -221,7 +221,7 @@ verify_credentials <- function(token, verbose = TRUE) {
             " is valid"
         )
     } else {
-        stop("Token not valid. Use auth_setup() to create a token")
+        cli::cli_abort("Token not valid. Use auth_setup() to create a token")
     }
     invisible(acc)
 }
@@ -240,7 +240,7 @@ verify_envvar <- function(verbose = TRUE) {
 #' @param path A path where the token is stored.
 save_auth_rtoot <- function(token, name = NULL, path = NULL) {
     if (!is_auth_rtoot(token)) {
-        stop("token is not an object of type rtoot_bearer")
+        cli::cli_abort("token is not an object of type rtoot_bearer")
     }
     if (is.null(path)) {
         path <- tools::R_user_dir("rtoot", "config")
@@ -301,7 +301,7 @@ get_token_from_envvar <- function(
     class(dummy) <- "rtoot_bearer"
     if (Sys.getenv(envvar) == "") {
         if (check_stop) {
-            stop("envvar not found.")
+            cli::cli_abort("envvar not found.")
         } else {
             ## warn the testers
             cli::cli_inform(
@@ -313,7 +313,7 @@ get_token_from_envvar <- function(
     res <- strsplit(x = Sys.getenv(envvar), split = ";")[[1]]
     if (length(res) != 3) {
         if (check_stop) {
-            stop("Your envvar is malformed")
+            cli::cli_abort("Your envvar is malformed")
         } else {
             return(NULL)
         }
@@ -373,7 +373,7 @@ check_token_rtoot <- function(token = NULL, verbose = TRUE) {
     if (isTRUE(selection == 1L)) {
         token <- auth_setup()
     } else if (isTRUE(selection == 2L)) {
-        stop("No token found. Please run auth_setup() to authenticate.")
+        cli::cli_abort("No token found. Please run auth_setup() to authenticate.")
     }
     invisible(token)
 }

@@ -94,7 +94,7 @@ upload_media_to_mastodon <- function(media, alt_text, token) {
         httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
     )
     if (httr::status_code(r) != 200) {
-        stop(paste0(
+        cli::cli_abort(paste0(
             "Error while uploading: ",
             media,
             ". Status Code:",
@@ -107,15 +107,15 @@ upload_media_to_mastodon <- function(media, alt_text, token) {
 
 check_media <- function(media, alt_text) {
     if (!is.character(media) || !is.character(alt_text)) {
-        stop("Media and alt_text must be character vectors.", call. = FALSE)
+        cli::cli_abort("Media and alt_text must be character vectors.", call. = FALSE)
     }
 
     if (!is.null(alt_text) && length(alt_text) != length(media)) {
-        stop("Alt text for media isn't provided for each image.", call. = TRUE)
+        cli::cli_abort("Alt text for media isn't provided for each image.", call. = TRUE)
     }
 
     if (any(nchar(alt_text) > 1000)) {
-        stop("Alt text cannot be longer than 1000 characters.", call. = TRUE)
+        cli::cli_abort("Alt text cannot be longer than 1000 characters.", call. = TRUE)
     }
 }
 

@@ -177,14 +177,14 @@ stream_toots <- function(
     ...
 ) {
     if (!is.numeric(timeout)) {
-        stop("timeout must be numeric", call. = FALSE)
+        cli::cli_abort("timeout must be numeric", call. = FALSE)
     }
     if (timeout < 0) {
-        stop("timeout must be greater equal 0", call. = FALSE)
+        cli::cli_abort("timeout must be greater equal 0", call. = FALSE)
     }
 
     if (is.null(instance) && anonymous) {
-        stop("provide either an instance or a token")
+        cli::cli_abort("provide either an instance or a token")
     }
     h <- curl::new_handle(verbose = FALSE)
     if (is.null(instance)) {
