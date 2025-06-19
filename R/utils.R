@@ -238,9 +238,8 @@ rate_limit_remaining <- function(object) {
     }
     header <- attr(object, "headers")
     if (is.null(header[["rate_remaining"]])) {
-        warning(
-            "no rate limit information found. Setting it to the default",
-            call. = FALSE
+        cli::cli_warn(
+            "no rate limit information found. Setting it to the default"
         )
         return(300)
     } else {
