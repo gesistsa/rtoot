@@ -11,8 +11,10 @@
 #' @export
 get_lists <- function(id = "", token = NULL, parse = TRUE) {
     process_request(
-        token = token, path = paste0("api/v1/lists/", id),
-        parse = parse, FUN = v(identity)
+        token = token,
+        path = paste0("api/v1/lists/", id),
+        parse = parse,
+        FUN = v(identity)
     )
 }
 
@@ -28,14 +30,20 @@ get_lists <- function(id = "", token = NULL, parse = TRUE) {
 #' post_list_create(title = "test")
 #' }
 #' @export
-post_list_create <- function(title, replies_policy = "list", token = NULL, verbose = TRUE) {
+post_list_create <- function(
+    title,
+    replies_policy = "list",
+    token = NULL,
+    verbose = TRUE
+) {
     token <- check_token_rtoot(token)
     replies_policy <- match.arg(replies_policy, c("followed", "list", "none"))
     path <- "/api/v1/lists/"
     params <- list(title = title, replies_policy = replies_policy)
 
     url <- prepare_url(token$instance)
-    r <- httr::POST(httr::modify_url(url = url, path = path),
+    r <- httr::POST(
+        httr::modify_url(url = url, path = path),
         body = params,
         httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
     )
@@ -58,14 +66,24 @@ post_list_create <- function(title, replies_policy = "list", token = NULL, verbo
 #' get_list_accounts(id = "test")
 #' }
 #' @export
-get_list_accounts <- function(id, limit = 40L, token = NULL, parse = TRUE,
-                              retryonratelimit = TRUE, verbose = TRUE) {
+get_list_accounts <- function(
+    id,
+    limit = 40L,
+    token = NULL,
+    parse = TRUE,
+    retryonratelimit = TRUE,
+    verbose = TRUE
+) {
     params <- handle_params(list(limit = min(limit, 40L)))
     process_request(
-        token = token, path = paste0("api/v1/lists/", id, "/accounts"),
+        token = token,
+        path = paste0("api/v1/lists/", id, "/accounts"),
         params = params,
-        parse = parse, FUN = v(parse_account), n = limit,
-        retryonratelimit = retryonratelimit, verbose = verbose
+        parse = parse,
+        FUN = v(parse_account),
+        n = limit,
+        retryonratelimit = retryonratelimit,
+        verbose = verbose
     )
 }
 
@@ -88,7 +106,8 @@ post_list_accounts <- function(id, account_ids, token = NULL, verbose = TRUE) {
     params <- ids_lst
 
     url <- prepare_url(token$instance)
-    r <- httr::POST(httr::modify_url(url = url, path = path),
+    r <- httr::POST(
+        httr::modify_url(url = url, path = path),
         body = params,
         httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
     )

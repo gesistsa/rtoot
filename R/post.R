@@ -31,7 +31,8 @@ post_toot <- function(
     visibility = "public",
     scheduled_at = NULL,
     language = NULL,
-    verbose = TRUE) {
+    verbose = TRUE
+) {
     token <- check_token_rtoot(token)
 
     stopifnot(is.character(status), length(status) == 1)
@@ -39,7 +40,11 @@ post_toot <- function(
         check_media(media, alt_text)
         media_id_string <- character(length(media))
         for (i in seq_along(media)) {
-            media_id_string[[i]] <- upload_media_to_mastodon(media[[i]], alt_text[[i]], token)
+            media_id_string[[i]] <- upload_media_to_mastodon(
+                media[[i]],
+                alt_text[[i]],
+                token
+            )
         }
         media_id_string <- lapply(media_id_string, identity) # paste(media_id_string, collapse = ",")
         names(media_id_string) <- rep("media_ids[]", length(media_id_string))
@@ -57,7 +62,10 @@ post_toot <- function(
     if (!is.null(spoiler_text)) {
         params[["spoiler_text"]] <- spoiler_text
     }
-    visibility <- match.arg(visibility, c("public", "unlisted", "private", "direct"))
+    visibility <- match.arg(
+        visibility,
+        c("public", "unlisted", "private", "direct")
+    )
     params[["visibility"]] <- visibility
     if (!is.null(scheduled_at)) {
         params[["scheduled_at"]] <- scheduled_at
@@ -66,7 +74,8 @@ post_toot <- function(
         params[["language"]] <- language
     }
     url <- prepare_url(token$instance)
-    r <- httr::POST(httr::modify_url(url = url, path = "api/v1/statuses"),
+    r <- httr::POST(
+        httr::modify_url(url = url, path = "api/v1/statuses"),
         body = params,
         httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
     )
@@ -79,12 +88,18 @@ post_toot <- function(
 upload_media_to_mastodon <- function(media, alt_text, token) {
     url <- prepare_url(token$instance)
     params <- list(file = httr::upload_file(media), description = alt_text)
-    r <- httr::POST(httr::modify_url(url = url, path = "api/v1/media"),
+    r <- httr::POST(
+        httr::modify_url(url = url, path = "api/v1/media"),
         body = params,
         httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
     )
     if (httr::status_code(r) != 200) {
-        stop(paste0("Error while uploading: ", media, ". Status Code:", httr::status_code(r)))
+        stop(paste0(
+            "Error while uploading: ",
+            media,
+            ". Status Code:",
+            httr::status_code(r)
+        ))
     }
 
     httr::content(r)$id
@@ -119,12 +134,28 @@ check_media <- function(media, alt_text) {
 #' post_user("xxxxxx", action = "unfollow")
 #' }
 #' @export
-post_user <- function(id, action = "follow", comment = "", token = NULL, verbose = TRUE) {
+post_user <- function(
+    id,
+    action = "follow",
+    comment = "",
+    token = NULL,
+    verbose = TRUE
+) {
     token <- check_token_rtoot(token)
-    action <- match.arg(action, c(
-        "follow", "unfollow", "block", "unblock",
-        "mute", "unmute", "pin", "unpin", "note"
-    ))
+    action <- match.arg(
+        action,
+        c(
+            "follow",
+            "unfollow",
+            "block",
+            "unblock",
+            "mute",
+            "unmute",
+            "pin",
+            "unpin",
+            "note"
+        )
+    )
     path <- paste0("/api/v1/accounts/", id, "/", action)
     if (action == "note") {
         params <- list(comment = comment)
@@ -133,7 +164,8 @@ post_user <- function(id, action = "follow", comment = "", token = NULL, verbose
     }
 
     url <- prepare_url(token$instance)
-    r <- httr::POST(httr::modify_url(url = url, path = path),
+    r <- httr::POST(
+        httr::modify_url(url = url, path = path),
         body = params,
         httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
     )
@@ -158,14 +190,30 @@ post_user <- function(id, action = "follow", comment = "", token = NULL, verbose
 #' post_status("xxxxxx", action = "unfavourite")
 #' }
 #' @export
-post_status <- function(id, action = "favourite", token = NULL, verbose = TRUE) {
+post_status <- function(
+    id,
+    action = "favourite",
+    token = NULL,
+    verbose = TRUE
+) {
     token <- check_token_rtoot(token)
-    action <- match.arg(action, c("unfavourite", "favourite", "reblog", "unreblog", "bookmark", "unbookmark"))
+    action <- match.arg(
+        action,
+        c(
+            "unfavourite",
+            "favourite",
+            "reblog",
+            "unreblog",
+            "bookmark",
+            "unbookmark"
+        )
+    )
     path <- paste0("/api/v1/statuses/", id, "/", action)
     params <- list()
 
     url <- prepare_url(token$instance)
-    r <- httr::POST(httr::modify_url(url = url, path = path),
+    r <- httr::POST(
+        httr::modify_url(url = url, path = path),
         body = params,
         httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
     )
