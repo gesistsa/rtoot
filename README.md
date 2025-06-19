@@ -39,7 +39,7 @@ install.packages("rtoot")
 You can install the development version of rtoot from GitHub:
 
 ``` r
-remotes::install_github("gesistsa/rtoot")
+pak::pak("gesistsa/rtoot")
 ```
 
 ## Authenticate
@@ -139,7 +139,7 @@ You can post toots with:
 post_toot(status = "my first rtoot #rstats")
 ```
 
-It can also include media and alt\_text.
+It can also include media and alt_text.
 
 ``` r
 post_toot(
