@@ -1,4 +1,34 @@
-empty <- tibble::tibble(id = NA_character_, uri = NA_character_, created_at = NA_character_, content = NA_character_, visibility = NA_character_, sensitive = NA, spoiler_text = NA_character_, reblogs_count = 0, favourites_count = 0, replies_count = 0, url = NA_character_, in_reply_to_id = NA_character_, in_reply_to_account_id = NA_character_, language = NA_character_, text = NA_character_, application = I(list(list())), poll = I(list(list())), card = I(list(list())), account = I(list(list())), reblog = I(list(list())), media_attachments = I(list(list())), mentions = I(list(list())), tags = I(list(list())), emojis = I(list(list())), favourited = NA, reblogged = NA, muted = NA, bookmarked = NA, pinned = NA)
+empty <- tibble::tibble(
+  id = NA_character_,
+  uri = NA_character_,
+  created_at = NA_character_,
+  content = NA_character_,
+  visibility = NA_character_,
+  sensitive = NA,
+  spoiler_text = NA_character_,
+  reblogs_count = 0,
+  favourites_count = 0,
+  replies_count = 0,
+  url = NA_character_,
+  in_reply_to_id = NA_character_,
+  in_reply_to_account_id = NA_character_,
+  language = NA_character_,
+  text = NA_character_,
+  application = I(list(list())),
+  poll = I(list(list())),
+  card = I(list(list())),
+  account = I(list(list())),
+  reblog = I(list(list())),
+  media_attachments = I(list(list())),
+  mentions = I(list(list())),
+  tags = I(list(list())),
+  emojis = I(list(list())),
+  favourited = NA,
+  reblogged = NA,
+  muted = NA,
+  bookmarked = NA,
+  pinned = NA
+)
 
 test_that("status is NULL", {
   expect_equal(parse_status(NULL), empty)
@@ -49,13 +79,18 @@ test_that("With and without personal fields", {
 
 test_that("parse_poll", {
   status <- readRDS("../testdata/status/poll.RDS")
-  empty_poll<- tibble::tibble(
-                         id = NA_character_, expires_at = NA_character_,
-                         expired = NA, multiple = NA,
-                         votes_count = NA, voters_count = NA,
-                         voted = NA, own_votes = I(list(list())),
-                         options = I(list(list())),
-                         emojis = I(list(list())))
+  empty_poll <- tibble::tibble(
+    id = NA_character_,
+    expires_at = NA_character_,
+    expired = NA,
+    multiple = NA,
+    votes_count = NA,
+    voters_count = NA,
+    voted = NA,
+    own_votes = I(list(list())),
+    options = I(list(list())),
+    emojis = I(list(list()))
+  )
   expect_equal(parse_poll(NULL), empty_poll)
   expect_true("tbl_df" %in% class(parse_status(NULL)))
   expect_error(parse_poll(status$poll), NA)
@@ -63,13 +98,18 @@ test_that("parse_poll", {
 })
 
 test_that("With and without poll", {
-  empty_poll<- tibble::tibble(
-                         id = NA_character_, expires_at = NA_character_,
-                         expired = NA, multiple = NA,
-                         votes_count = NA, voters_count = NA,
-                         voted = NA, own_votes = I(list(list())),
-                         options = I(list(list())),
-                         emojis = I(list(list())))
+  empty_poll <- tibble::tibble(
+    id = NA_character_,
+    expires_at = NA_character_,
+    expired = NA,
+    multiple = NA,
+    votes_count = NA,
+    voters_count = NA,
+    voted = NA,
+    own_votes = I(list(list())),
+    options = I(list(list())),
+    emojis = I(list(list()))
+  )
   status1 <- readRDS("../testdata/status/not_reblog.RDS")
   status2 <- readRDS("../testdata/status/poll.RDS")
   res1 <- parse_status(status1)
@@ -98,15 +138,23 @@ test_that("date parsing", {
 })
 
 test_that("poll parsing with own_votes, issue #115", {
-  poll <- list(id = "615", expires_at = "2022-11-27T11:06:56.000Z", expired = TRUE, 
-               multiple = TRUE, votes_count = 86L, voters_count = 84L, voted = TRUE, 
-               own_votes = list(0L), options = list(list(title = "mu4e", 
-                                                         votes_count = 50L),
-                                                    list(title = "notmuch", votes_count = 20L), 
-                                                    list(title = "gnus", votes_count = 13L),
-                                                    list(title = "other (please comment)", 
-                                                         votes_count = 3L)),
-               emojis = list())
+  poll <- list(
+    id = "615",
+    expires_at = "2022-11-27T11:06:56.000Z",
+    expired = TRUE,
+    multiple = TRUE,
+    votes_count = 86L,
+    voters_count = 84L,
+    voted = TRUE,
+    own_votes = list(0L),
+    options = list(
+      list(title = "mu4e", votes_count = 50L),
+      list(title = "notmuch", votes_count = 20L),
+      list(title = "gnus", votes_count = 13L),
+      list(title = "other (please comment)", votes_count = 3L)
+    ),
+    emojis = list()
+  )
   expect_error(parse_poll(poll), NA)
   poll$own_votes <- list()
   expect_error(parse_poll(poll), NA)

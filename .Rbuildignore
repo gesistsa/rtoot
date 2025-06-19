@@ -23,3 +23,5 @@ codecov.yml
 ^\.quarto$
 ^methodshub
 ^.binder$
+^[\.]?air\.toml$
+^\.vscode$

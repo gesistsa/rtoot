@@ -1,21 +1,26 @@
 Package: rtoot
 Title: Collecting and Analyzing Mastodon Data
 Version: 0.3.5.9000
-Authors@R: 
-    c(person("David", "Schoch", , "david@schochastics.net", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-2952-4812")),
-      person("Chung-hong", "Chan", ,"chainsawtiney@gmail.com", role = c("aut"), comment = c(ORCID = "0000-0002-6232-7530")),
-      person("Johannes", "Gruber", ,"JohannesB.Gruber@gmail.com", role = c("ctb"), comment = c(ORCID = "0000-0001-9177-1772")),
-      person("Tim", "Schatto-Eckrodt", ,"kudusch@posteo.de", role = c("ctb"), comment = c(ORCID = "0000-0003-1658-4373")))
-Description: An implementation of calls designed to collect and organize Mastodon data via its Application Program Interfaces (API), which can be found at the following URL: <https://docs.joinmastodon.org/>.
+Authors@R: c(
+    person("David", "Schoch", , "david@schochastics.net", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0003-2952-4812")),
+    person("Chung-hong", "Chan", , "chainsawtiney@gmail.com", role = "aut",
+           comment = c(ORCID = "0000-0002-6232-7530")),
+    person("Johannes", "Gruber", , "JohannesB.Gruber@gmail.com", role = "ctb",
+           comment = c(ORCID = "0000-0001-9177-1772")),
+    person("Tim", "Schatto-Eckrodt", , "kudusch@posteo.de", role = "ctb",
+           comment = c(ORCID = "0000-0003-1658-4373"))
+  )
+Description: An implementation of calls designed to collect and organize
+    Mastodon data via its Application Program Interfaces (API), which can
+    be found at the following URL: <https://docs.joinmastodon.org/>.
 License: MIT + file LICENSE
 URL: https://gesistsa.github.io/rtoot/, https://github.com/gesistsa/rtoot/
 BugReports: https://github.com/gesistsa/rtoot/issues
-Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2
 Depends:
     R (>= 3.6)
 Imports: 
+    cli,
     clipr,
     curl,
     dplyr,
@@ -26,8 +31,12 @@ Imports:
 Suggests: 
     knitr,
     rmarkdown,
-    testthat (>= 3.0.0),
     rstudioapi,
+    testthat (>= 3.0.0),
     vcr (>= 0.6.0)
-VignetteBuilder: knitr
+VignetteBuilder: 
+    knitr
 Config/testthat/edition: 3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2

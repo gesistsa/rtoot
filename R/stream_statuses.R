@@ -44,7 +44,8 @@ stream_timeline_public <- function(
     instance = NULL,
     token = NULL,
     anonymous = FALSE,
-    verbose = TRUE) {
+    verbose = TRUE
+) {
     path <- "/api/v1/streaming/public"
     if (isTRUE(local)) {
         path <- paste0(path, "/local")
@@ -53,8 +54,14 @@ stream_timeline_public <- function(
 
     quiet_interrupt(
         stream_toots(
-            timeout = timeout, file_name = file_name, append = append, token = token,
-            path = path, params = params, instance = instance, anonymous = anonymous,
+            timeout = timeout,
+            file_name = file_name,
+            append = append,
+            token = token,
+            path = path,
+            params = params,
+            instance = instance,
+            anonymous = anonymous,
             verbose = verbose
         )
     )
@@ -72,7 +79,8 @@ stream_timeline_hashtag <- function(
     instance = NULL,
     token = NULL,
     anonymous = FALSE,
-    verbose = TRUE) {
+    verbose = TRUE
+) {
     path <- "/api/v1/streaming/hashtag"
     if (isTRUE(local)) {
         path <- paste0(path, "/local")
@@ -81,8 +89,14 @@ stream_timeline_hashtag <- function(
 
     quiet_interrupt(
         stream_toots(
-            timeout = timeout, file_name = file_name, append = append, token = token,
-            path = path, params = params, instance = instance, anonymous = anonymous,
+            timeout = timeout,
+            file_name = file_name,
+            append = append,
+            token = token,
+            path = path,
+            params = params,
+            instance = instance,
+            anonymous = anonymous,
             verbose = verbose
         )
     )
@@ -99,14 +113,21 @@ stream_timeline_list <- function(
     instance = NULL,
     token = NULL,
     anonymous = FALSE,
-    verbose = TRUE) {
+    verbose = TRUE
+) {
     path <- "api/v1/streaming/list"
     params <- list(list = list_id)
 
     quiet_interrupt(
         stream_toots(
-            timeout = timeout, file_name = file_name, append = append, token = token,
-            path = path, params = params, instance = instance, anonymous = anonymous,
+            timeout = timeout,
+            file_name = file_name,
+            append = append,
+            token = token,
+            path = path,
+            params = params,
+            instance = instance,
+            anonymous = anonymous,
             verbose = verbose
         )
     )
@@ -132,7 +153,9 @@ parse_stream <- function(path) {
     if (length(json) == 0) {
         return(tibble::tibble())
     }
-    tbl <- dplyr::bind_rows(lapply(json, function(x) parse_status(jsonlite::fromJSON(x))))
+    tbl <- dplyr::bind_rows(lapply(json, function(x) {
+        parse_status(jsonlite::fromJSON(x))
+    }))
     tbl[order(tbl[["created_at"]]), ]
 }
 
@@ -141,19 +164,36 @@ validate_stream <- function(txt) {
     txt[json_validated]
 }
 
-stream_toots <- function(timeout, file_name = NULL, append, token, path, params,
-                         instance = NULL, anonymous = FALSE, verbose = TRUE, ...) {
-    if (!is.numeric(timeout)) stop("timeout must be numeric", call. = FALSE)
-    if (timeout < 0) stop("timeout must be greater equal 0", call. = FALSE)
+stream_toots <- function(
+    timeout,
+    file_name = NULL,
+    append,
+    token,
+    path,
+    params,
+    instance = NULL,
+    anonymous = FALSE,
+    verbose = TRUE,
+    ...
+) {
+    if (!is.numeric(timeout)) {
+        cli::cli_abort("timeout must be numeric", call. = FALSE)
+    }
+    if (timeout < 0) {
+        cli::cli_abort("timeout must be greater equal 0", call. = FALSE)
+    }
 
     if (is.null(instance) && anonymous) {
-        stop("provide either an instance or a token")
+        cli::cli_abort("provide either an instance or a token")
     }
     h <- curl::new_handle(verbose = FALSE)
     if (is.null(instance)) {
         token <- check_token_rtoot(token)
         url <- prepare_url(token$instance)
-        curl::handle_setheaders(h, "Authorization" = paste0("Bearer ", token$bearer))
+        curl::handle_setheaders(
+            h,
+            "Authorization" = paste0("Bearer ", token$bearer)
+        )
     } else {
         url <- prepare_url(instance)
     }

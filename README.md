@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# rtoot <img src="man/figures/logo.png" align="right"/>
+# rtoot <img src="man/figures/logo.png" align="right" alt="A hex logo showing a friendly cartoon mammoth with the caption 'rtoot'"/>
 
 <!-- badges: start -->
 
@@ -39,7 +39,7 @@ install.packages("rtoot")
 You can install the development version of rtoot from GitHub:
 
 ``` r
-remotes::install_github("gesistsa/rtoot")
+pak::pak("gesistsa/rtoot")
 ```
 
 ## Authenticate
@@ -139,7 +139,7 @@ You can post toots with:
 post_toot(status = "my first rtoot #rstats")
 ```
 
-It can also include media and alt\_text.
+It can also include media and alt_text.
 
 ``` r
 post_toot(

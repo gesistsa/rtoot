@@ -23,13 +23,28 @@ envvar_token <- list(bearer = gen_random_token())
 envvar_token$type <- "user"
 envvar_token$instance <- "envvar_token"
 class(envvar_token) <- "rtoot_bearer"
-envvar_string <- strsplit(convert_token_to_envvar(envvar_token, clipboard = FALSE, verbose = FALSE), "\"")[[1]][2]
+envvar_string <- strsplit(
+  convert_token_to_envvar(envvar_token, clipboard = FALSE, verbose = FALSE),
+  "\""
+)[[1]][2]
 
 test_that("seven conditions", {
   skip_if(!file.exists(saved_token_path))
   ## don't test the all FALSE condition; see below
-  condition <- tibble::tibble(expand.grid(token = c(TRUE, FALSE), envvar = c(TRUE, FALSE), rds = c(TRUE, FALSE)))[1:7, ]
-  expect_outcome <- list(fake_token, envvar_token, fake_token, saved_token, fake_token, envvar_token, fake_token)
+  condition <- tibble::tibble(expand.grid(
+    token = c(TRUE, FALSE),
+    envvar = c(TRUE, FALSE),
+    rds = c(TRUE, FALSE)
+  ))[1:7, ]
+  expect_outcome <- list(
+    fake_token,
+    envvar_token,
+    fake_token,
+    saved_token,
+    fake_token,
+    envvar_token,
+    fake_token
+  )
   for (i in sample(seq_len(nrow(condition)))) {
     if (isTRUE(condition$token[i])) {
       token <- fake_token
@@ -69,10 +84,13 @@ test_that("cheatmode", {
 test_that("cheatmode, invalid_token", {
   skip_on_cran()
   options("rtoot_cheatcode" = "uuddlrlrba")
-  options("rtoot_cheat_answer" = 2)  
+  options("rtoot_cheat_answer" = 2)
   expect_error(x <- check_token_rtoot(token = iris, verbose = FALSE))
   output <- capture_message(check_token_rtoot(token = iris, verbose = TRUE))
-  expect_true(grepl("Your token is invalid. Do you want to authenticate now?", output))
+  expect_true(grepl(
+    "Your token is invalid. Do you want to authenticate now?",
+    output
+  ))
   options("rtoot_cheatcode" = NULL)
   options("rtoot_cheat_answer" = NULL)
 })
@@ -87,7 +105,10 @@ test_that("cheatmode, file doesn't exist", {
   Sys.setenv(RTOOT_DEFAULT_TOKEN = "")
   expect_error(x <- check_token_rtoot(verbose = FALSE))
   output <- capture_message(check_token_rtoot(verbose = TRUE))
-  expect_true(grepl("This seems to be the first time you are using rtoot. Do you want to authenticate now?", output))
+  expect_true(grepl(
+    "This seems to be the first time you are using rtoot. Do you want to authenticate now?",
+    output
+  ))
   options("rtoot_cheatcode" = NULL)
   options("rtoot_cheat_answer" = NULL)
 })
@@ -101,9 +122,12 @@ test_that("cheatmode, nothing in ~/.config/R/rtoot/", {
   Sys.setenv(RTOOT_DEFAULT_TOKEN = "")
   expect_error(x <- check_token_rtoot(verbose = FALSE))
   output <- capture_message(check_token_rtoot())
-  expect_true(grepl("This seems to be the first time you are using rtoot. Do you want to authenticate now?", output))
+  expect_true(grepl(
+    "This seems to be the first time you are using rtoot. Do you want to authenticate now?",
+    output
+  ))
   options("rtoot_cheatcode" = NULL)
-  options("rtoot_cheat_answer" = NULL)  
+  options("rtoot_cheat_answer" = NULL)
 })
 
 test_that("A valid token in ~/.config/R/rtoot/", {
@@ -118,7 +142,10 @@ test_that("A valid token in ~/.config/R/rtoot/", {
   saved_token2$instance <- "saved_token"
   class(saved_token2) <- "rtoot_bearer"
   save_auth_rtoot(saved_token2, "rtoot_test")
-  expect_true(file.exists(file.path(tools::R_user_dir("rtoot", "config"), "rtoot_test.rds")))
+  expect_true(file.exists(file.path(
+    tools::R_user_dir("rtoot", "config"),
+    "rtoot_test.rds"
+  )))
   expect_true(is.null(options("rtoot_token")$rtoot_token))
   expect_equal(saved_token2, check_token_rtoot(verbose = FALSE))
   expect_false(is.null(options("rtoot_token")$rtoot_token))
@@ -146,7 +173,6 @@ test_that("A valid token in ~/.config/R/rtoot/", {
 ##   expect_true(is.null(options("rtoot_token")$rtoot_token)) ## shouldn't change
 ##   unlink(file.path(tools::R_user_dir("rtoot", "config"), "rtoot_test.rds"))
 ## })
-
 
 ## tear down
 

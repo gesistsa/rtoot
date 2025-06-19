@@ -4,7 +4,10 @@
 ## get_account_favourites, get_account_blocks,
 ## get_account_mutes
 
-fake_token <- rtoot:::get_token_from_envvar("RTOOT_DEFAULT_TOKEN", check_stop = FALSE)
+fake_token <- rtoot:::get_token_from_envvar(
+  "RTOOT_DEFAULT_TOKEN",
+  check_stop = FALSE
+)
 fake_token$type <- "user"
 fake_token$instance <- "social.tchncs.de"
 
@@ -19,7 +22,12 @@ test_that("get_account_followers", {
   expect_true("tbl_df" %in% class(x))
   expect_true(nrow(x) != 0)
   vcr::use_cassette("get_account_followers_noparse", {
-    x <- get_account_followers(id = id, limit = 3, parse = FALSE, token = fake_token)
+    x <- get_account_followers(
+      id = id,
+      limit = 3,
+      parse = FALSE,
+      token = fake_token
+    )
   })
   expect_false("tbl_df" %in% class(x))
 })
@@ -31,7 +39,12 @@ test_that("get_account_following", {
   expect_true("tbl_df" %in% class(x))
   expect_true(nrow(x) != 0)
   vcr::use_cassette("get_account_following_noparse", {
-    x <- get_account_following(id = id, limit = 3, parse = FALSE, token = fake_token)
+    x <- get_account_following(
+      id = id,
+      limit = 3,
+      parse = FALSE,
+      token = fake_token
+    )
   })
   expect_false("tbl_df" %in% class(x))
 })

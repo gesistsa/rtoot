@@ -1,4 +1,7 @@
-fake_token <- rtoot:::get_token_from_envvar("RTOOT_DEFAULT_TOKEN", check_stop = FALSE)
+fake_token <- rtoot:::get_token_from_envvar(
+  "RTOOT_DEFAULT_TOKEN",
+  check_stop = FALSE
+)
 fake_token$type <- "user"
 fake_token$instance <- "social.tchncs.de"
 
@@ -22,7 +25,12 @@ test_that("get_poll", {
   expect_true("tbl_df" %in% class(x))
   vcr::use_cassette("get_poll_anonymous", {
     id <- "286799"
-    x <- get_poll(id = id, instance = "mastodon.social", anonymous = TRUE, token = fake_token)
+    x <- get_poll(
+      id = id,
+      instance = "mastodon.social",
+      anonymous = TRUE,
+      token = fake_token
+    )
   })
   expect_equal(x$id, id)
   expect_true("tbl_df" %in% class(x))

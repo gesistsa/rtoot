@@ -21,8 +21,26 @@ parse_status <- function(status, parse_date = TRUE) {
     if (is.null(status)) {
         output <- empty
     } else {
-        singular_fields <- c("id", "uri", "created_at", "content", "visibility", "sensitive", "spoiler_text", "reblogs_count", "favourites_count", "replies_count", "url", "in_reply_to_id", "in_reply_to_account_id", "language", "text")
-        singular_list <- lapply(status[singular_fields], function(x) ifelse(is.null(x), NA, x))
+        singular_fields <- c(
+            "id",
+            "uri",
+            "created_at",
+            "content",
+            "visibility",
+            "sensitive",
+            "spoiler_text",
+            "reblogs_count",
+            "favourites_count",
+            "replies_count",
+            "url",
+            "in_reply_to_id",
+            "in_reply_to_account_id",
+            "language",
+            "text"
+        )
+        singular_list <- lapply(status[singular_fields], function(x) {
+            ifelse(is.null(x), NA, x)
+        })
         names(singular_list) <- singular_fields
         output <- tibble::as_tibble(singular_list)
         if (parse_date) {
@@ -32,7 +50,8 @@ parse_status <- function(status, parse_date = TRUE) {
             output[[field]] <- I(list(list()))
             if (has_name_(status, field)) {
                 if (!is.null(status[[field]])) {
-                    if (field != "poll") { ## haskish for now
+                    if (field != "poll") {
+                        ## haskish for now
                         output[[field]][[1]] <- status[[field]]
                     } else {
                         output[[field]] <- list(parse_poll(status[[field]]))
@@ -54,7 +73,13 @@ parse_status <- function(status, parse_date = TRUE) {
                 output[[field]] <- I(list(list()))
             }
         }
-        for (field in c("favourited", "reblogged", "muted", "bookmarked", "pinned")) {
+        for (field in c(
+            "favourited",
+            "reblogged",
+            "muted",
+            "bookmarked",
+            "pinned"
+        )) {
             output[[field]] <- NA
             if (has_name_(status, field)) {
                 if (!is.null(status[[field]])) {
@@ -72,12 +97,29 @@ parse_account <- function(account, parse_date = TRUE) {
         output <- empty
     } else {
         singular_fields <- c(
-            "id", "username", "acct", "display_name", "locked", "bot",
-            "discoverable", "group", "created_at", "note", "url", "avatar",
-            "avatar_static", "header", "header_static", "followers_count",
-            "following_count", "statuses_count", "last_status_at"
+            "id",
+            "username",
+            "acct",
+            "display_name",
+            "locked",
+            "bot",
+            "discoverable",
+            "group",
+            "created_at",
+            "note",
+            "url",
+            "avatar",
+            "avatar_static",
+            "header",
+            "header_static",
+            "followers_count",
+            "following_count",
+            "statuses_count",
+            "last_status_at"
         )
-        singular_list <- lapply(account[singular_fields], function(x) ifelse(is.null(x), NA, x))
+        singular_list <- lapply(account[singular_fields], function(x) {
+            ifelse(is.null(x), NA, x)
+        })
         names(singular_list) <- singular_fields
         output <- tibble::as_tibble(singular_list)
         if (parse_date) {
@@ -98,18 +140,32 @@ parse_account <- function(account, parse_date = TRUE) {
 ## https://docs.joinmastodon.org/entities/poll/
 parse_poll <- function(poll, parse_date = TRUE) {
     empty <- tibble::tibble(
-        id = NA_character_, expires_at = NA_character_,
-        expired = NA, multiple = NA,
-        votes_count = NA, voters_count = NA,
-        voted = NA, own_votes = I(list(list())),
+        id = NA_character_,
+        expires_at = NA_character_,
+        expired = NA,
+        multiple = NA,
+        votes_count = NA,
+        voters_count = NA,
+        voted = NA,
+        own_votes = I(list(list())),
         options = I(list(list())),
         emojis = I(list(list()))
     )
     if (is.null(poll)) {
         output <- empty
     } else {
-        singular_fields <- c("id", "expires_at", "expired", "multiple", "votes_count", "voters_count", "voted")
-        singular_list <- lapply(poll[singular_fields], function(x) ifelse(is.null(x), NA, x))
+        singular_fields <- c(
+            "id",
+            "expires_at",
+            "expired",
+            "multiple",
+            "votes_count",
+            "voters_count",
+            "voted"
+        )
+        singular_list <- lapply(poll[singular_fields], function(x) {
+            ifelse(is.null(x), NA, x)
+        })
         names(singular_list) <- singular_fields
         output <- tibble::tibble(as.data.frame(singular_list))
         if (parse_date) {
@@ -132,7 +188,13 @@ parse_poll <- function(poll, parse_date = TRUE) {
 
 parse_context <- function(output) {
     temp_output <- list()
-    temp_output$ancestors <- dplyr::bind_rows(lapply(output$ancestors, parse_status))
-    temp_output$descendants <- dplyr::bind_rows(lapply(output$descendants, parse_status))
+    temp_output$ancestors <- dplyr::bind_rows(lapply(
+        output$ancestors,
+        parse_status
+    ))
+    temp_output$descendants <- dplyr::bind_rows(lapply(
+        output$descendants,
+        parse_status
+    ))
     temp_output
 }
