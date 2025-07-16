@@ -223,3 +223,51 @@ post_status <- function(
     }
     invisible(r)
 }
+
+#' Post a thread
+#'
+#' Create a thread of your messages.
+#' @inheritParams post_toot
+#' @returns A character vector with the ids of the toots posted.
+#' @export
+#' @examples
+#' \dontrun{
+#' pt <- post_thread(visibility = "direct")
+#' }
+post_thread <- function(
+    status = c("my first rtoot #rstats", "my first thread with rtoot"),
+    # media = NULL,
+    # alt_text = NULL,
+    token = NULL,
+    sensitive = FALSE,
+    spoiler_text = NULL,
+    visibility = "public",
+    scheduled_at = NULL,
+    language = NULL,
+    verbose = TRUE
+) {
+    token <- check_token_rtoot(token)
+    if (!is.character(status)) {
+        cli::cli_abort("`status` must be a string, it is a {typeof(status)}.")
+    }
+    toot_id <- NULL
+    ids <- vector("character", length = length(status))
+    for (msg_i in seq_along(status)) {
+        toot <- post_toot(status[msg_i],
+                          in_reply_to_id = toot_id,
+                          token = token,
+                          sensitive = sensitive,
+                          spoiler_text = spoiler_text,
+                          visibility = visibility,
+                          scheduled_at = scheduled_at,
+                          language = language,
+                          verbose = FALSE)
+        resp <- httr::content(toot)
+        ids[msg_i] <- resp$id
+        toot_id <- ids[msg_i]
+    }
+    if (sum(!nzchar(ids)) == length(status)) {
+        sayif(verbose, "Your thread has been posted")
+    }
+    invisible(ids)
+}
