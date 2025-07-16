@@ -9,7 +9,9 @@ Authors@R: c(
     person("Johannes", "Gruber", , "JohannesB.Gruber@gmail.com", role = "ctb",
            comment = c(ORCID = "0000-0001-9177-1772")),
     person("Tim", "Schatto-Eckrodt", , "kudusch@posteo.de", role = "ctb",
-           comment = c(ORCID = "0000-0003-1658-4373"))
+           comment = c(ORCID = "0000-0003-1658-4373")),
+    person("Lluís", "Revilla Sancho", , "lluis.revilla@gmail.com", role = c("aut"),
+           comment = c(ORCID = "0000-0001-9747-2570"))
   )
 Description: An implementation of calls designed to collect and organize
     Mastodon data via its Application Program Interfaces (API), which can
