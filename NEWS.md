@@ -1,6 +1,7 @@
 # rtoot 0.3.5.9000
 
 * added better error messages when media upload fails  (#160)
+* fixed #172 added experimental feature of posting threads (#173) by @llrs
 
 # rtoot 0.3.5
 
