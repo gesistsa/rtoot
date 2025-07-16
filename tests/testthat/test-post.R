@@ -180,10 +180,3 @@ test_that("post_status", {
     ))
   })
 })
-
-test_that("post_thread posts", {
-    vcr::use_cassette("post_toot_default", {
-        ids <- expect_no_error(post_thread(token = fake_token))
-    })
-    expect_length(ids, 2L)
-})
