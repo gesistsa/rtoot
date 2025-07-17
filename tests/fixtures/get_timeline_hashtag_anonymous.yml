@@ -1,156 +1,183 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://mastodon.social/api/v1/timelines/tag/ichbinhanna?local=FALSE&only_media=FALSE&limit=5
+    uri: https://mastodon.social/api/v1/timelines/tag/rstats?local=FALSE&only_media=FALSE&limit=5
   response:
     status: 200
     headers:
-      x-ratelimit-reset: '2025-07-17T13:45:00.269778Z'
+      x-ratelimit-reset: '2025-07-17T20:05:00.290188Z'
       x-content-type-options: nosniff
       cache-control: max-age=15, public, stale-while-revalidate=30, stale-if-error=86400
-      x-runtime: '0.099448'
+      x-runtime: '0.299966'
       referrer-policy: same-origin
-      x-ratelimit-remaining: '294'
-      x-request-id: 612b81c5af87edb2467aebf45f56b3da
-      link: <https://mastodon.social/api/v1/timelines/tag/ichbinhanna?limit=5&local=FALSE&max_id=114829638264418505&only_media=FALSE>;
-        rel="next", <https://mastodon.social/api/v1/timelines/tag/ichbinhanna?limit=5&local=FALSE&min_id=114856169736898681&only_media=FALSE>;
+      x-ratelimit-remaining: '299'
+      x-request-id: 7eb43c666da5184e972255ccbd32d4e0
+      link: <https://mastodon.social/api/v1/timelines/tag/rstats?limit=5&local=FALSE&max_id=114869144089828147&only_media=FALSE>;
+        rel="next", <https://mastodon.social/api/v1/timelines/tag/rstats?limit=5&local=FALSE&min_id=114870142396314555&only_media=FALSE>;
         rel="prev"
       content-type: application/json; charset=utf-8
       x-frame-options: DENY
       x-ratelimit-limit: '300'
       x-xss-protection: '0'
       via: 1.1 varnish, 1.1 varnish
-      etag: W/"b53380ce7519b0678f37aed62918186b"
+      etag: W/"7a76abe33ad1eba2ed3e60d08342bbd8"
       content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
         'none'
       content-encoding: gzip
       accept-ranges: bytes
-      date: Thu, 17 Jul 2025 13:44:14 GMT
+      date: Thu, 17 Jul 2025 20:02:58 GMT
       age: '0'
-      x-served-by: cache-fra-eddf8230024-FRA, cache-fra-etou8220045-FRA
+      x-served-by: cache-fra-etou8220053-FRA, cache-fra-etou8220152-FRA
       x-cache: MISS, HIT
       x-cache-hits: 0, 1
-      x-timer: S1752759854.431727,VS0,VE2
+      x-timer: S1752782579.708925,VS0,VE1
       vary: Authorization, Origin, Accept-Encoding
       strict-transport-security: max-age=31557600
       alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
-      content-length: '4970'
+      content-length: '5340'
     body:
-      string: "[{\"id\":\"114856169736898681\",\"created_at\":\"2025-07-15T07:54:23.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://mstdn.science/users/laborjournal/statuses/114856169522394793\",\"url\":\"https://mstdn.science/@laborjournal/114856169522394793\",\"replies_count\":0,\"reblogs_count\":2,\"favourites_count\":1,\"edited_at\":\"2025-07-15T07:55:30.000Z\",\"content\":\"\\u003cp\\u003eUnser
-        Heft 7-8/2025 ist raus!\\u003c/p\\u003e\\u003cp\\u003eWie jeden Sommer mit
-        starken Meinungen in eingeladenen Essays und Interviews – unter anderem zu:\\u003c/p\\u003e\\u003cp\\u003e-
-        \\u003ca href=\\\"https://mstdn.science/tags/Wissenschaftsfreiheit\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eWissenschaftsfreiheit\\u003c/span\\u003e\\u003c/a\\u003e;\\u003cbr\\u003e-
-        \\u003ca href=\\\"https://mstdn.science/tags/WissenschaftlicheIntegrit%C3%A4t\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eWissenschaftlicheIntegrität\\u003c/span\\u003e\\u003c/a\\u003e;\\u003cbr\\u003e-
-        \\u003ca href=\\\"https://mstdn.science/tags/Tierversuche\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eTierversuche\\u003c/span\\u003e\\u003c/a\\u003e;\\u003cbr\\u003e-
-        \\u003ca href=\\\"https://mstdn.science/tags/K%C3%BCnstlicheIntelligenz\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eKünstlicheIntelligenz\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr\\u003e-
-        \\u003ca href=\\\"https://mstdn.science/tags/IchBinHanna\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eIchBinHanna\\u003c/span\\u003e\\u003c/a\\u003e;\\u003cbr\\u003e-
-        \\u003ca href=\\\"https://mstdn.science/tags/Evaluation\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eEvaluation\\u003c/span\\u003e\\u003c/a\\u003e;\\u003cbr\\u003e-
-        \\u003ca href=\\\"https://mstdn.science/tags/Startups\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eStartups\\u003c/span\\u003e\\u003c/a\\u003e;\\u003cbr\\u003e-
-        …\\u003c/p\\u003e\\u003cp\\u003eDas ganze Heft online: \\u003ca href=\\\"https://www.laborjournal.de/rubric/aktuell/index.php\\\"
+      string: "[{\"id\":\"114870142396314555\",\"created_at\":\"2025-07-17T19:07:48.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://rstats.me/users/simonpcouch/statuses/114870142137562212\",\"url\":\"https://rstats.me/@simonpcouch/114870142137562212\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eAfter
+        a month or so of not using Claude Code much to write R code, I recently returned
+        to using the tool most days. Giving coding assistants the ability to peruse
+        \\u003ca href=\\\"https://rstats.me/tags/rstats\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003erstats\\u003c/span\\u003e\\u003c/a\\u003e
+        package documentation via MCP is so, so helpful: \\u003ca href=\\\"https://www.simonpcouch.com/blog/2025-07-17-claude-code-2/\\\"
         rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003elaborjournal.de/rubric/aktuell\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e/index.php\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"account\":{\"id\":\"109292285345820172\",\"username\":\"laborjournal\",\"acct\":\"laborjournal@mstdn.science\",\"display_name\":\"Laborjournal\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-05T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eFachmagazin
-        für Life-Science-Forschung\\u003c/p\\u003e\",\"url\":\"https://mstdn.science/@laborjournal\",\"uri\":\"https://mstdn.science/users/laborjournal\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/292/285/345/820/172/original/e46679fb99bbc646.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/292/285/345/820/172/original/e46679fb99bbc646.png\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/292/285/345/820/172/original/ec3da787be7abb7c.png\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/292/285/345/820/172/original/ec3da787be7abb7c.png\",\"followers_count\":785,\"following_count\":337,\"statuses_count\":1137,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Website\",\"value\":\"\\u003ca
-        href=\\\"https://www.laborjournal.de/\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003elaborjournal.de/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Blog\",\"value\":\"\\u003ca
-        href=\\\"https://www.laborjournal.de/blog/\\\" rel=\\\"nofollow noopener\\\"
-        translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003elaborjournal.de/blog/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Twitter\",\"value\":\"\\u003ca
-        href=\\\"https://twitter.com/Lab_Journal\\\" rel=\\\"nofollow noopener\\\"
-        translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003etwitter.com/Lab_Journal\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[{\"id\":\"114856169696149832\",\"type\":\"image\",\"url\":\"https://files.mastodon.social/cache/media_attachments/files/114/856/169/696/149/832/original/723a7fceea9e9013.jpg\",\"preview_url\":\"https://files.mastodon.social/cache/media_attachments/files/114/856/169/696/149/832/small/723a7fceea9e9013.jpg\",\"remote_url\":\"https://static.mstdn.science/media_attachments/files/114/856/168/438/565/884/original/edd3beedbfd03b29.jpg\",\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"focus\":{\"x\":0.0,\"y\":0.0},\"original\":{\"width\":898,\"height\":1274,\"size\":\"898x1274\",\"aspect\":0.7048665620094191},\"small\":{\"width\":403,\"height\":572,\"size\":\"403x572\",\"aspect\":0.7045454545454546}},\"description\":\"Titelblatt
-        der neuen Laborjournal-Ausgabe 7-8/2025: Vintage-Bild einer jungen Forscherin,
-        die auf einem alten Labortisch voller Flüssigkeits-gefüllter Flaschen etwas
-        mit Stift ins Laborbuch schreibt. Darin Dachzeile und Überschrift \\\"Essays
-        und Interviews: Sagen, was ist\\\". Ganz unten in drei roten Kästen nebeneinander
-        Ankündigungen von drei weiteren Artikelthemen des abgebildeten Hefts.\",\"blurhash\":\"UGDSdr4UMKX83CZ$s.OE{fxZXls:BnR*SNw^\"}],\"mentions\":[],\"tags\":[{\"name\":\"wissenschaftsfreiheit\",\"url\":\"https://mastodon.social/tags/wissenschaftsfreiheit\"},{\"name\":\"wissenschaftlicheintegritat\",\"url\":\"https://mastodon.social/tags/wissenschaftlicheintegritat\"},{\"name\":\"tierversuche\",\"url\":\"https://mastodon.social/tags/tierversuche\"},{\"name\":\"kunstlicheintelligenz\",\"url\":\"https://mastodon.social/tags/kunstlicheintelligenz\"},{\"name\":\"IchbinHanna\",\"url\":\"https://mastodon.social/tags/IchbinHanna\"},{\"name\":\"evaluation\",\"url\":\"https://mastodon.social/tags/evaluation\"},{\"name\":\"startups\",\"url\":\"https://mastodon.social/tags/startups\"}],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114851091348171501\",\"created_at\":\"2025-07-14T10:22:56.515Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://mastodon.social/users/AKellerGEW/statuses/114851091348171501\",\"url\":\"https://mastodon.social/@AKellerGEW/114851091348171501\",\"replies_count\":1,\"reblogs_count\":4,\"favourites_count\":2,\"edited_at\":null,\"content\":\"\\u003cp\\u003eDie
-        \\u003ca href=\\\"https://mastodon.social/tags/GEW\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eGEW\\u003c/span\\u003e\\u003c/a\\u003e
-        hat das Positionspapier des \\u003ca href=\\\"https://mastodon.social/tags/Wissenschaftsrat\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eWissenschaftsrat\\u003c/span\\u003e\\u003c/a\\u003e
-        „Personalstrukturen für das Wissenschaftssystem“ begrüßt und Bund \\u0026amp;
-        Länder, Hochschulen \\u0026amp; Forschungseinrichtungen aufgefordert, \\u003ca
-        href=\\\"https://mastodon.social/tags/Dauerstellen\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eDauerstellen\\u003c/span\\u003e\\u003c/a\\u003e
-        für Daueraufgaben, verlässliche Karrierewege und gleiche Chancen für alle
-        in durchzusetzen. \\u003cbr /\\u003e\U0001F449 Jetzt gibt es keine Ausreden
-        mehr: Bund muss \\u003ca href=\\\"https://mastodon.social/tags/WissZeitVG\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eWissZeitVG\\u003c/span\\u003e\\u003c/a\\u003e
-        auf den Prüfstand stellen, Länder ihre Hochschulgesetze reformieren, Einrichtungen
-        Dauerstellenkonzepte vorlegen.\\u003cbr /\\u003e\\u003ca href=\\\"https://mastodon.social/tags/IchBinHanna\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eIchBinHanna\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Mastodon
-        for iOS\",\"website\":\"https://app.joinmastodon.org/ios\"},\"account\":{\"id\":\"109247094785405170\",\"username\":\"AKellerGEW\",\"acct\":\"AKellerGEW\",\"display_name\":\"Andreas
-        Keller\",\"locked\":false,\"bot\":false,\"discoverable\":null,\"indexable\":false,\"group\":false,\"created_at\":\"2022-10-28T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eVorstandsmitglied
-        für Hochschule und Forschung der Gewerkschaft Erziehung und Wissenschaft (GEW)\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@AKellerGEW\",\"uri\":\"https://mastodon.social/users/AKellerGEW\",\"avatar\":\"https://files.mastodon.social/accounts/avatars/109/247/094/785/405/170/original/127474757a31f44c.png\",\"avatar_static\":\"https://files.mastodon.social/accounts/avatars/109/247/094/785/405/170/original/127474757a31f44c.png\",\"header\":\"https://mastodon.social/headers/original/missing.png\",\"header_static\":\"https://mastodon.social/headers/original/missing.png\",\"followers_count\":182,\"following_count\":32,\"statuses_count\":79,\"last_status_at\":\"2025-07-14\",\"hide_collections\":null,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[]},\"media_attachments\":[{\"id\":\"114851090872968499\",\"type\":\"image\",\"url\":\"https://files.mastodon.social/media_attachments/files/114/851/090/872/968/499/original/0eb07aa5ef7fea55.png\",\"preview_url\":\"https://files.mastodon.social/media_attachments/files/114/851/090/872/968/499/small/0eb07aa5ef7fea55.png\",\"remote_url\":null,\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"original\":{\"width\":1080,\"height\":1080,\"size\":\"1080x1080\",\"aspect\":1.0},\"small\":{\"width\":480,\"height\":480,\"size\":\"480x480\",\"aspect\":1.0}},\"description\":\"\",\"blurhash\":\"UUP|wOr;}Qxa%0kCi^kD=Dj[F4V?ROX9ofWC\"}],\"mentions\":[],\"tags\":[{\"name\":\"gew\",\"url\":\"https://mastodon.social/tags/gew\"},{\"name\":\"wissenschaftsrat\",\"url\":\"https://mastodon.social/tags/wissenschaftsrat\"},{\"name\":\"Dauerstellen\",\"url\":\"https://mastodon.social/tags/Dauerstellen\"},{\"name\":\"wisszeitvg\",\"url\":\"https://mastodon.social/tags/wisszeitvg\"},{\"name\":\"IchbinHanna\",\"url\":\"https://mastodon.social/tags/IchbinHanna\"}],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114850353649055649\",\"created_at\":\"2025-07-14T07:15:17.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://fedihum.org/users/jomla/statuses/114850353508288073\",\"url\":\"https://fedihum.org/@jomla/114850353508288073\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eHabe
-        gar nicht mitbekommen, dass das BVerfG der Klage der HU gegen §110 des BerlHG
-        stattgegeben hat.\\u003c/p\\u003e\\u003cp\\u003eBin ich froh, nicht mehr \\u003ca
-        href=\\\"https://fedihum.org/tags/PostDoc\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ePostDoc\\u003c/span\\u003e\\u003c/a\\u003e
-        zu sein. \\u003ca href=\\\"https://fedihum.org/tags/IchbinHanna\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eIchbinHanna\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"account\":{\"id\":\"111257180445426374\",\"username\":\"jomla\",\"acct\":\"jomla@fedihum.org\",\"display_name\":\"Asterisk\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2023-10-18T00:00:00.000Z\",\"note\":\"\\u003cp\\u003ehe/his
-        | grumpy (micro)blogging | somwhere between \\u003ca href=\\\"https://fedihum.org/tags/digitalhumanities\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003edigitalhumanities\\u003c/span\\u003e\\u003c/a\\u003e,
-        \\u003ca href=\\\"https://fedihum.org/tags/gamestudies\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003egamestudies\\u003c/span\\u003e\\u003c/a\\u003e
-        and research infrastructure\\u003c/p\\u003e\",\"url\":\"https://fedihum.org/@jomla\",\"uri\":\"https://fedihum.org/users/jomla\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/111/257/180/445/426/374/original/c9ebf34345a0fdb7.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/111/257/180/445/426/374/original/c9ebf34345a0fdb7.png\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/111/257/180/445/426/374/original/e0917adbd742fe2a.jpeg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/111/257/180/445/426/374/original/e0917adbd742fe2a.jpeg\",\"followers_count\":497,\"following_count\":637,\"statuses_count\":132,\"last_status_at\":\"2025-07-17\",\"hide_collections\":true,\"emojis\":[],\"fields\":[{\"name\":\"bluesky\",\"value\":\"jomla.bsky.social\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"postdoc\",\"url\":\"https://mastodon.social/tags/postdoc\"},{\"name\":\"IchbinHanna\",\"url\":\"https://mastodon.social/tags/IchbinHanna\"}],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114830392402277976\",\"created_at\":\"2025-07-10T18:38:54.224Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://bsky.brid.gy/convert/ap/at://did:plc:cwu7cq6gheelpe4egvb4py3h/app.bsky.feed.post/3ltmy2ql7o22x\",\"url\":\"https://fed.brid.gy/r/https://bsky.app/profile/did:plc:cwu7cq6gheelpe4egvb4py3h/post/3ltmy2ql7o22x\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eMan
-        stelle sich vor, Berlin hätte gar keine Neuregelung im Hochschulgesetz versuchen
-        müssen, weil an Universitäten nicht so eine unerbittliche Verehrung prekärer
-        Traditionen herrschte und sie sich als wertschätzende Arbeitgeber zeigten
-        statt systematisch das \\u003ca class=\\\"hashtag\\\" rel=\\\"nofollow noopener\\\"
-        href=\\\"https://bsky.app/search?q=%23WissZeitVG\\\" target=\\\"_blank\\\"\\u003e#WissZeitVG\\u003c/a\\u003e
-        zu missbrauchen.\\n\\u003ca class=\\\"hashtag\\\" rel=\\\"nofollow noopener\\\"
-        href=\\\"https://bsky.app/search?q=%23IchBinHanna\\\" target=\\\"_blank\\\"\\u003e#IchBinHanna\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"account\":{\"id\":\"112914961277959374\",\"username\":\"phkraemer.bsky.social\",\"acct\":\"phkraemer.bsky.social@bsky.brid.gy\",\"display_name\":\"Philipp
-        Krämer\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2024-08-06T00:00:00.000Z\",\"note\":\"(Multi)Linguist,
-        Creolist, Romanist\\nProfesseur de linguistique française (VUB)\\nCitoyen
-        européen, Saarlandberliner, Bruxellois\\ner/il/he/hij\\u003cbr\\u003e\\u003cbr\\u003e\U0001F309
-        \\u003ca href=\\\"https://fed.brid.gy/bsky/phkraemer.bsky.social\\\" rel=\\\"nofollow
-        noopener\\\" target=\\\"_blank\\\"\\u003ebridged\\u003c/a\\u003e from \\u003ca
-        href=\\\"https://bsky.app/profile/phkraemer.bsky.social\\\" rel=\\\"nofollow
-        noopener\\\" target=\\\"_blank\\\"\\u003ephkraemer.bsky.social\\u003c/a\\u003e
-        on Bluesky by \\u003ca href=\\\"https://fed.brid.gy/\\\" rel=\\\"nofollow
-        noopener\\\" target=\\\"_blank\\\"\\u003eBridgy Fed\\u003c/a\\u003e\",\"url\":\"https://bsky.brid.gy/r/https://bsky.app/profile/phkraemer.bsky.social\",\"uri\":\"https://bsky.brid.gy/ap/did:plc:cwu7cq6gheelpe4egvb4py3h\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/112/914/961/277/959/374/original/f38ab54109889a78.jpeg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/112/914/961/277/959/374/original/f38ab54109889a78.jpeg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/112/914/961/277/959/374/original/27a7f9cce8f199b0.jpeg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/112/914/961/277/959/374/original/27a7f9cce8f199b0.jpeg\",\"followers_count\":4,\"following_count\":4,\"statuses_count\":1,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Web
-        site\",\"value\":\"\\u003ca rel=\\\"nofollow noopener\\\" href=\\\"https://bsky.app/profile/phkraemer.bsky.social\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003ebsky.app/profile/phkraemer.bsky.social\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"wisszeitvg\",\"url\":\"https://mastodon.social/tags/wisszeitvg\"},{\"name\":\"IchbinHanna\",\"url\":\"https://mastodon.social/tags/IchbinHanna\"}],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114829638264418505\",\"created_at\":\"2025-07-10T15:27:07.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://chaos.social/users/besendorf/statuses/114829638219469441\",\"url\":\"https://chaos.social/@besendorf/114829638219469441\",\"replies_count\":1,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eDie
-        HU Berlin war mit ihrer Verfassungsbeschwerde gegen das BerlHG und damit verpflichtendende
-        Anschlusszusagen an PostDocs tatsächlich erfolgreich. Traurig für die \\u003ca
-        href=\\\"https://chaos.social/tags/IchbinHanna\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eIchbinHanna\\u003c/span\\u003e\\u003c/a\\u003e
-        Bewegung. \\u003cbr\\u003e\\u003ca href=\\\"https://www.bundesverfassungsgericht.de/SharedDocs/Pressemitteilungen/DE/2025/bvg25-058.html\\\"
-        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ebundesverfassungsgericht.de/Sh\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003earedDocs/Pressemitteilungen/DE/2025/bvg25-058.html\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"account\":{\"id\":\"108486659130884367\",\"username\":\"besendorf\",\"acct\":\"besendorf@chaos.social\",\"display_name\":\"Janik
-        Besendorf\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2022-06-16T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eFortschritt
-        ist das Werk der Unzufriedenen\\u003cbr\\u003eshitposts, infosec and politics\\u003cbr\\u003eview
-        my banger toots: \\u003ca href=\\\"https://topmastodonposts.patrikcsak.com/by/@besendorf@chaos.social\\\"
-        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003etopmastodonposts.patrikcsak.co\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003em/by/@besendorf@chaos.social\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://chaos.social/@besendorf\",\"uri\":\"https://chaos.social/users/besendorf\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/108/486/659/130/884/367/original/84d404fd0df946af.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/108/486/659/130/884/367/original/84d404fd0df946af.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/108/486/659/130/884/367/original/18ab5eddc4137cfc.png\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/108/486/659/130/884/367/original/18ab5eddc4137cfc.png\",\"followers_count\":785,\"following_count\":2022,\"statuses_count\":3682,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"website\",\"value\":\"\\u003ca
-        href=\\\"https://besendorf.org\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003esimonpcouch.com/blog/2025-07-1\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e7-claude-code-2/\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"account\":{\"id\":\"114377281350309692\",\"username\":\"simonpcouch\",\"acct\":\"simonpcouch@rstats.me\",\"display_name\":\"Simon
+        P. Couch\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2025-04-20T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003ca
+        href=\\\"https://rstats.me/tags/rstats\\\" class=\\\"mention hashtag\\\" rel=\\\"nofollow
+        noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003erstats\\u003c/span\\u003e\\u003c/a\\u003e,
+        data science, LLMs\\u003c/p\\u003e\\u003cp\\u003erecently moved to this server
+        from fosstodon.org\\u003c/p\\u003e\",\"url\":\"https://rstats.me/@simonpcouch\",\"uri\":\"https://rstats.me/users/simonpcouch\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/114/377/281/350/309/692/original/f62d7cd1e9d897fd.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/114/377/281/350/309/692/original/f62d7cd1e9d897fd.png\",\"header\":\"https://mastodon.social/headers/original/missing.png\",\"header_static\":\"https://mastodon.social/headers/original/missing.png\",\"followers_count\":656,\"following_count\":127,\"statuses_count\":41,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Website\",\"value\":\"simonpcouch.com\",\"verified_at\":null},{\"name\":\"GitHub\",\"value\":\"github.com/simonpcouch\",\"verified_at\":null}]},\"media_attachments\":[{\"id\":\"114870142363288789\",\"type\":\"image\",\"url\":\"https://files.mastodon.social/cache/media_attachments/files/114/870/142/363/288/789/original/80c28532cde1d30c.png\",\"preview_url\":\"https://files.mastodon.social/cache/media_attachments/files/114/870/142/363/288/789/small/80c28532cde1d30c.png\",\"remote_url\":\"https://cdn.masto.host/rstatsme/media_attachments/files/114/870/141/353/414/564/original/551bfb1ff2cfa086.png\",\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"focus\":{\"x\":0.0,\"y\":0.0},\"original\":{\"width\":1273,\"height\":687,\"size\":\"1273x687\",\"aspect\":1.8529839883551673},\"small\":{\"width\":653,\"height\":352,\"size\":\"653x352\",\"aspect\":1.8551136363636365}},\"description\":\"A
+        screenshot of a Claude Code terminal. The top reads 'read-up is running...'
+        and three tool calls fetching the documentation for related packages are shown
+        below.\",\"blurhash\":\"U8RD1VV@^+-;~qIAM|x]_2aeNGj[%Mt7xaRj\"}],\"mentions\":[],\"tags\":[{\"name\":\"rstats\",\"url\":\"https://mastodon.social/tags/rstats\"}],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114869631572884594\",\"created_at\":\"2025-07-17T16:57:57.865Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://mastodon.social/users/useR_conf/statuses/114869631572884594\",\"url\":\"https://mastodon.social/@useR_conf/114869631572884594\",\"replies_count\":0,\"reblogs_count\":6,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eThe
+        conference is almost sold out so make sure to get a ticket. Less than 50 left!\\u003cbr
+        /\\u003eJoin this gathering of leaders in industry, academia, and the government
+        to network while you increase your expertise in R. \\u003cbr /\\u003eAs this
+        is our 21st year we have built up a solid reputation that attracts the best
+        and brightest to gather together for talks, tutorials and casual side gatherings.\\u003c/p\\u003e\\u003cp\\u003eRegister
+        for in-person and virtual events: \\u003cbr /\\u003e\\u003ca href=\\\"https://user2025.r-project.org/register\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003euser2025.r-project.org/register\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://mastodon.social/tags/useR2025\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003euseR2025\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.social/tags/RStats\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eRStats\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Web\",\"website\":null},\"account\":{\"id\":\"110730177054888034\",\"username\":\"useR_conf\",\"acct\":\"useR_conf\",\"display_name\":\"useR!
+        2025 Conference\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2023-07-17T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eJoin
+        us at Duke University, Durham, NC, USA (EDT) August 8th - 10th!\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@useR_conf\",\"uri\":\"https://mastodon.social/users/useR_conf\",\"avatar\":\"https://files.mastodon.social/accounts/avatars/110/730/177/054/888/034/original/45e0bc1e46c0a32e.png\",\"avatar_static\":\"https://files.mastodon.social/accounts/avatars/110/730/177/054/888/034/original/45e0bc1e46c0a32e.png\",\"header\":\"https://files.mastodon.social/accounts/headers/110/730/177/054/888/034/original/8c790a474da70608.jpg\",\"header_static\":\"https://files.mastodon.social/accounts/headers/110/730/177/054/888/034/original/8c790a474da70608.jpg\",\"followers_count\":722,\"following_count\":29,\"statuses_count\":66,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"R
+        conferences website\",\"value\":\"\\u003ca href=\\\"https://www.r-project.org/conferences/\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003er-project.org/conferences/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"LinkedIn\",\"value\":\"\\u003ca
+        href=\\\"https://www.linkedin.com/company/68817989/admin/\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
+        class=\\\"ellipsis\\\"\\u003elinkedin.com/company/68817989/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003eadmin/\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[{\"id\":\"114869597131429588\",\"type\":\"image\",\"url\":\"https://files.mastodon.social/media_attachments/files/114/869/597/131/429/588/original/2a3a0b17ba5cb725.png\",\"preview_url\":\"https://files.mastodon.social/media_attachments/files/114/869/597/131/429/588/small/2a3a0b17ba5cb725.png\",\"remote_url\":null,\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"original\":{\"width\":1080,\"height\":1350,\"size\":\"1080x1350\",\"aspect\":0.8},\"small\":{\"width\":429,\"height\":536,\"size\":\"429x536\",\"aspect\":0.8003731343283582},\"focus\":{\"x\":0.0,\"y\":0.0}},\"description\":\"Promotional
+        poster for the useR! 2025 conference featuring a blue bull and logo. The event
+        is hosted at Duke University in Durham, NC, USA. Dates are listed as August
+        8–10, 2025 for the in-person event and August 1, 2025 for the virtual event.
+        A bold red message reads “Less than 50 tickets left!” over a photo of a tree-lined
+        road leading to Duke Chapel.\",\"blurhash\":\"UtJ@,$a|NFoe?woJs+a}9uays:j[n3fPS4az\"}],\"mentions\":[],\"tags\":[{\"name\":\"user2025\",\"url\":\"https://mastodon.social/tags/user2025\"},{\"name\":\"rstats\",\"url\":\"https://mastodon.social/tags/rstats\"}],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114869598531117045\",\"created_at\":\"2025-07-17T16:49:33.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://hachyderm.io/users/zkamvar/statuses/114869598497920330\",\"url\":\"https://hachyderm.io/@zkamvar/114869598497920330\",\"replies_count\":0,\"reblogs_count\":2,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eFun
+        thing that \\u003cspan class=\\\"h-card\\\" translate=\\\"no\\\"\\u003e\\u003ca
+        href=\\\"https://genomic.social/@snystrom\\\" class=\\\"u-url mention\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e@\\u003cspan\\u003esnystrom\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e
+        and I found today for those using \\u003ca href=\\\"https://hachyderm.io/tags/AWS\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eAWS\\u003c/span\\u003e\\u003c/a\\u003e
+        in \\u003ca href=\\\"https://hachyderm.io/tags/Rstats\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eRstats\\u003c/span\\u003e\\u003c/a\\u003e
+        (and also other languages)\\u003c/p\\u003e\\u003cp\\u003eThe Owner API endpoint
+        changed and if you were using a working fork of aws.s3, the fix for that is
+        in \\u003ca href=\\\"https://github.com/cloudyr/aws.s3/pull/438\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003egithub.com/cloudyr/aws.s3/pull\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e/438\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"account\":{\"id\":\"110951276155568747\",\"username\":\"zkamvar\",\"acct\":\"zkamvar@hachyderm.io\",\"display_name\":\"Zhian
+        N. Kamvar\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2023-08-25T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eFormer
+        bioinformatician, science communicator, plant pathologist, and research software
+        engineer. I code in R mostly.\\u003c/p\\u003e\\u003cp\\u003eI live in Beaverton
+        (\\u003ca href=\\\"https://hachyderm.io/tags/PDX\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ePDX\\u003c/span\\u003e\\u003c/a\\u003e),
+        and I will retoot \\u003ca href=\\\"https://hachyderm.io/tags/RStats\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eRStats\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://hachyderm.io/tags/cats\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ecats\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://hachyderm.io/tags/puns\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003epuns\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://hachyderm.io/tags/fungi\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003efungi\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://hachyderm.io/tags/baking\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ebaking\\u003c/span\\u003e\\u003c/a\\u003e,
+        and \\u003ca href=\\\"https://hachyderm.io/tags/bikes\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ebikes\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003eBoosts/posts
+        are my own\\u003c/p\\u003e\",\"url\":\"https://hachyderm.io/@zkamvar\",\"uri\":\"https://hachyderm.io/users/zkamvar\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/110/951/276/155/568/747/original/fa93a0de56a36246.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/110/951/276/155/568/747/original/fa93a0de56a36246.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/110/951/276/155/568/747/original/366fbdf2313495a5.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/110/951/276/155/568/747/original/366fbdf2313495a5.jpg\",\"followers_count\":573,\"following_count\":300,\"statuses_count\":4545,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Personal
+        site\",\"value\":\"\\u003ca href=\\\"https://zkamvar.netlify.app/\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003ezkamvar.netlify.app/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"GitHub\",\"value\":\"\\u003ca
+        href=\\\"https://github.com/zkamvar\\\" target=\\\"_blank\\\" rel=\\\"nofollow
         noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003ebesendorf.org\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2025-07-17T07:28:44.040+00:00\"}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"IchbinHanna\",\"url\":\"https://mastodon.social/tags/IchbinHanna\"}],\"emojis\":[],\"quote\":null,\"card\":{\"url\":\"https://www.bundesverfassungsgericht.de/SharedDocs/Pressemitteilungen/DE/2025/bvg25-058.html\",\"title\":\"Erfolgreiche
-        Verfassungsbeschwerde einer staatlichen Hochschule des Landes Berlin gegen
-        Regelung des Berliner Hochschulgesetzes\",\"description\":\"Mit heute veröffentlichtem
-        Beschluss hat der Erste Senat des Bundesverfassungsgerichts entschieden, dass
-        § 110 Abs. 6 Sätze 2 und 3 des Gesetzes über die Hochschulen im Land Berlin
-        (Berliner Hochschulgesetz – BerlHG) mit Art. 5 Abs. 3 Satz 1 und Art. 74 Abs. 1
-        Nr. 12 in Verbindung mit Art. 72 Abs. 1 des Grundgesetzes (GG) unvereinbar
-        und nichtig ist. Die Beschwerdeführerin ist eine staatliche Hochschule des
-        Landes Berlin. Sie wendet sich gegen die Verpflichtung der Hochschulen des
-        Landes Berlin, allen befristet auf einer Qualifikationsstelle beschäftigten
-        promovierten wissenschaftlichen Mitarbeiterinnen und Mitarbeitern mit Abschluss
-        des Arbeitsvertrages eine unbefristete Beschäftigung bei Erreichen des Qualifikationsziels
-        zuzusagen (Anschlusszusage). Die Verfassungsbeschwerde hat Erfolg. § 110 Abs. 6
-        Satz 2 BerlHG greift in das Grundrecht auf Freiheit der Wissenschaft gemäß
-        Art. 5 Abs. 3 Satz 1 GG ein. Die Regelung ist mangels Gesetzgebungskompetenz
-        des Landes formell verfassungswidrig.\",\"language\":\"de\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"\",\"provider_url\":\"\",\"html\":\"\",\"width\":0,\"height\":0,\"image\":null,\"image_description\":\"\",\"embed_url\":\"\",\"blurhash\":null,\"published_at\":null,\"authors\":[]},\"poll\":null}]"
-  recorded_at: 2025-07-17 13:44:14
+        class=\\\"\\\"\\u003egithub.com/zkamvar\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2025-07-14T21:24:05.585+00:00\"},{\"name\":\"Pronouns\",\"value\":\"He/him/his\",\"verified_at\":null},{\"name\":\"Things
+        I Read\",\"value\":\"\\u003ca href=\\\"https://app.thestorygraph.com/profile/zincpotassium\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003eapp.thestorygraph.com/profile/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ezincpotassium\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[{\"id\":\"109291506948711905\",\"username\":\"snystrom\",\"url\":\"https://genomic.social/@snystrom\",\"acct\":\"snystrom@genomic.social\"}],\"tags\":[{\"name\":\"aws\",\"url\":\"https://mastodon.social/tags/aws\"},{\"name\":\"rstats\",\"url\":\"https://mastodon.social/tags/rstats\"}],\"emojis\":[],\"quote\":null,\"card\":{\"url\":\"https://github.com/cloudyr/aws.s3/pull/438\",\"title\":\"Deprecate
+        Owner DisplayName field. by snystrom · Pull Request #438 · cloudyr/aws.s3\",\"description\":\"Deprecate
+        usage of DisplayName and Owner ID field if unused. Closes #437.\\nThe DisplayName
+        field went EoL July 15, 2025.\\nhttps://docs.aws.amazon.com/AmazonS3/latest/API/API_Owner.html\\nNew
+        S3 payload...\",\"language\":\"en\",\"type\":\"link\",\"author_name\":\"snystrom\",\"author_url\":\"\",\"provider_name\":\"GitHub\",\"provider_url\":\"\",\"html\":\"\",\"width\":678,\"height\":339,\"image\":\"https://files.mastodon.social/cache/preview_cards/images/155/518/309/original/63d4e560f6eaac6a.png\",\"image_description\":\"Deprecate
+        usage of DisplayName and Owner ID field if unused. Closes #437.\\nThe DisplayName
+        field went EoL July 15, 2025.\\nhttps://docs.aws.amazon.com/AmazonS3/latest/API/API_Owner.html\\nNew
+        S3 payload...\",\"embed_url\":\"\",\"blurhash\":\"UbRW6uofayxuxVt7ayofS7t7RjWB~WfPayRj\",\"published_at\":null,\"authors\":[{\"name\":\"snystrom\",\"url\":\"\",\"account\":null}]},\"poll\":null},{\"id\":\"114869166181027661\",\"created_at\":\"2025-07-17T14:59:35.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://corteximplant.com/users/donnagen/statuses/114869166140148790\",\"url\":\"https://corteximplant.com/@donnagen/114869166140148790\",\"replies_count\":1,\"reblogs_count\":1,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eWas
+        looking for an \\u003ca href=\\\"https://corteximplant.com/tags/rstats\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003erstats\\u003c/span\\u003e\\u003c/a\\u003e
+        package and stumbled on \\u003cspan class=\\\"h-card\\\" translate=\\\"no\\\"\\u003e\\u003ca
+        href=\\\"https://fosstodon.org/@schochastics\\\" class=\\\"u-url mention\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e@\\u003cspan\\u003eschochastics\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e's
+        \\u003ca href=\\\"https://corteximplant.com/tags/rtoot\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ertoot\\u003c/span\\u003e\\u003c/a\\u003e
+        package for getting R to interact with Mastodon. \\u003c/p\\u003e\\u003cp\\u003eIt's
+        not my field, but this definitely sparks joy :maxheadroom:\\u003c/p\\u003e\",\"reblog\":null,\"account\":{\"id\":\"111732355374160773\",\"username\":\"donnagen\",\"acct\":\"donnagen@corteximplant.com\",\"display_name\":\"Donnagen
+        :hehehmuhar:\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2024-01-09T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eDreaming
+        of fully automated luxury gay space communism :trek_cerritos: :DS9: preparing
+        for full corpo cyberpunk dystopia :ablobglitch:\\u003c/p\\u003e\\u003cp\\u003eCurrently
+        a wildlife researcher.\\u003c/p\\u003e\",\"url\":\"https://corteximplant.com/@donnagen\",\"uri\":\"https://corteximplant.com/users/donnagen\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/111/732/355/374/160/773/original/c6e5812d0cff1e81.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/111/732/355/374/160/773/original/c6e5812d0cff1e81.png\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/111/732/355/374/160/773/original/5a56d0b7eb3482e4.png\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/111/732/355/374/160/773/original/5a56d0b7eb3482e4.png\",\"followers_count\":93,\"following_count\":291,\"statuses_count\":324,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[{\"shortcode\":\"trek_cerritos\",\"url\":\"https://files.mastodon.social/cache/custom_emojis/images/001/054/475/original/a94eabdd0b08f7c7.png\",\"static_url\":\"https://files.mastodon.social/cache/custom_emojis/images/001/054/475/static/a94eabdd0b08f7c7.png\",\"visible_in_picker\":true},{\"shortcode\":\"DS9\",\"url\":\"https://files.mastodon.social/cache/custom_emojis/images/001/005/360/original/2e6c5c455d3dd989.png\",\"static_url\":\"https://files.mastodon.social/cache/custom_emojis/images/001/005/360/static/2e6c5c455d3dd989.png\",\"visible_in_picker\":true},{\"shortcode\":\"ablobglitch\",\"url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/627/141/original/8251e8e4d59b46d9.gif\",\"static_url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/627/141/static/8251e8e4d59b46d9.png\",\"visible_in_picker\":true},{\"shortcode\":\"hehehmuhar\",\"url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/459/119/original/f6ca40ab43617c2e.png\",\"static_url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/459/119/static/f6ca40ab43617c2e.png\",\"visible_in_picker\":true},{\"shortcode\":\"neocat_book\",\"url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/720/037/original/58024c6e774f8516.png\",\"static_url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/720/037/static/58024c6e774f8516.png\",\"visible_in_picker\":true},{\"shortcode\":\"totentanz\",\"url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/730/607/original/33b298f24f8e8d95.png\",\"static_url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/730/607/static/33b298f24f8e8d95.png\",\"visible_in_picker\":true}],\"fields\":[{\"name\":\"Pronouns\",\"value\":\"he/him,
+        they/them\",\"verified_at\":null},{\"name\":\":neocat_book:\",\"value\":\"\\u003ca
+        href=\\\"https://openlibrary.org/people/donnagen\\\" rel=\\\"nofollow noopener\\\"
+        translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003eopenlibrary.org/people/donnagen\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\":totentanz:\",\"value\":\"\\u003ca
+        href=\\\"https://totentanz.club/u/donnagen/\\\" rel=\\\"nofollow noopener\\\"
+        translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003etotentanz.club/u/donnagen/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Where
+        in the world is Don Sandiego\",\"value\":\"\\u003ca href=\\\"https://uplink.obeythesystem.com/?user=@donnagen\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003euplink.obeythesystem.com/?user\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e=@donnagen\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[{\"id\":\"109302511353061139\",\"username\":\"schochastics\",\"url\":\"https://fosstodon.org/@schochastics\",\"acct\":\"schochastics@fosstodon.org\"}],\"tags\":[{\"name\":\"rstats\",\"url\":\"https://mastodon.social/tags/rstats\"},{\"name\":\"rtoot\",\"url\":\"https://mastodon.social/tags/rtoot\"}],\"emojis\":[{\"shortcode\":\"maxheadroom\",\"url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/901/072/original/131c78d1cf9b7fdf.png\",\"static_url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/901/072/static/131c78d1cf9b7fdf.png\",\"visible_in_picker\":true}],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114869144089828147\",\"created_at\":\"2025-07-17T14:53:54.917Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://bsky.brid.gy/convert/ap/at://did:plc:hmk4f5yf3ohtsvw32sbtwvk3/app.bsky.feed.post/3lu66quubp22m\",\"url\":\"https://fed.brid.gy/r/https://bsky.app/profile/did:plc:hmk4f5yf3ohtsvw32sbtwvk3/post/3lu66quubp22m\",\"replies_count\":1,\"reblogs_count\":2,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003e\\u003ca
+        class=\\\"hashtag\\\" rel=\\\"nofollow noopener\\\" href=\\\"https://bsky.app/search?q=%23rstats\\\"
+        target=\\\"_blank\\\"\\u003e#rstats\\u003c/a\\u003e \\u003ca class=\\\"hashtag\\\"
+        rel=\\\"nofollow noopener\\\" href=\\\"https://bsky.app/search?q=%23FunctionalProgramming\\\"
+        target=\\\"_blank\\\"\\u003e#FunctionalProgramming\\u003c/a\\u003e\\n\\n\\u003ca
+        href=\\\"https://github.com/mailund/tailr\\\" rel=\\\"nofollow noopener\\\"
+        target=\\\"_blank\\\"\\u003egithub.com/mailund/tailr\\u003c/a\\u003e\\u003cbr\\u003e\\u003cbr\\u003e\\u003ca
+        href=\\\"https://github.com/mailund/tailr\\\" rel=\\\"nofollow noopener\\\"
+        target=\\\"_blank\\\"\\u003eGitHub - mailund/tailr: Automa...\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"account\":{\"id\":\"114229548685981016\",\"username\":\"pp0196.bsky.social\",\"acct\":\"pp0196.bsky.social@bsky.brid.gy\",\"display_name\":\"SMT\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2025-03-26T00:00:00.000Z\",\"note\":\"Sequences
+        and consequences.\\n\\n\\n\\nCredit Pic : Cellular landscape cross-section
+        through a eukaryotic cell, by Evan Ingersoll\\u003cbr\\u003e\\u003cbr\\u003e\U0001F309
+        \\u003ca href=\\\"https://fed.brid.gy/bsky/pp0196.bsky.social\\\" rel=\\\"nofollow
+        noopener\\\" target=\\\"_blank\\\"\\u003ebridged\\u003c/a\\u003e from \\u003ca
+        href=\\\"https://bsky.app/profile/pp0196.bsky.social\\\" rel=\\\"nofollow
+        noopener\\\" target=\\\"_blank\\\"\\u003epp0196.bsky.social\\u003c/a\\u003e
+        on Bluesky by \\u003ca href=\\\"https://fed.brid.gy/\\\" rel=\\\"nofollow
+        noopener\\\" target=\\\"_blank\\\"\\u003eBridgy Fed\\u003c/a\\u003e\",\"url\":\"https://bsky.brid.gy/r/https://bsky.app/profile/pp0196.bsky.social\",\"uri\":\"https://bsky.brid.gy/ap/did:plc:hmk4f5yf3ohtsvw32sbtwvk3\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/114/229/548/685/981/016/original/b22b0a13269a457f.jpeg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/114/229/548/685/981/016/original/b22b0a13269a457f.jpeg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/114/229/548/685/981/016/original/e348bcf7e9aadb3a.jpeg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/114/229/548/685/981/016/original/e348bcf7e9aadb3a.jpeg\",\"followers_count\":7,\"following_count\":4,\"statuses_count\":0,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Web
+        site\",\"value\":\"\\u003ca rel=\\\"nofollow noopener\\\" href=\\\"https://bsky.app/profile/pp0196.bsky.social\\\"
+        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003ebsky.app/profile/pp0196.bsky.social\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"rstats\",\"url\":\"https://mastodon.social/tags/rstats\"},{\"name\":\"functionalprogramming\",\"url\":\"https://mastodon.social/tags/functionalprogramming\"}],\"emojis\":[],\"quote\":null,\"card\":{\"url\":\"https://github.com/mailund/tailr\",\"title\":\"GitHub
+        - mailund/tailr: Automatic trail recursion optimisation\",\"description\":\"Automatic
+        trail recursion optimisation. Contribute to mailund/tailr development by creating
+        an account on GitHub.\",\"language\":\"en\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"GitHub\",\"provider_url\":\"\",\"html\":\"\",\"width\":678,\"height\":339,\"image\":\"https://files.mastodon.social/cache/preview_cards/images/155/503/329/original/2d5ae9670117af35.png\",\"image_description\":\"Automatic
+        trail recursion optimisation. Contribute to mailund/tailr development by creating
+        an account on GitHub.\",\"embed_url\":\"\",\"blurhash\":\"UYRfqU-;M{%MxBxuNGt6IsRjofa}~pM{t8WA\",\"published_at\":null,\"authors\":[]},\"poll\":null}]"
+  recorded_at: 2025-07-17 20:02:58
 recorded_with: VCR-vcr/1.7.1.93

@@ -1,35 +1,38 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://social.tchncs.de/api/v1/polls/105976
+    uri: https://fosstodon.org/api/v1/polls/684128
   response:
     status: 200
     headers:
+      content-type: application/json; charset=utf-8
+      server: Mastodon
+      x-frame-options: DENY
+      x-content-type-options: nosniff
+      x-xss-protection: '0'
+      referrer-policy: same-origin
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '295'
+      x-ratelimit-reset: '2025-07-17T20:05:00.265467Z'
       cache-control: private, no-store
-      content-encoding: gzip
+      etag: W/"4d04299955b114a506e4b735a89f1f7e"
       content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
         'none'
-      content-type: application/json; charset=utf-8
-      date: Thu, 17 Jul 2025 13:44:12 GMT
-      etag: W/"90a7e66eba6a5d01700b89897b8d145c"
-      referrer-policy: same-origin
-      server: nginx
-      strict-transport-security:
-      - max-age=63072000; includeSubDomains
-      - max-age=31536000
-      vary:
-      - Accept-Encoding
-      - Authorization, Origin
-      x-content-type-options: nosniff
-      x-frame-options: DENY
-      x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '293'
-      x-ratelimit-reset: '2025-07-17T13:45:00.357487Z'
-      x-request-id: 6a2ac3d8-5a94-4894-bffa-06f29ee9a069
-      x-runtime: '0.006170'
-      x-xss-protection: '0'
+      x-request-id: d773686d-102c-4545-b474-b36abf8e1be7
+      x-runtime: '0.011393'
+      content-encoding: gzip
+      accept-ranges: bytes
+      via: 1.1 varnish, 1.1 varnish
+      date: Thu, 17 Jul 2025 20:00:56 GMT
+      x-served-by: cache-par-lfpg1960080-PAR, cache-muc13981-MUC
+      x-cache: MISS, MISS
+      x-cache-hits: 0, 0
+      x-timer: S1752782456.250943,VS0,VE33
+      vary: Accept-Encoding, Authorization, Origin
+      strict-transport-security: max-age=300
+      alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
     body:
-      string: '{"id":"105976","expires_at":"2022-11-08T08:26:07.510Z","expired":true,"multiple":false,"votes_count":4,"voters_count":4,"options":[{"title":"This
-        neighbour''s black cat","votes_count":3},{"title":"Megaman","votes_count":1}],"emojis":[]}'
-  recorded_at: 2025-07-17 13:44:12
+      string: '{"id":"684128","expires_at":"2025-05-10T08:10:18.291Z","expired":true,"multiple":false,"votes_count":25,"voters_count":25,"voted":false,"own_votes":[],"options":[{"title":"8","votes_count":2},{"title":"16","votes_count":2},{"title":"64","votes_count":5},{"title":"bigger!
+        (Please reply!)","votes_count":16}],"emojis":[]}'
+  recorded_at: 2025-07-17 20:00:56
 recorded_with: VCR-vcr/1.7.1.93

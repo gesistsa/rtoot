@@ -38,7 +38,7 @@ test_that("get_reblogged_by", {
   expect_true("tbl_df" %in% class(x))
   expect_true(nrow(x) != 0)
   vcr::use_cassette("get_reblogged_with_token", {
-    id <- "109303266941599451"
+    id <- "114620457512351116"
     x <- get_reblogged_by(id = id, token = fake_token)
   })
   expect_true("tbl_df" %in% class(x))

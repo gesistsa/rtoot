@@ -1,395 +1,267 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://social.tchncs.de/api/v1/timelines/public?local=TRUE&remote=FALSE&only_media=FALSE&limit=10
+    uri: https://fosstodon.org/api/v1/timelines/public?local=TRUE&remote=FALSE&only_media=FALSE&limit=10
   response:
     status: 200
     headers:
+      content-type: application/json; charset=utf-8
+      server: Mastodon
+      x-frame-options: DENY
+      x-content-type-options: nosniff
+      x-xss-protection: '0'
+      referrer-policy: same-origin
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '284'
+      x-ratelimit-reset: '2025-07-17T20:05:00.914800Z'
+      link: <https://fosstodon.org/api/v1/timelines/public?limit=10&local=TRUE&max_id=114870316316166788&only_media=FALSE&remote=FALSE>;
+        rel="next", <https://fosstodon.org/api/v1/timelines/public?limit=10&local=TRUE&min_id=114870359866949025&only_media=FALSE&remote=FALSE>;
+        rel="prev"
       cache-control: private, no-store
-      content-encoding: gzip
+      etag: W/"5c4b7b016063dd4732fd7a3a1bb1aa43"
       content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
         'none'
-      content-type: application/json; charset=utf-8
-      date: Thu, 17 Jul 2025 13:44:16 GMT
-      etag: W/"bdbf5e3f6f34d44bedb6e9e8097c88b5"
-      link: <https://social.tchncs.de/api/v1/timelines/public?limit=10&local=TRUE&max_id=114868745427538673&only_media=FALSE&remote=FALSE>;
-        rel="next", <https://social.tchncs.de/api/v1/timelines/public?limit=10&local=TRUE&min_id=114868843230938241&only_media=FALSE&remote=FALSE>;
-        rel="prev"
-      referrer-policy: same-origin
-      server: nginx
-      strict-transport-security:
-      - max-age=63072000; includeSubDomains
-      - max-age=31536000
-      vary:
-      - Accept-Encoding
-      - Authorization, Origin
-      x-content-type-options: nosniff
-      x-frame-options: DENY
-      x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '282'
-      x-ratelimit-reset: '2025-07-17T13:45:00.089422Z'
-      x-request-id: fd5a9e4d-0b62-443f-b369-f75834a37d08
-      x-runtime: '0.041354'
-      x-xss-protection: '0'
+      x-request-id: c173f5df-30ce-4cd3-8f71-063a9b73a19a
+      x-runtime: '0.058860'
+      content-encoding: gzip
+      accept-ranges: bytes
+      via: 1.1 varnish, 1.1 varnish
+      date: Thu, 17 Jul 2025 20:03:55 GMT
+      x-served-by: cache-par-lfpg1960081-PAR, cache-muc13921-MUC
+      x-cache: MISS, MISS
+      x-cache-hits: 0, 0
+      x-timer: S1752782636.894432,VS0,VE90
+      vary: Accept-Encoding, Authorization, Origin
+      strict-transport-security: max-age=300
+      alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
     body:
-      string: "[{\"id\":\"114868843230938241\",\"created_at\":\"2025-07-17T13:37:28.714Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://social.tchncs.de/users/Haydar/statuses/114868843230938241\",\"url\":\"https://social.tchncs.de/@Haydar/114868843230938241\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":1,\"edited_at\":null,\"content\":\"\\u003cp\\u003eSo,
-        jetzt Ruhe hier. \\u003ca href=\\\"https://social.tchncs.de/tags/StarTrek\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eStarTrek\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/strangenewworlds\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003estrangenewworlds\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Tusky\",\"website\":\"https://tusky.app\"},\"account\":{\"id\":\"14939\",\"username\":\"Haydar\",\"acct\":\"Haydar\",\"display_name\":\"Senioradmin\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2017-04-06T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eFree
-        Software, Free Society, No Borders.\\u003cbr /\\u003ePosts in deutsch, english.
-        Aprendo \\u003ca href=\\\"https://social.tchncs.de/tags/espa%C3%B1ol\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eespañol\\u003c/span\\u003e\\u003c/a\\u003e.
-        \\u003cbr /\\u003eWeitere Themen: \\u003ca href=\\\"https://social.tchncs.de/tags/ITSec\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eITSec\\u003c/span\\u003e\\u003c/a\\u003e,
-        \\u003ca href=\\\"https://social.tchncs.de/tags/Autismus\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eAutismus\\u003c/span\\u003e\\u003c/a\\u003e,
-        \\u003ca href=\\\"https://social.tchncs.de/tags/Spanien\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eSpanien\\u003c/span\\u003e\\u003c/a\\u003e,
-        \\u003ca href=\\\"https://social.tchncs.de/tags/Vietnam\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eVietnam\\u003c/span\\u003e\\u003c/a\\u003e,
-        Politik, IT allgemein, \\u003ca href=\\\"https://social.tchncs.de/tags/Wandern\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eWandern\\u003c/span\\u003e\\u003c/a\\u003e
-        / \\u003ca href=\\\"https://social.tchncs.de/tags/Hiking\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eHiking\\u003c/span\\u003e\\u003c/a\\u003e
-        und privater Kram.\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@Haydar\",\"uri\":\"https://social.tchncs.de/users/Haydar\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/000/014/939/original/8ce984ad7c390bd4.jpg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/000/014/939/original/8ce984ad7c390bd4.jpg\",\"header\":\"https://f2.tchncs.de/accounts/headers/000/014/939/original/3fbb389103640165.png\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/000/014/939/original/3fbb389103640165.png\",\"followers_count\":886,\"following_count\":600,\"statuses_count\":10404,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"Blog\",\"value\":\"\\u003ca
-        href=\\\"https://senioradmin.de\\\" target=\\\"_blank\\\" rel=\\\"nofollow
-        noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003esenioradmin.de\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-11-22T10:57:42.433+00:00\"}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"startrek\",\"url\":\"https://social.tchncs.de/tags/startrek\"},{\"name\":\"strangenewworlds\",\"url\":\"https://social.tchncs.de/tags/strangenewworlds\"}],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868832093070750\",\"created_at\":\"2025-07-17T13:34:38.764Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://social.tchncs.de/users/erAck/statuses/114868832093070750\",\"url\":\"https://social.tchncs.de/@erAck/114868832093070750\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eToday,
-        July 17, is World Emoji Day. For why July 17 look at your calendar emoji..\\u003c/p\\u003e\\u003cp\\u003e\\u0026quot;\\u003cbr
-        /\\u003eWorld Emoji Day was set on July 17 because that’s the date the calendar
-        emoji shows.\\u003c/p\\u003e\\u003cp\\u003eOriginally, only Apple’s calendar
-        emoji displayed July 17, which can be traced back to the day in 2002 when
-        Apple introduced its desktop calendar app iCal.\\u003c/p\\u003e\\u003cp\\u003eA
-        few years later, on July 17, 2014, the founder of Emojipedia, an online resource
-        for emojis, launched World Emoji Day because of the Apple emoji. In 2016,
-        Google also changed the date of its calendar emoji to July 17.\\u003cbr /\\u003e\\u0026quot;\\u003cbr
-        /\\u003e[cited from \\u003ca href=\\\"https://threema.com/en/blog/world-emoji-day-2025\\\"
+      string: "[{\"id\":\"114870359866949025\",\"created_at\":\"2025-07-17T20:03:10.741Z\",\"in_reply_to_id\":\"114870341462245939\",\"in_reply_to_account_id\":\"109319291946357203\",\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://fosstodon.org/users/MisterHW/statuses/114870359866949025\",\"url\":\"https://fosstodon.org/@MisterHW/114870359866949025\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eNot
+        as extreme but still on-point for the little circuit I\\u0026#39;m working
+        on:\\u003c/p\\u003e\\u003cp\\u003eNHUMH1X - V_EBO=10V\\u003c/p\\u003e\\u003cp\\u003echeap,
+        more pedestrian. \\u003c/p\\u003e\\u003cp\\u003e\\u003ca href=\\\"https://assets.nexperia.com/documents/data-sheet/NHUMH11_1_2_SER.pdf\\\"
         target=\\\"_blank\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ethreema.com/en/blog/world-emoj\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ei-day-2025\\u003c/span\\u003e\\u003c/a\\u003e]\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
-        href=\\\"https://social.tchncs.de/tags/WorldEmojiDay\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eWorldEmojiDay\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/emojis\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eemojis\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":null,\"account\":{\"id\":\"39581\",\"username\":\"erAck\",\"acct\":\"erAck\",\"display_name\":\"erAck\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2017-04-23T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003ca
-        href=\\\"https://social.tchncs.de/tags/LibreOffice\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eLibreOffice\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/Calc\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eCalc\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/hacker\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ehacker\\u003c/span\\u003e\\u003c/a\\u003e
-        ⌨️ \\u003ca href=\\\"https://social.tchncs.de/tags/cyclist\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ecyclist\\u003c/span\\u003e\\u003c/a\\u003e
-        ashore \U0001F6B4 \\u003ca href=\\\"https://social.tchncs.de/tags/sailor\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003esailor\\u003c/span\\u003e\\u003c/a\\u003e
-        offshore ⛵ \\u003ca href=\\\"https://social.tchncs.de/tags/guitar\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eguitar\\u003c/span\\u003e\\u003c/a\\u003e
-        \U0001F3B8 and \U0001F3BC \\u003ca href=\\\"https://social.tchncs.de/tags/violin\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eviolin\\u003c/span\\u003e\\u003c/a\\u003e
-        tormentor \U0001F3BB\\u003c/p\\u003e\\u003cp\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/TDF\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eTDF\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/ODF\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eODF\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/FSFE\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFSFE\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/FLOSS\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFLOSS\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
-        /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/FreeSoftware\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFreeSoftware\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/FreeSociety\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFreeSociety\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
-        /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/Hamburg\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eHamburg\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/HH\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eHH\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/DE\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eDE\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
-        href=\\\"https://social.tchncs.de/tags/nobot\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003enobot\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
-        /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/nobots\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003enobots\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
-        href=\\\"https://social.tchncs.de/tags/Qualit%C3%A4tsfollower\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eQualitätsfollower\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003eTotemtier:
-        \\u003ca href=\\\"https://social.tchncs.de/tags/Eichh%C3%B6rnchen\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eEichhörnchen\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@erAck\",\"uri\":\"https://social.tchncs.de/users/erAck\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/000/039/581/original/5d23d83c1f141208.png\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/000/039/581/original/5d23d83c1f141208.png\",\"header\":\"https://f2.tchncs.de/accounts/headers/000/039/581/original/e44ff0b9e5275216.jpg\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/000/039/581/original/e44ff0b9e5275216.jpg\",\"followers_count\":334,\"following_count\":453,\"statuses_count\":8438,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"Sweet
-        Home\",\"value\":\"\\u003ca href=\\\"https://erack.de\\\" target=\\\"_blank\\\"
-        rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003eerack.de\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2018-10-31T01:50:34.328+00:00\"},{\"name\":\"Incarnations\",\"value\":\"\\u003ca
-        href=\\\"https://erack.de/incarnations.html\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003eassets.nexperia.com/documents/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003edata-sheet/NHUMH11_1_2_SER.pdf\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"application\":null,\"account\":{\"id\":\"109319291946357203\",\"username\":\"MisterHW\",\"acct\":\"MisterHW\",\"display_name\":\"Helge
+        Wurst\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-10T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eStudied
+        physics, now into power electronics and RF. PCB design with KiCad, mechanical
+        design with FreeCAD. C/C++, Python to breathe life into things. Likes FEM,
+        FDTD.\\u003c/p\\u003e\",\"url\":\"https://fosstodon.org/@MisterHW\",\"uri\":\"https://fosstodon.org/users/MisterHW\",\"avatar\":\"https://fosstodon.org/avatars/original/missing.png\",\"avatar_static\":\"https://fosstodon.org/avatars/original/missing.png\",\"header\":\"https://fosstodon.org/headers/original/missing.png\",\"header_static\":\"https://fosstodon.org/headers/original/missing.png\",\"followers_count\":114,\"following_count\":37,\"statuses_count\":1748,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"noindex\":true,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"github\",\"value\":\"\\u003ca
+        href=\\\"https://github.com/MisterHW\\\" target=\\\"_blank\\\" rel=\\\"nofollow
         noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003eerack.de/incarnations.html\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2023-02-08T19:23:04.602+00:00\"},{\"name\":\"Keyoxide\",\"value\":\"\\u003ca
-        href=\\\"https://keyoxide.org/2265D7F3A7B095CC3918630B6A6CD5B765632D3A\\\"
+        class=\\\"\\\"\\u003egithub.com/MisterHW\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114870356175589097\",\"created_at\":\"2025-07-17T20:02:14.416Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://fosstodon.org/users/dneaves/statuses/114870356175589097\",\"url\":\"https://fosstodon.org/@dneaves/114870356175589097\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eDo
+        we think I\\u0026#39;ll die if I drink the thicc coke?\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"application\":{\"name\":\"Buffer\",\"website\":\"https://buffer.com\"},\"account\":{\"id\":\"238062\",\"username\":\"dneaves\",\"acct\":\"dneaves\",\"display_name\":\"Dave\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2020-05-22T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e31
+        he/him\\u003cbr /\\u003e\U0001F47E Game Player\\u003cbr /\\u003e\U0001F3B2
+        Dice Jailor\\u003cbr /\\u003e\U0001F4BB Functional Typer\\u003cbr /\\u003e\U0001F4F9
+        Content Creator\\u003cbr /\\u003e\U0001F3A7 Air Wiggler\\u003cbr /\\u003e\U0001F3F9
+        Arrow Shooter\\u003cbr /\\u003e⛔️ Out of Charac\\u003c/p\\u003e\\u003cp\\u003edneaves.com\\u003c/p\\u003e\",\"url\":\"https://fosstodon.org/@dneaves\",\"uri\":\"https://fosstodon.org/users/dneaves\",\"avatar\":\"https://cdn.fosstodon.org/accounts/avatars/000/238/062/original/77c52390f1da0772.png\",\"avatar_static\":\"https://cdn.fosstodon.org/accounts/avatars/000/238/062/original/77c52390f1da0772.png\",\"header\":\"https://cdn.fosstodon.org/accounts/headers/000/238/062/original/2f42905150d77a29.png\",\"header_static\":\"https://cdn.fosstodon.org/accounts/headers/000/238/062/original/2f42905150d77a29.png\",\"followers_count\":30,\"following_count\":54,\"statuses_count\":345,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"noindex\":true,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"Keyoxide\",\"value\":\"\\u003ca
+        href=\\\"https://keyoxide.org/BF94554FD3BAFFC146A0F6D9410612DB282B9D5B\\\"
         target=\\\"_blank\\\" rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ekeyoxide.org/2265D7F3A7B095CC3\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e918630B6A6CD5B765632D3A\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2021-08-20T09:25:40.795+00:00\"}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"worldemojiday\",\"url\":\"https://social.tchncs.de/tags/worldemojiday\"},{\"name\":\"emojis\",\"url\":\"https://social.tchncs.de/tags/emojis\"}],\"emojis\":[],\"quote\":null,\"card\":{\"url\":\"https://threema.com/en/blog/world-emoji-day-2025\",\"title\":\"Fun
-        Facts to Celebrate World Emoji Day\",\"description\":\"Every year on July
-        17, World Emoji Day is celebrated. Because emojis have become indispensable
-        for chat communication – whether as a reaction to a message or directly in
-        the text – we have put together a few fun facts about the little pictograms.\",\"language\":\"en\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"Threema\",\"provider_url\":\"\",\"html\":\"\",\"width\":663,\"height\":347,\"image\":\"https://f2.tchncs.de/cache/preview_cards/images/038/923/731/original/e2478a64b53303b7.jpg\",\"image_description\":\"Globe
-        emoji, heart-eyes emoji, and calendar emoji surrounded by other emojis, celebrating
-        World Emoji Day.\",\"embed_url\":\"\",\"blurhash\":\"UOOql-OsYP-RxakVj?n$y=xCmRJCt,nOniXS\",\"published_at\":null,\"authors\":[]},\"poll\":null},{\"id\":\"114868813290419665\",\"created_at\":\"2025-07-17T13:29:51.858Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://social.tchncs.de/users/Photor/statuses/114868813290419665\",\"url\":\"https://social.tchncs.de/@Photor/114868813290419665\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eEin
-        Bild von der Anreise zum Lehrgang - unter der Gewitterfront durch und sicher
-        fotografiert aus dem fahrenden Zug heraus gemacht.\\u003c/p\\u003e\\u003cp\\u003ePS:
-        Bildbeschreibung will nicht - also hier:\\u003cbr /\\u003eUnten Landschaft
-        aus bewaldeten Hügeln mit Feldern und Wiesen dazwischen (dunkel). Darüber
-        grauer Himmel mit sehr dunklen Wolken. Alles unscharf außer den schräg durch’s
-        Bild laufenden Streifen von ablaufendem Regenwasser auf dem Fenster, durch
-        den Fahrtwind nach hinten geweht.\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Toot!\",\"website\":\"https://toot.c3.cx/\"},\"account\":{\"id\":\"122636\",\"username\":\"Photor\",\"acct\":\"Photor\",\"display_name\":\"Photor\",\"locked\":true,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2018-08-19T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003ca
-        href=\\\"https://social.tchncs.de/tags/Physik\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ePhysik\\u003c/span\\u003e\\u003c/a\\u003e,
-        \\u003ca href=\\\"https://social.tchncs.de/tags/Simulation\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eSimulation\\u003c/span\\u003e\\u003c/a\\u003e,
-        \\u003ca href=\\\"https://social.tchncs.de/tags/Ingenieur\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eIngenieur\\u003c/span\\u003e\\u003c/a\\u003e,
-        \\u003ca href=\\\"https://social.tchncs.de/tags/Astrophysik\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eAstrophysik\\u003c/span\\u003e\\u003c/a\\u003e,
-        \\u003ca href=\\\"https://social.tchncs.de/tags/Linux\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eLinux\\u003c/span\\u003e\\u003c/a\\u003e,
-        \ \\u003ca href=\\\"https://social.tchncs.de/tags/Opensource\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eOpensource\\u003c/span\\u003e\\u003c/a\\u003e,
-        \\u003ca href=\\\"https://social.tchncs.de/tags/Fotografie\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFotografie\\u003c/span\\u003e\\u003c/a\\u003e,
-        \\u003ca href=\\\"https://social.tchncs.de/tags/LaTeX\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eLaTeX\\u003c/span\\u003e\\u003c/a\\u003e,
-        \\u003ca href=\\\"https://social.tchncs.de/tags/Delphi\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eDelphi\\u003c/span\\u003e\\u003c/a\\u003e,
-        \\u003ca href=\\\"https://social.tchncs.de/tags/Lazarus\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eLazarus\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
-        /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/nobot\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003enobot\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@Photor\",\"uri\":\"https://social.tchncs.de/users/Photor\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/000/122/636/original/1032c56e32dee55d.jpeg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/000/122/636/original/1032c56e32dee55d.jpeg\",\"header\":\"https://f2.tchncs.de/accounts/headers/000/122/636/original/ee7e1ab2de0deeaf.jpg\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/000/122/636/original/ee7e1ab2de0deeaf.jpg\",\"followers_count\":495,\"following_count\":572,\"statuses_count\":1177,\"last_status_at\":\"2025-07-17\",\"hide_collections\":true,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"Jabber-ID\",\"value\":\"photor@mailbox.org\",\"verified_at\":null},{\"name\":\"Threema\",\"value\":\"\\u003ca
-        href=\\\"https://threema.id/PE2K3VXY\\\" target=\\\"_blank\\\" rel=\\\"nofollow
-        noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003ethreema.id/PE2K3VXY\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[{\"id\":\"114868785889263146\",\"type\":\"image\",\"url\":\"https://f2.tchncs.de/media_attachments/files/114/868/785/889/263/146/original/8999e67d2f34e329.jpg\",\"preview_url\":\"https://f2.tchncs.de/media_attachments/files/114/868/785/889/263/146/small/8999e67d2f34e329.jpg\",\"remote_url\":null,\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"original\":{\"width\":3325,\"height\":2494,\"size\":\"3325x2494\",\"aspect\":1.3331996792301524},\"small\":{\"width\":554,\"height\":416,\"size\":\"554x416\",\"aspect\":1.3317307692307692},\"focus\":{\"x\":0.06591796875,\"y\":-0.40625000000000017}},\"description\":null,\"blurhash\":\"UQEyY$-;Rjof~qWVayt74nD%t6xuD%IUWBay\"}],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868811647511699\",\"created_at\":\"2025-07-17T13:29:26.789Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://social.tchncs.de/users/Sunnypug/statuses/114868811647511699\",\"url\":\"https://social.tchncs.de/@Sunnypug/114868811647511699\",\"replies_count\":1,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eBands
-        oder Künstler, die ich gern live gesehen hätte:\\u003c/p\\u003e\\u003cp\\u003eNirvana
-        \\u003cbr /\\u003eBeastie Boys\\u003cbr /\\u003eJohnny Cash\\u003cbr /\\u003eTon
-        Steine Scherben \\u003cbr /\\u003eThe Doors\\u003c/p\\u003e\\u003cp\\u003eListe
-        nicht vollständig. Sind die ersten, die mir einfallen. Und bei euch so? \\u003c/p\\u003e\\u003cp\\u003e\\u003ca
-        href=\\\"https://social.tchncs.de/tags/bands\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ebands\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/music\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003emusic\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/musik\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003emusik\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Fedilab\",\"website\":\"https://fedilab.app\"},\"account\":{\"id\":\"10329\",\"username\":\"Sunnypug\",\"acct\":\"Sunnypug\",\"display_name\":\"sunnypug\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2017-04-05T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eLinguist.
-        orthography pedant. Android supporter. head of content creation. nature photograph.
-        lower saxony. loves punk music. support your local antifa. my kids: my chinchillas.\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@Sunnypug\",\"uri\":\"https://social.tchncs.de/users/Sunnypug\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/000/010/329/original/9021acca6002022f.jpg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/000/010/329/original/9021acca6002022f.jpg\",\"header\":\"https://f2.tchncs.de/accounts/headers/000/010/329/original/e75db69c82b2eb26.jpg\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/000/010/329/original/e75db69c82b2eb26.jpg\",\"followers_count\":199,\"following_count\":359,\"statuses_count\":3061,\"last_status_at\":\"2025-07-17\",\"hide_collections\":null,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"bands\",\"url\":\"https://social.tchncs.de/tags/bands\"},{\"name\":\"music\",\"url\":\"https://social.tchncs.de/tags/music\"},{\"name\":\"musik\",\"url\":\"https://social.tchncs.de/tags/musik\"}],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868783672055064\",\"created_at\":\"2025-07-17T13:22:19.918Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://social.tchncs.de/users/Cedara/statuses/114868783672055064\",\"url\":\"https://social.tchncs.de/@Cedara/114868783672055064\",\"replies_count\":0,\"reblogs_count\":1,\"favourites_count\":0,\"edited_at\":\"2025-07-17T13:23:54.677Z\",\"content\":\"\\u003cp\\u003eJesus
-        Canadas: Die Bibliothek der wahren Lügen, Coppenrath Verlag 2025.\\u003cbr
-        /\\u003e \\u003cbr /\\u003e\\u003ca href=\\\"https://text.tchncs.de/cedara/h2jesus-canadas-die-bibliothek-der-wahren-lugen-h2\\\"
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ekeyoxide.org/BF94554FD3BAFFC14\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e6A0F6D9410612DB282B9D5B\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2023-07-14T22:35:18.583+00:00\"},{\"name\":\"Website\",\"value\":\"\\u003ca
+        href=\\\"https://dneaves.com\\\" target=\\\"_blank\\\" rel=\\\"nofollow noopener
+        me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003edneaves.com\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2024-10-13T14:32:31.850+00:00\"}]},\"media_attachments\":[{\"id\":\"114870356049184856\",\"type\":\"image\",\"url\":\"https://cdn.fosstodon.org/media_attachments/files/114/870/356/049/184/856/original/2cdbf757e2a17a35.jpeg\",\"preview_url\":\"https://cdn.fosstodon.org/media_attachments/files/114/870/356/049/184/856/small/2cdbf757e2a17a35.jpeg\",\"remote_url\":null,\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"original\":{\"width\":1638,\"height\":4000,\"size\":\"1638x4000\",\"aspect\":0.4095},\"small\":{\"width\":307,\"height\":750,\"size\":\"307x750\",\"aspect\":0.4093333333333333}},\"description\":null,\"blurhash\":\"UVG8fs=q-:t6~qoIbbkCI;NzIpa$NbkCene:\"}],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114870351808858875\",\"created_at\":\"2025-07-17T20:01:07.786Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://fosstodon.org/users/homeassistant/statuses/114870351808858875\",\"url\":\"https://fosstodon.org/@homeassistant/114870351808858875\",\"replies_count\":0,\"reblogs_count\":5,\"favourites_count\":3,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003e✨
+        What\\u0026#39;s new in Home Assistant? ✨\\u003cbr /\\u003e2025.7 was filled
+        with so many good things we\\u0026#39;re bringing you 3 feature highlight
+        videos this month! \U0001F389\\u003c/p\\u003e\\u003cp\\u003eHere\\u0026#39;s
+        Chapter 1 - Assist asks the questions!\\u003c/p\\u003e\\u003cp\\u003eFind
+        the blueprint and what else is new this release on our blog \U0001F449\U0001F3FB
+        \\u003ca href=\\\"https://www.home-assistant.io/blog/2025/07/02/release-20257/\\\"
         target=\\\"_blank\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003etext.tchncs.de/cedara/h2jesus-\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ecanadas-die-bibliothek-der-wahren-lugen-h2\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
-        href=\\\"https://social.tchncs.de/tags/books\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ebooks\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003cbr /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/review\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ereview\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
-        /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/lesekreis\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003elesekreis\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
-        /\\u003e\\u003cspan class=\\\"h-card\\\" translate=\\\"no\\\"\\u003e\\u003ca
-        href=\\\"https://a.gup.pe/u/lesekreis\\\" class=\\\"u-url mention\\\"\\u003e@\\u003cspan\\u003elesekreis\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"account\":{\"id\":\"24531\",\"username\":\"Cedara\",\"acct\":\"Cedara\",\"display_name\":\"Cedara\",\"locked\":true,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2017-04-11T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003ca
-        href=\\\"https://social.tchncs.de/tags/bilingual\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ebilingual\\u003c/span\\u003e\\u003c/a\\u003e
-        (\\u003ca href=\\\"https://social.tchncs.de/tags/German\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eGerman\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u0026amp; \\u003ca href=\\\"https://social.tchncs.de/tags/English\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eEnglish\\u003c/span\\u003e\\u003c/a\\u003e)
-        - \\u003cbr /\\u003eloves \\u003ca href=\\\"https://social.tchncs.de/tags/reading\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ereading\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/books\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ebooks\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/scifi\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003escifi\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/mystery_novels\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003emystery_novels\\u003c/span\\u003e\\u003c/a\\u003e,
-        good \\u003ca href=\\\"https://social.tchncs.de/tags/tea\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003etea\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u0026amp; \\u003ca href=\\\"https://social.tchncs.de/tags/ubuntu\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eubuntu\\u003c/span\\u003e\\u003c/a\\u003e
-        - \\u003cbr /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/Moderator\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eModerator\\u003c/span\\u003e\\u003c/a\\u003e
-        for \\u003ca href=\\\"https://social.tchncs.de/tags/tchncs\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003etchncs\\u003c/span\\u003e\\u003c/a\\u003e.de\\u003cbr
-        /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/Lesen\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eLesen\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/B%C3%BCcher\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eBücher\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/Tee\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eTee\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
-        href=\\\"https://social.tchncs.de/tags/nobot\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003enobot\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003cbr /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/nobridge\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003enobridge\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
-        /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/optout\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eoptout\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
-        href=\\\"https://social.tchncs.de/tags/WearAMask\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eWearAMask\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
-        /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/DrostenUltras\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eDrostenUltras\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
-        /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/geimpft\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003egeimpft\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
-        href=\\\"https://social.tchncs.de/tags/Fediventskalender\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFediventskalender\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
-        /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/DieStimmenimFediversum\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eDieStimmenimFediversum\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
-        /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/althier\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ealthier\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
-        /\\u003ehört gerne \\u003ca href=\\\"https://social.tchncs.de/tags/Schenklradio\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eSchenklradio\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@Cedara\",\"uri\":\"https://social.tchncs.de/users/Cedara\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/000/024/531/original/cbe7b1b03de27740.jpg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/000/024/531/original/cbe7b1b03de27740.jpg\",\"header\":\"https://f2.tchncs.de/accounts/headers/000/024/531/original/62f0fd6840c1c048.png\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/000/024/531/original/62f0fd6840c1c048.png\",\"followers_count\":1151,\"following_count\":645,\"statuses_count\":1040,\"last_status_at\":\"2025-07-17\",\"hide_collections\":true,\"noindex\":true,\"emojis\":[],\"roles\":[{\"id\":\"1\",\"name\":\"Moderator\",\"color\":\"#52b152\"}],\"fields\":[{\"name\":\"semi-public
-        Blog\",\"value\":\"\\u003ca href=\\\"https://cedara.dreamwidth.org\\\" target=\\\"_blank\\\"
-        rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003ecedara.dreamwidth.org\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2018-10-31T10:05:13.054+00:00\"},{\"name\":\"Rezensionen,
-        Rezepte, Geschichten\",\"value\":\"\\u003ca href=\\\"https://text.tchncs.de/cedara/\\\"
-        target=\\\"_blank\\\" rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003etext.tchncs.de/cedara/\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"also
-        at:\",\"value\":\"\\u003ca href=\\\"https://lesetagebu.ch/von/Cedara\\\" target=\\\"_blank\\\"
-        rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003elesetagebu.ch/von/Cedara\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-11-30T06:10:03.591+00:00\"},{\"name\":\"also
-        at:\",\"value\":\"literatur.social (backup), pixel.tchncs.de, threema, XMPP,
-        discord, twitch\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[{\"id\":\"109091464819524340\",\"username\":\"lesekreis\",\"url\":\"https://a.gup.pe/u/lesekreis\",\"acct\":\"lesekreis@a.gup.pe\"}],\"tags\":[{\"name\":\"lesekreis\",\"url\":\"https://social.tchncs.de/tags/lesekreis\"},{\"name\":\"books\",\"url\":\"https://social.tchncs.de/tags/books\"},{\"name\":\"review\",\"url\":\"https://social.tchncs.de/tags/review\"}],\"emojis\":[],\"quote\":null,\"card\":{\"url\":\"https://text.tchncs.de/cedara/h2jesus-canadas-die-bibliothek-der-wahren-lugen-h2\",\"title\":\"Jesus
-        Canadas: Die Bibliothek der wahren Lügen\",\"description\":\"Oskar gewinnt
-        den Schreibwettbewerb seines Lieblingsautors und wird von ihm nach Hause eingeladen,
-        wo der Teenager die Kunst des Schreibens erlernen darf, indem er selbst eine
-        Geschic...\",\"language\":\"de\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"Cedaras
-        Couch\",\"provider_url\":\"\",\"html\":\"\",\"width\":480,\"height\":480,\"image\":\"https://f2.tchncs.de/cache/preview_cards/images/038/923/364/original/89c8035f89c62d65.png\",\"image_description\":\"\",\"embed_url\":\"\",\"blurhash\":\"U6Rysg%M~q?b?bj[M{WB_3of4nM{t7WB%Mt7\",\"published_at\":\"2025-07-17T13:18:45.000Z\",\"authors\":[]},\"poll\":null},{\"id\":\"114868767757655644\",\"created_at\":\"2025-07-17T13:18:17.082Z\",\"in_reply_to_id\":\"114868643227379508\",\"in_reply_to_account_id\":\"109290449048358719\",\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://social.tchncs.de/users/partim/statuses/114868767757655644\",\"url\":\"https://social.tchncs.de/@partim/114868767757655644\",\"replies_count\":0,\"reblogs_count\":1,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eICE
-        trunk line Frankfurt – Basel. Admittedly, they are working on it.\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Ivory
-        for iOS\",\"website\":\"https://tapbots.com/\"},\"account\":{\"id\":\"109290449048358719\",\"username\":\"partim\",\"acct\":\"partim\",\"display_name\":\"Martin
-        Hoffmann\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2022-11-05T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eTake
-        the slow train, see things!\\u003c/p\\u003e\\u003cp\\u003eMakes software for
-        Internet infrastructure and maps.\\u003c/p\\u003e\\u003cp\\u003eLoves trains
-        – both using them and understanding operation and engineering. Builds a railway
-        map at \\u003ca href=\\\"https://map.railwayhistory.org/\\\" target=\\\"_blank\\\"
-        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003emap.railwayhistory.org/\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003eGerman
-        living in the Netherlands. He/him.\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@partim\",\"uri\":\"https://social.tchncs.de/users/partim\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/109/290/449/048/358/719/original/fcc5267ddd2b3420.jpg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/109/290/449/048/358/719/original/fcc5267ddd2b3420.jpg\",\"header\":\"https://f2.tchncs.de/accounts/headers/109/290/449/048/358/719/original/4717affe220e2085.jpeg\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/109/290/449/048/358/719/original/4717affe220e2085.jpeg\",\"followers_count\":782,\"following_count\":214,\"statuses_count\":10261,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"NLnet
-        Labs\",\"value\":\"\\u003ca href=\\\"https://nlnetlabs.nl/people/\\\" target=\\\"_blank\\\"
-        rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003enlnetlabs.nl/people/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-11-07T11:27:14.921+00:00\"},{\"name\":\"Github\",\"value\":\"\\u003ca
-        href=\\\"https://github.com/partim\\\" target=\\\"_blank\\\" rel=\\\"nofollow
-        noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003egithub.com/partim\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2023-02-06T10:04:21.376+00:00\"},{\"name\":\"Railway
-        History Map\",\"value\":\"\\u003ca href=\\\"https://map.railwayhistory.org\\\"
-        target=\\\"_blank\\\" rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003emap.railwayhistory.org\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[{\"id\":\"114868767480281240\",\"type\":\"image\",\"url\":\"https://f2.tchncs.de/media_attachments/files/114/868/767/480/281/240/original/3ce24edc210bf959.jpeg\",\"preview_url\":\"https://f2.tchncs.de/media_attachments/files/114/868/767/480/281/240/small/3ce24edc210bf959.jpeg\",\"remote_url\":null,\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"original\":{\"width\":3325,\"height\":2494,\"size\":\"3325x2494\",\"aspect\":1.3331996792301524},\"small\":{\"width\":554,\"height\":416,\"size\":\"554x416\",\"aspect\":1.3317307692307692}},\"description\":\"A
-        German semaphore signal shot upward through a train window.\",\"blurhash\":\"UTHoan4U4Tk9.7IBRjt6IAtRbIae.7V@M{fk\"}],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868765534008578\",\"created_at\":\"2025-07-17T13:17:43.155Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://social.tchncs.de/users/formwandler/statuses/114868765534008578\",\"url\":\"https://social.tchncs.de/@formwandler/114868765534008578\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":\"2025-07-17T13:20:47.586Z\",\"content\":\"\\u003cp\\u003eAb
-        heute Abend wird das neue Balver Lüll \\u003ca href=\\\"https://social.tchncs.de/tags/Bier\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eBier\\u003c/span\\u003e\\u003c/a\\u003e
-        in \\u003ca href=\\\"https://social.tchncs.de/tags/Balve\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eBalve\\u003c/span\\u003e\\u003c/a\\u003e
-        ausgeschenkt. Mal gespannt wie es schmeckt. Auch morgen, am Vorabend vom \\u003ca
-        href=\\\"https://social.tchncs.de/tags/Schuetzenfest\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eSchuetzenfest\\u003c/span\\u003e\\u003c/a\\u003e
-        in der Balver Höhle, gibt es das Bier in der Innenstadt zu kaufen.\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
-        href=\\\"https://balver-luell.de\\\" target=\\\"_blank\\\" rel=\\\"nofollow
-        noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003ebalver-luell.de\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
-        href=\\\"https://social.tchncs.de/tags/BalverL%C3%BCll\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eBalverLüll\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/BalverH%C3%B6hle\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eBalverHöhle\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Tokodon\",\"website\":\"https://apps.kde.org/tokodon\"},\"account\":{\"id\":\"109586472907800200\",\"username\":\"formwandler\",\"acct\":\"formwandler\",\"display_name\":\"Ralf
-        Krüdewagen \U0001F1E9\U0001F1EA:tux:\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2022-12-27T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eIch
-        mag Open Source Software, \\u003ca href=\\\"https://social.tchncs.de/tags/Linux\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eLinux\\u003c/span\\u003e\\u003c/a\\u003e
-        und \\u003ca href=\\\"https://social.tchncs.de/tags/Freiheit\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFreiheit\\u003c/span\\u003e\\u003c/a\\u003e
-        im allgemeinen. Beruflich war ich zuletzt Product Owner für Softwareprodukte.\\u003c/p\\u003e\\u003cp\\u003eWeitere
-        Interessen: \\u003ca href=\\\"https://social.tchncs.de/tags/Radfahren\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eRadfahren\\u003c/span\\u003e\\u003c/a\\u003e,
-        \\u003ca href=\\\"https://social.tchncs.de/tags/Wandern\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eWandern\\u003c/span\\u003e\\u003c/a\\u003e,
-        Literatur (Horror, Fantasy, SciFi), Musik (melod. Heavy Metal, Rock, 80er).\\u003c/p\\u003e\\u003cp\\u003ePolitisch:
-        Gerechtigkeit, gesunder Menschenverstand, \\u003ca href=\\\"https://social.tchncs.de/tags/Grundrechte\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eGrundrechte\\u003c/span\\u003e\\u003c/a\\u003e
-        als Abwehrrechte gegen staatliche Willkür.\\u003c/p\\u003e\\u003cp\\u003e##
-        EN\\u003cbr /\\u003eMy interests: \\u003ca href=\\\"https://social.tchncs.de/tags/opensource\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eopensource\\u003c/span\\u003e\\u003c/a\\u003e,
-        Linux, freedom, agility, biking, hiking, music (metal, rock, 80s), books (horror,
-        SciFi, fantasy).\\u003c/p\\u003e\\u003cp\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/nobot\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003enobot\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@formwandler\",\"uri\":\"https://social.tchncs.de/users/formwandler\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/109/586/472/907/800/200/original/aff11f7a5225afff.jpg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/109/586/472/907/800/200/original/aff11f7a5225afff.jpg\",\"header\":\"https://f2.tchncs.de/accounts/headers/109/586/472/907/800/200/original/c511c09708151251.jpeg\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/109/586/472/907/800/200/original/c511c09708151251.jpeg\",\"followers_count\":9,\"following_count\":77,\"statuses_count\":62,\"last_status_at\":\"2025-07-17\",\"hide_collections\":true,\"noindex\":false,\"emojis\":[{\"shortcode\":\"tux\",\"url\":\"https://f2.tchncs.de/custom_emojis/images/000/000/394/original/1fa6ea79c9903874.png\",\"static_url\":\"https://f2.tchncs.de/custom_emojis/images/000/000/394/static/1fa6ea79c9903874.png\",\"visible_in_picker\":true}],\"roles\":[],\"fields\":[{\"name\":\"Meine
-        Homepage \U0001F3E0\",\"value\":\"\\u003ca href=\\\"https://www.kruedewagen.de/wiki/\\\"
-        target=\\\"_blank\\\" rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003ekruedewagen.de/wiki/\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-12-28T16:28:22.651+00:00\"}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"schuetzenfest\",\"url\":\"https://social.tchncs.de/tags/schuetzenfest\"},{\"name\":\"bier\",\"url\":\"https://social.tchncs.de/tags/bier\"},{\"name\":\"balve\",\"url\":\"https://social.tchncs.de/tags/balve\"},{\"name\":\"balverlull\",\"url\":\"https://social.tchncs.de/tags/balverlull\"},{\"name\":\"balverhohle\",\"url\":\"https://social.tchncs.de/tags/balverhohle\"}],\"emojis\":[],\"quote\":null,\"card\":{\"url\":\"https://balver-luell.de/\",\"title\":\"Balver
-        Lüll - Ein Stück Sauerländer Brautradition kehrt zu uns zurück - BALVER LÜLL
-        - DAS BIER VON HIER\",\"description\":\"\",\"language\":\"de\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"BALVER
-        LÜLL - DAS BIER VON HIER\",\"provider_url\":\"\",\"html\":\"\",\"width\":593,\"height\":388,\"image\":\"https://f2.tchncs.de/cache/preview_cards/images/038/923/234/original/4afcd36b8c45a135.jpg\",\"image_description\":\"\",\"embed_url\":\"\",\"blurhash\":\"UcI=P#.9WV%M-;t7M{oz_Nx]M{ayIUWBj?oe\",\"published_at\":null,\"authors\":[]},\"poll\":null},{\"id\":\"114868751038682059\",\"created_at\":\"2025-07-17T13:14:01.972Z\",\"in_reply_to_id\":\"114867480660733388\",\"in_reply_to_account_id\":\"126494\",\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://social.tchncs.de/users/marcr/statuses/114868751038682059\",\"url\":\"https://social.tchncs.de/@marcr/114868751038682059\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":1,\"edited_at\":null,\"content\":\"\\u003cp\\u003eDas
-        Mittagessen hat gut geklappt. Für 35€ an Zutaten einen großen Topf Gemüse-Curry
-        mit Reis für 15 Personen gekocht.\\u003cbr /\\u003eIch glaub, ich muss Zuhause
-        auch mehr Meal Prep machen. \U0001F606\\u003c/p\\u003e\\u003cp\\u003eEinige
-        von uns haben noch die Gomi Dori Technik geübt.\\u003cbr /\\u003eAuf gut deutsch:
-        Müll sammeln. Da wir den Sportplatz für unser morgendliches Waffentraining
-        kostenlos nutzen durften, und die Wiese extra für uns gemäht wurde, wurde
-        vereinbart, dass wir als Ausgleich einmal den Platz abgehen und herumliegenden
-        Müll aufsammeln.\\u003c/p\\u003e\\u003cp\\u003eJetzt noch ein kurzes Nickerchen,
-        bevor das Kindertraining beginnt.\\u003c/p\\u003e\\u003cp\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/MarcsAikidoWoche\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eMarcsAikidoWoche\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Tusky\",\"website\":\"https://tusky.app\"},\"account\":{\"id\":\"126494\",\"username\":\"marcr\",\"acct\":\"marcr\",\"display_name\":\"Marc
-        Riese\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2018-08-22T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eDubbed
-        \\u0026quot;Assistant Keeper of the Language - Semantics Chapter\\u0026quot;
-        by \\u003cspan class=\\\"h-card\\\" translate=\\\"no\\\"\\u003e\\u003ca href=\\\"https://mindly.social/@strangeseawolf\\\"
-        class=\\\"u-url mention\\\"\\u003e@\\u003cspan\\u003estrangeseawolf\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e
-        \\u003c/p\\u003e\\u003cp\\u003eOtherwise \\u003ca href=\\\"https://social.tchncs.de/tags/developer\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003edeveloper\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/author\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eauthor\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/musician\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003emusician\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/singer\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003esinger\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/aikidoka\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eaikidoka\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003eInterested
-        in \\u003ca href=\\\"https://social.tchncs.de/tags/music\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003emusic\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/politics\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003epolitics\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/environment\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eenvironment\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/science\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003escience\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/personaldevelopment\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003epersonaldevelopment\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/nerdstuff\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003enerdstuff\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/language\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003elanguage\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003eI\\u0026#39;m
-        writing in German and English.\\u003c/p\\u003e\\u003cp\\u003eNo alt text,
-        no boost!\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@marcr\",\"uri\":\"https://social.tchncs.de/users/marcr\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/000/126/494/original/9d314bd3946e1e9a.png\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/000/126/494/original/9d314bd3946e1e9a.png\",\"header\":\"https://f2.tchncs.de/accounts/headers/000/126/494/original/988c4f15635a15c7.png\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/000/126/494/original/988c4f15635a15c7.png\",\"followers_count\":269,\"following_count\":632,\"statuses_count\":8740,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"Kinderbuch\",\"value\":\"\\u003ca
-        href=\\\"https://www.mutfreunde.de\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ehome-assistant.io/blog/2025/07\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e/02/release-20257/\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://fosstodon.org/tags/Release\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eRelease\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/SmartHome\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eSmartHome\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/HomeAutomation\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eHomeAutomation\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109305287743222285\",\"username\":\"homeassistant\",\"acct\":\"homeassistant\",\"display_name\":\"Home
+        Assistant\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-08T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eOpen
+        source home automation that puts local control \\u0026amp; privacy first.
+        Powered by a worldwide community of tinkerers \\u0026amp; DIY enthusiasts.\\u003c/p\\u003e\",\"url\":\"https://fosstodon.org/@homeassistant\",\"uri\":\"https://fosstodon.org/users/homeassistant\",\"avatar\":\"https://cdn.fosstodon.org/accounts/avatars/109/305/287/743/222/285/original/12be4e2c20a14afd.png\",\"avatar_static\":\"https://cdn.fosstodon.org/accounts/avatars/109/305/287/743/222/285/original/12be4e2c20a14afd.png\",\"header\":\"https://cdn.fosstodon.org/accounts/headers/109/305/287/743/222/285/original/2fd58c20f1c20563.png\",\"header_static\":\"https://cdn.fosstodon.org/accounts/headers/109/305/287/743/222/285/original/2fd58c20f1c20563.png\",\"followers_count\":19034,\"following_count\":25,\"statuses_count\":768,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"Website\",\"value\":\"\\u003ca
+        href=\\\"https://www.home-assistant.io\\\" target=\\\"_blank\\\" rel=\\\"nofollow
         noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003emutfreunde.de\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-11-21T23:51:32.679+00:00\"},{\"name\":\"Pixelfed\",\"value\":\"\\u003ca
-        href=\\\"https://pixel.tchncs.de/marcr\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        class=\\\"\\\"\\u003ehome-assistant.io\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-11-09T16:35:39.130+00:00\"},{\"name\":\"Twitter\",\"value\":\"\\u003ca
+        href=\\\"https://twitter.com/home_assistant\\\" target=\\\"_blank\\\" rel=\\\"nofollow
         noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003epixel.tchncs.de/marcr\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2023-03-25T12:08:03.608+00:00\"},{\"name\":\"Blog\",\"value\":\"\\u003ca
-        href=\\\"https://text.tchncs.de/marcr\\\" target=\\\"_blank\\\" rel=\\\"nofollow
-        noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003etext.tchncs.de/marcr\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2023-10-03T14:57:08.708+00:00\"}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"marcsaikidowoche\",\"url\":\"https://social.tchncs.de/tags/marcsaikidowoche\"}],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868747733633451\",\"created_at\":\"2025-07-17T13:13:11.541Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://social.tchncs.de/users/Erdrandbewohner/statuses/114868747733633451\",\"url\":\"https://social.tchncs.de/@Erdrandbewohner/114868747733633451\",\"replies_count\":2,\"reblogs_count\":2,\"favourites_count\":16,\"edited_at\":null,\"content\":\"\\u003cp\\u003eVor
-        kurzem: \\u0026quot;Oh nein! Laut Vorhersage kommt eine Hitzewelle nach der
-        anderen Hitzewelle! Wie schlimm!\\u0026quot;\\u003c/p\\u003e\\u003cp\\u003eUnd
-        jetzt: \\u0026quot;Oh nein! Laut Vorhersage wars das jetzt mit dem Sommer,
-        ab nächster Woche haben wir Herbstwetter und es wird nix mehr mit sommerlichen
-        Temperaturen!!!\\u0026quot;\\u003c/p\\u003e\\u003cp\\u003eNichts macht die
-        Deutschen kirrer als das Wetter, das sich nicht an die reißerischen Spekulationen
-        von irgendwelchen Clickbait-Meteorolog*innen hält.\\u003c/p\\u003e\",\"reblog\":null,\"account\":{\"id\":\"189016\",\"username\":\"Erdrandbewohner\",\"acct\":\"Erdrandbewohner\",\"display_name\":\"Erdrandbewohner\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2019-02-19T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eInhaber
-        einer Siegerurkunde der Bundesjugendspiele 1985. \\u003c/p\\u003e\\u003cp\\u003eGroßer
-        Gewinner bei der Neurodivergenz-Lotterie.\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@Erdrandbewohner\",\"uri\":\"https://social.tchncs.de/users/Erdrandbewohner\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/000/189/016/original/a47642607ec69580.jpg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/000/189/016/original/a47642607ec69580.jpg\",\"header\":\"https://f2.tchncs.de/accounts/headers/000/189/016/original/95ee080eb3bd2f1d.jpg\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/000/189/016/original/95ee080eb3bd2f1d.jpg\",\"followers_count\":3585,\"following_count\":802,\"statuses_count\":117,\"last_status_at\":\"2025-07-17\",\"hide_collections\":true,\"noindex\":true,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"Pixelfed\",\"value\":\"\\u003ca
-        href=\\\"https://pixelfed.de/Erdrandbewohner\\\" target=\\\"_blank\\\" rel=\\\"nofollow
-        noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003epixelfed.de/Erdrandbewohner\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"XMPP\",\"value\":\"erdrandbewohner@tchncs.de\",\"verified_at\":null},{\"name\":\"Löschung
-        der Tröts\",\"value\":\"Nach einer Woche\",\"verified_at\":null},{\"name\":\"Blog\",\"value\":\"\\u003ca
-        href=\\\"https://text.tchncs.de/erdrandbewohner/\\\" target=\\\"_blank\\\"
+        class=\\\"\\\"\\u003etwitter.com/home_assistant\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"YouTube\",\"value\":\"\\u003ca
+        href=\\\"https://www.youtube.com/@home_assistant\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003eyoutube.com/@home_assistant\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Discord\",\"value\":\"\\u003ca
+        href=\\\"https://www.home-assistant.io/join-chat\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003ehome-assistant.io/join-chat\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[{\"id\":\"114870351372591468\",\"type\":\"video\",\"url\":\"https://cdn.fosstodon.org/media_attachments/files/114/870/351/372/591/468/original/a5b06cd6387ca583.mp4\",\"preview_url\":\"https://cdn.fosstodon.org/media_attachments/thumbnails/114/870/351/372/591/468/original/f6fb2996dcf45eb0.jpg\",\"remote_url\":null,\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"colors\":{\"background\":\"#40d9f3\",\"foreground\":\"#032930\",\"accent\":\"#086778\"},\"original\":{\"width\":1080,\"height\":1350,\"frame_rate\":\"24000/1001\",\"duration\":31.031,\"bitrate\":2974407},\"small\":{\"width\":429,\"height\":536,\"size\":\"429x536\",\"aspect\":0.8003731343283582}},\"description\":null,\"blurhash\":\"U480vYpdoKh1t-Hce:V]s+s+jba{t-oJj?ay\"}],\"mentions\":[],\"tags\":[{\"name\":\"release\",\"url\":\"https://fosstodon.org/tags/release\"},{\"name\":\"smarthome\",\"url\":\"https://fosstodon.org/tags/smarthome\"},{\"name\":\"homeautomation\",\"url\":\"https://fosstodon.org/tags/homeautomation\"}],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114870348177326739\",\"created_at\":\"2025-07-17T20:00:12.376Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://fosstodon.org/users/adamsdesk/statuses/114870348177326739\",\"url\":\"https://fosstodon.org/@adamsdesk/114870348177326739\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eLittle
+        Bits: Issue #26 For June 2025\\u003c/p\\u003e\\u003cp\\u003eA new instalment
+        of Little Bits is here with endless opportunities, inspiration and creativity
+        along with a message of encouragement to get ‘er done.\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://www.adamsdesk.com/posts/little-bits-issue-26/\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
+        class=\\\"ellipsis\\\"\\u003eadamsdesk.com/posts/little-bit\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003es-issue-26/\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://fosstodon.org/tags/blog\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eblog\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/OpenSource\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eOpenSource\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/FreeSoftware\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFreeSoftware\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/tech\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003etech\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/news\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003enews\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/LinkDump\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eLinkDump\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"application\":null,\"account\":{\"id\":\"297547\",\"username\":\"adamsdesk\",\"acct\":\"adamsdesk\",\"display_name\":\"Adam\",\"locked\":true,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2021-01-12T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eA
+        technology enthusiast, privacy, security and FOSS advocate that specialized
+        in DevOps for companies and individuals across North America and Europe. Founder
+        and operator of Adamsdesk.\\u003c/p\\u003e\\u003cp\\u003e\\u003ca href=\\\"https://fosstodon.org/tags/BSD\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eBSD\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/cycling\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ecycling\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/DOS\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eDOS\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/fedi22\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003efedi22\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/fitness\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003efitness\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/FOSS\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFOSS\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/GNU\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eGNU\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/infosec\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003einfosec\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/Lego\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eLego\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/linux\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003elinux\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/MOC\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eMOC\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/MSDOS\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eMSDOS\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/OpenSource\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eOpenSource\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/OpSec\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eOpSec\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/OSINT\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eOSINT\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/pinball\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003epinball\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/privacy\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eprivacy\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/RightToRepair\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eRightToRepair\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/security\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003esecurity\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/StarTrek\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eStarTrek\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/Unix\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eUnix\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://fosstodon.org/@adamsdesk\",\"uri\":\"https://fosstodon.org/users/adamsdesk\",\"avatar\":\"https://cdn.fosstodon.org/accounts/avatars/000/297/547/original/c0873a21fdbacc62.jpg\",\"avatar_static\":\"https://cdn.fosstodon.org/accounts/avatars/000/297/547/original/c0873a21fdbacc62.jpg\",\"header\":\"https://cdn.fosstodon.org/accounts/headers/000/297/547/original/055b9f467e848d4b.jpg\",\"header_static\":\"https://cdn.fosstodon.org/accounts/headers/000/297/547/original/055b9f467e848d4b.jpg\",\"followers_count\":1095,\"following_count\":234,\"statuses_count\":7886,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"Home\",\"value\":\"\\u003ca
+        href=\\\"https://www.adamsdesk.com/\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003eadamsdesk.com/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2021-01-13T03:41:03.623+00:00\"},{\"name\":\"Knowledge
+        Base\",\"value\":\"\\u003ca href=\\\"https://kb.adamsdesk.com/\\\" target=\\\"_blank\\\"
         rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003etext.tchncs.de/erdrandbewohner/\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868745427538673\",\"created_at\":\"2025-07-17T13:12:36.351Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://social.tchncs.de/users/gerd/statuses/114868745427538673\",\"url\":\"https://social.tchncs.de/@gerd/114868745427538673\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003e\\u0026quot;Das
-        Lichtschwert von Darth Vader aus den Filmen wird versteigert.\\u0026quot;\\u003c/p\\u003e\\u003cp\\u003eGeil.
-        Wo kann man mitmachen?\\u003c/p\\u003e\\u003cp\\u003e\\u0026quot;Einstiegsgebot
-        1 Millionen.\\u0026quot;\\u003c/p\\u003e\\u003cp\\u003eähm, ok ... bin dann
-        doch raus ... \U0001F622\U0001F604\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Tusky\",\"website\":\"https://tusky.app\"},\"account\":{\"id\":\"111413447379496854\",\"username\":\"gerd\",\"acct\":\"gerd\",\"display_name\":\"\",\"locked\":false,\"bot\":false,\"discoverable\":null,\"indexable\":false,\"group\":false,\"created_at\":\"2023-11-15T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eSoftwareentwickler
-        aus Leidenschaft und Serienjunkie\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@gerd\",\"uri\":\"https://social.tchncs.de/users/gerd\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/111/413/447/379/496/854/original/177f90ba8aac337a.jpeg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/111/413/447/379/496/854/original/177f90ba8aac337a.jpeg\",\"header\":\"https://f2.tchncs.de/accounts/headers/111/413/447/379/496/854/original/ca6f6f2a19b32429.jpeg\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/111/413/447/379/496/854/original/ca6f6f2a19b32429.jpeg\",\"followers_count\":12,\"following_count\":20,\"statuses_count\":37,\"last_status_at\":\"2025-07-17\",\"hide_collections\":null,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"Ort\",\"value\":\"Dillingen/Donau\",\"verified_at\":null},{\"name\":\"Threema\",\"value\":\"\\u003ca
-        href=\\\"https://threema.id/VMUNZTC5\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        class=\\\"\\\"\\u003ekb.adamsdesk.com/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-10-06T20:59:57.772+00:00\"},{\"name\":\"Git
+        Repo\",\"value\":\"\\u003ca href=\\\"https://git.nixnet.services/adamsdesk\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003egit.nixnet.services/adamsdesk\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-11-16T20:38:06.083+00:00\"},{\"name\":\"Support
+        Adamsdesk (Donate/Affiliates)\",\"value\":\"\\u003ca href=\\\"https://www.adamsdesk.com/support/\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003eadamsdesk.com/support/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2023-08-11T20:52:26.296+00:00\"}]},\"media_attachments\":[{\"id\":\"114870332979182763\",\"type\":\"image\",\"url\":\"https://cdn.fosstodon.org/media_attachments/files/114/870/332/979/182/763/original/0d1e1e715f5b9adf.webp\",\"preview_url\":\"https://cdn.fosstodon.org/media_attachments/files/114/870/332/979/182/763/small/0d1e1e715f5b9adf.webp\",\"remote_url\":null,\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"original\":{\"width\":1080,\"height\":1080,\"size\":\"1080x1080\",\"aspect\":1.0},\"small\":{\"width\":480,\"height\":480,\"size\":\"480x480\",\"aspect\":1.0},\"focus\":{\"x\":0.0,\"y\":0.0}},\"description\":\"A
+        perspective view between two walls of white binary text with a blue background
+        that has an explosion in the middle coming towards the viewer sits large bold
+        text that reads, 'Little Bits Issue #26'.\",\"blurhash\":\"UF7piXf+ITkCogdVaef69wjZ%ga}R.f*j?e:\"}],\"mentions\":[],\"tags\":[{\"name\":\"blog\",\"url\":\"https://fosstodon.org/tags/blog\"},{\"name\":\"opensource\",\"url\":\"https://fosstodon.org/tags/opensource\"},{\"name\":\"freesoftware\",\"url\":\"https://fosstodon.org/tags/freesoftware\"},{\"name\":\"tech\",\"url\":\"https://fosstodon.org/tags/tech\"},{\"name\":\"news\",\"url\":\"https://fosstodon.org/tags/news\"},{\"name\":\"linkdump\",\"url\":\"https://fosstodon.org/tags/linkdump\"}],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114870341462245939\",\"created_at\":\"2025-07-17T19:58:29.908Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://fosstodon.org/users/MisterHW/statuses/114870341462245939\",\"url\":\"https://fosstodon.org/@MisterHW/114870341462245939\",\"replies_count\":1,\"reblogs_count\":0,\"favourites_count\":1,\"edited_at\":\"2025-07-17T19:59:33.295Z\",\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eKnow
+        how many transistors get damaged when V_EB exceeds some 5..6V?\\u003c/p\\u003e\\u003cp\\u003eHN1C03FU
+        is quite different, withstanding 25V.\\u003c/p\\u003e\\u003cp\\u003e\\u0026quot;For
+        Muting and Switching Applications\\u0026quot;\\u003c/p\\u003e\\u003cp\\u003eI
+        had a BC847 die in a synthesizer occasionally, depending on how the power-on
+        transients developped each time. At very low currents and voltages, high base
+        voltage transients can degrade the transistor to the point where it looks
+        okay in a transistor tester, but cannot modulate signals at mV / µA levels.\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"application\":null,\"account\":{\"id\":\"109319291946357203\",\"username\":\"MisterHW\",\"acct\":\"MisterHW\",\"display_name\":\"Helge
+        Wurst\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-10T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eStudied
+        physics, now into power electronics and RF. PCB design with KiCad, mechanical
+        design with FreeCAD. C/C++, Python to breathe life into things. Likes FEM,
+        FDTD.\\u003c/p\\u003e\",\"url\":\"https://fosstodon.org/@MisterHW\",\"uri\":\"https://fosstodon.org/users/MisterHW\",\"avatar\":\"https://fosstodon.org/avatars/original/missing.png\",\"avatar_static\":\"https://fosstodon.org/avatars/original/missing.png\",\"header\":\"https://fosstodon.org/headers/original/missing.png\",\"header_static\":\"https://fosstodon.org/headers/original/missing.png\",\"followers_count\":114,\"following_count\":37,\"statuses_count\":1748,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"noindex\":true,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"github\",\"value\":\"\\u003ca
+        href=\\\"https://github.com/MisterHW\\\" target=\\\"_blank\\\" rel=\\\"nofollow
         noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003ethreema.id/VMUNZTC5\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Signal\",\"value\":\"gerd.1337\",\"verified_at\":null},{\"name\":\"auto-remove\",\"value\":\"\\u0026gt;
-        2 Wochen\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null}]"
-  recorded_at: 2025-07-17 13:44:16
+        class=\\\"\\\"\\u003egithub.com/MisterHW\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[{\"id\":\"114870313954799086\",\"type\":\"image\",\"url\":\"https://cdn.fosstodon.org/media_attachments/files/114/870/313/954/799/086/original/90f848363b60246f.png\",\"preview_url\":\"https://cdn.fosstodon.org/media_attachments/files/114/870/313/954/799/086/small/90f848363b60246f.png\",\"remote_url\":null,\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"original\":{\"width\":990,\"height\":1026,\"size\":\"990x1026\",\"aspect\":0.9649122807017544},\"small\":{\"width\":472,\"height\":489,\"size\":\"472x489\",\"aspect\":0.9652351738241309},\"focus\":{\"x\":0.0,\"y\":0.0}},\"description\":\"https://eu.mouser.com/datasheet/2/408/HN1C03FU_datasheet_en_20140301-1609071.pdf\",\"blurhash\":\"U7R3TWM{%Mxu~qt7IUt7?bfQ%MxuIURj%MD%\"}],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114870335289370872\",\"created_at\":\"2025-07-17T19:56:55.718Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://fosstodon.org/users/msys2org/statuses/114870335289370872\",\"url\":\"https://fosstodon.org/@msys2org/114870335289370872\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eThere
+        was a lightning talk (in German) about MSYS2 at the Grazer Linuxtage \\u003ca
+        href=\\\"https://fosstodon.org/tags/glt25\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eglt25\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://media.ccc.de/v/glt25-491-lightning-talks#t=395\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003emedia.ccc.de/v/glt25-491-light\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ening-talks#t=395\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"application\":null,\"account\":{\"id\":\"109365079526574177\",\"username\":\"msys2org\",\"acct\":\"msys2org\",\"display_name\":\"MSYS2\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2022-11-18T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eSoftware
+        distro and building platform for Windows.\\u003c/p\\u003e\\u003cp\\u003e-
+        \\u003ca href=\\\"https://msys2.org\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003emsys2.org\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e
+        / \\u003ca href=\\\"https://github.com/msys2\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003egithub.com/msys2\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e- Packages: \\u003ca href=\\\"https://packages.msys2.org\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003epackages.msys2.org\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e- Discord: \\u003ca href=\\\"https://discord.gg/jPQdRdDcT9\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003ediscord.gg/jPQdRdDcT9\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://fosstodon.org/@msys2org\",\"uri\":\"https://fosstodon.org/users/msys2org\",\"avatar\":\"https://cdn.fosstodon.org/accounts/avatars/109/365/079/526/574/177/original/4598f96bd29dd450.png\",\"avatar_static\":\"https://cdn.fosstodon.org/accounts/avatars/109/365/079/526/574/177/original/4598f96bd29dd450.png\",\"header\":\"https://cdn.fosstodon.org/accounts/headers/109/365/079/526/574/177/original/526fe5ff9696c7ee.png\",\"header_static\":\"https://cdn.fosstodon.org/accounts/headers/109/365/079/526/574/177/original/526fe5ff9696c7ee.png\",\"followers_count\":189,\"following_count\":3,\"statuses_count\":87,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[]},\"media_attachments\":[{\"id\":\"114870328890359672\",\"type\":\"image\",\"url\":\"https://cdn.fosstodon.org/media_attachments/files/114/870/328/890/359/672/original/11d5be691980ed01.png\",\"preview_url\":\"https://cdn.fosstodon.org/media_attachments/files/114/870/328/890/359/672/small/11d5be691980ed01.png\",\"remote_url\":null,\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"original\":{\"width\":1920,\"height\":1036,\"size\":\"1920x1036\",\"aspect\":1.8532818532818534},\"small\":{\"width\":653,\"height\":352,\"size\":\"653x352\",\"aspect\":1.8551136363636365},\"focus\":{\"x\":-0.81,\"y\":0.56}},\"description\":\"Screenshot
+        of the video recording\",\"blurhash\":\"UbH{G{E1E1~q%1bVRh%L4-%M-;IUD*x]t7M{\"}],\"mentions\":[],\"tags\":[{\"name\":\"glt25\",\"url\":\"https://fosstodon.org/tags/glt25\"}],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114870334959460819\",\"created_at\":\"2025-07-17T19:56:50.686Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"es\",\"uri\":\"https://fosstodon.org/users/gds506/statuses/114870334959460819\",\"url\":\"https://fosstodon.org/@gds506/114870334959460819\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eEste
+        otro mini-documental sobre la vida del maestro Luis Enrique Mejía Godoy está
+        hermosísimo....  Una institución musical centroamericana que tenemos la suerte
+        de tener viviendo en Costa Rica... Autor de ese himno \\u0026quot;Nicaragüa
+        Nicaragüita\\u0026quot; y muchas otras canciones emblemáticas de la música
+        popular de \\u003ca href=\\\"https://fosstodon.org/tags/Nicaragua\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eNicaragua\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://youtu.be/S9UUv6IQpWE?si=4i7R0zaemiPaWCyv\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"ellipsis\\\"\\u003eyoutu.be/S9UUv6IQpWE?si=4i7R0z\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003eaemiPaWCyv\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"application\":null,\"account\":{\"id\":\"109298185134100437\",\"username\":\"gds506\",\"acct\":\"gds506\",\"display_name\":\"guillermo.d\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-06T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eforester/geographer
+        in deep love with the tropics. Interested in geospatial computation, conservation
+        biology \\u0026amp; music. Based in Costa Rica.\\u003c/p\\u003e\\u003cp\\u003eLinux
+        lover - EndeavourOS user\\u003cbr /\\u003ePosts in English and Spanish\\u003c/p\\u003e\",\"url\":\"https://fosstodon.org/@gds506\",\"uri\":\"https://fosstodon.org/users/gds506\",\"avatar\":\"https://cdn.fosstodon.org/accounts/avatars/109/298/185/134/100/437/original/fbb8c73c0d1695cc.png\",\"avatar_static\":\"https://cdn.fosstodon.org/accounts/avatars/109/298/185/134/100/437/original/fbb8c73c0d1695cc.png\",\"header\":\"https://cdn.fosstodon.org/accounts/headers/109/298/185/134/100/437/original/19e9ceec6700f1bf.jpg\",\"header_static\":\"https://cdn.fosstodon.org/accounts/headers/109/298/185/134/100/437/original/19e9ceec6700f1bf.jpg\",\"followers_count\":278,\"following_count\":519,\"statuses_count\":1703,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"noindex\":true,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"Orcid
+        profile\",\"value\":\"\\u003ca href=\\\"https://orcid.org/0000-0002-1944-9524\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003eorcid.org/0000-0002-1944-9524\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"nicaragua\",\"url\":\"https://fosstodon.org/tags/nicaragua\"}],\"emojis\":[],\"quote\":null,\"card\":{\"url\":\"https://youtu.be/S9UUv6IQpWE?si=4i7R0zaemiPaWCyv\",\"title\":\"Documental
+        | Las tres patrias de Luis Enrique Mejía Godoy\",\"description\":\"\",\"language\":null,\"type\":\"video\",\"author_name\":\"Confidencial\",\"author_url\":\"https://www.youtube.com/@ConfidencialNica\",\"provider_name\":\"YouTube\",\"provider_url\":\"https://www.youtube.com/\",\"html\":\"\\u003ciframe
+        width=\\\"200\\\" height=\\\"113\\\" src=\\\"https://www.youtube.com/embed/S9UUv6IQpWE?feature=oembed\\\"
+        frameborder=\\\"0\\\" allowfullscreen=\\\"\\\" sandbox=\\\"allow-scripts allow-same-origin
+        allow-popups allow-popups-to-escape-sandbox allow-forms\\\"\\u003e\\u003c/iframe\\u003e\",\"width\":200,\"height\":113,\"image\":\"https://cdn.fosstodon.org/cache/preview_cards/images/052/518/848/original/88e3af86cf13dbf6.jpg\",\"image_description\":\"\",\"embed_url\":\"\",\"blurhash\":\"U8Ac3@9@Di-;1av$xa-V0dkDTJIo,]o}r=9t\",\"published_at\":null,\"authors\":[{\"name\":\"Confidencial\",\"url\":\"https://www.youtube.com/@ConfidencialNica\",\"account\":null}]},\"poll\":null},{\"id\":\"114870332840498272\",\"created_at\":\"2025-07-17T19:56:18.352Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://fosstodon.org/users/pgconfnyc/statuses/114870332840498272\",\"url\":\"https://fosstodon.org/@pgconfnyc/114870332840498272\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003ePlanning
+        on attending PGConf NYC 2025? We have a discounted rate with Club Quarters
+        Hotel, Times Square-Midtown! Check it out and book today:\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://2025.pgconf.nyc/venue/\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003e2025.pgconf.nyc/venue/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e@PostgreSQL
+        \ \\u003ca href=\\\"https://fosstodon.org/tags/postgres\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003epostgres\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/conference\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003econference\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"application\":{\"name\":\"Buffer\",\"website\":\"https://buffer.com\"},\"account\":{\"id\":\"112418817060432409\",\"username\":\"pgconfnyc\",\"acct\":\"pgconfnyc\",\"display_name\":\"\",\"locked\":false,\"bot\":false,\"discoverable\":null,\"indexable\":false,\"group\":false,\"created_at\":\"2024-05-10T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://fosstodon.org/@pgconfnyc\",\"uri\":\"https://fosstodon.org/users/pgconfnyc\",\"avatar\":\"https://cdn.fosstodon.org/accounts/avatars/112/418/817/060/432/409/original/3d07f58cc4986ee3.png\",\"avatar_static\":\"https://cdn.fosstodon.org/accounts/avatars/112/418/817/060/432/409/original/3d07f58cc4986ee3.png\",\"header\":\"https://cdn.fosstodon.org/accounts/headers/112/418/817/060/432/409/original/b3ac9d701bd97aae.jpeg\",\"header_static\":\"https://cdn.fosstodon.org/accounts/headers/112/418/817/060/432/409/original/b3ac9d701bd97aae.jpeg\",\"followers_count\":23,\"following_count\":2,\"statuses_count\":591,\"last_status_at\":\"2025-07-17\",\"hide_collections\":null,\"noindex\":true,\"emojis\":[],\"roles\":[],\"fields\":[]},\"media_attachments\":[{\"id\":\"114870332688661868\",\"type\":\"image\",\"url\":\"https://cdn.fosstodon.org/media_attachments/files/114/870/332/688/661/868/original/a2423fea5f2a961c.png\",\"preview_url\":\"https://cdn.fosstodon.org/media_attachments/files/114/870/332/688/661/868/small/a2423fea5f2a961c.png\",\"remote_url\":null,\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"original\":{\"width\":456,\"height\":250,\"size\":\"456x250\",\"aspect\":1.824},\"small\":{\"width\":456,\"height\":250,\"size\":\"456x250\",\"aspect\":1.824}},\"description\":null,\"blurhash\":\"UTRo]TD*%g.8_NxZROn$yDxZslM{R4OFS$jE\"}],\"mentions\":[],\"tags\":[{\"name\":\"postgres\",\"url\":\"https://fosstodon.org/tags/postgres\"},{\"name\":\"conference\",\"url\":\"https://fosstodon.org/tags/conference\"}],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114870331255315543\",\"created_at\":\"2025-07-17T19:55:54.163Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://fosstodon.org/users/joss/statuses/114870331255315543\",\"url\":\"https://fosstodon.org/@joss/114870331255315543\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eJust
+        published in JOSS: \\u0026#39;bisonpicsuite: A set of R packages to estimate
+        wood bison population parameters from remote camera data.\\u0026#39; \\u003ca
+        href=\\\"https://doi.org/10.21105/joss.07752\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003edoi.org/10.21105/joss.07752\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"application\":{\"name\":\"JOSS
+        Papers\",\"website\":\"https://joss.theoj.org/papers/published\"},\"account\":{\"id\":\"109393361139620770\",\"username\":\"joss\",\"acct\":\"joss\",\"display_name\":\"JOSS\",\"locked\":false,\"bot\":true,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-23T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eJournal
+        of Open Source Software\\u003c/p\\u003e\",\"url\":\"https://fosstodon.org/@joss\",\"uri\":\"https://fosstodon.org/users/joss\",\"avatar\":\"https://cdn.fosstodon.org/accounts/avatars/109/393/361/139/620/770/original/a874c118471d1fde.jpeg\",\"avatar_static\":\"https://cdn.fosstodon.org/accounts/avatars/109/393/361/139/620/770/original/a874c118471d1fde.jpeg\",\"header\":\"https://fosstodon.org/headers/original/missing.png\",\"header_static\":\"https://fosstodon.org/headers/original/missing.png\",\"followers_count\":1533,\"following_count\":0,\"statuses_count\":1262,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"noindex\":true,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"About
+        JOSS\",\"value\":\"\\u003ca href=\\\"https://joss.theoj.org/about\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003ejoss.theoj.org/about\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-11-24T15:09:32.413+00:00\"}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":{\"url\":\"https://doi.org/10.21105/joss.07752\",\"title\":\"bisonpicsuite:
+        A set of R packages to estimate wood bison population parameters from remote
+        camera data.\",\"description\":\"Hill et al., (2025). bisonpicsuite: A set
+        of R packages to estimate wood bison population parameters from remote camera
+        data.. Journal of Open Source Software, 10(111), 7752, https://doi.org/10.21105/joss.07752\",\"language\":\"en\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"Journal
+        of Open Source Software\",\"provider_url\":\"\",\"html\":\"\",\"width\":704,\"height\":327,\"image\":\"https://cdn.fosstodon.org/cache/preview_cards/images/052/518/825/original/8caeeed4a8e818ba.jpg\",\"image_description\":\"\",\"embed_url\":\"\",\"blurhash\":\"UhP72-t8?axtt8j[t7of~qjsIVRjxaj[NGRj\",\"published_at\":null,\"authors\":[]},\"poll\":null},{\"id\":\"114870316316166788\",\"created_at\":\"2025-07-17T19:52:06.208Z\",\"in_reply_to_id\":\"114870238961527411\",\"in_reply_to_account_id\":\"109249753738632776\",\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://fosstodon.org/users/pchestek/statuses/114870316316166788\",\"url\":\"https://fosstodon.org/@pchestek/114870316316166788\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eBummed!
+        My Dad\\u0026#39;s book not worthy of being included in the LibGen database\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"application\":null,\"account\":{\"id\":\"109249753738632776\",\"username\":\"pchestek\",\"acct\":\"pchestek\",\"display_name\":\"pchestek\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":true,\"group\":false,\"created_at\":\"2022-10-29T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eIn
+        private practice. North Carolina Certified Specialist in Trademark Law, Board
+        member of OSI. Opinions are my own. \\u003ca href=\\\"https://fosstodon.org/tags/Fedora\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFedora\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fosstodon.org/tags/BeefyMiracle\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eBeefyMiracle\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://fosstodon.org/@pchestek\",\"uri\":\"https://fosstodon.org/users/pchestek\",\"avatar\":\"https://cdn.fosstodon.org/accounts/avatars/109/249/753/738/632/776/original/6b749ebb0f6c5d32.jpg\",\"avatar_static\":\"https://cdn.fosstodon.org/accounts/avatars/109/249/753/738/632/776/original/6b749ebb0f6c5d32.jpg\",\"header\":\"https://fosstodon.org/headers/original/missing.png\",\"header_static\":\"https://fosstodon.org/headers/original/missing.png\",\"followers_count\":292,\"following_count\":152,\"statuses_count\":1692,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"noindex\":false,\"emojis\":[],\"roles\":[{\"id\":\"8\",\"name\":\"Supporter
+        \U0001F4B0♥️\",\"color\":\"#4f7a28\"}],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null}]"
+  recorded_at: 2025-07-17 20:03:55
 recorded_with: VCR-vcr/1.7.1.93

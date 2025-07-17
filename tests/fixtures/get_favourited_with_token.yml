@@ -1,76 +1,213 @@
 http_interactions:
 - request:
     method: GET
-    uri: https://social.tchncs.de/api/v1/statuses/109303266941599451/favourited_by
+    uri: https://fosstodon.org/api/v1/statuses/114620457512351116/favourited_by
   response:
     status: 200
     headers:
+      content-type: application/json; charset=utf-8
+      server: Mastodon
+      x-frame-options: DENY
+      x-content-type-options: nosniff
+      x-xss-protection: '0'
+      referrer-policy: same-origin
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '298'
+      x-ratelimit-reset: '2025-07-17T20:00:00.132160Z'
+      link: <https://fosstodon.org/api/v1/statuses/114620457512351116/favourited_by?since_id=12592513>;
+        rel="prev"
       cache-control: private, no-store
-      content-encoding: gzip
+      etag: W/"c56f0835c7caac35d1d1e0dcaa0b9d41"
       content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
         'none'
-      content-type: application/json; charset=utf-8
-      date: Thu, 17 Jul 2025 13:44:12 GMT
-      etag: W/"e718142b9f947087658eeb38912bc8b6"
-      link: <https://social.tchncs.de/api/v1/statuses/109303266941599451/favourited_by?since_id=3461529>;
-        rel="prev"
-      referrer-policy: same-origin
-      server: nginx
-      strict-transport-security:
-      - max-age=63072000; includeSubDomains
-      - max-age=31536000
-      vary:
-      - Accept-Encoding
-      - Authorization, Origin
-      x-content-type-options: nosniff
-      x-frame-options: DENY
-      x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '295'
-      x-ratelimit-reset: '2025-07-17T13:45:00.214642Z'
-      x-request-id: 61b2c0d9-8629-4f65-a6b6-0cc226bc7f01
-      x-runtime: '0.018024'
-      x-xss-protection: '0'
+      x-request-id: d5e0f38f-9c9e-4b31-8348-a4d2ae5db16f
+      x-runtime: '0.030302'
+      content-encoding: gzip
+      accept-ranges: bytes
+      via: 1.1 varnish, 1.1 varnish
+      date: Thu, 17 Jul 2025 19:55:42 GMT
+      x-served-by: cache-par-lfpg1960050-PAR, cache-muc13933-MUC
+      x-cache: MISS, MISS
+      x-cache-hits: 0, 0
+      x-timer: S1752782142.117857,VS0,VE54
+      vary: Accept-Encoding, Authorization, Origin
+      strict-transport-security: max-age=300
+      alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
     body:
-      string: "[{\"id\":\"109285743115111924\",\"username\":\"mattdray\",\"acct\":\"mattdray@fosstodon.org\",\"display_name\":\"Matt
-        Dray\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2022-11-02T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003ca
-        href=\\\"https://fosstodon.org/tags/RStats\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eRStats\\u003c/span\\u003e\\u003c/a\\u003e
-        :rstats: in the public sector. And for fun.\\u003cbr\\u003ePosts autodelete
-        after a couple of weeks.\\u003c/p\\u003e\",\"url\":\"https://fosstodon.org/@mattdray\",\"uri\":\"https://fosstodon.org/users/mattdray\",\"avatar\":\"https://f2.tchncs.de/cache/accounts/avatars/109/285/743/115/111/924/original/aeb46b4f22a60d2e.jpg\",\"avatar_static\":\"https://f2.tchncs.de/cache/accounts/avatars/109/285/743/115/111/924/original/aeb46b4f22a60d2e.jpg\",\"header\":\"https://f2.tchncs.de/cache/accounts/headers/109/285/743/115/111/924/original/0f173edd74b58fbc.png\",\"header_static\":\"https://f2.tchncs.de/cache/accounts/headers/109/285/743/115/111/924/original/0f173edd74b58fbc.png\",\"followers_count\":556,\"following_count\":240,\"statuses_count\":2,\"last_status_at\":\"2025-02-25\",\"hide_collections\":false,\"emojis\":[{\"shortcode\":\"rstats\",\"url\":\"https://f2.tchncs.de/cache/custom_emojis/images/000/033/328/original/68310045ec58e8b8.png\",\"static_url\":\"https://f2.tchncs.de/cache/custom_emojis/images/000/033/328/static/68310045ec58e8b8.png\",\"visible_in_picker\":true}],\"fields\":[{\"name\":\"Personal
-        site\",\"value\":\"\\u003ca href=\\\"https://www.matt-dray.com/\\\" rel=\\\"nofollow
+      string: "[{\"id\":\"113825389125047929\",\"username\":\"kgagalova\",\"acct\":\"kgagalova@genomic.social\",\"display_name\":\"Kristina
+        Gagalova\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2024-02-22T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eEvolutionary
+        genomics enthusiast, plant genomics researcher, Works on: \U0001F9EC Genome
+        Science and Algorithms | \U0001F4BB Software Development | \U0001F47D AI dev
+        | \U0001F64B\U0001F3FB‍♀️ \\u003ca href=\\\"https://genomic.social/tags/Nextflow\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eNextflow\\u003c/span\\u003e\\u003c/a\\u003e
+        Ambassador\\u003c/p\\u003e\",\"url\":\"https://genomic.social/@kgagalova\",\"uri\":\"https://genomic.social/users/kgagalova\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/113/825/389/125/047/929/original/6a9757679f21c11b.jpg\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/113/825/389/125/047/929/original/6a9757679f21c11b.jpg\",\"header\":\"https://cdn.fosstodon.org/cache/accounts/headers/113/825/389/125/047/929/original/02ffece67d5a6ee9.jpg\",\"header_static\":\"https://cdn.fosstodon.org/cache/accounts/headers/113/825/389/125/047/929/original/02ffece67d5a6ee9.jpg\",\"followers_count\":34,\"following_count\":107,\"statuses_count\":37,\"last_status_at\":\"2025-07-11\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},{\"id\":\"109275235124162627\",\"username\":\"Lluis_Revilla\",\"acct\":\"Lluis_Revilla\",\"display_name\":\"Lluís
+        Revilla\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2022-11-02T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eBioinformatician
+        \U0001F4E2 about OSS and \\u003ca href=\\\"https://fosstodon.org/tags/rstats\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003erstats\\u003c/span\\u003e\\u003c/a\\u003e,
+        some analysis \U0001F4CA \\u0026amp; random thoughts and ideas \U0001F3B2\\u003cbr
+        /\\u003eMy opinions/comments not those of my employer (Roche)\\u003c/p\\u003e\",\"url\":\"https://fosstodon.org/@Lluis_Revilla\",\"uri\":\"https://fosstodon.org/users/Lluis_Revilla\",\"avatar\":\"https://cdn.fosstodon.org/accounts/avatars/109/275/235/124/162/627/original/1dc6aba622d5bf51.jpg\",\"avatar_static\":\"https://cdn.fosstodon.org/accounts/avatars/109/275/235/124/162/627/original/1dc6aba622d5bf51.jpg\",\"header\":\"https://fosstodon.org/headers/original/missing.png\",\"header_static\":\"https://fosstodon.org/headers/original/missing.png\",\"followers_count\":452,\"following_count\":212,\"statuses_count\":2558,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"noindex\":true,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"Website\",\"value\":\"\\u003ca
+        href=\\\"https://llrs.dev\\\" target=\\\"_blank\\\" rel=\\\"nofollow noopener
+        me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003ellrs.dev\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Github\",\"value\":\"\\u003ca
+        href=\\\"https://github.com/llrs\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003egithub.com/llrs\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2023-09-23T22:27:02.711+00:00\"}]},{\"id\":\"109505203645004316\",\"username\":\"JorisMeys\",\"acct\":\"JorisMeys@mstdn.social\",\"display_name\":\"Joris
+        Meys\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-12-13T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eStatistics/Data
+        Science/#rstats instructor at \\u003cbr\\u003eGhent University (BE \U0001F1E7\U0001F1EA).\\u003c/p\\u003e\\u003cp\\u003eToots
+        in English and Dutch. And on a saxophone once in a while.\\u003c/p\\u003e\\u003cp\\u003eDonate
+        to help girls get an education: \\u003ca href=\\\"https://malala.org/donate?sc=header\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003emalala.org/donate?sc=header\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://mstdn.social/@JorisMeys\",\"uri\":\"https://mstdn.social/users/JorisMeys\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/505/203/645/004/316/original/b580ace32555c341.jpg\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/505/203/645/004/316/original/b580ace32555c341.jpg\",\"header\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/505/203/645/004/316/original/84c95e06e69edbb9.jpg\",\"header_static\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/505/203/645/004/316/original/84c95e06e69edbb9.jpg\",\"followers_count\":875,\"following_count\":342,\"statuses_count\":5171,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},{\"id\":\"112434333829379715\",\"username\":\"jolars\",\"acct\":\"jolars@mastodon.social\",\"display_name\":\"Johan
+        Larsson\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2024-05-13T00:00:00.000Z\",\"note\":\"\\u003cp\\u003ePostdoc
+        in statistics at the Department of Mathematical Sciences, UCPH\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@jolars\",\"uri\":\"https://mastodon.social/users/jolars\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/112/434/333/829/379/715/original/33f0feb73adc6a03.jpg\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/112/434/333/829/379/715/original/33f0feb73adc6a03.jpg\",\"header\":\"https://cdn.fosstodon.org/cache/accounts/headers/112/434/333/829/379/715/original/40b55babb02aa74e.png\",\"header_static\":\"https://cdn.fosstodon.org/cache/accounts/headers/112/434/333/829/379/715/original/40b55babb02aa74e.png\",\"followers_count\":37,\"following_count\":99,\"statuses_count\":39,\"last_status_at\":\"2025-07-05\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Homepage\",\"value\":\"\\u003ca
+        href=\\\"https://jolars.co\\\" target=\\\"_blank\\\" rel=\\\"nofollow noopener\\\"
+        translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003ejolars.co\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2025-06-30T13:36:08.240+00:00\"},{\"name\":\"GitHub\",\"value\":\"\\u003ca
+        href=\\\"https://github.com/jolars\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003egithub.com/jolars\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2025-06-30T13:36:08.904+00:00\"},{\"name\":\"Google
+        Scholar\",\"value\":\"\\u003ca href=\\\"https://scholar.google.com/citations?user=DCJvywYAAAAJ\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003escholar.google.com/citations?u\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003eser=DCJvywYAAAAJ\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"109269678296046700\",\"username\":\"maelle\",\"acct\":\"maelle@mastodon.social\",\"display_name\":\"Maëlle
+        Salmon\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2022-04-26T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\U0001F9F0
+        \\u003ca href=\\\"https://mastodon.social/tags/Rstats\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eRstats\\u003c/span\\u003e\\u003c/a\\u003e
+        / research software engineer. \\u003cbr\\u003e\U0001F5D2️ Blogger. \\u003cbr\\u003e\U0001F4E6
+        Software review editor for \\u003cspan class=\\\"h-card\\\" translate=\\\"no\\\"\\u003e\\u003ca
+        href=\\\"https://fosstodon.org/@ropensci\\\" class=\\\"u-url mention\\\" rel=\\\"nofollow
+        noopener\\\" target=\\\"_blank\\\"\\u003e@\\u003cspan\\u003eropensci\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e.
+        \\u003cbr\\u003e\U0001F49C \\u003ca href=\\\"https://mastodon.social/tags/RLadies\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eRLadies\\u003c/span\\u003e\\u003c/a\\u003e.
+        \\u003cbr\\u003e\U0001F4C8 PhD in statistics.\\u003cbr\\u003e\U0001F34B Nancy,
+        France (let's say this emoji is a bergamot orange).\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@maelle\",\"uri\":\"https://mastodon.social/users/maelle\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/269/678/296/046/700/original/1f5f5628107ff662.jpg\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/269/678/296/046/700/original/1f5f5628107ff662.jpg\",\"header\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/269/678/296/046/700/original/f22fce4b216cbbd3.jpeg\",\"header_static\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/269/678/296/046/700/original/f22fce4b216cbbd3.jpeg\",\"followers_count\":1757,\"following_count\":198,\"statuses_count\":2386,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Home\",\"value\":\"\\u003ca
+        href=\\\"https://masalmon.eu/\\\" target=\\\"_blank\\\" rel=\\\"nofollow noopener\\\"
+        translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003emasalmon.eu/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2025-07-17T16:19:18.064+00:00\"},{\"name\":\"GitHub\",\"value\":\"\\u003ca
+        href=\\\"https://github.com/maelle\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003egithub.com/maelle\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2025-07-17T16:19:18.921+00:00\"},{\"name\":\"Pronouns\",\"value\":\"She/her\",\"verified_at\":null},{\"name\":\"Profile
+        pic by\",\"value\":\"Julie Noury Soyer \\u003ca href=\\\"https://photographe-julienourysoyer.com/index.php\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ephotographe-julienourysoyer.co\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003em/index.php\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"113098354818335686\",\"username\":\"maikek\",\"acct\":\"maikek@fedifreu.de\",\"display_name\":\"Maike\",\"locked\":true,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2024-09-07T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003ca
+        href=\\\"https://fedifreu.de/tags/Ostfriesin\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eOstfriesin\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fedifreu.de/tags/Leseratte\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eLeseratte\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fedifreu.de/tags/Antifa\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eAntifa\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fedifreu.de/tags/Bremen\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eBremen\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr\\u003e\\u003ca
+        href=\\\"https://fedifreu.de/tags/EastFrisian\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eEastFrisian\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fedifreu.de/tags/Bookworm\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eBookworm\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fedifreu.de/tags/Antifa\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eAntifa\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fedifreu.de/tags/Bremen\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eBremen\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://fedifreu.de/@maikek\",\"uri\":\"https://fedifreu.de/users/maikek\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/113/098/354/818/335/686/original/3dc381c9db27a92f.jpg\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/113/098/354/818/335/686/original/3dc381c9db27a92f.jpg\",\"header\":\"https://fosstodon.org/headers/original/missing.png\",\"header_static\":\"https://fosstodon.org/headers/original/missing.png\",\"followers_count\":707,\"following_count\":1248,\"statuses_count\":2737,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},{\"id\":\"109235210338204021\",\"username\":\"defuneste\",\"acct\":\"defuneste\",\"display_name\":\"Olivier
+        Leroy\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2022-10-26T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eI
+        am a geographer interested in all things spatial and open science!\\u003c/p\\u003e\\u003cp\\u003ehe/him/homard\\u003c/p\\u003e\",\"url\":\"https://fosstodon.org/@defuneste\",\"uri\":\"https://fosstodon.org/users/defuneste\",\"avatar\":\"https://cdn.fosstodon.org/accounts/avatars/109/235/210/338/204/021/original/2a496c976587d0e9.jpg\",\"avatar_static\":\"https://cdn.fosstodon.org/accounts/avatars/109/235/210/338/204/021/original/2a496c976587d0e9.jpg\",\"header\":\"https://fosstodon.org/headers/original/missing.png\",\"header_static\":\"https://fosstodon.org/headers/original/missing.png\",\"followers_count\":862,\"following_count\":986,\"statuses_count\":9818,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"noindex\":false,\"emojis\":[],\"roles\":[{\"id\":\"8\",\"name\":\"Supporter
+        \U0001F4B0♥️\",\"color\":\"#4f7a28\"}],\"fields\":[{\"name\":\"Blog\",\"value\":\"\\u003ca
+        href=\\\"https://branchtwigleaf.com/about.html\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003ebranchtwigleaf.com/about.html\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2024-08-17T02:05:11.457+00:00\"}]},{\"id\":\"109293701339986446\",\"username\":\"oxl\",\"acct\":\"oxl@mastodon.social\",\"display_name\":\"Ole\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":true,\"group\":false,\"created_at\":\"2022-10-29T00:00:00.000Z\",\"note\":\"\\u003cp\\u003ePost-doc
+        at @MPIDRnews Department of Digital \\u0026amp; Computational Demography\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@oxl\",\"uri\":\"https://mastodon.social/users/oxl\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/293/701/339/986/446/original/66d517739d0718f9.jpeg\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/293/701/339/986/446/original/66d517739d0718f9.jpeg\",\"header\":\"https://fosstodon.org/headers/original/missing.png\",\"header_static\":\"https://fosstodon.org/headers/original/missing.png\",\"followers_count\":113,\"following_count\":432,\"statuses_count\":607,\"last_status_at\":\"2025-06-11\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Personal
+        website\",\"value\":\"\\u003ca href=\\\"https://ohexel.github.io/\\\" rel=\\\"nofollow
         noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003ematt-dray.com/\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Blog\",\"value\":\"\\u003ca
-        href=\\\"https://www.rostrum.blog/\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003eohexel.github.io/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"109259455194048073\",\"username\":\"mattbagg\",\"acct\":\"mattbagg@kolektiva.social\",\"display_name\":\"Matt
+        Baggott\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2021-01-22T00:00:00.000Z\",\"note\":\"\\u003cp\\u003ePhD
+        neuroscientist. Co-founder and CEO of Tactogen, a public benefit corporation.
+        \ Advisor to Noetic \\u0026amp; Journey Clinical. I work to create better
+        drugs.\\u003c/p\\u003e\",\"url\":\"https://kolektiva.social/@mattbagg\",\"uri\":\"https://kolektiva.social/users/mattbagg\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/259/455/194/048/073/original/d24b028a89574156.jpg\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/259/455/194/048/073/original/d24b028a89574156.jpg\",\"header\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/259/455/194/048/073/original/43164c2eb0ec405e.jpg\",\"header_static\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/259/455/194/048/073/original/43164c2eb0ec405e.jpg\",\"followers_count\":565,\"following_count\":1038,\"statuses_count\":2054,\"last_status_at\":\"2025-07-12\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Tactogen\",\"value\":\"\\u003ca
+        href=\\\"https://tactogen.com\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"
+        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003etactogen.com\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Medium\",\"value\":\"\\u003ca
+        href=\\\"https://medium.com/@mattbagg/seed-crystal-on-the-contributions-of-alexander-shulgin-to-the-science-of-consciousness-154b509b364f\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003emedium.com/@mattbagg/seed-crys\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003etal-on-the-contributions-of-alexander-shulgin-to-the-science-of-consciousness-154b509b364f\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"G.
+        scholar\",\"value\":\"\\u003ca href=\\\"https://scholar.google.com/citations?user=U2fd5FsAAAAJ\\u0026amp;hl=en\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003escholar.google.com/citations?u\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003eser=U2fd5FsAAAAJ\\u0026amp;hl=en\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Old
+        Profile\",\"value\":\"\\u003ca href=\\\"https://mastodon.social/@mattbagg\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003emastodon.social/@mattbagg\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"109256790088543698\",\"username\":\"jrosell\",\"acct\":\"jrosell@mastodon.social\",\"display_name\":\"Jordi
+        Rosell\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2019-12-30T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eTechnical
+        data analyst working to make users \\u0026amp; businesses like yours happier.
+        Follow me for \\u003ca href=\\\"https://mastodon.social/tags/ecommerce\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eecommerce\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.social/tags/cro\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ecro\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.social/tags/RStats\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eRStats\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.social/tags/Python\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ePython\\u003c/span\\u003e\\u003c/a\\u003e
+        in CA|EN|ES|DE|VN. \\u003ca href=\\\"https://www.thediar.com\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003ethediar.com\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e CTO\\u003cbr\\u003eAiguafreda,
+        Barcelona\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@jrosell\",\"uri\":\"https://mastodon.social/users/jrosell\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/256/790/088/543/698/original/70f55d00528bc27f.jpg\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/256/790/088/543/698/original/70f55d00528bc27f.jpg\",\"header\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/256/790/088/543/698/original/040c404fbf1ce884.jpg\",\"header_static\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/256/790/088/543/698/original/040c404fbf1ce884.jpg\",\"followers_count\":582,\"following_count\":937,\"statuses_count\":2218,\"last_status_at\":\"2025-07-16\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},{\"id\":\"109681126025575096\",\"username\":\"EgorKotov\",\"acct\":\"EgorKotov@datasci.social\",\"display_name\":\"Egor
+        Kotov \U0001F310\U0001F3C3‍♂️\U0001F68A\U0001F68B\U0001F699\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2023-01-13T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eSpatial
+        Data Scientist, Doctoral Researcher at MPIDR and UPF \\u003ca href=\\\"https://datasci.social/tags/mobility\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003emobility\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://datasci.social/tags/humanmobility\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ehumanmobility\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://datasci.social/tags/gis\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003egis\\u003c/span\\u003e\\u003c/a\\u003e
+        \ dev of \\u003ca href=\\\"https://datasci.social/tags/rstats\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003erstats\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://github.com/rOpenSpain/spanishoddata\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003egithub.com/rOpenSpain/spanisho\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003eddata\\u003c/span\\u003e\\u003c/a\\u003e \\u003ca
+        href=\\\"https://datasci.social/tags/science\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003escience\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://datasci.social/tags/fedi22\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003efedi22\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://datasci.social/tags/tfr\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003etfr\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://datasci.social/@EgorKotov\",\"uri\":\"https://datasci.social/users/EgorKotov\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/681/126/025/575/096/original/bc5dfb6b7d9f2cd0.jpeg\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/681/126/025/575/096/original/bc5dfb6b7d9f2cd0.jpeg\",\"header\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/681/126/025/575/096/original/27411043278f583e.jpeg\",\"header_static\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/681/126/025/575/096/original/27411043278f583e.jpeg\",\"followers_count\":223,\"following_count\":268,\"statuses_count\":396,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Website\",\"value\":\"\\u003ca
+        href=\\\"https://www.ekotov.pro/\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"
         target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003erostrum.blog/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"GitHub\",\"value\":\"\\u003ca
-        href=\\\"https://github.com/matt-dray\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003egithub.com/matt-dray\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"109303823592549930\",\"username\":\"justin_ct_ho\",\"acct\":\"justin_ct_ho@mastodon.online\",\"display_name\":\"justin_ct_ho\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-06T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eComputational
-        Social Scientist | Post-doc Researcher @ Academia Sinica | Formerly Post-doc
-        Fellow  @ Sciences Po \\u0026amp; PhD @ University of Edinburgh | TextAsData
-        \\u0026amp; Nationalism\\u003c/p\\u003e\",\"url\":\"https://mastodon.online/@justin_ct_ho\",\"uri\":\"https://mastodon.online/users/justin_ct_ho\",\"avatar\":\"https://f2.tchncs.de/cache/accounts/avatars/109/303/823/592/549/930/original/477af159695287f5.png\",\"avatar_static\":\"https://f2.tchncs.de/cache/accounts/avatars/109/303/823/592/549/930/original/477af159695287f5.png\",\"header\":\"https://social.tchncs.de/headers/original/missing.png\",\"header_static\":\"https://social.tchncs.de/headers/original/missing.png\",\"followers_count\":41,\"following_count\":86,\"statuses_count\":3,\"last_status_at\":\"2023-07-05\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},{\"id\":\"109298082808656170\",\"username\":\"urswilke\",\"acct\":\"urswilke@fosstodon.org\",\"display_name\":\"Urs
-        Wilke\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2022-10-31T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003ca
-        href=\\\"https://fosstodon.org/tags/RStats\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eRStats\\u003c/span\\u003e\\u003c/a\\u003e
-        etc., data, programming, music, \\u003ca href=\\\"https://fosstodon.org/tags/rtistry\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ertistry\\u003c/span\\u003e\\u003c/a\\u003e,
-        ...\\u003c/p\\u003e\",\"url\":\"https://fosstodon.org/@urswilke\",\"uri\":\"https://fosstodon.org/users/urswilke\",\"avatar\":\"https://f2.tchncs.de/cache/accounts/avatars/109/298/082/808/656/170/original/09ef894252243b03.png\",\"avatar_static\":\"https://f2.tchncs.de/cache/accounts/avatars/109/298/082/808/656/170/original/09ef894252243b03.png\",\"header\":\"https://f2.tchncs.de/cache/accounts/headers/109/298/082/808/656/170/original/4b22ca19b1a5f3cb.png\",\"header_static\":\"https://f2.tchncs.de/cache/accounts/headers/109/298/082/808/656/170/original/4b22ca19b1a5f3cb.png\",\"followers_count\":247,\"following_count\":737,\"statuses_count\":348,\"last_status_at\":\"2025-03-30\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"github\",\"value\":\"\\u003ca
-        href=\\\"https://github.com/urswilke/\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        class=\\\"\\\"\\u003eekotov.pro/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"LinkedIn\",\"value\":\"\\u003ca
+        href=\\\"https://www.linkedin.com/in/egorkotov/\\\" rel=\\\"nofollow noopener\\\"
+        translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003elinkedin.com/in/egorkotov/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"GitHub\",\"value\":\"\\u003ca
+        href=\\\"https://github.com/e-kotov/\\\" target=\\\"_blank\\\" rel=\\\"nofollow
         noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003egithub.com/urswilke/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2025-02-14T23:33:52.974+00:00\"},{\"name\":\"gitlab\",\"value\":\"\\u003ca
-        href=\\\"https://gitlab.com/urswilke/\\\" target=\\\"_blank\\\" rel=\\\"nofollow
-        noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003egitlab.com/urswilke/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2025-02-14T23:33:53.521+00:00\"},{\"name\":\"pronouns\",\"value\":\"he/him\",\"verified_at\":null}]},{\"id\":\"109296104327267710\",\"username\":\"felix\",\"acct\":\"felix@fediscience.org\",\"display_name\":\"Felix
-        Dietrich \U0001F468\U0001F3FC‍\U0001F4BB\U0001F1EA\U0001F1FA\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-10-31T00:00:00.000Z\",\"note\":\"\\u003cp\\u003ePhD-Student
-        | Communication Researcher | JGU Mainz \\u0026amp; U Mannheim\\u2028 | Media
-        Psychology | Media Entertainment\\u003c/p\\u003e\",\"url\":\"https://fediscience.org/@felix\",\"uri\":\"https://fediscience.org/users/felix\",\"avatar\":\"https://f2.tchncs.de/cache/accounts/avatars/109/296/104/327/267/710/original/90ee020ae9a3c2b7.png\",\"avatar_static\":\"https://f2.tchncs.de/cache/accounts/avatars/109/296/104/327/267/710/original/90ee020ae9a3c2b7.png\",\"header\":\"https://f2.tchncs.de/cache/accounts/headers/109/296/104/327/267/710/original/a540eba89b7d9106.jpg\",\"header_static\":\"https://f2.tchncs.de/cache/accounts/headers/109/296/104/327/267/710/original/a540eba89b7d9106.jpg\",\"followers_count\":34,\"following_count\":54,\"statuses_count\":4,\"last_status_at\":\"2023-07-25\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Web\",\"value\":\"\\u003ca
-        href=\\\"https://felix-dietrich.de\\\" target=\\\"_blank\\\" rel=\\\"nofollow
-        noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003efelix-dietrich.de\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2023-01-24T12:15:01.154+00:00\"},{\"name\":\"ORCID\",\"value\":\"\\u003ca
-        href=\\\"https://orcid.org/0000-0002-0696-3380\\\" rel=\\\"nofollow noopener\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003eorcid.org/0000-0002-0696-3380\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]}]"
-  recorded_at: 2025-07-17 13:44:12
+        class=\\\"\\\"\\u003egithub.com/e-kotov/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2025-06-30T17:57:52.403+00:00\"},{\"name\":\"ORCID\",\"value\":\"\\u003ca
+        href=\\\"https://orcid.org/0000-0001-6690-5345\\\" rel=\\\"nofollow noopener\\\"
+        translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003eorcid.org/0000-0001-6690-5345\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"114004061121763198\",\"username\":\"haven\",\"acct\":\"haven@fediscience.org\",\"display_name\":\"Haven
+        D'Angelo, MS\",\"locked\":true,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2025-02-10T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eBiostatistician-Epidemiologist
+        working on \\u003ca href=\\\"https://fediscience.org/tags/Networks\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eNetworks\\u003c/span\\u003e\\u003c/a\\u003e
+        and \\u003ca href=\\\"https://fediscience.org/tags/CausalInference\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eCausalInference\\u003c/span\\u003e\\u003c/a\\u003e
+        methods in \\u003ca href=\\\"https://fediscience.org/tags/InfectiousDisease\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eInfectiousDisease\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fediscience.org/tags/Epidemiology\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eEpidemiology\\u003c/span\\u003e\\u003c/a\\u003e,
+        Viral \\u003ca href=\\\"https://fediscience.org/tags/Evolution\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eEvolution\\u003c/span\\u003e\\u003c/a\\u003e,
+        Disease \\u003ca href=\\\"https://fediscience.org/tags/Ecology\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eEcology\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr\\u003e\\u003ca
+        href=\\\"https://fediscience.org/tags/DisEcol\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eDisEcol\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://fediscience.org/tags/ComputationalEpidemiology\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eComputationalEpidemiology\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr\\u003e\\u003ca
+        href=\\\"https://fediscience.org/tags/Disabled\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eDisabled\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr\\u003e\\u003ca
+        href=\\\"https://fediscience.org/tags/NoBridge\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eNoBridge\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr\\u003e(EN)
+        They/Them\\u003cbr\\u003e(FR) iel/ellui\\u003cbr\\u003eMigrating from mstdn.science\\u003c/p\\u003e\",\"url\":\"https://fediscience.org/@haven\",\"uri\":\"https://fediscience.org/users/haven\",\"avatar\":\"https://fosstodon.org/avatars/original/missing.png\",\"avatar_static\":\"https://fosstodon.org/avatars/original/missing.png\",\"header\":\"https://fosstodon.org/headers/original/missing.png\",\"header_static\":\"https://fosstodon.org/headers/original/missing.png\",\"followers_count\":340,\"following_count\":749,\"statuses_count\":304,\"last_status_at\":\"2025-07-16\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]}]"
+  recorded_at: 2025-07-17 19:55:42
 recorded_with: VCR-vcr/1.7.1.93
