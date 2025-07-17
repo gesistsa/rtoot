@@ -5,7 +5,7 @@ options("rtoot_cheatcode" = NULL)
 test_that("auth_setup, instance NULL type NULL", {
   skip_on_cran()
   options("rtoot_cheatcode" = "uuddlrlrba")
-  options("rtoot_cheat_ask_answer" = "emacs.ch")
+  options("rtoot_cheat_ask_answer" = "fosstodon.org")
   options("rtoot_cheat_answer" = 1)
   saved_token_path <- tempfile(fileext = ".rds")
   vcr::use_cassette("auth_setup_1", {
@@ -37,7 +37,7 @@ test_that("respect verbose, #113", {
   vcr::use_cassette("auth_setup_verbose", {
     expect_silent(
       token <- auth_setup(
-        instance = "emacs.ch",
+        instance = "fosstodon.org",
         type = "public",
         clipboard = FALSE,
         verbose = FALSE,
@@ -46,7 +46,7 @@ test_that("respect verbose, #113", {
     )
     expect_message(
       token <- auth_setup(
-        instance = "emacs.ch",
+        instance = "fosstodon.org",
         type = "public",
         clipboard = FALSE,
         verbose = TRUE,

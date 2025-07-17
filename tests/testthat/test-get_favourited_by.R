@@ -3,7 +3,7 @@ fake_token <- rtoot:::get_token_from_envvar(
   check_stop = FALSE
 )
 fake_token$type <- "user"
-fake_token$instance <- "social.tchncs.de"
+fake_token$instance <- "fosstodon.org"
 
 test_that("get_favourited_by", {
   vcr::use_cassette("get_favourited_by_default", {

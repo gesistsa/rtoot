@@ -1,5 +1,5 @@
 original_envvar <- Sys.getenv("RTOOT_DEFAULT_TOKEN")
-Sys.setenv(RTOOT_DEFAULT_TOKEN = "abc;user;emacs.ch")
+# Sys.setenv(RTOOT_DEFAULT_TOKEN = "abc;user;fosstodon.org")
 
 test_that("verify_envvar (Good case)", {
   ## The cassette was created with a valid envvar
