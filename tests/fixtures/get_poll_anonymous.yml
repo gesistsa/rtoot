@@ -1,56 +1,42 @@
 http_interactions:
 - request:
-    method: get
+    method: GET
     uri: https://mastodon.social/api/v1/polls/286799
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 200
     headers:
-      cache-control: no-store
-      content-encoding: gzip
-      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
-        ''none''; font-src ''self'' https://static-cdn.mastodon.social; img-src ''self''
-        https: data: blob: https://static-cdn.mastodon.social; style-src ''self''
-        https://static-cdn.mastodon.social ''nonce-0aBHgGUVH7ZWjk9UlNSrlg==''; media-src
-        ''self'' https: data: https://static-cdn.mastodon.social; frame-src ''self''
-        https:; manifest-src ''self'' https://static-cdn.mastodon.social; connect-src
-        ''self'' data: blob: https://static-cdn.mastodon.social https://files.mastodon.social
-        wss://mastodon.social; script-src ''self'' https://static-cdn.mastodon.social
-        ''unsafe-eval''; child-src ''self'' blob: https://static-cdn.mastodon.social;
-        worker-src ''self'' blob: https://static-cdn.mastodon.social'
-      content-type: application/json; charset=utf-8
-      date: Wed, 09 Nov 2022 08:46:15 GMT
-      etag: W/"9ab1e8d5d75527ccc937b8a4a5ac456b"
-      permissions-policy: interest-cohort=()
-      server: Mastodon
-      strict-transport-security: max-age=63072000; includeSubDomains
-      vary:
-      - Accept-Encoding
-      - Origin
-      x-cached: MISS
+      x-ratelimit-reset: '2025-07-17T07:50:00.402274Z'
       x-content-type-options: nosniff
+      cache-control: max-age=15, public, stale-while-revalidate=30, stale-if-error=86400
+      x-runtime: '0.029575'
+      referrer-policy: same-origin
+      x-ratelimit-remaining: '297'
+      x-request-id: eaf7b848c20c2bd99b6efd0acca568fb
+      content-type: application/json; charset=utf-8
       x-frame-options: DENY
       x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '297'
-      x-ratelimit-reset: '2022-11-09T08:50:00.168989Z'
-      x-request-id: 1961c84d-4ed8-46de-982a-cdc4b2d43e16
-      x-runtime: '0.102590'
       x-xss-protection: '0'
+      via: 1.1 varnish, 1.1 varnish
+      etag: W/"0bc1f7be7f501240cabd9253a17325de"
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
+      content-encoding: gzip
+      accept-ranges: bytes
+      date: Thu, 17 Jul 2025 13:44:12 GMT
+      age: '0'
+      x-served-by: cache-fra-etou8220096-FRA, cache-fra-etou8220045-FRA
+      x-cache: MISS, HIT
+      x-cache-hits: 0, 1
+      x-timer: S1752759853.829493,VS0,VE1
+      vary: Authorization, Origin, Accept-Encoding
+      strict-transport-security: max-age=31557600
+      alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+      content-length: '269'
     body:
-      encoding: ''
-      file: no
-      string: '{"id":"286799","expires_at":"2022-11-09T19:54:55.599Z","expired":false,"multiple":false,"votes_count":64,"voters_count":64,"options":[{"title":"small
-        telescope approach (d33% of orig paper)","votes_count":10},{"title":"lower
+      string: '{"id":"286799","expires_at":"2022-11-09T19:54:55.599Z","expired":true,"multiple":false,"votes_count":70,"voters_count":70,"options":[{"title":"small
+        telescope approach (d33% of orig paper)","votes_count":12},{"title":"lower
         CI of original effect","votes_count":7},{"title":"precision based (width of
-        CI for new effect)","votes_count":4},{"title":"Smallest Effect Size of Interest
-        (SESOI)","votes_count":43}],"emojis":[]}'
-  recorded_at: 2022-11-09 08:46:15 GMT
-  recorded_with: vcr/1.1.0, webmockr/0.8.2
+        CI for new effect)","votes_count":5},{"title":"Smallest Effect Size of Interest
+        (SESOI)","votes_count":46}],"emojis":[]}'
+  recorded_at: 2025-07-17 13:44:12
+recorded_with: VCR-vcr/1.7.1.93

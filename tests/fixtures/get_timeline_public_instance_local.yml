@@ -1,225 +1,395 @@
 http_interactions:
 - request:
-    method: get
+    method: GET
     uri: https://social.tchncs.de/api/v1/timelines/public?local=TRUE&remote=FALSE&only_media=FALSE&limit=10
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
-      Authorization: Bearer <<<MASTODON TOKEN>>>
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 200
     headers:
-      cache-control: no-store
+      cache-control: private, no-store
       content-encoding: gzip
-      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
-        ''none''; font-src ''self'' https://social.tchncs.de; img-src ''self'' https:
-        data: blob: https://social.tchncs.de; style-src ''self'' https://social.tchncs.de
-        ''nonce-2yWfpD7XPUtQI6VnYO7xVA==''; media-src ''self'' https: data: https://social.tchncs.de;
-        frame-src ''self'' https:; manifest-src ''self'' https://social.tchncs.de;
-        connect-src ''self'' data: blob: https://social.tchncs.de https://f2.tchncs.de
-        wss://social.tchncs.de; script-src ''self'' https://social.tchncs.de ''unsafe-eval'';
-        child-src ''self'' blob: https://social.tchncs.de; worker-src ''self'' blob:
-        https://social.tchncs.de'
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
       content-type: application/json; charset=utf-8
-      date: Tue, 08 Nov 2022 12:07:37 GMT
-      etag: W/"a5be6f9e7b2b32f3a555951773f16d8a"
-      link: <https://social.tchncs.de/api/v1/timelines/public?limit=10&local=TRUE&max_id=109308074801548627&only_media=FALSE&remote=FALSE>;
-        rel="next", <https://social.tchncs.de/api/v1/timelines/public?limit=10&local=TRUE&min_id=109308098827977220&only_media=FALSE&remote=FALSE>;
+      date: Thu, 17 Jul 2025 13:44:16 GMT
+      etag: W/"bdbf5e3f6f34d44bedb6e9e8097c88b5"
+      link: <https://social.tchncs.de/api/v1/timelines/public?limit=10&local=TRUE&max_id=114868745427538673&only_media=FALSE&remote=FALSE>;
+        rel="next", <https://social.tchncs.de/api/v1/timelines/public?limit=10&local=TRUE&min_id=114868843230938241&only_media=FALSE&remote=FALSE>;
         rel="prev"
-      permissions-policy:
-      - interest-cohort=()
-      - interest-cohort=()
-      server: Mastodon
-      strict-transport-security: max-age=63072000; includeSubDomains
-      vary: Accept-Encoding, Origin
+      referrer-policy: same-origin
+      server: nginx
+      strict-transport-security:
+      - max-age=63072000; includeSubDomains
+      - max-age=31536000
+      vary:
+      - Accept-Encoding
+      - Authorization, Origin
       x-content-type-options: nosniff
       x-frame-options: DENY
       x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '299'
-      x-ratelimit-reset: '2022-11-08T12:10:00.109944Z'
-      x-request-id: a82c85a4-fabd-48fc-bb6c-95578f0108c7
-      x-runtime: '0.079801'
+      x-ratelimit-remaining: '282'
+      x-ratelimit-reset: '2025-07-17T13:45:00.089422Z'
+      x-request-id: fd5a9e4d-0b62-443f-b369-f75834a37d08
+      x-runtime: '0.041354'
       x-xss-protection: '0'
     body:
-      encoding: ''
-      file: no
-      string: "[{\"id\":\"109308098827977220\",\"created_at\":\"2022-11-08T12:07:02.841Z\",\"in_reply_to_id\":\"109308090601389322\",\"in_reply_to_account_id\":\"15270\",\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"fr\",\"uri\":\"https://social.tchncs.de/users/digger2/statuses/109308098827977220\",\"url\":\"https://social.tchncs.de/@digger2/109308098827977220\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eJe
-        compati pour toutes les personnes qui ont un nez et des oreilles et qui sont
-        oubliees dans les nombreux emojis existants. \\u003ca href=\\\"https://social.tchncs.de/tags/TrouvesToiUnCombatUtile\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eTrouvesToiUnCombatUtile\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Tusky\",\"website\":\"https://tusky.app\"},\"account\":{\"id\":\"15270\",\"username\":\"digger2\",\"acct\":\"digger2\",\"display_name\":\"DiGGeR2\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2017-04-06T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://social.tchncs.de/@digger2\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/000/015/270/original/6d047bd2a683d61f.jpg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/000/015/270/original/6d047bd2a683d61f.jpg\",\"header\":\"https://f2.tchncs.de/accounts/headers/000/015/270/original/3236cd647a9691cf.png\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/000/015/270/original/3236cd647a9691cf.png\",\"followers_count\":35,\"following_count\":10,\"statuses_count\":2600,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"TrouvesToiUnCombatUtile\",\"url\":\"https://social.tchncs.de/tags/TrouvesToiUnCombatUtile\"}],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109308096943301298\",\"created_at\":\"2022-11-08T12:06:34.080Z\",\"in_reply_to_id\":\"109308090606133041\",\"in_reply_to_account_id\":\"106856450079448288\",\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://social.tchncs.de/users/katzenberger/statuses/109308096943301298\",\"url\":\"https://social.tchncs.de/@katzenberger/109308096943301298\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003e*except
-        Berlin, the dysfunctional federal state that can\\u0026#39;t even organize
-        elections properly\\u003c/p\\u003e\",\"reblog\":null,\"application\":null,\"account\":{\"id\":\"106856450079448288\",\"username\":\"katzenberger\",\"acct\":\"katzenberger\",\"display_name\":\"katzenberger\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2021-09-01T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eRolf
-        | RFK \U0001F1EA\U0001F1FA\U0001F1FA\U0001F1E6\U0001F7E3\U0001F637\U0001F489\\u003cbr
-        /\\u003e«I would not waste my life in friction when it could be turned into
-        momentum.»\\u003cbr /\\u003eThis is my private account | Toots in English
-        and German | he, him, his\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@katzenberger\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/106/856/450/079/448/288/original/6ecb1a4c7d0d55bf.jpg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/106/856/450/079/448/288/original/6ecb1a4c7d0d55bf.jpg\",\"header\":\"https://f2.tchncs.de/accounts/headers/106/856/450/079/448/288/original/4b2b55ef43967f65.jpg\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/106/856/450/079/448/288/original/4b2b55ef43967f65.jpg\",\"followers_count\":127,\"following_count\":116,\"statuses_count\":615,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"Web\",\"value\":\"\\u003ca
-        href=\\\"https://www.katzenberger.tel\\\" target=\\\"_blank\\\" rel=\\\"nofollow
-        noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003ekatzenberger.tel\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Business\",\"value\":\"\\u003ca
-        href=\\\"https://pragmatic-teams.com\\\" target=\\\"_blank\\\" rel=\\\"nofollow
-        noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003epragmatic-teams.com\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Side
-        project\",\"value\":\"\\u003ca href=\\\"https://social.tchncs.de/web/@tuxwise\\\"
-        target=\\\"_blank\\\" rel=\\\"nofollow noopener noreferrer me\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003esocial.tchncs.de/web/@tuxwise\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"OpenPGP\",\"value\":\"4C87
-        427D F999 5D4D 37B7 3EB0 D549 C90B DBED 04AC\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109308094953324508\",\"created_at\":\"2022-11-08T12:06:03.718Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://social.tchncs.de/users/dakloifarwa/statuses/109308094953324508\",\"url\":\"https://social.tchncs.de/@dakloifarwa/109308094953324508\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eDie
-        Frage lautet wohl eher:\\u003cbr /\\u003e*Darf* man die Leistung von Wäldern,
-        Mooren und Insekten überhaupt beziffern?\\u003c/p\\u003e\\u003cp\\u003eSchutz
-        von Biodiversität: Die Leistungsbilanz der Ökosysteme | tagesschau.de\\u003cbr
-        /\\u003e\\u003ca href=\\\"https://www.tagesschau.de/wirtschaft/weltwirtschaft/biodiversitaet-artenvielfalt-schutz-kosten-wirtschaftsfaktor-oekosysteme-101.html\\\"
-        target=\\\"_blank\\\" rel=\\\"nofollow noopener noreferrer\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003etagesschau.de/wirtschaft/weltw\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003eirtschaft/biodiversitaet-artenvielfalt-schutz-kosten-wirtschaftsfaktor-oekosysteme-101.html\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
-        href=\\\"https://social.tchncs.de/tags/capitalismsucks\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ecapitalismsucks\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Tusky\",\"website\":\"https://tusky.app\"},\"account\":{\"id\":\"149955\",\"username\":\"dakloifarwa\",\"acct\":\"dakloifarwa\",\"display_name\":\"dakloifarwa\",\"locked\":false,\"bot\":false,\"discoverable\":null,\"group\":false,\"created_at\":\"2018-10-23T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eastronomy
-        \\u0026amp; more\\u003c/p\\u003e\\u003cp\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/nobot\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003enobot\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@dakloifarwa\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/000/149/955/original/dec37a37fc9b5fe9.png\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/000/149/955/original/dec37a37fc9b5fe9.png\",\"header\":\"https://f2.tchncs.de/accounts/headers/000/149/955/original/11b937f7204cbd24.jpg\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/000/149/955/original/11b937f7204cbd24.jpg\",\"followers_count\":5,\"following_count\":27,\"statuses_count\":338,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"capitalismsucks\",\"url\":\"https://social.tchncs.de/tags/capitalismsucks\"}],\"emojis\":[],\"card\":{\"url\":\"https://www.tagesschau.de/wirtschaft/weltwirtschaft/biodiversitaet-artenvielfalt-schutz-kosten-wirtschaftsfaktor-oekosysteme-101.html\",\"title\":\"Schutz
-        von Biodiversität: Die Leistungsbilanz der Ökosysteme\",\"description\":\"Intakte
-        Ökosysteme haben einen hohen wirtschaftlichen Nutzen. Doch lässt sich die
-        Leistung von Wäldern, Mooren und Insekten überhaupt beziffern? Ein ökonomischer
-        Blick auf Biodiversität. \\u003cem\\u003eVon Bianca von der Au\\u003c/em\\u003e.\",\"type\":\"link\",\"author_name\":\"tagesschau\",\"author_url\":\"\",\"provider_name\":\"tagesschau.de\",\"provider_url\":\"\",\"html\":\"\",\"width\":400,\"height\":225,\"image\":\"https://f2.tchncs.de/cache/preview_cards/images/012/733/087/original/d573be7136d55410.jpg\",\"embed_url\":\"\",\"blurhash\":\"UM9+AZ.jExJBjKf9W;V{9tRR-W%2IUWCs:ix\"},\"poll\":null},{\"id\":\"109308094600842405\",\"created_at\":\"2022-11-08T12:05:58.340Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://social.tchncs.de/users/iron_alf/statuses/109308094600842405\",\"url\":\"https://social.tchncs.de/@iron_alf/109308094600842405\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":1,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eWenn
-        man sich \\u003ca href=\\\"https://social.tchncs.de/tags/Twitter\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eTwitter\\u003c/span\\u003e\\u003c/a\\u003e
-        und \\u003ca href=\\\"https://social.tchncs.de/tags/Musk\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eMusk\\u003c/span\\u003e\\u003c/a\\u003e
-        so anschaut... Kann er bitte WhatsApp kaufen und dann die nervigen Sprachnachrichten
-        abschalten? \U0001F644 \\u003cbr /\\u003e(Hätte vielleicht auch hier den Nebeneffekt,
-        dass auch mehr Leute endlich umsteigen.)\\u003c/p\\u003e\",\"reblog\":null,\"application\":null,\"account\":{\"id\":\"355994\",\"username\":\"iron_alf\",\"acct\":\"iron_alf\",\"display_name\":\"Flo
-        \U0001F468‍\U0001F3EB@BW\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2021-01-01T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eTeaching
-        English, history, political science and sometimes nerdom. \U0001F916\U0001F5A5️\U0001F4FA\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@iron_alf\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/000/355/994/original/af7e963bd774ceac.jpg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/000/355/994/original/af7e963bd774ceac.jpg\",\"header\":\"https://f2.tchncs.de/accounts/headers/000/355/994/original/baef4beec6881319.jpg\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/000/355/994/original/baef4beec6881319.jpg\",\"followers_count\":25,\"following_count\":35,\"statuses_count\":133,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"musk\",\"url\":\"https://social.tchncs.de/tags/musk\"},{\"name\":\"twitter\",\"url\":\"https://social.tchncs.de/tags/twitter\"}],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109308090606133041\",\"created_at\":\"2022-11-08T12:04:57.400Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://social.tchncs.de/users/katzenberger/statuses/109308090606133041\",\"url\":\"https://social.tchncs.de/@katzenberger/109308090606133041\",\"replies_count\":1,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eLooking
-        at the \\u003ca href=\\\"https://social.tchncs.de/tags/Midterms2022\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eMidterms2022\\u003c/span\\u003e\\u003c/a\\u003e
-        , I\\u0026#39;m thankful for the luxury of an almost boring \\u003ca href=\\\"https://social.tchncs.de/tags/election\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eelection\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/process\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eprocess\\u003c/span\\u003e\\u003c/a\\u003e
-        in \\u003ca href=\\\"https://social.tchncs.de/tags/Germany\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eGermany\\u003c/span\\u003e\\u003c/a\\u003e*:\\u003c/p\\u003e\\u003cp\\u003e1.
-        Get mailed a polling card, weeks ahead, including directions and info whether
-        the voting cabin is fully accessible\\u003cbr /\\u003e2. Get offered absentee
-        voting, if I can\\u0026#39;t be there, in person\\u003cbr /\\u003e3. Bring
-        my ID and be greeted by friendly volunteer helpers\\u003cbr /\\u003e4. Cast
-        my vote on paper, thus creating an auditable track, en passant\\u003cbr /\\u003e5.
-        Official announcement of voting results, mostly on the same evening\\u003c/p\\u003e\",\"reblog\":null,\"application\":null,\"account\":{\"id\":\"106856450079448288\",\"username\":\"katzenberger\",\"acct\":\"katzenberger\",\"display_name\":\"katzenberger\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2021-09-01T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eRolf
-        | RFK \U0001F1EA\U0001F1FA\U0001F1FA\U0001F1E6\U0001F7E3\U0001F637\U0001F489\\u003cbr
-        /\\u003e«I would not waste my life in friction when it could be turned into
-        momentum.»\\u003cbr /\\u003eThis is my private account | Toots in English
-        and German | he, him, his\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@katzenberger\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/106/856/450/079/448/288/original/6ecb1a4c7d0d55bf.jpg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/106/856/450/079/448/288/original/6ecb1a4c7d0d55bf.jpg\",\"header\":\"https://f2.tchncs.de/accounts/headers/106/856/450/079/448/288/original/4b2b55ef43967f65.jpg\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/106/856/450/079/448/288/original/4b2b55ef43967f65.jpg\",\"followers_count\":127,\"following_count\":116,\"statuses_count\":615,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"Web\",\"value\":\"\\u003ca
-        href=\\\"https://www.katzenberger.tel\\\" target=\\\"_blank\\\" rel=\\\"nofollow
-        noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003ekatzenberger.tel\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Business\",\"value\":\"\\u003ca
-        href=\\\"https://pragmatic-teams.com\\\" target=\\\"_blank\\\" rel=\\\"nofollow
-        noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003epragmatic-teams.com\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Side
-        project\",\"value\":\"\\u003ca href=\\\"https://social.tchncs.de/web/@tuxwise\\\"
-        target=\\\"_blank\\\" rel=\\\"nofollow noopener noreferrer me\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003esocial.tchncs.de/web/@tuxwise\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"OpenPGP\",\"value\":\"4C87
-        427D F999 5D4D 37B7 3EB0 D549 C90B DBED 04AC\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"germany\",\"url\":\"https://social.tchncs.de/tags/germany\"},{\"name\":\"process\",\"url\":\"https://social.tchncs.de/tags/process\"},{\"name\":\"election\",\"url\":\"https://social.tchncs.de/tags/election\"},{\"name\":\"Midterms2022\",\"url\":\"https://social.tchncs.de/tags/Midterms2022\"}],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109308090601389322\",\"created_at\":\"2022-11-08T12:04:57.316Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"fr\",\"uri\":\"https://social.tchncs.de/users/digger2/statuses/109308090601389322\",\"url\":\"https://social.tchncs.de/@digger2/109308090601389322\",\"replies_count\":1,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eLowri
-        Moore a une cause à défendre : combattre la stigmatisation dont font l\\u0026#39;objet les
-        personnes à lunettes. C\\u0026#39;est d\\u0026#39;ailleurs pour cela que l\\u0026#39;enfant
-        exhorte aujourd\\u0026#39;hui le Consortium Unicode, c\\u0026#39;est-à-dire
-        l\\u0026#39;organisme responsable des nouveaux emojis, d\\u0026#39;offrir
-        aux utilisateurs le choix d\\u0026#39;avoir accès à des icônes plus représentatives
-        et stylées. Et ce, en ayant la possibilité... s\\u0026#39;ajouter des lunettes sur
-        les emojis déjà existants.\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Tusky\",\"website\":\"https://tusky.app\"},\"account\":{\"id\":\"15270\",\"username\":\"digger2\",\"acct\":\"digger2\",\"display_name\":\"DiGGeR2\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2017-04-06T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://social.tchncs.de/@digger2\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/000/015/270/original/6d047bd2a683d61f.jpg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/000/015/270/original/6d047bd2a683d61f.jpg\",\"header\":\"https://f2.tchncs.de/accounts/headers/000/015/270/original/3236cd647a9691cf.png\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/000/015/270/original/3236cd647a9691cf.png\",\"followers_count\":35,\"following_count\":10,\"statuses_count\":2600,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109308087305037419\",\"created_at\":\"2022-11-08T12:04:07.013Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://social.tchncs.de/users/partim/statuses/109308087305037419\",\"url\":\"https://social.tchncs.de/@partim/109308087305037419\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eWhat
-        is it with Albert Heijn and plastic?\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Toot!\",\"website\":\"https://toot.c3.cx/\"},\"account\":{\"id\":\"109290449048358719\",\"username\":\"partim\",\"acct\":\"partim\",\"display_name\":\"Martin
-        Hoffmann\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-11-05T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eMakes
-        software for Internet infrastructure and maps.\\u003c/p\\u003e\\u003cp\\u003eLikes
-        trains – both using them and understanding operation and engineering.\\u003c/p\\u003e\\u003cp\\u003eGerman
-        living in the Netherlands. He/him.\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@partim\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/109/290/449/048/358/719/original/fcc5267ddd2b3420.jpg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/109/290/449/048/358/719/original/fcc5267ddd2b3420.jpg\",\"header\":\"https://f2.tchncs.de/accounts/headers/109/290/449/048/358/719/original/4717affe220e2085.jpeg\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/109/290/449/048/358/719/original/4717affe220e2085.jpeg\",\"followers_count\":44,\"following_count\":44,\"statuses_count\":14,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"NLnet
+      string: "[{\"id\":\"114868843230938241\",\"created_at\":\"2025-07-17T13:37:28.714Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://social.tchncs.de/users/Haydar/statuses/114868843230938241\",\"url\":\"https://social.tchncs.de/@Haydar/114868843230938241\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":1,\"edited_at\":null,\"content\":\"\\u003cp\\u003eSo,
+        jetzt Ruhe hier. \\u003ca href=\\\"https://social.tchncs.de/tags/StarTrek\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eStarTrek\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/strangenewworlds\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003estrangenewworlds\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Tusky\",\"website\":\"https://tusky.app\"},\"account\":{\"id\":\"14939\",\"username\":\"Haydar\",\"acct\":\"Haydar\",\"display_name\":\"Senioradmin\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2017-04-06T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eFree
+        Software, Free Society, No Borders.\\u003cbr /\\u003ePosts in deutsch, english.
+        Aprendo \\u003ca href=\\\"https://social.tchncs.de/tags/espa%C3%B1ol\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eespañol\\u003c/span\\u003e\\u003c/a\\u003e.
+        \\u003cbr /\\u003eWeitere Themen: \\u003ca href=\\\"https://social.tchncs.de/tags/ITSec\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eITSec\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://social.tchncs.de/tags/Autismus\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eAutismus\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://social.tchncs.de/tags/Spanien\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eSpanien\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://social.tchncs.de/tags/Vietnam\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eVietnam\\u003c/span\\u003e\\u003c/a\\u003e,
+        Politik, IT allgemein, \\u003ca href=\\\"https://social.tchncs.de/tags/Wandern\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eWandern\\u003c/span\\u003e\\u003c/a\\u003e
+        / \\u003ca href=\\\"https://social.tchncs.de/tags/Hiking\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eHiking\\u003c/span\\u003e\\u003c/a\\u003e
+        und privater Kram.\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@Haydar\",\"uri\":\"https://social.tchncs.de/users/Haydar\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/000/014/939/original/8ce984ad7c390bd4.jpg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/000/014/939/original/8ce984ad7c390bd4.jpg\",\"header\":\"https://f2.tchncs.de/accounts/headers/000/014/939/original/3fbb389103640165.png\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/000/014/939/original/3fbb389103640165.png\",\"followers_count\":886,\"following_count\":600,\"statuses_count\":10404,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"Blog\",\"value\":\"\\u003ca
+        href=\\\"https://senioradmin.de\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003esenioradmin.de\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-11-22T10:57:42.433+00:00\"}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"startrek\",\"url\":\"https://social.tchncs.de/tags/startrek\"},{\"name\":\"strangenewworlds\",\"url\":\"https://social.tchncs.de/tags/strangenewworlds\"}],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868832093070750\",\"created_at\":\"2025-07-17T13:34:38.764Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://social.tchncs.de/users/erAck/statuses/114868832093070750\",\"url\":\"https://social.tchncs.de/@erAck/114868832093070750\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eToday,
+        July 17, is World Emoji Day. For why July 17 look at your calendar emoji..\\u003c/p\\u003e\\u003cp\\u003e\\u0026quot;\\u003cbr
+        /\\u003eWorld Emoji Day was set on July 17 because that’s the date the calendar
+        emoji shows.\\u003c/p\\u003e\\u003cp\\u003eOriginally, only Apple’s calendar
+        emoji displayed July 17, which can be traced back to the day in 2002 when
+        Apple introduced its desktop calendar app iCal.\\u003c/p\\u003e\\u003cp\\u003eA
+        few years later, on July 17, 2014, the founder of Emojipedia, an online resource
+        for emojis, launched World Emoji Day because of the Apple emoji. In 2016,
+        Google also changed the date of its calendar emoji to July 17.\\u003cbr /\\u003e\\u0026quot;\\u003cbr
+        /\\u003e[cited from \\u003ca href=\\\"https://threema.com/en/blog/world-emoji-day-2025\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ethreema.com/en/blog/world-emoj\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ei-day-2025\\u003c/span\\u003e\\u003c/a\\u003e]\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://social.tchncs.de/tags/WorldEmojiDay\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eWorldEmojiDay\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/emojis\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eemojis\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":null,\"account\":{\"id\":\"39581\",\"username\":\"erAck\",\"acct\":\"erAck\",\"display_name\":\"erAck\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2017-04-23T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003ca
+        href=\\\"https://social.tchncs.de/tags/LibreOffice\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eLibreOffice\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/Calc\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eCalc\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/hacker\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ehacker\\u003c/span\\u003e\\u003c/a\\u003e
+        ⌨️ \\u003ca href=\\\"https://social.tchncs.de/tags/cyclist\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ecyclist\\u003c/span\\u003e\\u003c/a\\u003e
+        ashore \U0001F6B4 \\u003ca href=\\\"https://social.tchncs.de/tags/sailor\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003esailor\\u003c/span\\u003e\\u003c/a\\u003e
+        offshore ⛵ \\u003ca href=\\\"https://social.tchncs.de/tags/guitar\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eguitar\\u003c/span\\u003e\\u003c/a\\u003e
+        \U0001F3B8 and \U0001F3BC \\u003ca href=\\\"https://social.tchncs.de/tags/violin\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eviolin\\u003c/span\\u003e\\u003c/a\\u003e
+        tormentor \U0001F3BB\\u003c/p\\u003e\\u003cp\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/TDF\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eTDF\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/ODF\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eODF\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/FSFE\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFSFE\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/FLOSS\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFLOSS\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/FreeSoftware\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFreeSoftware\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/FreeSociety\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFreeSociety\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/Hamburg\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eHamburg\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/HH\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eHH\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/DE\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eDE\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://social.tchncs.de/tags/nobot\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003enobot\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/nobots\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003enobots\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://social.tchncs.de/tags/Qualit%C3%A4tsfollower\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eQualitätsfollower\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003eTotemtier:
+        \\u003ca href=\\\"https://social.tchncs.de/tags/Eichh%C3%B6rnchen\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eEichhörnchen\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@erAck\",\"uri\":\"https://social.tchncs.de/users/erAck\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/000/039/581/original/5d23d83c1f141208.png\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/000/039/581/original/5d23d83c1f141208.png\",\"header\":\"https://f2.tchncs.de/accounts/headers/000/039/581/original/e44ff0b9e5275216.jpg\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/000/039/581/original/e44ff0b9e5275216.jpg\",\"followers_count\":334,\"following_count\":453,\"statuses_count\":8438,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"Sweet
+        Home\",\"value\":\"\\u003ca href=\\\"https://erack.de\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003eerack.de\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2018-10-31T01:50:34.328+00:00\"},{\"name\":\"Incarnations\",\"value\":\"\\u003ca
+        href=\\\"https://erack.de/incarnations.html\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003eerack.de/incarnations.html\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2023-02-08T19:23:04.602+00:00\"},{\"name\":\"Keyoxide\",\"value\":\"\\u003ca
+        href=\\\"https://keyoxide.org/2265D7F3A7B095CC3918630B6A6CD5B765632D3A\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ekeyoxide.org/2265D7F3A7B095CC3\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e918630B6A6CD5B765632D3A\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2021-08-20T09:25:40.795+00:00\"}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"worldemojiday\",\"url\":\"https://social.tchncs.de/tags/worldemojiday\"},{\"name\":\"emojis\",\"url\":\"https://social.tchncs.de/tags/emojis\"}],\"emojis\":[],\"quote\":null,\"card\":{\"url\":\"https://threema.com/en/blog/world-emoji-day-2025\",\"title\":\"Fun
+        Facts to Celebrate World Emoji Day\",\"description\":\"Every year on July
+        17, World Emoji Day is celebrated. Because emojis have become indispensable
+        for chat communication – whether as a reaction to a message or directly in
+        the text – we have put together a few fun facts about the little pictograms.\",\"language\":\"en\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"Threema\",\"provider_url\":\"\",\"html\":\"\",\"width\":663,\"height\":347,\"image\":\"https://f2.tchncs.de/cache/preview_cards/images/038/923/731/original/e2478a64b53303b7.jpg\",\"image_description\":\"Globe
+        emoji, heart-eyes emoji, and calendar emoji surrounded by other emojis, celebrating
+        World Emoji Day.\",\"embed_url\":\"\",\"blurhash\":\"UOOql-OsYP-RxakVj?n$y=xCmRJCt,nOniXS\",\"published_at\":null,\"authors\":[]},\"poll\":null},{\"id\":\"114868813290419665\",\"created_at\":\"2025-07-17T13:29:51.858Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://social.tchncs.de/users/Photor/statuses/114868813290419665\",\"url\":\"https://social.tchncs.de/@Photor/114868813290419665\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eEin
+        Bild von der Anreise zum Lehrgang - unter der Gewitterfront durch und sicher
+        fotografiert aus dem fahrenden Zug heraus gemacht.\\u003c/p\\u003e\\u003cp\\u003ePS:
+        Bildbeschreibung will nicht - also hier:\\u003cbr /\\u003eUnten Landschaft
+        aus bewaldeten Hügeln mit Feldern und Wiesen dazwischen (dunkel). Darüber
+        grauer Himmel mit sehr dunklen Wolken. Alles unscharf außer den schräg durch’s
+        Bild laufenden Streifen von ablaufendem Regenwasser auf dem Fenster, durch
+        den Fahrtwind nach hinten geweht.\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Toot!\",\"website\":\"https://toot.c3.cx/\"},\"account\":{\"id\":\"122636\",\"username\":\"Photor\",\"acct\":\"Photor\",\"display_name\":\"Photor\",\"locked\":true,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2018-08-19T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003ca
+        href=\\\"https://social.tchncs.de/tags/Physik\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ePhysik\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://social.tchncs.de/tags/Simulation\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eSimulation\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://social.tchncs.de/tags/Ingenieur\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eIngenieur\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://social.tchncs.de/tags/Astrophysik\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eAstrophysik\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://social.tchncs.de/tags/Linux\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eLinux\\u003c/span\\u003e\\u003c/a\\u003e,
+        \ \\u003ca href=\\\"https://social.tchncs.de/tags/Opensource\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eOpensource\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://social.tchncs.de/tags/Fotografie\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFotografie\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://social.tchncs.de/tags/LaTeX\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eLaTeX\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://social.tchncs.de/tags/Delphi\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eDelphi\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://social.tchncs.de/tags/Lazarus\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eLazarus\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/nobot\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003enobot\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@Photor\",\"uri\":\"https://social.tchncs.de/users/Photor\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/000/122/636/original/1032c56e32dee55d.jpeg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/000/122/636/original/1032c56e32dee55d.jpeg\",\"header\":\"https://f2.tchncs.de/accounts/headers/000/122/636/original/ee7e1ab2de0deeaf.jpg\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/000/122/636/original/ee7e1ab2de0deeaf.jpg\",\"followers_count\":495,\"following_count\":572,\"statuses_count\":1177,\"last_status_at\":\"2025-07-17\",\"hide_collections\":true,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"Jabber-ID\",\"value\":\"photor@mailbox.org\",\"verified_at\":null},{\"name\":\"Threema\",\"value\":\"\\u003ca
+        href=\\\"https://threema.id/PE2K3VXY\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003ethreema.id/PE2K3VXY\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[{\"id\":\"114868785889263146\",\"type\":\"image\",\"url\":\"https://f2.tchncs.de/media_attachments/files/114/868/785/889/263/146/original/8999e67d2f34e329.jpg\",\"preview_url\":\"https://f2.tchncs.de/media_attachments/files/114/868/785/889/263/146/small/8999e67d2f34e329.jpg\",\"remote_url\":null,\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"original\":{\"width\":3325,\"height\":2494,\"size\":\"3325x2494\",\"aspect\":1.3331996792301524},\"small\":{\"width\":554,\"height\":416,\"size\":\"554x416\",\"aspect\":1.3317307692307692},\"focus\":{\"x\":0.06591796875,\"y\":-0.40625000000000017}},\"description\":null,\"blurhash\":\"UQEyY$-;Rjof~qWVayt74nD%t6xuD%IUWBay\"}],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868811647511699\",\"created_at\":\"2025-07-17T13:29:26.789Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://social.tchncs.de/users/Sunnypug/statuses/114868811647511699\",\"url\":\"https://social.tchncs.de/@Sunnypug/114868811647511699\",\"replies_count\":1,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eBands
+        oder Künstler, die ich gern live gesehen hätte:\\u003c/p\\u003e\\u003cp\\u003eNirvana
+        \\u003cbr /\\u003eBeastie Boys\\u003cbr /\\u003eJohnny Cash\\u003cbr /\\u003eTon
+        Steine Scherben \\u003cbr /\\u003eThe Doors\\u003c/p\\u003e\\u003cp\\u003eListe
+        nicht vollständig. Sind die ersten, die mir einfallen. Und bei euch so? \\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://social.tchncs.de/tags/bands\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ebands\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/music\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003emusic\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/musik\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003emusik\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Fedilab\",\"website\":\"https://fedilab.app\"},\"account\":{\"id\":\"10329\",\"username\":\"Sunnypug\",\"acct\":\"Sunnypug\",\"display_name\":\"sunnypug\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2017-04-05T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eLinguist.
+        orthography pedant. Android supporter. head of content creation. nature photograph.
+        lower saxony. loves punk music. support your local antifa. my kids: my chinchillas.\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@Sunnypug\",\"uri\":\"https://social.tchncs.de/users/Sunnypug\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/000/010/329/original/9021acca6002022f.jpg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/000/010/329/original/9021acca6002022f.jpg\",\"header\":\"https://f2.tchncs.de/accounts/headers/000/010/329/original/e75db69c82b2eb26.jpg\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/000/010/329/original/e75db69c82b2eb26.jpg\",\"followers_count\":199,\"following_count\":359,\"statuses_count\":3061,\"last_status_at\":\"2025-07-17\",\"hide_collections\":null,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"bands\",\"url\":\"https://social.tchncs.de/tags/bands\"},{\"name\":\"music\",\"url\":\"https://social.tchncs.de/tags/music\"},{\"name\":\"musik\",\"url\":\"https://social.tchncs.de/tags/musik\"}],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868783672055064\",\"created_at\":\"2025-07-17T13:22:19.918Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://social.tchncs.de/users/Cedara/statuses/114868783672055064\",\"url\":\"https://social.tchncs.de/@Cedara/114868783672055064\",\"replies_count\":0,\"reblogs_count\":1,\"favourites_count\":0,\"edited_at\":\"2025-07-17T13:23:54.677Z\",\"content\":\"\\u003cp\\u003eJesus
+        Canadas: Die Bibliothek der wahren Lügen, Coppenrath Verlag 2025.\\u003cbr
+        /\\u003e \\u003cbr /\\u003e\\u003ca href=\\\"https://text.tchncs.de/cedara/h2jesus-canadas-die-bibliothek-der-wahren-lugen-h2\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003etext.tchncs.de/cedara/h2jesus-\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ecanadas-die-bibliothek-der-wahren-lugen-h2\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://social.tchncs.de/tags/books\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ebooks\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003cbr /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/review\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ereview\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/lesekreis\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003elesekreis\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003cspan class=\\\"h-card\\\" translate=\\\"no\\\"\\u003e\\u003ca
+        href=\\\"https://a.gup.pe/u/lesekreis\\\" class=\\\"u-url mention\\\"\\u003e@\\u003cspan\\u003elesekreis\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"account\":{\"id\":\"24531\",\"username\":\"Cedara\",\"acct\":\"Cedara\",\"display_name\":\"Cedara\",\"locked\":true,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2017-04-11T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003ca
+        href=\\\"https://social.tchncs.de/tags/bilingual\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ebilingual\\u003c/span\\u003e\\u003c/a\\u003e
+        (\\u003ca href=\\\"https://social.tchncs.de/tags/German\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eGerman\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u0026amp; \\u003ca href=\\\"https://social.tchncs.de/tags/English\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eEnglish\\u003c/span\\u003e\\u003c/a\\u003e)
+        - \\u003cbr /\\u003eloves \\u003ca href=\\\"https://social.tchncs.de/tags/reading\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ereading\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/books\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ebooks\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/scifi\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003escifi\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/mystery_novels\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003emystery_novels\\u003c/span\\u003e\\u003c/a\\u003e,
+        good \\u003ca href=\\\"https://social.tchncs.de/tags/tea\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003etea\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u0026amp; \\u003ca href=\\\"https://social.tchncs.de/tags/ubuntu\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eubuntu\\u003c/span\\u003e\\u003c/a\\u003e
+        - \\u003cbr /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/Moderator\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eModerator\\u003c/span\\u003e\\u003c/a\\u003e
+        for \\u003ca href=\\\"https://social.tchncs.de/tags/tchncs\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003etchncs\\u003c/span\\u003e\\u003c/a\\u003e.de\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/Lesen\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eLesen\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/B%C3%BCcher\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eBücher\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/Tee\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eTee\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://social.tchncs.de/tags/nobot\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003enobot\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003cbr /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/nobridge\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003enobridge\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/optout\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eoptout\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://social.tchncs.de/tags/WearAMask\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eWearAMask\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/DrostenUltras\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eDrostenUltras\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/geimpft\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003egeimpft\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://social.tchncs.de/tags/Fediventskalender\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFediventskalender\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/DieStimmenimFediversum\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eDieStimmenimFediversum\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/althier\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ealthier\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003ehört gerne \\u003ca href=\\\"https://social.tchncs.de/tags/Schenklradio\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eSchenklradio\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@Cedara\",\"uri\":\"https://social.tchncs.de/users/Cedara\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/000/024/531/original/cbe7b1b03de27740.jpg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/000/024/531/original/cbe7b1b03de27740.jpg\",\"header\":\"https://f2.tchncs.de/accounts/headers/000/024/531/original/62f0fd6840c1c048.png\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/000/024/531/original/62f0fd6840c1c048.png\",\"followers_count\":1151,\"following_count\":645,\"statuses_count\":1040,\"last_status_at\":\"2025-07-17\",\"hide_collections\":true,\"noindex\":true,\"emojis\":[],\"roles\":[{\"id\":\"1\",\"name\":\"Moderator\",\"color\":\"#52b152\"}],\"fields\":[{\"name\":\"semi-public
+        Blog\",\"value\":\"\\u003ca href=\\\"https://cedara.dreamwidth.org\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003ecedara.dreamwidth.org\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2018-10-31T10:05:13.054+00:00\"},{\"name\":\"Rezensionen,
+        Rezepte, Geschichten\",\"value\":\"\\u003ca href=\\\"https://text.tchncs.de/cedara/\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003etext.tchncs.de/cedara/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"also
+        at:\",\"value\":\"\\u003ca href=\\\"https://lesetagebu.ch/von/Cedara\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003elesetagebu.ch/von/Cedara\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-11-30T06:10:03.591+00:00\"},{\"name\":\"also
+        at:\",\"value\":\"literatur.social (backup), pixel.tchncs.de, threema, XMPP,
+        discord, twitch\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[{\"id\":\"109091464819524340\",\"username\":\"lesekreis\",\"url\":\"https://a.gup.pe/u/lesekreis\",\"acct\":\"lesekreis@a.gup.pe\"}],\"tags\":[{\"name\":\"lesekreis\",\"url\":\"https://social.tchncs.de/tags/lesekreis\"},{\"name\":\"books\",\"url\":\"https://social.tchncs.de/tags/books\"},{\"name\":\"review\",\"url\":\"https://social.tchncs.de/tags/review\"}],\"emojis\":[],\"quote\":null,\"card\":{\"url\":\"https://text.tchncs.de/cedara/h2jesus-canadas-die-bibliothek-der-wahren-lugen-h2\",\"title\":\"Jesus
+        Canadas: Die Bibliothek der wahren Lügen\",\"description\":\"Oskar gewinnt
+        den Schreibwettbewerb seines Lieblingsautors und wird von ihm nach Hause eingeladen,
+        wo der Teenager die Kunst des Schreibens erlernen darf, indem er selbst eine
+        Geschic...\",\"language\":\"de\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"Cedaras
+        Couch\",\"provider_url\":\"\",\"html\":\"\",\"width\":480,\"height\":480,\"image\":\"https://f2.tchncs.de/cache/preview_cards/images/038/923/364/original/89c8035f89c62d65.png\",\"image_description\":\"\",\"embed_url\":\"\",\"blurhash\":\"U6Rysg%M~q?b?bj[M{WB_3of4nM{t7WB%Mt7\",\"published_at\":\"2025-07-17T13:18:45.000Z\",\"authors\":[]},\"poll\":null},{\"id\":\"114868767757655644\",\"created_at\":\"2025-07-17T13:18:17.082Z\",\"in_reply_to_id\":\"114868643227379508\",\"in_reply_to_account_id\":\"109290449048358719\",\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://social.tchncs.de/users/partim/statuses/114868767757655644\",\"url\":\"https://social.tchncs.de/@partim/114868767757655644\",\"replies_count\":0,\"reblogs_count\":1,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003eICE
+        trunk line Frankfurt – Basel. Admittedly, they are working on it.\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Ivory
+        for iOS\",\"website\":\"https://tapbots.com/\"},\"account\":{\"id\":\"109290449048358719\",\"username\":\"partim\",\"acct\":\"partim\",\"display_name\":\"Martin
+        Hoffmann\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2022-11-05T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eTake
+        the slow train, see things!\\u003c/p\\u003e\\u003cp\\u003eMakes software for
+        Internet infrastructure and maps.\\u003c/p\\u003e\\u003cp\\u003eLoves trains
+        – both using them and understanding operation and engineering. Builds a railway
+        map at \\u003ca href=\\\"https://map.railwayhistory.org/\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003emap.railwayhistory.org/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003eGerman
+        living in the Netherlands. He/him.\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@partim\",\"uri\":\"https://social.tchncs.de/users/partim\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/109/290/449/048/358/719/original/fcc5267ddd2b3420.jpg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/109/290/449/048/358/719/original/fcc5267ddd2b3420.jpg\",\"header\":\"https://f2.tchncs.de/accounts/headers/109/290/449/048/358/719/original/4717affe220e2085.jpeg\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/109/290/449/048/358/719/original/4717affe220e2085.jpeg\",\"followers_count\":782,\"following_count\":214,\"statuses_count\":10261,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"NLnet
         Labs\",\"value\":\"\\u003ca href=\\\"https://nlnetlabs.nl/people/\\\" target=\\\"_blank\\\"
-        rel=\\\"nofollow noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
         class=\\\"\\\"\\u003enlnetlabs.nl/people/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-11-07T11:27:14.921+00:00\"},{\"name\":\"Github\",\"value\":\"\\u003ca
         href=\\\"https://github.com/partim\\\" target=\\\"_blank\\\" rel=\\\"nofollow
-        noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003egithub.com/partim\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Railway
+        noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003egithub.com/partim\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2023-02-06T10:04:21.376+00:00\"},{\"name\":\"Railway
         History Map\",\"value\":\"\\u003ca href=\\\"https://map.railwayhistory.org\\\"
-        target=\\\"_blank\\\" rel=\\\"nofollow noopener noreferrer me\\\"\\u003e\\u003cspan
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan
         class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003emap.railwayhistory.org\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[{\"id\":\"109308080914466761\",\"type\":\"image\",\"url\":\"https://f2.tchncs.de/media_attachments/files/109/308/080/914/466/761/original/7574eb489c3e85a8.jpg\",\"preview_url\":\"https://f2.tchncs.de/media_attachments/files/109/308/080/914/466/761/small/7574eb489c3e85a8.jpg\",\"remote_url\":null,\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"original\":{\"width\":1663,\"height\":1247,\"size\":\"1663x1247\",\"aspect\":1.3336006415396953},\"small\":{\"width\":461,\"height\":346,\"size\":\"461x346\",\"aspect\":1.3323699421965318}},\"description\":\"A
-        bag of four mini Croissants in a plastic bag each individually wrapped in
-        plastic again. \",\"blurhash\":\"UMFYJlt89H#k~qE1MxRiTKROxDNHx]jFbbM|\"}],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109308084733977233\",\"created_at\":\"2022-11-08T12:03:27.784Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://social.tchncs.de/users/benni/statuses/109308084733977233\",\"url\":\"https://social.tchncs.de/@benni/109308084733977233\",\"replies_count\":1,\"reblogs_count\":0,\"favourites_count\":1,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eWenn
-        ihr es hier zu weiß und (cis-)männlich findet (so wie viele), empfehle ich
-        eine selbstauferlegte Quote einzuführen. Also nicht im Sinne von durchzählen,
-        aber einfach im Sinne, das beim Folgen mit zu berücksichtigen. Löst das Problem
-        nicht, aber mindert die Folgen und wenn es viele machen, wird das Problem
-        tatsächlich irgendwann auch besser dadurch.\\u003c/p\\u003e\",\"reblog\":null,\"application\":null,\"account\":{\"id\":\"9696\",\"username\":\"benni\",\"acct\":\"benni\",\"display_name\":\"benni\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2017-04-05T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eLumpenproletarier
-        mit Immobilienbesitz.\\u003c/p\\u003e\\u003cp\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/Frankfurt\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFrankfurt\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/Berlin\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eBerlin\\u003c/span\\u003e\\u003c/a\\u003e,
-        Germany\\u003c/p\\u003e\\u003cp\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/kommunismus\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ekommunismus\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/anarchismus\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eanarchismus\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/spiele\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003espiele\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/wissenschaft\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ewissenschaft\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/floss\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003efloss\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/klima\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eklima\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/pnpde\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003epnpde\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003ePronomen:
-        Er\\u003c/p\\u003e\\u003cp\\u003eFalls Du einen CN politik brauchst, ist es
-        vielleicht nicht so eine gute Idee mir zu folgen. Sorry, aber ich finde es
-        macht ab einem gewissen Prozentsatz keinen Sinn mehr immer den selben CN dran
-        zu pappen.\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@benni\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/000/009/696/original/5e50c514ccc704dd.jpg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/000/009/696/original/5e50c514ccc704dd.jpg\",\"header\":\"https://f2.tchncs.de/accounts/headers/000/009/696/original/cec2ef91f93e1a2b.jpeg\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/000/009/696/original/cec2ef91f93e1a2b.jpeg\",\"followers_count\":1309,\"following_count\":796,\"statuses_count\":16662,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"Homepage\",\"value\":\"\\u003ca
-        href=\\\"http://bennibaermann.de\\\" target=\\\"_blank\\\" rel=\\\"nofollow
-        noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttp://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003ebennibaermann.de\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Blog\",\"value\":\"\\u003ca
-        href=\\\"http://keimform.de\\\" target=\\\"_blank\\\" rel=\\\"nofollow noopener
-        noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttp://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003ekeimform.de\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Podcast\",\"value\":\"\\u003ca
-        href=\\\"https://besondereumstaende.podcaster.de/\\\" target=\\\"_blank\\\"
-        rel=\\\"nofollow noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"ellipsis\\\"\\u003ebesondereumstaende.podcaster.d\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ee/\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Spiele\",\"value\":\"PnP
-        (zur Zeit Fate, DnD), Go, \\u003ca href=\\\"https://social.tchncs.de/tags/ragnar%C3%B6k\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eragnarök\\u003c/span\\u003e\\u003c/a\\u003e,
-        ...\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109308082842123594\",\"created_at\":\"2022-11-08T12:02:58.926Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://social.tchncs.de/users/rena2019/statuses/109308082842123594\",\"url\":\"https://social.tchncs.de/@rena2019/109308082842123594\",\"replies_count\":1,\"reblogs_count\":0,\"favourites_count\":1,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eWieso
-        kann die Mastodon App eigentlich nicht alle Follower eines Accounts anzeigen?
-        Bug oder Feature?\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Mastodon
-        for Android\",\"website\":\"https://app.joinmastodon.org/android\"},\"account\":{\"id\":\"181747\",\"username\":\"rena2019\",\"acct\":\"rena2019\",\"display_name\":\"\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2019-01-22T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003ca
-        href=\\\"https://social.tchncs.de/tags/NFC\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eNFC\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/RFID\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eRFID\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/Smartcards\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eSmartcards\\u003c/span\\u003e\\u003c/a\\u003e
-        embedded Zeugs: \\u003ca href=\\\"https://social.tchncs.de/tags/ESP32\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eESP32\\u003c/span\\u003e\\u003c/a\\u003e,
-        \\u003ca href=\\\"https://social.tchncs.de/tags/ESP8266\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eESP8266\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/RaspberryPi\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eRaspberryPi\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/Android\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eAndroid\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.tchncs.de/tags/Linux\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eLinux\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@rena2019\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/000/181/747/original/699f32da26394e6f.png\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/000/181/747/original/699f32da26394e6f.png\",\"header\":\"https://social.tchncs.de/headers/original/missing.png\",\"header_static\":\"https://social.tchncs.de/headers/original/missing.png\",\"followers_count\":29,\"following_count\":44,\"statuses_count\":39,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109308074801548627\",\"created_at\":\"2022-11-08T12:00:56.227Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://social.tchncs.de/users/echopapa/statuses/109308074801548627\",\"url\":\"https://social.tchncs.de/@echopapa/109308074801548627\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eMoya
-        Lothian-McLean über den Zwitschervogel:\\u003c/p\\u003e\\u003cp\\u003eMaybe
-        Twitter Should Die?\\u003c/p\\u003e\\u003cp\\u003e\\u003ca href=\\\"https://novaramedia.com/2022/11/08/maybe-twitter-should-die/\\\"
-        target=\\\"_blank\\\" rel=\\\"nofollow noopener noreferrer\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003enovaramedia.com/2022/11/08/may\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ebe-twitter-should-die/\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u0026quot;As
-        imprisoned Egyptian activist Alaa Abd el-Fattah wrote of Twitter, in the recently
-        published work ‘You Have Not Yet Been Defeated’: “This medium is stifling.
-        It’s very strange that the entire world knows that these tools and mediums
-        are defective and they have no faith in them and are suspicious of them, but
-        they just keep using them. There’s a need for an alternate imagination.” \\u0026quot;\\u003c/p\\u003e\",\"reblog\":null,\"application\":null,\"account\":{\"id\":\"109188330656285437\",\"username\":\"echopapa\",\"acct\":\"echopapa\",\"display_name\":\"echopapa\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-10-18T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e42.
-        23 ist auch ok. Bitschubser und Alteisensammler.\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@echopapa\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/109/188/330/656/285/437/original/c16ab66750d275ad.jpg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/109/188/330/656/285/437/original/c16ab66750d275ad.jpg\",\"header\":\"https://social.tchncs.de/headers/original/missing.png\",\"header_static\":\"https://social.tchncs.de/headers/original/missing.png\",\"followers_count\":35,\"following_count\":72,\"statuses_count\":460,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":{\"url\":\"https://novaramedia.com/2022/11/08/maybe-twitter-should-die/\",\"title\":\"Maybe
-        Twitter Should Die?\",\"description\":\"For those interested in creating a
-        more progressive, equal society, Twitter’s 'demise' would actually be a blessing
-        in disguise.\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"Novara
-        Media\",\"provider_url\":\"\",\"html\":\"\",\"width\":400,\"height\":210,\"image\":\"https://f2.tchncs.de/cache/preview_cards/images/012/744/741/original/61da5170b43324f4.png\",\"embed_url\":\"\",\"blurhash\":\"UbG,hoH=0;?v_4S*IU%0E2ae$$RjM|WBt7t6\"},\"poll\":null}]"
-  recorded_at: 2022-11-08 12:07:37 GMT
-  recorded_with: vcr/1.1.0, webmockr/0.8.2
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[{\"id\":\"114868767480281240\",\"type\":\"image\",\"url\":\"https://f2.tchncs.de/media_attachments/files/114/868/767/480/281/240/original/3ce24edc210bf959.jpeg\",\"preview_url\":\"https://f2.tchncs.de/media_attachments/files/114/868/767/480/281/240/small/3ce24edc210bf959.jpeg\",\"remote_url\":null,\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"original\":{\"width\":3325,\"height\":2494,\"size\":\"3325x2494\",\"aspect\":1.3331996792301524},\"small\":{\"width\":554,\"height\":416,\"size\":\"554x416\",\"aspect\":1.3317307692307692}},\"description\":\"A
+        German semaphore signal shot upward through a train window.\",\"blurhash\":\"UTHoan4U4Tk9.7IBRjt6IAtRbIae.7V@M{fk\"}],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868765534008578\",\"created_at\":\"2025-07-17T13:17:43.155Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://social.tchncs.de/users/formwandler/statuses/114868765534008578\",\"url\":\"https://social.tchncs.de/@formwandler/114868765534008578\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":\"2025-07-17T13:20:47.586Z\",\"content\":\"\\u003cp\\u003eAb
+        heute Abend wird das neue Balver Lüll \\u003ca href=\\\"https://social.tchncs.de/tags/Bier\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eBier\\u003c/span\\u003e\\u003c/a\\u003e
+        in \\u003ca href=\\\"https://social.tchncs.de/tags/Balve\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eBalve\\u003c/span\\u003e\\u003c/a\\u003e
+        ausgeschenkt. Mal gespannt wie es schmeckt. Auch morgen, am Vorabend vom \\u003ca
+        href=\\\"https://social.tchncs.de/tags/Schuetzenfest\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eSchuetzenfest\\u003c/span\\u003e\\u003c/a\\u003e
+        in der Balver Höhle, gibt es das Bier in der Innenstadt zu kaufen.\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://balver-luell.de\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003ebalver-luell.de\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://social.tchncs.de/tags/BalverL%C3%BCll\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eBalverLüll\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/BalverH%C3%B6hle\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eBalverHöhle\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Tokodon\",\"website\":\"https://apps.kde.org/tokodon\"},\"account\":{\"id\":\"109586472907800200\",\"username\":\"formwandler\",\"acct\":\"formwandler\",\"display_name\":\"Ralf
+        Krüdewagen \U0001F1E9\U0001F1EA:tux:\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2022-12-27T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eIch
+        mag Open Source Software, \\u003ca href=\\\"https://social.tchncs.de/tags/Linux\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eLinux\\u003c/span\\u003e\\u003c/a\\u003e
+        und \\u003ca href=\\\"https://social.tchncs.de/tags/Freiheit\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFreiheit\\u003c/span\\u003e\\u003c/a\\u003e
+        im allgemeinen. Beruflich war ich zuletzt Product Owner für Softwareprodukte.\\u003c/p\\u003e\\u003cp\\u003eWeitere
+        Interessen: \\u003ca href=\\\"https://social.tchncs.de/tags/Radfahren\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eRadfahren\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://social.tchncs.de/tags/Wandern\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eWandern\\u003c/span\\u003e\\u003c/a\\u003e,
+        Literatur (Horror, Fantasy, SciFi), Musik (melod. Heavy Metal, Rock, 80er).\\u003c/p\\u003e\\u003cp\\u003ePolitisch:
+        Gerechtigkeit, gesunder Menschenverstand, \\u003ca href=\\\"https://social.tchncs.de/tags/Grundrechte\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eGrundrechte\\u003c/span\\u003e\\u003c/a\\u003e
+        als Abwehrrechte gegen staatliche Willkür.\\u003c/p\\u003e\\u003cp\\u003e##
+        EN\\u003cbr /\\u003eMy interests: \\u003ca href=\\\"https://social.tchncs.de/tags/opensource\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eopensource\\u003c/span\\u003e\\u003c/a\\u003e,
+        Linux, freedom, agility, biking, hiking, music (metal, rock, 80s), books (horror,
+        SciFi, fantasy).\\u003c/p\\u003e\\u003cp\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/nobot\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003enobot\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@formwandler\",\"uri\":\"https://social.tchncs.de/users/formwandler\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/109/586/472/907/800/200/original/aff11f7a5225afff.jpg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/109/586/472/907/800/200/original/aff11f7a5225afff.jpg\",\"header\":\"https://f2.tchncs.de/accounts/headers/109/586/472/907/800/200/original/c511c09708151251.jpeg\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/109/586/472/907/800/200/original/c511c09708151251.jpeg\",\"followers_count\":9,\"following_count\":77,\"statuses_count\":62,\"last_status_at\":\"2025-07-17\",\"hide_collections\":true,\"noindex\":false,\"emojis\":[{\"shortcode\":\"tux\",\"url\":\"https://f2.tchncs.de/custom_emojis/images/000/000/394/original/1fa6ea79c9903874.png\",\"static_url\":\"https://f2.tchncs.de/custom_emojis/images/000/000/394/static/1fa6ea79c9903874.png\",\"visible_in_picker\":true}],\"roles\":[],\"fields\":[{\"name\":\"Meine
+        Homepage \U0001F3E0\",\"value\":\"\\u003ca href=\\\"https://www.kruedewagen.de/wiki/\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003ekruedewagen.de/wiki/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-12-28T16:28:22.651+00:00\"}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"schuetzenfest\",\"url\":\"https://social.tchncs.de/tags/schuetzenfest\"},{\"name\":\"bier\",\"url\":\"https://social.tchncs.de/tags/bier\"},{\"name\":\"balve\",\"url\":\"https://social.tchncs.de/tags/balve\"},{\"name\":\"balverlull\",\"url\":\"https://social.tchncs.de/tags/balverlull\"},{\"name\":\"balverhohle\",\"url\":\"https://social.tchncs.de/tags/balverhohle\"}],\"emojis\":[],\"quote\":null,\"card\":{\"url\":\"https://balver-luell.de/\",\"title\":\"Balver
+        Lüll - Ein Stück Sauerländer Brautradition kehrt zu uns zurück - BALVER LÜLL
+        - DAS BIER VON HIER\",\"description\":\"\",\"language\":\"de\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"BALVER
+        LÜLL - DAS BIER VON HIER\",\"provider_url\":\"\",\"html\":\"\",\"width\":593,\"height\":388,\"image\":\"https://f2.tchncs.de/cache/preview_cards/images/038/923/234/original/4afcd36b8c45a135.jpg\",\"image_description\":\"\",\"embed_url\":\"\",\"blurhash\":\"UcI=P#.9WV%M-;t7M{oz_Nx]M{ayIUWBj?oe\",\"published_at\":null,\"authors\":[]},\"poll\":null},{\"id\":\"114868751038682059\",\"created_at\":\"2025-07-17T13:14:01.972Z\",\"in_reply_to_id\":\"114867480660733388\",\"in_reply_to_account_id\":\"126494\",\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://social.tchncs.de/users/marcr/statuses/114868751038682059\",\"url\":\"https://social.tchncs.de/@marcr/114868751038682059\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":1,\"edited_at\":null,\"content\":\"\\u003cp\\u003eDas
+        Mittagessen hat gut geklappt. Für 35€ an Zutaten einen großen Topf Gemüse-Curry
+        mit Reis für 15 Personen gekocht.\\u003cbr /\\u003eIch glaub, ich muss Zuhause
+        auch mehr Meal Prep machen. \U0001F606\\u003c/p\\u003e\\u003cp\\u003eEinige
+        von uns haben noch die Gomi Dori Technik geübt.\\u003cbr /\\u003eAuf gut deutsch:
+        Müll sammeln. Da wir den Sportplatz für unser morgendliches Waffentraining
+        kostenlos nutzen durften, und die Wiese extra für uns gemäht wurde, wurde
+        vereinbart, dass wir als Ausgleich einmal den Platz abgehen und herumliegenden
+        Müll aufsammeln.\\u003c/p\\u003e\\u003cp\\u003eJetzt noch ein kurzes Nickerchen,
+        bevor das Kindertraining beginnt.\\u003c/p\\u003e\\u003cp\\u003e\\u003ca href=\\\"https://social.tchncs.de/tags/MarcsAikidoWoche\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eMarcsAikidoWoche\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Tusky\",\"website\":\"https://tusky.app\"},\"account\":{\"id\":\"126494\",\"username\":\"marcr\",\"acct\":\"marcr\",\"display_name\":\"Marc
+        Riese\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2018-08-22T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eDubbed
+        \\u0026quot;Assistant Keeper of the Language - Semantics Chapter\\u0026quot;
+        by \\u003cspan class=\\\"h-card\\\" translate=\\\"no\\\"\\u003e\\u003ca href=\\\"https://mindly.social/@strangeseawolf\\\"
+        class=\\\"u-url mention\\\"\\u003e@\\u003cspan\\u003estrangeseawolf\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e
+        \\u003c/p\\u003e\\u003cp\\u003eOtherwise \\u003ca href=\\\"https://social.tchncs.de/tags/developer\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003edeveloper\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/author\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eauthor\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/musician\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003emusician\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/singer\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003esinger\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/aikidoka\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eaikidoka\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003eInterested
+        in \\u003ca href=\\\"https://social.tchncs.de/tags/music\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003emusic\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/politics\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003epolitics\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/environment\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eenvironment\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/science\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003escience\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/personaldevelopment\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003epersonaldevelopment\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/nerdstuff\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003enerdstuff\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tchncs.de/tags/language\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003elanguage\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003eI\\u0026#39;m
+        writing in German and English.\\u003c/p\\u003e\\u003cp\\u003eNo alt text,
+        no boost!\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@marcr\",\"uri\":\"https://social.tchncs.de/users/marcr\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/000/126/494/original/9d314bd3946e1e9a.png\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/000/126/494/original/9d314bd3946e1e9a.png\",\"header\":\"https://f2.tchncs.de/accounts/headers/000/126/494/original/988c4f15635a15c7.png\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/000/126/494/original/988c4f15635a15c7.png\",\"followers_count\":269,\"following_count\":632,\"statuses_count\":8740,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"Kinderbuch\",\"value\":\"\\u003ca
+        href=\\\"https://www.mutfreunde.de\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003emutfreunde.de\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-11-21T23:51:32.679+00:00\"},{\"name\":\"Pixelfed\",\"value\":\"\\u003ca
+        href=\\\"https://pixel.tchncs.de/marcr\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003epixel.tchncs.de/marcr\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2023-03-25T12:08:03.608+00:00\"},{\"name\":\"Blog\",\"value\":\"\\u003ca
+        href=\\\"https://text.tchncs.de/marcr\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003etext.tchncs.de/marcr\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2023-10-03T14:57:08.708+00:00\"}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"marcsaikidowoche\",\"url\":\"https://social.tchncs.de/tags/marcsaikidowoche\"}],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868747733633451\",\"created_at\":\"2025-07-17T13:13:11.541Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://social.tchncs.de/users/Erdrandbewohner/statuses/114868747733633451\",\"url\":\"https://social.tchncs.de/@Erdrandbewohner/114868747733633451\",\"replies_count\":2,\"reblogs_count\":2,\"favourites_count\":16,\"edited_at\":null,\"content\":\"\\u003cp\\u003eVor
+        kurzem: \\u0026quot;Oh nein! Laut Vorhersage kommt eine Hitzewelle nach der
+        anderen Hitzewelle! Wie schlimm!\\u0026quot;\\u003c/p\\u003e\\u003cp\\u003eUnd
+        jetzt: \\u0026quot;Oh nein! Laut Vorhersage wars das jetzt mit dem Sommer,
+        ab nächster Woche haben wir Herbstwetter und es wird nix mehr mit sommerlichen
+        Temperaturen!!!\\u0026quot;\\u003c/p\\u003e\\u003cp\\u003eNichts macht die
+        Deutschen kirrer als das Wetter, das sich nicht an die reißerischen Spekulationen
+        von irgendwelchen Clickbait-Meteorolog*innen hält.\\u003c/p\\u003e\",\"reblog\":null,\"account\":{\"id\":\"189016\",\"username\":\"Erdrandbewohner\",\"acct\":\"Erdrandbewohner\",\"display_name\":\"Erdrandbewohner\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2019-02-19T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eInhaber
+        einer Siegerurkunde der Bundesjugendspiele 1985. \\u003c/p\\u003e\\u003cp\\u003eGroßer
+        Gewinner bei der Neurodivergenz-Lotterie.\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@Erdrandbewohner\",\"uri\":\"https://social.tchncs.de/users/Erdrandbewohner\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/000/189/016/original/a47642607ec69580.jpg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/000/189/016/original/a47642607ec69580.jpg\",\"header\":\"https://f2.tchncs.de/accounts/headers/000/189/016/original/95ee080eb3bd2f1d.jpg\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/000/189/016/original/95ee080eb3bd2f1d.jpg\",\"followers_count\":3585,\"following_count\":802,\"statuses_count\":117,\"last_status_at\":\"2025-07-17\",\"hide_collections\":true,\"noindex\":true,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"Pixelfed\",\"value\":\"\\u003ca
+        href=\\\"https://pixelfed.de/Erdrandbewohner\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003epixelfed.de/Erdrandbewohner\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"XMPP\",\"value\":\"erdrandbewohner@tchncs.de\",\"verified_at\":null},{\"name\":\"Löschung
+        der Tröts\",\"value\":\"Nach einer Woche\",\"verified_at\":null},{\"name\":\"Blog\",\"value\":\"\\u003ca
+        href=\\\"https://text.tchncs.de/erdrandbewohner/\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003etext.tchncs.de/erdrandbewohner/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868745427538673\",\"created_at\":\"2025-07-17T13:12:36.351Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://social.tchncs.de/users/gerd/statuses/114868745427538673\",\"url\":\"https://social.tchncs.de/@gerd/114868745427538673\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"content\":\"\\u003cp\\u003e\\u0026quot;Das
+        Lichtschwert von Darth Vader aus den Filmen wird versteigert.\\u0026quot;\\u003c/p\\u003e\\u003cp\\u003eGeil.
+        Wo kann man mitmachen?\\u003c/p\\u003e\\u003cp\\u003e\\u0026quot;Einstiegsgebot
+        1 Millionen.\\u0026quot;\\u003c/p\\u003e\\u003cp\\u003eähm, ok ... bin dann
+        doch raus ... \U0001F622\U0001F604\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Tusky\",\"website\":\"https://tusky.app\"},\"account\":{\"id\":\"111413447379496854\",\"username\":\"gerd\",\"acct\":\"gerd\",\"display_name\":\"\",\"locked\":false,\"bot\":false,\"discoverable\":null,\"indexable\":false,\"group\":false,\"created_at\":\"2023-11-15T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eSoftwareentwickler
+        aus Leidenschaft und Serienjunkie\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@gerd\",\"uri\":\"https://social.tchncs.de/users/gerd\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/111/413/447/379/496/854/original/177f90ba8aac337a.jpeg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/111/413/447/379/496/854/original/177f90ba8aac337a.jpeg\",\"header\":\"https://f2.tchncs.de/accounts/headers/111/413/447/379/496/854/original/ca6f6f2a19b32429.jpeg\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/111/413/447/379/496/854/original/ca6f6f2a19b32429.jpeg\",\"followers_count\":12,\"following_count\":20,\"statuses_count\":37,\"last_status_at\":\"2025-07-17\",\"hide_collections\":null,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"Ort\",\"value\":\"Dillingen/Donau\",\"verified_at\":null},{\"name\":\"Threema\",\"value\":\"\\u003ca
+        href=\\\"https://threema.id/VMUNZTC5\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003ethreema.id/VMUNZTC5\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Signal\",\"value\":\"gerd.1337\",\"verified_at\":null},{\"name\":\"auto-remove\",\"value\":\"\\u0026gt;
+        2 Wochen\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null}]"
+  recorded_at: 2025-07-17 13:44:16
+recorded_with: VCR-vcr/1.7.1.93

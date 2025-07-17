@@ -1,69 +1,72 @@
 http_interactions:
 - request:
-    method: get
+    method: GET
     uri: https://social.tchncs.de/api/v1/statuses/109298295023649405
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
-      Authorization: Bearer <<<MASTODON TOKEN>>>
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 200
     headers:
-      cache-control: no-store
+      cache-control: private, no-store
       content-encoding: gzip
-      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
-        ''none''; font-src ''self'' https://social.tchncs.de; img-src ''self'' https:
-        data: blob: https://social.tchncs.de; style-src ''self'' https://social.tchncs.de
-        ''nonce-r7Hz9rw/3B2HoDbsrF8GmQ==''; media-src ''self'' https: data: https://social.tchncs.de;
-        frame-src ''self'' https:; manifest-src ''self'' https://social.tchncs.de;
-        connect-src ''self'' data: blob: https://social.tchncs.de https://f2.tchncs.de
-        wss://social.tchncs.de; script-src ''self'' https://social.tchncs.de ''unsafe-eval'';
-        child-src ''self'' blob: https://social.tchncs.de; worker-src ''self'' blob:
-        https://social.tchncs.de'
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
       content-type: application/json; charset=utf-8
-      date: Tue, 08 Nov 2022 15:23:52 GMT
-      etag: W/"3ef06ab26b75e3573dfcc070689ae9c5"
-      permissions-policy:
-      - interest-cohort=()
-      - interest-cohort=()
-      server: Mastodon
-      strict-transport-security: max-age=63072000; includeSubDomains
-      vary: Accept-Encoding, Origin
+      date: Thu, 17 Jul 2025 13:44:13 GMT
+      etag: W/"e1acb600f1551f21a2478e500729d178"
+      referrer-policy: same-origin
+      server: nginx
+      strict-transport-security:
+      - max-age=63072000; includeSubDomains
+      - max-age=31536000
+      vary:
+      - Accept-Encoding
+      - Authorization, Origin
       x-content-type-options: nosniff
       x-frame-options: DENY
       x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '298'
-      x-ratelimit-reset: '2022-11-08T15:25:00.586717Z'
-      x-request-id: 89ab93f6-36ea-49fc-9950-f8d339fd7cef
-      x-runtime: '0.028072'
+      x-ratelimit-remaining: '290'
+      x-ratelimit-reset: '2025-07-17T13:45:00.667831Z'
+      x-request-id: c725e173-4b18-49e9-a9fc-4703f5b493ef
+      x-runtime: '0.012463'
       x-xss-protection: '0'
     body:
-      encoding: ''
-      file: no
-      string: '{"id":"109298295023649405","created_at":"2022-11-06T18:33:47.000Z","in_reply_to_id":null,"in_reply_to_account_id":null,"sensitive":false,"spoiler_text":"","visibility":"public","language":"en","uri":"https://mstdn.social/users/jmadelman/statuses/109298294953381855","url":"https://mstdn.social/@jmadelman/109298294953381855","replies_count":0,"reblogs_count":1,"favourites_count":0,"edited_at":null,"favourited":false,"reblogged":false,"muted":false,"bookmarked":false,"content":"\u003cp\u003eHighly
+      string: '{"id":"109298295023649405","created_at":"2022-11-06T18:33:47.000Z","in_reply_to_id":null,"in_reply_to_account_id":null,"sensitive":false,"spoiler_text":"","visibility":"public","language":"en","uri":"https://mstdn.social/users/jmadelman/statuses/109298294953381855","url":"https://mstdn.social/@jmadelman/109298294953381855","replies_count":0,"reblogs_count":1,"favourites_count":0,"edited_at":null,"content":"\u003cp\u003eHighly
         recommend John Warner’s newsletter generally and specifically this week. The
         key quote for his thinking through outrage and its effects;\u003c/p\u003e\u003cp\u003e“Being
         specifically outraged at Emily Oster when what I’m truly upset about is a
         deeper sickness in the American culture that validates the economic style
         of thinking is a route to self-imiseration. I don’t wish Emily Oster harm.
         I long for a different world.”\u003c/p\u003e\u003cp\u003e\u003ca href=\"https://open.substack.com/pub/biblioracle/p/the-problem-of-outrage\"
-        rel=\"nofollow noopener noreferrer\" target=\"_blank\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        rel=\"nofollow noopener\" target=\"_blank\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
         class=\"ellipsis\"\u003eopen.substack.com/pub/bibliora\u003c/span\u003e\u003cspan
         class=\"invisible\"\u003ecle/p/the-problem-of-outrage\u003c/span\u003e\u003c/a\u003e\u003c/p\u003e","reblog":null,"account":{"id":"109282938265283551","username":"jmadelman","acct":"jmadelman@mstdn.social","display_name":"Joseph
-        Adelman","locked":false,"bot":false,"discoverable":false,"group":false,"created_at":"2022-04-25T00:00:00.000Z","note":"\u003cp\u003eHistorian
+        Adelman","locked":false,"bot":false,"discoverable":false,"indexable":false,"group":false,"created_at":"2022-04-25T00:00:00.000Z","note":"\u003cp\u003eHistorian
         of politics, business, media. Author of Revolutionary Networks. He/him. \u003ca
         href=\"https://jhupbooks.press.jhu.edu/content/revolutionary-networks\" rel=\"nofollow
-        noopener noreferrer\" target=\"_blank\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        noopener\" target=\"_blank\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
         class=\"ellipsis\"\u003ejhupbooks.press.jhu.edu/conten\u003c/span\u003e\u003cspan
-        class=\"invisible\"\u003et/revolutionary-networks\u003c/span\u003e\u003c/a\u003e\u003c/p\u003e","url":"https://mstdn.social/@jmadelman","avatar":"https://f2.tchncs.de/cache/accounts/avatars/109/282/938/265/283/551/original/0775fcdeec1a7603.jpeg","avatar_static":"https://f2.tchncs.de/cache/accounts/avatars/109/282/938/265/283/551/original/0775fcdeec1a7603.jpeg","header":"https://f2.tchncs.de/cache/accounts/headers/109/282/938/265/283/551/original/94727770fc7a669c.jpeg","header_static":"https://f2.tchncs.de/cache/accounts/headers/109/282/938/265/283/551/original/94727770fc7a669c.jpeg","followers_count":211,"following_count":99,"statuses_count":20,"last_status_at":"2022-11-08","emojis":[],"fields":[]},"media_attachments":[],"mentions":[],"tags":[],"emojis":[],"card":{"url":"https://biblioracle.substack.com/p/the-problem-of-outrage","title":"The
+        class=\"invisible\"\u003et/revolutionary-networks\u003c/span\u003e\u003c/a\u003e\u003c/p\u003e","url":"https://mstdn.social/@jmadelman","uri":"https://mstdn.social/users/jmadelman","avatar":"https://f2.tchncs.de/cache/accounts/avatars/109/282/938/265/283/551/original/0775fcdeec1a7603.jpeg","avatar_static":"https://f2.tchncs.de/cache/accounts/avatars/109/282/938/265/283/551/original/0775fcdeec1a7603.jpeg","header":"https://f2.tchncs.de/cache/accounts/headers/109/282/938/265/283/551/original/94727770fc7a669c.jpeg","header_static":"https://f2.tchncs.de/cache/accounts/headers/109/282/938/265/283/551/original/94727770fc7a669c.jpeg","followers_count":32,"following_count":125,"statuses_count":25,"last_status_at":"2022-11-16","hide_collections":false,"moved":{"id":"109377813423374689","username":"jmadelman","acct":"jmadelman@historians.social","display_name":"Joseph
+        M. Adelman","locked":false,"bot":false,"discoverable":true,"indexable":false,"group":false,"created_at":"2022-11-20T00:00:00.000Z","note":"\u003cp\u003eHistorian
+        of politics, business, media. Author of Revolutionary Networks. He/him. \u003ca
+        href=\"https://historians.social/tags/histodons\" class=\"mention hashtag\"
+        rel=\"nofollow noopener\" target=\"_blank\"\u003e#\u003cspan\u003ehistodons\u003c/span\u003e\u003c/a\u003e
+        \u003ca href=\"https://historians.social/tags/VastEarlyAmerica\" class=\"mention
+        hashtag\" rel=\"nofollow noopener\" target=\"_blank\"\u003e#\u003cspan\u003eVastEarlyAmerica\u003c/span\u003e\u003c/a\u003e
+        \u003ca href=\"https://historians.social/tags/journalism\" class=\"mention
+        hashtag\" rel=\"nofollow noopener\" target=\"_blank\"\u003e#\u003cspan\u003ejournalism\u003c/span\u003e\u003c/a\u003e\u003c/p\u003e","url":"https://historians.social/@jmadelman","uri":"https://historians.social/users/jmadelman","avatar":"https://f2.tchncs.de/cache/accounts/avatars/109/377/813/423/374/689/original/f7d27e58dfd3f147.png","avatar_static":"https://f2.tchncs.de/cache/accounts/avatars/109/377/813/423/374/689/original/f7d27e58dfd3f147.png","header":"https://f2.tchncs.de/cache/accounts/headers/109/377/813/423/374/689/original/d9a87c49d7235eeb.jpg","header_static":"https://f2.tchncs.de/cache/accounts/headers/109/377/813/423/374/689/original/d9a87c49d7235eeb.jpg","followers_count":1656,"following_count":459,"statuses_count":1513,"last_status_at":"2024-11-07","hide_collections":false,"emojis":[],"fields":[{"name":"Revolutionary
+        Networks","value":"\u003ca href=\"https://jhupbooks.press.jhu.edu/content/revolutionary-networks\"
+        rel=\"nofollow noopener\" translate=\"no\" target=\"_blank\"\u003e\u003cspan
+        class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan class=\"ellipsis\"\u003ejhupbooks.press.jhu.edu/conten\u003c/span\u003e\u003cspan
+        class=\"invisible\"\u003et/revolutionary-networks\u003c/span\u003e\u003c/a\u003e","verified_at":null},{"name":"My
+        Site","value":"\u003ca href=\"https://josephadelman.com\" target=\"_blank\"
+        rel=\"nofollow noopener\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003ejosephadelman.com\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":"2024-10-31T19:10:11.339+00:00"},{"name":"LinkedIn","value":"\u003ca
+        href=\"https://www.linkedin.com/in/josephmadelman\" rel=\"nofollow noopener\"
+        translate=\"no\" target=\"_blank\"\u003e\u003cspan class=\"invisible\"\u003ehttps://www.\u003c/span\u003e\u003cspan
+        class=\"\"\u003elinkedin.com/in/josephmadelman\u003c/span\u003e\u003cspan
+        class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":null}]},"emojis":[],"fields":[]},"media_attachments":[],"mentions":[],"tags":[],"emojis":[],"quote":null,"card":{"url":"https://biblioracle.substack.com/p/the-problem-of-outrage","title":"The
         Problem of Outrage","description":"Outrage is exhausting, but we may need
-        to get more outraged.","type":"link","author_name":"John Warner","author_url":"https://substack.com/profile/13850414-john-warner","provider_name":"The
-        Biblioracle Recommends","provider_url":"","html":"","width":400,"height":399,"image":"https://f2.tchncs.de/cache/preview_cards/images/012/714/049/original/10f3b2afc4273fb2.jpg","embed_url":"","blurhash":"U7SidIso_3snMxMxRPsTsAIUMxsA00RPxGs:"},"poll":null}'
-  recorded_at: 2022-11-08 15:23:52 GMT
-  recorded_with: vcr/1.1.0, webmockr/0.8.2
+        to get more outraged.","language":"en","type":"link","author_name":"John Warner","author_url":"https://substack.com/profile/13850414-john-warner","provider_name":"The
+        Biblioracle Recommends","provider_url":"","html":"","width":400,"height":399,"image":null,"image_description":"","embed_url":"","blurhash":"U7SidIso_3snMxMxRPsTsAIUMxsA00RPxGs:","published_at":null,"authors":[{"name":"John
+        Warner","url":"https://substack.com/profile/13850414-john-warner","account":null}]},"poll":null}'
+  recorded_at: 2025-07-17 13:44:13
+recorded_with: VCR-vcr/1.7.1.93

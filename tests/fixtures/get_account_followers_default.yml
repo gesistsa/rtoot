@@ -1,81 +1,56 @@
 http_interactions:
 - request:
-    method: get
-    uri: https://social.tchncs.de/api/v1/accounts/109281650341067731/followers?limit=3
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
-      Authorization: Bearer <<<MASTODON TOKEN>>>
+    method: GET
+    uri: https://fosstodon.org/api/v1/accounts/109302436954721982/followers?limit=3
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 200
     headers:
-      cache-control: no-store
-      content-encoding: gzip
-      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
-        ''none''; font-src ''self'' https://social.tchncs.de; img-src ''self'' https:
-        data: blob: https://social.tchncs.de; style-src ''self'' https://social.tchncs.de
-        ''nonce-U4T6YpnzG4rdLLANWTQJZA==''; media-src ''self'' https: data: https://social.tchncs.de;
-        frame-src ''self'' https:; manifest-src ''self'' https://social.tchncs.de;
-        connect-src ''self'' data: blob: https://social.tchncs.de https://f2.tchncs.de
-        wss://social.tchncs.de; script-src ''self'' https://social.tchncs.de ''unsafe-eval'';
-        child-src ''self'' blob: https://social.tchncs.de; worker-src ''self'' blob:
-        https://social.tchncs.de'
       content-type: application/json; charset=utf-8
-      date: Wed, 09 Nov 2022 09:36:58 GMT
-      etag: W/"547467e6539ec7892401ce1860d094ef"
-      link: <https://social.tchncs.de/api/v1/accounts/109281650341067731/followers?limit=3&max_id=712203>;
-        rel="next", <https://social.tchncs.de/api/v1/accounts/109281650341067731/followers?limit=3&since_id=714347>;
-        rel="prev"
-      permissions-policy:
-      - interest-cohort=()
-      - interest-cohort=()
       server: Mastodon
-      strict-transport-security: max-age=63072000; includeSubDomains
-      vary: Accept-Encoding, Origin
-      x-content-type-options: nosniff
       x-frame-options: DENY
-      x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '299'
-      x-ratelimit-reset: '2022-11-09T09:40:00.367327Z'
-      x-request-id: eba42797-034b-4bcf-b5c1-5b6111067e91
-      x-runtime: '0.023226'
+      x-content-type-options: nosniff
       x-xss-protection: '0'
+      referrer-policy: same-origin
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '292'
+      x-ratelimit-reset: '2025-07-17T13:45:00.241610Z'
+      link: <https://fosstodon.org/api/v1/accounts/109302436954721982/followers?limit=3&max_id=5122703>;
+        rel="next", <https://fosstodon.org/api/v1/accounts/109302436954721982/followers?limit=3&since_id=5127706>;
+        rel="prev"
+      cache-control: private, no-store
+      etag: W/"20e6738d8a913b4f6d3f7ec53287b6d3"
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
+      x-request-id: 2cc34689-2b63-4c15-af22-a18be79cac5c
+      x-runtime: '0.090796'
+      content-encoding: gzip
+      accept-ranges: bytes
+      via: 1.1 varnish, 1.1 varnish
+      date: Thu, 17 Jul 2025 13:44:08 GMT
+      x-served-by: cache-par-lfpg1960022-PAR, cache-muc13976-MUC
+      x-cache: MISS, MISS
+      x-cache-hits: 0, 0
+      x-timer: S1752759848.217146,VS0,VE114
+      vary: Accept-Encoding, Authorization, Origin
+      strict-transport-security: max-age=300
+      alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
     body:
-      encoding: ''
-      file: no
-      string: '[{"id":"109309787901673319","username":"QrdKnpfr","acct":"QrdKnpfr@mastodon.online","display_name":"Curd
-        Knüpfer","locked":false,"bot":false,"discoverable":true,"group":false,"created_at":"2022-11-03T00:00:00.000Z","note":"\u003cp\u003eAssistant
-        professor of political science \u003cbr\u003e\u003ca href=\"https://twitter.com/jfkinstitutefub\"
-        rel=\"nofollow noopener noreferrer\" target=\"_blank\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
-        class=\"\"\u003etwitter.com/jfkinstitutefub\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e
-        focussed on digital and right-wing media. \u003cbr\u003e\u003ca href=\"https://twitter.com/QrdKnpfr\"
-        rel=\"nofollow noopener noreferrer\" target=\"_blank\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
-        class=\"\"\u003etwitter.com/QrdKnpfr\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e
-        | posts for \u003cbr\u003e\u003cspan class=\"h-card\"\u003e\u003ca href=\"https://mastodon.social/@PolComm\"
-        class=\"u-url mention\" rel=\"nofollow noopener noreferrer\" target=\"_blank\"\u003e@\u003cspan\u003ePolComm\u003c/span\u003e\u003c/a\u003e\u003c/span\u003e\u003cbr\u003e\u003ca
-        href=\"https://www.jfki.fu-berlin.de/en/faculty/politicalscience/team/professors/knuepfer/index.html\"
-        rel=\"nofollow noopener noreferrer\" target=\"_blank\"\u003e\u003cspan class=\"invisible\"\u003ehttps://www.\u003c/span\u003e\u003cspan
-        class=\"ellipsis\"\u003ejfki.fu-berlin.de/en/faculty/p\u003c/span\u003e\u003cspan
-        class=\"invisible\"\u003eoliticalscience/team/professors/knuepfer/index.html\u003c/span\u003e\u003c/a\u003e\u003cbr\u003e\u003ca
-        href=\"https://scholar.google.com/citations?hl=en\u0026amp;user=uI7KtnsAAAAJ\"
-        rel=\"nofollow noopener noreferrer\" target=\"_blank\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
-        class=\"ellipsis\"\u003escholar.google.com/citations?h\u003c/span\u003e\u003cspan
-        class=\"invisible\"\u003el=en\u0026amp;user=uI7KtnsAAAAJ\u003c/span\u003e\u003c/a\u003e\u003c/p\u003e","url":"https://mastodon.online/@QrdKnpfr","avatar":"https://f2.tchncs.de/cache/accounts/avatars/109/309/787/901/673/319/original/d05e476b009ea26d.jpg","avatar_static":"https://f2.tchncs.de/cache/accounts/avatars/109/309/787/901/673/319/original/d05e476b009ea26d.jpg","header":"https://f2.tchncs.de/cache/accounts/headers/109/309/787/901/673/319/original/f0cd3cbc28479499.jpg","header_static":"https://f2.tchncs.de/cache/accounts/headers/109/309/787/901/673/319/original/f0cd3cbc28479499.jpg","followers_count":71,"following_count":33,"statuses_count":5,"last_status_at":"2022-11-09","emojis":[],"fields":[]},{"id":"109312247238183052","username":"meddhiah","acct":"meddhiah@mas.to","display_name":"Mohamed
-        Dhia Hammami","locked":false,"bot":false,"discoverable":true,"group":false,"created_at":"2022-11-06T00:00:00.000Z","note":"\u003cp\u003eEx-tweeps,
-        posting mostly about Tunisia and MENA while keeping an eye on the rest of
-        the world. PhD-ing in Political Science at the Maxwell School, Syracuse University.
-        Wesleyan alumnus.\u003c/p\u003e","url":"https://mas.to/@meddhiah","avatar":"https://f2.tchncs.de/cache/accounts/avatars/109/312/247/238/183/052/original/2e7f4483bc202e3b.jpeg","avatar_static":"https://f2.tchncs.de/cache/accounts/avatars/109/312/247/238/183/052/original/2e7f4483bc202e3b.jpeg","header":"https://f2.tchncs.de/cache/accounts/headers/109/312/247/238/183/052/original/73d9fd51e6351fac.jpg","header_static":"https://f2.tchncs.de/cache/accounts/headers/109/312/247/238/183/052/original/73d9fd51e6351fac.jpg","followers_count":16,"following_count":21,"statuses_count":0,"last_status_at":null,"emojis":[],"fields":[{"name":"https://linktr.ee/MedDhiaH","value":"","verified_at":null}]},{"id":"109310729201686939","username":"1000camels","acct":"1000camels@mas.to","display_name":"Darcy
-        Christ","locked":false,"bot":false,"discoverable":false,"group":false,"created_at":"2022-11-06T00:00:00.000Z","note":"\u003cp\u003eDigital
-        Generalist, Information Architect and WordPress Developer. Also, I am a crappy
-        capitalist.\u003c/p\u003e","url":"https://mas.to/@1000camels","avatar":"https://f2.tchncs.de/cache/accounts/avatars/109/310/729/201/686/939/original/5a10cc485d8bcead.jpeg","avatar_static":"https://f2.tchncs.de/cache/accounts/avatars/109/310/729/201/686/939/original/5a10cc485d8bcead.jpeg","header":"https://social.tchncs.de/headers/original/missing.png","header_static":"https://social.tchncs.de/headers/original/missing.png","followers_count":19,"following_count":232,"statuses_count":0,"last_status_at":null,"emojis":[],"fields":[{"name":"Website","value":"\u003ca
-        href=\"https://aporia.info\" rel=\"nofollow noopener noreferrer\" target=\"_blank\"\u003e\u003cspan
-        class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan class=\"\"\u003eaporia.info\u003c/span\u003e\u003cspan
-        class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":"2022-11-09T08:24:39.365+00:00"}]}]'
-  recorded_at: 2022-11-09 09:36:58 GMT
-  recorded_with: vcr/1.1.0, webmockr/0.8.2
+      string: '[{"id":"109314659264330175","username":"diegantobass","acct":"diegantobass","display_name":"Diego","locked":false,"bot":false,"discoverable":null,"indexable":false,"group":false,"created_at":"2022-11-09T00:00:00.000Z","note":"\u003cp\u003eResearch
+        software engineer - Lausanne, CH\u003c/p\u003e\u003cp\u003eJournalism studies
+        @ Académie du journalisme et des médias, Université de Neuchâtel\u003c/p\u003e\u003cp\u003eAssociate
+        researcher @ médialab, Sciences Po \u003cspan class=\"h-card\" translate=\"no\"\u003e\u003ca
+        href=\"https://mastodon.social/@medialab_scpo\" class=\"u-url mention\"\u003e@\u003cspan\u003emedialab_scpo\u003c/span\u003e\u003c/a\u003e\u003c/span\u003e\u003c/p\u003e\u003cp\u003eDoppelgänger
+        \u003cspan class=\"h-card\" translate=\"no\"\u003e\u003ca href=\"https://social.sciences.re/@diegantobass\"
+        class=\"u-url mention\"\u003e@\u003cspan\u003ediegantobass\u003c/span\u003e\u003c/a\u003e\u003c/span\u003e\u003c/p\u003e","url":"https://fosstodon.org/@diegantobass","uri":"https://fosstodon.org/users/diegantobass","avatar":"https://cdn.fosstodon.org/accounts/avatars/109/314/659/264/330/175/original/0521f9aaaf71d894.jpg","avatar_static":"https://cdn.fosstodon.org/accounts/avatars/109/314/659/264/330/175/original/0521f9aaaf71d894.jpg","header":"https://fosstodon.org/headers/original/missing.png","header_static":"https://fosstodon.org/headers/original/missing.png","followers_count":27,"following_count":1270,"statuses_count":19,"last_status_at":"2025-07-13","hide_collections":null,"noindex":true,"emojis":[],"roles":[],"fields":[]},{"id":"114854540194806883","username":"thomasw","acct":"thomasw@toot.community","display_name":"Thomas","locked":false,"bot":false,"discoverable":true,"indexable":true,"group":false,"created_at":"2025-07-14T00:00:00.000Z","note":"\u003cp\u003eFormer
+        admin of toot.bldrweb.org - finding a new home on the fediverse.\u003c/p\u003e","url":"https://toot.community/@thomasw","uri":"https://toot.community/users/thomasw","avatar":"https://cdn.fosstodon.org/cache/accounts/avatars/114/854/540/194/806/883/original/120b8c386cf859bf.png","avatar_static":"https://cdn.fosstodon.org/cache/accounts/avatars/114/854/540/194/806/883/original/120b8c386cf859bf.png","header":"https://cdn.fosstodon.org/cache/accounts/headers/114/854/540/194/806/883/original/8b695bb955d78eb9.jpg","header_static":"https://cdn.fosstodon.org/cache/accounts/headers/114/854/540/194/806/883/original/8b695bb955d78eb9.jpg","followers_count":7,"following_count":464,"statuses_count":1,"last_status_at":null,"hide_collections":false,"emojis":[],"fields":[{"name":"Github","value":"\u003ca
+        href=\"https://github.com/thomascwells\" rel=\"nofollow noopener\" translate=\"no\"
+        target=\"_blank\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003egithub.com/thomascwells\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":null}]},{"id":"114847598865709388","username":"xaranix19","acct":"xaranix19@mastodon.social","display_name":"Emma(Xara
+        nix)","locked":false,"bot":false,"discoverable":true,"indexable":true,"group":false,"created_at":"2025-05-20T00:00:00.000Z","note":"\u003cp\u003eI
+        run my own textile business and real estate agent. I''m looking for a good,honest
+        and polite friend forever who always respect me and care able person\u003cbr\u003e\u003ca
+        href=\"https://x.com/Emma227222\" rel=\"nofollow noopener\" translate=\"no\"
+        target=\"_blank\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003ex.com/Emma227222\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e\u003c/p\u003e","url":"https://mastodon.social/@xaranix19","uri":"https://mastodon.social/users/xaranix19","avatar":"https://cdn.fosstodon.org/cache/accounts/avatars/114/847/598/865/709/388/original/392b6ebce4fbc2cd.jpg","avatar_static":"https://cdn.fosstodon.org/cache/accounts/avatars/114/847/598/865/709/388/original/392b6ebce4fbc2cd.jpg","header":"https://cdn.fosstodon.org/cache/accounts/headers/114/847/598/865/709/388/original/2881358c38a145d9.jpg","header_static":"https://cdn.fosstodon.org/cache/accounts/headers/114/847/598/865/709/388/original/2881358c38a145d9.jpg","followers_count":5,"following_count":151,"statuses_count":3,"last_status_at":null,"hide_collections":false,"emojis":[],"fields":[]}]'
+  recorded_at: 2025-07-17 13:44:08
+recorded_with: VCR-vcr/1.7.1.93

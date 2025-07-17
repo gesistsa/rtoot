@@ -1,51 +1,33 @@
 http_interactions:
 - request:
-    method: post
+    method: POST
     uri: https://social.tchncs.de/api/v1/accounts/5358/pin
     body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
-      Authorization: Bearer <<<MASTODON TOKEN>>>
+      fields: []
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 401
     headers:
-      cache-control: no-store
-      content-encoding: gzip
-      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
-        ''none''; font-src ''self'' https://social.tchncs.de; img-src ''self'' https:
-        data: blob: https://social.tchncs.de; style-src ''self'' https://social.tchncs.de
-        ''nonce-J/9Wily/Cj0sGMrIUkvVAA==''; media-src ''self'' https: data: https://social.tchncs.de;
-        frame-src ''self'' https:; manifest-src ''self'' https://social.tchncs.de;
-        connect-src ''self'' data: blob: https://social.tchncs.de https://f2.tchncs.de
-        wss://social.tchncs.de; script-src ''self'' https://social.tchncs.de ''unsafe-eval'';
-        child-src ''self'' blob: https://social.tchncs.de; worker-src ''self'' blob:
-        https://social.tchncs.de'
+      server: nginx
+      date: Thu, 17 Jul 2025 13:44:27 GMT
       content-type: application/json; charset=utf-8
-      date: Wed, 09 Nov 2022 18:29:25 GMT
-      etag: W/"cd7cadd24674a435d7152dab31248094"
-      permissions-policy:
-      - interest-cohort=()
-      - interest-cohort=()
-      server: Mastodon
-      strict-transport-security: max-age=63072000; includeSubDomains
-      vary: Accept-Encoding, Origin
-      x-content-type-options: nosniff
+      content-length: '39'
       x-frame-options: DENY
-      x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '297'
-      x-ratelimit-reset: '2022-11-09T18:30:00.326135Z'
-      x-request-id: ef940c9e-cae7-4eb0-a42e-109379bd5ec6
-      x-runtime: '0.025122'
+      x-content-type-options: nosniff
       x-xss-protection: '0'
+      referrer-policy: same-origin
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '264'
+      x-ratelimit-reset: '2025-07-17T13:45:00.715584Z'
+      vary: Authorization, Origin
+      cache-control: private, no-store
+      www-authenticate: Bearer realm="Doorkeeper", error="invalid_token", error_description="The
+        access token is invalid"
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
+      x-request-id: d73a9d4a-416b-4739-8e75-389afc66c6a0
+      x-runtime: '0.002409'
+      strict-transport-security: max-age=63072000; includeSubDomains
     body:
-      encoding: ''
-      file: no
-      string: '{"id":"5358","following":true,"showing_reblogs":true,"notifying":false,"followed_by":true,"blocking":false,"blocked_by":false,"muting":false,"muting_notifications":false,"requested":false,"domain_blocking":false,"endorsed":true,"note":""}'
-  recorded_at: 2022-11-09 18:29:25 GMT
-  recorded_with: vcr/1.1.0, webmockr/0.8.2
+      string: '{"error":"The access token is invalid"}'
+  recorded_at: 2025-07-17 13:44:27
+recorded_with: VCR-vcr/1.7.1.93

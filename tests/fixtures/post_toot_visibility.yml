@@ -1,111 +1,59 @@
 http_interactions:
 - request:
-    method: post
-    uri: https://social.tchncs.de/api/v1/media
+    method: POST
+    uri: https://fosstodon.org/api/v1/statuses
     body:
-      encoding: ''
-      string: file=list(path = "/home/chainsawriot/dev/rtoot/tests/testdata/logo.png",
-        type = "image/png")
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
-      Authorization: Bearer <<<MASTODON TOKEN>>>
+      fields:
+        status: testing in progress, please ignore
+        sensitive: 'false'
+        spoiler_text: rtoot is the best
+        visibility: unlisted
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 200
     headers:
-      cache-control: no-store
-      content-encoding: gzip
-      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
-        ''none''; font-src ''self'' https://social.tchncs.de; img-src ''self'' https:
-        data: blob: https://social.tchncs.de; style-src ''self'' https://social.tchncs.de
-        ''nonce-q7SHDT0NPi/7FztWYYMGNA==''; media-src ''self'' https: data: https://social.tchncs.de;
-        frame-src ''self'' https:; manifest-src ''self'' https://social.tchncs.de;
-        connect-src ''self'' data: blob: https://social.tchncs.de https://f2.tchncs.de
-        wss://social.tchncs.de; script-src ''self'' https://social.tchncs.de ''unsafe-eval'';
-        child-src ''self'' blob: https://social.tchncs.de; worker-src ''self'' blob:
-        https://social.tchncs.de'
       content-type: application/json; charset=utf-8
-      date: Wed, 09 Nov 2022 17:57:31 GMT
-      etag: W/"2466bf10c21a437a71cd3d4b35f65259"
-      permissions-policy:
-      - interest-cohort=()
-      - interest-cohort=()
       server: Mastodon
-      strict-transport-security: max-age=63072000; includeSubDomains
-      vary: Accept-Encoding, Origin
-      x-content-type-options: nosniff
       x-frame-options: DENY
-      x-ratelimit-limit: '30'
-      x-ratelimit-remaining: '25'
-      x-ratelimit-reset: '2022-11-09T18:00:00.412399Z'
-      x-request-id: 7699b42c-b8b3-4fc1-9629-e37413c5529f
-      x-runtime: '0.806675'
+      x-content-type-options: nosniff
       x-xss-protection: '0'
-    body:
-      encoding: ''
-      file: no
-      string: '{"id":"109315139206458557","type":"image","url":"https://f2.tchncs.de/media_attachments/files/109/315/139/206/458/557/original/7baac8c43848b11e.png","preview_url":"https://f2.tchncs.de/media_attachments/files/109/315/139/206/458/557/small/7baac8c43848b11e.png","remote_url":null,"preview_remote_url":null,"text_url":null,"meta":{"original":{"width":50,"height":58,"size":"50x58","aspect":0.8620689655172413},"small":{"width":50,"height":58,"size":"50x58","aspect":0.8620689655172413}},"description":null,"blurhash":"UeMt8Wt7S$t7RPayt7fQ0Kay4TRj-;j[M{fQ"}'
-  recorded_at: 2022-11-09 17:57:31 GMT
-  recorded_with: vcr/1.1.0, webmockr/0.8.2
-- request:
-    method: post
-    uri: https://social.tchncs.de/api/v1/statuses
-    body:
-      encoding: ''
-      string: status=testing in progress, please ignore,media_ids[]=109315139206458557,sensitive=false,spoiler_text=rtoot
-        is the best,visibility=unlisted
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
-      Authorization: Bearer <<<MASTODON TOKEN>>>
-  response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
-    headers:
-      cache-control: no-store
-      content-encoding: gzip
-      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
-        ''none''; font-src ''self'' https://social.tchncs.de; img-src ''self'' https:
-        data: blob: https://social.tchncs.de; style-src ''self'' https://social.tchncs.de
-        ''nonce-givvz9XgSZJtKTFi61imgg==''; media-src ''self'' https: data: https://social.tchncs.de;
-        frame-src ''self'' https:; manifest-src ''self'' https://social.tchncs.de;
-        connect-src ''self'' data: blob: https://social.tchncs.de https://f2.tchncs.de
-        wss://social.tchncs.de; script-src ''self'' https://social.tchncs.de ''unsafe-eval'';
-        child-src ''self'' blob: https://social.tchncs.de; worker-src ''self'' blob:
-        https://social.tchncs.de'
-      content-type: application/json; charset=utf-8
-      date: Wed, 09 Nov 2022 17:57:31 GMT
-      etag: W/"33c36dca7fc97e59b9a3ee2eccec1870"
-      permissions-policy:
-      - interest-cohort=()
-      - interest-cohort=()
-      server: Mastodon
-      strict-transport-security: max-age=63072000; includeSubDomains
-      vary: Accept-Encoding, Origin
-      x-content-type-options: nosniff
-      x-frame-options: DENY
+      referrer-policy: same-origin
       x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '291'
-      x-ratelimit-reset: '2022-11-09T18:00:00.371789Z'
-      x-request-id: e5341e08-8585-42b9-91cb-5fff082f38fa
-      x-runtime: '0.155975'
-      x-xss-protection: '0'
+      x-ratelimit-remaining: '297'
+      x-ratelimit-reset: '2025-07-17T21:00:00.659278Z'
+      cache-control: private, no-store
+      etag: W/"6f980e0af34c5c0bc4c79d0b0cd6a9be"
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
+      x-request-id: 6688ba97-4d11-423e-a21b-4ec0ae3f56ab
+      x-runtime: '0.028394'
+      content-encoding: gzip
+      accept-ranges: bytes
+      via: 1.1 varnish, 1.1 varnish
+      date: Thu, 17 Jul 2025 18:11:05 GMT
+      x-served-by: cache-par-lfpg1960087-PAR, cache-muc13982-MUC
+      x-cache: MISS, MISS
+      x-cache-hits: 0, 0
+      x-timer: S1752775866.620781,VS0,VE51
+      vary: Accept-Encoding, Authorization, Origin
+      strict-transport-security: max-age=300
+      alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
     body:
-      encoding: ''
-      file: no
-      string: '{"id":"109315139270554044","created_at":"2022-11-09T17:57:31.468Z","in_reply_to_id":null,"in_reply_to_account_id":null,"sensitive":false,"spoiler_text":"rtoot
-        is the best","visibility":"unlisted","language":"en","uri":"https://social.tchncs.de/users/chainsawriot/statuses/109315139270554044","url":"https://social.tchncs.de/@chainsawriot/109315139270554044","replies_count":0,"reblogs_count":0,"favourites_count":0,"edited_at":null,"favourited":false,"reblogged":false,"muted":false,"bookmarked":false,"pinned":false,"content":"\u003cp\u003etesting
-        in progress, please ignore\u003c/p\u003e","reblog":null,"application":{"name":"rtoot
-        package","website":null},"account":{"id":"109281650341067731","username":"chainsawriot","acct":"chainsawriot","display_name":"chainsawriot","locked":false,"bot":false,"discoverable":false,"group":false,"created_at":"2022-11-03T00:00:00.000Z","note":"\u003cp\u003e\u003ca
-        href=\"http://www.chainsawriot.com\" target=\"_blank\" rel=\"nofollow noopener
-        noreferrer\"\u003e\u003cspan class=\"invisible\"\u003ehttp://www.\u003c/span\u003e\u003cspan
-        class=\"\"\u003echainsawriot.com\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e\u003c/p\u003e","url":"https://social.tchncs.de/@chainsawriot","avatar":"https://f2.tchncs.de/accounts/avatars/109/281/650/341/067/731/original/d6fcdd05fbfea82c.png","avatar_static":"https://f2.tchncs.de/accounts/avatars/109/281/650/341/067/731/original/d6fcdd05fbfea82c.png","header":"https://social.tchncs.de/headers/original/missing.png","header_static":"https://social.tchncs.de/headers/original/missing.png","followers_count":54,"following_count":40,"statuses_count":29,"last_status_at":"2022-11-09","emojis":[],"fields":[{"name":"Stack","value":"Linux,
-        emacs, stumpwm, R, git, Firefox","verified_at":null},{"name":"Research Interests","value":"I
-        don’t know","verified_at":null}]},"media_attachments":[{"id":"109315139206458557","type":"image","url":"https://f2.tchncs.de/media_attachments/files/109/315/139/206/458/557/original/7baac8c43848b11e.png","preview_url":"https://f2.tchncs.de/media_attachments/files/109/315/139/206/458/557/small/7baac8c43848b11e.png","remote_url":null,"preview_remote_url":null,"text_url":null,"meta":{"original":{"width":50,"height":58,"size":"50x58","aspect":0.8620689655172413},"small":{"width":50,"height":58,"size":"50x58","aspect":0.8620689655172413}},"description":null,"blurhash":"UeMt8Wt7S$t7RPayt7fQ0Kay4TRj-;j[M{fQ"}],"mentions":[],"tags":[],"emojis":[],"card":null,"poll":null}'
-  recorded_at: 2022-11-09 17:57:31 GMT
-  recorded_with: vcr/1.1.0, webmockr/0.8.2
+      string: '{"id":"114869919130670547","created_at":"2025-07-17T18:11:05.640Z","in_reply_to_id":null,"in_reply_to_account_id":null,"sensitive":false,"spoiler_text":"rtoot
+        is the best","visibility":"unlisted","language":"en","uri":"https://fosstodon.org/users/schochastics/statuses/114869919130670547","url":"https://fosstodon.org/@schochastics/114869919130670547","replies_count":0,"reblogs_count":0,"favourites_count":0,"edited_at":null,"favourited":false,"reblogged":false,"muted":false,"bookmarked":false,"pinned":false,"content":"\u003cp\u003etesting
+        in progress, please ignore\u003c/p\u003e","filtered":[],"reblog":null,"application":{"name":"rtoot
+        package","website":null},"account":{"id":"109302436954721982","username":"schochastics","acct":"schochastics","display_name":"David
+        Schoch","locked":false,"bot":false,"discoverable":true,"indexable":false,"group":false,"created_at":"2022-11-07T00:00:00.000Z","note":"\u003cp\u003eData
+        Scientist/DevOps Engineer at cynkra | \u003ca href=\"https://fosstodon.org/tags/Rstats\"
+        class=\"mention hashtag\" rel=\"tag\"\u003e#\u003cspan\u003eRstats\u003c/span\u003e\u003c/a\u003e
+        enthusiast\u003c/p\u003e","url":"https://fosstodon.org/@schochastics","uri":"https://fosstodon.org/users/schochastics","avatar":"https://cdn.fosstodon.org/accounts/avatars/109/302/436/954/721/982/original/9f0f6bfb096f5451.png","avatar_static":"https://cdn.fosstodon.org/accounts/avatars/109/302/436/954/721/982/original/9f0f6bfb096f5451.png","header":"https://fosstodon.org/headers/original/missing.png","header_static":"https://fosstodon.org/headers/original/missing.png","followers_count":1037,"following_count":138,"statuses_count":283,"last_status_at":"2025-07-17","hide_collections":false,"noindex":false,"emojis":[],"roles":[],"fields":[{"name":"Personal
+        Webpage","value":"\u003ca href=\"https://www.mr.schochastics.net/\" target=\"_blank\"
+        rel=\"nofollow noopener me\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttps://www.\u003c/span\u003e\u003cspan
+        class=\"\"\u003emr.schochastics.net/\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":"2022-11-24T06:24:48.497+00:00"},{"name":"Github","value":"\u003ca
+        href=\"https://github.com/schochastics\" target=\"_blank\" rel=\"nofollow
+        noopener me\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003egithub.com/schochastics\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":"2024-05-04T19:57:14.688+00:00"},{"name":"Side
+        project","value":"\u003ca href=\"http://worldclubratings.com\" target=\"_blank\"
+        rel=\"nofollow noopener me\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttp://\u003c/span\u003e\u003cspan
+        class=\"\"\u003eworldclubratings.com\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":null}]},"media_attachments":[],"mentions":[],"tags":[],"emojis":[],"quote":null,"card":null,"poll":null}'
+  recorded_at: 2025-07-17 18:11:05
+recorded_with: VCR-vcr/1.7.1.93

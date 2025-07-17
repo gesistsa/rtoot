@@ -1,53 +1,39 @@
 http_interactions:
 - request:
-    method: get
+    method: GET
     uri: https://mastodon.social/api/v1/statuses/109294719267373593
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 200
     headers:
-      cache-control: no-store
-      content-encoding: gzip
-      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
-        ''none''; font-src ''self'' https://static-cdn.mastodon.social; img-src ''self''
-        https: data: blob: https://static-cdn.mastodon.social; style-src ''self''
-        https://static-cdn.mastodon.social ''nonce-WHz4B7xLNg8QOyewiHlPfw==''; media-src
-        ''self'' https: data: https://static-cdn.mastodon.social; frame-src ''self''
-        https:; manifest-src ''self'' https://static-cdn.mastodon.social; connect-src
-        ''self'' data: blob: https://static-cdn.mastodon.social https://files.mastodon.social
-        wss://mastodon.social; script-src ''self'' https://static-cdn.mastodon.social
-        ''unsafe-eval''; child-src ''self'' blob: https://static-cdn.mastodon.social;
-        worker-src ''self'' blob: https://static-cdn.mastodon.social'
-      content-type: application/json; charset=utf-8
-      date: Tue, 08 Nov 2022 15:26:26 GMT
-      etag: W/"53d670b5ea7e86354fba083e78935fb5"
-      permissions-policy: interest-cohort=()
-      server: Mastodon
-      strict-transport-security: max-age=63072000; includeSubDomains
-      vary:
-      - Accept-Encoding
-      - Origin
-      x-cached: MISS
+      x-ratelimit-reset: '2025-07-17T13:45:00.758609Z'
       x-content-type-options: nosniff
+      cache-control: max-age=15, public, stale-while-revalidate=30, stale-if-error=86400
+      x-runtime: '0.061750'
+      referrer-policy: same-origin
+      x-ratelimit-remaining: '295'
+      x-request-id: 682113b7314d85bfef48e85410aaba4a
+      content-type: application/json; charset=utf-8
       x-frame-options: DENY
       x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '298'
-      x-ratelimit-reset: '2022-11-08T15:30:00.614821Z'
-      x-request-id: 194d2da5-8005-4219-99a6-90cfa389e717
-      x-runtime: '0.068144'
       x-xss-protection: '0'
+      via: 1.1 varnish, 1.1 varnish
+      etag: W/"2a54259720456d87ffd52013bf48ebd6"
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
+      content-encoding: gzip
+      accept-ranges: bytes
+      date: Thu, 17 Jul 2025 13:44:13 GMT
+      age: '0'
+      x-served-by: cache-fra-eddf8230050-FRA, cache-fra-etou8220045-FRA
+      x-cache: MISS, HIT
+      x-cache-hits: 0, 1
+      x-timer: S1752759854.884521,VS0,VE1
+      vary: Authorization, Origin, Accept-Encoding
+      strict-transport-security: max-age=31557600
+      alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+      content-length: '1939'
     body:
-      encoding: ''
-      file: no
-      string: "{\"id\":\"109294719267373593\",\"created_at\":\"2022-11-06T03:24:27.042Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://mastodon.social/users/austinkocher/statuses/109294719267373593\",\"url\":\"https://mastodon.social/@austinkocher/109294719267373593\",\"replies_count\":106,\"reblogs_count\":2095,\"favourites_count\":3130,\"edited_at\":null,\"content\":\"\\u003cp\\u003eMastodon
+      string: "{\"id\":\"109294719267373593\",\"created_at\":\"2022-11-06T03:24:27.042Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://mastodon.social/users/austinkocher/statuses/109294719267373593\",\"url\":\"https://mastodon.social/@austinkocher/109294719267373593\",\"replies_count\":105,\"reblogs_count\":2073,\"favourites_count\":3236,\"edited_at\":null,\"content\":\"\\u003cp\\u003eMastodon
         will update to 4.0 soon! Here are the most exciting new features (in addition
         to fixes \\u0026amp; changes):\\u003c/p\\u003e\\u003cp\\u003e- ability to
         follow hashtags\\u003cbr /\\u003e- ability to filter by language\\u003cbr
@@ -56,17 +42,17 @@ http_interactions:
         roles (big deal for admins)\\u003cbr /\\u003e- define sign-up process on your
         Instance (admins again)\\u003c/p\\u003e\\u003cp\\u003eSee all changes here:
         \\u003ca href=\\\"https://github.com/mastodon/mastodon/releases/tag/v4.0.0rc1\\\"
-        target=\\\"_blank\\\" rel=\\\"nofollow noopener noreferrer\\\"\\u003e\\u003cspan
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan
         class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003egithub.com/mastodon/mastodon/r\\u003c/span\\u003e\\u003cspan
         class=\\\"invisible\\\"\\u003eeleases/tag/v4.0.0rc1\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003eThanks,
-        \\u003cspan class=\\\"h-card\\\"\\u003e\\u003ca href=\\\"https://mastodon.social/@Gargron\\\"
+        \\u003cspan class=\\\"h-card\\\" translate=\\\"no\\\"\\u003e\\u003ca href=\\\"https://mastodon.social/@Gargron\\\"
         class=\\\"u-url mention\\\"\\u003e@\\u003cspan\\u003eGargron\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e
-        and \\u003cspan class=\\\"h-card\\\"\\u003e\\u003ca href=\\\"https://mastodon.social/@Mastodon\\\"
+        and \\u003cspan class=\\\"h-card\\\" translate=\\\"no\\\"\\u003e\\u003ca href=\\\"https://mastodon.social/@Mastodon\\\"
         class=\\\"u-url mention\\\"\\u003e@\\u003cspan\\u003eMastodon\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e
         Team. \\u003ca href=\\\"https://mastodon.social/tags/Mastodon4\\\" class=\\\"mention
         hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eMastodon4\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"application\":{\"name\":\"Mastodon
         for iOS\",\"website\":\"https://app.joinmastodon.org/ios\"},\"account\":{\"id\":\"109246333737365889\",\"username\":\"austinkocher\",\"acct\":\"austinkocher\",\"display_name\":\"Austin
-        Kocher, PhD \U0001F30E\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-10-28T00:00:00.000Z\",\"note\":\"\\u003cp\\u003ePolitical
+        Kocher, PhD \U0001F30E\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-10-28T00:00:00.000Z\",\"note\":\"\\u003cp\\u003ePolitical
         \\u0026amp; legal geographer studying the theories, laws, and institutional
         practices behind immigration controls. Assistant Professor at Syracuse University.
         Living in Baltimore. \\u2029\\u003ca href=\\\"https://mastodon.social/tags/geography\\\"
@@ -88,17 +74,27 @@ http_interactions:
         \\u003ca href=\\\"https://mastodon.social/tags/law\\\" class=\\\"mention hashtag\\\"
         rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003elaw\\u003c/span\\u003e\\u003c/a\\u003e
         \\u003ca href=\\\"https://mastodon.social/tags/fedi22\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003efedi22\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@austinkocher\",\"avatar\":\"https://files.mastodon.social/accounts/avatars/109/246/333/737/365/889/original/63c3e808423543ad.jpeg\",\"avatar_static\":\"https://files.mastodon.social/accounts/avatars/109/246/333/737/365/889/original/63c3e808423543ad.jpeg\",\"header\":\"https://files.mastodon.social/accounts/headers/109/246/333/737/365/889/original/b3694b479535a425.jpeg\",\"header_static\":\"https://files.mastodon.social/accounts/headers/109/246/333/737/365/889/original/b3694b479535a425.jpeg\",\"followers_count\":3427,\"following_count\":346,\"statuses_count\":440,\"last_status_at\":\"2022-11-08\",\"noindex\":false,\"emojis\":[],\"fields\":[{\"name\":\"City\",\"value\":\"Baltimore\",\"verified_at\":null},{\"name\":\"Newsletter\",\"value\":\"\\u003ca
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003efedi22\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@austinkocher\",\"uri\":\"https://mastodon.social/users/austinkocher\",\"avatar\":\"https://files.mastodon.social/accounts/avatars/109/246/333/737/365/889/original/63c3e808423543ad.jpeg\",\"avatar_static\":\"https://files.mastodon.social/accounts/avatars/109/246/333/737/365/889/original/63c3e808423543ad.jpeg\",\"header\":\"https://files.mastodon.social/accounts/headers/109/246/333/737/365/889/original/b3694b479535a425.jpeg\",\"header_static\":\"https://files.mastodon.social/accounts/headers/109/246/333/737/365/889/original/b3694b479535a425.jpeg\",\"followers_count\":12192,\"following_count\":522,\"statuses_count\":2458,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"More
+        Information\",\"value\":\"\\u003ca href=\\\"https://linktr.ee/austinkocher\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003elinktr.ee/austinkocher\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Newsletter\",\"value\":\"\\u003ca
         href=\\\"https://austinkocher.substack.com\\\" target=\\\"_blank\\\" rel=\\\"nofollow
-        noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
         class=\\\"\\\"\\u003eaustinkocher.substack.com\\u003c/span\\u003e\\u003cspan
         class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Website\",\"value\":\"\\u003ca
         href=\\\"https://www.austinkocher.com/\\\" target=\\\"_blank\\\" rel=\\\"nofollow
-        noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003eaustinkocher.com/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[{\"id\":\"1\",\"username\":\"Gargron\",\"url\":\"https://mastodon.social/@Gargron\",\"acct\":\"Gargron\"},{\"id\":\"13179\",\"username\":\"Mastodon\",\"url\":\"https://mastodon.social/@Mastodon\",\"acct\":\"Mastodon\"}],\"tags\":[{\"name\":\"Mastodon4\",\"url\":\"https://mastodon.social/tags/Mastodon4\"}],\"emojis\":[],\"card\":{\"url\":\"https://github.com/mastodon/mastodon/releases/tag/v4.0.0rc1\",\"title\":\"Release
+        noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003eaustinkocher.com/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Verified
+        by\",\"value\":\"\\u003ca href=\\\"https://fedified.com/\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003efedified.com/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-11-10T01:04:08.819+00:00\"}]},\"media_attachments\":[],\"mentions\":[{\"id\":\"1\",\"username\":\"Gargron\",\"url\":\"https://mastodon.social/@Gargron\",\"acct\":\"Gargron\"},{\"id\":\"13179\",\"username\":\"Mastodon\",\"url\":\"https://mastodon.social/@Mastodon\",\"acct\":\"Mastodon\"}],\"tags\":[{\"name\":\"Mastodon4\",\"url\":\"https://mastodon.social/tags/Mastodon4\"}],\"emojis\":[],\"quote\":null,\"card\":{\"url\":\"https://github.com/mastodon/mastodon/releases/tag/v4.0.0rc1\",\"title\":\"Release
         v4.0.0rc1 · mastodon/mastodon\",\"description\":\"Note: This is a release
         candidate. It is intended to be stable, but not guaranteed.\\n\\nUpgrade overview\\nThis
         release contains upgrade notes that deviate from the norm:\\nℹ️ Requires two-step
-        database m...\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"GitHub\",\"provider_url\":\"\",\"html\":\"\",\"width\":400,\"height\":200,\"image\":\"https://files.mastodon.social/cache/preview_cards/images/047/056/323/original/947c0207471b17fb.png\",\"embed_url\":\"\",\"blurhash\":\"UHSF;NxAD+xtpK--M}oMRNM}ofaw~qNHxsRl\"},\"poll\":null}"
-  recorded_at: 2022-11-08 15:26:26 GMT
-  recorded_with: vcr/1.1.0, webmockr/0.8.2
+        database m...\",\"language\":\"en\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"GitHub\",\"provider_url\":\"\",\"html\":\"\",\"width\":678,\"height\":339,\"image\":null,\"image_description\":\"Note:
+        This is a release candidate. It is intended to be stable, but not guaranteed.\\n\\nUpgrade
+        overview\\nThis release contains upgrade notes that deviate from the norm:\\nℹ️
+        Requires two-step database m...\",\"embed_url\":\"\",\"blurhash\":\"UPR{x-xnD+xu%O%KM}ofRORkofWT~pRkt6WC\",\"published_at\":null,\"authors\":[]},\"poll\":null}"
+  recorded_at: 2025-07-17 13:44:13
+recorded_with: VCR-vcr/1.7.1.93

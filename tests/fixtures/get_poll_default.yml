@@ -1,52 +1,35 @@
 http_interactions:
 - request:
-    method: get
+    method: GET
     uri: https://social.tchncs.de/api/v1/polls/105976
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
-      Authorization: Bearer <<<MASTODON TOKEN>>>
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 200
     headers:
-      cache-control: no-store
+      cache-control: private, no-store
       content-encoding: gzip
-      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
-        ''none''; font-src ''self'' https://social.tchncs.de; img-src ''self'' https:
-        data: blob: https://social.tchncs.de; style-src ''self'' https://social.tchncs.de
-        ''nonce-9GIYpancX8Jj2I712k5C+w==''; media-src ''self'' https: data: https://social.tchncs.de;
-        frame-src ''self'' https:; manifest-src ''self'' https://social.tchncs.de;
-        connect-src ''self'' data: blob: https://social.tchncs.de https://f2.tchncs.de
-        wss://social.tchncs.de; script-src ''self'' https://social.tchncs.de ''unsafe-eval'';
-        child-src ''self'' blob: https://social.tchncs.de; worker-src ''self'' blob:
-        https://social.tchncs.de'
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
       content-type: application/json; charset=utf-8
-      date: Wed, 09 Nov 2022 08:41:57 GMT
-      etag: W/"47813bca21ad1655253b4d5637927f63"
-      permissions-policy:
-      - interest-cohort=()
-      - interest-cohort=()
-      server: Mastodon
-      strict-transport-security: max-age=63072000; includeSubDomains
-      vary: Accept-Encoding, Origin
+      date: Thu, 17 Jul 2025 13:44:12 GMT
+      etag: W/"90a7e66eba6a5d01700b89897b8d145c"
+      referrer-policy: same-origin
+      server: nginx
+      strict-transport-security:
+      - max-age=63072000; includeSubDomains
+      - max-age=31536000
+      vary:
+      - Accept-Encoding
+      - Authorization, Origin
       x-content-type-options: nosniff
       x-frame-options: DENY
       x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '298'
-      x-ratelimit-reset: '2022-11-09T08:45:00.972430Z'
-      x-request-id: 996b509b-7cfc-43cf-8456-448ee18aa187
-      x-runtime: '0.022863'
+      x-ratelimit-remaining: '294'
+      x-ratelimit-reset: '2025-07-17T13:45:00.294170Z'
+      x-request-id: dfdc0770-1033-462e-b402-d3f377156516
+      x-runtime: '0.006303'
       x-xss-protection: '0'
     body:
-      encoding: ''
-      file: no
-      string: '{"id":"105976","expires_at":"2022-11-08T08:26:07.510Z","expired":true,"multiple":false,"votes_count":4,"voters_count":4,"voted":true,"own_votes":[],"options":[{"title":"This
+      string: '{"id":"105976","expires_at":"2022-11-08T08:26:07.510Z","expired":true,"multiple":false,"votes_count":4,"voters_count":4,"options":[{"title":"This
         neighbour''s black cat","votes_count":3},{"title":"Megaman","votes_count":1}],"emojis":[]}'
-  recorded_at: 2022-11-09 08:41:58 GMT
-  recorded_with: vcr/1.1.0, webmockr/0.8.2
+  recorded_at: 2025-07-17 13:44:12
+recorded_with: VCR-vcr/1.7.1.93

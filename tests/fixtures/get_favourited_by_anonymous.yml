@@ -1,311 +1,541 @@
 http_interactions:
 - request:
-    method: get
+    method: GET
     uri: https://mastodon.social/api/v1/statuses/109294719267373593/favourited_by
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 200
     headers:
-      cache-control: no-store
-      content-encoding: gzip
-      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
-        ''none''; font-src ''self'' https://static-cdn.mastodon.social; img-src ''self''
-        https: data: blob: https://static-cdn.mastodon.social; style-src ''self''
-        https://static-cdn.mastodon.social ''nonce-XTHzzJtt7EHyk5F2C66QAw==''; media-src
-        ''self'' https: data: https://static-cdn.mastodon.social; frame-src ''self''
-        https:; manifest-src ''self'' https://static-cdn.mastodon.social; connect-src
-        ''self'' data: blob: https://static-cdn.mastodon.social https://files.mastodon.social
-        wss://mastodon.social; script-src ''self'' https://static-cdn.mastodon.social
-        ''unsafe-eval''; child-src ''self'' blob: https://static-cdn.mastodon.social;
-        worker-src ''self'' blob: https://static-cdn.mastodon.social'
-      content-type: application/json; charset=utf-8
-      date: Tue, 08 Nov 2022 15:44:15 GMT
-      etag: W/"35a3d585251b3206bb6b6eebce3d288b"
-      link: <https://mastodon.social/api/v1/statuses/109294719267373593/favourited_by?max_id=45712995>;
-        rel="next", <https://mastodon.social/api/v1/statuses/109294719267373593/favourited_by?since_id=45760283>;
-        rel="prev"
-      permissions-policy: interest-cohort=()
-      server: Mastodon
-      strict-transport-security: max-age=63072000; includeSubDomains
-      vary:
-      - Accept-Encoding
-      - Origin
-      x-cached: MISS
+      x-ratelimit-reset: '2025-07-17T13:45:00.678379Z'
       x-content-type-options: nosniff
+      cache-control: max-age=15, public, stale-while-revalidate=30, stale-if-error=86400
+      x-runtime: '0.356006'
+      referrer-policy: same-origin
+      x-ratelimit-remaining: '298'
+      x-request-id: baf4206ea887e87f3f68fafab00ca617
+      link: <https://mastodon.social/api/v1/statuses/109294719267373593/favourited_by?max_id=48110189>;
+        rel="next", <https://mastodon.social/api/v1/statuses/109294719267373593/favourited_by?since_id=91315851>;
+        rel="prev"
+      content-type: application/json; charset=utf-8
       x-frame-options: DENY
       x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '297'
-      x-ratelimit-reset: '2022-11-08T15:45:00.064557Z'
-      x-request-id: 03886745-86ed-46b0-8579-f68cb6d76f8c
-      x-runtime: '0.267351'
       x-xss-protection: '0'
+      via: 1.1 varnish, 1.1 varnish
+      etag: W/"b93ac8a2db4f5ca15aeab24daf35c95f"
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
+      content-encoding: gzip
+      accept-ranges: bytes
+      date: Thu, 17 Jul 2025 13:44:12 GMT
+      age: '0'
+      x-served-by: cache-fra-eddf8230062-FRA, cache-fra-etou8220045-FRA
+      x-cache: MISS, HIT
+      x-cache-hits: 0, 2
+      x-timer: S1752759852.135199,VS0,VE0
+      vary: Authorization, Origin, Accept-Encoding
+      strict-transport-security: max-age=31557600
+      alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+      content-length: '13657'
     body:
-      encoding: ''
-      file: no
-      string: "[{\"id\":\"109287209441005390\",\"username\":\"msuppity\",\"acct\":\"msuppity@mastodon.lol\",\"display_name\":\"Ms.
-        Uppity\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-04T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eBerlin.
-        I hate the living. I love the reference. Pro vaxx, pro choice, pro love.\\u003c/p\\u003e\",\"url\":\"https://mastodon.lol/@msuppity\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/287/209/441/005/390/original/9648fa402a998b16.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/287/209/441/005/390/original/9648fa402a998b16.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/287/209/441/005/390/original/7868e76104784dbe.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/287/209/441/005/390/original/7868e76104784dbe.jpg\",\"followers_count\":10,\"following_count\":20,\"statuses_count\":13,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"Twitter\",\"value\":\"\\u003ca
-        href=\\\"https://twitter.com/tlcoles\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003etwitter.com/tlcoles\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"109291038171338205\",\"username\":\"NadineHere\",\"acct\":\"NadineHere@mastodon.green\",\"display_name\":\"Nadine\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-05T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\U0001F1EC\U0001F1E7\U0001F1E9\U0001F1EA\U0001F1EA\U0001F1FA
-        mature education student \\u0026amp; web dev working in \U0001F1F1\U0001F1FA
-        \\u2028Passions: \\u003ca href=\\\"https://mastodon.green/tags/cycling\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ecycling\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://mastodon.green/tags/diving\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ediving\\u003c/span\\u003e\\u003c/a\\u003e
-        cutting hedges, volunteering, diversity \\u0026amp; humanism \\u003ca href=\\\"https://mastodon.green/tags/grundschule\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003egrundschule\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://mastodon.green/tags/proasyl\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eproasyl\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://mastodon.green/tags/trier\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003etrier\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://mastodon.green/@NadineHere\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/291/038/171/338/205/original/d34b124896042c51.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/291/038/171/338/205/original/d34b124896042c51.png\",\"header\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"header_static\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"followers_count\":4,\"following_count\":21,\"statuses_count\":34,\"last_status_at\":\"2022-11-07\",\"emojis\":[],\"fields\":[]},{\"id\":\"109258710919700001\",\"username\":\"yappydagger\",\"acct\":\"yappydagger\",\"display_name\":\"Thee
-        AV\U0001F56F️FU Alito\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-10-30T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\U0001F47B
-        of ∆V                          \\u003cbr /\\u003e                      \\u003cbr
-        /\\u003e\\u003ca href=\\\"https://mastodon.social/tags/FuqUrRacism\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFuqUrRacism\\u003c/span\\u003e\\u003c/a\\u003e
-        \ \\u003ca href=\\\"https://mastodon.social/tags/VotingRights\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eVotingRights\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
-        /\\u003e\\u003ca href=\\\"https://mastodon.social/tags/DontTreadOnMeWithUrReligion\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eDontTreadOnMeWithUrReligion\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
-        /\\u003e\\u003ca href=\\\"https://mastodon.social/tags/FuckOffRussianWarship\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFuckOffRussianWarship\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003cbr /\\u003e\\u003ca href=\\\"https://mastodon.social/tags/GOPThrewACoup\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eGOPThrewACoup\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@yappydagger\",\"avatar\":\"https://files.mastodon.social/accounts/avatars/109/258/710/919/700/001/original/db391a6773f9f9ce.jpg\",\"avatar_static\":\"https://files.mastodon.social/accounts/avatars/109/258/710/919/700/001/original/db391a6773f9f9ce.jpg\",\"header\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"header_static\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"followers_count\":3,\"following_count\":32,\"statuses_count\":85,\"last_status_at\":\"2022-11-08\",\"noindex\":false,\"emojis\":[],\"fields\":[]},{\"id\":\"109296731437272284\",\"username\":\"KeyesTroy\",\"acct\":\"KeyesTroy@newsie.social\",\"display_name\":\"\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-06T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://newsie.social/@KeyesTroy\",\"avatar\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"avatar_static\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"header\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"header_static\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"followers_count\":0,\"following_count\":15,\"statuses_count\":9,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[]},{\"id\":\"108132493968340788\",\"username\":\"krosylight\",\"acct\":\"krosylight@fosstodon.org\",\"display_name\":\"Kagami
-        Rosylight \U0001F3F3️‍\U0001F308\U0001F3F3️‍⚧️\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-04-14T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eA
-        nonbinary fox working on DOM in Gecko. I'm not included in \\\"you guys\\\"\\u003c/p\\u003e\",\"url\":\"https://fosstodon.org/@krosylight\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/108/132/493/968/340/788/original/a90ab7cbed75666b.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/108/132/493/968/340/788/original/a90ab7cbed75666b.png\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/108/132/493/968/340/788/original/3b991477681b93a3.jpeg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/108/132/493/968/340/788/original/3b991477681b93a3.jpeg\",\"followers_count\":75,\"following_count\":51,\"statuses_count\":308,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"Pronoun\",\"value\":\"\\u003ca
-        href=\\\"https://pronoun.is/they/them/their/theirs/themself\\\" rel=\\\"nofollow
-        noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"ellipsis\\\"\\u003epronoun.is/they/them/their/the\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003eirs/themself\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"GitHub\",\"value\":\"\\u003ca
-        href=\\\"https://github.com/saschanaz\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003egithub.com/saschanaz\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"36056\",\"username\":\"thomasfuchs\",\"acct\":\"thomasfuchs\",\"display_name\":\"Thomas
-        Fuchs \U0001F579️\U0001F52D\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2017-04-03T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eCome
-        for the \\u003ca href=\\\"https://mastodon.social/tags/astrophotography\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eastrophotography\\u003c/span\\u003e\\u003c/a\\u003e
-        dabbling, the \\u003ca href=\\\"https://mastodon.social/tags/retrocomputing\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eretrocomputing\\u003c/span\\u003e\\u003c/a\\u003e
-        nostalgia and \\u003ca href=\\\"https://mastodon.social/tags/programming\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eprogramming\\u003c/span\\u003e\\u003c/a\\u003e
-        wisdom. Stay for the \\u003ca href=\\\"https://mastodon.social/tags/cat\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003ecat\\u003c/span\\u003e\\u003c/a\\u003e
-        pictures. Immigrant \U0001F1E6\U0001F1F9→\U0001F1FA\U0001F1F8 \\u0026amp;
-        I’m in your Nintendo Switch, yes, really.\\u003c/p\\u003e\\u003cp\\u003eAlly.
-        He/him.\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@thomasfuchs\",\"avatar\":\"https://files.mastodon.social/accounts/avatars/000/036/056/original/34c2f993cccb1d9e.gif\",\"avatar_static\":\"https://files.mastodon.social/accounts/avatars/000/036/056/static/34c2f993cccb1d9e.png\",\"header\":\"https://files.mastodon.social/accounts/headers/000/036/056/original/5f06f43593a0b6d60de39f93c197a3fb.jpeg\",\"header_static\":\"https://files.mastodon.social/accounts/headers/000/036/056/original/5f06f43593a0b6d60de39f93c197a3fb.jpeg\",\"followers_count\":9080,\"following_count\":299,\"statuses_count\":14734,\"last_status_at\":\"2022-11-08\",\"noindex\":false,\"emojis\":[],\"fields\":[{\"name\":\"Twitter\",\"value\":\"\\u003ca
-        href=\\\"https://twitter.com/thomasfuchs\\\" target=\\\"_blank\\\" rel=\\\"nofollow
-        noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003etwitter.com/thomasfuchs\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2018-09-20T00:44:18.980+00:00\"},{\"name\":\"\U0001F374Github\",\"value\":\"\\u003ca
-        href=\\\"https://github.com/madrobby\\\" target=\\\"_blank\\\" rel=\\\"nofollow
-        noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003egithub.com/madrobby\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Astrophotography
-        Blog\",\"value\":\"\\u003ca href=\\\"https://lightfrom.space/\\\" target=\\\"_blank\\\"
-        rel=\\\"nofollow noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003elightfrom.space/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"109287161922564461\",\"username\":\"harphat\",\"acct\":\"harphat@mastodon.green\",\"display_name\":\"Trudy
-        Harpham PhD\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-11-04T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eEmeritus
-        Professor at London South Bank University \\u003ca href=\\\"https://mastodon.green/tags/LSBU\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eLSBU\\u003c/span\\u003e\\u003c/a\\u003e
-        . Lives in \\u003ca href=\\\"https://mastodon.green/tags/Switzerland\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eSwitzerland\\u003c/span\\u003e\\u003c/a\\u003e
-        and on an abandoned vineyard in \\u003ca href=\\\"https://mastodon.green/tags/Bugey\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eBugey\\u003c/span\\u003e\\u003c/a\\u003e,
-        \\u003ca href=\\\"https://mastodon.green/tags/France\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eFrance\\u003c/span\\u003e\\u003c/a\\u003e.
-        Into naturalistic gardening/landscaping, \\u003ca href=\\\"https://mastodon.green/tags/Westie\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eWestie\\u003c/span\\u003e\\u003c/a\\u003e
-        dogs, climate action. Worked in international health research before retirement
-        \\u003ca href=\\\"https://mastodon.green/tags/globalhealth\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eglobalhealth\\u003c/span\\u003e\\u003c/a\\u003e.\\u003c/p\\u003e\",\"url\":\"https://mastodon.green/@harphat\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/287/161/922/564/461/original/e7dda605c642f116.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/287/161/922/564/461/original/e7dda605c642f116.png\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/287/161/922/564/461/original/5471f02334e4ba57.jpeg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/287/161/922/564/461/original/5471f02334e4ba57.jpeg\",\"followers_count\":138,\"following_count\":50,\"statuses_count\":203,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[]},{\"id\":\"109308796493962468\",\"username\":\"papa_robot\",\"acct\":\"papa_robot@mastodon.cloud\",\"display_name\":\"Papá
-        Robot\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-08T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003c/p\\u003e\",\"url\":\"https://mastodon.cloud/@papa_robot\",\"avatar\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"avatar_static\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"header\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"header_static\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"followers_count\":0,\"following_count\":5,\"statuses_count\":1,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[]},{\"id\":\"352265\",\"username\":\"HerveRenault\",\"acct\":\"HerveRenault@framapiaf.org\",\"display_name\":\"Hervé
-        Renault\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2018-05-05T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eOn
-        peut me trouver devant un ⌨ \U0001F427 ou sur un \U0001F6B5‍\\u003c/p\\u003e\",\"url\":\"https://framapiaf.org/@HerveRenault\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/000/352/265/original/94eaf9aee4f186be.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/000/352/265/original/94eaf9aee4f186be.jpg\",\"header\":\"https://files.mastodon.social/accounts/headers/000/352/265/original/13fea48b16240c8b.jpeg\",\"header_static\":\"https://files.mastodon.social/accounts/headers/000/352/265/original/13fea48b16240c8b.jpeg\",\"followers_count\":6,\"following_count\":7,\"statuses_count\":69,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"site
-        perso :\",\"value\":\"\\u003ca href=\\\"https://hervérenault.fr\\\" rel=\\\"nofollow
-        noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003ehervérenault.fr\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"109302811004865332\",\"username\":\"hotjavalava63\",\"acct\":\"hotjavalava63@toot.community\",\"display_name\":\"hotjavalava\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-11-07T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://toot.community/@hotjavalava63\",\"avatar\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"avatar_static\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"header\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"header_static\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"followers_count\":6,\"following_count\":5,\"statuses_count\":17,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[]},{\"id\":\"109308829091065069\",\"username\":\"markbacker\",\"acct\":\"markbacker@mas.to\",\"display_name\":\"markbacker\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-08T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://mas.to/@markbacker\",\"avatar\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"avatar_static\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"header\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"header_static\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"followers_count\":0,\"following_count\":3,\"statuses_count\":4,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[]},{\"id\":\"109261131323658329\",\"username\":\"archmunky\",\"acct\":\"archmunky@floss.social\",\"display_name\":\"ArchMunky\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-10-31T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eNature,
-        space, weather, music; SKYWARN spotter; Purdue, Colts, Yankees. \\u003ca href=\\\"https://floss.social/tags/Ally\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eAlly\\u003c/span\\u003e\\u003c/a\\u003e:
-        he/him/his.\\u003c/p\\u003e\",\"url\":\"https://floss.social/@archmunky\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/261/131/323/658/329/original/5d6d782cbcb1d828.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/261/131/323/658/329/original/5d6d782cbcb1d828.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/261/131/323/658/329/original/2dc06ac7ae1fbd29.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/261/131/323/658/329/original/2dc06ac7ae1fbd29.jpg\",\"followers_count\":4,\"following_count\":22,\"statuses_count\":30,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[]},{\"id\":\"109308733996146817\",\"username\":\"alter\",\"acct\":\"alter@noc.social\",\"display_name\":\"\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-08T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://noc.social/@alter\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/308/733/996/146/817/original/a5f49ed27a4e1b0c.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/308/733/996/146/817/original/a5f49ed27a4e1b0c.png\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/308/733/996/146/817/original/f294245b12f4bef9.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/308/733/996/146/817/original/f294245b12f4bef9.jpg\",\"followers_count\":0,\"following_count\":7,\"statuses_count\":0,\"last_status_at\":null,\"emojis\":[],\"fields\":[]},{\"id\":\"109295957538139242\",\"username\":\"SmartyPants_PT\",\"acct\":\"SmartyPants_PT@mastodonapp.uk\",\"display_name\":\"Jay
-        Tomate Joseph\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-11-05T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eLiving
-        Off Grid On A Quinta In Portugal.\\u003cbr\\u003eLondoner | Husband/Dad/Tad-cu
-        | Despise Racists/Bigots/Xenophobes | \\u003ca href=\\\"https://mastodonapp.uk/tags/Woke\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eWoke\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://mastodonapp.uk/tags/FBPE\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eFBPE\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://mastodonapp.uk/tags/ReJoinEU\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eReJoinEU\\u003c/span\\u003e\\u003c/a\\u003e
-        |\\u003c/p\\u003e\",\"url\":\"https://mastodonapp.uk/@SmartyPants_PT\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/295/957/538/139/242/original/e7992a71922dbe74.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/295/957/538/139/242/original/e7992a71922dbe74.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/295/957/538/139/242/original/cfd91679ccc09127.png\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/295/957/538/139/242/original/cfd91679ccc09127.png\",\"followers_count\":148,\"following_count\":216,\"statuses_count\":148,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[]},{\"id\":\"109302648377357003\",\"username\":\"NessaUndreza\",\"acct\":\"NessaUndreza@aus.social\",\"display_name\":\"Nessa\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-07T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://aus.social/@NessaUndreza\",\"avatar\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"avatar_static\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"header\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"header_static\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"followers_count\":0,\"following_count\":5,\"statuses_count\":23,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[]},{\"id\":\"108199649843532331\",\"username\":\"DrewNaylor\",\"acct\":\"DrewNaylor@mastodon.online\",\"display_name\":\"Drew
-        Naylor\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-04-26T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eI
-        make videos sometimes, posts other times, and software yet other times. Human
-        rights+Black Lives Matter (included in human rights, to clarify).\\u003c/p\\u003e\",\"url\":\"https://mastodon.online/@DrewNaylor\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/108/199/649/843/532/331/original/804a97b4779ddff7.jpeg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/108/199/649/843/532/331/original/804a97b4779ddff7.jpeg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/108/199/649/843/532/331/original/7f8a1a9661821508.png\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/108/199/649/843/532/331/original/7f8a1a9661821508.png\",\"followers_count\":5,\"following_count\":5,\"statuses_count\":297,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"YouTube
-        channel\",\"value\":\"\\u003ca href=\\\"https://www.youtube.com/channel/UCIEyCGDqoo2rrfZVydaM-2A\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003eyoutube.com/channel/UCIEyCGDqo\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003eo2rrfZVydaM-2A\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"GitHub\",\"value\":\"\\u003ca
-        href=\\\"https://github.com/DrewNaylor\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003egithub.com/DrewNaylor\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"My
-        website\",\"value\":\"\\u003ca href=\\\"https://drew-naylor.com/\\\" rel=\\\"nofollow
-        noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003edrew-naylor.com/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Twitter\",\"value\":\"\\u003ca
-        href=\\\"https://twitter.com/DrewTNaylor\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003etwitter.com/DrewTNaylor\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"1374192\",\"username\":\"cleeyv\",\"acct\":\"cleeyv@kolektiva.social\",\"display_name\":\"Cleeyv\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2021-01-22T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eFreedom
-        for all ways of life \U0001F9EC\U0001F33F\U0001F3F3️‍\U0001F308 against domination
-        \U0001F3F4Ⓐ\U0001F49C abolish the global colonial system \U0001F30D\U0001F30E\U0001F30F
-        technology is always political. Settler, he/him \U0001F468‍\U0001F4BB\\u003c/p\\u003e\",\"url\":\"https://kolektiva.social/@cleeyv\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/001/374/192/original/c23d0e5c5c8060f1.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/001/374/192/original/c23d0e5c5c8060f1.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/001/374/192/original/9171142e41b8c553.jpeg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/001/374/192/original/9171142e41b8c553.jpeg\",\"followers_count\":15,\"following_count\":30,\"statuses_count\":40,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[]},{\"id\":\"1242376\",\"username\":\"cambridgeport90\",\"acct\":\"cambridgeport90@indieweb.social\",\"display_name\":\"Kat
-        M. Moss\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2020-07-15T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eI
-        am a  technologist, musician, and Heathen  from Boston, Massachusetts. I own
-        too many Dell PowerEdges to count. Instrument is the piano, but my voice is
-        capable of producing notes, as well, if needed. Possibly half-Fae. Deieties:
-        Odin, Frigg, Summer Queen Tiandra, and Winter Queen Andraste.\\u003c/p\\u003e\",\"url\":\"https://indieweb.social/@cambridgeport90\",\"avatar\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"avatar_static\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"header\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"header_static\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"followers_count\":146,\"following_count\":384,\"statuses_count\":1786,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"Blog\",\"value\":\"\\u003ca
-        href=\\\"https://www.cambridgeport90.org\\\" rel=\\\"nofollow noopener noreferrer\\\"
+      string: "[{\"id\":\"110537611513485745\",\"username\":\"jason432\",\"acct\":\"jason432\",\"display_name\":\"Jason
+        Connor\",\"locked\":false,\"bot\":false,\"discoverable\":null,\"indexable\":false,\"group\":false,\"created_at\":\"2023-06-13T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eJohn
+        12:15 ✝️\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@jason432\",\"uri\":\"https://mastodon.social/users/jason432\",\"avatar\":\"https://files.mastodon.social/accounts/avatars/110/537/611/513/485/745/original/9eea619ab0fca096.jpg\",\"avatar_static\":\"https://files.mastodon.social/accounts/avatars/110/537/611/513/485/745/original/9eea619ab0fca096.jpg\",\"header\":\"https://files.mastodon.social/accounts/headers/110/537/611/513/485/745/original/7d399ba8aab2b25b.jpg\",\"header_static\":\"https://files.mastodon.social/accounts/headers/110/537/611/513/485/745/original/7d399ba8aab2b25b.jpg\",\"followers_count\":2,\"following_count\":38,\"statuses_count\":7,\"last_status_at\":\"2023-06-13\",\"hide_collections\":null,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[]},{\"id\":\"109575603902444006\",\"username\":\"cumulonimbus\",\"acct\":\"cumulonimbus@infosec.exchange\",\"display_name\":\"Cumulonimbus\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2022-12-25T00:00:00.000Z\",\"note\":\"\\u003cp\\u003esocial
+        scientist⸺analyst\\u003cbr\\u003e●\\u003cbr\\u003epredominantly occupied with
+        the Russo-Ukrainian war\\u003cbr\\u003e●\\u003cbr\\u003eboosting random stuff
+        of personal interest such as Central \\u0026amp; Eastern European politics,
+        visual art or occasionally shitposts\\u003cbr\\u003e●\\u003cbr\\u003eboosts
+        ≠ endorsements\\u003c/p\\u003e\",\"url\":\"https://infosec.exchange/@cumulonimbus\",\"uri\":\"https://infosec.exchange/users/cumulonimbus\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/575/603/902/444/006/original/b174e36ec0514a5f.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/575/603/902/444/006/original/b174e36ec0514a5f.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/575/603/902/444/006/original/9c11c41d5c741ccd.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/575/603/902/444/006/original/9c11c41d5c741ccd.jpg\",\"followers_count\":490,\"following_count\":1720,\"statuses_count\":18297,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"keen
+        to boost content re\",\"value\":\"\U0001F1E6\U0001F1F2 \U0001F1E6\U0001F1FF
+        \U0001F1E7\U0001F1FE \U0001F1EC\U0001F1EA \U0001F1F0\U0001F1FF \U0001F1F0\U0001F1EC
+        \U0001F1F7\U0001F1FA \U0001F1F9\U0001F1EF \U0001F1F9\U0001F1F2 \U0001F1FA\U0001F1E6
+        \U0001F1FA\U0001F1FF\",\"verified_at\":null},{\"name\":\"languages\",\"value\":\"DEU
+        ENG FRA RUS UKR\",\"verified_at\":null}]},{\"id\":\"109445076174948824\",\"username\":\"EricHorwath\",\"acct\":\"EricHorwath@hachyderm.io\",\"display_name\":\"Eric
+        Horwath\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2022-12-02T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e:kubernetes:
+        :go: :rust: :python_logo: :prometheus_logo: :debian_logo: :iterm2_logo: :vim:
+        \   \\u003cbr\\u003eAll views are my own.\\u003cbr\\u003elikes cycling \U0001F6B2
+        and old phones \U0001F4F1\\u003cbr\\u003eborn at 355 ppm\\u003c/p\\u003e\",\"url\":\"https://hachyderm.io/@EricHorwath\",\"uri\":\"https://hachyderm.io/users/EricHorwath\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/445/076/174/948/824/original/8bf8f98735beee41.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/445/076/174/948/824/original/8bf8f98735beee41.jpg\",\"header\":\"https://mastodon.social/headers/original/missing.png\",\"header_static\":\"https://mastodon.social/headers/original/missing.png\",\"followers_count\":285,\"following_count\":1937,\"statuses_count\":304,\"last_status_at\":\"2025-07-13\",\"hide_collections\":false,\"emojis\":[{\"shortcode\":\"kubernetes\",\"url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/443/995/original/124010867fcceb8a.png\",\"static_url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/443/995/static/124010867fcceb8a.png\",\"visible_in_picker\":true},{\"shortcode\":\"go\",\"url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/468/608/original/1a54eb8b8f2ea4c1.png\",\"static_url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/468/608/static/1a54eb8b8f2ea4c1.png\",\"visible_in_picker\":true},{\"shortcode\":\"rust\",\"url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/441/977/original/a35b51b421b9cf59.png\",\"static_url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/441/977/static/a35b51b421b9cf59.png\",\"visible_in_picker\":true},{\"shortcode\":\"python_logo\",\"url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/468/633/original/d0783d3ee56edd7d.png\",\"static_url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/468/633/static/d0783d3ee56edd7d.png\",\"visible_in_picker\":true},{\"shortcode\":\"prometheus_logo\",\"url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/480/662/original/c20c4b7ba62d1952.png\",\"static_url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/480/662/static/c20c4b7ba62d1952.png\",\"visible_in_picker\":true},{\"shortcode\":\"debian_logo\",\"url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/469/226/original/4e9d4d5fe127c4ff.png\",\"static_url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/469/226/static/4e9d4d5fe127c4ff.png\",\"visible_in_picker\":true},{\"shortcode\":\"iterm2_logo\",\"url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/468/660/original/e69db249451339b4.png\",\"static_url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/468/660/static/e69db249451339b4.png\",\"visible_in_picker\":true},{\"shortcode\":\"vim\",\"url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/441/695/original/37e34099bc3cfe31.png\",\"static_url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/441/695/static/37e34099bc3cfe31.png\",\"visible_in_picker\":true}],\"fields\":[{\"name\":\"Github\",\"value\":\"\\u003ca
+        href=\\\"https://github.com/erichorwath\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003egithub.com/erichorwath\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2025-05-10T17:18:26.726+00:00\"}]},{\"id\":\"1360993\",\"username\":\"aligyie\",\"acct\":\"aligyie@digitalcourage.social\",\"display_name\":\"nieebel\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2021-01-10T00:00:00.000Z\",\"note\":\"\\u003cp\\u003esome
+        list:\\u003cbr\\u003e\\u003ca href=\\\"https://pad.hacc.space/s/green-hardware-ranking\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003epad.hacc.space/s/green-hardwar\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ee-ranking\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e-
+        \U0001F49A \\u003ca href=\\\"https://codeberg.org/GreenFediverse/green-instances\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ecodeberg.org/GreenFediverse/gr\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003eeen-instances\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://digitalcourage.social/tags/GreenFediverse\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eGreenFediverse\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e-
+        \U0001F331\\u003ca href=\\\"https://lite.framacalc.org/green-webhost-ranking\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003elite.framacalc.org/green-webho\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003est-ranking\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://digitalcourage.social/tags/RenewableEnergy\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eRenewableEnergy\\u003c/span\\u003e\\u003c/a\\u003e
+        \ \\u003ca href=\\\"https://digitalcourage.social/tags/ClimateChange\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eClimateChange\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e-
+        \U0001F527\\u003ca href=\\\"https://digitalcourage.social/tags/Fairphone\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eFairphone\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://digitalcourage.social/tags/RightToRepair\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eRightToRepair\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://digitalcourage.social/tags/CircularEconomy\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eCircularEconomy\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e-
+        \U0001F427\\u003ca href=\\\"https://digitalcourage.social/tags/FreeSoftware\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eFreeSoftware\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://digitalcourage.social/tags/PublicMoney\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ePublicMoney\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://digitalcourage.social/tags/PublicCode\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ePublicCode\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://digitalcourage.social/tags/FOSS\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eFOSS\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e-
+        ✊\\u003ca href=\\\"https://digitalcourage.social/tags/Coop\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eCoop\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://digitalcourage.social/tags/Commons\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eCommons\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://digitalcourage.social/tags/ecogood\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eecogood\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://digitalcourage.social/tags/GW%C3%96\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eGWÖ\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://digitalcourage.social/tags/transitionTowns\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003etransitionTowns\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://digitalcourage.social/tags/organic\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eorganic\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e“A
+        developed country is not a place where the poor have cars. It’s where the
+        rich use public transportation.”\U0001F68B\U0001F6B2tfr\\u003c/p\\u003e\",\"url\":\"https://digitalcourage.social/@aligyie\",\"uri\":\"https://digitalcourage.social/users/aligyie\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/001/360/993/original/e3aadf8f3d77b385.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/001/360/993/original/e3aadf8f3d77b385.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/001/360/993/original/a2409969e5a54287.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/001/360/993/original/a2409969e5a54287.jpg\",\"followers_count\":2417,\"following_count\":9011,\"statuses_count\":5316,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Sustainability\",\"value\":\"sufficiency,
+        consistency, efficiency\",\"verified_at\":null},{\"name\":\"Green list for
+        a better future\",\"value\":\"\\u003ca href=\\\"https://pad.hacc.space/s/green-hardware-ranking\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003epad.hacc.space/s/green-hardwar\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ee-ranking\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"https://tootfinder.ch/\",\"value\":\"tfr\",\"verified_at\":null}]},{\"id\":\"109296838257890117\",\"username\":\"toxy\",\"acct\":\"toxy@mastodon.acc.sunet.se\",\"display_name\":\"Toxy
+        \U0001F52C\U0001F1EA\U0001F1FA\U0001F1F8\U0001F1EA\U0001F1EC\U0001F1E7\U0001F1FA\U0001F1E6\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-06T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eCytologist
+        and ex-archaeologist. Will consume any media involving horror, sci-fi, fantasy,
+        antiquity, linguistics, philosophy (especially free-will), science and psychology
+        until it comes out of my ears.\\u003cbr\\u003eI love hiking in the nature
+        and swimming in lakes.\\u003cbr\\u003eTrying to learn cybersecurity as a hobby
+        with a side order of digital privacy.\\u003cbr\\u003eMy musical preference
+        is \\\"good tunes\\\", its type is immaterial.\\u003cbr\\u003eMy brain seems
+        to have a mind of its own.\\u003c/p\\u003e\",\"url\":\"https://mastodon.acc.sunet.se/@toxy\",\"uri\":\"https://mastodon.acc.sunet.se/users/toxy\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/296/838/257/890/117/original/ef90197b71b45777.jpeg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/296/838/257/890/117/original/ef90197b71b45777.jpeg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/296/838/257/890/117/original/0cf237867c41d619.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/296/838/257/890/117/original/0cf237867c41d619.jpg\",\"followers_count\":895,\"following_count\":2854,\"statuses_count\":1125,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Star
+        sign\",\"value\":\"Capricorn\",\"verified_at\":null},{\"name\":\"Do not believe
+        in\",\"value\":\"Astrology\",\"verified_at\":null},{\"name\":\"Favourite film\",\"value\":\"Alien\",\"verified_at\":null},{\"name\":\"Really?\",\"value\":\"Maybe
+        Predator\",\"verified_at\":null}]},{\"id\":\"109240045332800603\",\"username\":\"twchr\",\"acct\":\"twchr\",\"display_name\":\"_then\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-10-27T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eLorry
+        driver bloke for you only\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@twchr\",\"uri\":\"https://mastodon.social/users/twchr\",\"avatar\":\"https://files.mastodon.social/accounts/avatars/109/240/045/332/800/603/original/f6ada54dc079bc83.jpg\",\"avatar_static\":\"https://files.mastodon.social/accounts/avatars/109/240/045/332/800/603/original/f6ada54dc079bc83.jpg\",\"header\":\"https://files.mastodon.social/accounts/headers/109/240/045/332/800/603/original/1152ea896abb869e.jpg\",\"header_static\":\"https://files.mastodon.social/accounts/headers/109/240/045/332/800/603/original/1152ea896abb869e.jpg\",\"followers_count\":437,\"following_count\":861,\"statuses_count\":220,\"last_status_at\":\"2025-07-12\",\"hide_collections\":true,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"Joined\",\"value\":\"27
+        Oct 2022\",\"verified_at\":null}]},{\"id\":\"784109\",\"username\":\"bflaemig\",\"acct\":\"bflaemig@openbiblio.social\",\"display_name\":\"Benjamin
+        Flämig\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2019-03-18T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eDirektor
+        Zentral- und Hochschulbibliothek Luzern \\u003cspan class=\\\"h-card\\\" translate=\\\"no\\\"\\u003e\\u003ca
+        href=\\\"https://openbiblio.social/@zhbluzern\\\" class=\\\"u-url mention\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e@\\u003cspan\\u003ezhbluzern\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e.
+        Probiert gern Dinge aus wie den \\u003ca href=\\\"https://openbiblio.social/tags/seatnavigator\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eseatnavigator\\u003c/span\\u003e\\u003c/a\\u003e
+        oder \\u003ca href=\\\"https://openbiblio.social/tags/8bis8\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003e8bis8\\u003c/span\\u003e\\u003c/a\\u003e.\\u003c/p\\u003e\",\"url\":\"https://openbiblio.social/@bflaemig\",\"uri\":\"https://openbiblio.social/users/bflaemig\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/000/784/109/original/a97fe6bd73407e58.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/000/784/109/original/a97fe6bd73407e58.png\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/000/784/109/original/82827cab438c2b61.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/000/784/109/original/82827cab438c2b61.jpg\",\"followers_count\":277,\"following_count\":222,\"statuses_count\":276,\"last_status_at\":\"2025-06-27\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"ORC-ID\",\"value\":\"\\u003ca
+        href=\\\"https://orcid.org/0000-0002-7181-025X\\\" rel=\\\"nofollow noopener\\\"
+        translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003eorcid.org/0000-0002-7181-025X\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"ZHB
+        Luzern\",\"value\":\"\\u003ca href=\\\"https://www.zhbluzern.ch/home\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003ezhbluzern.ch/home\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Agile
+        Bibliothek\",\"value\":\"\\u003ca href=\\\"https://agile-bibliothek.org\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003eagile-bibliothek.org\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Gamebrarians\",\"value\":\"\\u003ca
+        href=\\\"https://www.gamebrarians.de\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"
         target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003ecambridgeport90.org\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"OpenCAD
-        Project URL\",\"value\":\"\\u003ca href=\\\"https://opencad.io\\\" rel=\\\"nofollow
-        noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003eopencad.io\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Main
-        Organizational URL\",\"value\":\"\\u003ca href=\\\"https://101schemes.io\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003e101schemes.io\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Pnut.IO\",\"value\":\"\\u003ca
-        href=\\\"https://beta.pnut.io/@cambridgeport90\\\" rel=\\\"nofollow noopener
-        noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003ebeta.pnut.io/@cambridgeport90\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"109308608799228696\",\"username\":\"Sylux\",\"acct\":\"Sylux@nrw.social\",\"display_name\":\"Sylux\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-11-08T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eEine
-        Muttkrat aus einem kleinen Dorf in NRW.\\u003c/p\\u003e\",\"url\":\"https://nrw.social/@Sylux\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/308/608/799/228/696/original/b631fcd24f68093f.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/308/608/799/228/696/original/b631fcd24f68093f.png\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/308/608/799/228/696/original/3607259adf37cd6b.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/308/608/799/228/696/original/3607259adf37cd6b.jpg\",\"followers_count\":0,\"following_count\":3,\"statuses_count\":3,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"Muttkrat?\",\"value\":\"\\u003ca
-        href=\\\"https://de.wikipedia.org/wiki/Jülich#Muttkrate\\\" rel=\\\"nofollow
-        noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"ellipsis\\\"\\u003ede.wikipedia.org/wiki/Jülich#M\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003euttkrate\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"109300146197312880\",\"username\":\"jill\",\"acct\":\"jill@glasgow.social\",\"display_name\":\"Jillcamm\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-07T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://glasgow.social/@jill\",\"avatar\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"avatar_static\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"header\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"header_static\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"followers_count\":0,\"following_count\":6,\"statuses_count\":0,\"last_status_at\":null,\"emojis\":[],\"fields\":[]},{\"id\":\"109303976515336248\",\"username\":\"bojanland\",\"acct\":\"bojanland@mastodon.online\",\"display_name\":\"Bojan
-        Land\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-06T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003ca
-        href=\\\"https://mastodon.online/tags/disabled\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003edisabled\\u003c/span\\u003e\\u003c/a\\u003e
-        musician struggling with \\u003ca href=\\\"https://mastodon.online/tags/PTSD\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ePTSD\\u003c/span\\u003e\\u003c/a\\u003e
-        after being assaulted\\u003c/p\\u003e\",\"url\":\"https://mastodon.online/@bojanland\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/303/976/515/336/248/original/46b3e26638de2b9c.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/303/976/515/336/248/original/46b3e26638de2b9c.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/303/976/515/336/248/original/6f9586ae06fb2397.jpeg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/303/976/515/336/248/original/6f9586ae06fb2397.jpeg\",\"followers_count\":0,\"following_count\":4,\"statuses_count\":7,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[]},{\"id\":\"109294933963033652\",\"username\":\"haack\",\"acct\":\"haack@fosstodon.org\",\"display_name\":\"haack\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-05T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://fosstodon.org/@haack\",\"avatar\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"avatar_static\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"header\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"header_static\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"followers_count\":0,\"following_count\":2,\"statuses_count\":0,\"last_status_at\":null,\"emojis\":[],\"fields\":[]},{\"id\":\"108198442284510497\",\"username\":\"Natanael_L\",\"acct\":\"Natanael_L\",\"display_name\":\"Natanael
-        \U0001F515\U0001F50F\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-04-26T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eGeek.\\u003c/p\\u003e\\u003cp\\u003e/u/Natanael_L
-        on reddit, moderating /r/crypto (as in cryptography)\\u003cbr /\\u003e\\u003cspan
-        class=\\\"h-card\\\"\\u003e\\u003ca href=\\\"https://mastodon.social/@Natanael_L\\\"
-        class=\\\"u-url mention\\\"\\u003e@\\u003cspan\\u003eNatanael_L\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e
-        on Twitter\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@Natanael_L\",\"avatar\":\"https://files.mastodon.social/accounts/avatars/108/198/442/284/510/497/original/6917ac17e12728e4.png\",\"avatar_static\":\"https://files.mastodon.social/accounts/avatars/108/198/442/284/510/497/original/6917ac17e12728e4.png\",\"header\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"header_static\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"followers_count\":80,\"following_count\":167,\"statuses_count\":355,\"last_status_at\":\"2022-11-08\",\"noindex\":false,\"emojis\":[],\"fields\":[{\"name\":\"Location\",\"value\":\"Somewhere
-        in Sweden\",\"verified_at\":null},{\"name\":\"Interests\",\"value\":\"Random
-        tech stuff\",\"verified_at\":null},{\"name\":\"Matrix.org account, for E2EE
-        messages\",\"value\":\"\\u003cspan class=\\\"h-card\\\"\\u003e\\u003ca href=\\\"https://mastodon.social/@Natanael_L\\\"
-        class=\\\"u-url mention\\\"\\u003e@\\u003cspan\\u003eNatanael_L\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e:matrix.org\",\"verified_at\":null},{\"name\":\"Crypto
-        means\",\"value\":\"Cryptography\",\"verified_at\":null}]},{\"id\":\"108022187154321320\",\"username\":\"Spriggan\",\"acct\":\"Spriggan@mamot.fr\",\"display_name\":\"Spriggan\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2021-07-11T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003c/p\\u003e\",\"url\":\"https://mamot.fr/@Spriggan\",\"avatar\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"avatar_static\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"header\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"header_static\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"followers_count\":0,\"following_count\":5,\"statuses_count\":3,\"last_status_at\":\"2022-11-05\",\"emojis\":[],\"fields\":[]},{\"id\":\"109279760476597779\",\"username\":\"jandudulski\",\"acct\":\"jandudulski@ruby.social\",\"display_name\":\"Jan
-        Dudulski\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-11-02T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eNopeJS
-        programmer at \\u003ca href=\\\"http://monterail.com\\\" rel=\\\"nofollow
-        noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttp://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003emonterail.com\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e,
-        unfulfilled football player, board/war gamer, Vim cleric and Elixir fanboy.\\u003c/p\\u003e\",\"url\":\"https://ruby.social/@jandudulski\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/279/760/476/597/779/original/a927fe6f2c775355.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/279/760/476/597/779/original/a927fe6f2c775355.png\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/279/760/476/597/779/original/da7a33ed7ad39bfa.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/279/760/476/597/779/original/da7a33ed7ad39bfa.jpg\",\"followers_count\":1,\"following_count\":10,\"statuses_count\":9,\"last_status_at\":\"2022-11-07\",\"emojis\":[],\"fields\":[{\"name\":\"github\",\"value\":\"\\u003ca
-        href=\\\"https://github.com/jandudulski/\\\" rel=\\\"nofollow noopener noreferrer\\\"
+        class=\\\"\\\"\\u003egamebrarians.de\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"962747\",\"username\":\"mareeswj\",\"acct\":\"mareeswj@mstdn.social\",\"display_name\":\"Joining
+        Unrelated Dots\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2019-11-07T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eTwee-Tootler\\u003c/p\\u003e\\u003cp\\u003eநாலு
+        பேருக்கு நல்லது நடக்கும்னா\\u003cbr\\u003e எது செஞ்சாலும் தப்பு இல்ல\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://mstdn.social/tags/hungryMastodon\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ehungryMastodon\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003ewashing
+        one's hands of the conflict between the powerful and the powerless means to
+        side with the powerful\\u003c/p\\u003e\",\"url\":\"https://mstdn.social/@mareeswj\",\"uri\":\"https://mstdn.social/users/mareeswj\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/000/962/747/original/056a389d47f6c1a5.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/000/962/747/original/056a389d47f6c1a5.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/000/962/747/original/43ae3ae05520182c.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/000/962/747/original/43ae3ae05520182c.jpg\",\"followers_count\":89,\"following_count\":112,\"statuses_count\":2103,\"last_status_at\":\"2023-09-25\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"twitter\",\"value\":\"\\u003ca
+        href=\\\"https://twitter.com/mareeswj\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003etwitter.com/mareeswj\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Keybase
+        chat\",\"value\":\"\\u003ca href=\\\"https://keybase.io/mareeswj/chat\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003ekeybase.io/mareeswj/chat\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Amazon
+        Music playlist\",\"value\":\"\\u003ca href=\\\"https://music.amazon.in/user-playlists/43523068ac4044de824db22af96881b6i8n0\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"ellipsis\\\"\\u003emusic.amazon.in/user-playlists\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e/43523068ac4044de824db22af96881b6i8n0\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Substack\",\"value\":\"\\u003ca
+        href=\\\"https://joiningunrelateddots.substack.com/people/14420328-joining-unrelated-dots\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"ellipsis\\\"\\u003ejoiningunrelateddots.substack.\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ecom/people/14420328-joining-unrelated-dots\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"109362028569647202\",\"username\":\"bexrousse\",\"acct\":\"bexrousse\",\"display_name\":\"Becky
+        D\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-18T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eEternally
+        curious. Avid reader, sporadic storyteller, sometime photographer, enthusiastic
+        yet abysmal cook. she/her/hers\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@bexrousse\",\"uri\":\"https://mastodon.social/users/bexrousse\",\"avatar\":\"https://files.mastodon.social/accounts/avatars/109/362/028/569/647/202/original/34603618930819b5.png\",\"avatar_static\":\"https://files.mastodon.social/accounts/avatars/109/362/028/569/647/202/original/34603618930819b5.png\",\"header\":\"https://files.mastodon.social/accounts/headers/109/362/028/569/647/202/original/a8c936673a4d9607.png\",\"header_static\":\"https://files.mastodon.social/accounts/headers/109/362/028/569/647/202/original/a8c936673a4d9607.png\",\"followers_count\":59,\"following_count\":222,\"statuses_count\":43,\"last_status_at\":\"2022-12-02\",\"hide_collections\":false,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[]},{\"id\":\"109346463969817744\",\"username\":\"LizPhair\",\"acct\":\"LizPhair@mstdn.social\",\"display_name\":\"Liz
+        Phair\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-10-30T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eI
+        will rebuild my empire of dirt on this mole hill\\u003c/p\\u003e\",\"url\":\"https://mstdn.social/@LizPhair\",\"uri\":\"https://mstdn.social/users/LizPhair\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/346/463/969/817/744/original/45890ed33ce9dc7f.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/346/463/969/817/744/original/45890ed33ce9dc7f.png\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/346/463/969/817/744/original/c602c2289b88fff2.jpeg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/346/463/969/817/744/original/c602c2289b88fff2.jpeg\",\"followers_count\":3090,\"following_count\":72,\"statuses_count\":97,\"last_status_at\":\"2023-06-22\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},{\"id\":\"109294591790419722\",\"username\":\"Jennlor\",\"acct\":\"Jennlor@romancelandia.club\",\"display_name\":\"\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-06T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003c/p\\u003e\",\"url\":\"https://romancelandia.club/@Jennlor\",\"uri\":\"https://romancelandia.club/users/Jennlor\",\"avatar\":\"https://mastodon.social/avatars/original/missing.png\",\"avatar_static\":\"https://mastodon.social/avatars/original/missing.png\",\"header\":\"https://mastodon.social/headers/original/missing.png\",\"header_static\":\"https://mastodon.social/headers/original/missing.png\",\"followers_count\":0,\"following_count\":3,\"statuses_count\":0,\"last_status_at\":null,\"hide_collections\":false,\"emojis\":[],\"fields\":[]},{\"id\":\"109258223021644370\",\"username\":\"knedij\",\"acct\":\"knedij@mastodon.green\",\"display_name\":\"Jürgen
+        Kneidinger\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2022-10-30T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://mastodon.green/@knedij\",\"uri\":\"https://mastodon.green/users/knedij\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/258/223/021/644/370/original/62d09cd71ec573a5.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/258/223/021/644/370/original/62d09cd71ec573a5.jpg\",\"header\":\"https://mastodon.social/headers/original/missing.png\",\"header_static\":\"https://mastodon.social/headers/original/missing.png\",\"followers_count\":10,\"following_count\":61,\"statuses_count\":315,\"last_status_at\":\"2023-01-31\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},{\"id\":\"109366105847037101\",\"username\":\"TomDelargy\",\"acct\":\"TomDelargy\",\"display_name\":\"Tom
+        Delargy\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-18T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eInterested
+        in everything; expert on nothing. Some of my engagement on this site will
+        relate to politics. But that\\u0026#39;s just the tip of the iceberg. Within
+        limits I won\\u0026#39;t vet followers by political views. Let\\u0026#39;s
+        talk. Will \\u003ca href=\\\"https://mastodon.social/tags/followback\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003efollowback\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://mastodon.social/tags/adhd\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eadhd\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://mastodon.social/tags/SocialistSunday\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eSocialistSunday\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://mastodon.social/tags/Socialist\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eSocialist\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://mastodon.social/tags/EnoughIsEnough\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eEnoughIsEnough\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://mastodon.social/tags/UKPolitics\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eUKPolitics\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://mastodon.social/tags/Internationalist\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eInternationalist\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://mastodon.social/tags/Music\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eMusic\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://mastodon.social/tags/VisualArt\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eVisualArt\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://mastodon.social/tags/Humor\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eHumor\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://mastodon.social/tags/Science\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eScience\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://mastodon.social/tags/Literature\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eLiterature\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://mastodon.social/tags/Film\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eFilm\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://mastodon.social/tags/Esperanto\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eEsperanto\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@TomDelargy\",\"uri\":\"https://mastodon.social/users/TomDelargy\",\"avatar\":\"https://files.mastodon.social/accounts/avatars/109/366/105/847/037/101/original/2540f86876376c3c.jpg\",\"avatar_static\":\"https://files.mastodon.social/accounts/avatars/109/366/105/847/037/101/original/2540f86876376c3c.jpg\",\"header\":\"https://files.mastodon.social/accounts/headers/109/366/105/847/037/101/original/1b5f5505a5e2f062.jpg\",\"header_static\":\"https://files.mastodon.social/accounts/headers/109/366/105/847/037/101/original/1b5f5505a5e2f062.jpg\",\"followers_count\":1123,\"following_count\":1064,\"statuses_count\":5180,\"last_status_at\":\"2023-10-16\",\"hide_collections\":false,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"WORKERS
+        UNITED\",\"value\":\"\\u003ca href=\\\"https://derekthomas2010.wordpress.com/\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003ederekthomas2010.wordpress.com/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"109296074735050630\",\"username\":\"karpi\",\"acct\":\"karpi@chaos.social\",\"display_name\":\"Karpi\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-06T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eAutor,
+        Filmproduzent, Komiker\\u003cbr\\u003e\U0001F44B Anfragen für Auftritte, Moderation
+        und Referate: booking@atelieer.ch\\u003c/p\\u003e\\u003cp\\u003e(searchable)\\u003c/p\\u003e\",\"url\":\"https://chaos.social/@karpi\",\"uri\":\"https://chaos.social/users/karpi\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/296/074/735/050/630/original/a04d8aaacdc05ca1.jpeg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/296/074/735/050/630/original/a04d8aaacdc05ca1.jpeg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/296/074/735/050/630/original/5d315333e7b11f3a.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/296/074/735/050/630/original/5d315333e7b11f3a.jpg\",\"followers_count\":2301,\"following_count\":283,\"statuses_count\":946,\"last_status_at\":\"2025-07-16\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"twitter\",\"value\":\"\\u003ca
+        href=\\\"https://twitter.com/karpi\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"
         target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003egithub.com/jandudulski/\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"twitter\",\"value\":\"\\u003ca
-        href=\\\"https://twitter.com/yanoo_\\\" rel=\\\"nofollow noopener noreferrer\\\"
+        class=\\\"\\\"\\u003etwitter.com/karpi\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"web\",\"value\":\"\\u003ca
+        href=\\\"https://karpi.squarespace.com/\\\" rel=\\\"nofollow noopener\\\"
+        translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003ekarpi.squarespace.com/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"109313176720583975\",\"username\":\"JohnStumbles\",\"acct\":\"JohnStumbles@mas.to\",\"display_name\":\"John
+        Stumbles\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-08T00:00:00.000Z\",\"note\":\"\\u003cp\\u003ehe/him/his\\u003cbr\\u003epessimists
+        are never disappointed \\u003cbr\\u003e\\u003ca href=\\\"https://mas.to/tags/NotAllMan\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eNotAllMan\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr\\u003eFully
+        Automated Nuclear Powered Luxury Gay Space Communism \\u003cbr\\u003eFTW\\u003cbr\\u003e\\\\../
+        Hail Satan! \\\\../\\u003c/p\\u003e\",\"url\":\"https://mas.to/@JohnStumbles\",\"uri\":\"https://mas.to/users/JohnStumbles\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/313/176/720/583/975/original/2ad0886e22983d04.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/313/176/720/583/975/original/2ad0886e22983d04.jpg\",\"header\":\"https://mastodon.social/headers/original/missing.png\",\"header_static\":\"https://mastodon.social/headers/original/missing.png\",\"followers_count\":17,\"following_count\":49,\"statuses_count\":115,\"last_status_at\":\"2023-01-25\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},{\"id\":\"107373057389086599\",\"username\":\"norbert\",\"acct\":\"norbert@bitcoinhackers.org\",\"display_name\":\"Norbert\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2021-11-30T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eBitcoin:
+        The credibly scarce bearer instrument for a digital age.\\u003c/p\\u003e\\u003cp\\u003eLive-tweeting
+        Hodlonaut v Wright was my 15 minutes.\\u003c/p\\u003e\",\"url\":\"https://bitcoinhackers.org/@norbert\",\"uri\":\"https://bitcoinhackers.org/users/norbert\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/107/373/057/389/086/599/original/bde5ddf67dae630b.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/107/373/057/389/086/599/original/bde5ddf67dae630b.png\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/107/373/057/389/086/599/original/404a412ff3c8c8f0.jpeg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/107/373/057/389/086/599/original/404a412ff3c8c8f0.jpeg\",\"followers_count\":31,\"following_count\":149,\"statuses_count\":43,\"last_status_at\":\"2023-02-12\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Twitter\",\"value\":\"\\u003ca
+        href=\\\"https://twitter.com/bitnorbert\\\" rel=\\\"nofollow noopener\\\"
         target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003etwitter.com/yanoo_\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"goodreads\",\"value\":\"\\u003ca
-        href=\\\"https://www.goodreads.com/user/show/3111218-jan\\\" rel=\\\"nofollow
-        noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
-        class=\\\"ellipsis\\\"\\u003egoodreads.com/user/show/311121\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e8-jan\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"109293590962739810\",\"username\":\"so_treu\",\"acct\":\"so_treu@scholar.social\",\"display_name\":\"Ra'il
-        I'Nasah Kiam\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-11-05T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eartist
-        + curator + semi-professional loudmouth.\\u003c/p\\u003e\\u003cp\\u003enonbinary,
-        as in: trans. specifically transandrogynous.\\u003c/p\\u003e\\u003cp\\u003eBlack
-        expressive culture + Black history + Black radical politics + the Black and
-        bloody South.\\u003c/p\\u003e\\u003cp\\u003eastrology and metaphysics and
-        Afro-diasporic spiritualities.\\u003c/p\\u003e\\u003cp\\u003ephotography,
-        of the experimental kind. metal, of the heavy kind. wrestling, of the professional
-        kind.\\u003c/p\\u003e\\u003cp\\u003e\\\"we are infinite/we are infinite\\\"\\u003c/p\\u003e\",\"url\":\"https://scholar.social/@so_treu\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/293/590/962/739/810/original/97e04d1d1a4316dc.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/293/590/962/739/810/original/97e04d1d1a4316dc.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/293/590/962/739/810/original/fa9277549769333a.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/293/590/962/739/810/original/fa9277549769333a.jpg\",\"followers_count\":29,\"following_count\":21,\"statuses_count\":30,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"Pronouns\",\"value\":\"They/Them;
-        Xē/Xem; He/Him; She/Her\",\"verified_at\":null},{\"name\":\"My links\",\"value\":\"\\u003ca
-        href=\\\"https://linktr.ee/railinasah\\\" rel=\\\"nofollow noopener noreferrer\\\"
+        class=\\\"\\\"\\u003etwitter.com/bitnorbert\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"stacker
+        news\",\"value\":\"\\u003ca href=\\\"https://stacker.news/Norbert\\\" rel=\\\"nofollow
+        noopener\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003estacker.news/Norbert\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"nostr\",\"value\":\"npub1r8n4t859d49ftumff8kl80pvfh94ae55jkjct703dnspj8frtf9sara4xx\",\"verified_at\":null}]},{\"id\":\"109338369337571925\",\"username\":\"TalktoBeverley\",\"acct\":\"TalktoBeverley@mas.to\",\"display_name\":\"Beverley\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-13T00:00:00.000Z\",\"note\":\"\\u003cp\\u003ePeople
+        puzzle me more each day that passes.\\u003cbr\\u003eLeft.  Definitely on the
+        \\u003ca href=\\\"https://mas.to/tags/left\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eleft\\u003c/span\\u003e\\u003c/a\\u003e.\\u003cbr\\u003eJoin
+        a union.  \\u003ca href=\\\"https://mas.to/tags/SocialJustice\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eSocialJustice\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mas.to/tags/Unions\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eUnions\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mas.to/tags/TUC\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eTUC\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mas.to/tags/COVIDhermit\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eCOVIDhermit\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mas.to/tags/COVIDsafe\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eCOVIDsafe\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mas.to/tags/WearaMask\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eWearaMask\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr\\u003eBe
+        kind, wear a smile; it feels good. \\u003cbr\\u003e❤️NE (UK) - My home; my
+        heritage.  \\u003cbr\\u003eLeeds University alumna.\\u003cbr\\u003eRefugee
+        from dead-bird site.  People, why do you stay?\\u003cbr\\u003e\\u003ca href=\\\"https://mas.to/tags/WhitleyBay\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eWhitleyBay\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://mas.to/@TalktoBeverley\",\"uri\":\"https://mas.to/users/TalktoBeverley\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/338/369/337/571/925/original/1b93d45881e1ff5e.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/338/369/337/571/925/original/1b93d45881e1ff5e.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/338/369/337/571/925/original/ebd53776c1185b51.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/338/369/337/571/925/original/ebd53776c1185b51.jpg\",\"followers_count\":638,\"following_count\":778,\"statuses_count\":55088,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},{\"id\":\"109367140258131821\",\"username\":\"stubbornoldgoat\",\"acct\":\"stubbornoldgoat@mindly.social\",\"display_name\":\"Lucy\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-18T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eStill
+        the same old Southern (Mississippi) white woman who refuses to take shite
+        off of anyone. I abhor the bondage people place on others who are unlike themselves.
+        Poverty too can be SO enslaving. Give others respect \\u0026amp; value for
+        BEING.\\u003cbr\\u003eNature is God. \\u003cbr\\u003eMy went by Lucy Laiche
+        (ancestor) on the bird. IRL I'm Tricia Garrett.\\u003c/p\\u003e\",\"url\":\"https://mindly.social/@stubbornoldgoat\",\"uri\":\"https://mindly.social/users/stubbornoldgoat\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/367/140/258/131/821/original/ded43b668110f85f.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/367/140/258/131/821/original/ded43b668110f85f.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/367/140/258/131/821/original/90380bf4ae369ff0.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/367/140/258/131/821/original/90380bf4ae369ff0.jpg\",\"followers_count\":6,\"following_count\":27,\"statuses_count\":57,\"last_status_at\":\"2022-11-19\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},{\"id\":\"109366573393755624\",\"username\":\"mangofatale\",\"acct\":\"mangofatale@mas.to\",\"display_name\":\"Mango\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-18T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://mas.to/@mangofatale\",\"uri\":\"https://mas.to/users/mangofatale\",\"avatar\":\"https://mastodon.social/avatars/original/missing.png\",\"avatar_static\":\"https://mastodon.social/avatars/original/missing.png\",\"header\":\"https://mastodon.social/headers/original/missing.png\",\"header_static\":\"https://mastodon.social/headers/original/missing.png\",\"followers_count\":9,\"following_count\":331,\"statuses_count\":0,\"last_status_at\":null,\"hide_collections\":false,\"emojis\":[],\"fields\":[]},{\"id\":\"109315583743440959\",\"username\":\"jonh64\",\"acct\":\"jonh64@mastodonapp.uk\",\"display_name\":\"jonh64\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-09T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003ca
+        href=\\\"https://mastodonapp.uk/tags/EnoughIsEnough\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eEnoughIsEnough\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodonapp.uk/tags/History\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eHistory\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodonapp.uk/tags/NorthernSoul\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eNorthernSoul\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodonapp.uk/tags/2Tone\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003e2Tone\\u003c/span\\u003e\\u003c/a\\u003e,
+        \\u003ca href=\\\"https://mastodonapp.uk/tags/Ska\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eSka\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodonapp.uk/tags/THFC\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eTHFC\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodonapp.uk/tags/COYS\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eCOYS\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodonapp.uk/tags/NHS\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eNHS\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodonapp.uk/tags/JFT97\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eJFT97\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodonapp.uk/tags/CND\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eCND\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodonapp.uk/tags/Volunteer\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eVolunteer\\u003c/span\\u003e\\u003c/a\\u003e
+        for \\u003ca href=\\\"https://mastodonapp.uk/tags/8BelowHuskyRescue\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003e8BelowHuskyRescue\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodonapp.uk/tags/Bengals\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eBengals\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodonapp.uk/tags/CanineArthritisManagement\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eCanineArthritisManagement\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodonapp.uk/tags/SomersetCCC\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eSomersetCCC\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodonapp.uk/tags/AdoptDontShop\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eAdoptDontShop\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodonapp.uk/tags/MilitaryHistory\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eMilitaryHistory\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodonapp.uk/tags/MilHist\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eMilHist\\u003c/span\\u003e\\u003c/a\\u003e
+        Mainly here for \\u003ca href=\\\"https://mastodonapp.uk/tags/DogsOfMastodon\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eDogsOfMastodon\\u003c/span\\u003e\\u003c/a\\u003e
+        and scenic \\u003ca href=\\\"https://mastodonapp.uk/tags/Photography\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ePhotography\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodonapp.uk/tags/GoBlue\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eGoBlue\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003eMore
+        likely to boost and/or favourite if \\u003ca href=\\\"https://mastodonapp.uk/tags/AltText\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eAltText\\u003c/span\\u003e\\u003c/a\\u003e
+        is used on photos\\u003c/p\\u003e\",\"url\":\"https://mastodonapp.uk/@jonh64\",\"uri\":\"https://mastodonapp.uk/users/jonh64\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/315/583/743/440/959/original/d42e159b843e2fb5.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/315/583/743/440/959/original/d42e159b843e2fb5.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/315/583/743/440/959/original/25f6db0c7cd90b63.jpeg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/315/583/743/440/959/original/25f6db0c7cd90b63.jpeg\",\"followers_count\":284,\"following_count\":372,\"statuses_count\":972,\"last_status_at\":\"2024-04-04\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},{\"id\":\"109304536418532992\",\"username\":\"nathandratler\",\"acct\":\"nathandratler@mastodon.iriseden.eu\",\"display_name\":\"nathandratler\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-07T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://mastodon.iriseden.eu/@nathandratler\",\"uri\":\"https://mastodon.iriseden.eu/users/nathandratler\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/304/536/418/532/992/original/bde9d413e471871a.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/304/536/418/532/992/original/bde9d413e471871a.png\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/304/536/418/532/992/original/07477212d5e71fcb.jpeg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/304/536/418/532/992/original/07477212d5e71fcb.jpeg\",\"followers_count\":2,\"following_count\":2,\"statuses_count\":2,\"last_status_at\":\"2022-11-11\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Social-démocrate/
+        Écologiste/ Féministe. \U0001F3F3️‍\U0001F308Équipe @projetmontreal @val_plante
+        et #EELV. Educateur à l’enfance et amoureux de Montreal\U0001F1E8\U0001F1E6\U0001F1FA\U0001F1E6\",\"value\":\"\",\"verified_at\":null}]},{\"id\":\"109289167572464559\",\"username\":\"floradora65\",\"acct\":\"floradora65@mastodon.top\",\"display_name\":\"Diane
+        H.\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-05T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eAime
+        les films tournés en noir et blanc et les romans écrits au passé simple. Préfère
+        Mothra à Godzilla. Pas photogénique depuis 1986\\u003c/p\\u003e\",\"url\":\"https://mastodon.top/@floradora65\",\"uri\":\"https://mastodon.top/users/floradora65\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/289/167/572/464/559/original/ec6807d03d0688d3.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/289/167/572/464/559/original/ec6807d03d0688d3.png\",\"header\":\"https://mastodon.social/headers/original/missing.png\",\"header_static\":\"https://mastodon.social/headers/original/missing.png\",\"followers_count\":34,\"following_count\":25,\"statuses_count\":15,\"last_status_at\":\"2022-12-10\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},{\"id\":\"109252168766938319\",\"username\":\"marieplourde\",\"acct\":\"marieplourde\",\"display_name\":\"Marie
+        Plourde Elle/she/her\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-10-29T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eMairesse
+        suppléante de Montréal. \\u003cbr /\\u003eConseillère municipale du Mile End.
+        \\u003cbr /\\u003ePrésidente du comité consultatif d\\u0026#39;urbanisme.
+        \\u003cbr /\\u003eAménagement, design. \\u003cbr /\\u003eÀ gauche.\\u003cbr
+        /\\u003eFan finie des chats. \\u003cbr /\\u003eMaman de Lou, surtout.\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@marieplourde\",\"uri\":\"https://mastodon.social/users/marieplourde\",\"avatar\":\"https://files.mastodon.social/accounts/avatars/109/252/168/766/938/319/original/91bdca861704bdfa.png\",\"avatar_static\":\"https://files.mastodon.social/accounts/avatars/109/252/168/766/938/319/original/91bdca861704bdfa.png\",\"header\":\"https://files.mastodon.social/accounts/headers/109/252/168/766/938/319/original/9b81cef7aaa3723e.jpeg\",\"header_static\":\"https://files.mastodon.social/accounts/headers/109/252/168/766/938/319/original/9b81cef7aaa3723e.jpeg\",\"followers_count\":433,\"following_count\":251,\"statuses_count\":70,\"last_status_at\":\"2023-02-11\",\"hide_collections\":false,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"https://montreal.ca/elus/marie-plourde-1146\",\"value\":\"\",\"verified_at\":null},{\"name\":\"https://fr.wikipedia.org/w/index.php?title=Marie_Plourde\\u0026veaction=edit\\u0026section=1\",\"value\":\"\",\"verified_at\":null}]},{\"id\":\"109348700981412026\",\"username\":\"nikoloiz\",\"acct\":\"nikoloiz@mastodon.lol\",\"display_name\":\"Niko
+        Lewis\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-15T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://mastodon.lol/@nikoloiz\",\"uri\":\"https://mastodon.lol/users/nikoloiz\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/348/700/981/412/026/original/f687643af9530ac1.jpeg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/348/700/981/412/026/original/f687643af9530ac1.jpeg\",\"header\":\"https://mastodon.social/headers/original/missing.png\",\"header_static\":\"https://mastodon.social/headers/original/missing.png\",\"followers_count\":0,\"following_count\":4,\"statuses_count\":2,\"last_status_at\":\"2022-11-15\",\"hide_collections\":true,\"emojis\":[],\"fields\":[{\"name\":\"Pronouns\",\"value\":\"he/him\",\"verified_at\":null},{\"name\":\"Hobbies\",\"value\":\"Cooking/Taekwondo/Coding\",\"verified_at\":null},{\"name\":\"Languages\",\"value\":\"English
+        (native/fluent), Greek (native/learning), German (learning)\",\"verified_at\":null}]},{\"id\":\"108196042180933413\",\"username\":\"hecladus\",\"acct\":\"hecladus@mastodon.top\",\"display_name\":\"Sylvain
+        Nocquard\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-04-25T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eJe
+        pédale ici et ailleurs. Dijonno-québécois.\\u003c/p\\u003e\",\"url\":\"https://mastodon.top/@hecladus\",\"uri\":\"https://mastodon.top/users/hecladus\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/108/196/042/180/933/413/original/879d2f3042b68d9b.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/108/196/042/180/933/413/original/879d2f3042b68d9b.png\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/108/196/042/180/933/413/original/3515632383cee5c7.png\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/108/196/042/180/933/413/original/3515632383cee5c7.png\",\"followers_count\":67,\"following_count\":91,\"statuses_count\":89,\"last_status_at\":\"2023-08-01\",\"hide_collections\":false,\"moved\":{\"id\":\"110816339127132387\",\"username\":\"hecladus\",\"acct\":\"hecladus@masto.bike\",\"display_name\":\"Sylvain
+        Nocquard\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2023-08-01T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eJe
+        pédale ici et ailleurs. Dijonno-ex-québécois.\\u003c/p\\u003e\",\"url\":\"https://masto.bike/@hecladus\",\"uri\":\"https://masto.bike/users/hecladus\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/110/816/339/127/132/387/original/ca34a14f2943f7df.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/110/816/339/127/132/387/original/ca34a14f2943f7df.png\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/110/816/339/127/132/387/original/84e3c00ffd0f6c41.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/110/816/339/127/132/387/original/84e3c00ffd0f6c41.jpg\",\"followers_count\":129,\"following_count\":136,\"statuses_count\":65,\"last_status_at\":\"2025-06-03\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Les
+        réseaux\",\"value\":\"linkfly.to/snocquard\",\"verified_at\":null},{\"name\":\"L'asso\",\"value\":\"\\u003ca
+        href=\\\"https://evad-dijon.fr/\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"
         target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003elinktr.ee/railinasah\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"108193303136524978\",\"username\":\"_ent_uth_\",\"acct\":\"_ent_uth_@mastodon.lol\",\"display_name\":\"\U0001F31FBrianna
-        Hawkins \U0001F3F3️‍⚧️\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-04-25T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eAutistic,
-        Asexual Pansexual Transgender person. Pronouns are She/Her/They/Them\\u003c/p\\u003e\\u003cp\\u003eHRT
-        since 04/16/22 16/04/22\\u003c/p\\u003e\\u003cp\\u003eI'm also learning how
-        to make games in the Godot game engine.\\u003c/p\\u003e\",\"url\":\"https://mastodon.lol/@_ent_uth_\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/108/193/303/136/524/978/original/8e68370fca1a0b66.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/108/193/303/136/524/978/original/8e68370fca1a0b66.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/108/193/303/136/524/978/original/76434a5d1250651d.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/108/193/303/136/524/978/original/76434a5d1250651d.jpg\",\"followers_count\":7,\"following_count\":38,\"statuses_count\":15,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"My
-        link website!\",\"value\":\"\\u003ca href=\\\"http://briannahawkins.infinityfreeapp.com/Mylinks.html\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttp://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ebriannahawkins.infinityfreeapp\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e.com/Mylinks.html\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"109299871012962426\",\"username\":\"willard\",\"acct\":\"willard@noc.social\",\"display_name\":\"\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-06T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://noc.social/@willard\",\"avatar\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"avatar_static\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"header\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"header_static\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"followers_count\":0,\"following_count\":8,\"statuses_count\":0,\"last_status_at\":null,\"emojis\":[],\"fields\":[]},{\"id\":\"109294046300699984\",\"username\":\"simkern\",\"acct\":\"simkern@writing.exchange\",\"display_name\":\"Sim
-        Kern\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-11-05T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eEnvironmental
-        journalist \\u0026amp; \\u003ca href=\\\"https://writing.exchange/tags/clifi\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eclifi\\u003c/span\\u003e\\u003c/a\\u003e
-        author of DEPART, DEPART! REAL SUGAR IS HARD TO FIND, \\u0026amp; SEEDS FOR
-        THE SWARM. Forthcoming: THE FREE PEOPLE’S VILLAGE (‘23, Levine Querido). \\u2029\\u003ca
-        href=\\\"https://writing.exchange/tags/Jewish\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eJewish\\u003c/span\\u003e\\u003c/a\\u003e,
-        \\u003ca href=\\\"https://writing.exchange/tags/anarchist\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eanarchist\\u003c/span\\u003e\\u003c/a\\u003e,
-        \\u003ca href=\\\"https://writing.exchange/tags/trans\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003etrans\\u003c/span\\u003e\\u003c/a\\u003e,
-        \\u003ca href=\\\"https://writing.exchange/tags/houston\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ehouston\\u003c/span\\u003e\\u003c/a\\u003e,
-        \\u003ca href=\\\"https://writing.exchange/tags/gulfcoast\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003egulfcoast\\u003c/span\\u003e\\u003c/a\\u003e,
-        they/them, \\u003ca href=\\\"https://writing.exchange/tags/freepalestine\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003efreepalestine\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://writing.exchange/tags/landback\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003elandback\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u2028\\u2028Rep: Rebecca Podos @ Rees Literary\\u2029Twitter: @sim_kern,
-        tiktok: simkern\\u003c/p\\u003e\",\"url\":\"https://writing.exchange/@simkern\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/294/046/300/699/984/original/46129acec086c7b7.jpeg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/294/046/300/699/984/original/46129acec086c7b7.jpeg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/294/046/300/699/984/original/c08d938690e6fa5c.jpeg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/294/046/300/699/984/original/c08d938690e6fa5c.jpeg\",\"followers_count\":104,\"following_count\":81,\"statuses_count\":29,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[]},{\"id\":\"109255277066401684\",\"username\":\"dot\",\"acct\":\"dot@noc.social\",\"display_name\":\".\",\"locked\":true,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-10-29T00:00:00.000Z\",\"note\":\"\\u003cp\\u003ethere's
-        a lot of beauty in ordinary things. isn't that kind of the point ?\\u003c/p\\u003e\",\"url\":\"https://noc.social/@dot\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/255/277/066/401/684/original/8171df225465780d.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/255/277/066/401/684/original/8171df225465780d.png\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/255/277/066/401/684/original/331f4d8918c0ae06.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/255/277/066/401/684/original/331f4d8918c0ae06.jpg\",\"followers_count\":3,\"following_count\":11,\"statuses_count\":33,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[]},{\"id\":\"109292464788040906\",\"username\":\"metavida\",\"acct\":\"metavida@hachyderm.io\",\"display_name\":\"metavida\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-05T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://hachyderm.io/@metavida\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/292/464/788/040/906/original/e2616ff456f5482b.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/292/464/788/040/906/original/e2616ff456f5482b.png\",\"header\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"header_static\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"followers_count\":0,\"following_count\":12,\"statuses_count\":5,\"last_status_at\":\"2022-11-07\",\"emojis\":[],\"fields\":[]},{\"id\":\"109295415495732705\",\"username\":\"chandanhegde\",\"acct\":\"chandanhegde@fosstodon.org\",\"display_name\":\"old_celestial\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-06T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://fosstodon.org/@chandanhegde\",\"avatar\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"avatar_static\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/295/415/495/732/705/original/bc71e1c629c54be1.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/295/415/495/732/705/original/bc71e1c629c54be1.jpg\",\"followers_count\":0,\"following_count\":11,\"statuses_count\":13,\"last_status_at\":\"2022-11-07\",\"emojis\":[],\"fields\":[]},{\"id\":\"109308124374779322\",\"username\":\"nimishg\",\"acct\":\"nimishg@fosstodon.org\",\"display_name\":\"Nimish
-        G\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-11-08T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eBrand-new
-        to the Fediverse. Active in the intersection of Tech, Open Source, Governance,
-        Leadership, Society and Culture.\\u003c/p\\u003e\\u003cp\\u003eI'm especially
-        interested in local affairs here in Sweden/the Nordics.\\u003c/p\\u003e\\u003cp\\u003eI
-        also like writing SciFi and talking Star Trek :)\\u003c/p\\u003e\",\"url\":\"https://fosstodon.org/@nimishg\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/308/124/374/779/322/original/fa68f4cf5bc4d864.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/308/124/374/779/322/original/fa68f4cf5bc4d864.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/308/124/374/779/322/original/7d5e46fdb16d1ccd.jpeg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/308/124/374/779/322/original/7d5e46fdb16d1ccd.jpeg\",\"followers_count\":30,\"following_count\":72,\"statuses_count\":12,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"github\",\"value\":\"\\u003ca
-        href=\\\"https://github.com/nimishgautam\\\" rel=\\\"nofollow noopener noreferrer\\\"
+        class=\\\"\\\"\\u003eevad-dijon.fr/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Pronom\",\"value\":\"il\",\"verified_at\":null}]},\"emojis\":[],\"fields\":[]},{\"id\":\"109317458784809528\",\"username\":\"Martin_y\",\"acct\":\"Martin_y@mastodonapp.uk\",\"display_name\":\"Martin_y\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-09T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://mastodonapp.uk/@Martin_y\",\"uri\":\"https://mastodonapp.uk/users/Martin_y\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/317/458/784/809/528/original/6061026740e5e72d.jpeg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/317/458/784/809/528/original/6061026740e5e72d.jpeg\",\"header\":\"https://mastodon.social/headers/original/missing.png\",\"header_static\":\"https://mastodon.social/headers/original/missing.png\",\"followers_count\":15,\"following_count\":33,\"statuses_count\":141,\"last_status_at\":\"2025-07-08\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},{\"id\":\"109346346438154175\",\"username\":\"ChrisWarwick\",\"acct\":\"ChrisWarwick@mas.to\",\"display_name\":\"Chris
+        Warwick\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-09T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eOld-time
+        tech-nerd (retired). Woke AF.\\u003c/p\\u003e\\u003cp\\u003eInto \\u003ca
+        href=\\\"https://mas.to/tags/Green\\\" class=\\\"mention hashtag\\\" rel=\\\"nofollow
+        noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eGreen\\u003c/span\\u003e\\u003c/a\\u003e
+        Energy\\u003cbr\\u003e\\u003ca href=\\\"https://mas.to/tags/HomeAutomation\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eHomeAutomation\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr\\u003e\\u003ca
+        href=\\\"https://mas.to/tags/HomeAssistant\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eHomeAssistant\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr\\u003eNHS
+        \U0001F499\\u003cbr\\u003eNon-violent Civil Resistance\\u003cbr\\u003eExtinction
+        Rebellion \\u003ca href=\\\"https://mas.to/tags/XR\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eXR\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003eBorder
+        Collie \U0001F970\U0001F60A\\u003c/p\\u003e\\u003cp\\u003eICL, Teletype, 1973\\u003cbr\\u003eIBM
+        4341 VM/370 Operator, 1979\\u003cbr\\u003eComp Sci Degree, 1985\\u003c/p\\u003e\\u003cp\\u003eHeroes:\\u003cbr\\u003eRoger
+        Penrose\\u003cbr\\u003eCarl Sagan\\u003cbr\\u003eRosa Parks\\u003cbr\\u003eGeorge
+        Monbiot\\u003cbr\\u003eRichard Feynman\\u003cbr\\u003eMike Cowlishaw\\u003cbr\\u003eDavid
+        JC MacKay\\u003cbr\\u003eDavid Attenborough\\u003cbr\\u003eChris Packham\\u003cbr\\u003eCaroline
+        Lucas\\u003cbr\\u003eDouglas Adams\\u003cbr\\u003eTerry Pratchett\\u003cbr\\u003eKernigan/Ritchie\\u003c/p\\u003e\\u003cp\\u003eStop
+        Burning Stuff!\\u003c/p\\u003e\",\"url\":\"https://mas.to/@ChrisWarwick\",\"uri\":\"https://mas.to/users/ChrisWarwick\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/346/346/438/154/175/original/7a9eea9d013f6e78.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/346/346/438/154/175/original/7a9eea9d013f6e78.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/346/346/438/154/175/original/6ae680a31549788a.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/346/346/438/154/175/original/6ae680a31549788a.jpg\",\"followers_count\":321,\"following_count\":683,\"statuses_count\":1317,\"last_status_at\":\"2025-07-14\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Pronouns\",\"value\":\"He/Him\",\"verified_at\":null},{\"name\":\"Location\",\"value\":\"Harwell,
+        Oxfordshire, UK\",\"verified_at\":null}]},{\"id\":\"109325449943553220\",\"username\":\"baob\",\"acct\":\"baob@mas.to\",\"display_name\":\"Andy
+        Roberts\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-09T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eLikes:
+        Making tunes on \\u003ca href=\\\"https://mas.to/tags/groovebox\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003egroovebox\\u003c/span\\u003e\\u003c/a\\u003e
+        or \\u003ca href=\\\"https://mas.to/tags/fretlessbass\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003efretlessbass\\u003c/span\\u003e\\u003c/a\\u003e,
+        programming in \\u003ca href=\\\"https://mas.to/tags/ruby\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eruby\\u003c/span\\u003e\\u003c/a\\u003e,
+        music with a groove. Profoundly disturbed by the state of \\u003ca href=\\\"https://mas.to/tags/ukpolitics\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eukpolitics\\u003c/span\\u003e\\u003c/a\\u003e.
+        \ Coder on \\u003ca href=\\\"https://www.swapmyvote.uk\\\" rel=\\\"nofollow
+        noopener\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003eswapmyvote.uk\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://mas.to/@baob\",\"uri\":\"https://mas.to/users/baob\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/325/449/943/553/220/original/ac6694013e908d13.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/325/449/943/553/220/original/ac6694013e908d13.jpg\",\"header\":\"https://mastodon.social/headers/original/missing.png\",\"header_static\":\"https://mastodon.social/headers/original/missing.png\",\"followers_count\":97,\"following_count\":82,\"statuses_count\":322,\"last_status_at\":\"2023-01-16\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Twitter\",\"value\":\"\\u003ca
+        href=\\\"https://twitter.com/baob\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003etwitter.com/baob\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Swapmyvote.uk\",\"value\":\"\\u003ca
+        href=\\\"https://www.swapmyvote.uk\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003eswapmyvote.uk\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Notes
+        For an Essay: UK Reform\",\"value\":\"\\u003ca href=\\\"https://notesforukreform.herokuapp.com\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003enotesforukreform.herokuapp.com\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2023-08-04T04:58:28.011+00:00\"},{\"name\":\"The
+        rest of the links\",\"value\":\"\\u003ca href=\\\"https://linktr.ee/baob55\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003elinktr.ee/baob55\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"109345750283939915\",\"username\":\"Micus1\",\"acct\":\"Micus1@awscommunity.social\",\"display_name\":\"Micus1\",\"locked\":true,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-05T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://awscommunity.social/@Micus1\",\"uri\":\"https://awscommunity.social/users/Micus1\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/345/750/283/939/915/original/c19698b4ad97403a.jpeg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/345/750/283/939/915/original/c19698b4ad97403a.jpeg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/345/750/283/939/915/original/8fed9512e4d8c35b.jpeg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/345/750/283/939/915/original/8fed9512e4d8c35b.jpeg\",\"followers_count\":1,\"following_count\":4,\"statuses_count\":5,\"last_status_at\":\"2022-11-15\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"This
+        is the About Section I guess\",\"value\":\"How does it work? Many rows and
+        many tables I guess. Fill the space and my life shall be fulfilled.\",\"verified_at\":null}]},{\"id\":\"806620\",\"username\":\"gabriel\",\"acct\":\"gabriel@jasette.facil.services\",\"display_name\":\"Gab\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2019-05-01T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\U0001F596\\u003c/p\\u003e\",\"url\":\"https://jasette.facil.services/@gabriel\",\"uri\":\"https://jasette.facil.services/users/gabriel\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/000/806/620/original/b52409f6f79ed22b.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/000/806/620/original/b52409f6f79ed22b.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/000/806/620/original/4a86ebc8399c5e2a.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/000/806/620/original/4a86ebc8399c5e2a.jpg\",\"followers_count\":32,\"following_count\":83,\"statuses_count\":71,\"last_status_at\":\"2022-12-22\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},{\"id\":\"109345300138749904\",\"username\":\"LaBordeleau\",\"acct\":\"LaBordeleau@jasette.facil.services\",\"display_name\":\"Madame
+        Bescuit\",\"locked\":true,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-14T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eQuébec,
+        Canada. Fixette sur les chats, l'audio et la justice sociale. \\u003ca href=\\\"https://jasette.facil.services/tags/FediQC\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eFediQC\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://jasette.facil.services/@LaBordeleau\",\"uri\":\"https://jasette.facil.services/users/LaBordeleau\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/345/300/138/749/904/original/feeeec54161cd7e9.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/345/300/138/749/904/original/feeeec54161cd7e9.jpg\",\"header\":\"https://mastodon.social/headers/original/missing.png\",\"header_static\":\"https://mastodon.social/headers/original/missing.png\",\"followers_count\":99,\"following_count\":287,\"statuses_count\":360,\"last_status_at\":\"2025-07-16\",\"hide_collections\":true,\"emojis\":[],\"fields\":[]},{\"id\":\"109160279373862397\",\"username\":\"brindy\",\"acct\":\"brindy@social.tabletoptavern.online\",\"display_name\":\"Brindy
+        :verifiedbynurgle:\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-10-04T00:00:00.000Z\",\"note\":\"\\u003cp\\u003ecis-male
+        (he/him) \U0001F468 \\u2028Software Engineer (25yrs) \U0001F913 \\u2028iOS,
+        macOS, Swift, SwiftUI, AppKit, UIKit engineer at DuckDuckGo \U0001F34F \U0001F986
+        \\u2028Aspiring Musician  \U0001F3B8\U0001F3A4 \\u2028Dunoon, Scotland \U0001F3F4\U000E0067\U000E0062\U000E0073\U000E0063\U000E0074\U000E007F\\u003c/p\\u003e\\u003cp\\u003e--\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://social.tabletoptavern.online/tags/musician\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003emusician\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tabletoptavern.online/tags/guitar\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eguitar\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tabletoptavern.online/tags/rock\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003erock\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tabletoptavern.online/tags/metal\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003emetal\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tabletoptavern.online/tags/tunes\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003etunes\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tabletoptavern.online/tags/ios\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eios\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tabletoptavern.online/tags/macos\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003emacos\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tabletoptavern.online/tags/swift\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eswift\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tabletoptavern.online/tags/swiftui\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eswiftui\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tabletoptavern.online/tags/apple\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eapple\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tabletoptavern.online/tags/duckduckgo\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003educkduckgo\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tabletoptavern.online/tags/tabletop\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003etabletop\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tabletoptavern.online/tags/boardgames\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eboardgames\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tabletoptavern.online/tags/ttrpg\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ettrpg\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tabletoptavern.online/tags/ps5\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eps5\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tabletoptavern.online/tags/steamdeck\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003esteamdeck\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tabletoptavern.online/tags/gaming\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003egaming\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tabletoptavern.online/tags/dunoon\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003edunoon\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://social.tabletoptavern.online/tags/scotland\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003escotland\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e--\\u003c/p\\u003e\\u003cp\\u003eUsed
+        to be @brindy@twitter.com (Feb 2007 - Nov 2022)\\u003c/p\\u003e\",\"url\":\"https://social.tabletoptavern.online/@brindy\",\"uri\":\"https://social.tabletoptavern.online/users/brindy\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/160/279/373/862/397/original/0fedffa43c28ad9f.jpeg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/160/279/373/862/397/original/0fedffa43c28ad9f.jpeg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/160/279/373/862/397/original/f4db643454015f5c.png\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/160/279/373/862/397/original/f4db643454015f5c.png\",\"followers_count\":23,\"following_count\":453,\"statuses_count\":605,\"last_status_at\":\"2023-07-04\",\"hide_collections\":false,\"moved\":{\"id\":\"110669600381370719\",\"username\":\"brindy\",\"acct\":\"brindy@mastodon.scot\",\"display_name\":\"Brindy\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2023-07-06T00:00:00.000Z\",\"note\":\"\\u003cp\\u003ecis-male
+        (he/him) \U0001F468 \\u2028Software Engineer (28yrs) \U0001F913 \\u2028Apple
+        Platforms engineer at US based privacy co \U0001F34F \U0001F986\U0001F986\U0001F410
+        \\u2028Song Writer \\u0026amp; Music Producer  \U0001F3B8\U0001F3A4 \\u2028Falkirk,
+        Scotland \U0001F3F4\U000E0067\U000E0062\U000E0073\U000E0063\U000E0074\U000E007F\\u2028--\\u2028\\u003ca
+        href=\\\"https://chrisbrind.rocks/\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"
         target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003egithub.com/nimishgautam\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"109306161335549505\",\"username\":\"geostokes\",\"acct\":\"geostokes@heylisten.social\",\"display_name\":\"Geo
-        Stokes\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-07T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\U0001F9D1‍\U0001F4BB|
-        \U0001F9D7 | \U0001F6B4 | \U0001F3AE | \U0001F408‍⬛ | \U0001F415 | \U0001F951
-        | (he/him)\\u003c/p\\u003e\\u003cp\\u003eCHO \\u0026amp; Lead Software Engineer
-        @ \\u003ca href=\\\"https://slashpine.tech\\\" rel=\\\"nofollow noopener noreferrer\\\"
+        class=\\\"\\\"\\u003echrisbrind.rocks/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u2028--\\u2029\\u003ca
+        href=\\\"https://mastodon.scot/tags/musician\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003emusician\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.scot/tags/guitar\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eguitar\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.scot/tags/rock\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003erock\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.scot/tags/metal\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003emetal\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.scot/tags/tunes\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003etunes\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.scot/tags/ios\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eios\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.scot/tags/macos\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003emacos\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.scot/tags/swift\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eswift\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.scot/tags/swiftui\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eswiftui\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.scot/tags/apple\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eapple\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.scot/tags/duckduckgo\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003educkduckgo\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.scot/tags/tabletop\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003etabletop\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.scot/tags/boardgames\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eboardgames\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.scot/tags/ttrpg\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ettrpg\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.scot/tags/ps5\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eps5\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.scot/tags/steamdeck\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003esteamdeck\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.scot/tags/gaming\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003egaming\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.scot/tags/dunoon\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003edunoon\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.scot/tags/scotland\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003escotland\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.scot/tags/blm\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eblm\\u003c/span\\u003e\\u003c/a\\u003e\\u2028--
+        \\u2029Used to be @brindy@twitter.com (Feb 2007 - Nov 2022)\\u003c/p\\u003e\",\"url\":\"https://mastodon.scot/@brindy\",\"uri\":\"https://mastodon.scot/users/brindy\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/110/669/600/381/370/719/original/0113fe50315339ae.jpeg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/110/669/600/381/370/719/original/0113fe50315339ae.jpeg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/110/669/600/381/370/719/original/e3a0ce11896073ea.png\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/110/669/600/381/370/719/original/e3a0ce11896073ea.png\",\"followers_count\":574,\"following_count\":612,\"statuses_count\":980,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Music\",\"value\":\"\\u003ca
+        href=\\\"https://chrisbrind.rocks\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003echrisbrind.rocks\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2025-07-16T19:03:16.572+00:00\"},{\"name\":\"Twitch\",\"value\":\"\\u003ca
+        href=\\\"https://www.twitch.tv/brindy666/about\\\" rel=\\\"nofollow noopener\\\"
+        translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003etwitch.tv/brindy666/about\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"GitHub\",\"value\":\"\\u003ca
+        href=\\\"https://github.com/brindy\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003egithub.com/brindy\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2025-07-16T19:03:17.111+00:00\"}]},\"emojis\":[{\"shortcode\":\"verifiedbynurgle\",\"url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/470/258/original/b433a54afca844ff.png\",\"static_url\":\"https://files.mastodon.social/cache/custom_emojis/images/000/470/258/static/b433a54afca844ff.png\",\"visible_in_picker\":true}],\"fields\":[{\"name\":\"WEBSITE\",\"value\":\"\\u003ca
+        href=\\\"https://brindy.org.uk\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003ebrindy.org.uk\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"109321699419487185\",\"username\":\"BrawCorbie\",\"acct\":\"BrawCorbie@mastodon.scot\",\"display_name\":\"Braw
+        Corbie\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-10T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://mastodon.scot/@BrawCorbie\",\"uri\":\"https://mastodon.scot/users/BrawCorbie\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/321/699/419/487/185/original/992dc6b8e260e738.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/321/699/419/487/185/original/992dc6b8e260e738.jpg\",\"header\":\"https://mastodon.social/headers/original/missing.png\",\"header_static\":\"https://mastodon.social/headers/original/missing.png\",\"followers_count\":9,\"following_count\":28,\"statuses_count\":32,\"last_status_at\":\"2022-11-26\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},{\"id\":\"109312870344134144\",\"username\":\"KatSuze\",\"acct\":\"KatSuze\",\"display_name\":\"Kat\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-09T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\U0001F3F4\U000E0067\U000E0062\U000E0073\U000E0063\U000E0074\U000E007F\\u003cbr
+        /\\u003e\\u003ca href=\\\"https://mastodon.social/tags/Scotland\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eScotland\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@KatSuze\",\"uri\":\"https://mastodon.social/users/KatSuze\",\"avatar\":\"https://files.mastodon.social/accounts/avatars/109/312/870/344/134/144/original/dfa7172dc3a2b5da.jpg\",\"avatar_static\":\"https://files.mastodon.social/accounts/avatars/109/312/870/344/134/144/original/dfa7172dc3a2b5da.jpg\",\"header\":\"https://files.mastodon.social/accounts/headers/109/312/870/344/134/144/original/8569e08a47e45db6.jpg\",\"header_static\":\"https://files.mastodon.social/accounts/headers/109/312/870/344/134/144/original/8569e08a47e45db6.jpg\",\"followers_count\":111,\"following_count\":165,\"statuses_count\":30,\"last_status_at\":\"2022-11-27\",\"hide_collections\":false,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"LIFE\",\"value\":\"\\u003ca
+        href=\\\"https://www.instagram.com/thestoryofkay/\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003einstagram.com/thestoryofkay/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"HOME\",\"value\":\"\\u003ca
+        href=\\\"https://www.instagram.com/about69sqm/\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003einstagram.com/about69sqm/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"109326785244314269\",\"username\":\"Spulzie\",\"acct\":\"Spulzie@mastodon.scot\",\"display_name\":\"Mosstrooper\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-11T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\U0001F3F4\U000E0067\U000E0062\U000E0073\U000E0063\U000E0074\U000E007F\U0001F44A\U0001F4A5\U0001F3F4\U000E0067\U000E0062\U000E0073\U000E0063\U000E0074\U000E007F
+        Part artist, part art gardener, part Lad o' Pairts. Sober AF.\\u003c/p\\u003e\",\"url\":\"https://mastodon.scot/@Spulzie\",\"uri\":\"https://mastodon.scot/users/Spulzie\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/326/785/244/314/269/original/76b3e01501bb8369.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/326/785/244/314/269/original/76b3e01501bb8369.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/326/785/244/314/269/original/6411c06063e84c36.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/326/785/244/314/269/original/6411c06063e84c36.jpg\",\"followers_count\":159,\"following_count\":269,\"statuses_count\":740,\"last_status_at\":\"2022-12-30\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},{\"id\":\"109302838480153677\",\"username\":\"riggs7sct\",\"acct\":\"riggs7sct@mastodon.scot\",\"display_name\":\"Murdo
+        \U0001F3F4\U000E0067\U000E0062\U000E0073\U000E0063\U000E0074\U000E007F\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2022-11-07T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003ca
+        href=\\\"https://mastodon.scot/tags/Caffeine\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eCaffeine\\u003c/span\\u003e\\u003c/a\\u003e
+        fuelled, \\u003ca href=\\\"https://mastodon.scot/tags/ProIndy\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eProIndy\\u003c/span\\u003e\\u003c/a\\u003e,
+        GenX Highlander living in \\u003ca href=\\\"https://mastodon.scot/tags/Dundee\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eDundee\\u003c/span\\u003e\\u003c/a\\u003e,
+        sometimes \\u003ca href=\\\"https://mastodon.scot/tags/sarcastic\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003esarcastic\\u003c/span\\u003e\\u003c/a\\u003e,
+        occasional \\u003ca href=\\\"https://mastodon.scot/tags/gamer\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003egamer\\u003c/span\\u003e\\u003c/a\\u003e.
+        \\u003c/p\\u003e\\u003cp\\u003eI have a very low level of recognition, which
+        is fine by me.\\u003c/p\\u003e\\u003cp\\u003e\\u003ca href=\\\"https://mastodon.scot/tags/YNWA\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eYNWA\\u003c/span\\u003e\\u003c/a\\u003e
+        | \\u003ca href=\\\"https://mastodon.scot/tags/LFC\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eLFC\\u003c/span\\u003e\\u003c/a\\u003e
+        | \\u003ca href=\\\"https://mastodon.scot/tags/JFT97\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eJFT97\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://mastodon.scot/tags/DetestTheTories\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eDetestTheTories\\u003c/span\\u003e\\u003c/a\\u003e
+        | \\u003ca href=\\\"https://mastodon.scot/tags/GTTO\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eGTTO\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.scot/tags/DetestLabour\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eDetestLabour\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.scot/tags/DetestTheLondonGovernment\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eDetestTheLondonGovernment\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr\\u003e\\u003ca
+        href=\\\"https://mastodon.scot/tags/ScottishIndependence\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eScottishIndependence\\u003c/span\\u003e\\u003c/a\\u003e
+        | \\u003ca href=\\\"https://mastodon.scot/tags/SCRM\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eSCRM\\u003c/span\\u003e\\u003c/a\\u003e
+        | \\u003ca href=\\\"https://mastodon.scot/tags/FBSI\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eFBSI\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://mastodon.scot/@riggs7sct\",\"uri\":\"https://mastodon.scot/users/riggs7sct\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/302/838/480/153/677/original/eae8431052a80e14.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/302/838/480/153/677/original/eae8431052a80e14.png\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/302/838/480/153/677/original/e9f0b5a7a7f16b41.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/302/838/480/153/677/original/e9f0b5a7a7f16b41.jpg\",\"followers_count\":338,\"following_count\":344,\"statuses_count\":4080,\"last_status_at\":\"2025-07-17\",\"hide_collections\":true,\"emojis\":[],\"fields\":[{\"name\":\"LT\",\"value\":\"\\u003ca
+        href=\\\"https://linktr.ee/riggs7sco\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"
         target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003eslashpine.tech\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://heylisten.social/@geostokes\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/306/161/335/549/505/original/58f4ec626fb49415.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/306/161/335/549/505/original/58f4ec626fb49415.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/306/161/335/549/505/original/0a246364da8c4096.jpeg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/306/161/335/549/505/original/0a246364da8c4096.jpeg\",\"followers_count\":4,\"following_count\":10,\"statuses_count\":7,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[]},{\"id\":\"109264567415076089\",\"username\":\"Zelfir\",\"acct\":\"Zelfir@noc.social\",\"display_name\":\"\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-10-31T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://noc.social/@Zelfir\",\"avatar\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"avatar_static\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"header\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"header_static\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"followers_count\":0,\"following_count\":10,\"statuses_count\":6,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[]},{\"id\":\"109308404999331935\",\"username\":\"Ecartsonis\",\"acct\":\"Ecartsonis@mas.to\",\"display_name\":\"Ellen
-        Cartsonis\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-08T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://mas.to/@Ecartsonis\",\"avatar\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"avatar_static\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"header\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"header_static\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"followers_count\":1,\"following_count\":18,\"statuses_count\":4,\"last_status_at\":null,\"emojis\":[],\"fields\":[]},{\"id\":\"107827298102473759\",\"username\":\"progo\",\"acct\":\"progo\",\"display_name\":\"Enrico\",\"locked\":false,\"bot\":false,\"discoverable\":null,\"group\":false,\"created_at\":\"2022-02-19T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eBackend
-        Developer \U0001F9D1‍\U0001F4BB, Tech Enthusiast \U0001F916\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@progo\",\"avatar\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"avatar_static\":\"https://static-cdn.mastodon.social/avatars/original/missing.png\",\"header\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"header_static\":\"https://static-cdn.mastodon.social/headers/original/missing.png\",\"followers_count\":2,\"following_count\":56,\"statuses_count\":6,\"last_status_at\":\"2022-09-29\",\"noindex\":false,\"emojis\":[],\"fields\":[]},{\"id\":\"109285834303539972\",\"username\":\"amardeepmsingh\",\"acct\":\"amardeepmsingh@mas.to\",\"display_name\":\"Amardeep
-        Singh\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-04T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eHe/his.
-        Professor of English and Director of Graduate Studies, Lehigh University.
-        Postcolonial | Modernism | African American lit. | Digital Humanities\\u003c/p\\u003e\",\"url\":\"https://mas.to/@amardeepmsingh\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/285/834/303/539/972/original/ea5a2dbf575cc4bb.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/285/834/303/539/972/original/ea5a2dbf575cc4bb.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/285/834/303/539/972/original/7a9bc5c3e57345cc.png\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/285/834/303/539/972/original/7a9bc5c3e57345cc.png\",\"followers_count\":221,\"following_count\":195,\"statuses_count\":37,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"Blog
-        + Digital Projects\",\"value\":\"\\u003ca href=\\\"https://www.electrostani.com\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003eelectrostani.com\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Teaching\",\"value\":\"\\u003ca
-        href=\\\"https://www.lehigh.edu/~amsp/Courses-Taught-Amardeep-Singh.htm\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003elehigh.edu/~amsp/Courses-Taugh\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003et-Amardeep-Singh.htm\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"My
-        2018 Book\",\"value\":\"\\u003ca href=\\\"https://www.amazon.com/Films-Mira-Nair-Diaspora-Verite-ebook/dp/B07GL2R8V7/ref=sr_1_1?crid=I9K8J86J3QAA\\u0026amp;keywords=amardeep+singh+mira+nair\\u0026amp;qid=1667851834\\u0026amp;sprefix=amardeep+singh+mira+nair%2Caps%2C86\\u0026amp;sr=8-1\\u0026amp;ufe=app_do%3Aamzn1.fos.006c50ae-5d4c-4777-9bc0-4513\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003eamazon.com/Films-Mira-Nair-Dia\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003espora-Verite-ebook/dp/B07GL2R8V7/ref=sr_1_1?crid=I9K8J86J3QAA\\u0026amp;keywords=amardeep+singh+mira+nair\\u0026amp;qid=1667851834\\u0026amp;sprefix=amardeep+singh+mira+nair%2Caps%2C86\\u0026amp;sr=8-1\\u0026amp;ufe=app_do%3Aamzn1.fos.006c50ae-5d4c-4777-9bc0-4513\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"1352982\",\"username\":\"firestorm\",\"acct\":\"firestorm@kolektiva.social\",\"display_name\":\"Firestorm
-        Books \\u0026 Coffee\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2021-01-05T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eQueer
-        feminist collective in Asheville, NC, operating a bookstore co-op \\u0026amp;
-        social movement space since 2008 on Cherokee/Tsalagi land.\\u003cbr\\u003eⒶ
-        Ⓔ Ⓥ \\u003ca href=\\\"https://kolektiva.social/tags/firestormcoop\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003efirestormcoop\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://kolektiva.social/@firestorm\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/001/352/982/original/778bec06bce7bc97.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/001/352/982/original/778bec06bce7bc97.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/001/352/982/original/f574436f1aa47852.jpeg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/001/352/982/original/f574436f1aa47852.jpeg\",\"followers_count\":551,\"following_count\":62,\"statuses_count\":103,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"Website\",\"value\":\"\\u003ca
-        href=\\\"https://firestorm.coop\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003efirestorm.coop\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"109237888284115537\",\"username\":\"afreeparticle\",\"acct\":\"afreeparticle\",\"display_name\":\"Michael
-        Freeman\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-10-27T00:00:00.000Z\",\"note\":\"\\u003cp\\u003ePhysics
-        Teacher at Somerville High School. He/him. \\u2028\\u003ca href=\\\"https://mastodon.social/tags/ITeachPhysics\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eITeachPhysics\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u2028I make physics simulations and other resources on www.afreeparticle.com\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@afreeparticle\",\"avatar\":\"https://files.mastodon.social/accounts/avatars/109/237/888/284/115/537/original/f55a324b9aa401ee.png\",\"avatar_static\":\"https://files.mastodon.social/accounts/avatars/109/237/888/284/115/537/original/f55a324b9aa401ee.png\",\"header\":\"https://files.mastodon.social/accounts/headers/109/237/888/284/115/537/original/bf8e3ceaebbeb303.jpeg\",\"header_static\":\"https://files.mastodon.social/accounts/headers/109/237/888/284/115/537/original/bf8e3ceaebbeb303.jpeg\",\"followers_count\":51,\"following_count\":79,\"statuses_count\":45,\"last_status_at\":\"2022-11-08\",\"noindex\":false,\"emojis\":[],\"fields\":[{\"name\":\"afreeparticle.com\",\"value\":\"\\u003ca
-        href=\\\"https://www.afreeparticle.com\\\" target=\\\"_blank\\\" rel=\\\"nofollow
-        noopener noreferrer me\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003eafreeparticle.com\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]}]"
-  recorded_at: 2022-11-08 15:44:15 GMT
-  recorded_with: vcr/1.1.0, webmockr/0.8.2
+        class=\\\"\\\"\\u003elinktr.ee/riggs7sco\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"LFM\",\"value\":\"\\u003ca
+        href=\\\"https://www.last.fm/user/docr2k3\\\" rel=\\\"nofollow noopener\\\"
+        translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003elast.fm/user/docr2k3\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},{\"id\":\"109319084657975269\",\"username\":\"TeeferTiger\",\"acct\":\"TeeferTiger@mastodonapp.uk\",\"display_name\":\"TeeferTiger\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-08T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://mastodonapp.uk/@TeeferTiger\",\"uri\":\"https://mastodonapp.uk/users/TeeferTiger\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/319/084/657/975/269/original/c6aaaf44ae30cf9d.jpg\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/319/084/657/975/269/original/c6aaaf44ae30cf9d.jpg\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/319/084/657/975/269/original/73042403b44343e2.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/319/084/657/975/269/original/73042403b44343e2.jpg\",\"followers_count\":25,\"following_count\":41,\"statuses_count\":64,\"last_status_at\":\"2022-12-06\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},{\"id\":\"108136893439407767\",\"username\":\"nixnada\",\"acct\":\"nixnada@mastodon.art\",\"display_name\":\"Nicholas
+        Nada ニコラスナダ\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2022-04-15T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eAvatar:
+        a scratchboard drawing of a skull.\\u003c/p\\u003e\\u003cp\\u003eHeader: a
+        scratchboard portrait of Billy Connolly.\\u003c/p\\u003e\\u003cp\\u003eI'm
+        quite into doing scratchboard, you see.\\u003c/p\\u003e\\u003cp\\u003eBio:
+        Daft boy from Glasgow, Scotland \U0001F3F4\U000E0067\U000E0062\U000E0073\U000E0063\U000E0074\U000E007F
+        .  \\u003c/p\\u003e\\u003cp\\u003eConcentrating on writing at the moment,
+        so I've not got any 'art' to show people. Please enjoy/endure my silly posts
+        in the meantime.\\u003c/p\\u003e\\u003cp\\u003e(I hope you like Doctor Who)\\u003c/p\\u003e\",\"url\":\"https://mastodon.art/@nixnada\",\"uri\":\"https://mastodon.art/users/nixnada\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/108/136/893/439/407/767/original/d7fd64d27c2844c0.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/108/136/893/439/407/767/original/d7fd64d27c2844c0.png\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/108/136/893/439/407/767/original/eab3bfc2367b16b2.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/108/136/893/439/407/767/original/eab3bfc2367b16b2.jpg\",\"followers_count\":624,\"following_count\":620,\"statuses_count\":587,\"last_status_at\":\"2025-04-08\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Pronouns\",\"value\":\"He/Him\",\"verified_at\":null},{\"name\":\"Doctor
+        Who\",\"value\":\"Ad Nauseum\",\"verified_at\":null}]},{\"id\":\"109310272543463330\",\"username\":\"rosiethomson\",\"acct\":\"rosiethomson@mastodon.scot\",\"display_name\":\"rosie
+        thomson\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-08T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eScottish
+        and proud. \\u003ca href=\\\"https://mastodon.scot/tags/ScottishIndependence\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eScottishIndependence\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://mastodon.scot/@rosiethomson\",\"uri\":\"https://mastodon.scot/users/rosiethomson\",\"avatar\":\"https://files.mastodon.social/cache/accounts/avatars/109/310/272/543/463/330/original/5ecf03a4b8d869bc.png\",\"avatar_static\":\"https://files.mastodon.social/cache/accounts/avatars/109/310/272/543/463/330/original/5ecf03a4b8d869bc.png\",\"header\":\"https://files.mastodon.social/cache/accounts/headers/109/310/272/543/463/330/original/7df2f3caab95f3a8.jpg\",\"header_static\":\"https://files.mastodon.social/cache/accounts/headers/109/310/272/543/463/330/original/7df2f3caab95f3a8.jpg\",\"followers_count\":842,\"following_count\":1621,\"statuses_count\":1189,\"last_status_at\":\"2024-04-22\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},{\"id\":\"109314533635461322\",\"username\":\"desertjul\",\"acct\":\"desertjul\",\"display_name\":\"Julia
+        Parra\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-09T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eOne
+        toot, one post, one video, one song, one story, one image, one action at a
+        time can change the world. Whatever you do, do YOU and be part of the change...\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@desertjul\",\"uri\":\"https://mastodon.social/users/desertjul\",\"avatar\":\"https://files.mastodon.social/accounts/avatars/109/314/533/635/461/322/original/70d8cca2337fa1b4.png\",\"avatar_static\":\"https://files.mastodon.social/accounts/avatars/109/314/533/635/461/322/original/70d8cca2337fa1b4.png\",\"header\":\"https://files.mastodon.social/accounts/headers/109/314/533/635/461/322/original/a49d58eb6af09fe4.jpeg\",\"header_static\":\"https://files.mastodon.social/accounts/headers/109/314/533/635/461/322/original/a49d58eb6af09fe4.jpeg\",\"followers_count\":11,\"following_count\":29,\"statuses_count\":15,\"last_status_at\":\"2022-11-20\",\"hide_collections\":false,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[]}]"
+  recorded_at: 2025-07-17 13:44:12
+recorded_with: VCR-vcr/1.7.1.93
