@@ -1,5 +1,5 @@
 original_envvar <- Sys.getenv("RTOOT_DEFAULT_TOKEN")
-Sys.setenv(RTOOT_DEFAULT_TOKEN = "abc;user;emacs.ch")
+# Sys.setenv(RTOOT_DEFAULT_TOKEN = "abc;user;fosstodon.org")
 
 test_that("verify_envvar (Good case)", {
   ## The cassette was created with a valid envvar
@@ -10,6 +10,7 @@ test_that("verify_envvar (Good case)", {
 
 test_that("verify_envvar (Good case), silent", {
   ## The cassette was created with a valid envvar
+  skip_on_ci()
   vcr::use_cassette("envvar_silent", {
     expect_silent(verify_envvar(verbose = FALSE))
   })

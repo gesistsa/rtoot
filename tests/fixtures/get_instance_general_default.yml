@@ -1,54 +1,56 @@
 http_interactions:
 - request:
-    method: get
+    method: GET
     uri: https://mastodon.hk/api/v1/instance
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 200
     headers:
-      date: Wed, 09 Nov 2022 10:29:15 GMT
+      alt-svc: h3=":443"; ma=86400
+      cache-control: max-age=300, public, stale-while-revalidate=30, stale-if-error=86400
+      cf-cache-status: DYNAMIC
+      cf-ray: 960a2c7cefbc2bb0-FRA
+      content-encoding: gzip
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
       content-type: application/json; charset=utf-8
-      x-frame-options: DENY
+      date: Thu, 17 Jul 2025 13:44:24 GMT
+      etag: W/"7802971e902174d02ea07f1bbdd2bb48"
+      nel: '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}'
+      referrer-policy: same-origin
+      report-to: '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=8ESS3JDz8IlQUWVUz3fNCYDK%2Fh6lkkATmDTN1n3wWsTBdRZ%2BGiaZUWXER%2FBLAkQ9LQYN76IqYfS7KUz7o4%2ByGiBcZ3t7iM8Z5cGA"}]}'
+      server: cloudflare
+      strict-transport-security: max-age=15552000
+      vary:
+      - Origin
+      - accept-encoding
+      x-cached: MISS
       x-content-type-options: nosniff
-      x-xss-protection: '0'
-      permissions-policy: interest-cohort=()
+      x-frame-options: DENY
       x-ratelimit-limit: '300'
       x-ratelimit-remaining: '299'
-      x-ratelimit-reset: '2022-11-09T10:30:00.603318Z'
-      cache-control: max-age=180, public
-      vary: Accept-Encoding, Origin
-      etag: W/"257a317d82e6519bbda0d420f9bbb56d"
-      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
-        ''none''; font-src ''self'' https://mastodon.hk; img-src ''self'' https: data:
-        blob: https://mastodon.hk; style-src ''self'' https://mastodon.hk ''nonce-rxxWCJFOcDKXpOQxIQO8qg=='';
-        media-src ''self'' https: data: https://mastodon.hk; frame-src ''self'' https:;
-        manifest-src ''self'' https://mastodon.hk; connect-src ''self'' data: blob:
-        https://mastodon.hk https://assets.mastodon.hk wss://mastodon.hk; script-src
-        ''self'' https://mastodon.hk; child-src ''self'' blob: https://mastodon.hk;
-        worker-src ''self'' blob: https://mastodon.hk'
-      x-request-id: e7e92bd8-a4dc-4186-89fb-9c08bdab9f72
-      x-runtime: '0.020513'
-      strict-transport-security: max-age=15552000
-      cf-cache-status: DYNAMIC
-      report-to: '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=vtTAvj%2BBAp7RKo%2F7qKc5TPvudEfm2DrUQPSm7bPki4xuOCzDcK%2BVydcf5A1DomJW4P2pvkl31Eq%2BgkcfSVYYlQZpNQi2kZmR0iKbDF%2FiCphY2DcQmMonApj5LOM1BqHVLgxSdZbZLhNewA%3D%3D"}],"group":"cf-nel","max_age":604800}'
-      nel: '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
-      server: cloudflare
-      cf-ray: 7675ddc3da185c56-FRA
-      content-encoding: br
-      alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      x-ratelimit-reset: '2025-07-17T13:45:00.939013Z'
+      x-request-id: 5df1f79c-8a09-4e55-9512-055cd0b3387e
+      x-runtime: '0.107149'
+      x-xss-protection: '0'
     body:
-      encoding: ''
-      file: no
       string: '{"uri":"mastodon.hk","title":"Mastodon.hk","short_description":"","description":"由香港人建立，鼓勵去中心化、自由和開放原碼的長毛象
-        (Mastodon) 服務。","email":"francis@ignition.hk","version":"3.5.3","urls":{"streaming_api":"wss://mastodon.hk"},"stats":{"user_count":776,"status_count":18749,"domain_count":8044},"thumbnail":"https://mastodon.hk/packs/media/images/preview-5df98290371ead9a70bc3cd4733bbfa7.jpg","languages":["zh-HK"],"registrations":true,"approval_required":false,"invites_enabled":false,"configuration":{"statuses":{"max_characters":500,"max_media_attachments":4,"characters_reserved_per_url":23},"media_attachments":{"supported_mime_types":["image/jpeg","image/png","image/gif","video/webm","video/mp4","video/quicktime","video/ogg","audio/wave","audio/wav","audio/x-wav","audio/x-pn-wave","audio/ogg","audio/vorbis","audio/mpeg","audio/mp3","audio/webm","audio/flac","audio/aac","audio/m4a","audio/x-m4a","audio/mp4","audio/3gpp","video/x-ms-asf"],"image_size_limit":10485760,"image_matrix_limit":16777216,"video_size_limit":41943040,"video_frame_rate_limit":60,"video_matrix_limit":2304000},"polls":{"max_options":4,"max_characters_per_option":50,"min_expiration":300,"max_expiration":2629746}},"contact_account":{"id":"1","username":"siuying","acct":"siuying","display_name":"小影","locked":false,"bot":false,"discoverable":true,"group":false,"created_at":"2017-04-08T00:00:00.000Z","note":"\u003cp\u003eMobile
-        and web developer\u003c/p\u003e","url":"https://mastodon.hk/@siuying","avatar":"https://assets.mastodon.hk/accounts/avatars/000/000/001/original/5352b2214fe9544d.jpg","avatar_static":"https://assets.mastodon.hk/accounts/avatars/000/000/001/original/5352b2214fe9544d.jpg","header":"https://assets.mastodon.hk/accounts/headers/000/000/001/original/5e8c6a975b4f89d3.jpeg","header_static":"https://assets.mastodon.hk/accounts/headers/000/000/001/original/5e8c6a975b4f89d3.jpeg","followers_count":550,"following_count":80,"statuses_count":461,"last_status_at":"2022-11-09","emojis":[],"fields":[]},"rules":[]}'
-  recorded_at: 2022-11-09 10:29:15 GMT
-  recorded_with: vcr/1.1.0, webmockr/0.8.2
+        (Mastodon) 服務。","email":"francis@ignition.hk","version":"4.3.4","urls":{"streaming_api":"wss://mastodon.hk"},"stats":{"user_count":1027,"status_count":61646,"domain_count":23632},"thumbnail":"https://mastodon.hk/packs/media/images/preview-6399aebd96ccf025654e2977454f168f.png","languages":["zh-HK"],"registrations":true,"approval_required":true,"invites_enabled":false,"configuration":{"accounts":{"max_featured_tags":10},"statuses":{"max_characters":500,"max_media_attachments":4,"characters_reserved_per_url":23},"media_attachments":{"supported_mime_types":["image/jpeg","image/png","image/gif","image/heic","image/heif","image/webp","image/avif","video/webm","video/mp4","video/quicktime","video/ogg","audio/wave","audio/wav","audio/x-wav","audio/x-pn-wave","audio/vnd.wave","audio/ogg","audio/vorbis","audio/mpeg","audio/mp3","audio/webm","audio/flac","audio/aac","audio/m4a","audio/x-m4a","audio/mp4","audio/3gpp","video/x-ms-asf"],"image_size_limit":16777216,"image_matrix_limit":33177600,"video_size_limit":103809024,"video_frame_rate_limit":120,"video_matrix_limit":8294400},"polls":{"max_options":4,"max_characters_per_option":50,"min_expiration":300,"max_expiration":2629746}},"contact_account":{"id":"1","username":"siuying","acct":"siuying","display_name":"Francis
+        Chong","locked":false,"bot":false,"discoverable":true,"indexable":false,"group":false,"created_at":"2017-04-08T00:00:00.000Z","note":"\u003cp\u003eiOS
+        and web developer based in London.\u003c/p\u003e","url":"https://mastodon.hk/@siuying","uri":"https://mastodon.hk/users/siuying","avatar":"https://mastodonhk.sgp1.cdn.digitaloceanspaces.com/accounts/avatars/000/000/001/original/5352b2214fe9544d.jpg","avatar_static":"https://mastodonhk.sgp1.cdn.digitaloceanspaces.com/accounts/avatars/000/000/001/original/5352b2214fe9544d.jpg","header":"https://mastodonhk.sgp1.cdn.digitaloceanspaces.com/accounts/headers/000/000/001/original/654b6bf55733dcee.jpeg","header_static":"https://mastodonhk.sgp1.cdn.digitaloceanspaces.com/accounts/headers/000/000/001/original/654b6bf55733dcee.jpeg","followers_count":809,"following_count":266,"statuses_count":4505,"last_status_at":"2025-07-17","hide_collections":true,"noindex":false,"emojis":[],"roles":[{"id":"3","name":"Owner","color":"#d783ff"}],"fields":[{"name":"Patreon","value":"\u003ca
+        href=\"https://www.patreon.com/mastodon_hk\" target=\"_blank\" rel=\"nofollow
+        noopener noreferrer me\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttps://www.\u003c/span\u003e\u003cspan
+        class=\"\"\u003epatreon.com/mastodon_hk\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":null},{"name":"Github","value":"\u003ca
+        href=\"https://github.com/siuying\" target=\"_blank\" rel=\"nofollow noopener
+        noreferrer me\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003egithub.com/siuying\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":"2022-11-13T01:57:58.358+00:00"},{"name":"Blog","value":"\u003ca
+        href=\"https://reality.hk/\" target=\"_blank\" rel=\"nofollow noopener noreferrer
+        me\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003ereality.hk/\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":"2022-11-13T01:55:40.811+00:00"}]},"rules":[{"id":"3","text":"你發佈的內容屬於你，你需要為它們負責。\r\nYou
+        own what you post and are responsible for it.","hint":""},{"id":"4","text":"請勿發佈惡意、傷害性、騷擾、歧視或非法的內容。\r\n\r\nNo
+        malicious, abusive, harassment, discriminatory, violent or illegal content.","hint":""},{"id":"5","text":"我們不保證能長期在線，或者效能流暢。請緊記備份。\r\n\r\nWe
+        cannot guarantee the availability or performance of this service.","hint":""},{"id":"6","text":"你的
+        IP 位址、活動時間、活動網址均有紀錄，以作維護本站服務用途。\r\n\r\nYour IP address, time, request URL
+        is logged on the server for maintenance purpose.","hint":""},{"id":"7","text":"伺服器守則可能會在未來進行修訂。\r\n\r\nThis
+        server rule may be modified in the future.","hint":""}]}'
+  recorded_at: 2025-07-17 13:44:24
+recorded_with: VCR-vcr/1.7.1.93

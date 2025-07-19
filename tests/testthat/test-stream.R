@@ -3,7 +3,7 @@ fake_token <- rtoot:::get_token_from_envvar(
   check_stop = FALSE
 )
 fake_token$type <- "user"
-fake_token$instance <- "emacs.ch"
+fake_token$instance <- "fosstodon.org"
 
 
 test_that("defensive", {
@@ -12,13 +12,13 @@ test_that("defensive", {
   expect_error(stream_timeline_list(anonymous = TRUE, verbose = FALSE))
   expect_error(stream_timeline_public(
     anonymous = TRUE,
-    instance = "emacs.ch",
+    instance = "fosstodon.org",
     timeout = -10,
     verbose = FALSE
   ))
   expect_error(stream_timeline_public(
     anonymous = TRUE,
-    instance = "emacs.ch",
+    instance = "fosstodon.org",
     timeout = "elon",
     verbose = FALSE
   ))

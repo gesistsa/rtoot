@@ -1,51 +1,37 @@
 http_interactions:
 - request:
-    method: get
-    uri: https://social.tchncs.de/api/v1/accounts/109281650341067731/featured_tags
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
-      Authorization: Bearer <<<MASTODON TOKEN>>>
+    method: GET
+    uri: https://fosstodon.org/api/v1/accounts/109302436954721982/featured_tags
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 200
     headers:
-      cache-control: no-store
-      content-encoding: gzip
-      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
-        ''none''; font-src ''self'' https://social.tchncs.de; img-src ''self'' https:
-        data: blob: https://social.tchncs.de; style-src ''self'' https://social.tchncs.de
-        ''nonce-+kYgVTqu109l3Pi1OoQqpw==''; media-src ''self'' https: data: https://social.tchncs.de;
-        frame-src ''self'' https:; manifest-src ''self'' https://social.tchncs.de;
-        connect-src ''self'' data: blob: https://social.tchncs.de https://f2.tchncs.de
-        wss://social.tchncs.de; script-src ''self'' https://social.tchncs.de ''unsafe-eval'';
-        child-src ''self'' blob: https://social.tchncs.de; worker-src ''self'' blob:
-        https://social.tchncs.de'
       content-type: application/json; charset=utf-8
-      date: Wed, 09 Nov 2022 09:47:40 GMT
-      etag: W/"98778948d2bac241f02b54474f4a0903"
-      permissions-policy:
-      - interest-cohort=()
-      - interest-cohort=()
       server: Mastodon
-      strict-transport-security: max-age=63072000; includeSubDomains
-      vary: Accept-Encoding, Origin
-      x-content-type-options: nosniff
       x-frame-options: DENY
-      x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '298'
-      x-ratelimit-reset: '2022-11-09T09:50:00.600048Z'
-      x-request-id: 2e952d58-24d1-418e-9164-7bc0a1bebfb5
-      x-runtime: '0.008034'
+      x-content-type-options: nosniff
       x-xss-protection: '0'
+      referrer-policy: same-origin
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '280'
+      x-ratelimit-reset: '2025-07-17T13:45:00.646321Z'
+      cache-control: private, no-store
+      etag: W/"ddcd127dc7153ddf32ef153711a11751"
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
+      x-request-id: ad2b4d53-9b77-454b-b9e4-6698c083802b
+      x-runtime: '0.007517'
+      content-encoding: gzip
+      accept-ranges: bytes
+      via: 1.1 varnish, 1.1 varnish
+      date: Thu, 17 Jul 2025 13:44:09 GMT
+      x-served-by: cache-par-lfpg1960037-PAR, cache-muc13976-MUC
+      x-cache: MISS, MISS
+      x-cache-hits: 0, 0
+      x-timer: S1752759850.630392,VS0,VE30
+      vary: Accept-Encoding, Authorization, Origin
+      strict-transport-security: max-age=300
+      alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
     body:
-      encoding: ''
-      file: no
-      string: '[]'
-  recorded_at: 2022-11-09 09:47:40 GMT
-  recorded_with: vcr/1.1.0, webmockr/0.8.2
+      string: '[{"id":"6444","name":"RStats","url":"https://fosstodon.org/@schochastics/tagged/rstats","statuses_count":"88","last_status_at":"2025-06-03"}]'
+  recorded_at: 2025-07-17 13:44:09
+recorded_with: VCR-vcr/1.7.1.93

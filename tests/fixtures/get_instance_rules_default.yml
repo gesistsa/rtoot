@@ -1,72 +1,223 @@
 http_interactions:
 - request:
-    method: get
-    uri: https://social.tchncs.de/api/v1/instance
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
+    method: GET
+    uri: https://mastodon.social/api/v1/instance
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 200
     headers:
-      cache-control: max-age=180, public
-      content-encoding: gzip
-      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
-        'none'
-      content-type: application/json; charset=utf-8
-      date: Wed, 31 May 2023 18:14:19 GMT
-      etag: W/"5e859c4875b7a94abd8220740c70afe2"
-      permissions-policy:
-      - interest-cohort=()
-      - interest-cohort=()
-      referrer-policy: same-origin
-      server: Mastodon
-      strict-transport-security: max-age=63072000; includeSubDomains
-      vary:
-      - Accept-Encoding
-      - Origin
+      x-ratelimit-reset: '2025-07-17T14:05:00.337550Z'
       x-content-type-options: nosniff
+      deprecation: '@1668384000'
+      cache-control: max-age=300, public, stale-while-revalidate=30, stale-if-error=86400
+      x-runtime: '0.013497'
+      referrer-policy: same-origin
+      x-ratelimit-remaining: '299'
+      x-request-id: 8f9726ae60f60563fe93cd8d133ea0ae
+      content-type: application/json; charset=utf-8
       x-frame-options: DENY
       x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '295'
-      x-ratelimit-reset: '2023-05-31T18:15:00.414344Z'
-      x-request-id: 111d4b2f-b10b-481c-8d34-aab84991a4f4
-      x-runtime: '0.006031'
       x-xss-protection: '0'
+      via: 1.1 varnish, 1.1 varnish
+      etag: W/"9f3175ef2d0d428218cb194ec17cc6ba"
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
+      content-encoding: gzip
+      accept-ranges: bytes
+      date: Thu, 17 Jul 2025 14:03:46 GMT
+      age: '11'
+      x-served-by: cache-fra-etou8220033-FRA, cache-fra-etou8220167-FRA
+      x-cache: MISS, HIT
+      x-cache-hits: 0, 1
+      x-timer: S1752761027.710119,VS0,VE1
+      vary: Origin, Accept-Encoding
+      strict-transport-security: max-age=31557600
+      alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+      content-length: '9312'
     body:
-      encoding: ''
-      file: no
-      string: "{\"uri\":\"social.tchncs.de\",\"title\":\"Mastodon\",\"short_description\":\"\",\"description\":\"One
-        of the first Mastodon instances, there is no specific topic we're into, just
-        enjoy your time!\",\"email\":\"milan@tchncs.de\",\"version\":\"4.1.2\",\"urls\":{\"streaming_api\":\"wss://social.tchncs.de\"},\"stats\":{\"user_count\":20612,\"status_count\":2140940,\"domain_count\":36865},\"thumbnail\":\"https://social.tchncs.de/packs/media/images/preview-6399aebd96ccf025654e2977454f168f.png\",\"languages\":[\"en\"],\"registrations\":true,\"approval_required\":false,\"invites_enabled\":true,\"configuration\":{\"accounts\":{\"max_featured_tags\":10},\"statuses\":{\"max_characters\":500,\"max_media_attachments\":4,\"characters_reserved_per_url\":23},\"media_attachments\":{\"supported_mime_types\":[\"image/jpeg\",\"image/png\",\"image/gif\",\"image/heic\",\"image/heif\",\"image/webp\",\"image/avif\",\"video/webm\",\"video/mp4\",\"video/quicktime\",\"video/ogg\",\"audio/wave\",\"audio/wav\",\"audio/x-wav\",\"audio/x-pn-wave\",\"audio/vnd.wave\",\"audio/ogg\",\"audio/vorbis\",\"audio/mpeg\",\"audio/mp3\",\"audio/webm\",\"audio/flac\",\"audio/aac\",\"audio/m4a\",\"audio/x-m4a\",\"audio/mp4\",\"audio/3gpp\",\"video/x-ms-asf\"],\"image_size_limit\":10485760,\"image_matrix_limit\":16777216,\"video_size_limit\":41943040,\"video_frame_rate_limit\":60,\"video_matrix_limit\":2304000},\"polls\":{\"max_options\":4,\"max_characters_per_option\":50,\"min_expiration\":300,\"max_expiration\":2629746}},\"contact_account\":{\"id\":\"1833\",\"username\":\"milan\",\"acct\":\"milan\",\"display_name\":\"Milan\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2017-01-26T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eOdd
-        humor and very Milan - autodidactic SysAdmin and Photodude,\\u003cbr /\\u003ealso
-        very Admin of tchncs.de and \\u003cspan class=\\\"h-card\\\"\\u003e\\u003ca
-        href=\\\"https://social.tchncs.de/@illunaminetest\\\" class=\\\"u-url mention\\\"\\u003e@\\u003cspan\\u003eillunaminetest\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e.\\u003c/p\\u003e\\u003cp\\u003e:archlinux:
-        :debian: :apple_inc: :onewheelpintxy: \U0001F463\\u003c/p\\u003e\\u003cp\\u003eIf
-        I don\\u0026#39;t answer, please ask again.\\u003c/p\\u003e\",\"url\":\"https://social.tchncs.de/@milan\",\"avatar\":\"https://f2.tchncs.de/accounts/avatars/000/001/833/original/c504474d6a70ecde.jpg\",\"avatar_static\":\"https://f2.tchncs.de/accounts/avatars/000/001/833/original/c504474d6a70ecde.jpg\",\"header\":\"https://f2.tchncs.de/accounts/headers/000/001/833/original/9d4972ba0c3addb2.jpg\",\"header_static\":\"https://f2.tchncs.de/accounts/headers/000/001/833/original/9d4972ba0c3addb2.jpg\",\"followers_count\":8080,\"following_count\":449,\"statuses_count\":28827,\"last_status_at\":\"2023-05-31\",\"noindex\":false,\"emojis\":[{\"shortcode\":\"archlinux\",\"url\":\"https://f2.tchncs.de/custom_emojis/images/000/001/244/original/c6d5301ff3b22b81.png\",\"static_url\":\"https://f2.tchncs.de/custom_emojis/images/000/001/244/static/c6d5301ff3b22b81.png\",\"visible_in_picker\":true},{\"shortcode\":\"debian\",\"url\":\"https://f2.tchncs.de/custom_emojis/images/000/001/246/original/debian.png\",\"static_url\":\"https://f2.tchncs.de/custom_emojis/images/000/001/246/static/debian.png\",\"visible_in_picker\":true},{\"shortcode\":\"apple_inc\",\"url\":\"https://f2.tchncs.de/custom_emojis/images/000/018/666/original/f3c3ecc49deb1f9a.png\",\"static_url\":\"https://f2.tchncs.de/custom_emojis/images/000/018/666/static/f3c3ecc49deb1f9a.png\",\"visible_in_picker\":true},{\"shortcode\":\"onewheelpintxy\",\"url\":\"https://f2.tchncs.de/custom_emojis/images/000/700/694/original/bca42815f4cfc75b.png\",\"static_url\":\"https://f2.tchncs.de/custom_emojis/images/000/700/694/static/bca42815f4cfc75b.png\",\"visible_in_picker\":true},{\"shortcode\":\"tchncs\",\"url\":\"https://f2.tchncs.de/custom_emojis/images/000/000/388/original/tchncs.png\",\"static_url\":\"https://f2.tchncs.de/custom_emojis/images/000/000/388/static/tchncs.png\",\"visible_in_picker\":true}],\"roles\":[{\"id\":\"3\",\"name\":\"Owner\",\"color\":\"\"}],\"fields\":[{\"name\":\"Is
-        :tchncs: alive?\",\"value\":\"\\u003ca href=\\\"https://status.tchncs.de\\\"
-        target=\\\"_blank\\\" rel=\\\"nofollow noopener noreferrer me\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003estatus.tchncs.de\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2018-10-31T08:19:08.980+00:00\"},{\"name\":\"\U0001F680
-        Donate\",\"value\":\"\\u003ca href=\\\"https://tchncs.de/donate/?utm_source=Mastodon\\u0026amp;utm_medium=Milan+social.tchncs.de\\u0026amp;utm_campaign=Bio+Links\\\"
-        target=\\\"_blank\\\" rel=\\\"nofollow noopener noreferrer me\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003etchncs.de/donate/?utm_source=M\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003eastodon\\u0026amp;utm_medium=Milan+social.tchncs.de\\u0026amp;utm_campaign=Bio+Links\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2023-03-07T08:41:25.789+00:00\"},{\"name\":\"\U0001F920Hire
-        me\",\"value\":\"\\u003ca href=\\\"https://milan-ihl.de/?utm_source=Mastodon\\u0026amp;utm_medium=Milan+social.tchncs.de\\u0026amp;utm_campaign=Bio+Links\\\"
-        target=\\\"_blank\\\" rel=\\\"nofollow noopener noreferrer me\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003emilan-ihl.de/?utm_source=Masto\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003edon\\u0026amp;utm_medium=Milan+social.tchncs.de\\u0026amp;utm_campaign=Bio+Links\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2023-03-07T08:41:25.879+00:00\"},{\"name\":\"OpenPGP\",\"value\":\"801038133C9B498305FD6FFD5E1AE9635F532C4A\",\"verified_at\":null}]},\"rules\":[{\"id\":\"1\",\"text\":\"Be
-        nice to each other\"},{\"id\":\"2\",\"text\":\"Do not publish advertisements\"},{\"id\":\"3\",\"text\":\"Do
-        not publish conspiracy myths\"},{\"id\":\"4\",\"text\":\"Do not publish content
-        illegal in Germany and/or France, such as holocaust denial or Nazi symbolism\"},{\"id\":\"5\",\"text\":\"Do
-        not publish content promoting the ideology of National Socialism\"},{\"id\":\"6\",\"text\":\"Do
-        not publish content that is hateful towards specific individuals or groups,
-        or intended to cause or incite harm\"},{\"id\":\"7\",\"text\":\"Do not exclusively
-        crosspost from other platforms\"}]}"
-  recorded_at: 2023-05-31 18:14:19 GMT
-  recorded_with: vcr/1.2.0, webmockr/0.8.2
+      string: '{"uri":"mastodon.social","title":"Mastodon","short_description":"The
+        original server operated by the Mastodon gGmbH non-profit","description":"","email":"staff@mastodon.social","version":"4.5.0-nightly.2025-07-11","urls":{"streaming_api":"wss://streaming.mastodon.social"},"stats":{"user_count":2808401,"status_count":138761238,"domain_count":88552},"thumbnail":"https://files.mastodon.social/site_uploads/files/000/000/001/@1x/57c12f441d083cde.png","languages":["en"],"registrations":true,"approval_required":false,"invites_enabled":true,"configuration":{"accounts":{"max_featured_tags":10},"statuses":{"max_characters":500,"max_media_attachments":4,"characters_reserved_per_url":23},"media_attachments":{"supported_mime_types":["image/jpeg","image/png","image/gif","image/heic","image/heif","image/webp","image/avif","video/webm","video/mp4","video/quicktime","video/ogg","audio/wave","audio/wav","audio/x-wav","audio/x-pn-wave","audio/vnd.wave","audio/ogg","audio/vorbis","audio/mpeg","audio/mp3","audio/webm","audio/flac","audio/aac","audio/m4a","audio/x-m4a","audio/mp4","audio/3gpp","video/x-ms-asf"],"image_size_limit":16777216,"image_matrix_limit":33177600,"video_size_limit":103809024,"video_frame_rate_limit":120,"video_matrix_limit":8294400},"polls":{"max_options":4,"max_characters_per_option":50,"min_expiration":300,"max_expiration":2629746}},"contact_account":{"id":"13179","username":"Mastodon","acct":"Mastodon","display_name":"Mastodon","locked":false,"bot":false,"discoverable":true,"indexable":false,"group":false,"created_at":"2016-11-23T00:00:00.000Z","note":"\u003cp\u003eFree,
+        open-source decentralized social media platform.\u003c/p\u003e","url":"https://mastodon.social/@Mastodon","uri":"https://mastodon.social/users/Mastodon","avatar":"https://files.mastodon.social/accounts/avatars/000/013/179/original/b4ceb19c9c54ec7e.png","avatar_static":"https://files.mastodon.social/accounts/avatars/000/013/179/original/b4ceb19c9c54ec7e.png","header":"https://files.mastodon.social/accounts/headers/000/013/179/original/1375be116fbe0f1d.png","header_static":"https://files.mastodon.social/accounts/headers/000/013/179/original/1375be116fbe0f1d.png","followers_count":844362,"following_count":34,"statuses_count":345,"last_status_at":"2025-07-15","hide_collections":false,"noindex":false,"emojis":[],"roles":[],"fields":[{"name":"Homepage","value":"\u003ca
+        href=\"https://joinmastodon.org\" target=\"_blank\" rel=\"nofollow noopener
+        me\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003ejoinmastodon.org\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":"2018-10-31T04:11:00.076+00:00"},{"name":"Patreon","value":"\u003ca
+        href=\"https://patreon.com/mastodon\" target=\"_blank\" rel=\"nofollow noopener
+        me\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003epatreon.com/mastodon\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":null},{"name":"GitHub","value":"\u003ca
+        href=\"https://github.com/mastodon\" target=\"_blank\" rel=\"nofollow noopener
+        me\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003egithub.com/mastodon\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":"2023-07-21T13:27:45.996+00:00"}]},"rules":[{"id":"1","text":"Sexually
+        explicit or violent media must be marked as sensitive or with a content warning","hint":"This
+        includes content that is particularly provocative even if it may not show
+        specific body parts, as well as dead bodies, bloody injuries, and other gore.
+        Particularly obscene content may be prohibited entirely. Profile pictures
+        and header images may not contain sexually explicit or violent media.","translations":{"de":{"text":"Sexuell
+        explizite Darstellungen oder solche von Gewalt müssen mit einer Inhaltswarnung
+        versehen werden.","hint":"Das beinhaltet ausdrücklich provokative Inhalte,
+        auch wenn keine bestimmten Körperteile zu sehen sind, sowie Leichname, blutige
+        Verletzungen und vergleichbare extreme Darstellungen. Besonders obszöne Inhalte
+        können vollständig verboten werden. Profil- und Titelbilder dürfen keine sexuell
+        expliziten oder Gewaltdarstellungen abbilden."},"es":{"text":"El contenido
+        sexual explícito o violento debe marcarse como sensible o con una advertencia
+        de contenido.","hint":"Esto incluye contenido especialmente provocativo, aunque
+        no muestre partes específicas del cuerpo, así como cadáveres, heridas sangrientas
+        y otras escenas sangrientas. Los contenidos especialmente obscenos pueden
+        prohibirse por completo. Las fotos de perfil y las imágenes de cabecera no
+        pueden contener contenido sexual explícito o violento."},"fr":{"text":"Le
+        contenu érotique, pornographique ou violent doit être marqué comme sensible
+        ou avoir un avertissement de contenu.","hint":"Cela inclut le contenu particulièrement
+        provocateur même s’il ne montre pas particulièrement de parties intimes, ainsi
+        que les photos de cadavres, de blessures sanglantes et autres scènes dérangeantes.
+        Le contenu particulièrement obscène peut être complètement interdit. Les images
+        de profil et d’en-tête ne doivent pas contenir de contenu sexuellement explicite
+        ou violent."},"nl":{"text":"Seksueel expliciet of gewelddadig beeldmateriaal
+        moet als ‘gevoelig’ gemarkeerd worden, of met een inhoudswaarschuwing gemarkeerd.","hint":"Dit
+        omvat ook inhoud die gedeeltelijk aanstootgevend is zelfs als het geen lichaamsdelen
+        toont, en ook dode lichamen, bloederige verwondingen en andere gruwelijkheden.
+        Zeer obscene inhoud kan helemaal verboden worden. Profielfoto’s en headerafbeeldingen
+        mogen geen seksueel expliciete of geweldadige inhoud hebben."},"ru":{"text":"Сексуально
+        откровенные или жестокие изображения или видео должны быть помечены как чувствительные
+        или скрыты под спойлер.","hint":"Это включает в себя особенно провоцирующий
+        контент, даже если он не показывает определённые части тела, а также мёртвые
+        тела, окровавленные раны и прочую кровь. Особенно жестокий контент может быть
+        запрещён полностью. Аватары и обложки профилей не должны содержать сексуально
+        откровенные или жестокие изображения."},"zh-CN":{"text":"色情或暴力媒体必须标记为敏感或有内容警告","hint":"这包括特别挑逗性的内容，即使它可能没有显示特定的身体部位，以及尸体、血腥伤害和其他血腥内容。特别淫秽的内容可能会被完全禁止。个人资料图片和头像不得包含色情或暴力内容。"},"zh-TW":{"text":"性暗示或暴力媒體必須標示為敏感或附帶內容警示","hint":"這包括特別挑釁的內容，即使它可能沒有顯示特定的身體部位，以及屍體、血腥傷害和其他血腥內容。特別猥褻的內容可能會被完全禁止。個人檔案圖片和標題圖片不得包含色情或暴力媒體。"}}},{"id":"2","text":"No
+        racism, sexism, homophobia, transphobia, ableism, xenophobia, or casteism.","hint":"Transphobic
+        behavior such as intentional misgendering and deadnaming is strictly prohibited.
+        Promotion of \"conversion therapy\" is strictly prohibited. Criticism of governments
+        and religions is permissible unless being used as a proxy for discrimination.","translations":{"de":{"text":"Kein(e)
+        Rassismus, Sexismus, Homophobie, Transphobie, Behindertenfeindlichkeit, Fremdenfeindlichkeit
+        oder Kasteismus.","hint":"Transphobes Verhalten wie die absichtliche Verwendung
+        von falschen Anreden und Pronomen sowie Deadnaming ist strengstens verboten.
+        Die Werbung für Konversionstherapien ist strengstens verboten. Die Kritik
+        an Regierungen und Religionen ist zulässig, sofern sie nicht stellvertretend
+        für Diskriminierung verwendet wird."},"es":{"text":"Prohibido el racismo,
+        sexismo, homofobia, transfobia, ableísmo, xenofobia o casticismo.","hint":"Queda
+        terminantemente prohibido el comportamiento transfóbico, como el uso intencionado
+        de nombres falsos o el \"deadnaming\". La promoción de la \"terapia de conversión\"
+        está estrictamente prohibida. Se permiten las críticas a gobiernos y religiones,
+        a menos que se utilicen como excusa para la discriminación."},"fr":{"text":"Pas
+        de racisme, sexisme, homophobie, transphobie, validisme, xénophobie ou discrimination
+        de caste.","hint":"Les comportements intentionnellement transphobes, comme
+        le mégenrage ou le morinommage (“deadnaming”) est strictement interdit. La
+        promotion des “thérapies de conversion” est strictement interdite. La critique
+        des gouvernements et religions est autorisée, sauf dans les cas ou elle est
+        utilisée comme paravent pour de la discrimination."},"nl":{"text":"Geen racisme,
+        seksisme, homofobie, transfobie, validisme, xenofobie of kastendiscriminatie.","hint":"Transfobisch
+        gedrag zoals opzettelijk misgenderen en deadnaming is ten strengste verboden.
+        Het promoten van “conversie therapie” is ten strengste verboden. Kritiek op
+        overheden en religies is toegestaan tenzij het wordt gebruikt als proxy voor
+        racisme."},"ru":{"text":"Запрещается расизм, сексизм, гомофобия, трансфобия,
+        эйблизм, ксенофобия и кастовость.","hint":"Трансфобное поведение, такое как
+        осознанный мисгендеринг и деднейминг, строго запрещено. Продвижение \"конверсионной
+        терапии\" строго запрещено. Критика правительств и религий разрешена, кроме
+        случаев, когда она используется как оправдание для дискриминации."},"zh-CN":{"text":"禁止种族主义、性别歧视、仇视同性恋、仇视变性者、异能者、仇外心理或种姓歧视。","hint":"严禁变性仇视行为，如故意误用性别和死名。严禁宣传
+        “转换疗法”。允许批评政府和宗教，除非被用作歧视的代名词。"},"zh-TW":{"text":"禁止種族主義、性別主義、恐同主義、恐變性主義、能力主義、仇外主義或種性主義。","hint":"嚴禁變性仇視行為，例如故意誤用性別和暱稱。嚴禁宣傳「扭轉治療」。允許批評政府和宗教，除非被用來代表歧視。"}}},{"id":"3","text":"No
+        incitement of violence or promotion of violent ideologies","hint":"Calling
+        for people or groups to be assassinated, murdered, or attacked physically
+        is strictly prohibited. Support for violent groups or events is prohibited.","translations":{"de":{"text":"Keine
+        Anstiftung zu Gewalt oder Förderung gewalttätiger Ideologien.","hint":"Der
+        Aufruf zum Mord oder körperlichen Attacken auf Personen oder Gruppen ist strengstens
+        verboten. Die Unterstützung gewalttätiger Gruppen oder Veranstaltungen ist
+        verboten."},"es":{"text":"Prohibida la incitación a la violencia o la promoción
+        de ideologías violentas.","hint":"Está estrictamente prohibido hacer llamamientos
+        para que se asesine, mate o agreda físicamente a personas o grupos. Está prohibido
+        apoyar a grupos o acontecimientos violentos."},"fr":{"text":"Pas d’incitation
+        à la violence ou de promotion d’idéologies violentes.","hint":"L’appel au
+        meutre, à la violence ou à l’action physique envers des personnes ou des groupes
+        de personnes est strictement interdit. Le soutien à des groupes ou évènements
+        violents est interdit."},"nl":{"text":"Niet aanzetten tot geweld of verspreiden
+        van gewelddadige ideologieën.","hint":"Mensen of groepen aanzetten tot moord,
+        aanslagen of fysieke aanvallen is ten strengste verboden. Steun voor gewelddadige
+        groeperingen of evenementen is verboden."},"ru":{"text":"Запрещается подстрекательство
+        к жестокости или продвижение жестоких идеологий.","hint":"Призывы к покушениям,
+        убийствам и физическим атакам на людей или группы людей строго запрещены.
+        Поддержка жестоких сообществ или событий запрещена."},"zh-CN":{"text":"不得煽动暴力或宣扬暴力意识形态","hint":"严禁呼吁暗杀、谋杀或人身攻击他人或团体。禁止支持暴力团体或事件。"},"zh-TW":{"text":"嚴禁煽動暴力或宣揚暴力意識形態","hint":"嚴禁呼籲暗殺、謀殺或人身攻擊他人或團體。嚴禁支持暴力團體或事件。"}}},{"id":"4","text":"No
+        harassment, block evasion, dogpiling, or doxxing of others","hint":"Repeat
+        attempts to communicate with users who have blocked you or creation of accounts
+        solely to harass or insult individuals is strictly prohibited. Coordinated
+        activity to attack other users is prohibited. Posting of private personal
+        information about others is prohibited.","translations":{"de":{"text":"Keine
+        Belästigungen, Umgehung von Blockierungen, Dogpiling oder Doxxing.","hint":"Wiederholte
+        Kommunikationsversuche mit Profilen, die dich blockiert haben, oder die Erstellung
+        neuer Konten, die ausschließlich dazu dienen, andere zu belästigen oder zu
+        beleidigen, sind strengstens verboten. Koordinierte Angriffe auf andere Profile
+        sind verboten. Die Veröffentlichung von privaten und persönlichen Informationen
+        anderer ist verboten."},"es":{"text":"No acosar, evadir bloqueos, \"dogpiling\"
+        (abuso en línea por grupos de acosadores) o doxeo de otros.","hint":"Está
+        estrictamente prohibido intentar comunicarse repetidamente con usuarios que
+        te hayan bloqueado o crear cuentas con el único fin de acosar o insultar a
+        otras personas. Queda prohibida la actividad coordinada para atacar a otros
+        usuarios. Está prohibido publicar información personal privada sobre otras
+        personas."},"fr":{"text":"Pas de harcèlement, d’esquive de blocage, de “dogpiling”,
+        ou de divulgation de données personnelles d’autrui.","hint":"Les tentatives
+        répétées de communiquer avec des utilisateur·ices qui vont ont bloqué ainsi
+        que la création de comptes pour harceler ou insulter autrui sont strictement
+        interdites. Les attaques coordonnées contre autrui sont interdites. La publication
+        de données personnelles d’autrui est interdite."},"nl":{"text":"Geen intimidatie,
+        omzeilen van blokkades, groepsaanvallen of het verspreiden van privégegevens
+        van anderen.","hint":"Herhaalde pogingen tot communiceren met gebruikers die
+        je hebben geblokkeerd, of het maken van accounts enkel om personen te intimideren
+        of beledigen is ten strengste verboden. Gecoördineerde activiteit om andere
+        gebruikers aan te vallen is verboden. Het plaatsen van privé-gegevens van
+        anderen is verboden."},"ru":{"text":"Запрещается травля, избегание блокировок,
+        набеги и разглашение личной информации других лиц.","hint":"Повторяющиеся
+        попытки взаимодействовать с пользователями, которые вас заблокировали, и создание
+        учётных записей исключительно ради травли или оскорблений, строго запрещены.
+        Скоординированная активность с целью атаки на других пользователей запрещена.
+        Публикация личной информации других лиц запрещена."},"zh-CN":{"text":"不得骚扰、回避封禁、诽谤或攻击他人","hint":"严禁重复尝试与已封禁您的用户交流，或仅为骚扰或侮辱他人而创建账户。严禁协同攻击其他用户。禁止发布他人的私人个人信息。"},"zh-TW":{"text":"嚴禁騷擾、迴避封鎖、煽動或誣衊他人","hint":"嚴禁重複嘗試與已封鎖您的使用者溝通，或純粹為了騷擾或侮辱他人而建立帳號。禁止攻擊其他使用者的協調活動。禁止張貼他人的私人個人資訊。"}}},{"id":"7","text":"Do
+        not share information widely-known to be false and misleading","hint":"False
+        and misleading information and links from low-quality sources may not be posted,
+        especially if they are likely to mislead or confuse others or endanger their
+        safety.","translations":{"de":{"text":"Verbreitet keine Informationen, von
+        denen allgemein bekannt ist, dass sie falsch oder irreführend.","hint":"Falsche
+        und irreführende Informationen sowie Links aus unseriösen Quellen dürfen nicht
+        gepostet werden, insbesondere wenn sie geeignet sind, andere in die Irre zu
+        führen oder deren Sicherheit zu gefährden."},"es":{"text":"No compartas información
+        ampliamente conocida por ser falsa y engañosa.","hint":"No está permitido
+        publicar información falsa y engañosa ni enlaces de fuentes de baja calidad,
+        especialmente si pueden inducir a error o confusión a otras personas o poner
+        en peligro su seguridad."},"fr":{"text":"Ne partagez pas d’informations connues
+        pour être fausses ou trompeuses.","hint":"Les informations fausses ou trompeuses,
+        ainsi que les liens vers des sources de mauvaise qualité ne doivent pas être
+        publiées, particulièrement si elles risquent de tromper, d’induire en erreur,
+        de semer la confusion ou de mettre des personnes en danger."},"nl":{"text":"Deel
+        geen informatie die algemeen bekend staat als onjuist en misleidend.","hint":"Onjuiste
+        en misleidende informatie en links naar onbetrouwbare bronnen mogen niet geplaatst
+        worden, zeker als deze waarschijnlijk anderen misleiden of verwarren, of hun
+        veiligheid in  gevaar brengt."},"ru":{"text":"Не публикуйте заведомо ложную
+        и вводящую в заблуждение информацию.","hint":"Запрещена публикация ложной
+        и вводящей в заблуждение информации и ссылок из низкокачественных источников,
+        особенно если это может сбить других людей с толку, запутать их, или подвергнуть
+        их опасности."},"zh-CN":{"text":"不得分享众所周知的虚假和误导性信息\r\n","hint":"不得发布虚假和误导性信息以及来自低质量来源的链接，尤其是可能误导或混淆他人或危及他人安全的信息。"},"zh-TW":{"text":"請勿分享廣為人知的虛假和誤導資訊","hint":"不得張貼虛假和誤導資訊以及來自低品質來源的連結，尤其是可能誤導或混淆他人或危害他人安全的資訊。"}}},{"id":"1008","text":"Content
+        created by others must be attributed, and use of generative AI must be disclosed","hint":"Content
+        created by others must clearly provide a reference to the author, creator,
+        or source. For adult content, this should include performers. Accounts may
+        not solely post AI-generated content.","translations":{"de":{"text":"Von anderen
+        erstellte Inhalte müssen gekennzeichnet und die Nutzung generativer KI offengelegt
+        werden.","hint":"Von anderen erstellte Inhalte müssen durch einen eindeutigen
+        Verweis auf den/die Autor*in oder die Quelle gekennzeichnet werden. Bei nicht
+        jugendfreien Inhalten sollte dies auch die Darsteller*innen einschließen.
+        Konten dürfen nicht ausschließlich KI-generierte Inhalte posten."},"es":{"text":"Los
+        contenidos creados por terceros deben ser atribuidos y el uso de IA debe ser
+        revelado.","hint":"Los contenidos creados por terceros deben proporcionar
+        claramente una referencia al autor, creador o fuente. En el caso de los contenidos
+        para adultos, debe incluirse a los artistas. Las cuentas no pueden publicar
+        únicamente contenidos generados por IA."},"fr":{"text":"Le contenu crée par
+        autrui doit être attribué, et l’utilisation d’IA générative doit être marqué
+        comme tel.","hint":"Le contenu créé par autrui doit fournir une référence
+        explicite à son auteur·ice, créateur·ice ou sa source. Cela inclut les acteur·ice
+        de contenu pour adulte. Les comptes publiant exclusivement du contenu généré
+        par IA sont interdits."},"nl":{"text":"Inhoud gemaakt door anderen moet worden
+        toegeschreven, en het gebruik van generatieve AI moet worden aangegeven.","hint":"Inhoud
+        gemaakt door anderen moet een duidelijke referentie naar de auteur, maker
+        of bron bevatten. Voor Content created by others must clearly provide a reference
+        to the author, creator, or source. Voor inhoud voor volwassenen, moet het
+        model worden vermeld. Accounts mogen niet uitsluitend door AI gegenereerde
+        inhoud plaatsen."},"ru":{"text":"Контент, созданный другими, должен публиковаться
+        с указанием авторства, а использование генеративного ИИ должно быть раскрыто.","hint":"Контент,
+        созданный другими, должен явным образом сопровождаться отсылкой к автору,
+        создателю или источнику. Для контента для взрослых это включает в себя актёров.
+        Учётные записи не могут публиковать исключительно контент, сгенерированный
+        с помощью ИИ."},"zh-CN":{"text":"他人创建的内容必须注明出处，使用人工智能产生的内容必须公开和披露说明","hint":"他人创建的内容必须明确注明作者、创建者或来源。对于成人内容，应包括表演者。账户不得仅发布人工智能生成的内容。"},"zh-TW":{"text":"由他人創作的內容必須註明來源，使用人工智能產生的內容必須公開和披露說明","hint":"他人創作的內容必須清楚提供作者、創作人或來源的參照。對於成人內容，這應該包括表演者。帳戶不得僅發佈人工智能產生的內容。"}}}]}'
+  recorded_at: 2025-07-17 14:03:46
+recorded_with: VCR-vcr/1.7.1.93

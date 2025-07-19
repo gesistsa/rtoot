@@ -1,5 +1,5 @@
 original_envvar <- Sys.getenv("RTOOT_DEFAULT_TOKEN")
-Sys.setenv(RTOOT_DEFAULT_TOKEN = "abc;user;emacs.ch")
+Sys.setenv(RTOOT_DEFAULT_TOKEN = "abc;user;fosstodon.org")
 fake_token <- get_token_from_envvar()
 
 testing_path <- file.path(tempdir(), "rtoot_check")
@@ -70,7 +70,7 @@ test_that("clipboard and verbose", {
   )
   expect_identical(x, fake_token)
   expect_false(dir.exists(testing_path))
-  expected_output <- paste0("RTOOT_DEFAULT_TOKEN=\"abc;user;emacs.ch\"")
+  expected_output <- paste0("RTOOT_DEFAULT_TOKEN=\"abc;user;fosstodon.org\"")
   expect_equal(clipr::read_clip(), expected_output)
   expect_message(
     x <- process_created_token(

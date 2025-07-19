@@ -36,7 +36,8 @@ Suggests:
     rstudioapi,
     testthat (>= 3.0.0),
     vcr (>= 0.6.0)
-VignetteBuilder: 
+Remotes: ropensci/vcr
+VignetteBuilder:
     knitr
 Config/testthat/edition: 3
 Encoding: UTF-8

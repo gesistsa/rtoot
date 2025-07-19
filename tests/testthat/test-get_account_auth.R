@@ -9,9 +9,9 @@ fake_token <- rtoot:::get_token_from_envvar(
   check_stop = FALSE
 )
 fake_token$type <- "user"
-fake_token$instance <- "social.tchncs.de"
+fake_token$instance <- "fosstodon.org"
 
-id <- "109281650341067731"
+id <- "109302436954721982"
 
 ## These have a meaningful parse parameter, so need to test `noparse`
 
@@ -74,7 +74,6 @@ test_that("get_account_favourites", {
 })
 
 test_that("get_account_blocks", {
-  ## sorry rfortunes, you get blocked for science
   vcr::use_cassette("get_account_blocks_default", {
     x <- get_account_blocks(limit = 3, token = fake_token)
   })

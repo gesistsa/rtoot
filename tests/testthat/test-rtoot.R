@@ -3,7 +3,7 @@ fake_token <- rtoot:::get_token_from_envvar(
   check_stop = FALSE
 )
 fake_token$type <- "user"
-fake_token$instance <- "emacs.ch"
+fake_token$instance <- "fosstodon.org"
 
 test_that("rtoot examples", {
   vcr::use_cassette("rtoot_examples", {
@@ -19,7 +19,7 @@ test_that("rtoot examples", {
     )
     x3 <- rtoot(
       endpoint = "api/v1/timelines/public",
-      instance = "emacs.ch",
+      instance = "fosstodon.org",
       local = TRUE,
       anonymous = TRUE
     )

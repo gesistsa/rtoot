@@ -4,7 +4,7 @@ fake_token <- rtoot:::get_token_from_envvar(
   check_stop = FALSE
 )
 fake_token$type <- "user"
-fake_token$instance <- "social.tchncs.de"
+fake_token$instance <- "fosstodon.org"
 
 fake_token2 <- Sys.getenv("RTOOT_INSTANCES_SOCIAL_TOKEN")
 
@@ -134,7 +134,7 @@ test_that("get_instance_trends", {
 
 test_that("get_instance_rules", {
   vcr::use_cassette("get_instance_rules_default", {
-    x <- get_instance_rules(instance = "social.tchncs.de", anonymous = TRUE)
+    x <- get_instance_rules(instance = "mastodon.social", anonymous = TRUE)
   })
   expect_true(nrow(x) != 0)
   expect_true("tbl_df" %in% class(x))
@@ -142,7 +142,7 @@ test_that("get_instance_rules", {
 
 test_that("get_instance_blocks", {
   vcr::use_cassette("get_instance_blocks_default", {
-    x <- get_instance_blocks(instance = "social.tchncs.de", anonymous = TRUE)
+    x <- get_instance_blocks(instance = "mastodon.social", anonymous = TRUE)
   })
   expect_true(nrow(x) != 0)
   expect_true("tbl_df" %in% class(x))

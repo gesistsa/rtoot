@@ -1,294 +1,122 @@
 http_interactions:
 - request:
-    method: get
-    uri: https://social.tchncs.de/api/v1/timelines/list/2507?limit=5
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
-      Authorization: Bearer <<<MASTODON TOKEN>>>
+    method: GET
+    uri: https://fosstodon.org/api/v1/timelines/list/7351?limit=5
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 200
     headers:
-      cache-control: no-store
-      content-encoding: gzip
-      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
-        ''none''; font-src ''self'' https://social.tchncs.de; img-src ''self'' https:
-        data: blob: https://social.tchncs.de; style-src ''self'' https://social.tchncs.de
-        ''nonce-3Io9lMeNU3mi6iSLV1mZ/A==''; media-src ''self'' https: data: https://social.tchncs.de;
-        frame-src ''self'' https:; manifest-src ''self'' https://social.tchncs.de;
-        connect-src ''self'' data: blob: https://social.tchncs.de https://f2.tchncs.de
-        wss://social.tchncs.de; script-src ''self'' https://social.tchncs.de ''unsafe-eval'';
-        child-src ''self'' blob: https://social.tchncs.de; worker-src ''self'' blob:
-        https://social.tchncs.de'
       content-type: application/json; charset=utf-8
-      date: Tue, 08 Nov 2022 16:40:21 GMT
-      etag: W/"cb3cef3fcf724ce96784b5c93821eef8"
-      link: <https://social.tchncs.de/api/v1/timelines/list/2507?limit=5&max_id=109304458335277781>;
-        rel="next", <https://social.tchncs.de/api/v1/timelines/list/2507?limit=5&min_id=109308572154618455>;
-        rel="prev"
-      permissions-policy:
-      - interest-cohort=()
-      - interest-cohort=()
       server: Mastodon
-      strict-transport-security: max-age=63072000; includeSubDomains
-      vary: Accept-Encoding, Origin
-      x-content-type-options: nosniff
       x-frame-options: DENY
-      x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '298'
-      x-ratelimit-reset: '2022-11-08T16:45:00.222069Z'
-      x-request-id: f5b51c5f-b0b4-42d4-a52b-0280884b06e6
-      x-runtime: '0.087019'
+      x-content-type-options: nosniff
       x-xss-protection: '0'
+      referrer-policy: same-origin
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '297'
+      x-ratelimit-reset: '2025-07-17T15:35:00.399319Z'
+      link: <https://fosstodon.org/api/v1/timelines/list/7351?limit=5&max_id=111006900179541067>;
+        rel="next", <https://fosstodon.org/api/v1/timelines/list/7351?limit=5&min_id=112484057205414223>;
+        rel="prev"
+      cache-control: private, no-store
+      etag: W/"04bbb11998530dc4a38947a45c982a3a"
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
+      x-request-id: a4bdf0fc-f027-4d1e-af63-c60faadb1f64
+      x-runtime: '0.032142'
+      content-encoding: gzip
+      accept-ranges: bytes
+      via: 1.1 varnish, 1.1 varnish
+      date: Thu, 17 Jul 2025 15:33:28 GMT
+      x-served-by: cache-par-lfpg1960082-PAR, cache-muc13983-MUC
+      x-cache: MISS, MISS
+      x-cache-hits: 0, 0
+      x-timer: S1752766408.383279,VS0,VE55
+      vary: Accept-Encoding, Authorization, Origin
+      strict-transport-security: max-age=300
+      alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
     body:
-      encoding: ''
-      file: no
-      string: "[{\"id\":\"109308572154618455\",\"created_at\":\"2022-11-08T14:07:24.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":null,\"uri\":\"https://fediscience.org/users/JohannesBreuer/statuses/109308572093118756/activity\",\"url\":null,\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\",\"reblog\":{\"id\":\"109308171289653678\",\"created_at\":\"2022-11-08T12:25:24.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://scholar.social/users/olivia/statuses/109308171045526646\",\"url\":\"https://scholar.social/@olivia/109308171045526646\",\"replies_count\":3,\"reblogs_count\":15,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003e\\u003ca
-        href=\\\"https://scholar.social/tags/introduction\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eintroduction\\u003c/span\\u003e\\u003c/a\\u003e:
-        My name is Olivia Guest, and I am an assistant professor of computational
-        cognitive science at the Donders institute \\u0026amp; the school of Artificial
-        Intelligence at Radboud University. My main research interests are developing
-        and critiquing frameworks, theories, and pre-/post-formal and computational
-        models as used in \\u003ca href=\\\"https://scholar.social/tags/cognitiveneuroscience\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ecognitiveneuroscience\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://scholar.social/tags/AI\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eAI\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://scholar.social/tags/psychology\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003epsychology\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u0026amp; \\u003ca href=\\\"https://scholar.social/tags/congitivescience\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003econgitivescience\\u003c/span\\u003e\\u003c/a\\u003e
-        generally.\\u003c/p\\u003e\\u003cp\\u003eFor more about me or my work, check
-        out my website (\\u003ca href=\\\"https://oliviaguest.com\\\" rel=\\\"nofollow
-        noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003eoliviaguest.com\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e)
-        or ask me. ☺️\\u003c/p\\u003e\\u003cp\\u003e1/n\\u003c/p\\u003e\",\"reblog\":null,\"account\":{\"id\":\"122261\",\"username\":\"olivia\",\"acct\":\"olivia@scholar.social\",\"display_name\":\"Olivia
-        Guest\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2018-08-19T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eassistant
-        professor of computational cognitive science · she/they · cypriot/kıbrıslı/κυπραία
-        · σὺν Ἀθηνᾷ καὶ χεῖρα κίνει\\u003c/p\\u003e\",\"url\":\"https://scholar.social/@olivia\",\"avatar\":\"https://f2.tchncs.de/cache/accounts/avatars/000/122/261/original/d687a46ae6a4412f.jpeg\",\"avatar_static\":\"https://f2.tchncs.de/cache/accounts/avatars/000/122/261/original/d687a46ae6a4412f.jpeg\",\"header\":\"https://f2.tchncs.de/cache/accounts/headers/000/122/261/original/d86fd1e73461a979.png\",\"header_static\":\"https://f2.tchncs.de/cache/accounts/headers/000/122/261/original/d86fd1e73461a979.png\",\"followers_count\":566,\"following_count\":184,\"statuses_count\":3064,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"Website\",\"value\":\"\\u003ca
-        href=\\\"http://olivia.science\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttp://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003eolivia.science\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Blog\",\"value\":\"\\u003ca
-        href=\\\"http://neuroplausible.com\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttp://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003eneuroplausible.com\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"GitHub\",\"value\":\"\\u003ca
-        href=\\\"https://github.com/oliviaguest/\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003egithub.com/oliviaguest/\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Twitter\",\"value\":\"\\u003ca
-        href=\\\"http://twitter.com/o_guest\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttp://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003etwitter.com/o_guest\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"introduction\",\"url\":\"https://social.tchncs.de/tags/introduction\"},{\"name\":\"cognitiveneuroscience\",\"url\":\"https://social.tchncs.de/tags/cognitiveneuroscience\"},{\"name\":\"ai\",\"url\":\"https://social.tchncs.de/tags/ai\"},{\"name\":\"psychology\",\"url\":\"https://social.tchncs.de/tags/psychology\"},{\"name\":\"congitivescience\",\"url\":\"https://social.tchncs.de/tags/congitivescience\"}],\"emojis\":[],\"card\":{\"url\":\"https://oliviaguest.com/\",\"title\":\"index.html\",\"description\":\"My
-        personal website\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"\",\"provider_url\":\"\",\"html\":\"\",\"width\":400,\"height\":400,\"image\":\"https://f2.tchncs.de/cache/preview_cards/images/012/722/852/original/7712f77ea2e9cd9b.jpeg\",\"embed_url\":\"\",\"blurhash\":\"UXGt+=0hTeWGXnw{ogS5EMW-$LxZW=fRoKs.\"},\"poll\":null},\"account\":{\"id\":\"108198029328962777\",\"username\":\"JohannesBreuer\",\"acct\":\"JohannesBreuer@fediscience.org\",\"display_name\":\"Johannes
-        Breuer\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-04-26T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eSenior
-        researcher at GESIS - Leibniz Institute for the Social Sciences (Cologne,
-        Germany) and the Center for Advanced Internet Studies (Bochum, Germany)\\u003c/p\\u003e\",\"url\":\"https://fediscience.org/@JohannesBreuer\",\"avatar\":\"https://f2.tchncs.de/cache/accounts/avatars/108/198/029/328/962/777/original/508172c9bb2f93e5.jpg\",\"avatar_static\":\"https://f2.tchncs.de/cache/accounts/avatars/108/198/029/328/962/777/original/508172c9bb2f93e5.jpg\",\"header\":\"https://f2.tchncs.de/cache/accounts/headers/108/198/029/328/962/777/original/64205db2bb854755.png\",\"header_static\":\"https://f2.tchncs.de/cache/accounts/headers/108/198/029/328/962/777/original/64205db2bb854755.png\",\"followers_count\":231,\"following_count\":333,\"statuses_count\":268,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"Website\",\"value\":\"\\u003ca
-        href=\\\"https://www.johannesbreuer.com/\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003ejohannesbreuer.com/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"GitHub\",\"value\":\"\\u003ca
-        href=\\\"https://github.com/jobreu\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003egithub.com/jobreu\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"ORCID\",\"value\":\"\\u003ca
-        href=\\\"https://orcid.org/0000-0001-5906-7873\\\" rel=\\\"nofollow noopener
-        noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003eorcid.org/0000-0001-5906-7873\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Google
-        Scholar\",\"value\":\"\\u003ca href=\\\"https://scholar.google.com/citations?hl=de\\u0026amp;user=n6q5R2QAAAAJ\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003escholar.google.com/citations?h\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003el=de\\u0026amp;user=n6q5R2QAAAAJ\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109308569131750580\",\"created_at\":\"2022-11-08T14:06:34.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":null,\"uri\":\"https://fediscience.org/users/JohannesBreuer/statuses/109308568809239404/activity\",\"url\":null,\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\",\"reblog\":{\"id\":\"109304771266119892\",\"created_at\":\"2022-11-07T22:00:48.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://scicomm.xyz/users/jpetro/statuses/109304771310344197\",\"url\":\"https://scicomm.xyz/@jpetro/109304771310344197\",\"replies_count\":3,\"reblogs_count\":13,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003e\\u003ca
-        href=\\\"https://scicomm.xyz/tags/introduction\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eintroduction\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003cbr\\u003eHi! I'm the Director of Communications at ORCID. If you're
-        in research, you may know of us: we uniquely identify \\u0026amp; connect
-        researchers \\u0026amp; innovators to their affiliations and contributions
-        across disciplines, borders, and time.\\u003c/p\\u003e\\u003cp\\u003eI have
-        a long history in \\u003ca href=\\\"https://scicomm.xyz/tags/SciComms\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eSciComms\\u003c/span\\u003e\\u003c/a\\u003e.
-        When I'm not doing that, I'm working on my first novel or planning my next
-        concert adventure. \\u003c/p\\u003e\\u003cp\\u003eI love ORCID's values of
-        Openness, Trust, and Inclusivity. I'm also keen on kindness \\u0026amp; collegiality
-        which is why I'm here. \U0001F600\\u003c/p\\u003e\",\"reblog\":null,\"account\":{\"id\":\"109263193891209046\",\"username\":\"jpetro\",\"acct\":\"jpetro@scicomm.xyz\",\"display_name\":\"Julie
-        Petro\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-10-31T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eDirector
-        of Communications at ORCID.\\u003c/p\\u003e\",\"url\":\"https://scicomm.xyz/@jpetro\",\"avatar\":\"https://f2.tchncs.de/cache/accounts/avatars/109/263/193/891/209/046/original/57626dbd83a40cd1.jpg\",\"avatar_static\":\"https://f2.tchncs.de/cache/accounts/avatars/109/263/193/891/209/046/original/57626dbd83a40cd1.jpg\",\"header\":\"https://f2.tchncs.de/cache/accounts/headers/109/263/193/891/209/046/original/b854bd655de475a3.jpg\",\"header_static\":\"https://f2.tchncs.de/cache/accounts/headers/109/263/193/891/209/046/original/b854bd655de475a3.jpg\",\"followers_count\":137,\"following_count\":17,\"statuses_count\":10,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"ORCID.org\",\"value\":\"\\u003ca
-        href=\\\"https://info.orcid.org\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003einfo.orcid.org\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Pronouns\",\"value\":\"she/her\",\"verified_at\":null},{\"name\":\"ORCID
-        Record\",\"value\":\"\\u003ca href=\\\"https://orcid.org/0000-0003-4967-747X\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003eorcid.org/0000-0003-4967-747X\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"ORCID
-        Mastadon\",\"value\":\"\\u003ca href=\\\"https://scicomm.xyz/web/@ORCID_Org\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003escicomm.xyz/web/@ORCID_Org\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"introduction\",\"url\":\"https://social.tchncs.de/tags/introduction\"},{\"name\":\"scicomms\",\"url\":\"https://social.tchncs.de/tags/scicomms\"}],\"emojis\":[],\"card\":null,\"poll\":null},\"account\":{\"id\":\"108198029328962777\",\"username\":\"JohannesBreuer\",\"acct\":\"JohannesBreuer@fediscience.org\",\"display_name\":\"Johannes
-        Breuer\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-04-26T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eSenior
-        researcher at GESIS - Leibniz Institute for the Social Sciences (Cologne,
-        Germany) and the Center for Advanced Internet Studies (Bochum, Germany)\\u003c/p\\u003e\",\"url\":\"https://fediscience.org/@JohannesBreuer\",\"avatar\":\"https://f2.tchncs.de/cache/accounts/avatars/108/198/029/328/962/777/original/508172c9bb2f93e5.jpg\",\"avatar_static\":\"https://f2.tchncs.de/cache/accounts/avatars/108/198/029/328/962/777/original/508172c9bb2f93e5.jpg\",\"header\":\"https://f2.tchncs.de/cache/accounts/headers/108/198/029/328/962/777/original/64205db2bb854755.png\",\"header_static\":\"https://f2.tchncs.de/cache/accounts/headers/108/198/029/328/962/777/original/64205db2bb854755.png\",\"followers_count\":231,\"following_count\":333,\"statuses_count\":268,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"Website\",\"value\":\"\\u003ca
-        href=\\\"https://www.johannesbreuer.com/\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003ejohannesbreuer.com/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"GitHub\",\"value\":\"\\u003ca
-        href=\\\"https://github.com/jobreu\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003egithub.com/jobreu\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"ORCID\",\"value\":\"\\u003ca
-        href=\\\"https://orcid.org/0000-0001-5906-7873\\\" rel=\\\"nofollow noopener
-        noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003eorcid.org/0000-0001-5906-7873\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Google
-        Scholar\",\"value\":\"\\u003ca href=\\\"https://scholar.google.com/citations?hl=de\\u0026amp;user=n6q5R2QAAAAJ\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003escholar.google.com/citations?h\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003el=de\\u0026amp;user=n6q5R2QAAAAJ\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109308561032540732\",\"created_at\":\"2022-11-08T14:04:34.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":null,\"uri\":\"https://fediscience.org/users/JohannesBreuer/statuses/109308560935333406/activity\",\"url\":null,\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\",\"reblog\":{\"id\":\"109308323312797509\",\"created_at\":\"2022-11-08T13:04:08.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://mapstodon.space/users/josiah/statuses/109308323358117828\",\"url\":\"https://mapstodon.space/@josiah/109308323358117828\",\"replies_count\":0,\"reblogs_count\":2,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eGonna
-        put an \\u003ca href=\\\"https://mapstodon.space/tags/Introduction\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eIntroduction\\u003c/span\\u003e\\u003c/a\\u003e
-        out here \\u003c/p\\u003e\\u003cp\\u003eI work at Esri on the spatial stats
-        team. I'm an avid \\u003ca href=\\\"https://mapstodon.space/tags/rstats\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003erstats\\u003c/span\\u003e\\u003c/a\\u003e
-        user and developer of the sfdep library.\\u003c/p\\u003e\\u003cp\\u003ei like
-        espresso and am bad at chess\\u003c/p\\u003e\",\"reblog\":null,\"account\":{\"id\":\"109308343877919859\",\"username\":\"josiah\",\"acct\":\"josiah@mapstodon.space\",\"display_name\":\"Josiah\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-06T00:00:00.000Z\",\"note\":\"\\u003cp\\u003espatial
-        stats @ esri\\u003cbr\\u003e\\u003ca href=\\\"https://mapstodon.space/tags/rstats\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003erstats\\u003c/span\\u003e\\u003c/a\\u003e
-        power nerd\\u003cbr\\u003egenerally thinking about how i'd like things to
-        be better\\u003cbr\\u003eoccassionally making tools to make them so\\u003c/p\\u003e\",\"url\":\"https://mapstodon.space/@josiah\",\"avatar\":\"https://f2.tchncs.de/cache/accounts/avatars/109/308/343/877/919/859/original/3c81a27165219ad8.png\",\"avatar_static\":\"https://f2.tchncs.de/cache/accounts/avatars/109/308/343/877/919/859/original/3c81a27165219ad8.png\",\"header\":\"https://f2.tchncs.de/cache/accounts/headers/109/308/343/877/919/859/original/2584440ff35a0207.png\",\"header_static\":\"https://f2.tchncs.de/cache/accounts/headers/109/308/343/877/919/859/original/2584440ff35a0207.png\",\"followers_count\":8,\"following_count\":17,\"statuses_count\":9,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"GitHub\",\"value\":\"\\u003ca
-        href=\\\"https://github.com/josiahparry/\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003egithub.com/josiahparry/\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Blog\",\"value\":\"\\u003ca
-        href=\\\"https://josiahparry.com\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003ejosiahparry.com\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-11-08T13:09:24.187+00:00\"}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"rstats\",\"url\":\"https://social.tchncs.de/tags/rstats\"},{\"name\":\"introduction\",\"url\":\"https://social.tchncs.de/tags/introduction\"}],\"emojis\":[],\"card\":null,\"poll\":null},\"account\":{\"id\":\"108198029328962777\",\"username\":\"JohannesBreuer\",\"acct\":\"JohannesBreuer@fediscience.org\",\"display_name\":\"Johannes
-        Breuer\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-04-26T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eSenior
-        researcher at GESIS - Leibniz Institute for the Social Sciences (Cologne,
-        Germany) and the Center for Advanced Internet Studies (Bochum, Germany)\\u003c/p\\u003e\",\"url\":\"https://fediscience.org/@JohannesBreuer\",\"avatar\":\"https://f2.tchncs.de/cache/accounts/avatars/108/198/029/328/962/777/original/508172c9bb2f93e5.jpg\",\"avatar_static\":\"https://f2.tchncs.de/cache/accounts/avatars/108/198/029/328/962/777/original/508172c9bb2f93e5.jpg\",\"header\":\"https://f2.tchncs.de/cache/accounts/headers/108/198/029/328/962/777/original/64205db2bb854755.png\",\"header_static\":\"https://f2.tchncs.de/cache/accounts/headers/108/198/029/328/962/777/original/64205db2bb854755.png\",\"followers_count\":231,\"following_count\":333,\"statuses_count\":268,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"Website\",\"value\":\"\\u003ca
-        href=\\\"https://www.johannesbreuer.com/\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003ejohannesbreuer.com/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"GitHub\",\"value\":\"\\u003ca
-        href=\\\"https://github.com/jobreu\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003egithub.com/jobreu\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"ORCID\",\"value\":\"\\u003ca
-        href=\\\"https://orcid.org/0000-0001-5906-7873\\\" rel=\\\"nofollow noopener
-        noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003eorcid.org/0000-0001-5906-7873\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Google
-        Scholar\",\"value\":\"\\u003ca href=\\\"https://scholar.google.com/citations?hl=de\\u0026amp;user=n6q5R2QAAAAJ\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003escholar.google.com/citations?h\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003el=de\\u0026amp;user=n6q5R2QAAAAJ\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109304705108328120\",\"created_at\":\"2022-11-07T21:43:56.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":null,\"uri\":\"https://fediscience.org/users/JohannesBreuer/statuses/109304704954505800/activity\",\"url\":null,\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\",\"reblog\":{\"id\":\"109304520380985258\",\"created_at\":\"2022-11-07T20:56:56.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://mastodon.social/users/robkitchin/statuses/109304520109081490\",\"url\":\"https://mastodon.social/@robkitchin/109304520109081490\",\"replies_count\":3,\"reblogs_count\":21,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003e24
-        disciplines (so far) are in the process of compiling lists for finding like-minded
-        folks on Mastodon \\u003ca href=\\\"https://github.com/nathanlesage/academics-on-mastodon\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003egithub.com/nathanlesage/academ\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003eics-on-mastodon\\u003c/span\\u003e\\u003c/a\\u003e
-        And some are also organizing their own instances. Seems like academic \\u003ca
-        href=\\\"https://mastodon.social/tags/twittermigration\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003etwittermigration\\u003c/span\\u003e\\u003c/a\\u003e
-        might be reaching tipping point ...\\u003c/p\\u003e\",\"reblog\":null,\"account\":{\"id\":\"109252428096742358\",\"username\":\"robkitchin\",\"acct\":\"robkitchin@mastodon.social\",\"display_name\":\"Rob
-        Kitchin\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-10-28T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eProfessor,
-        MUSSI \\u0026amp; Geography, Maynooth University. ERC Adv PI Data Stories
-        project \\u003ca href=\\\"https://datastories.maynoothuniversity.ie/\\\" rel=\\\"nofollow
-        noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"ellipsis\\\"\\u003edatastories.maynoothuniversity\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e.ie/\\u003c/span\\u003e\\u003c/a\\u003e Author:
-        Data Lives \\u003ca href=\\\"http://datalivesbook.com\\\" rel=\\\"nofollow
-        noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttp://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003edatalivesbook.com\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e,
-        Slow Computing, and The Data Revolution 2e \\u003ca href=\\\"https://mastodon.social/tags/geography\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003egeography\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://mastodon.social/tags/digitalgeography\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003edigitalgeography\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://mastodon.social/tags/smartcities\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003esmartcities\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://mastodon.social/tags/datastories\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003edatastories\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://mastodon.social/tags/criticaldatastudies\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ecriticaldatastudies\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://mastodon.social/tags/softwarestudies\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003esoftwarestudies\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://mastodon.social/tags/STS\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eSTS\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://mastodon.social/tags/cities\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ecities\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@robkitchin\",\"avatar\":\"https://f2.tchncs.de/cache/accounts/avatars/109/252/428/096/742/358/original/297021f1e2b97a3f.jpg\",\"avatar_static\":\"https://f2.tchncs.de/cache/accounts/avatars/109/252/428/096/742/358/original/297021f1e2b97a3f.jpg\",\"header\":\"https://f2.tchncs.de/cache/accounts/headers/109/252/428/096/742/358/original/16f542722031733e.jpeg\",\"header_static\":\"https://f2.tchncs.de/cache/accounts/headers/109/252/428/096/742/358/original/16f542722031733e.jpeg\",\"followers_count\":512,\"following_count\":375,\"statuses_count\":31,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"Location\",\"value\":\"Ireland\",\"verified_at\":null},{\"name\":\"Open
-        access publications\",\"value\":\"\\u003ca href=\\\"https://www.kitchin.org/?page_id=15\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003ekitchin.org/?page_id=15\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Work
-        profile\",\"value\":\"\\u003ca href=\\\"https://www.maynoothuniversity.ie/people/rob-kitchin\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003emaynoothuniversity.ie/people/r\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003eob-kitchin\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"twittermigration\",\"url\":\"https://social.tchncs.de/tags/twittermigration\"}],\"emojis\":[],\"card\":{\"url\":\"https://github.com/nathanlesage/academics-on-mastodon\",\"title\":\"GitHub
-        - nathanlesage/academics-on-mastodon: A list of various lists consisting of
-        academics on Mastodon\",\"description\":\"A list of various lists consisting
-        of academics on Mastodon - GitHub - nathanlesage/academics-on-mastodon: A
-        list of various lists consisting of academics on Mastodon\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"GitHub\",\"provider_url\":\"\",\"html\":\"\",\"width\":400,\"height\":228,\"image\":\"https://f2.tchncs.de/cache/preview_cards/images/012/661/615/original/7e1a22881c5ae8b6.png\",\"embed_url\":\"\",\"blurhash\":\"UYL4sREK-3#k1#tSRqSyEhxaSxoOxBw^s+n,\"},\"poll\":null},\"account\":{\"id\":\"108198029328962777\",\"username\":\"JohannesBreuer\",\"acct\":\"JohannesBreuer@fediscience.org\",\"display_name\":\"Johannes
-        Breuer\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-04-26T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eSenior
-        researcher at GESIS - Leibniz Institute for the Social Sciences (Cologne,
-        Germany) and the Center for Advanced Internet Studies (Bochum, Germany)\\u003c/p\\u003e\",\"url\":\"https://fediscience.org/@JohannesBreuer\",\"avatar\":\"https://f2.tchncs.de/cache/accounts/avatars/108/198/029/328/962/777/original/508172c9bb2f93e5.jpg\",\"avatar_static\":\"https://f2.tchncs.de/cache/accounts/avatars/108/198/029/328/962/777/original/508172c9bb2f93e5.jpg\",\"header\":\"https://f2.tchncs.de/cache/accounts/headers/108/198/029/328/962/777/original/64205db2bb854755.png\",\"header_static\":\"https://f2.tchncs.de/cache/accounts/headers/108/198/029/328/962/777/original/64205db2bb854755.png\",\"followers_count\":231,\"following_count\":333,\"statuses_count\":268,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"Website\",\"value\":\"\\u003ca
-        href=\\\"https://www.johannesbreuer.com/\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003ejohannesbreuer.com/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"GitHub\",\"value\":\"\\u003ca
-        href=\\\"https://github.com/jobreu\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003egithub.com/jobreu\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"ORCID\",\"value\":\"\\u003ca
-        href=\\\"https://orcid.org/0000-0001-5906-7873\\\" rel=\\\"nofollow noopener
-        noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003eorcid.org/0000-0001-5906-7873\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Google
-        Scholar\",\"value\":\"\\u003ca href=\\\"https://scholar.google.com/citations?hl=de\\u0026amp;user=n6q5R2QAAAAJ\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003escholar.google.com/citations?h\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003el=de\\u0026amp;user=n6q5R2QAAAAJ\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109304458335277781\",\"created_at\":\"2022-11-07T20:41:06.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":null,\"uri\":\"https://fediscience.org/users/JohannesBreuer/statuses/109304457868798789/activity\",\"url\":null,\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\",\"reblog\":{\"id\":\"109303751935413983\",\"created_at\":\"2022-11-07T17:41:34.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://fediscience.org/users/dalejbarr/statuses/109303751920567231\",\"url\":\"https://fediscience.org/@dalejbarr/109303751920567231\",\"replies_count\":0,\"reblogs_count\":2,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eSorry
-        to have neglected a proper \\u003ca href=\\\"https://fediscience.org/tags/introduction\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eintroduction\\u003c/span\\u003e\\u003c/a\\u003e:\\u003c/p\\u003e\\u003cp\\u003eI
-        am a methodologist in \\u003ca href=\\\"https://fediscience.org/tags/ExperimentalPsychology\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eExperimentalPsychology\\u003c/span\\u003e\\u003c/a\\u003e
-        and  do research on \\u003ca href=\\\"https://fediscience.org/tags/SocialInteraction\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eSocialInteraction\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u0026amp; \\u003ca href=\\\"https://fediscience.org/tags/communication\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ecommunication\\u003c/span\\u003e\\u003c/a\\u003e
-        at the School of \\u003ca href=\\\"https://fediscience.org/tags/Psychology\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ePsychology\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u0026amp; \\u003ca href=\\\"https://fediscience.org/tags/Neuroscience\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eNeuroscience\\u003c/span\\u003e\\u003c/a\\u003e
-        at \\u003ca href=\\\"https://fediscience.org/tags/UniversityOfGlasgow\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eUniversityOfGlasgow\\u003c/span\\u003e\\u003c/a\\u003e.
-        Much of my work investigates real-time language processing using visual world
-        \\u003ca href=\\\"https://fediscience.org/tags/eyetracking\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eeyetracking\\u003c/span\\u003e\\u003c/a\\u003e.\\u003c/p\\u003e\\u003cp\\u003eYou
-        may know me from your non-converging mixed effects models. (Which is not completely
-        my fault.)\\u003c/p\\u003e\\u003cp\\u003ePassionate about \\u003ca href=\\\"https://fediscience.org/tags/Reproducibility\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eReproducibility\\u003c/span\\u003e\\u003c/a\\u003e,
-        \ \\u003ca href=\\\"https://fediscience.org/tags/OpenScience\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eOpenScience\\u003c/span\\u003e\\u003c/a\\u003e.
-        In search of the perfect \\u003ca href=\\\"https://fediscience.org/tags/Taco\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eTaco\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"reblog\":null,\"account\":{\"id\":\"109298828765273132\",\"username\":\"dalejbarr\",\"acct\":\"dalejbarr@fediscience.org\",\"display_name\":\"Dale
-        Barr\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-11-04T00:00:00.000Z\",\"note\":\"\\u003cp\\u003emethodologist
-        and researcher into human social interaction and communication at UofGlasgow
-        School of Psychology \\u0026amp; Neuroscience | \\u003ca href=\\\"https://fediscience.org/tags/psyteachr\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003epsyteachr\\u003c/span\\u003e\\u003c/a\\u003e
-        | \\u003ca href=\\\"https://fediscience.org/tags/rstats\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003erstats\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://fediscience.org/@dalejbarr\",\"avatar\":\"https://f2.tchncs.de/cache/accounts/avatars/109/298/828/765/273/132/original/1552717164f3f97d.jpg\",\"avatar_static\":\"https://f2.tchncs.de/cache/accounts/avatars/109/298/828/765/273/132/original/1552717164f3f97d.jpg\",\"header\":\"https://f2.tchncs.de/cache/accounts/headers/109/298/828/765/273/132/original/04504f476b67e949.png\",\"header_static\":\"https://f2.tchncs.de/cache/accounts/headers/109/298/828/765/273/132/original/04504f476b67e949.png\",\"followers_count\":40,\"following_count\":75,\"statuses_count\":5,\"last_status_at\":\"2022-11-07\",\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"introduction\",\"url\":\"https://social.tchncs.de/tags/introduction\"},{\"name\":\"ExperimentalPsychology\",\"url\":\"https://social.tchncs.de/tags/ExperimentalPsychology\"},{\"name\":\"socialinteraction\",\"url\":\"https://social.tchncs.de/tags/socialinteraction\"},{\"name\":\"communication\",\"url\":\"https://social.tchncs.de/tags/communication\"},{\"name\":\"psychology\",\"url\":\"https://social.tchncs.de/tags/psychology\"},{\"name\":\"neuroscience\",\"url\":\"https://social.tchncs.de/tags/neuroscience\"},{\"name\":\"universityofglasgow\",\"url\":\"https://social.tchncs.de/tags/universityofglasgow\"},{\"name\":\"eyetracking\",\"url\":\"https://social.tchncs.de/tags/eyetracking\"},{\"name\":\"reproducibility\",\"url\":\"https://social.tchncs.de/tags/reproducibility\"},{\"name\":\"openscience\",\"url\":\"https://social.tchncs.de/tags/openscience\"},{\"name\":\"taco\",\"url\":\"https://social.tchncs.de/tags/taco\"}],\"emojis\":[],\"card\":null,\"poll\":null},\"account\":{\"id\":\"108198029328962777\",\"username\":\"JohannesBreuer\",\"acct\":\"JohannesBreuer@fediscience.org\",\"display_name\":\"Johannes
-        Breuer\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-04-26T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eSenior
-        researcher at GESIS - Leibniz Institute for the Social Sciences (Cologne,
-        Germany) and the Center for Advanced Internet Studies (Bochum, Germany)\\u003c/p\\u003e\",\"url\":\"https://fediscience.org/@JohannesBreuer\",\"avatar\":\"https://f2.tchncs.de/cache/accounts/avatars/108/198/029/328/962/777/original/508172c9bb2f93e5.jpg\",\"avatar_static\":\"https://f2.tchncs.de/cache/accounts/avatars/108/198/029/328/962/777/original/508172c9bb2f93e5.jpg\",\"header\":\"https://f2.tchncs.de/cache/accounts/headers/108/198/029/328/962/777/original/64205db2bb854755.png\",\"header_static\":\"https://f2.tchncs.de/cache/accounts/headers/108/198/029/328/962/777/original/64205db2bb854755.png\",\"followers_count\":231,\"following_count\":333,\"statuses_count\":268,\"last_status_at\":\"2022-11-08\",\"emojis\":[],\"fields\":[{\"name\":\"Website\",\"value\":\"\\u003ca
-        href=\\\"https://www.johannesbreuer.com/\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003ejohannesbreuer.com/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"GitHub\",\"value\":\"\\u003ca
-        href=\\\"https://github.com/jobreu\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003egithub.com/jobreu\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"ORCID\",\"value\":\"\\u003ca
-        href=\\\"https://orcid.org/0000-0001-5906-7873\\\" rel=\\\"nofollow noopener
-        noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003eorcid.org/0000-0001-5906-7873\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Google
-        Scholar\",\"value\":\"\\u003ca href=\\\"https://scholar.google.com/citations?hl=de\\u0026amp;user=n6q5R2QAAAAJ\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003escholar.google.com/citations?h\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003el=de\\u0026amp;user=n6q5R2QAAAAJ\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null}]"
-  recorded_at: 2022-11-08 16:40:21 GMT
-  recorded_with: vcr/1.1.0, webmockr/0.8.2
+      string: '[{"id":"112484057205414223","created_at":"2024-05-22T09:35:01.792Z","in_reply_to_id":null,"in_reply_to_account_id":null,"sensitive":false,"spoiler_text":"","visibility":"public","language":"en","uri":"https://fosstodon.org/users/JBGruber/statuses/112484057205414223","url":"https://fosstodon.org/@JBGruber/112484057205414223","replies_count":1,"reblogs_count":0,"favourites_count":0,"edited_at":null,"favourited":false,"reblogged":false,"muted":false,"bookmarked":false,"content":"\u003cp\u003e@chainsawriot@emacs.ch
+        the main problem I hoped to solve was borking my system with nvidia driver
+        updates about twice a year. I have a nice hook that makes a snapshot before
+        every update and can just roll back. But not much use when the partition itself
+        is not stable and boring. So I\u0026#39;m now looking how to make roll backs
+        easier with ext4...\u003c/p\u003e","filtered":[],"reblog":null,"application":{"name":"Tusky","website":"https://tusky.app"},"account":{"id":"109290786298388981","username":"JBGruber","acct":"JBGruber","display_name":"Johannes
+        B. Gruber","locked":false,"bot":false,"discoverable":true,"indexable":false,"group":false,"created_at":"2022-11-05T00:00:00.000Z","note":"\u003cp\u003ePostdoc
+        researcher\u003cbr /\u003e@ Vrije Universiteit Amsterdam and the OPTED project
+        | previously @ European New School of Digital Studies (ENS) | PhD from University
+        of Glasgow | I study media framing of protest and develop tools for research
+        | text analysis + \u003ca href=\"https://fosstodon.org/tags/rstats\" class=\"mention
+        hashtag\" rel=\"tag\"\u003e#\u003cspan\u003erstats\u003c/span\u003e\u003c/a\u003e
+        enthusiast\u003c/p\u003e","url":"https://fosstodon.org/@JBGruber","uri":"https://fosstodon.org/users/JBGruber","avatar":"https://cdn.fosstodon.org/accounts/avatars/109/290/786/298/388/981/original/d36c2a0d6134bec5.jpg","avatar_static":"https://cdn.fosstodon.org/accounts/avatars/109/290/786/298/388/981/original/d36c2a0d6134bec5.jpg","header":"https://cdn.fosstodon.org/accounts/headers/109/290/786/298/388/981/original/de9bed082c024112.jpeg","header_static":"https://cdn.fosstodon.org/accounts/headers/109/290/786/298/388/981/original/de9bed082c024112.jpeg","followers_count":549,"following_count":240,"statuses_count":111,"last_status_at":"2024-05-27","hide_collections":false,"noindex":true,"emojis":[],"roles":[],"fields":[{"name":"Website","value":"\u003ca
+        href=\"https://www.johannesbgruber.eu/\" target=\"_blank\" rel=\"nofollow
+        noopener me\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttps://www.\u003c/span\u003e\u003cspan
+        class=\"\"\u003ejohannesbgruber.eu/\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":null},{"name":"GitHub","value":"\u003ca
+        href=\"https://github.com/JBGruber\" target=\"_blank\" rel=\"nofollow noopener
+        me\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003egithub.com/JBGruber\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":null}]},"media_attachments":[],"mentions":[],"tags":[],"emojis":[],"quote":null,"card":null,"poll":null},{"id":"112483321320234937","created_at":"2024-05-22T06:27:53.073Z","in_reply_to_id":"112483316668274156","in_reply_to_account_id":"109290786298388981","sensitive":false,"spoiler_text":"","visibility":"public","language":"en","uri":"https://fosstodon.org/users/JBGruber/statuses/112483321320234937","url":"https://fosstodon.org/@JBGruber/112483321320234937","replies_count":1,"reblogs_count":0,"favourites_count":0,"edited_at":null,"favourited":false,"reblogged":false,"muted":false,"bookmarked":false,"content":"\u003cp\u003eEach
+        time it happened while I was working on some document. I assume during scheduled
+        balancing. I\u0026#39;m on EndeavourOS (Arch).\u003c/p\u003e","filtered":[],"reblog":null,"application":{"name":"Tusky","website":"https://tusky.app"},"account":{"id":"109290786298388981","username":"JBGruber","acct":"JBGruber","display_name":"Johannes
+        B. Gruber","locked":false,"bot":false,"discoverable":true,"indexable":false,"group":false,"created_at":"2022-11-05T00:00:00.000Z","note":"\u003cp\u003ePostdoc
+        researcher\u003cbr /\u003e@ Vrije Universiteit Amsterdam and the OPTED project
+        | previously @ European New School of Digital Studies (ENS) | PhD from University
+        of Glasgow | I study media framing of protest and develop tools for research
+        | text analysis + \u003ca href=\"https://fosstodon.org/tags/rstats\" class=\"mention
+        hashtag\" rel=\"tag\"\u003e#\u003cspan\u003erstats\u003c/span\u003e\u003c/a\u003e
+        enthusiast\u003c/p\u003e","url":"https://fosstodon.org/@JBGruber","uri":"https://fosstodon.org/users/JBGruber","avatar":"https://cdn.fosstodon.org/accounts/avatars/109/290/786/298/388/981/original/d36c2a0d6134bec5.jpg","avatar_static":"https://cdn.fosstodon.org/accounts/avatars/109/290/786/298/388/981/original/d36c2a0d6134bec5.jpg","header":"https://cdn.fosstodon.org/accounts/headers/109/290/786/298/388/981/original/de9bed082c024112.jpeg","header_static":"https://cdn.fosstodon.org/accounts/headers/109/290/786/298/388/981/original/de9bed082c024112.jpeg","followers_count":549,"following_count":240,"statuses_count":111,"last_status_at":"2024-05-27","hide_collections":false,"noindex":true,"emojis":[],"roles":[],"fields":[{"name":"Website","value":"\u003ca
+        href=\"https://www.johannesbgruber.eu/\" target=\"_blank\" rel=\"nofollow
+        noopener me\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttps://www.\u003c/span\u003e\u003cspan
+        class=\"\"\u003ejohannesbgruber.eu/\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":null},{"name":"GitHub","value":"\u003ca
+        href=\"https://github.com/JBGruber\" target=\"_blank\" rel=\"nofollow noopener
+        me\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003egithub.com/JBGruber\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":null}]},"media_attachments":[],"mentions":[],"tags":[],"emojis":[],"quote":null,"card":null,"poll":null},{"id":"112483316668274156","created_at":"2024-05-22T06:26:42.093Z","in_reply_to_id":null,"in_reply_to_account_id":null,"sensitive":false,"spoiler_text":"","visibility":"public","language":"en","uri":"https://fosstodon.org/users/JBGruber/statuses/112483316668274156","url":"https://fosstodon.org/@JBGruber/112483316668274156","replies_count":2,"reblogs_count":0,"favourites_count":1,"edited_at":null,"favourited":false,"reblogged":false,"muted":false,"bookmarked":false,"content":"\u003cp\u003eSo
+        as far as I got BTRFS\u0026#39; main selling point, it should be harder to
+        bork your \u003ca href=\"https://fosstodon.org/tags/linux\" class=\"mention
+        hashtag\" rel=\"tag\"\u003e#\u003cspan\u003elinux\u003c/span\u003e\u003c/a\u003e
+        install as you can return to older snapshots. Well yesterday my root partition
+        was suddenly in read-only mode and one reboot later, the partition is broken
+        beyond repair (4 month old drive that seems fine). This is the 3rd time in
+        one year this happened (2 different machines). Should I just return to ext4?\u003c/p\u003e","filtered":[],"reblog":null,"application":{"name":"Tusky","website":"https://tusky.app"},"account":{"id":"109290786298388981","username":"JBGruber","acct":"JBGruber","display_name":"Johannes
+        B. Gruber","locked":false,"bot":false,"discoverable":true,"indexable":false,"group":false,"created_at":"2022-11-05T00:00:00.000Z","note":"\u003cp\u003ePostdoc
+        researcher\u003cbr /\u003e@ Vrije Universiteit Amsterdam and the OPTED project
+        | previously @ European New School of Digital Studies (ENS) | PhD from University
+        of Glasgow | I study media framing of protest and develop tools for research
+        | text analysis + \u003ca href=\"https://fosstodon.org/tags/rstats\" class=\"mention
+        hashtag\" rel=\"tag\"\u003e#\u003cspan\u003erstats\u003c/span\u003e\u003c/a\u003e
+        enthusiast\u003c/p\u003e","url":"https://fosstodon.org/@JBGruber","uri":"https://fosstodon.org/users/JBGruber","avatar":"https://cdn.fosstodon.org/accounts/avatars/109/290/786/298/388/981/original/d36c2a0d6134bec5.jpg","avatar_static":"https://cdn.fosstodon.org/accounts/avatars/109/290/786/298/388/981/original/d36c2a0d6134bec5.jpg","header":"https://cdn.fosstodon.org/accounts/headers/109/290/786/298/388/981/original/de9bed082c024112.jpeg","header_static":"https://cdn.fosstodon.org/accounts/headers/109/290/786/298/388/981/original/de9bed082c024112.jpeg","followers_count":549,"following_count":240,"statuses_count":111,"last_status_at":"2024-05-27","hide_collections":false,"noindex":true,"emojis":[],"roles":[],"fields":[{"name":"Website","value":"\u003ca
+        href=\"https://www.johannesbgruber.eu/\" target=\"_blank\" rel=\"nofollow
+        noopener me\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttps://www.\u003c/span\u003e\u003cspan
+        class=\"\"\u003ejohannesbgruber.eu/\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":null},{"name":"GitHub","value":"\u003ca
+        href=\"https://github.com/JBGruber\" target=\"_blank\" rel=\"nofollow noopener
+        me\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003egithub.com/JBGruber\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":null}]},"media_attachments":[],"mentions":[],"tags":[{"name":"linux","url":"https://fosstodon.org/tags/linux"}],"emojis":[],"quote":null,"card":null,"poll":null},{"id":"111006900179541067","created_at":"2023-09-04T12:34:34.325Z","in_reply_to_id":null,"in_reply_to_account_id":null,"sensitive":false,"spoiler_text":"","visibility":"public","language":"en","uri":"https://fosstodon.org/users/JBGruber/statuses/111006900179541067","url":"https://fosstodon.org/@JBGruber/111006900179541067","replies_count":1,"reblogs_count":3,"favourites_count":5,"edited_at":null,"favourited":false,"reblogged":false,"muted":false,"bookmarked":false,"content":"\u003cp\u003eCreating
+        haphazard documentation might mean that people don\u0026#39;t understand how
+        to use your \u003ca href=\"https://fosstodon.org/tags/rstats\" class=\"mention
+        hashtag\" rel=\"tag\"\u003e#\u003cspan\u003erstats\u003c/span\u003e\u003c/a\u003e
+        package. So let\u0026#39;s make sure to not build unnecessary barriers in
+        computational social sciences with better software documentation!\u003c/p\u003e\u003cp\u003eAnd
+        ChatGPT can help us (unsurprisingly). Here is a (not so short) video on how
+        it can be done:\u003c/p\u003e\u003cp\u003e\u003ca href=\"https://youtu.be/wmlkj6AnNDE\"
+        target=\"_blank\" rel=\"nofollow noopener\" translate=\"no\"\u003e\u003cspan
+        class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan class=\"\"\u003eyoutu.be/wmlkj6AnNDE\u003c/span\u003e\u003cspan
+        class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e\u003c/p\u003e","filtered":[],"reblog":null,"application":null,"account":{"id":"109290786298388981","username":"JBGruber","acct":"JBGruber","display_name":"Johannes
+        B. Gruber","locked":false,"bot":false,"discoverable":true,"indexable":false,"group":false,"created_at":"2022-11-05T00:00:00.000Z","note":"\u003cp\u003ePostdoc
+        researcher\u003cbr /\u003e@ Vrije Universiteit Amsterdam and the OPTED project
+        | previously @ European New School of Digital Studies (ENS) | PhD from University
+        of Glasgow | I study media framing of protest and develop tools for research
+        | text analysis + \u003ca href=\"https://fosstodon.org/tags/rstats\" class=\"mention
+        hashtag\" rel=\"tag\"\u003e#\u003cspan\u003erstats\u003c/span\u003e\u003c/a\u003e
+        enthusiast\u003c/p\u003e","url":"https://fosstodon.org/@JBGruber","uri":"https://fosstodon.org/users/JBGruber","avatar":"https://cdn.fosstodon.org/accounts/avatars/109/290/786/298/388/981/original/d36c2a0d6134bec5.jpg","avatar_static":"https://cdn.fosstodon.org/accounts/avatars/109/290/786/298/388/981/original/d36c2a0d6134bec5.jpg","header":"https://cdn.fosstodon.org/accounts/headers/109/290/786/298/388/981/original/de9bed082c024112.jpeg","header_static":"https://cdn.fosstodon.org/accounts/headers/109/290/786/298/388/981/original/de9bed082c024112.jpeg","followers_count":549,"following_count":240,"statuses_count":111,"last_status_at":"2024-05-27","hide_collections":false,"noindex":true,"emojis":[],"roles":[],"fields":[{"name":"Website","value":"\u003ca
+        href=\"https://www.johannesbgruber.eu/\" target=\"_blank\" rel=\"nofollow
+        noopener me\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttps://www.\u003c/span\u003e\u003cspan
+        class=\"\"\u003ejohannesbgruber.eu/\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":null},{"name":"GitHub","value":"\u003ca
+        href=\"https://github.com/JBGruber\" target=\"_blank\" rel=\"nofollow noopener
+        me\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003egithub.com/JBGruber\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":null}]},"media_attachments":[],"mentions":[],"tags":[{"name":"rstats","url":"https://fosstodon.org/tags/rstats"}],"emojis":[],"quote":null,"card":{"url":"https://www.youtube.com/watch?v=wmlkj6AnNDE\u0026feature=youtu.be","title":"Creating
+        Documentation and Tutorials for Your (R) Packages with ChatGPT/askgpt","description":"","language":null,"type":"video","author_name":"Johannes
+        B. Gruber","author_url":"https://www.youtube.com/@johannesb.gruber9458","provider_name":"YouTube","provider_url":"https://www.youtube.com/","html":"\u003ciframe
+        width=\"200\" height=\"113\" src=\"https://www.youtube.com/embed/wmlkj6AnNDE?feature=oembed\"
+        frameborder=\"0\" allowfullscreen=\"\" sandbox=\"allow-scripts allow-same-origin
+        allow-popups allow-popups-to-escape-sandbox allow-forms\"\u003e\u003c/iframe\u003e","width":200,"height":113,"image":null,"image_description":"","embed_url":"","blurhash":"UNCZ67^*kCD*kC%2oLRk0LD+n*xuaeIVR*xa","published_at":null,"authors":[{"name":"Johannes
+        B. Gruber","url":"https://www.youtube.com/@johannesb.gruber9458","account":null}]},"poll":null}]'
+  recorded_at: 2025-07-17 15:33:28
+recorded_with: VCR-vcr/1.7.1.93

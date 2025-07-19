@@ -1,57 +1,67 @@
 http_interactions:
 - request:
-    method: get
-    uri: https://social.tchncs.de/api/v1/mutes?limit=3
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
-      Authorization: Bearer <<<MASTODON TOKEN>>>
+    method: GET
+    uri: https://fosstodon.org/api/v1/mutes?limit=3
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 200
     headers:
-      cache-control: no-store
-      content-encoding: gzip
-      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
-        ''none''; font-src ''self'' https://social.tchncs.de; img-src ''self'' https:
-        data: blob: https://social.tchncs.de; style-src ''self'' https://social.tchncs.de
-        ''nonce-7Fj9TF+QtZ+7coNYUMpMsA==''; media-src ''self'' https: data: https://social.tchncs.de;
-        frame-src ''self'' https:; manifest-src ''self'' https://social.tchncs.de;
-        connect-src ''self'' data: blob: https://social.tchncs.de https://f2.tchncs.de
-        wss://social.tchncs.de; script-src ''self'' https://social.tchncs.de ''unsafe-eval'';
-        child-src ''self'' blob: https://social.tchncs.de; worker-src ''self'' blob:
-        https://social.tchncs.de'
       content-type: application/json; charset=utf-8
-      date: Wed, 09 Nov 2022 09:53:03 GMT
-      etag: W/"582fc97db4ca070f8b091916351cf3fe"
-      link: <https://social.tchncs.de/api/v1/mutes?limit=3&since_id=53715>; rel="prev"
-      permissions-policy:
-      - interest-cohort=()
-      - interest-cohort=()
       server: Mastodon
-      strict-transport-security: max-age=63072000; includeSubDomains
-      vary: Accept-Encoding, Origin
-      x-content-type-options: nosniff
       x-frame-options: DENY
-      x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '289'
-      x-ratelimit-reset: '2022-11-09T09:55:00.776740Z'
-      x-request-id: 25f053bb-3a28-46bd-8b51-e76521565a2b
-      x-runtime: '0.015737'
+      x-content-type-options: nosniff
       x-xss-protection: '0'
+      referrer-policy: same-origin
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '281'
+      x-ratelimit-reset: '2025-07-17T13:45:00.573758Z'
+      link: <https://fosstodon.org/api/v1/mutes?limit=3&since_id=132521>; rel="prev"
+      cache-control: private, no-store
+      etag: W/"8f97551667e404a112ae8feaea208adb"
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
+      x-request-id: 40a01daf-8fe7-4d75-b2dc-cc3e5da2fc6f
+      x-runtime: '0.012056'
+      content-encoding: gzip
+      accept-ranges: bytes
+      via: 1.1 varnish, 1.1 varnish
+      date: Thu, 17 Jul 2025 13:44:09 GMT
+      x-served-by: cache-par-lfpb1150056-PAR, cache-muc13976-MUC
+      x-cache: MISS, MISS
+      x-cache-hits: 0, 0
+      x-timer: S1752759850.557831,VS0,VE35
+      vary: Accept-Encoding, Authorization, Origin
+      strict-transport-security: max-age=300
+      alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
     body:
-      encoding: ''
-      file: no
-      string: '[{"id":"32487","username":"rfortunes","acct":"rfortunes@mamot.fr","display_name":"RFortunes","locked":false,"bot":true,"discoverable":false,"group":false,"created_at":"2017-04-16T00:00:00.000Z","note":"\u003cp\u003eA
-        collection of fortunes from the R community. Bot built from Achim Zeileis''  R
-        package \"fortunes\". Nothing official. Updated twice a day.\u003c/p\u003e","url":"https://mamot.fr/@rfortunes","avatar":"https://f2.tchncs.de/accounts/avatars/000/032/487/original/5f8fcf6a2e13e97f.png","avatar_static":"https://f2.tchncs.de/accounts/avatars/000/032/487/original/5f8fcf6a2e13e97f.png","header":"https://social.tchncs.de/headers/original/missing.png","header_static":"https://social.tchncs.de/headers/original/missing.png","followers_count":94,"following_count":0,"statuses_count":4029,"last_status_at":"2022-11-09","mute_expires_at":null,"emojis":[],"fields":[{"name":"Built
-        by","value":"\u003cspan class=\"h-card\"\u003e\u003ca href=\"https://mamot.fr/@koantig\"
-        class=\"u-url mention\" rel=\"nofollow noopener noreferrer\" target=\"_blank\"\u003e@\u003cspan\u003ekoantig\u003c/span\u003e\u003c/a\u003e\u003c/span\u003e","verified_at":null},{"name":"Written
-        in","value":"Go","verified_at":null}]}]'
-  recorded_at: 2022-11-09 09:53:03 GMT
-  recorded_with: vcr/1.1.0, webmockr/0.8.2
+      string: '[{"id":"111219914870194960","username":"adityadahiya","acct":"adityadahiya@mastodon.social","display_name":"Aditya
+        Dahiya","locked":false,"bot":false,"discoverable":false,"indexable":false,"group":false,"created_at":"2023-10-12T00:00:00.000Z","note":"\u003cp\u003eData
+        Viz enthusiast. Study Health financing. Harvard, Fulbright and AIIMS alumnus.
+        IAS.\u003c/p\u003e\u003cp\u003eViews are mine!\u003c/p\u003e","url":"https://mastodon.social/@adityadahiya","uri":"https://mastodon.social/users/adityadahiya","avatar":"https://cdn.fosstodon.org/cache/accounts/avatars/111/219/914/870/194/960/original/6638243964b12c85.jpg","avatar_static":"https://cdn.fosstodon.org/cache/accounts/avatars/111/219/914/870/194/960/original/6638243964b12c85.jpg","header":"https://cdn.fosstodon.org/cache/accounts/headers/111/219/914/870/194/960/original/acdf4c3af8f7708e.jpg","header_static":"https://cdn.fosstodon.org/cache/accounts/headers/111/219/914/870/194/960/original/acdf4c3af8f7708e.jpg","followers_count":90,"following_count":21,"statuses_count":124,"last_status_at":"2025-05-11","hide_collections":false,"mute_expires_at":null,"emojis":[],"fields":[{"name":"Website","value":"\u003ca
+        href=\"https://aditya-dahiya.github.io/\" rel=\"nofollow noopener\" translate=\"no\"
+        target=\"_blank\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003eaditya-dahiya.github.io/\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":null},{"name":"Twitter
+        (X)","value":"\u003ca href=\"https://twitter.com/AdityaDahiyaIAS\" rel=\"nofollow
+        noopener\" translate=\"no\" target=\"_blank\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003etwitter.com/AdityaDahiyaIAS\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":null},{"name":"GitHub","value":"\u003ca
+        href=\"https://github.com/Aditya-Dahiya\" target=\"_blank\" rel=\"nofollow
+        noopener\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003egithub.com/Aditya-Dahiya\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":"2025-05-05T14:25:21.482+00:00"}]},{"id":"110672336059618714","username":"StatisticsGlobe","acct":"StatisticsGlobe@mastodon.social","display_name":"Statistics
+        Globe","locked":false,"bot":false,"discoverable":true,"indexable":false,"group":false,"created_at":"2023-07-07T00:00:00.000Z","note":"\u003cp\u003eHi,
+        I’m Joachim Schork, the guy behind Statistics Globe. I provide R \u0026amp;
+        Python programming as well as statistics \u0026amp; data science content.\u003c/p\u003e\u003cp\u003eWebsite:
+        \u003ca href=\"https://statisticsglobe.com/\" rel=\"nofollow noopener\" translate=\"no\"
+        target=\"_blank\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003estatisticsglobe.com/\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e\u003cbr\u003eYouTube:
+        \u003ca href=\"https://www.youtube.com/@StatisticsGlobe\" rel=\"nofollow noopener\"
+        translate=\"no\" target=\"_blank\"\u003e\u003cspan class=\"invisible\"\u003ehttps://www.\u003c/span\u003e\u003cspan
+        class=\"\"\u003eyoutube.com/@StatisticsGlobe\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003ca
+        href=\"https://mastodon.social/tags/rstats\" class=\"mention hashtag\" rel=\"nofollow
+        noopener\" target=\"_blank\"\u003e#\u003cspan\u003erstats\u003c/span\u003e\u003c/a\u003e
+        \u003ca href=\"https://mastodon.social/tags/python\" class=\"mention hashtag\"
+        rel=\"nofollow noopener\" target=\"_blank\"\u003e#\u003cspan\u003epython\u003c/span\u003e\u003c/a\u003e
+        \u003ca href=\"https://mastodon.social/tags/statistics\" class=\"mention hashtag\"
+        rel=\"nofollow noopener\" target=\"_blank\"\u003e#\u003cspan\u003estatistics\u003c/span\u003e\u003c/a\u003e
+        \u003ca href=\"https://mastodon.social/tags/datascience\" class=\"mention
+        hashtag\" rel=\"nofollow noopener\" target=\"_blank\"\u003e#\u003cspan\u003edatascience\u003c/span\u003e\u003c/a\u003e\u003c/p\u003e","url":"https://mastodon.social/@StatisticsGlobe","uri":"https://mastodon.social/users/StatisticsGlobe","avatar":"https://cdn.fosstodon.org/cache/accounts/avatars/110/672/336/059/618/714/original/a372af9e8c64a839.png","avatar_static":"https://cdn.fosstodon.org/cache/accounts/avatars/110/672/336/059/618/714/original/a372af9e8c64a839.png","header":"https://cdn.fosstodon.org/cache/accounts/headers/110/672/336/059/618/714/original/7c260ad0a149b7b1.png","header_static":"https://cdn.fosstodon.org/cache/accounts/headers/110/672/336/059/618/714/original/7c260ad0a149b7b1.png","followers_count":350,"following_count":5,"statuses_count":611,"last_status_at":"2025-07-16","hide_collections":false,"mute_expires_at":null,"emojis":[],"fields":[]}]'
+  recorded_at: 2025-07-17 13:44:09
+recorded_with: VCR-vcr/1.7.1.93

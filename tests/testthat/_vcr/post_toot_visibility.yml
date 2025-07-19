@@ -1,0 +1,59 @@
+http_interactions:
+- request:
+    method: POST
+    uri: https://fosstodon.org/api/v1/statuses
+    body:
+      fields:
+        status: testing in progress, please ignore
+        sensitive: 'false'
+        spoiler_text: rtoot is the best
+        visibility: unlisted
+  response:
+    status: 200
+    headers:
+      content-type: application/json; charset=utf-8
+      server: Mastodon
+      x-frame-options: DENY
+      x-content-type-options: nosniff
+      x-xss-protection: '0'
+      referrer-policy: same-origin
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '292'
+      x-ratelimit-reset: '2025-07-17T21:00:00.846951Z'
+      cache-control: private, no-store
+      etag: W/"e7685ab325a827877a45c996c95f8401"
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
+      x-request-id: 8b32cb05-a00c-4769-a696-405903cdefe2
+      x-runtime: '0.037405'
+      content-encoding: gzip
+      accept-ranges: bytes
+      via: 1.1 varnish, 1.1 varnish
+      date: Thu, 17 Jul 2025 19:49:40 GMT
+      x-served-by: cache-par-lfpg1960050-PAR, cache-muc13926-MUC
+      x-cache: MISS, MISS
+      x-cache-hits: 0, 0
+      x-timer: S1752781781.800038,VS0,VE62
+      vary: Accept-Encoding, Authorization, Origin
+      strict-transport-security: max-age=300
+      alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+    body:
+      string: '{"id":"114870306788147740","created_at":"2025-07-17T19:49:40.824Z","in_reply_to_id":null,"in_reply_to_account_id":null,"sensitive":false,"spoiler_text":"rtoot
+        is the best","visibility":"unlisted","language":"en","uri":"https://fosstodon.org/users/schochastics/statuses/114870306788147740","url":"https://fosstodon.org/@schochastics/114870306788147740","replies_count":0,"reblogs_count":0,"favourites_count":0,"edited_at":null,"favourited":false,"reblogged":false,"muted":false,"bookmarked":false,"pinned":false,"content":"\u003cp\u003etesting
+        in progress, please ignore\u003c/p\u003e","filtered":[],"reblog":null,"application":{"name":"rtoot
+        package","website":null},"account":{"id":"109302436954721982","username":"schochastics","acct":"schochastics","display_name":"David
+        Schoch","locked":false,"bot":false,"discoverable":true,"indexable":false,"group":false,"created_at":"2022-11-07T00:00:00.000Z","note":"\u003cp\u003eData
+        Scientist/DevOps Engineer at cynkra | \u003ca href=\"https://fosstodon.org/tags/Rstats\"
+        class=\"mention hashtag\" rel=\"tag\"\u003e#\u003cspan\u003eRstats\u003c/span\u003e\u003c/a\u003e
+        enthusiast\u003c/p\u003e","url":"https://fosstodon.org/@schochastics","uri":"https://fosstodon.org/users/schochastics","avatar":"https://cdn.fosstodon.org/accounts/avatars/109/302/436/954/721/982/original/9f0f6bfb096f5451.png","avatar_static":"https://cdn.fosstodon.org/accounts/avatars/109/302/436/954/721/982/original/9f0f6bfb096f5451.png","header":"https://fosstodon.org/headers/original/missing.png","header_static":"https://fosstodon.org/headers/original/missing.png","followers_count":1037,"following_count":138,"statuses_count":283,"last_status_at":"2025-07-17","hide_collections":false,"noindex":false,"emojis":[],"roles":[],"fields":[{"name":"Personal
+        Webpage","value":"\u003ca href=\"https://www.mr.schochastics.net/\" target=\"_blank\"
+        rel=\"nofollow noopener me\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttps://www.\u003c/span\u003e\u003cspan
+        class=\"\"\u003emr.schochastics.net/\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":"2022-11-24T06:24:48.497+00:00"},{"name":"Github","value":"\u003ca
+        href=\"https://github.com/schochastics\" target=\"_blank\" rel=\"nofollow
+        noopener me\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttps://\u003c/span\u003e\u003cspan
+        class=\"\"\u003egithub.com/schochastics\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":"2024-05-04T19:57:14.688+00:00"},{"name":"Side
+        project","value":"\u003ca href=\"http://worldclubratings.com\" target=\"_blank\"
+        rel=\"nofollow noopener me\" translate=\"no\"\u003e\u003cspan class=\"invisible\"\u003ehttp://\u003c/span\u003e\u003cspan
+        class=\"\"\u003eworldclubratings.com\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e","verified_at":null}]},"media_attachments":[],"mentions":[],"tags":[],"emojis":[],"quote":null,"card":null,"poll":null}'
+  recorded_at: 2025-07-17 19:49:40
+recorded_with: VCR-vcr/1.7.1.93

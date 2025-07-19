@@ -1,106 +1,350 @@
 http_interactions:
 - request:
-    method: get
-    uri: https://social.tchncs.de/api/v1/instance/domain_blocks
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
+    method: GET
+    uri: https://mastodon.social/api/v1/instance/domain_blocks
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 200
     headers:
-      cache-control: no-store
-      content-encoding: gzip
-      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
-        ''none''; font-src ''self'' https://social.tchncs.de; img-src ''self'' https:
-        data: blob: https://social.tchncs.de; style-src ''self'' https://social.tchncs.de
-        ''nonce-MShkf8UG3fn1NQzkH5kOyQ==''; media-src ''self'' https: data: https://social.tchncs.de;
-        frame-src ''self'' https:; manifest-src ''self'' https://social.tchncs.de;
-        connect-src ''self'' data: blob: https://social.tchncs.de https://f2.tchncs.de
-        wss://social.tchncs.de; script-src ''self'' https://social.tchncs.de ''wasm-unsafe-eval'';
-        child-src ''self'' blob: https://social.tchncs.de; worker-src ''self'' blob:
-        https://social.tchncs.de'
-      content-type: application/json; charset=utf-8
-      date: Tue, 29 Nov 2022 12:25:29 GMT
-      etag: W/"5dd9bef452a40b172d9ee6f048d4461b"
-      permissions-policy:
-      - interest-cohort=()
-      - interest-cohort=()
-      server: Mastodon
-      strict-transport-security: max-age=63072000; includeSubDomains
-      vary:
-      - Accept-Encoding
-      - Origin
+      x-ratelimit-reset: '2025-07-15T20:35:00.664703Z'
       x-content-type-options: nosniff
+      cache-control: max-age=300, public, stale-while-revalidate=30, stale-if-error=86400
+      x-runtime: '0.067993'
+      referrer-policy: same-origin
+      x-ratelimit-remaining: '292'
+      x-request-id: 0dc132c183578609c0cc00799ceb0c7a
+      content-type: application/json; charset=utf-8
       x-frame-options: DENY
       x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '298'
-      x-ratelimit-reset: '2022-11-29T12:30:00.070647Z'
-      x-request-id: d6a861e8-ed65-413f-bbc4-44de5cf0fc67
-      x-runtime: '0.012301'
       x-xss-protection: '0'
+      via: 1.1 varnish, 1.1 varnish, 1.1 varnish
+      etag: W/"e100c2390c18856a9a2eea3a37263c52"
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
+      content-encoding: gzip
+      accept-ranges: bytes
+      age: '93'
+      date: Thu, 17 Jul 2025 19:53:43 GMT
+      x-served-by: cache-fra-etou8220177-FRA, cache-fra-etou8220053-FRA, cache-muc13942-MUC
+      x-cache: MISS, HIT, HIT
+      x-cache-hits: 0, 161, 0
+      x-timer: S1752782023.037971,VS0,VE8
+      vary: Origin, Accept-Encoding
+      strict-transport-security: max-age=31557600
+      alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+      content-length: '19664'
     body:
-      encoding: ''
-      file: no
-      string: '[{"domain":"dev-wiki.de","digest":"def4d2e153204d0ae1ded5b6ae6c35e7777eda93bf39da7bc53669ac13c8a129","severity":"silence","comment":"Not
-        properly moderated, admin seems empathize with corona myths.  "},{"domain":"gs.kawa-kun.com","digest":"77a0b101a224534a7bc7db793f2670431a3ff414d9bac23abfd7c38ba3e35096","severity":"silence","comment":"Considered
-        being lawless"},{"domain":"humblr.social","digest":"d886ef4cb80c77e2638c4f1bc162d06052f0b6d70428eee116bb52d93ec4bd6b","severity":"silence","comment":"Workaround
-        for instance-wide CW"},{"domain":"myfreecams.com","digest":"4d13e80e6cd7863d836618a0ee08e9f4b66d28671b9ec942f2b648177e9f83e7","severity":"silence","comment":"Workaround
-        for instance-wide CW"},{"domain":"pawoo.net","digest":"e7c641cf9cd8b5c4513e22d0dfd3f914835a16bd4011801dfa0976fedf61bf02","severity":"silence","comment":"Media-block
-        due to in germany illegal media"},{"domain":"sinblr.com","digest":"d77ba0c0b39011b7c894510db43047b5b3159a969e2ec887663744ba6924f01d","severity":"silence","comment":"workaround,
-        untagged nsfw content"},{"domain":"765racing.com","digest":"2857502859a31520ad5a21bcb31ab9a54ec08205ae129e8d6f6e753626484eaf","severity":"suspend","comment":"Considered
-        being lawless"},{"domain":"anim*.****ite","digest":"e7afdc8e99794b60044d2dc69853232fd88bf7767b08d57c06eae1dcdc2cf6d6","severity":"suspend","comment":"shitposting
-        instance, administration seems pro-pedophilia and lolicon-content"},{"domain":"bae.st","digest":"87acc08804bcc3b72254fcae7381f2e03a6cb117d2636480bf65125f88b42da6","severity":"suspend","comment":""},{"domain":"baraag.net","digest":"a3da30d2dfb76009289509cb3f35abd0a43b0736f0abf1ddd17c05685902a6fb","severity":"suspend","comment":"much
-        unmoderated loli content and related"},{"domain":"brands.town","digest":"8a6c5f9ea165f8d3d2f73f35bd420f09454829f8cd7f8c250a348c175badc817","severity":"suspend","comment":"spam
-        / copyright violations / impersonation (funny tho)"},{"domain":"brighteon.social","digest":"0be5721be2346e0b892e6cc0db706b6b950a0d215d9d5481e851785571a89067","severity":"suspend","comment":"hatespeech,
-        misinformation, shitposting, ..."},{"domain":"childpawn.shop","digest":"fc17daf8d2dbc999aa1da044992bff67c4e2f565aabe6bc1f15d74473eff9507","severity":"suspend","comment":"loli/pedophilia,
-        racist content"},{"domain":"crypto-group-buy.com","digest":"4861b07e6450e2a5a862124420db543c46fcc7d280c8e0d5e07b2d388ea1e636","severity":"suspend","comment":"spam"},{"domain":"degenerates.fail","digest":"a61fbbd27becc4c23ca5307f89703853c3538aff5839e8dab161221939a536de","severity":"suspend","comment":"considered
-        being lawless"},{"domain":"exited.eu","digest":"ced9128fc7e5eb0398245e58610c1c006e01ac879e7cb66c6880d2e43174e89b","severity":"suspend","comment":"Considered
-        being lawless"},{"domain":"fedichive.tk","digest":"d6809fe37cd400946160ffb69fd29ab6d5b92ec5bc30c60d1660b02296ec4da3","severity":"suspend","comment":"Spam"},{"domain":"feminism.lgbt","digest":"3542c488b41ce94a2cf9737bfe67c35252941a42af092ac4078634bc36578491","severity":"suspend","comment":"Selfprotection
-        (errors, down) - suspicious activity"},{"domain":"freeatlantis.com","digest":"23414c6b236b245c662efa05db8662743261e08cf154237d5190a6ec26887e1c","severity":"suspend","comment":"fake
-        news / propaganda"},{"domain":"freecu*********t.com","digest":"7f26b4fd2707a70492f35ba6383d8f42f991474a9072f13e2c50bf5915fb9709","severity":"suspend","comment":"shitposting
-        instance, bad moderation"},{"domain":"freefedifollowers.ga","digest":"55c7e62758bbff9205c11efab25bddf0437423e64fd99c110d76e3479e7ee8f1","severity":"suspend","comment":"Spam
-        / Harmful administration activities"},{"domain":"freespeechextremist.com","digest":"a67a3f85d90881ae32716d0eaf5a348b53096e07ea38a20797d74824074e281b","severity":"suspend","comment":"Workaround
-        for instance-wide CW"},{"domain":"friendica.eskimo.com","digest":"8be74977142a1008ea8c5173c60cb33a1bda7c5ef794b0d38ddef69b5c266b79","severity":"suspend","comment":"admin
-        appears to be openly racist"},{"domain":"gab.ai","digest":"a32ca19226c88a08be5483053f71ccacae76506b60c9ac14174bbc50d9fc3705","severity":"suspend","comment":"Considered
-        being lawless"},{"domain":"gab.com","digest":"e8bd7afb2125b7ea5e1b885fac2a657d817eec289ed870aa3d1d0acbe6aded8f","severity":"suspend","comment":"Considered
-        being lawless"},{"domain":"gameliberty.club","digest":"75e80dd194bc635186cf0b4a07524d7746b4b261cbd5fb15007189e4fccfbbb6","severity":"suspend","comment":"Suspicious
-        or harmful administration activity / considered lawless"},{"domain":"getwild.online","digest":"7c17b88f4b78606d5094cea655284679a380525cd7642a6c1ef24de5a0cc2a24","severity":"suspend","comment":"dedicated
-        to porn, not properly enforcing nsfw. rejecting media would be useless as
-        pretty much only media is posted."},{"domain":"gitmo.life","digest":"ce478739d7d3627cbde08e6276b80d459a2bbf842b2698a195684f581ac8defa","severity":"suspend","comment":"considered
-        being lawless"},{"domain":"hentai.baby","digest":"55ae7fc705dc6b408085ba34c7f0172ffce1fad11c707ca900f49475dad3a352","severity":"suspend","comment":"loli"},{"domain":"iddqd.social","digest":"8b92d2bc4447cf5475ec0a688c1894ae5ccc720c034e46c2855ac808909172c9","severity":"suspend","comment":"multiple
-        rule violations"},{"domain":"kenfm.de","digest":"bffe6724c620cd252569678f9cdee5a1da51f23ec7d2ce45508ad10f0499d3ff","severity":"suspend","comment":"Verschwörungs-Mythen
-        und Hetze"},{"domain":"kitty.town","digest":"83b5c39377a7ddfe05e1b10512a9c3c84f997e1a1bc8b4eb2abc2845755d4c64","severity":"suspend","comment":"Suspicious
-        or harmful administration activity"},{"domain":"kiwifarms.cc","digest":"8c07b582ccad117d4fa14d4acca0d6977a0a737eb00e0f6a1ddf08228532e708","severity":"suspend","comment":"Workaround
-        for instance-wide CW"},{"domain":"loli.pizza","digest":"1522dc9020fbf0ce2a1433a49bc9e026b3042b4570707dc61c980d33af128203","severity":"suspend","comment":"Not
-        well moderated, allows loli content - even \"boosted\" by admin"},{"domain":"masto.glx-consulting.com","digest":"99175a148ba5f37647e0e8e7e797066bcd36797e93eba8c488bb5811289977e4","severity":"suspend","comment":"Excessive
-        spread of conspiracy myths"},{"domain":"meld.de","digest":"7285a20cadbf9bca0510d695df0c45492700cf11b9a1a55f6004149fd2afdea7","severity":"suspend","comment":"Conspiracy
-        instance"},{"domain":"mstdn.foxfam.club","digest":"ae63b259151df535f1d408367458f52f8aaecbf48c21080eb778703d3a4f703f","severity":"suspend","comment":"appears
-        to be 100% rss bots ... and a ton."},{"domain":"my.dirtyhobby.xyz","digest":"89c918c5efd375789869f7068c6cf47389909ff281a514fa4a60d6f17bda3eb2","severity":"suspend","comment":"unmoderated
-        content"},{"domain":"nazi.social","digest":"a9defb603c0ff2a974c51fcfbf46f19f40f4214f492dbd7e21f0459f283b1902","severity":"suspend","comment":""},{"domain":"neckbeard.xyz","digest":"19452ff02670099643197b3fec15c0d43e42a3dbbe83b0fb4d039d5f77d1932e","severity":"suspend","comment":"considered
-        lawless: shitposter instance seemingly allowing loli/conspiracy/hatespeech
-        content "},{"domain":"newjack.city","digest":"43f46e704409dbeab808c27b5d78ab5164d9bc52a2d06bef7907dca30935ea5e","severity":"suspend","comment":"Considered
-        being lawless"},{"domain":"noagendasocial.com","digest":"03862ed4050b1d6c7b914e369284d75f9cffd17288e13d6587dad5ee51599be5","severity":"suspend","comment":"hatespeech,
-        misinformation, shitposting, ..."},{"domain":"nobodyhasthe.biz","digest":"95896a6fa94fa220d15314771a5757484f1e531a7a0a8ce6bee5d178a1e9966a","severity":"suspend","comment":"national
-        socialism, and more"},{"domain":"ns.auction","digest":"458e6284e52fbebf33c2be2ffef00653fab79f8b4c0ff2da5ce4d0e4653dd925","severity":"suspend","comment":"Unmoderated
-        racism"},{"domain":"pl.smuglo.li","digest":"843729dbdb7430e3ff2364c5fbb6a40df3fe8ea2bf439adb13a7072b691c257e","severity":"suspend","comment":"Considered
-        being lawless"},{"domain":"poa.st","digest":"24f316abb4ecb518311996750acba82970a678e00927266e09e51705267836c2","severity":"suspend","comment":"Self-described
-        as shitposting-instance, much racist content"},{"domain":"posting.lolicon.rocks","digest":"0bdc61adc504242126851f09de2a68f2e6821cc9843e618fd843a5cabf284fea","severity":"suspend","comment":"multiple
-        rule violations by users and admins (such as symbols of national socialism)"},{"domain":"querdenken-711.de","digest":"8eeee5a7e282bb5cbcf6e2f6d6db74b2d4e3ca2dbb21e7abfb4188c047e8a861","severity":"suspend","comment":"dedicated
-        to conspiracy myths"},{"domain":"radiosocial.org","digest":"e662672d14b94b33a85de581cb83125a38f266e52e98158c16ae8c82600c9db1","severity":"suspend","comment":"discontinued
-        instance, block to avoid errors"},{"domain":"sealion.club","digest":"c90dc2eff751603d479d7011e24177a1a3b450a47bb87063d3e295cc33675f85","severity":"suspend","comment":"Considered
-        being lawless"},{"domain":"search.fedi.app","digest":"15e9b52c5fa83bfbe8a8c258bacf9af2c6fc96b7c899bd3ce38e4bbcd760d913","severity":"suspend","comment":""},{"domain":"shitposter.club","digest":"a456580c35ff79445118613dc23cabcc61f4f43ba6d777faaaa667d3de7262c4","severity":"suspend","comment":"Considered
-        being lawless"},{"domain":"sleepy.cafe","digest":"98828c9a5c00114ac673ea4e7c1979599af51ce8ead9d9689a862c1a3e01bef3","severity":"suspend","comment":"shitposting
-        / harassment / nazistuff"},{"domain":"sneed.social","digest":"b86a99c713273468fcdc199bc6b11902dadd1e77960309c606817b00455473ed","severity":"suspend","comment":"shitposting/nazism/hatespeech
-        instance"},{"domain":"social.ancreport.com","digest":"90ef730c962b6bbfb855bc673ec7af634bcdc3bf33b5830709a481f75a427f92","severity":"suspend","comment":"spam
-        and loli content, overall content violates multiple rules"},{"domain":"social.hatthieves.es","digest":"8c8275efb10967a4b75e55e22fa97be182e47a0a0887d2e478a05b905291f8c4","severity":"suspend","comment":"Suspicious
-        or harmful administration activity / considered lawless"},{"domain":"socnet.softgirl.online","digest":"947af47d7e18a94cd7b561e4ee482572d0e1aa899b2aae0d39646b90f91079ba","severity":"suspend","comment":"spam"},{"domain":"solagg.com","digest":"02eeb2d1ddbf3ed33ba965a3ca6c57982afa149dd7e27f50ec47e2e184a09191","severity":"suspend","comment":"spam,
-        possibly harmful activities, will re-review"},{"domain":"twitter.1d4.us","digest":"0c6b4fdf03346b1449ed0a697fe2e4a54a04706ff21e09593e1e4ffc0fb02d22","severity":"suspend","comment":"spam"},{"domain":"varishangout.net","digest":"f2b2f6302c7d4204817a15a4111516493c18c567249af5c3642b1b85352fab1e","severity":"suspend","comment":"loli/weapons/shitpost"},{"domain":"witches.town","digest":"5fceb2569b3e41035b1cfdf9d14e7945efdf2af68ca43cbbdc01fe3acef2db76","severity":"suspend","comment":"Selfprotection
-        (errors) due to instance discontinuation"},{"domain":"youjo.love","digest":"793c2d609d9705168d06554967add315acba674b8b3f5fbedcea86881da7ba6f","severity":"suspend","comment":""}]'
-  recorded_at: 2022-11-29 12:25:31 GMT
-  recorded_with: vcr/1.1.0, webmockr/0.8.2
+      string: '[{"domain":"ac.akirin.xyz","digest":"5eb73fede7eaa19e7ad756c30783e858acffea6ff0afb574fde9c351922c62bb","severity":"silence","comment":"Unmanaged
+        spam"},{"domain":"activitypub.awakari.com","digest":"11eb1f1404926b45cd8a3edc8ab509ffbdd6de5c0948b4aa840b5e23d0bcee38","severity":"silence","comment":"Spam"},{"domain":"bgzashtita.es","digest":"9c74ca7a36db36bf782a264ce69033cca4317c416921ee9fc87b74051cde0f7b","severity":"silence","comment":"Misinformation"},{"domain":"brighteon.social","digest":"0be5721be2346e0b892e6cc0db706b6b950a0d215d9d5481e851785571a89067","severity":"silence","comment":"Conspiracy
+        theories"},{"domain":"bsd.moe","digest":"e19231735923fbb5ce6d73986339b08e5dad96c75c903b003f8827716c0a06b6","severity":"silence","comment":"Harassment"},{"domain":"catcore.life","digest":"d3cf773ae9f44197751de1d6b060d8498b849d295f1a37eda7e38ab29f140bbb","severity":"silence","comment":"Unmanaged
+        spam"},{"domain":"dicekey.jp","digest":"49bf9086c62ca422368fc375486b43fd1e92c9ddb161beec62a2f95e498bb48a","severity":"silence","comment":"Unmanaged
+        spam"},{"domain":"fr13nd5.com","digest":"86811acd84b7c3124aead2125fa22ae0a8f6175178e89e26f0fecc046094eae4","severity":"silence","comment":"Misinformation"},{"domain":"freezepeach.xyz","digest":"079978fa420e3804995892d3da797cba45ab926ed31b72c2ce66a434a0eb746a","severity":"silence","comment":"Harassment"},{"domain":"kids.0px.io","digest":"c99a6d8b8e6bb665be91dedbaacf0922566e1aff93000ae2f0d418c2b2cb6f23","severity":"silence","comment":"Unmanaged
+        spam"},{"domain":"krdtube.org","digest":"e454341c985b667c14302990019e0045dde64a1de8572aedc7f8d171dc774917","severity":"silence","comment":"Misinformation"},{"domain":"mastodon.sitejp.synology.me","digest":"1276cb526f675c25910ecec548b8340534df10b43ac49d1d1ce4b3fb698bf212","severity":"silence","comment":"Unmanaged
+        spam"},{"domain":"minds.com","digest":"853bdc6d75280a1491a05288cbb04c843d4b1d54bc09cddf4a5d1167029ba7f9","severity":"silence","comment":"Hate
+        speech"},{"domain":"misskey.io","digest":"4926d81556f4242cf1b7d1f4cbf63ee8c29fd5257c20bbfb25fd425f9db1351f","severity":"silence","comment":"Inappropriate
+        content"},{"domain":"misskey.shunrin.com","digest":"9b454964b29eefb6243205e25d1027075e8d4aaced93108333c1399ad4929d52","severity":"silence","comment":"Unmanaged
+        spam"},{"domain":"m.n1l.dev","digest":"e44d0b59b05785cf3faaf7a073bd53f264def1dea9fe9f054d5db0efb59ea611","severity":"silence","comment":"Unmanaged
+        spam"},{"domain":"mstdn.foxfam.club","digest":"ae63b259151df535f1d408367458f52f8aaecbf48c21080eb778703d3a4f703f","severity":"silence","comment":"Third-party
+        bots"},{"domain":"noagendasocial.com","digest":"03862ed4050b1d6c7b914e369284d75f9cffd17288e13d6587dad5ee51599be5","severity":"silence","comment":"Harassment"},{"domain":"onion.social","digest":"8e09310ed81163f26e31befa18cfa8591e41b8474b5514616c45fc09589e85c7","severity":"silence","comment":"Spam"},{"domain":"pika.moe","digest":"c87ff5e7659521b5543db1da783d324701956623962e9b84b6820d79cba6c283","severity":"silence","comment":"Unmanaged
+        spam"},{"domain":"shitposter.club","digest":"a456580c35ff79445118613dc23cabcc61f4f43ba6d777faaaa667d3de7262c4","severity":"silence","comment":"Harassment"},{"domain":"shitposter.world","digest":"539b00b98153208dac828aeabc42d37791bede2bbc640410c80eee68861d0af3","severity":"silence","comment":"Harassment"},{"domain":"sinblr.com","digest":"d77ba0c0b39011b7c894510db43047b5b3159a969e2ec887663744ba6924f01d","severity":"silence","comment":"Spam"},{"domain":"social.onlinesession.app","digest":"2e154c8e4d61e7e3fb2ce400fab8e945200f1f20be769aab9564ae79ac88906c","severity":"silence","comment":"Unmanaged
+        spam"},{"domain":"social.quodverum.com","digest":"acb2a6826ab0741142935b0e0454b381c0b32a5dfcf54bd43c354379263aec1f","severity":"silence","comment":"Misinformation
+        and conspiracy theories"},{"domain":"tickler.cc","digest":"b2d9a0b09a48a5e2579b57e519b2808f634c4de4bad7b98dcbd55be65e8017c4","severity":"silence","comment":"Unmanaged
+        spam"},{"domain":"toot.love","digest":"85ed13220ec6d36c12c9e9791c5f4f01bba597739bc4b43a52af01de6276df0b","severity":"silence","comment":"Harassment"},{"domain":"unfufadoo.net","digest":"bd9e9b65ac571619d96a45d131f34b920418ae9e7c910e55c7a3fed02bdee0d1","severity":"silence","comment":"Spam"},{"domain":"urweibo.com","digest":"91bc2680442de1bf7e75f90ae37daa90026951c0f1a60cd969b6679ff2187785","severity":"silence","comment":"Unmanaged
+        spam"},{"domain":"usasa.ky","digest":"b34d08dd3f65c5847f4873323ada516a175f6891b914e8607e87735a28bcdf79","severity":"silence","comment":"Unmanaged
+        spam"},{"domain":"10minutepleroma.com","digest":"6b057968f81078c569417da80aee0567d0de9054f2236a7acfe617820faa9e8b","severity":"suspend","comment":"Spam"},{"domain":"5dollah.click","digest":"7418b7c94c49f1716576691873a57c129bbeea2a1fc49e5bd4f7e7f49eb8e1ee","severity":"suspend","comment":"Hate
+        speech"},{"domain":"activitypub-proxy.cf","digest":"aa3f26bd57fa9d987fe9c71927eb7e43d6dbfb03b9d68a5aa38e78d115927a1d","severity":"suspend","comment":"Spam"},{"domain":"activitypub-troll.cf","digest":"d464ab2c718d89f9b9ee21ef536b630e392e40736c7dca12423bdb78aea0d365","severity":"suspend","comment":"Spam"},{"domain":"aethy.com","digest":"3cb7afaffd2a86b175120a7597c6567b323a910281afa8199abe1a2d366b4b05","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"annihilation.social","digest":"aacb1e6c18672a3f63c3d0f07cc624664e2dc44726d07779ccfdaead6a33efb6","severity":"suspend","comment":"Hate
+        speech"},{"domain":"ap.***.st","digest":"7369e869e333fcbbdb782e6f8e2fb5138032110046f3d968b0c2939167516dd9","severity":"suspend","comment":"Spam"},{"domain":"asbestos.cafe","digest":"a1acc877eb2563074e8189ee34a7ba4cd9fe5c4f5247143d553bdbe28d6be5f4","severity":"suspend","comment":"Hate
+        speech"},{"domain":"a.sc","digest":"93f97f9e4124fc3cd860cf131f8ba9e135b5d7abbfb1dcace71aa122071cec30","severity":"suspend","comment":"Hate
+        speech"},{"domain":"ati**.***ss","digest":"59845efd43e46966fb98d76f697f616b80de6512d0a6866e2ac7af25c73cc135","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"bae.st","digest":"87acc08804bcc3b72254fcae7381f2e03a6cb117d2636480bf65125f88b42da6","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"bais*****.top","digest":"fddb58ffe96e8c8a4567f638a63f4d968a5d35734482456f8a971d401c55c0f7","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"bar***.*et","digest":"a3da30d2dfb76009289509cb3f35abd0a43b0736f0abf1ddd17c05685902a6fb","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"beef*****.*lub","digest":"6f5a356f7a82418214b906a574231efb86f7b243470c6d48359d42571ef23f93","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"beefyboys.win","digest":"4fe81335821bb7c5750c3241e40697f51152bf6795a92cd4d0e73280980e5c3d","severity":"suspend","comment":"Hate
+        speech"},{"domain":"best****.fun","digest":"83ecef25e228557645f49df019f4e1d0d23afe8104881de20d2cf8213361c770","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"beta.birdsite.live","digest":"d125004872caf38fdf54a149c627636fe8900daef2b225ffdd3e60108c667321","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"beta.mstdn.cf","digest":"33c87806cd0e37ceeecd97c9c3f09380d79c853bcf625e7ce578ecd64145d7c1","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birb.elfenban.de","digest":"5d2c6e02a0cced8fb05f32626437e3d23096480b47efbba659b6d9e80c85d280","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birb.redra1n.net","digest":"3d38f3067b713a6eadf20adaedfaf1d671d82c6417d29cca4d5b652345252c1f","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birb.stream","digest":"1f4450b41f961c97fada8255b2038b034cd0179c7c838f65c9a92274d2a90b4d","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdbots.leptonics.com","digest":"ce019d8d32cce8e369ac4367f4dc232103e6f489fbdd247fb99f9c8a646078a4","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdbridge.autonomy.earth","digest":"d7f7ebd9897bc6bdd9da2f043cd8f2d1cef4239e6b7e7b805f94e9751433a7cc","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"bird.evilcyberhacker.net","digest":"32529ebe6aafb100909d7d5c03a33e7c5d3fc135d13949d8110365a553db40ef","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"bird.froth.zone","digest":"e18ce548e832e3943331930db8b5926daa22970dffcfa9c116f70bd1f5d1c6c4","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"bird.im-in.space","digest":"2f9478df7e327df2f2b6b1862dc298dde2eb163a0a3735eb9cce0355f2f8990b","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"bird.istheguy.com","digest":"db344c9913da8a3413cf9f63b87ddd3cd4cc2ca97714511bb57114b00ca2171f","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdlive.grupotd.nat.cu","digest":"a3856f92af44f75b8b63eaecc097223072492661afa6a2ebc0733f7608af60e0","severity":"suspend","comment":"Third
+        party bots"},{"domain":"bird.makeup","digest":"b1acee6e74fe5f0c27675f64910c070ad5fa318eae8f3ca2ee64142cf3880251","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdmakeup.opiumpost.org","digest":"9bfe40dcbc93f3d339e6ac2ab3aecd821c5bb7bca018011209bb4fd0638141be","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdmakeup.sboulema.nl","digest":"ec2b9f98a407934fd4edb9ceffc7899a7231b0ad62969f18b3a05796b83d03c2","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"bird.r669.live","digest":"b50bceda89a71e9fd3b39428af28329735416e0e7cf05473df54bffa64f62c64","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"bird.seafoam.space","digest":"9972f47c8101975d418e07c556738cb16f13e30db354ff711e98bcf37bab4a4e","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.am-institute.swiss","digest":"0705396041d78ad65693bd9954476156b7dbc007a8fc0252b5bad760d2d64d73","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.b93.dece.space","digest":"e083529728dfefd4620d0a2d52f4fa2a1b843ba70bd240dce723c1c7c3655c2d","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.blazelight.dev","digest":"5552f5969e7be346e8b5534647af89588690e63b96c1697d56a1e42078c1e7fe","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.cloutier.co","digest":"481346ea17e50aa8690e85a10e207d34e1b1e283fde4b422234707e39134de45","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.darkesttimeline.social","digest":"ba542bded799a48216a8590377fb0c344c53c78525cb57cfc717d16618fc6d2b","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.frog.fashion","digest":"22c286a940d76dea4aef83bd476f6d888518a06e34b201d77c5ef549cc986d08","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.gabeappleton.me","digest":"05136a7ea72c76a3fb363f02a5833a36d00473810b29d284d75adfa0265ac715","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.gred.al","digest":"ef0e867fcbc51f438f9a67c53a87a432fd38f821679df46029bdea3d6357e090","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.james.moody.name","digest":"5cf7cc7c22eba0093e08f86aeaf00cbfd02bec26a229f83ce7fc90eb71b1133f","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.jemverse.xyz","digest":"b78a6e9886cab6b45d45a0b344ade19521c2ef23e0fbd7ee125cb3806ac24a1b","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.kaijauch.de","digest":"5b68d643a7367d82e052d94596eb05766748beae354cfc284b3c250a0966362e","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.lakedrops.com","digest":"d4554b5a32b57ddafa17938713881b61b0ebabd957e35a17d6635a1a5b4efc1a","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.link","digest":"70e363c228a78aa32ec39809186fa537b7a9e4e96d46b2118076a8e895109d28","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsitelive.baguette-it.social","digest":"85804e03132555bc18ce8849f97787c546fc7a5bf9a70f7ff34bd0962fc095ed","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsitelive.bubbletea.dev","digest":"b572798738265a0bcc1eb3aa1baf382e779b1514d00f5f27a24863faf4afe0dd","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsitelive.falschgold.net","digest":"6e46cbe63217b4fdbf4d6c81621fd6c1ed22e3fef7e123c0306a8c96875ac73d","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsitelive.kevinyank.com","digest":"d5f6189859d49186acd198a60ef1f52a5642f9d3b6a0798b7b83d64eb1e0584d","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsitelive.loca.lt","digest":"c4e496e9f7347b32c66e6f450a4f777160e2f57ea1cecbadead8a5d3ecb3642f","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsitelive.moistgarbage.info","digest":"c82ceee1020b6f087a850af3f74c196f93ecd1d1373acdbffb82572acf09e208","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsitelive.samedwards.ca","digest":"f2dea00cd88471b4bce07eedecd0c6ce4ce0bbf2b746e4d442eb0968694d38f3","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsitelive.treffler.cloud","digest":"4daa67dce9dbe03b98b27c8e5eda4b9766c179c541928686c34ca222daeaadd0","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.mastodon.me.uk","digest":"04bebcfeaefce5b48c21603b0e45a666bdc026a0067b4a88d60eefa81b367154","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.miisu.net","digest":"03a6788e9a518d11324842f648b71b73daa5244353c45510fd040ff74f3b83df","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.monster","digest":"158f4c6bb789f84d9bddb54960ecc0eecb917ae09e35e1081f255ef80a61f82f","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.nytpu.com","digest":"9a7d93fb704fd063ed8b14a1bd16daf1f39ac4e6deb00ff759d221e1cab36442","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.oliviaappleton.com","digest":"01957e42c3cb60f253137710a8ee212210050a4ec34535ce7d659844309ff538","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.platypush.tech","digest":"e87e4bc4ec8688cbdb7fc363746bf3fe8f836cc7ca7242750ba79b009afbcbf9","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.seejy.ninja","digest":"e62fa0748984cfbbd7040a97e86ac415ad3e26892eaba847973f3ac88b71c70d","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.skye.cx","digest":"c16f2497ee150e1a3e85d7cd3f186b4c8cb9bd4f8c5f6c4a9f52f6a08c2361c8","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.slashdev.space","digest":"3bf84dbfb4d8564a8f37f8a5e891482681b4a55b3a489affb7b8e66644212994","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.spectreos.de","digest":"615b6fa3fb65b280bf45ff62ee62d84a09d23a0e8b9ccff848616ea1c4762863","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.tcjc.uk","digest":"420907266bcbb845619eaaf01c4419cfdba99cdae29398bfb580d679c4e05921","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.thorlaksson.com","digest":"a710c0db641ad4a9d9ce3984c0761e71f8de0074a1ee1afbcfa073db2df7d15d","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.toot.si","digest":"3b5a8c04fa832725f0ba162f6b6960d70be2425dc3e6c8d97e9d56f76409cfb8","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.vrparty.social","digest":"7083d94b3e9c838141c5ad23291857ad2a6f9fd0f827099042bd00e427d475ea","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.weiranzhang.com","digest":"6dff68e8a2303ff911bc222e2810d115355cbabeac3ba8d6490b4151d4fb4472","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"birdsite.wilde.cloud","digest":"c60fe03499b81fb17ab5391088876d0fc14a66c3203a5e469c00546a537b0653","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"bmu.1a23.studio","digest":"164a3653f280ce27798261f37476041c311c67f10e5d9e61f202222c2900aac5","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"brands.town","digest":"8a6c5f9ea165f8d3d2f73f35bd420f09454829f8cd7f8c250a348c175badc817","severity":"suspend","comment":"Spam"},{"domain":"breastmilk.club","digest":"0200aa554727ed05ea5b1f595dfb472b2632e265225e874bc1559994cabb27eb","severity":"suspend","comment":"Hate
+        speech"},{"domain":"bridge.birb.space","digest":"f7473ee34fa66f09e4a07cdf41965fa9f96ea2533ac6e5a01a1a18956b58c0c1","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"bridge.yopp.me","digest":"cb35ad535e637d84efc89323d53745e34027f187c7bb4426c210b1873e6c8650","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"bur****.*oe","digest":"37d72600af23c43bd603515e1c86fc2489dc0f160e9ef4709920734d3b06f5d5","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"cachapa.cc","digest":"3070623861cc7e0547290b0e1ec48abae03548d9337f370ff66df5637c45ef2f","severity":"suspend","comment":"Hate
+        speech"},{"domain":"cachapa.xyz","digest":"71318a4b66d1b91bc049da138bad087f4647e8e467c1a55de9f1150464175b03","severity":"suspend","comment":"Hate
+        speech"},{"domain":"cann****.*afe","digest":"136faf1edf6cd6c634213d91e4c8e63904e631c9b09ff916093b407d95a27378","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"cass****.**use","digest":"228f5272b955e1e2e81ccf978a51e1d60806c6ada1b46d48a4b56476343c4c8f","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"catgirl.life","digest":"41830f79c7705749703e7ba26f4132acd195ada19eb54b96fc2c9975755437c1","severity":"suspend","comment":"Harassment"},{"domain":"cawfee.club","digest":"740a1253273947e1277609807041c4133619c120b46281d1e493fff7b4119ff8","severity":"suspend","comment":"Hate
+        speech"},{"domain":"chaurocks.com","digest":"ebe63c08d204a2daadb60c18629cb06419cf38b36814d195d207a9ae15d2ef7e","severity":"suspend","comment":"Spam"},{"domain":"chil*****.**ace","digest":"761d9e41230dfcc5260ff4b9488ce586131a07dfbadc816f0030048f173915b9","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"chil*****.su","digest":"05df03c3b26a71a520c0ba2b8a94d0effaf904df7d6b6d694ee52fb352c63ec9","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"chil*****.top","digest":"c28d972b22b7eb0d9aae097cafe894b279dd5ec629c5278253cbe477091032f9","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"chil*****.*hop","digest":"fc17daf8d2dbc999aa1da044992bff67c4e2f565aabe6bc1f15d74473eff9507","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"chud****.lol","digest":"83a5dad1f82694a6f6c9bd593f22f080dd0d0d6c8e61549582bbcb7b5beba19d","severity":"suspend","comment":"Hate
+        speech"},{"domain":"clew.lol","digest":"98d9fa2c7ea965bd3f239fd89f8ae268ff01647f82a43a3643ecd5cb4bff7ade","severity":"suspend","comment":"Hate
+        speech"},{"domain":"clown.******sity","digest":"b2a24c3e8c664ca569486071f7ec2f27adbfa2926f9edfd7f4ed51a315bf07ae","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"clubcyberia.co","digest":"67036efe6e7fd7e82cd530f677167e4195113655f29eac4f42eb0bc8f0f1f9e2","severity":"suspend","comment":"Hate
+        speech"},{"domain":"cnet.site","digest":"652434b910b471d8c88c9b682708dd5d10e1d4e40bc122d168b411128358e4ce","severity":"suspend","comment":"Harassment"},{"domain":"comfyboy.club","digest":"2e29366d2735018b35cd03997dbc001db5dbbc7f4774b1d22508d771c7615fc0","severity":"suspend","comment":"Hate
+        speech"},{"domain":"coom.club","digest":"15099796cf72cfd8a374c8d0202bc53f3da41916916d3ef654f327c64f009959","severity":"suspend","comment":"Harassment"},{"domain":"cotto******.cafe","digest":"b19b6e0911298eb2e64644604728059e0c045d0969169d1842dfb6e06597392e","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"cub.**ol","digest":"e3470f11b164775fc01fa43a923834bc03889197f269c5074f43966cbb115104","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"cubs**.*****res","digest":"4404e0e5094f761ed8e1dfc18445319e32f9da97c5f8f80cf51cca2998e7064e","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"cum.**mp","digest":"a7150bc0c63aba9d5ed223923c5bb949d712ec78df3ba43245956d8fd95a859a","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"cum.desupost.soy","digest":"cba97f02d85dbed2d56cbf157e61ad235c2fdbadcc08fb07c8279a2b36089860","severity":"suspend","comment":"Hate
+        speech"},{"domain":"cum.salon","digest":"fa1cd678ec3bfe795d28b877dcdbf909fa669dfb8f119c01c626b672e4afff36","severity":"suspend","comment":"Hate
+        speech"},{"domain":"cunn*.***uty","digest":"d72a68a5e7f13ef2049cfe1e04439f5451c26b7cc9089e059208a472ba9b2803","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"cunny*****.*pace","digest":"84ca10b61c905e74691a8e43827f0fc399a75215de1cfdf6562f59c4218312cb","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"cunn******.top","digest":"54016aa1a275dac4cc4b8300bc11fdcc0faa224844a9b93b1b04068f2f42dda8","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"cunn*.****nce","digest":"15711e505bb5a1381128d2e849cd39d36187ec7406a7bf8dcaecf90d02bb3574","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"cun****.cc","digest":"04b405d0e63382ed9ec81d7d0f57593cd63db0f5355c54dbdd91202287a5c80b","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"cutec*******.cafe","digest":"b7aba72e959bbc94917dcbd0988cbfe8ee24154d1e14bd50fbbd4178d785d019","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"cuti*****.cc","digest":"de1ccc1300a09acabc0b679f1d0484150ad510fd2d8830908e01ff9ee1690e0c","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"cuti*****.org","digest":"fffd64971857c7f3a7a83a9c193887622634c70c547416705209b0121571e03b","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"cut***.**ne","digest":"cbf86e7b6a54cfc749b34453d1d4bd1b66cac8d00e35a283eeea81364b8301bc","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"cyberstorm.one","digest":"addd6f3e0a4b79cfac733d8705c7d1ec634da94e4d73bd41711a39da54e4e2bd","severity":"suspend","comment":"Hate
+        speech"},{"domain":"daffodil-11.org","digest":"803cc93060c896d98f479db2798ca2e817dab42f7057ca65ffd3fd41e3996cf9","severity":"suspend","comment":"Spam"},{"domain":"daji******.com","digest":"3752f63a7079d60c2de5dceb8bd7608e86a15544eb78a494a482041c3684b37f","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"decayable.ink","digest":"f17001ad4541087e3f08c59ff3682c2cb8752fb7502abf6d1339138319e5335a","severity":"suspend","comment":"Hate
+        speech"},{"domain":"deepspace.cafe","digest":"a28fa480926c050a4540b50788d666419c3deb287357571f55d9022ccbf2e38a","severity":"suspend","comment":"Harassment"},{"domain":"deepw*********.net","digest":"2bc3efbdf2adc0582ad0eac2b04a8fd29fc1e21dd3b48a7c70113dd8f200b4d3","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"degen******.fail","digest":"a61fbbd27becc4c23ca5307f89703853c3538aff5839e8dab161221939a536de","severity":"suspend","comment":"Hate
+        speech"},{"domain":"detroitriotcity.com","digest":"66deb7ec370ee6ff869c4fb64855a3dce8624603806502cde81bd70d7b4bff8d","severity":"suspend","comment":"Hate
+        speech"},{"domain":"dogs*****.net","digest":"d71006c3baca2f104b7a313315d0ed19f6cd2e86ed6ea386d47a40c81d660696","severity":"suspend","comment":"Hate
+        speech"},{"domain":"dol*.***on","digest":"3c63032dac604ac118fe345a63a0feb6139af8b05626eb49ad84892f3fd92a50","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"ede**.***th","digest":"00aed9f9665a2f8778abdb9adc689511c25560402d3467e7607752dde0c4f2bc","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"eepy.****ess","digest":"043f0d3f2dcfb55b9a0a65a3367912a2ca94a9943be582269694ae659ec7ce6f","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"eientei.org","digest":"1611778b65c7996fbe87af3e2090c6094a5c656dbf03aa3993d260694dd10359","severity":"suspend","comment":"Hate
+        speech"},{"domain":"eveningzoo.club","digest":"d4c09ee9b14ee7c910984859d497c004712a20f20f0eccf337b5fb8cc1123f45","severity":"suspend","comment":"Hate
+        speech"},{"domain":"fedi.app","digest":"343b8505d931463ebcbe17ebe92dd3a5e9141a73565bf7414322dcc0e90433f8","severity":"suspend","comment":"Harassment"},{"domain":"fedi.c*********n.org","digest":"c9ca1c8b92e8a7ee9f2b9e3d5030195cd3d289a8b2aa931276e41e5fcd1cb06b","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"feminism.lgbt","digest":"3542c488b41ce94a2cf9737bfe67c35252941a42af092ac4078634bc36578491","severity":"suspend","comment":"Harassment"},{"domain":"fil**.**ve","digest":"88dc02e9cc4290df078e89ec1b7e1295f4ee7615ccb848771ca72f73aaaca23a","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"firebird.mullet.social","digest":"1f91b92ae3a1f68e531ca91d5704ed602294173e971b2d6fe46b48431f409c11","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"freak.******sity","digest":"d1cfea1cdeefa08827822330841babe7387ce33073b72c67665c591f60956d8f","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"freeatlantis.com","digest":"23414c6b236b245c662efa05db8662743261e08cf154237d5190a6ec26887e1c","severity":"suspend","comment":"Hate
+        speech"},{"domain":"freecumextremist.com","digest":"7f26b4fd2707a70492f35ba6383d8f42f991474a9072f13e2c50bf5915fb9709","severity":"suspend","comment":"Hate
+        speech"},{"domain":"freesoftwareextremist.com","digest":"33c728170c35583ecbdca58dfafc333cf5a5bc292164cc4bdc15318c9db6b871","severity":"suspend","comment":"Hate
+        speech"},{"domain":"freespeech.club","digest":"f39012ab8853e161d3ef51375b725838aa455138c4b12e09ef6867de05248a24","severity":"suspend","comment":"Hate
+        speech"},{"domain":"freespeechextremist.com","digest":"a67a3f85d90881ae32716d0eaf5a348b53096e07ea38a20797d74824074e281b","severity":"suspend","comment":"Hate
+        speech"},{"domain":"frennet.xyz","digest":"cb6efc4852ea7e4a1af724ed7d18a47151338f8112899e0cf4958b09f2014721","severity":"suspend","comment":"Hate
+        speech"},{"domain":"fsebugoutzone.org","digest":"0f9a06b5af2d8980b9757d1bdfea84334bd7ce296a6102d4897cc9553cb3cc77","severity":"suspend","comment":"Hate
+        speech"},{"domain":"gab.ai","digest":"a32ca19226c88a08be5483053f71ccacae76506b60c9ac14174bbc50d9fc3705","severity":"suspend","comment":"Harassment"},{"domain":"gab.com","digest":"e8bd7afb2125b7ea5e1b885fac2a657d817eec289ed870aa3d1d0acbe6aded8f","severity":"suspend","comment":"Harassment"},{"domain":"gameliberty.club","digest":"75e80dd194bc635186cf0b4a07524d7746b4b261cbd5fb15007189e4fccfbbb6","severity":"suspend","comment":"Bot
+        that announces blocks"},{"domain":"genderheretics.xyz","digest":"5707d8f38a59dd29ba5b4ace8cf998779fb86645f178d34c580ce3dcaf071e71","severity":"suspend","comment":"Transphobia"},{"domain":"getgle.org","digest":"59a33adf8fb47b77f8ec2d993876d3b1e765998791f8c91e61a8809cabdfc30e","severity":"suspend","comment":"Hate
+        speech"},{"domain":"geti****.com","digest":"003a0361bc9d7fb791edf79519e937fd1fcbd32ce52b16d2f2f2948837086218","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"ghet**.****ter","digest":"0ca66166b9a9e8ec25a80cd3d1e80ef346a5de1f7abd9f660f629ba9c92a30c8","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"gimm*****.cc","digest":"9dd8f064eefa2c6ef049d081c317e235fef7470bb4620b4cbb0eeca42f4c2f21","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"gitmo.life","digest":"ce478739d7d3627cbde08e6276b80d459a2bbf842b2698a195684f581ac8defa","severity":"suspend","comment":"Hate
+        speech"},{"domain":"gleasonator.com","digest":"f0f7b4b28f4142e276d39b1fddfe621e81f72d3be86296a6323d303164f423a2","severity":"suspend","comment":"Transphobia"},{"domain":"glindr.org","digest":"56da8b2c7030ff79b9acba7a23fb6750a165a88505e0dcac85478d537d88e90f","severity":"suspend","comment":"Transphobia"},{"domain":"glowers.club","digest":"0e01f6e43d521283c18034ba874026d5b83ad02930638bcb305f24a93dae0763","severity":"suspend","comment":"Hate
+        speech"},{"domain":"gor****.*om","digest":"b2fbab58381a26ba27476c6526dc90732598cd355b6f024ca1da48efa7b4dfbd","severity":"suspend","comment":"Hate
+        speech"},{"domain":"goy**.*pp","digest":"f0cd6c19dea07568ee99ff0b9cfcb7d45daa06b95b75488fc1bcea86b1a19a3b","severity":"suspend","comment":"Hate
+        speech"},{"domain":"gtmastodon.online","digest":"5dc68664a723a3268d4d018ce22aa2a2b13ea841c371df9fc4bf9072d7e236c0","severity":"suspend","comment":"Spam"},{"domain":"h5q.net","digest":"815d51b44758e881f08e9cfe9bf95acad6637e1c334924f951a674a5e3319f0b","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"head***.*afe","digest":"a8b3e3b7700405654b6310afbe106f4e57026a88d5653b193160b31c1fa85914","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"hen***.**by","digest":"55ae7fc705dc6b408085ba34c7f0172ffce1fad11c707ca900f49475dad3a352","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"honkwerx.tech","digest":"0bd357bc7dcfbf25bb4a191b249949fc7c386c6c69f59631efacc8b60f07f799","severity":"suspend","comment":"Hate
+        speech"},{"domain":"hunk.city","digest":"5664a0b8975b05441a95258f969cd8f3a38cb7570e77418901e58ae444e2b7ef","severity":"suspend","comment":"Spam"},{"domain":"iddqd.social","digest":"8b92d2bc4447cf5475ec0a688c1894ae5ccc720c034e46c2855ac808909172c9","severity":"suspend","comment":"Harassment"},{"domain":"imou**.****sed","digest":"79e4f94078eaf49adcff9958a337a013e6dab2f8be5850a8b1f6e51e0235464a","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"imo***.**cs","digest":"7618124623d9b4140be41538068a0d24d901e511049ea98e906979809849f67c","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"instinctd.com","digest":"617a1951862bfb99c17497c7054c923526456cce5ec1c8282057b55ec1851cd1","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"intkos.link","digest":"68639830a5e43c889d7f3effe1d5a16e49af86f9b8eab95ad87b5ab9cc1681bb","severity":"suspend","comment":"Hate
+        speech"},{"domain":"inum***.*ove","digest":"90a224955a5dbd3073840a9eabbd1409c9dbf236453f2fa4edc0a163b6377230","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"jaeger.website","digest":"020ec629e3f8a04d74d0ab39555f5e9439817a5e31d1e3ad9ea64827708dbc44","severity":"suspend","comment":"Harassment"},{"domain":"kids******.fyi","digest":"8454557ff659f64b6903f490353ed89d07d7dba7e560a0588af26ff5bb6346eb","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"kiss*****.moe","digest":"094c014c01078d6e6f0ae01154a2cf7d8eb1b6965399df0f6309be4d4fa3c952","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"kiwifarms.cc","digest":"8c07b582ccad117d4fa14d4acca0d6977a0a737eb00e0f6a1ddf08228532e708","severity":"suspend","comment":"Harassment"},{"domain":"kiwifarms.is","digest":"1e6c9403784af8d61dca03d4fc0aa04a1886423f6157d32d58ec937feb9d06d8","severity":"suspend","comment":"Harassment"},{"domain":"kiwifarms.net","digest":"da75242c52dfce84b86cae0ed1f9514ed9aced5016db71f535fa79c52d829ce0","severity":"suspend","comment":"Harassment"},{"domain":"kodo.*****res","digest":"7652d7fc8a288fd15453d25f453f6cd82601d647938b3a84de3f41e2dd23f797","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"kog**.cc","digest":"3ed9b07cacefc1e29a8ba6ef64e36d8cda8797cb35a511667e3beee52df55745","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"kurosawa.moe","digest":"b7a6f50e44e3b31765a8128a8094ad156264266b52afc2a48e8f0bb6d82bec87","severity":"suspend","comment":"Hate
+        speech"},{"domain":"lanue*********a.es","digest":"71df39ae43d018673b549161640bc400287a5e9d225dff0b84b985c65c071117","severity":"suspend","comment":"Hate
+        speech"},{"domain":"leafposter.club","digest":"a148b9ae905ab89d31075b91fd99a18b247ef95353325aa9ccd4568924571165","severity":"suspend","comment":"Hate
+        speech"},{"domain":"leonardwong.dev","digest":"537b5d6107b0861ca120904915dad42fc0f99298645db3cfffc857308aabb068","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"lewdi*******.com","digest":"f9af98211a55b1ca1109fa45dfb52bf78b68ec3d92e670bb83515444b7f834cf","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"lewdi*******.vip","digest":"f654c032fabce77bc6ec708c3da2ffc6b924ce0b823e633ad9a163f88e1df59b","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"lew*.*om","digest":"d19f243bc07555134e48428b602e57f82ddaaa0d6f2b9128e4079105a9e4b659","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"lick.*****.win","digest":"c04b5f26cb252e5e60d64446aea36b83f557ca904d0aacd1ee51a36579bf016c","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"lit.t*******.xyz","digest":"682922478c1833bebc60091915bd4fa4a2ac2ba55fac0ef5318f12cea2749bfb","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"lit.t*******.xyz","digest":"f93652a593f64480ce17b5511c445726adfdedecf5bbeec95139aec7241cf97c","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"localtunnel.me","digest":"66b35bf791b3ba8a458c4cc94835e9320939b003ae86da4c6d0ab3518c71e3ab","severity":"suspend","comment":"Spam"},{"domain":"lol*.****ch","digest":"db0900b6c7a85a00da1c81a5a8590c1e31dbd0573346c07f539c994f7f5772d2","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"loli***.****ter","digest":"a4d3e9aa45ab36b4950cb3a3734608e34b6d654c7ddd2c8fa8b85b24db5ad992","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"loli***.**cks","digest":"292895a02595667f18851a03ec2cfad930efd41ff6f7f43f5ff1ca82441b31da","severity":"suspend","comment":"MAPs"},{"domain":"loli.****sed","digest":"e033478a8a5dec9191b74992512f0743d843dba88dc92a92b2752ba8605d3211","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"loli****.***ool","digest":"5bf3374db80c9340b7a858b9df79e3ae256ccbbccec63c470bf9a3b102cc4cbb","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"lol*.***za","digest":"1522dc9020fbf0ce2a1433a49bc9e026b3042b4570707dc61c980d33af128203","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"loli***.****ork","digest":"1a1009de91f49e46c6253521614cb1548f93de61dfe9940083fb7513c8e97d3f","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"lol****.*op","digest":"58e4e957dfc85baeb5d866008c3bf422f3958e635d5005e61b6b5669a1ab866e","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"lus*.*oe","digest":"fc36aa300b27f013434d611e8b1a86de0f31c9f64033e2d3a0bdc9405c3db22b","severity":"suspend","comment":"Inappropriate
+        content "},{"domain":"maps******.de","digest":"114120d4269004f71d444c752cda731e63ffee05aefefda4518a32c0c7a28546","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"mashtodon.alterracloud.com","digest":"fa59b6830aaa24371b073d384a6c69b7d20598948e5700bee81f857ad396d4af","severity":"suspend","comment":"Hate
+        speech"},{"domain":"mastinator.com","digest":"7c2c11eb690c176dc5bd9df52f7730206b8910f8fa1560d8ac818fb904a497e1","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"masto***.******.lol","digest":"4524daf226657724efd08778cb5bae3e806d7b699cc49b556f3f67be7a161791","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"mastodonhub.com","digest":"f22c9e3f893aa22d20c91eada0f534e50c9c11a3f7b8a6b544fe0824335053ce","severity":"suspend","comment":"Mirroring
+        other Mastodon accounts without permission"},{"domain":"mastodon.social.fraudulent.link","digest":"770af21962efca1fda546946ed3e0e514c9bfdd9d2edf367f0ec773a6b2f3990","severity":"suspend","comment":"Impersonation"},{"domain":"mastodon.socialspill.com","digest":"2991e1b9577d43950ffe30d379027c6c8438f3095c6b93b8ee309d0b3ac4709f","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"mast-serv.site","digest":"85e3f64d6698204dbffa7712f648ac4bcf606686e16a42cd706245ab1ba985d3","severity":"suspend","comment":"Spam"},{"domain":"mast.socialspill.com","digest":"cc2cd28bb92d689a4b7ab4b4b73575e42589946b98f14f1a6fa31708c9c1b781","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"mela******.tk","digest":"8a2ff2efd5a037bac3eeec857546b57a364fd8a92546fd21c66f6dbcb506768d","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"merovingian.club","digest":"e08f38ff645458ef1a3abedba7324feab3c593e668eca191138400dee8750d37","severity":"suspend","comment":"Hate
+        speech"},{"domain":"min**.**fe","digest":"8aed56bbb215ed5812d6e6100936036297a6ce0fa632b6d5a9fea6db3ce1ea44","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"mir***.**ty","digest":"8d89950a22c6c0781668099fdd1b25effc408e7674abbf11c464163e31894859","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"misskey-forkbomb.cf","digest":"4cb0aed41625a4cdf39afc427e8b9ce109b38838caee59f0f070ecfe1378219c","severity":"suspend","comment":"Spam"},{"domain":"momostr.pink","digest":"868dfad86cfea073213d1f8e92d49e9c26e474a40cbaf19524c5e899bbc2f1a0","severity":"suspend","comment":"Spam"},{"domain":"monk.**.****ness","digest":"e74a08d6b6c0382e2c7b1f96f118f65ec888fc63eb8252648d79ba40058a36c9","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"monstergirl.space","digest":"162e837c6823849443eb94076c1e96d6c151585aefcbd83b84c00a432b5b1b4c","severity":"suspend","comment":"Hate
+        speech"},{"domain":"mostr.pub","digest":"455cc53402ca7cfa12758f17c995b2c00ac0cf56f984d5f1d72c6b55dae8d15f","severity":"suspend","comment":"Spam"},{"domain":"mouse.services","digest":"3e71f0e48bb8f7bec34944fbf574ae2bea31b01487a1bf96ad90aeb4e56cd6e2","severity":"suspend","comment":"Harassment"},{"domain":"mugicha.club","digest":"4ce88e9bc9412750b7e22178d57dfac54d9123dbe3b21b591a2139b2044ab16e","severity":"suspend","comment":"Hate
+        speech"},{"domain":"nateh******.**line","digest":"e5441e7275ba252c36a8d08e64776861d98931bb54ecb6b7722270fe16e2c41f","severity":"suspend","comment":"Hate
+        speech"},{"domain":"nate*******.org","digest":"61908c6254621aaeb991563cacaa0bb07ab0db94ba5e9566496ff5279f871062","severity":"suspend","comment":"Hate
+        speech"},{"domain":"nationalist.social","digest":"e3b15dc01798d46cd1febc69a928a1db3650483ee9864eac568ebd134a1af13d","severity":"suspend","comment":"Hate
+        speech"},{"domain":"nazi.social","digest":"a9defb603c0ff2a974c51fcfbf46f19f40f4214f492dbd7e21f0459f283b1902","severity":"suspend","comment":"Hate
+        speech"},{"domain":"neck*****.xyz","digest":"19452ff02670099643197b3fec15c0d43e42a3dbbe83b0fb4d039d5f77d1932e","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"nee****.*op","digest":"33630dea41bf5f36944ddba45526817a45eefdb94dbc6c1e58a6b6f3295a67e1","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"ngrok.io","digest":"857d9d8daa52776307052bc87668791efe9e8f27ace1fbf8a54891548635a30b","severity":"suspend","comment":"Spam"},{"domain":"nicecrew.digital","digest":"f78337ac2a00eab976e8bba01360101916f9a4d06e940d463b52737d0b715613","severity":"suspend","comment":"Hate
+        speech"},{"domain":"nni*.***ce","digest":"e9de6d5a9a9092eafe19fd8ead4e814cc95424d2c3454dd23a22a69f1d7711d5","severity":"suspend","comment":"MAPs"},{"domain":"noauthority.social","digest":"5ca9e92e7d128bfad2c0c3a0df71c92014629bde8948195e3610561835f27cec","severity":"suspend","comment":"Hate
+        speech"},{"domain":"norwoodzero.net","digest":"87cfbc2e2bdd59c20b6a8153f0b6d6490d61f8f153974c8c7646571d9e81c1a2","severity":"suspend","comment":"Hate
+        speech"},{"domain":"ns.auction","digest":"458e6284e52fbebf33c2be2ffef00653fab79f8b4c0ff2da5ce4d0e4653dd925","severity":"suspend","comment":"Hate
+        speech"},{"domain":"nyanide.com","digest":"3b664a5e66724b6bab6a964f21ebf6ecaef2b0eb1b1bcdd64c98816786628ba4","severity":"suspend","comment":"Hate
+        speech"},{"domain":"nya.u*******.moe","digest":"4319bd1a52f6b008cbaa69a3592dfcd6c4f4feeb5bdec792758beeadedbaaec7","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"ob*.*h","digest":"114c335aef0acb2236f1f057fb88be3c445d9258e88e54d977daa31f3b144ebd","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"oddb****.***ine","digest":"7ccb6818b84f5090854d5ea79cd952d332a40b57b169d79a92726bcdaf0217ea","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"orfodon.org","digest":"8f4682cb25dc056c9bb7154d4ff01490f359873736157974aac55a0be20af7cf","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"out****.*ip","digest":"2a655710ad8eb6de5804b2b482e154fce8cacc4a109a9bfa82e96311dda29ce0","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"outpoa.st","digest":"0977ba744bd0b033b0f07e7a65565003dfbeebda72efcfceeefb571e3279a5f8","severity":"suspend","comment":"Hate
+        speech"},{"domain":"pac**.us","digest":"647aa18e8ff1057a1a2a8bccea3614cac1fd600d32725f113d042127220ad622","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"paravielfalt.zone","digest":"849c7963070f9039c1677f6b5270fd36bb2e5dd78c207cd9e1ab6a1a179eacad","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"parcero.bond","digest":"be8c73d7166862b056505adeb586999deffb7eaa334fce69a3bf30cdbb19d794","severity":"suspend","comment":"Hate
+        speech"},{"domain":"parcero.casa","digest":"54d01dc59c5c86448a07137c6753f56441d6039c37d2001ffde2701769176f78","severity":"suspend","comment":"Hate
+        speech"},{"domain":"pawoo.net","digest":"e7c641cf9cd8b5c4513e22d0dfd3f914835a16bd4011801dfa0976fedf61bf02","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"paypig.org","digest":"bfaca8bfaf9b1e13644bcbe35466669569a9f3fd2af49c6ca5243882bd682323","severity":"suspend","comment":"Hate
+        speech"},{"domain":"ped*.****ol","digest":"8866251147a5ab3f0e99c4e47c178ee36c06804669fe9c19d8f36f5e9452815b","severity":"suspend","comment":"MAPs"},{"domain":"pett****.art","digest":"cea8c7680a8b3d28c2b22093f5b812a86fe2c2b40f4687932d0a35f5caefc0f7","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"pieville.net","digest":"d1c95e02c2cde60dce3d598bad93687e64dcfa507efb27b7ee3c79cdcc815134","severity":"suspend","comment":"Harassment"},{"domain":"pisskey.io","digest":"b563499ee11d3c65a7990c69ca9897d67112ccb8352adf2d0b108852ea600840","severity":"suspend","comment":"Hate
+        speech"},{"domain":"pleroma.adachi.party","digest":"76323e9299d215821166707cd8c74d19404c539865c05d65eb71fcf949bc34a0","severity":"suspend","comment":"Hate
+        speech"},{"domain":"pleroma.fun","digest":"bbce7425a88bc3f2dd296e19661a3c130b40b1a2a07be3fdeeaa11f19ad34511","severity":"suspend","comment":"Hate
+        speech"},{"domain":"pleroma.kitsunemimi.club","digest":"13d0943d6adcdf99a26784043cf3d3b4f445c92d07c811d10ba9487f5657922e","severity":"suspend","comment":"Hate
+        speech"},{"domain":"plero**.*****.love","digest":"bf3ae2da7645ea910abe000ffdd6fb6afb44488613c249d8690609316c3ec720","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"pleroma.**********he.biz","digest":"f0f2e6f05006cbc6ed11d66d6f2a25227c15cf7f606b5548d71213879a5ae969","severity":"suspend","comment":"Hate
+        speech"},{"domain":"plero**.*****.net","digest":"2ed43f9cb57d3ed6f2cd40d09c3651a412d74fd7ab74a1ff96edab1905bac585","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"pleroma.us","digest":"70b5e95efa310ae92a4bee5f61319c45a086130018f344dbebd9109252b7ff53","severity":"suspend","comment":"Hate
+        speech"},{"domain":"pl.s*****.li","digest":"843729dbdb7430e3ff2364c5fbb6a40df3fe8ea2bf439adb13a7072b691c257e","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"pl.wy********.art","digest":"1a3ed6da8cf06eb85f981265ebefb3b94953ebfdc5bd0b8ea88de04c11e578cc","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"poa.st","digest":"24f316abb4ecb518311996750acba82970a678e00927266e09e51705267836c2","severity":"suspend","comment":"Hate
+        speech"},{"domain":"poast.tv","digest":"f5b57473c9b06c98085cac79c4d692a73e8545cf90285c198794dad483aa6ceb","severity":"suspend","comment":"Hate
+        speech"},{"domain":"pooper.social","digest":"326e4ccc6a9a40a9e8adb4a5406f3a560f6c0649efde20c0a29a68b823d177db","severity":"suspend","comment":"Hate
+        speech"},{"domain":"poster.place","digest":"35ccb754c3c1d1b91478b2475a4c19d443c510d56164f31f1dd770802cc15799","severity":"suspend","comment":"Hate
+        speech"},{"domain":"postin*.*******.rocks","digest":"0bdc61adc504242126851f09de2a68f2e6821cc9843e618fd843a5cabf284fea","severity":"suspend","comment":"Hate
+        speech"},{"domain":"pouque.net","digest":"0d407a071908d196d70e37a39759f1a28a4d7025563346c13b70d5a8e3226cd5","severity":"suspend","comment":"Hate
+        speech"},{"domain":"prete*******.biz","digest":"462bc4b3bcf147d6f3762d4e6a32b23c3804c646f13d6e4ed1ffd58af13bdefb","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"pupp******.cc","digest":"5c482db6a8696052013df6e6c8f5d5631744238107c9a80dd6980a587d2ec018","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"pupp******.org","digest":"46f100d6ef59a573a30ca5585718a49108a9e4ee8266977d06d8dc671746b748","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"rakket.app","digest":"db5a3e239e5371ff0fdf55f1719a4315d3c919e0acbf85bafb52fa20f962ea23","severity":"suspend","comment":"Hate
+        speech"},{"domain":"rapemeat.express","digest":"8fb1ca2d92c5b57753a480bf6c5f38c0e8607a4137713b4c1ac427698cb2174a","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"rapem***.*****ions","digest":"a4aea0704dd827d41c48abfbc26e082a550ded1dc8082e36282f85b545c6f40e","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"rap*.*et","digest":"6c8f67fd4a7fd724177a7929a9f57369eacf39242e69f2c32121f793d23abe55","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"raplst.town","digest":"8e6de25f87610ef68f586206bf170906eb11ca8aa470bc1ed8ed8cad92590ba5","severity":"suspend","comment":"Harassment"},{"domain":"rdrama.cc","digest":"7cfa7d014ea0a2f1fc8d18137f8eb336dcacd3df5a094cf230663fde80936123","severity":"suspend","comment":"Hate
+        speech"},{"domain":"refusal.biz","digest":"677ee74e7afbb769702f41a5062b2aae52afa6bbf5a214535faa1e35c31f26d3","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"repl.co","digest":"8d15d289b2dd9d70ca542eaca74af18dc36c58c1b8a602f4afa2af2456d444a6","severity":"suspend","comment":"Spam"},{"domain":"rot.***es","digest":"1d990e5e19a9c4624d3275ef6faaf8301664d2a98a0c5456e02855ea5f7d024c","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"rumr*****.cc","digest":"5af8414297ae5bcb7be1b13884c53c4055a63cf558746269a62c336dd201c7e0","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"ryona.agency","digest":"aceb5ceddbc8ff17d761fb7899971c83830f856044672a04d0ff1928a82dc2cc","severity":"suspend","comment":"Hate
+        speech"},{"domain":"schwartzwelt.xyz","digest":"81c9729597e2b265a52a36c2d629e2708c99c53abb05f79cf2738087064987d1","severity":"suspend","comment":"Hate
+        speech"},{"domain":"seal.cafe","digest":"6e8a66253851c9c335c740833299a93f169ac1513c964aea020a40a6f8f771ea","severity":"suspend","comment":"Hate
+        speech"},{"domain":"sexy****.xyz","digest":"fb9afe58925abb0be7e4d5ca020026411b9254e0e8ee73d4e47b95ee0032493a","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"shitpisscum.mooo.com","digest":"4f5559e50cf3be4af99387a9bb5fe1799b931a7ad56c2622035d8344a42d7b02","severity":"suspend","comment":"Hate
+        speech"},{"domain":"shitpost.cloud","digest":"7afe458f43cebffb58f4f982f5dd5c8f372b566e3de903e7f101a9b9d58e55f6","severity":"suspend","comment":"Hate
+        speech"},{"domain":"shitposte.rs","digest":"0d44cd0c7bd0d647475a66dcc3603a1038c11f2d38dcfd9bc73f8e269efea37f","severity":"suspend","comment":"Hate
+        speech"},{"domain":"shitposting.army","digest":"bcbd08fce9dff1ac13ff500fcb90e4495055ebcefd3b9b50cfe40c369c4df243","severity":"suspend","comment":"Hate
+        speech"},{"domain":"shortstackran.ch","digest":"bb2c25b3014607069c14980f374c5e47fcf21789a675859b8a9307fc1989ca0c","severity":"suspend","comment":"Hate
+        speech"},{"domain":"shortstacksran.ch","digest":"a5a3eb9802639425a27474c2e02f9cbd47b1d31f74736fd1431d15948e510fe9","severity":"suspend","comment":"Hate
+        speech"},{"domain":"sho**.***se","digest":"1f8de31fdc057130878c42d09be1013c164e96d3e0e573cc4b93afd5255d57d8","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"shot*****.xyz","digest":"d366756208aeac250ed01d664a697a8e76b508561ab4f849a02303d1fa1ebbf3","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"shrimpcam.pw","digest":"85386788a57c814e16b12a0b50a9d3d818f0ccc184d0d2edf189312112989043","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"shrimpposter.club","digest":"bb27f78664ac57f1d0da0d3c8fa4b29458e681e3e7e8e44201f31d2a1eab32d1","severity":"suspend","comment":"Hate
+        speech"},{"domain":"skinheads.social","digest":"f96f8ad9dec0714aad915ff3fa49506746858cf80ea3e3565b11041582d155ff","severity":"suspend","comment":"Hate
+        speech"},{"domain":"skipp*******.com","digest":"b41cf08df2ba3999357ea03a86b5ee75e7c19638c2aa2da480fce45283631d28","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"sleepy.cafe","digest":"98828c9a5c00114ac673ea4e7c1979599af51ce8ead9d9689a862c1a3e01bef3","severity":"suspend","comment":"Hate
+        speech"},{"domain":"sneed.social","digest":"b86a99c713273468fcdc199bc6b11902dadd1e77960309c606817b00455473ed","severity":"suspend","comment":"Hate
+        speech"},{"domain":"social.********y.net","digest":"cce451153ba716ab2c11a9fea18843219833405930c0fb67e51993a73f3a2e9a","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"social.freysa.ai","digest":"9473e888a59b225057e36e5f56989a85553047a3404ae4d2a60ca6c3df9b0229","severity":"suspend","comment":"Spam"},{"domain":"social.lovingexpressions.net","digest":"f1bd712e9a0668d37a239efd773e4bfa3df7316ae33627cd45430082b5ba871a","severity":"suspend","comment":"Hate
+        speech"},{"domain":"solagg.com","digest":"02eeb2d1ddbf3ed33ba965a3ca6c57982afa149dd7e27f50ec47e2e184a09191","severity":"suspend","comment":"Spam"},{"domain":"sovran.social","digest":"49d08f62ae5bf04ca65bfdd2cfd751939f4a3b5e1b98906ec7e3fdbdb721a36d","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"spinster.xyz","digest":"ab9e4f497565a60f908a4fe3696e9a5e5a3dfc11149da40738d006474e4b70e2","severity":"suspend","comment":"Transphobia"},{"domain":"st.****.*oe","digest":"0a33112e45f461d430352d361f16e436bc7bb457a11cb1ad630182c7fde731fe","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"strelizia.net","digest":"2b8cb4eceeded62153c82e28438d108dcff1112bad31745b8834ff183f0929c0","severity":"suspend","comment":"Hate
+        speech"},{"domain":"supernets.social","digest":"2d0dc8d17b698a7837d277da74c4288fd6a0138682e64f7c3c61f73297962909","severity":"suspend","comment":"Hate
+        speech"},{"domain":"switter.at","digest":"ea645a3aa6fcf9fc264bbbb1ac601f7110abf9d2ccf98a3599b46689ce5e1cf0","severity":"suspend","comment":"Preparing
+        for announced shutdown"},{"domain":"tastingtraffic.net","digest":"8deb0bb21f1f48f5c7e8cdabdbcbc9604a59883276ca2d11fb78b4928497f5bf","severity":"suspend","comment":"Spam"},{"domain":"theblab.org","digest":"d4cea314ab3770074df446ad7014efe2c8c274827d6bb6fe3ef07b59bd431237","severity":"suspend","comment":"Hate
+        speech"},{"domain":"the.usualsuspects.lol","digest":"cc8b37c12d60cdc8163f879ea7ab23fb0ff36fc22694041f890bd1c544343b43","severity":"suspend","comment":"Hate
+        speech"},{"domain":"t.l3r.me","digest":"f95fc56c461e70ad74b095e46b14095a60f4daf973b525aa1e500f3417fc17d2","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"too****.*un","digest":"96b36a567f200407143c33b0a9940dbcacc0b591e4185630f01318b66e7e8d63","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"too****.*tf","digest":"58dae36609f7cf8205225a8316494cc1cbf96e953ca5f1e12f72320c0949a534","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"trab****.com","digest":"9ec13036695359e75058e867f5fd6063fe4e3f79fbdfade86297ed447056469d","severity":"suspend","comment":"Hate
+        speech"},{"domain":"truthsocialpro.org","digest":"2d1f8ff62bd46feeba3c0b5972194ec7d668e1cd78485707efc9a671f760bbc2","severity":"suspend","comment":""},{"domain":"tsundere.love","digest":"5a3ac58a8f067d2d8b0e21132b51e28574ae3689f0a35ab2c57512b077ca1b57","severity":"suspend","comment":"Hate
+        speech"},{"domain":"tum**.**wn","digest":"d94b1d464a806bb8548ed20662b2798876bf7ba6c8bf594c7e2f17720534af32","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"tweetbridge.kogasa.de","digest":"a1dddced8ef3e497f706c5a04f3996b46a43a3e49857f9db49c8cd8d668a44fa","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"tweet.pasture.moe","digest":"dda7ad3d8101cb6aedc80ff47d812a26307a5794175ffafb1cf61877f67c9fb2","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"tweets.icu","digest":"84d68f673f06c8ec6182f6a26fdad612dd6250a2ba563e4d6e8686702ed07d89","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"twitiverse.com","digest":"78d9e49c281e185e647fb3edafda7f4557ce50e7ac389fdbc0afcd4ddaf2c5dd","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"twitter.1d4.us","digest":"0c6b4fdf03346b1449ed0a697fe2e4a54a04706ff21e09593e1e4ffc0fb02d22","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"twitter.activitypub.actor","digest":"c2a4e40d41df6f3b6fa670a22d42b9aecd2e0b31d31e65a33f8534eb13df5cfc","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"twitter-bridge.cryobyte.net","digest":"aaa44c69d53156f5b89e091f6300aadf72201d6874c1e1e365cc731460971b9a","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"twitterbridge.jannis.rocks","digest":"67e15ab4d16642af077216a57b11dce3c93e32c6df4c8fc6afc70343e82424fb","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"twitter.cryobyte.net","digest":"f453597de1c43f8255cb38388332240854232c136bb61fde96faa4324d609757","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"twitter.doesnotexist.club","digest":"d8b17653f566e7be81950f03ada65905ce2297cdffe4698c126faae882a6747a","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"twitter.grants.cafe","digest":"5a336aa3402290b522af3690a17e1b7c2461857ee649fe93d6f745b04a0d1eb2","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"twitter.piriklub.eu","digest":"b53998c7e69c817457af4018c003e2e04d9a57224186d9ddee949c00ecd86529","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"twtrbridge.de","digest":"cbe47fbd033a3ee6d524499e50e44e8fad33eeffb5c211fa7b464d568f7153f1","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"twtr.carnivore.social","digest":"b0ecf82606a012144bfb568ec9c2703885810cd00005b0fbb1bbcd845cd8bc84","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"twtr.ingeechat.party","digest":"404a1d631f057af997526642554ab5f38218299c8e69a2b67130dfe80e7dba9b","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"twtr.plus","digest":"13042ec579ae42bc6a24f4cd21830020422df92723b424c565a70179f811bf1c","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"twtr.vrij.social","digest":"f908cc38e2eee4f2906149193560ead3e3290ce1af311cc2fad07cb25a774ca7","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"twtr.wappie.land","digest":"f8a907e0e2f5a2aa5f6b42a7316d81351523032e6b713562de33367e6936647a","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"twttr.yukineko.me","digest":"aa3e67d5f87fe0ff08f082ff25d71e2119b4b9d023a9fee6e7c3dd459dc90dfe","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"urchan.org","digest":"1ca1c461e2ced83375cb3e21badcab9d75409ed1f9a5bcea2e27ef0f59c28c96","severity":"suspend","comment":"Hate
+        speech"},{"domain":"varis*******.net","digest":"f2b2f6302c7d4204817a15a4111516493c18c567249af5c3642b1b85352fab1e","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"volk.network","digest":"8883685b15d9baf4dbbe00b9e3f33173ce6e31becddca6edfb756df3666d75f8","severity":"suspend","comment":"Hate
+        speech"},{"domain":"wagesofsinisdeath.com","digest":"418e66f8a5721ffc2389ca5c9cf0ef04ac4a0ff3344fd2f623d0705d1c7c10ab","severity":"suspend","comment":"Harassment"},{"domain":"waifuappreciation.club","digest":"aa5cd51513eda8a6ec524d39c708e2429d08175d24f47d19ae05c0008b896966","severity":"suspend","comment":"Harassment"},{"domain":"waifu.social","digest":"b5beb103d1a9674b88015916381305fdf784c5955b541c7d037bcd1a277321f5","severity":"suspend","comment":"Harassment"},{"domain":"webmasto.online","digest":"12da9d5cf2e8cce9961cb4117dbd2872f496a8f9e58336294419c375e80aa6a8","severity":"suspend","comment":"Spam"},{"domain":"weedis.life","digest":"18f6712c509a31f843837166e6db5f985b9edf20c55a2283231830a7c66f52e0","severity":"suspend","comment":"Spam"},{"domain":"whit******.dog","digest":"6589ea11154b59c9f1541817fc8bdbfde3b34dcaa633c7917c655c388b292519","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"wolfgirl.bar","digest":"77f83c0fc604cbbaa890dadef4741507800f15967910778ed7d2f1d0854c1c4d","severity":"suspend","comment":"Hate
+        speech"},{"domain":"workers.dev","digest":"711b951b39d3e6eb71b29f2759caf3eebe11a771f3f3e53fe72bd304817e4a3a","severity":"suspend","comment":"Botnet"},{"domain":"x.good.news","digest":"0f77fdfbc38e249e73e3f84387d53885b7b1f8ea77ab69e48dc6dbdd13ba0408","severity":"suspend","comment":"Third-party
+        bots"},{"domain":"yes***.*et","digest":"117af44ce1fa1c52525d57d4185b4e2fcd988fec8a65891166c119690dfb9bb3","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"yggdrasil.social","digest":"761869a7e6a9ee689f4617143a0ac0510ffb9cb621cb34a65df5dcdc1cf7ec35","severity":"suspend","comment":"Hate
+        speech"},{"domain":"yot**.*ol","digest":"e063ed8aa63c9ffded4423162f52c87bf7121a034c6c61e9931a4d201a372935","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"yot**.***ks","digest":"ea24f8c5445ed810d08bcd2ee8d22cdb6d6dbdcc5c0567083ef5b03ac8bf57ab","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"you**.**ve","digest":"793c2d609d9705168d06554967add315acba674b8b3f5fbedcea86881da7ba6f","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"youj*.*****ver","digest":"79304519ba14be66661418cc90381787d49ba169cdff9b722a2583493527a7e3","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"yum***.cc","digest":"ce792fd7f4123428cfc7e4b863b96fe1e6dc5a9b4e542090057ba6480ca74f3a","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"zet***.**ub","digest":"4e951d6f50d2c4107594ca08d40724698dd9fb67b762e884fb61425421406053","severity":"suspend","comment":"Inappropriate
+        content"},{"domain":"zztails.gay","digest":"c8998ef81fad8108bf98928d1920fe1eb42b8eed0d9349ae928fe2f5952e5306","severity":"suspend","comment":"Hate
+        speech"}]'
+  recorded_at: 2025-07-17 19:53:43
+recorded_with: VCR-vcr/1.7.1.93

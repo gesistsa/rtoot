@@ -1,51 +1,41 @@
 http_interactions:
 - request:
-    method: post
+    method: POST
     uri: https://fosstodon.org/api/v1/lists/
     body:
-      encoding: ''
-      string: title=rtoot test,replies_policy=list
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
-      Authorization: Bearer <<<MASTODON TOKEN>>>
+      fields:
+        title: rtoot test
+        replies_policy: list
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 200
     headers:
+      content-type: application/json; charset=utf-8
+      server: Mastodon
+      x-frame-options: DENY
+      x-content-type-options: nosniff
+      x-xss-protection: '0'
+      referrer-policy: same-origin
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '273'
+      x-ratelimit-reset: '2025-07-17T13:45:00.221823Z'
       cache-control: private, no-store
-      cf-cache-status: DYNAMIC
-      cf-ray: 7e09a0166b699bdd-FRA
-      content-encoding: br
+      etag: W/"8d4118a3ba9bcf3b62f313b30109ad27"
       content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
         'none'
-      content-type: application/json; charset=utf-8
-      date: Sun, 02 Jul 2023 20:26:43 GMT
-      etag: W/"420e414384b9355e8c9a0549248d4312"
-      nel: '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
-      permissions-policy: interest-cohort=()
-      referrer-policy: same-origin
-      report-to: '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=k4jUy%2B%2FHNn2QKRX8J%2FlIa8503wK2%2Fb9l7H4frP5Zy%2BeV2MGfWeKiNFEz%2FP1ofV9sGqTkepbHDu7gR4MncMAxzh6%2BLxkSMepX%2BrwclpmLy%2Bkdgs96DYNM5y4I6lwcAFgRnNS05JVUDlOiC4c%3D"}],"group":"cf-nel","max_age":604800}'
-      server: cloudflare
-      strict-transport-security:
-      - max-age=63072000; includeSubDomains
-      - max-age=31536000
-      vary:
-      - Accept-Encoding
-      - Origin
-      x-content-type-options: nosniff
-      x-frame-options: DENY
-      x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '298'
-      x-ratelimit-reset: '2023-07-02T20:30:00.602694Z'
-      x-request-id: ef1035b2-ba1e-4037-970d-bb02e65e6308
-      x-runtime: '0.012682'
-      x-xss-protection: '0'
+      x-request-id: c3e53947-9922-4c38-bd64-391c93125ba2
+      x-runtime: '0.009356'
+      content-encoding: gzip
+      accept-ranges: bytes
+      via: 1.1 varnish, 1.1 varnish
+      date: Thu, 17 Jul 2025 13:44:26 GMT
+      x-served-by: cache-par-lfpb1150072-PAR, cache-muc13941-MUC
+      x-cache: MISS, MISS
+      x-cache-hits: 0, 0
+      x-timer: S1752759866.205851,VS0,VE31
+      vary: Accept-Encoding, Authorization, Origin
+      strict-transport-security: max-age=300
+      alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
     body:
-      encoding: ''
-      file: no
-      string: '{"id":"7354","title":"rtoot test","replies_policy":"list"}'
-  recorded_at: 2023-07-02 20:26:43 GMT
-  recorded_with: vcr/1.2.2, webmockr/0.9.0
+      string: '{"id":"10490","title":"rtoot test","replies_policy":"list","exclusive":false}'
+  recorded_at: 2025-07-17 13:44:26
+recorded_with: VCR-vcr/1.7.1.93

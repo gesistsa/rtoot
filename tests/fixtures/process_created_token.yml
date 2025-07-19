@@ -1,48 +1,38 @@
 http_interactions:
 - request:
-    method: get
-    uri: https://emacs.ch/api/v1/accounts/verify_credentials
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
-      Authorization: Bearer <<<MASTODON TOKEN>>>
+    method: GET
+    uri: https://fosstodon.org/api/v1/accounts/verify_credentials
   response:
-    status:
-      status_code: 401
-      category: Client error
-      reason: Unauthorized
-      message: 'Client error: (401) Unauthorized'
+    status: 401
     headers:
-      date: Tue, 15 Nov 2022 14:02:14 GMT
       content-type: application/json; charset=utf-8
       server: Mastodon
       x-frame-options: DENY
       x-content-type-options: nosniff
       x-xss-protection: '0'
-      permissions-policy: interest-cohort=()
+      referrer-policy: same-origin
       x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '299'
-      x-ratelimit-reset: '2022-11-15T14:05:00.375122Z'
-      cache-control: no-store
-      pragma: no-cache
+      x-ratelimit-remaining: '292'
+      x-ratelimit-reset: '2025-07-17T13:45:00.970040Z'
+      cache-control: private, no-store
       www-authenticate: Bearer realm="Doorkeeper", error="invalid_token", error_description="The
         access token is invalid"
-      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
-        ''none''; font-src ''self'' https://emacs.ch; img-src ''self'' https: data:
-        blob: https://emacs.ch; style-src ''self'' https://emacs.ch ''nonce-zObAiQrvdd94TojC9LPPWw=='';
-        media-src ''self'' https: data: https://emacs.ch; frame-src ''self'' https:;
-        manifest-src ''self'' https://emacs.ch; connect-src ''self'' data: blob: https://emacs.ch
-        https://emacs.ch wss://emacs.ch; script-src ''self'' https://emacs.ch ''wasm-unsafe-eval'';
-        child-src ''self'' blob: https://emacs.ch; worker-src ''self'' blob: https://emacs.ch'
-      x-request-id: a4bc1535-e0f6-44c8-bb22-b2d8a3f8033d
-      x-runtime: '0.008651'
-      strict-transport-security: max-age=63072000; includeSubDomains
-      vary: Origin
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
+      x-request-id: ebf8aedc-1c70-4eee-8c3c-1001e03fe5d6
+      x-runtime: '0.003609'
+      accept-ranges: bytes
+      via: 1.1 varnish, 1.1 varnish
+      date: Thu, 17 Jul 2025 13:44:06 GMT
+      x-served-by: cache-par-lfpg1960061-PAR, cache-muc13976-MUC
+      x-cache: MISS, MISS
+      x-cache-hits: 0, 0
+      x-timer: S1752759847.954745,VS0,VE27
+      vary: Authorization, Origin
+      strict-transport-security: max-age=300
+      alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+      content-length: '39'
     body:
-      encoding: ''
-      file: no
       string: '{"error":"The access token is invalid"}'
-  recorded_at: 2022-11-15 14:02:14 GMT
-  recorded_with: vcr/1.1.0, webmockr/0.8.2
+  recorded_at: 2025-07-17 13:44:06
+recorded_with: VCR-vcr/1.7.1.93

@@ -3,11 +3,11 @@ fake_token <- rtoot:::get_token_from_envvar(
   check_stop = FALSE
 )
 fake_token$type <- "user"
-fake_token$instance <- "social.tchncs.de"
+fake_token$instance <- "fosstodon.org"
 
 test_that("search_accounts", {
   vcr::use_cassette("search_accounts_default", {
-    x <- search_accounts(query = "chainsawriot", token = fake_token)
+    x <- search_accounts(query = "schochastics", token = fake_token)
   })
   expect_true("tbl_df" %in% class(x))
   expect_true(nrow(x) != 0)
@@ -30,7 +30,7 @@ test_that("search_accounts without instance", {
     search_accounts(
       query = "chainsawriot",
       token = fake_token,
-      instance = "emacs.ch"
+      instance = "fosstodon.org"
     ),
     regexp = "unused argument"
   )
