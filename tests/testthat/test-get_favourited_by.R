@@ -3,7 +3,7 @@ fake_token <- rtoot:::get_token_from_envvar(
   check_stop = FALSE
 )
 fake_token$type <- "user"
-fake_token$instance <- "social.tchncs.de"
+fake_token$instance <- "fosstodon.org"
 
 test_that("get_favourited_by", {
   vcr::use_cassette("get_favourited_by_default", {
@@ -38,7 +38,7 @@ test_that("get_favourited_by", {
   expect_true("tbl_df" %in% class(x))
   expect_true(nrow(x) != 0)
   vcr::use_cassette("get_favourited_with_token", {
-    id <- "109303266941599451"
+    id <- "114620457512351116"
     x <- get_favourited_by(id = id, token = fake_token)
   })
   expect_true("tbl_df" %in% class(x))

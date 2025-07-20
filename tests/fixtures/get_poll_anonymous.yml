@@ -1,56 +1,40 @@
 http_interactions:
 - request:
-    method: get
-    uri: https://mastodon.social/api/v1/polls/286799
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
+    method: GET
+    uri: https://fosstodon.org/api/v1/polls/684128
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 200
     headers:
-      cache-control: no-store
-      content-encoding: gzip
-      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
-        ''none''; font-src ''self'' https://static-cdn.mastodon.social; img-src ''self''
-        https: data: blob: https://static-cdn.mastodon.social; style-src ''self''
-        https://static-cdn.mastodon.social ''nonce-0aBHgGUVH7ZWjk9UlNSrlg==''; media-src
-        ''self'' https: data: https://static-cdn.mastodon.social; frame-src ''self''
-        https:; manifest-src ''self'' https://static-cdn.mastodon.social; connect-src
-        ''self'' data: blob: https://static-cdn.mastodon.social https://files.mastodon.social
-        wss://mastodon.social; script-src ''self'' https://static-cdn.mastodon.social
-        ''unsafe-eval''; child-src ''self'' blob: https://static-cdn.mastodon.social;
-        worker-src ''self'' blob: https://static-cdn.mastodon.social'
       content-type: application/json; charset=utf-8
-      date: Wed, 09 Nov 2022 08:46:15 GMT
-      etag: W/"9ab1e8d5d75527ccc937b8a4a5ac456b"
-      permissions-policy: interest-cohort=()
       server: Mastodon
-      strict-transport-security: max-age=63072000; includeSubDomains
-      vary:
-      - Accept-Encoding
-      - Origin
-      x-cached: MISS
-      x-content-type-options: nosniff
       x-frame-options: DENY
+      x-content-type-options: nosniff
+      x-xss-protection: '0'
+      referrer-policy: same-origin
       x-ratelimit-limit: '300'
       x-ratelimit-remaining: '297'
-      x-ratelimit-reset: '2022-11-09T08:50:00.168989Z'
-      x-request-id: 1961c84d-4ed8-46de-982a-cdc4b2d43e16
-      x-runtime: '0.102590'
-      x-xss-protection: '0'
+      x-ratelimit-reset: '2025-07-17T20:05:00.970946Z'
+      cache-control: max-age=15, public, stale-while-revalidate=30, stale-if-error=86400
+      etag: W/"13d5961d19546ffd92e7b4710499444a"
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
+      x-request-id: c75d90e9-a5bc-448e-bb5b-bd5a2f2ba3b7
+      x-runtime: '0.006720'
+      content-encoding: gzip
+      via: 1.1 varnish, 1.1 varnish
+      accept-ranges: bytes
+      date: Thu, 17 Jul 2025 20:00:56 GMT
+      age: '0'
+      x-served-by: cache-par-lfpg1960077-PAR, cache-muc13981-MUC
+      x-cache: MISS, HIT
+      x-cache-hits: 0, 2
+      x-timer: S1752782456.397506,VS0,VE0
+      vary: Accept-Encoding, Authorization, Origin
+      strict-transport-security: max-age=300
+      alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+      content-length: '190'
     body:
-      encoding: ''
-      file: no
-      string: '{"id":"286799","expires_at":"2022-11-09T19:54:55.599Z","expired":false,"multiple":false,"votes_count":64,"voters_count":64,"options":[{"title":"small
-        telescope approach (d33% of orig paper)","votes_count":10},{"title":"lower
-        CI of original effect","votes_count":7},{"title":"precision based (width of
-        CI for new effect)","votes_count":4},{"title":"Smallest Effect Size of Interest
-        (SESOI)","votes_count":43}],"emojis":[]}'
-  recorded_at: 2022-11-09 08:46:15 GMT
-  recorded_with: vcr/1.1.0, webmockr/0.8.2
+      string: '{"id":"684128","expires_at":"2025-05-10T08:10:18.291Z","expired":true,"multiple":false,"votes_count":25,"voters_count":25,"options":[{"title":"8","votes_count":2},{"title":"16","votes_count":2},{"title":"64","votes_count":5},{"title":"bigger!
+        (Please reply!)","votes_count":16}],"emojis":[]}'
+  recorded_at: 2025-07-17 20:00:56
+recorded_with: VCR-vcr/1.7.1.93

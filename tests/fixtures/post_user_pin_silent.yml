@@ -1,49 +1,38 @@
 http_interactions:
 - request:
-    method: post
-    uri: https://emacs.ch/api/v1/accounts/109337044410360200/pin
+    method: POST
+    uri: https://fosstodon.org/api/v1/accounts/109337044410360200/pin
     body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
-      Authorization: Bearer <<<MASTODON TOKEN>>>
+      fields: []
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 404
     headers:
-      cache-control: no-store
-      content-encoding: gzip
-      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
-        ''none''; font-src ''self'' https://emacs.ch; img-src ''self'' https: data:
-        blob: https://emacs.ch; style-src ''self'' https://emacs.ch ''nonce-s5sxVSnJXDMNUPSFF0xx6g=='';
-        media-src ''self'' https: data: https://emacs.ch; frame-src ''self'' https:;
-        manifest-src ''self'' https://emacs.ch; connect-src ''self'' data: blob: https://emacs.ch
-        https://emacs.ch wss://emacs.ch; script-src ''self'' https://emacs.ch ''wasm-unsafe-eval'';
-        child-src ''self'' blob: https://emacs.ch; worker-src ''self'' blob: https://emacs.ch'
       content-type: application/json; charset=utf-8
-      date: Tue, 15 Nov 2022 18:12:24 GMT
-      etag: W/"71fc28ed1faf9b0390808ead5c4527f1"
-      permissions-policy: interest-cohort=()
       server: Mastodon
-      strict-transport-security: max-age=63072000; includeSubDomains
-      vary:
-      - Accept-Encoding
-      - Origin
-      x-content-type-options: nosniff
       x-frame-options: DENY
-      x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '276'
-      x-ratelimit-reset: '2022-11-15T18:15:00.511173Z'
-      x-request-id: 441d3e11-2a78-44f3-91e8-76de6e743a72
-      x-runtime: '0.033891'
+      x-content-type-options: nosniff
       x-xss-protection: '0'
+      referrer-policy: same-origin
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '265'
+      x-ratelimit-reset: '2025-07-17T13:45:00.996729Z'
+      cache-control: private, no-store
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
+      x-request-id: 9e3452a1-6ef9-41ea-ba51-63b7fcac928b
+      x-runtime: '0.005194'
+      content-encoding: gzip
+      accept-ranges: bytes
+      via: 1.1 varnish, 1.1 varnish
+      date: Thu, 17 Jul 2025 13:44:28 GMT
+      x-served-by: cache-par-lfpg1960049-PAR, cache-muc13941-MUC
+      x-cache: MISS, MISS
+      x-cache-hits: 0, 0
+      x-timer: S1752759868.982400,VS0,VE27
+      vary: Accept-Encoding, Authorization, Origin
+      strict-transport-security: max-age=300
+      alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
     body:
-      encoding: ''
-      file: no
-      string: '{"id":"109337044410360200","following":true,"showing_reblogs":true,"notifying":false,"languages":null,"followed_by":true,"blocking":false,"blocked_by":false,"muting":false,"muting_notifications":false,"requested":false,"domain_blocking":false,"endorsed":true,"note":""}'
-  recorded_at: 2022-11-15 18:12:24 GMT
-  recorded_with: vcr/1.1.0, webmockr/0.8.2
+      string: '{"error":"Record not found"}'
+  recorded_at: 2025-07-17 13:44:27
+recorded_with: VCR-vcr/1.7.1.93

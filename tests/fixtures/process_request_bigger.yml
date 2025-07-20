@@ -1,376 +1,497 @@
 http_interactions:
 - request:
-    method: get
-    uri: https://emacs.ch/api/v1/timelines/public?local=FALSE&remote=FALSE&only_media=FALSE&limit=10
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
-      Authorization: Bearer <<<MASTODON TOKEN>>>
+    method: GET
+    uri: https://fosstodon.org/api/v1/timelines/public?local=FALSE&remote=FALSE&only_media=FALSE&limit=10
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 200
     headers:
-      cache-control: no-store
-      content-encoding: gzip
-      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
-        ''none''; font-src ''self'' https://emacs.ch; img-src ''self'' https: data:
-        blob: https://emacs.ch; style-src ''self'' https://emacs.ch ''nonce-+jtNhskbejmkJmYtnANkVw=='';
-        media-src ''self'' https: data: https://emacs.ch; frame-src ''self'' https:;
-        manifest-src ''self'' https://emacs.ch; connect-src ''self'' data: blob: https://emacs.ch
-        https://emacs.ch wss://emacs.ch; script-src ''self'' https://emacs.ch ''wasm-unsafe-eval'';
-        child-src ''self'' blob: https://emacs.ch; worker-src ''self'' blob: https://emacs.ch'
       content-type: application/json; charset=utf-8
-      date: Wed, 16 Nov 2022 10:32:31 GMT
-      etag: W/"0b054caff3aa664b847dafac06f14c45"
-      link: <https://emacs.ch/api/v1/timelines/public?limit=10&local=FALSE&max_id=109353009586751651&only_media=FALSE&remote=FALSE>;
-        rel="next", <https://emacs.ch/api/v1/timelines/public?limit=10&local=FALSE&min_id=109353023823324523&only_media=FALSE&remote=FALSE>;
-        rel="prev"
-      permissions-policy: interest-cohort=()
       server: Mastodon
-      strict-transport-security: max-age=63072000; includeSubDomains
-      vary:
-      - Accept-Encoding
-      - Origin
-      x-cached: MISS
-      x-content-type-options: nosniff
       x-frame-options: DENY
-      x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '299'
-      x-ratelimit-reset: '2022-11-16T10:35:00.095191Z'
-      x-request-id: b14397e8-de96-4499-9109-a2011f928ee1
-      x-runtime: '0.145118'
+      x-content-type-options: nosniff
       x-xss-protection: '0'
+      referrer-policy: same-origin
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '271'
+      x-ratelimit-reset: '2025-07-17T13:45:00.366568Z'
+      link: <https://fosstodon.org/api/v1/timelines/public?limit=10&local=FALSE&max_id=114868870329206845&only_media=FALSE&remote=FALSE>;
+        rel="next", <https://fosstodon.org/api/v1/timelines/public?limit=10&local=FALSE&min_id=114868870584008938&only_media=FALSE&remote=FALSE>;
+        rel="prev"
+      cache-control: private, no-store
+      etag: W/"b211c426747674c26703d0e0c235ed43"
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
+      x-request-id: 80de12fc-1fe3-4ba5-94e4-1e30dbc7f67e
+      x-runtime: '0.059089'
+      content-encoding: gzip
+      accept-ranges: bytes
+      via: 1.1 varnish, 1.1 varnish
+      date: Thu, 17 Jul 2025 13:44:26 GMT
+      x-served-by: cache-par-lfpg1960072-PAR, cache-muc13941-MUC
+      x-cache: MISS, MISS
+      x-cache-hits: 0, 0
+      x-timer: S1752759866.350320,VS0,VE82
+      vary: Accept-Encoding, Authorization, Origin
+      strict-transport-security: max-age=300
+      alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
     body:
-      encoding: ''
-      file: no
-      string: "[{\"id\":\"109353023823324523\",\"created_at\":\"2022-11-16T10:32:03.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"tr\",\"uri\":\"https://mastodon.com.tr/users/Cattie/statuses/109353023773983022\",\"url\":\"https://mastodon.com.tr/@Cattie/109353023773983022\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eBen
-        reise vercem arkadaşlar\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109349133596628366\",\"username\":\"Cattie\",\"acct\":\"Cattie@mastodon.com.tr\",\"display_name\":\"\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-07T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eCenazem
-        mi var ışıl ışılsınız?\\u003c/p\\u003e\",\"url\":\"https://mastodon.com.tr/@Cattie\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/349/133/596/628/366/original/136cf1a1599184c1.jpeg\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/349/133/596/628/366/original/136cf1a1599184c1.jpeg\",\"header\":\"https://emacs.ch/system/cache/accounts/headers/109/349/133/596/628/366/original/ba76f3c5015c3e58.jpeg\",\"header_static\":\"https://emacs.ch/system/cache/accounts/headers/109/349/133/596/628/366/original/ba76f3c5015c3e58.jpeg\",\"followers_count\":53,\"following_count\":22,\"statuses_count\":940,\"last_status_at\":\"2022-11-16\",\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109353021919374795\",\"created_at\":\"2022-11-16T10:30:46.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"zh\",\"uri\":\"https://pokemon.men/users/archlinux/statuses/109353018779322431\",\"url\":\"https://pokemon.men/@archlinux/109353018779322431\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003e\\u003ca
-        href=\\\"https://pokemon.men/tags/ArchLinuxPackageUpdate\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eArchLinuxPackageUpdate\\u003c/span\\u003e\\u003c/a\\u003e
-        qgnomeplatform-qt5 0.9.0-5 x86_64 \\u003ca href=\\\"https://archlinux.org/packages/community/x86_64/qgnomeplatform-qt5/\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003earchlinux.org/packages/communi\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ety/x86_64/qgnomeplatform-qt5/\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://pokemon.men/tags/ArchLinux\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eArchLinux\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://pokemon.men/tags/Linux\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eLinux\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109348158936750762\",\"username\":\"archlinux\",\"acct\":\"archlinux@pokemon.men\",\"display_name\":\"ArchLinux
-        :archlinux:\",\"locked\":false,\"bot\":true,\"discoverable\":true,\"group\":false,\"created_at\":\"2019-05-06T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003ca
-        href=\\\"https://pokemon.men/tags/ArchLinux\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eArchLinux\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://pokemon.men/tags/Linux\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eLinux\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://pokemon.men/@archlinux\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/348/158/936/750/762/original/7a09d1ab458203bf.png\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/348/158/936/750/762/original/7a09d1ab458203bf.png\",\"header\":\"https://emacs.ch/headers/original/missing.png\",\"header_static\":\"https://emacs.ch/headers/original/missing.png\",\"followers_count\":1526,\"following_count\":3,\"statuses_count\":98493,\"last_status_at\":\"2022-11-16\",\"emojis\":[{\"shortcode\":\"archlinux\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/002/998/original/c4124186005dbc48.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/002/998/static/c4124186005dbc48.png\",\"visible_in_picker\":true}],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"linux\",\"url\":\"https://emacs.ch/tags/linux\"},{\"name\":\"archlinux\",\"url\":\"https://emacs.ch/tags/archlinux\"},{\"name\":\"archlinuxpackageupdate\",\"url\":\"https://emacs.ch/tags/archlinuxpackageupdate\"}],\"emojis\":[],\"card\":{\"url\":\"https://archlinux.org/packages/community/x86_64/qgnomeplatform-qt5/\",\"title\":\"Arch
-        Linux - qgnomeplatform-qt5 0.9.0-5 (x86_64)\",\"description\":\"\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"\",\"provider_url\":\"\",\"html\":\"\",\"width\":0,\"height\":0,\"image\":null,\"embed_url\":\"\",\"blurhash\":null},\"poll\":null},{\"id\":\"109353021428178619\",\"created_at\":\"2022-11-16T10:30:45.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"zh\",\"uri\":\"https://pokemon.men/users/archlinux/statuses/109353018665849499\",\"url\":\"https://pokemon.men/@archlinux/109353018665849499\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003e\\u003ca
-        href=\\\"https://pokemon.men/tags/ArchLinuxPackageUpdate\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eArchLinuxPackageUpdate\\u003c/span\\u003e\\u003c/a\\u003e
-        qgnomeplatform-qt6 0.9.0-5 x86_64 \\u003ca href=\\\"https://archlinux.org/packages/community/x86_64/qgnomeplatform-qt6/\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003earchlinux.org/packages/communi\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ety/x86_64/qgnomeplatform-qt6/\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://pokemon.men/tags/ArchLinux\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eArchLinux\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://pokemon.men/tags/Linux\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eLinux\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109348158936750762\",\"username\":\"archlinux\",\"acct\":\"archlinux@pokemon.men\",\"display_name\":\"ArchLinux
-        :archlinux:\",\"locked\":false,\"bot\":true,\"discoverable\":true,\"group\":false,\"created_at\":\"2019-05-06T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003ca
-        href=\\\"https://pokemon.men/tags/ArchLinux\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eArchLinux\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://pokemon.men/tags/Linux\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eLinux\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://pokemon.men/@archlinux\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/348/158/936/750/762/original/7a09d1ab458203bf.png\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/348/158/936/750/762/original/7a09d1ab458203bf.png\",\"header\":\"https://emacs.ch/headers/original/missing.png\",\"header_static\":\"https://emacs.ch/headers/original/missing.png\",\"followers_count\":1526,\"following_count\":3,\"statuses_count\":98493,\"last_status_at\":\"2022-11-16\",\"emojis\":[{\"shortcode\":\"archlinux\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/002/998/original/c4124186005dbc48.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/002/998/static/c4124186005dbc48.png\",\"visible_in_picker\":true}],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"linux\",\"url\":\"https://emacs.ch/tags/linux\"},{\"name\":\"archlinux\",\"url\":\"https://emacs.ch/tags/archlinux\"},{\"name\":\"archlinuxpackageupdate\",\"url\":\"https://emacs.ch/tags/archlinuxpackageupdate\"}],\"emojis\":[],\"card\":{\"url\":\"https://archlinux.org/packages/community/x86_64/qgnomeplatform-qt6/\",\"title\":\"Arch
-        Linux - qgnomeplatform-qt6 0.9.0-5 (x86_64)\",\"description\":\"\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"\",\"provider_url\":\"\",\"html\":\"\",\"width\":0,\"height\":0,\"image\":null,\"embed_url\":\"\",\"blurhash\":null},\"poll\":null},{\"id\":\"109353020672877916\",\"created_at\":\"2022-11-16T10:30:43.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"zh\",\"uri\":\"https://pokemon.men/users/archlinux/statuses/109353018578118374\",\"url\":\"https://pokemon.men/@archlinux/109353018578118374\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003e\\u003ca
-        href=\\\"https://pokemon.men/tags/ArchLinux\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eArchLinux\\u003c/span\\u003e\\u003c/a\\u003e
-        Not understanding mime types: \\\"xdg-open index.html\\\" opens \\\"Atom\\\"
-        \\u003ca href=\\\"https://bbs.archlinux.org/viewtopic.php?id=281325\\u0026amp;action=new\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ebbs.archlinux.org/viewtopic.ph\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ep?id=281325\\u0026amp;action=new\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://pokemon.men/tags/Linux\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eLinux\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109348158936750762\",\"username\":\"archlinux\",\"acct\":\"archlinux@pokemon.men\",\"display_name\":\"ArchLinux
-        :archlinux:\",\"locked\":false,\"bot\":true,\"discoverable\":true,\"group\":false,\"created_at\":\"2019-05-06T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003ca
-        href=\\\"https://pokemon.men/tags/ArchLinux\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eArchLinux\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://pokemon.men/tags/Linux\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eLinux\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://pokemon.men/@archlinux\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/348/158/936/750/762/original/7a09d1ab458203bf.png\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/348/158/936/750/762/original/7a09d1ab458203bf.png\",\"header\":\"https://emacs.ch/headers/original/missing.png\",\"header_static\":\"https://emacs.ch/headers/original/missing.png\",\"followers_count\":1526,\"following_count\":3,\"statuses_count\":98493,\"last_status_at\":\"2022-11-16\",\"emojis\":[{\"shortcode\":\"archlinux\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/002/998/original/c4124186005dbc48.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/002/998/static/c4124186005dbc48.png\",\"visible_in_picker\":true}],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"linux\",\"url\":\"https://emacs.ch/tags/linux\"},{\"name\":\"archlinux\",\"url\":\"https://emacs.ch/tags/archlinux\"}],\"emojis\":[],\"card\":{\"url\":\"https://bbs.archlinux.org/viewtopic.php?id=281325\",\"title\":\"Not
-        understanding mime types: \\\"xdg-open index.html\\\" opens \\\"Atom\\\" /
-        Applications \\u0026 Desktop Environments / Arch Linux Forums\",\"description\":\"\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"\",\"provider_url\":\"\",\"html\":\"\",\"width\":0,\"height\":0,\"image\":null,\"embed_url\":\"\",\"blurhash\":null},\"poll\":null},{\"id\":\"109353019972431282\",\"created_at\":\"2022-11-16T10:30:43.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"zh\",\"uri\":\"https://pokemon.men/users/archlinux/statuses/109353018542942008\",\"url\":\"https://pokemon.men/@archlinux/109353018542942008\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003e\\u003ca
-        href=\\\"https://pokemon.men/tags/ArchLinuxPackageUpdate\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eArchLinuxPackageUpdate\\u003c/span\\u003e\\u003c/a\\u003e
-        qt6ct 0.7-2 x86_64 \\u003ca href=\\\"https://archlinux.org/packages/community/x86_64/qt6ct/\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003earchlinux.org/packages/communi\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ety/x86_64/qt6ct/\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://pokemon.men/tags/ArchLinux\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eArchLinux\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://pokemon.men/tags/Linux\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eLinux\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109348158936750762\",\"username\":\"archlinux\",\"acct\":\"archlinux@pokemon.men\",\"display_name\":\"ArchLinux
-        :archlinux:\",\"locked\":false,\"bot\":true,\"discoverable\":true,\"group\":false,\"created_at\":\"2019-05-06T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003ca
-        href=\\\"https://pokemon.men/tags/ArchLinux\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eArchLinux\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://pokemon.men/tags/Linux\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eLinux\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://pokemon.men/@archlinux\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/348/158/936/750/762/original/7a09d1ab458203bf.png\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/348/158/936/750/762/original/7a09d1ab458203bf.png\",\"header\":\"https://emacs.ch/headers/original/missing.png\",\"header_static\":\"https://emacs.ch/headers/original/missing.png\",\"followers_count\":1526,\"following_count\":3,\"statuses_count\":98493,\"last_status_at\":\"2022-11-16\",\"emojis\":[{\"shortcode\":\"archlinux\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/002/998/original/c4124186005dbc48.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/002/998/static/c4124186005dbc48.png\",\"visible_in_picker\":true}],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"linux\",\"url\":\"https://emacs.ch/tags/linux\"},{\"name\":\"archlinux\",\"url\":\"https://emacs.ch/tags/archlinux\"},{\"name\":\"archlinuxpackageupdate\",\"url\":\"https://emacs.ch/tags/archlinuxpackageupdate\"}],\"emojis\":[],\"card\":{\"url\":\"https://archlinux.org/packages/community/x86_64/qt6ct/\",\"title\":\"Arch
-        Linux - qt6ct 0.7-2 (x86_64)\",\"description\":\"\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"\",\"provider_url\":\"\",\"html\":\"\",\"width\":0,\"height\":0,\"image\":null,\"embed_url\":\"\",\"blurhash\":null},\"poll\":null},{\"id\":\"109353018792568399\",\"created_at\":\"2022-11-16T10:30:42.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"zh\",\"uri\":\"https://pokemon.men/users/archlinux/statuses/109353018487959678\",\"url\":\"https://pokemon.men/@archlinux/109353018487959678\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003e\\u003ca
-        href=\\\"https://pokemon.men/tags/ArchLinux\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eArchLinux\\u003c/span\\u003e\\u003c/a\\u003e
-        SwayIDLE not working when i close my thinkpad \\u003ca href=\\\"https://bbs.archlinux.org/viewtopic.php?id=281326\\u0026amp;action=new\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ebbs.archlinux.org/viewtopic.ph\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ep?id=281326\\u0026amp;action=new\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://pokemon.men/tags/Linux\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eLinux\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109348158936750762\",\"username\":\"archlinux\",\"acct\":\"archlinux@pokemon.men\",\"display_name\":\"ArchLinux
-        :archlinux:\",\"locked\":false,\"bot\":true,\"discoverable\":true,\"group\":false,\"created_at\":\"2019-05-06T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003ca
-        href=\\\"https://pokemon.men/tags/ArchLinux\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eArchLinux\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://pokemon.men/tags/Linux\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eLinux\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://pokemon.men/@archlinux\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/348/158/936/750/762/original/7a09d1ab458203bf.png\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/348/158/936/750/762/original/7a09d1ab458203bf.png\",\"header\":\"https://emacs.ch/headers/original/missing.png\",\"header_static\":\"https://emacs.ch/headers/original/missing.png\",\"followers_count\":1526,\"following_count\":3,\"statuses_count\":98493,\"last_status_at\":\"2022-11-16\",\"emojis\":[{\"shortcode\":\"archlinux\",\"url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/002/998/original/c4124186005dbc48.png\",\"static_url\":\"https://emacs.ch/system/cache/custom_emojis/images/000/002/998/static/c4124186005dbc48.png\",\"visible_in_picker\":true}],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"linux\",\"url\":\"https://emacs.ch/tags/linux\"},{\"name\":\"archlinux\",\"url\":\"https://emacs.ch/tags/archlinux\"}],\"emojis\":[],\"card\":{\"url\":\"https://bbs.archlinux.org/viewtopic.php?id=281326\",\"title\":\"SwayIDLE
-        not working when i close my thinkpad / Applications \\u0026 Desktop Environments
-        / Arch Linux Forums\",\"description\":\"\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"\",\"provider_url\":\"\",\"html\":\"\",\"width\":0,\"height\":0,\"image\":null,\"embed_url\":\"\",\"blurhash\":null},\"poll\":null},{\"id\":\"109353017283269023\",\"created_at\":\"2022-11-16T10:30:17.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://social.treehouse.systems/users/ariadne/statuses/109353016854603277\",\"url\":\"https://social.treehouse.systems/@ariadne/109353016854603277\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eanyway,
-        as i was saying, if you are going to buy into forms of digital casteism such
-        as fedified, we're not likely to be friends.\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109342791058708572\",\"username\":\"ariadne\",\"acct\":\"ariadne@treehouse.systems\",\"display_name\":\"Ariadne
-        Conill \U0001F430\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-04-05T00:00:00.000Z\",\"note\":\"\\u003cp\\u003erabbit
-        enthusiast, principal software engineer, dreamer of dreams, maker of cool
-        shit\\u003c/p\\u003e\",\"url\":\"https://social.treehouse.systems/@ariadne\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/342/791/058/708/572/original/5d3f03ccb5885b15.png\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/342/791/058/708/572/original/5d3f03ccb5885b15.png\",\"header\":\"https://emacs.ch/system/cache/accounts/headers/109/342/791/058/708/572/original/9123d342910ec7f7.jpg\",\"header_static\":\"https://emacs.ch/system/cache/accounts/headers/109/342/791/058/708/572/original/9123d342910ec7f7.jpg\",\"followers_count\":2150,\"following_count\":650,\"statuses_count\":4211,\"last_status_at\":\"2022-11-16\",\"emojis\":[],\"fields\":[{\"name\":\"Website\",\"value\":\"\\u003ca
-        href=\\\"https://ariadne.space\\\" rel=\\\"nofollow noopener noreferrer\\\"
+      string: "[{\"id\":\"114868870584008938\",\"created_at\":\"2025-07-17T13:44:24.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://mastodon.social/users/microtrailers/statuses/114868870472216819\",\"url\":\"https://mastodon.social/@microtrailers/114868870472216819\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eSea
+        of Dreams Survivors - New on Steam!\\u003cbr\\u003eSteam: \\u003ca href=\\\"https://store.steampowered.com/app/3484590\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003estore.steampowered.com/app/348\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e4590\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr\\u003e$2.99
+        \\u003ca href=\\\"https://mastodon.social/tags/gaming\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003egaming\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.social/tags/games\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003egames\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.social/tags/steam\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003esteam\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"111666021543991532\",\"username\":\"microtrailers\",\"acct\":\"microtrailers@mastodon.social\",\"display_name\":\"Steam
+        Trailers in 6s\",\"locked\":false,\"bot\":true,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2023-12-29T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eA
+        6-second microtrailer for every Steam launch! Just like on Twitter, except
+        now on Mastodon!\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@microtrailers\",\"uri\":\"https://mastodon.social/users/microtrailers\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/111/666/021/543/991/532/original/b1e365d7bd5abd7e.jpg\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/111/666/021/543/991/532/original/b1e365d7bd5abd7e.jpg\",\"header\":\"https://fosstodon.org/headers/original/missing.png\",\"header_static\":\"https://fosstodon.org/headers/original/missing.png\",\"followers_count\":480,\"following_count\":0,\"statuses_count\":20520,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},\"media_attachments\":[{\"id\":\"114868870503686804\",\"type\":\"gifv\",\"url\":\"https://cdn.fosstodon.org/cache/media_attachments/files/114/868/870/503/686/804/original/c68ebcdcf9e17743.mp4\",\"preview_url\":\"https://cdn.fosstodon.org/cache/media_attachments/files/114/868/870/503/686/804/small/c68ebcdcf9e17743.png\",\"remote_url\":\"https://files.mastodon.social/media_attachments/files/114/868/869/775/891/159/original/195b8a3f38ff9a7b.mp4\",\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"original\":{\"width\":854,\"height\":480,\"frame_rate\":\"60/1\",\"duration\":6.0,\"bitrate\":2915982},\"small\":{\"width\":640,\"height\":360,\"size\":\"640x360\",\"aspect\":1.7777777777777777}},\"description\":null,\"blurhash\":\"U02rjirrNGafs9n~enaeNFaeoJjFofbIWXj@\"}],\"mentions\":[],\"tags\":[{\"name\":\"gaming\",\"url\":\"https://fosstodon.org/tags/gaming\"},{\"name\":\"games\",\"url\":\"https://fosstodon.org/tags/games\"},{\"name\":\"steam\",\"url\":\"https://fosstodon.org/tags/steam\"}],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868870478648203\",\"created_at\":\"2025-07-17T13:44:24.483Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://fosstodon.org/users/bgruening/statuses/114868870478648203\",\"url\":\"https://fosstodon.org/@bgruening/114868870478648203\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eThe
+        \\u003ca href=\\\"https://fosstodon.org/tags/eosc\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eeosc\\u003c/span\\u003e\\u003c/a\\u003e
+        EuroScienceGateway project has assessed the sustainability of the \\u003ca
+        href=\\\"https://fosstodon.org/tags/usegalaxy\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"tag\\\"\\u003e#\\u003cspan\\u003eusegalaxy\\u003c/span\\u003e\\u003c/a\\u003e
+        project and published a report available at \\u003ca href=\\\"https://gxy.io/sustainability\\\"
+        target=\\\"_blank\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003egxy.io/sustainability\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e \\u003c/p\\u003e\\u003cp\\u003eEnjoy
+        reading this long document and point everyone that have been in doubt :)\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"application\":null,\"account\":{\"id\":\"109372502003247690\",\"username\":\"bgruening\",\"acct\":\"bgruening\",\"display_name\":\"Bjoern
+        Gruening\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2022-11-19T00:00:00.000Z\",\"note\":\"\",\"url\":\"https://fosstodon.org/@bgruening\",\"uri\":\"https://fosstodon.org/users/bgruening\",\"avatar\":\"https://cdn.fosstodon.org/accounts/avatars/109/372/502/003/247/690/original/35dd17d47a926aa1.jpeg\",\"avatar_static\":\"https://cdn.fosstodon.org/accounts/avatars/109/372/502/003/247/690/original/35dd17d47a926aa1.jpeg\",\"header\":\"https://fosstodon.org/headers/original/missing.png\",\"header_static\":\"https://fosstodon.org/headers/original/missing.png\",\"followers_count\":150,\"following_count\":344,\"statuses_count\":1481,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"noindex\":false,\"emojis\":[],\"roles\":[],\"fields\":[{\"name\":\"GitHub\",\"value\":\"\\u003ca
+        href=\\\"https://github.com/bgruening/\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003egithub.com/bgruening/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2023-11-11T08:52:36.633+00:00\"},{\"name\":\"Galaxy\",\"value\":\"\\u003ca
+        href=\\\"https://galaxyproject.org/eu/\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003egalaxyproject.org/eu/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"ORCID\",\"value\":\"\\u003ca
+        href=\\\"https://orcid.org/my-orcid?orcid=0000-0002-3079-6586\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener me\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"ellipsis\\\"\\u003eorcid.org/my-orcid?orcid=0000-\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e0002-3079-6586\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"eosc\",\"url\":\"https://fosstodon.org/tags/eosc\"},{\"name\":\"usegalaxy\",\"url\":\"https://fosstodon.org/tags/usegalaxy\"}],\"emojis\":[],\"quote\":null,\"card\":{\"url\":\"https://gxy.io/sustainability\",\"title\":\"Galaxy
+        Sustainability Report\",\"description\":\"Title:Galaxy Sustainability Report
+        2025 Description:This report provides an in-depth analysis of the sustainability
+        of the Galaxy platform, a globally recognized open-source system for data
+        analysis, workflow management, and scientific collaboration. Developed under
+        the EuroScienceGateway project and supported by the European Union’s Horizon
+        Europe program (Grant Agreement No. 101057388), the report evaluates Galaxy
+        through the lenses of desirability, feasibility, and viability using a robust
+        analytical framework derived from design thinking and open-source community
+        health metrics (CHAOSS). The report presents empirical data on Galaxy's rapid
+        growth in user adoption, job execution volume, infrastructure robustness,
+        contributor engagement, community governance, and scientific impact. It highlights
+        Galaxy’s ability to democratize access to advanced computational tools, support
+        reproducible science, and maintain long-term sustainability through a distributed
+        community and institutional support. This document is a valuable resource
+        for funders, policymakers, and stakeholders in the open science and digital
+        research infrastructure community, illustrating why Galaxy represents a low-risk,
+        high-reward investment in the future of data-driven research. Authors:Smitesh
+        Jain (EGI Foundation)on behalf of the EuroScienceGateway Consortium Funding
+        Acknowledgement:This project was funded by the European Union’s Horizon Europe
+        programme under Grant Agreement No. 101057388.\",\"language\":\"en\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"Zenodo\",\"provider_url\":\"\",\"html\":\"\",\"width\":0,\"height\":0,\"image\":null,\"image_description\":\"\",\"embed_url\":\"\",\"blurhash\":null,\"published_at\":null,\"authors\":[]},\"poll\":null},{\"id\":\"114868870474774764\",\"created_at\":\"2025-07-17T13:43:59.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://posts.rat.pictures/users/hannah/statuses/114868868865375736\",\"url\":\"https://posts.rat.pictures/@hannah/114868868865375736\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eKatie
+        told me she had a dream that at her job she was assigned to make a playable
+        Barstool Sports nation DLC for Civilization 6\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109831833903877583\",\"username\":\"hannah\",\"acct\":\"hannah@posts.rat.pictures\",\"display_name\":\"a
+        beautiful bitch\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":true,\"group\":false,\"created_at\":\"2023-02-07T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e3
+        time loser on jeopardy\\u003cbr\\u003eshe/her\\u003cbr\\u003echicago\\u003c/p\\u003e\\u003cp\\u003eavatar
+        by: me\\u003c/p\\u003e\",\"url\":\"https://posts.rat.pictures/@hannah\",\"uri\":\"https://posts.rat.pictures/users/hannah\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/831/833/903/877/583/original/adbe6c85caf8234c.png\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/831/833/903/877/583/original/adbe6c85caf8234c.png\",\"header\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/831/833/903/877/583/original/afc7d650b87bbddc.jpeg\",\"header_static\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/831/833/903/877/583/original/afc7d650b87bbddc.jpeg\",\"followers_count\":7755,\"following_count\":951,\"statuses_count\":14789,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868870441061974\",\"created_at\":\"2025-07-17T13:44:22.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://graz.social/users/mo/statuses/114868870344227868\",\"url\":\"https://graz.social/@mo/114868870344227868\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eDie
+        Bank hat angerufen. Jetzt rufen die schon an… \U0001F643\\u003cbr\\u003eÜbrigens
+        dient eine Kontovollmacht über den Tod hinaus nur dazu, Informationen zu erhalten.
+        Von Verfügung ist keine Rede…\\u003cbr\\u003eDie Bank ist auch bemüht, Nachlasskonten
+        schnell los zu werden. Definiere schnell! Unser Konto ist seit Oktober 24
+        gesperrt \U0001F937‍♀️\\u003cbr\\u003eDie Nachlassabteilung meinte heute zum
+        drölfzigsten Mal, dass ja jetzt alle Unterlagen da sind und sie das Konto
+        jetzt auflösen könnten \U0001F92A\U0001F92A\\u003c/p\\u003e\\u003cp\\u003eBleibt
+        dran. Es bleibt spannend… \\u003c/p\\u003e\\u003cp\\u003eVielleicht sollte
+        ich Wetten annehmen, wann das Konto wirklich freigegeben wird.  Und dann verdiene
+        ich damit mehr als auf dem Konto ist \U0001F60E\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"108194510391521844\",\"username\":\"mo\",\"acct\":\"mo@graz.social\",\"display_name\":\"Mo\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2022-04-25T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\U0001F4DABuchstabensüchtig
+        \\u0026amp; professionell neugierig. \U0001F440\\u003cbr\\u003eEin Teil von
+        DieMeurers. \U0001F4F7\U0001F933 — Digital Scouting für Open Data\\u003cbr\\u003e\U0001F3F3️‍⚧️\U0001F3F3️‍\U0001F308\\u003cbr\\u003eProjekte:
+        JustNormalLife \U0001F4F7, Queer Travel \U0001F308\\u003cbr\\u003e\U0001F534
+        Lieblingsfarbe rot. \\u003cbr\\u003eMag Handarbeiten \U0001F9F6 und Nachhaltigkeit
+        ♻️\\u003c/p\\u003e\",\"url\":\"https://graz.social/@mo\",\"uri\":\"https://graz.social/users/mo\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/108/194/510/391/521/844/original/97e5ad2e5c6228cd.png\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/108/194/510/391/521/844/original/97e5ad2e5c6228cd.png\",\"header\":\"https://cdn.fosstodon.org/cache/accounts/headers/108/194/510/391/521/844/original/7f3d9d9f7e0fcccc.jpeg\",\"header_static\":\"https://cdn.fosstodon.org/cache/accounts/headers/108/194/510/391/521/844/original/7f3d9d9f7e0fcccc.jpeg\",\"followers_count\":242,\"following_count\":164,\"statuses_count\":11281,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Mein
+        Blog\",\"value\":\"\\u003ca href=\\\"https://mome.at\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003emome.at\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Firmenseite
+        Die Meurers\",\"value\":\"\\u003ca href=\\\"https://meurers.net\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003emeurers.net\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Location\",\"value\":\"Tallinn
+        \U0001F1EA\U0001F1EA\",\"verified_at\":null},{\"name\":\"Pronomen\",\"value\":\"she/her\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868870430863624\",\"created_at\":\"2025-07-17T13:44:23.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://mas.to/users/fieldofschemes/statuses/114868870414779606\",\"url\":\"https://mas.to/@fieldofschemes/114868870414779606\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eThe
+        assumption is DC councilmembers will ultimately ask for changes in the Commanders
+        lease terms, but whether those will be significant enough to move the needle
+        on \\\"most lavish stadium subsidy in history by a factor of at least four\\\"
+        remains to be seen. \\u003ca href=\\\"https://www.fieldofschemes.com/2025/07/17/22943/commanders-could-seek-md-or-va-stadium-deal-to-compete-with-dcs-7b-offer-says-literally-somebody/\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003efieldofschemes.com/2025/07/17/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e22943/commanders-could-seek-md-or-va-stadium-deal-to-compete-with-dcs-7b-offer-says-literally-somebody/\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109320036808211620\",\"username\":\"fieldofschemes\",\"acct\":\"fieldofschemes@mas.to\",\"display_name\":\"Field
+        of Schemes\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-07T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eSports
+        stadium and arena news by Neil deMause, co-author of the book Field of Schemes.\\u003c/p\\u003e\",\"url\":\"https://mas.to/@fieldofschemes\",\"uri\":\"https://mas.to/users/fieldofschemes\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/320/036/808/211/620/original/1ab71f757f6322c7.jpeg\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/320/036/808/211/620/original/1ab71f757f6322c7.jpeg\",\"header\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/320/036/808/211/620/original/524afb3ad3aa68ee.png\",\"header_static\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/320/036/808/211/620/original/524afb3ad3aa68ee.png\",\"followers_count\":285,\"following_count\":15,\"statuses_count\":723,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Website\",\"value\":\"\\u003ca
+        href=\\\"https://www.fieldofschemes.com\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003efieldofschemes.com\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2025-07-16T15:15:02.993+00:00\"},{\"name\":\"Verification\",\"value\":\"\\u003ca
+        href=\\\"https://www.fieldofschemes.com/\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003efieldofschemes.com/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2025-07-16T15:15:03.917+00:00\"}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868870412893948\",\"created_at\":\"2025-07-17T13:44:23.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://mastodon.social/users/tibrnowplayingbot/statuses/114868870384991099\",\"url\":\"https://mastodon.social/@tibrnowplayingbot/114868870384991099\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eNow
+        playing:\\u003c/p\\u003e\\u003cp\\u003e Station:\\tThe Indie Beat Radio -
+        Not What I Call Radio Bonk Wave\\u003cbr\\u003e Title:\\tMoolblanrev\\u003cbr\\u003e
+        Artist:\\tC. Circo\\u003cbr\\u003e Album:\\t The Four Seasons of Bonk Wave:
+        Bonks of Spring 1\\u003cbr\\u003e Support:\\t\\u003ca href=\\\"https://bonkwave.org/music/c-circo/\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003ebonkwave.org/music/c-circo/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr\\u003e
+        Live:\\t\\u003ca href=\\\"https://theindiebeat.fm/not-what-i-call-radio-bonk-wave/\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003etheindiebeat.fm/not-what-i-cal\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003el-radio-bonk-wave/\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003eUp
+        next:\\t - id-bwave2-6\\u003c/p\\u003e\\u003cp\\u003eVisit:\\t\\u003ca href=\\\"https://theindiebeat.fm\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003etheindiebeat.fm\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e \\u003c/p\\u003e\\u003cp\\u003e\\u003ca
+        href=\\\"https://mastodon.social/tags/tibrNowPlaying\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003etibrNowPlaying\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.social/tags/theIndieBeatNowPlaying\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003etheIndieBeatNowPlaying\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.social/tags/tibrNotWhatICallRadioBonkWave\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003etibrNotWhatICallRadioBonkWave\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"114042703185046040\",\"username\":\"tibrnowplayingbot\",\"acct\":\"tibrnowplayingbot@mastodon.social\",\"display_name\":\"Now
+        Playing on The Indie Beat\",\"locked\":false,\"bot\":true,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2025-02-21T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\U0001F916
+        Bot account posting the currently playing tracks on all channels of The Indie
+        Beat Radio -\\u0026gt; \\u003ca href=\\\"https://theindiebeat.fm/\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003etheindiebeat.fm/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e⚠️
+        Frequent posts, auto-deleted after 1 week.\\u003c/p\\u003e\\u003cp\\u003eSuggestions:
+        \\u003cbr\\u003e\U0001F3B5 Follow, but put the account in a list and choose
+        \\\"Hide posts from Home\\\"\\u003cbr\\u003e\U0001F3B5 Search \\u003ca href=\\\"https://mastodon.social/tags/tibrNowPlaying\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003etibrNowPlaying\\u003c/span\\u003e\\u003c/a\\u003e
+        to find the latest posts.\\u003cbr\\u003e\U0001F496  Find \\u0026amp; boost
+        tracks you love!\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@tibrnowplayingbot\",\"uri\":\"https://mastodon.social/users/tibrnowplayingbot\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/114/042/703/185/046/040/original/3a2c392764a0ab69.jpg\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/114/042/703/185/046/040/original/3a2c392764a0ab69.jpg\",\"header\":\"https://cdn.fosstodon.org/cache/accounts/headers/114/042/703/185/046/040/original/b6a67a725528e302.jpg\",\"header_static\":\"https://cdn.fosstodon.org/cache/accounts/headers/114/042/703/185/046/040/original/b6a67a725528e302.jpg\",\"followers_count\":108,\"following_count\":3,\"statuses_count\":6614,\"last_status_at\":\"2025-07-17\",\"hide_collections\":true,\"emojis\":[],\"fields\":[{\"name\":\"Web\",\"value\":\"\\u003ca
+        href=\\\"https://theindiebeat.fm\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"
         target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003eariadne.space\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-11-16T08:26:11.676+00:00\"}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109353013280438553\",\"created_at\":\"2022-11-16T10:29:20.891Z\",\"in_reply_to_id\":\"109352856802313372\",\"in_reply_to_account_id\":\"109346416142488063\",\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://gleasonator.com/objects/3bde51d9-3311-41fc-9c15-627c01683411\",\"url\":\"https://gleasonator.com/objects/3bde51d9-3311-41fc-9c15-627c01683411\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"Going
-        to afk from my laptop this afternoon and evening, write some notes and see
-        if I can come up with a nice way to reimplement \\u003ca class=\\\"hashtag\\\"
-        href=\\\"https://gleasonator.com/tag/tasky\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e#Tasky\\u003c/a\\u003e both protocol wise and
-        also user-end API wise. The latter point is really what matters and is what
-        I want to implement in a very-nice manner.\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109346416142488063\",\"username\":\"deavmi\",\"acct\":\"deavmi@gleasonator.com\",\"display_name\":\"Tristan
-        B. V. Kildaire \U0001F1FA\U0001F1E6\U0001F5FD\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-11-15T00:00:00.000Z\",\"note\":\"I’m
-        Tristan B. Kildaire (or deavmi on the Internet) and I’m a computer programmer.
-        I love tinkering around with all the bits of software that my computer runs
-        but typically more on the low-level sides of things. I’m really interested
-        in how operating systems work as a whole and their components such as kernels,
-        networking stacks, linking-loaders, IPC, paging, virtual memory, file-systems
-        and the list goes on. There’s so much to learn from understanding these complex
-        systems and each aspect of them never leaves me bored!\\u003cbr\\u003e\\u003cbr\\u003eYou
-        could call me a language enthusiast, from the design to the implementation.
-        I always want to know how things work and I’ve even spent time reading the
-        source code for some language runtimes to get a better understanding. If I
-        am feeling creative then I try write my own or write something in Forth! I
-        love building networks too - I have an interest in setting up inter-networks
-        with routing protocols, assigning numbers and setting up tunnels in order
-        to build a huge network that I can play around on. When I’m not using other
-        peoples’ protocols I am busy writing my own to see what I can cobble out to
-        itch my scratch on trying interesting concepts out.\\u003cbr\\u003e\\u003cbr\\u003eI
-        like a good glass of red wine and cheese. I have an avid enjoyment for music
-        from the 70s and the 80s and have rather interesting political views (nothing
-        to be alarmed of) but most importantly I like to help others learn and put
-        a smile on their face.\",\"url\":\"https://gleasonator.com/users/deavmi\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/346/416/142/488/063/original/a25a403144267cc4.png\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/346/416/142/488/063/original/a25a403144267cc4.png\",\"header\":\"https://emacs.ch/system/cache/accounts/headers/109/346/416/142/488/063/original/467d2182afa4c0c3.jpg\",\"header_static\":\"https://emacs.ch/system/cache/accounts/headers/109/346/416/142/488/063/original/467d2182afa4c0c3.jpg\",\"followers_count\":199,\"following_count\":538,\"statuses_count\":17,\"last_status_at\":\"2022-11-16\",\"emojis\":[],\"fields\":[{\"name\":\"Monero\",\"value\":\"86reDCjk99VJ8QCo73WwM1AtfweD2fp8RPPWzNK56cdS1fAfxWCwixic9QrXkHyoJSe3gMZkAkb8aW5oU4cLEFucMLX4wqP\",\"verified_at\":null},{\"name\":\"Matrix\",\"value\":\"@deavmi:envs.net\",\"verified_at\":null},{\"name\":\"Website\",\"value\":\"\\u003ca
-        href=\\\"http://deavmi.assigned.network\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003ehttp://deavmi.assigned.network\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"BonoboNET
-        IRC\",\"value\":\"~deavmi\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[{\"id\":\"109346416142488063\",\"username\":\"deavmi\",\"url\":\"https://gleasonator.com/users/deavmi\",\"acct\":\"deavmi@gleasonator.com\"}],\"tags\":[{\"name\":\"tasky\",\"url\":\"https://emacs.ch/tags/tasky\"}],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109353013203181531\",\"created_at\":\"2022-11-16T10:29:21.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"tr\",\"uri\":\"https://mastodon.com.tr/users/alastor/statuses/109353013177966488\",\"url\":\"https://mastodon.com.tr/@alastor/109353013177966488\",\"replies_count\":0,\"reblogs_count\":1,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eAnancılık
-        kazanacak\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109353015952554558\",\"username\":\"alastor\",\"acct\":\"alastor@mastodon.com.tr\",\"display_name\":\"Bahadır\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-07T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eSystem
-        and Cyber Security Specialist\\u003c/p\\u003e\",\"url\":\"https://mastodon.com.tr/@alastor\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/353/015/952/554/558/original/201c4f0bb8c370d9.png\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/353/015/952/554/558/original/201c4f0bb8c370d9.png\",\"header\":\"https://emacs.ch/headers/original/missing.png\",\"header_static\":\"https://emacs.ch/headers/original/missing.png\",\"followers_count\":38,\"following_count\":18,\"statuses_count\":1969,\"last_status_at\":\"2022-11-16\",\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109353009586751651\",\"created_at\":\"2022-11-16T10:28:25.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"tr\",\"uri\":\"https://mastodon.com.tr/users/Cattie/statuses/109353009539610498\",\"url\":\"https://mastodon.com.tr/@Cattie/109353009539610498\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eTenkyu
-        chp kardeşim ışığın bol olsun\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109349133596628366\",\"username\":\"Cattie\",\"acct\":\"Cattie@mastodon.com.tr\",\"display_name\":\"\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-07T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eCenazem
-        mi var ışıl ışılsınız?\\u003c/p\\u003e\",\"url\":\"https://mastodon.com.tr/@Cattie\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/349/133/596/628/366/original/136cf1a1599184c1.jpeg\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/349/133/596/628/366/original/136cf1a1599184c1.jpeg\",\"header\":\"https://emacs.ch/system/cache/accounts/headers/109/349/133/596/628/366/original/ba76f3c5015c3e58.jpeg\",\"header_static\":\"https://emacs.ch/system/cache/accounts/headers/109/349/133/596/628/366/original/ba76f3c5015c3e58.jpeg\",\"followers_count\":53,\"following_count\":22,\"statuses_count\":940,\"last_status_at\":\"2022-11-16\",\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null}]"
-  recorded_at: 2022-11-16 10:32:31 GMT
-  recorded_with: vcr/1.1.0, webmockr/0.8.2
+        class=\\\"\\\"\\u003etheindiebeat.fm\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Bandwagon\",\"value\":\"\\u003ca
+        href=\\\"https://bandwagon.fm/\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"
+        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003ebandwagon.fm/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Bonkwave\",\"value\":\"\\u003ca
+        href=\\\"https://bonkwave.org/music/\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"
+        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003ebonkwave.org/music/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"NHAM\",\"value\":\"\\u003ca
+        href=\\\"https://nham.co.uk/\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"
+        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003enham.co.uk/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"tibrnowplaying\",\"url\":\"https://fosstodon.org/tags/tibrnowplaying\"},{\"name\":\"theindiebeatnowplaying\",\"url\":\"https://fosstodon.org/tags/theindiebeatnowplaying\"},{\"name\":\"tibrnotwhaticallradiobonkwave\",\"url\":\"https://fosstodon.org/tags/tibrnotwhaticallradiobonkwave\"}],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868870403381728\",\"created_at\":\"2025-07-17T13:44:21.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://mastodon.social/users/unijena/statuses/114868870289421760\",\"url\":\"https://mastodon.social/@unijena/114868870289421760\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eForschenden
+        der \\u003ca href=\\\"https://mastodon.social/tags/UniJena\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eUniJena\\u003c/span\\u003e\\u003c/a\\u003e
+        ist es erstmals gelungen, den Spin eines Moleküls – also den Eigendrehimpuls
+        der Elektronen – direkt durch ein elektrisches Feld zu beeinflussen. Je langlebiger
+        ein Spin-Zustand ist, desto besser eignet sich ein Molekül als Rechneinheit
+        in einem \\u003ca href=\\\"https://mastodon.social/tags/Quantencomputer\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eQuantencomputer\\u003c/span\\u003e\\u003c/a\\u003e
+        (Qubit). Die Forschung eröffnet neue Perspektiven in der \\u003ca href=\\\"https://mastodon.social/tags/Quantentechnologie\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eQuantentechnologie\\u003c/span\\u003e\\u003c/a\\u003e,
+        da sie leistungsfähigere und energieeffizientere Quantencomputerkonzepte ermöglichen
+        könnte.\\u003c/p\\u003e\\u003cp\\u003e➡️ \\u003ca href=\\\"https://www.uni-jena.de/328064/neue-moeglichkeiten-fuer-die-quantentechnologie\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003euni-jena.de/328064/neue-moegli\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003echkeiten-fuer-die-quantentechnologie\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"281766\",\"username\":\"unijena\",\"acct\":\"unijena@mastodon.social\",\"display_name\":\"Universität
+        Jena\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2020-01-27T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eHier
+        trötet die Online-Redaktion der Friedrich-Schiller-Universität Jena.\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@unijena\",\"uri\":\"https://mastodon.social/users/unijena\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/000/281/766/original/ace53c4884351274.jpg\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/000/281/766/original/ace53c4884351274.jpg\",\"header\":\"https://cdn.fosstodon.org/cache/accounts/headers/000/281/766/original/35c3c74389dec909.jpg\",\"header_static\":\"https://cdn.fosstodon.org/cache/accounts/headers/000/281/766/original/35c3c74389dec909.jpg\",\"followers_count\":1369,\"following_count\":74,\"statuses_count\":1881,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Web\",\"value\":\"\\u003ca
+        href=\\\"https://uni-jena.de\\\" target=\\\"_blank\\\" rel=\\\"nofollow noopener\\\"
+        translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003euni-jena.de\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2025-07-08T15:02:23.351+00:00\"},{\"name\":\"Impressum\",\"value\":\"\\u003ca
+        href=\\\"https://uni-jena.de/impressum\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003euni-jena.de/impressum\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2025-07-08T15:02:23.676+00:00\"},{\"name\":\"Datenschutz\",\"value\":\"\\u003ca
+        href=\\\"https://uni-jena.de/datenschutz\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003euni-jena.de/datenschutz\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2025-07-08T15:02:23.993+00:00\"}]},\"media_attachments\":[{\"id\":\"114868870327191966\",\"type\":\"image\",\"url\":\"https://cdn.fosstodon.org/cache/media_attachments/files/114/868/870/327/191/966/original/1eafb55c7cf71335.jpg\",\"preview_url\":\"https://cdn.fosstodon.org/cache/media_attachments/files/114/868/870/327/191/966/small/1eafb55c7cf71335.jpg\",\"remote_url\":\"https://files.mastodon.social/media_attachments/files/114/868/852/946/754/312/original/6e0758459ac72bc0.jpg\",\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"focus\":{\"x\":0.21,\"y\":-0.08},\"original\":{\"width\":2000,\"height\":1125,\"size\":\"2000x1125\",\"aspect\":1.7777777777777777},\"small\":{\"width\":640,\"height\":360,\"size\":\"640x360\",\"aspect\":1.7777777777777777}},\"description\":\"Eine
+        Hand präsentiert den Kristall einer Kupferverbindung, mit der das Team um
+        Prof. Dr. Winfried Plass seine Untersuchungen zu Spin-Zuständen in Molekülen
+        durchgeführt hat.\",\"blurhash\":\"UhH.5X#3tSbwN3-:p0R:x^SjR.xVs;xBoaR.\"}],\"mentions\":[],\"tags\":[{\"name\":\"UniJena\",\"url\":\"https://fosstodon.org/tags/UniJena\"},{\"name\":\"quantencomputer\",\"url\":\"https://fosstodon.org/tags/quantencomputer\"},{\"name\":\"quantentechnologie\",\"url\":\"https://fosstodon.org/tags/quantentechnologie\"}],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868870400444248\",\"created_at\":\"2025-07-17T13:41:23.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://sportsbots.xyz/users/mlbtraderumors/statuses/1945841261753041239\",\"url\":\"https://twitter.com/mlbtraderumors/status/1945841261753041239\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eConnor
+        Norby Undergoes Surgery To Repair Hamate Fracture \\u003ca href=\\\"https://www.mlbtraderumors.com/2025/07/marlins-connor-norby-surgery-hamate-six-eight-weeks.html?utm_source=twitter\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003emlbtraderumors.com/2025/07/marlin…\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109795872918005405\",\"username\":\"mlbtraderumors\",\"acct\":\"mlbtraderumors@sportsbots.xyz\",\"display_name\":\"MLB
+        Trade Rumors \U0001F916\",\"locked\":false,\"bot\":true,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2009-01-06T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eUnofficial
+        bot that mirrors MLB Trade Rumors’s Twitter feed.\\u003c/p\\u003e\\u003cp\\u003eOfficial
+        Twitter account for \\u003ca href=\\\"http://MLBTradeRumors.com\\\" rel=\\\"nofollow
+        noopener\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttp://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003eMLBTradeRumors.com\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e.\\u003c/p\\u003e\",\"url\":\"https://sportsbots.xyz/users/mlbtraderumors\",\"uri\":\"https://sportsbots.xyz/users/mlbtraderumors\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/795/872/918/005/405/original/7f8538f9c9333d09.jpg\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/795/872/918/005/405/original/7f8538f9c9333d09.jpg\",\"header\":\"https://fosstodon.org/headers/original/missing.png\",\"header_static\":\"https://fosstodon.org/headers/original/missing.png\",\"followers_count\":817000,\"following_count\":200,\"statuses_count\":8705,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"Twitter\",\"value\":\"\\u003ca
+        href=\\\"https://twitter.com/mlbtraderumors\\\" rel=\\\"nofollow noopener\\\"
+        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003etwitter.com/mlbtraderumors\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Website\",\"value\":\"\\u003ca
+        href=\\\"http://www.mlbtraderumors.com\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttp://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003emlbtraderumors.com\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Managed
+        by\",\"value\":\"\\u003cspan class=\\\"h-card\\\"\\u003e\\u003ca href=\\\"https://mastodon.social/@sportsbots\\\"
+        class=\\\"u-url mention\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e@\\u003cspan\\u003esportsbots\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e\",\"verified_at\":null},{\"name\":\"Retention\",\"value\":\"\\u003cspan
+        class=\\\"h-card\\\"\\u003e90 days\\u003c/span\\u003e\",\"verified_at\":null}]},\"media_attachments\":[{\"id\":\"114868870342055245\",\"type\":\"image\",\"url\":\"https://cdn.fosstodon.org/cache/media_attachments/files/114/868/870/342/055/245/original/4d901082a1881f3c.jpg\",\"preview_url\":\"https://cdn.fosstodon.org/cache/media_attachments/files/114/868/870/342/055/245/small/4d901082a1881f3c.jpg\",\"remote_url\":\"https://pbs.twimg.com/media/GwEEUL5WEAA8sKy.jpg\",\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"original\":{\"width\":1200,\"height\":800,\"size\":\"1200x800\",\"aspect\":1.5},\"small\":{\"width\":588,\"height\":392,\"size\":\"588x392\",\"aspect\":1.5}},\"description\":null,\"blurhash\":\"UbG-6*?w9ZXSL3Mxo}s9OoR5xujF*0%MRjSh\"}],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868870344933104\",\"created_at\":\"2025-07-17T13:23:12.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://flipboard.com/users/9to5mac/statuses/wfnKNWrsToOm-aLaX2SSrA:a:151168268\",\"url\":\"https://flipboard.com/@9to5mac/apple-deals-6l77a8r0z/-/a-wfnKNWrsToOm-aLaX2SSrA%3Aa%3A151168268-%2F0\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eSave
+        55% on Anker’s originally $80 7-in-1 100W USB-C Nano charging station today
+        while it’s down at $36 low\\u003cbr\\u003e\\u003ca href=\\\"https://9to5toys.com/2025/07/17/anker-7-in-1-100w-usb-c-nano-charging-station-36-low/?utm_source=flipboard\\u0026amp;utm_medium=activitypub\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003e9to5toys.com/2025/07/17/anker-\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e7-in-1-100w-usb-c-nano-charging-station-36-low/?utm_source=flipboard\\u0026amp;utm_medium=activitypub
+        \\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003ePosted into
+        Apple Deals \\u003cspan class=\\\"h-card\\\" translate=\\\"no\\\"\\u003e\\u003ca
+        href=\\\"https://flipboard.com/@9to5mac/apple-deals-6l77a8r0z\\\" class=\\\"u-url
+        mention\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e@\\u003cspan\\u003eapple-deals-9to5mac\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"112594081217552157\",\"username\":\"9to5mac\",\"acct\":\"9to5mac@flipboard.com\",\"display_name\":\"9to5Mac\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2024-06-10T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eWe
+        break Apple news.\\u003c/p\\u003e\\u003cp\\u003eFollow to see posts from the
+        official \\u003ca href=\\\"https://flipboard.com/@9to5mac\\\" rel=\\\"nofollow
+        noopener\\\" target=\\\"_blank\\\"\\u003e9to5Mac\\u003c/a\\u003e Flipboard
+        profile.\\u003c/p\\u003e\",\"url\":\"https://flipboard.com/@9to5mac\",\"uri\":\"https://flipboard.com/users/9to5mac\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/112/594/081/217/552/157/original/569885c637edcfa5.png\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/112/594/081/217/552/157/original/569885c637edcfa5.png\",\"header\":\"https://fosstodon.org/headers/original/missing.png\",\"header_static\":\"https://fosstodon.org/headers/original/missing.png\",\"followers_count\":503214,\"following_count\":0,\"statuses_count\":111757,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[{\"id\":\"112768850244085402\",\"username\":\"apple-deals-9to5mac\",\"url\":\"https://flipboard.com/@9to5mac/apple-deals-6l77a8r0z\",\"acct\":\"apple-deals-9to5mac@flipboard.com\"}],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868870329206845\",\"created_at\":\"2025-07-17T13:44:06.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://flipboard.com/users/askchefdennis/statuses/y8kN1HVVSLOens7ZpRAeLA:a:2549464004\",\"url\":\"https://flipboard.com/@askchefdennis/savor-the-sun-summer-recipes-nqqppjnoz/-/a-y8kN1HVVSLOens7ZpRAeLA%3Aa%3A2549464004-%2F0\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eThe
+        “Lone Ranger” Cocktail Is the Only Way I’m Drinking Tequila All Summer\\u003cbr\\u003e\\u003ca
+        href=\\\"https://www.thekitchn.com/lone-ranger-cocktail-recipe-review-23734966?utm_source=flipboard\\u0026amp;utm_medium=activitypub\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ethekitchn.com/lone-ranger-cock\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003etail-recipe-review-23734966?utm_source=flipboard\\u0026amp;utm_medium=activitypub
+        \\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003ePosted into
+        Savor the Sun: Summer Recipes \\u003cspan class=\\\"h-card\\\" translate=\\\"no\\\"\\u003e\\u003ca
+        href=\\\"https://flipboard.com/@askchefdennis/savor-the-sun-summer-recipes-nqqppjnoz\\\"
+        class=\\\"u-url mention\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e@\\u003cspan\\u003esavor-the-sun-summer-recipes-askchefdennis\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"112293028336195877\",\"username\":\"askchefdennis\",\"acct\":\"askchefdennis@flipboard.com\",\"display_name\":\"Chef
+        Dennis Littley\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2024-04-11T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eAs
+        a classically trained chef with 45+ years of experience in the kitchen, let
+        me help you bring the joy of cooking to your kitchen with my easy to make,
+        time-tested recipes.\\n\\u003ca href=\\\"https://flipboard.com/tag/cooking\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ecooking\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://flipboard.com/tag/baking\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003ebaking\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://flipboard.com/tag/food\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003efood\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://flipboard.com/tag/recipe\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003erecipe\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003eFollow
+        to see posts from the official \\u003ca href=\\\"https://flipboard.com/@askchefdennis\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003eChef Dennis Littley\\u003c/a\\u003e
+        Flipboard profile.\\u003c/p\\u003e\",\"url\":\"https://flipboard.com/@askchefdennis\",\"uri\":\"https://flipboard.com/users/askchefdennis\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/112/293/028/336/195/877/original/0741dcb91215eeb9.jpeg\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/112/293/028/336/195/877/original/0741dcb91215eeb9.jpeg\",\"header\":\"https://fosstodon.org/headers/original/missing.png\",\"header_static\":\"https://fosstodon.org/headers/original/missing.png\",\"followers_count\":6516,\"following_count\":40,\"statuses_count\":17064,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[{\"id\":\"114631048949255087\",\"username\":\"savor-the-sun-summer-recipes-askchefdennis\",\"url\":\"https://flipboard.com/@askchefdennis/savor-the-sun-summer-recipes-nqqppjnoz\",\"acct\":\"savor-the-sun-summer-recipes-askchefdennis@flipboard.com\"}],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null}]"
+  recorded_at: 2025-07-17 13:44:26
 - request:
-    method: get
-    uri: https://emacs.ch/api/v1/timelines/public?local=FALSE&remote=FALSE&only_media=FALSE&limit=10&max_id=109353009586751651
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
-      Authorization: Bearer <<<MASTODON TOKEN>>>
+    method: GET
+    uri: https://fosstodon.org/api/v1/timelines/public?local=FALSE&remote=FALSE&only_media=FALSE&limit=10&max_id=114868870329206845
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 200
     headers:
-      cache-control: no-store
-      content-encoding: gzip
-      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
-        ''none''; font-src ''self'' https://emacs.ch; img-src ''self'' https: data:
-        blob: https://emacs.ch; style-src ''self'' https://emacs.ch ''nonce-11IgieIBH7MYcwOWfJBvzw=='';
-        media-src ''self'' https: data: https://emacs.ch; frame-src ''self'' https:;
-        manifest-src ''self'' https://emacs.ch; connect-src ''self'' data: blob: https://emacs.ch
-        https://emacs.ch wss://emacs.ch; script-src ''self'' https://emacs.ch ''wasm-unsafe-eval'';
-        child-src ''self'' blob: https://emacs.ch; worker-src ''self'' blob: https://emacs.ch'
       content-type: application/json; charset=utf-8
-      date: Wed, 16 Nov 2022 10:32:31 GMT
-      etag: W/"4ae6bafb3b478cf626ea2fd726be073d"
-      link: <https://emacs.ch/api/v1/timelines/public?limit=10&local=FALSE&max_id=109352990196607705&only_media=FALSE&remote=FALSE>;
-        rel="next", <https://emacs.ch/api/v1/timelines/public?limit=10&local=FALSE&min_id=109353006124850537&only_media=FALSE&remote=FALSE>;
-        rel="prev"
-      permissions-policy: interest-cohort=()
       server: Mastodon
-      strict-transport-security: max-age=63072000; includeSubDomains
-      vary:
-      - Accept-Encoding
-      - Origin
-      x-cached: MISS
-      x-content-type-options: nosniff
       x-frame-options: DENY
-      x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '298'
-      x-ratelimit-reset: '2022-11-16T10:35:00.384965Z'
-      x-request-id: fab16751-65e8-4007-9cc4-5d4e6d08ee3f
-      x-runtime: '0.104448'
+      x-content-type-options: nosniff
       x-xss-protection: '0'
+      referrer-policy: same-origin
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '270'
+      x-ratelimit-reset: '2025-07-17T13:45:00.502458Z'
+      link: <https://fosstodon.org/api/v1/timelines/public?limit=10&local=FALSE&max_id=114868869881389696&only_media=FALSE&remote=FALSE>;
+        rel="next", <https://fosstodon.org/api/v1/timelines/public?limit=10&local=FALSE&min_id=114868870289384644&only_media=FALSE&remote=FALSE>;
+        rel="prev"
+      cache-control: private, no-store
+      etag: W/"1ab98cca96c44e3ce4376fef82f78ca5"
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
+      x-request-id: 8912d2ff-afc4-4917-9455-d80ebd0a5390
+      x-runtime: '0.045279'
+      content-encoding: gzip
+      accept-ranges: bytes
+      via: 1.1 varnish, 1.1 varnish
+      date: Thu, 17 Jul 2025 13:44:26 GMT
+      x-served-by: cache-par-lfpg1960052-PAR, cache-muc13941-MUC
+      x-cache: MISS, MISS
+      x-cache-hits: 0, 0
+      x-timer: S1752759866.487510,VS0,VE68
+      vary: Accept-Encoding, Authorization, Origin
+      strict-transport-security: max-age=300
+      alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
     body:
-      encoding: ''
-      file: no
-      string: "[{\"id\":\"109353006124850537\",\"created_at\":\"2022-11-16T10:27:32.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://qoto.org/users/true_mxp/statuses/109353006019312191\",\"url\":\"https://qoto.org/@true_mxp/109353006019312191\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eGotta
-        love these US scholars who discover that there are other languages besides
-        English and who then feel the urgent need to ‘educate’ everybody about this
-        because they assume everybody’s like them.\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109336055534477653\",\"username\":\"true_mxp\",\"acct\":\"true_mxp@qoto.org\",\"display_name\":\"Michael
-        Piotrowski\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-11-13T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eAssociate
-        professor of digital humanities\\u2028University of Lausanne, Switzerland\\u2029Professeur
-        associé en humanités\\u0026nbsp;numériques\\u2028Université de Lausanne, Suisse\\u003c/p\\u003e\",\"url\":\"https://qoto.org/@true_mxp\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/336/055/534/477/653/original/e917a5a45bf174fb.png\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/336/055/534/477/653/original/e917a5a45bf174fb.png\",\"header\":\"https://emacs.ch/system/cache/accounts/headers/109/336/055/534/477/653/original/731ff335358f95d1.jpeg\",\"header_static\":\"https://emacs.ch/system/cache/accounts/headers/109/336/055/534/477/653/original/731ff335358f95d1.jpeg\",\"followers_count\":129,\"following_count\":186,\"statuses_count\":50,\"last_status_at\":\"2022-11-16\",\"emojis\":[],\"fields\":[{\"name\":\"OpenPGP\",\"value\":\"0x1614A044\",\"verified_at\":null},{\"name\":\"Web
-        site\",\"value\":\"\\u003ca href=\\\"http://dynalabs.de/mxp/\\\" rel=\\\"nofollow
-        noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttp://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003edynalabs.de/mxp/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-11-13T12:26:09.642+00:00\"},{\"name\":\"ORCiD\",\"value\":\"\\u003ca
-        href=\\\"http://orcid.org/0000-0003-3307-5386\\\" rel=\\\"nofollow noopener
-        noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttp://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003eorcid.org/0000-0003-3307-5386\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109353005144700860\",\"created_at\":\"2022-11-16T10:27:18.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"tr\",\"uri\":\"https://mastodon.com.tr/users/Cattie/statuses/109353005106335986\",\"url\":\"https://mastodon.com.tr/@Cattie/109353005106335986\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eBenim
-        mi kız naptım ben\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109349133596628366\",\"username\":\"Cattie\",\"acct\":\"Cattie@mastodon.com.tr\",\"display_name\":\"\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-07T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eCenazem
-        mi var ışıl ışılsınız?\\u003c/p\\u003e\",\"url\":\"https://mastodon.com.tr/@Cattie\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/349/133/596/628/366/original/136cf1a1599184c1.jpeg\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/349/133/596/628/366/original/136cf1a1599184c1.jpeg\",\"header\":\"https://emacs.ch/system/cache/accounts/headers/109/349/133/596/628/366/original/ba76f3c5015c3e58.jpeg\",\"header_static\":\"https://emacs.ch/system/cache/accounts/headers/109/349/133/596/628/366/original/ba76f3c5015c3e58.jpeg\",\"followers_count\":53,\"following_count\":22,\"statuses_count\":940,\"last_status_at\":\"2022-11-16\",\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109353002720428682\",\"created_at\":\"2022-11-16T10:26:41.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"tr\",\"uri\":\"https://mastodon.com.tr/users/Cattie/statuses/109353002678969077\",\"url\":\"https://mastodon.com.tr/@Cattie/109353002678969077\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eAksini
-        iddia etmedim deno karaktersizim\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109349133596628366\",\"username\":\"Cattie\",\"acct\":\"Cattie@mastodon.com.tr\",\"display_name\":\"\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-07T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eCenazem
-        mi var ışıl ışılsınız?\\u003c/p\\u003e\",\"url\":\"https://mastodon.com.tr/@Cattie\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/349/133/596/628/366/original/136cf1a1599184c1.jpeg\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/349/133/596/628/366/original/136cf1a1599184c1.jpeg\",\"header\":\"https://emacs.ch/system/cache/accounts/headers/109/349/133/596/628/366/original/ba76f3c5015c3e58.jpeg\",\"header_static\":\"https://emacs.ch/system/cache/accounts/headers/109/349/133/596/628/366/original/ba76f3c5015c3e58.jpeg\",\"followers_count\":53,\"following_count\":22,\"statuses_count\":940,\"last_status_at\":\"2022-11-16\",\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109352999389247898\",\"created_at\":\"2022-11-16T10:25:51.472Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":null,\"uri\":\"https://pleroma.debian.social/objects/e7803c5c-8583-43ac-8574-46785e9f8133\",\"url\":\"https://pleroma.debian.social/objects/e7803c5c-8583-43ac-8574-46785e9f8133\",\"replies_count\":0,\"reblogs_count\":1,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003ca
-        class=\\\"hashtag\\\" href=\\\"https://pleroma.debian.social/tag/sxmo\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#Sxmo\\u003c/a\\u003e
-        1.12.0 has just been released! My favorite features:\\u003cbr\\u003e\\u003cbr\\u003e-
-        better support for oneplus 6, poco f1, pinephone pro, and devices with an
-        unknown profile. This should make porting new devices easier.\\u003cbr\\u003e-
-        modem scripts recover from failure better and handle more edge cases \\u003cbr\\u003e-
-        three finger gestures\\u003cbr\\u003e\\u003cbr\\u003eand a lot of minor bug
-        fixes. Thank you to everyone that contributed and tested this release. We
-        couldn't have done it without you!\\u003cbr\\u003e\\u003cbr\\u003e\\u003ca
-        href=\\\"https://lists.sr.ht/~mil/sxmo-announce/%3C87y1sbw6jd.fsf%40momi.ca%3E\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003ehttps://lists.sr.ht/~mil/sxmo-announce/%3C87y1sbw6jd.fsf%40momi.ca%3E\\u003c/a\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109353009807324445\",\"username\":\"anjan\",\"acct\":\"anjan@pleroma.debian.social\",\"display_name\":\"Anjan\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-16T00:00:00.000Z\",\"note\":\"Software
-        Freedom Advocate. I try to be helpful. Feel free to message me! \U0001F603\\u003cbr\\u003e\\u003cbr\\u003eCo-maintainer
-        of sxmo: \\u003ca href=\\\"https://sxmo.org\\\" rel=\\\"nofollow noopener
-        noreferrer\\\" target=\\\"_blank\\\"\\u003ehttps://sxmo.org\\u003c/a\\u003e\\u003cbr\\u003e\\u003cbr\\u003ePosts
-        here are my own and not my employers'.\\u003cbr\\u003e\\u003cbr\\u003e\\u003ca
-        class=\\\"hashtag\\\" href=\\\"https://pleroma.debian.social/tag/nobot\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#nobot\\u003c/a\\u003e\",\"url\":\"https://pleroma.debian.social/users/anjan\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/353/009/807/324/445/original/336d5db9a11cc941.png\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/353/009/807/324/445/original/336d5db9a11cc941.png\",\"header\":\"https://emacs.ch/system/cache/accounts/headers/109/353/009/807/324/445/original/d52cb1d0d3ebe928.png\",\"header_static\":\"https://emacs.ch/system/cache/accounts/headers/109/353/009/807/324/445/original/d52cb1d0d3ebe928.png\",\"followers_count\":212,\"following_count\":441,\"statuses_count\":2,\"last_status_at\":\"2022-11-16\",\"emojis\":[],\"fields\":[{\"name\":\"Website\",\"value\":\"\\u003ca
-        href=\\\"http://momi.ca\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003emomi.ca\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"XMPP\",\"value\":\"\\u003ca
-        href=\\\"xmpp:anjan@momi.ca\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003exmpp:anjan@momi.ca\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"IRC\",\"value\":\"anjan
-        on \\u003ca href=\\\"http://irc.oftc.net\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003eirc.oftc.net\\u003c/a\\u003e and \\u003ca href=\\\"http://libera.chat\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003elibera.chat\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"pronouns\",\"value\":\"he/him\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"sxmo\",\"url\":\"https://emacs.ch/tags/sxmo\"}],\"emojis\":[],\"card\":{\"url\":\"https://lists.sr.ht/~mil/sxmo-announce/%3C87y1sbw6jd.fsf@momi.ca%3E\",\"title\":\"\\n
-        \ Sxmo 1.12.0 released — sourcehut lists\\n\",\"description\":\"\",\"type\":\"link\",\"author_name\":\"\",\"author_url\":\"\",\"provider_name\":\"\",\"provider_url\":\"\",\"html\":\"\",\"width\":0,\"height\":0,\"image\":null,\"embed_url\":\"\",\"blurhash\":null},\"poll\":null},{\"id\":\"109352998275380697\",\"created_at\":\"2022-11-16T10:25:33.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"tr\",\"uri\":\"https://mastodon.com.tr/users/Cattie/statuses/109352998244030504\",\"url\":\"https://mastodon.com.tr/@Cattie/109352998244030504\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eBi
-        şeye benzetcem ama aylin Allah affetsin söylemiyim bu vampirlerin içinde:d\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109349133596628366\",\"username\":\"Cattie\",\"acct\":\"Cattie@mastodon.com.tr\",\"display_name\":\"\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-07T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eCenazem
-        mi var ışıl ışılsınız?\\u003c/p\\u003e\",\"url\":\"https://mastodon.com.tr/@Cattie\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/349/133/596/628/366/original/136cf1a1599184c1.jpeg\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/349/133/596/628/366/original/136cf1a1599184c1.jpeg\",\"header\":\"https://emacs.ch/system/cache/accounts/headers/109/349/133/596/628/366/original/ba76f3c5015c3e58.jpeg\",\"header_static\":\"https://emacs.ch/system/cache/accounts/headers/109/349/133/596/628/366/original/ba76f3c5015c3e58.jpeg\",\"followers_count\":53,\"following_count\":22,\"statuses_count\":940,\"last_status_at\":\"2022-11-16\",\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109352996319076311\",\"created_at\":\"2022-11-16T10:25:03.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"ja\",\"uri\":\"https://mstdn.jp/users/reddit_lisp/statuses/109352996275876253\",\"url\":\"https://mstdn.jp/@reddit_lisp/109352996275876253\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003e\\u003ca
-        href=\\\"https://mstdn.jp/tags/Clojure\\\" class=\\\"mention hashtag\\\" rel=\\\"nofollow
-        noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eClojure\\u003c/span\\u003e\\u003c/a\\u003e
-        London Clojurians Talk: Reveal: lessons learned (by Vlad Protsenko) | \\u003ca
-        href=\\\"http://redd.it/ywprwg\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttp://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003eredd.it/ywprwg\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109341078211257710\",\"username\":\"reddit_lisp\",\"acct\":\"reddit_lisp@mstdn.jp\",\"display_name\":\"r/lisp\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2018-04-02T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\\u003ca
-        href=\\\"https://www.reddit.com/r/lisp\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003ereddit.com/r/lisp\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://mstdn.jp/@reddit_lisp\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/341/078/211/257/710/original/1e5b6080f215b1b9.png\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/341/078/211/257/710/original/1e5b6080f215b1b9.png\",\"header\":\"https://emacs.ch/headers/original/missing.png\",\"header_static\":\"https://emacs.ch/headers/original/missing.png\",\"followers_count\":341,\"following_count\":1,\"statuses_count\":13893,\"last_status_at\":\"2022-11-16\",\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"clojure\",\"url\":\"https://emacs.ch/tags/clojure\"}],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109352994429310440\",\"created_at\":\"2022-11-16T10:24:35.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":true,\"spoiler_text\":\"Nonsense\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://mastodon.art/users/welshpixie/statuses/109352994407503833\",\"url\":\"https://mastodon.art/@welshpixie/109352994407503833\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eWho
-        else does the armpit dance after putting antiperspirant on\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109336314760996915\",\"username\":\"welshpixie\",\"acct\":\"welshpixie@mastodon.art\",\"display_name\":\"WelshPixie,
-        Shadow Figure\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2017-10-02T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eArt,
-        writing, cats. She/her. 40s. Welsh but living in South Africa. BLM, trans
-        rights are human rights. \\u003c/p\\u003e\\u003cp\\u003eMegalomaniac tyrranical
-        overlord.\\u003c/p\\u003e\\u003cp\\u003e\\u003ca href=\\\"https://mastodon.art/tags/MastoAdmin\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eMastoAdmin\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003cspan class=\\\"h-card\\\"\\u003e\\u003ca href=\\\"https://mastodon.art/@Curator\\\"
-        class=\\\"u-url mention\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e@\\u003cspan\\u003eCurator\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e\\u003c/p\\u003e\\u003cp\\u003e\\u003ca
-        href=\\\"https://am.pirateradio.social/channels/pixiestunes/\\\" rel=\\\"nofollow
-        noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"ellipsis\\\"\\u003eam.pirateradio.social/channels\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e/pixiestunes/\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr\\u003e\\u003ca
-        href=\\\"https://bookwyrm.cincodenada.com/user/WelshPixie\\\" rel=\\\"nofollow
-        noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"ellipsis\\\"\\u003ebookwyrm.cincodenada.com/user/\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003eWelshPixie\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr\\u003e\\u003ca
-        href=\\\"https://peertube.functional.cafe/a/welshpixie/video-channels\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003epeertube.functional.cafe/a/wel\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003eshpixie/video-channels\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003eHeader
-        image: the bottom half of a digitally drawn white mandala on black background,
-        featuring themes of leaves, trees and roots extending from a central floral
-        motif.\\u003c/p\\u003e\",\"url\":\"https://mastodon.art/@welshpixie\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/336/314/760/996/915/original/a3e7c5a8daa47187.jpg\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/336/314/760/996/915/original/a3e7c5a8daa47187.jpg\",\"header\":\"https://emacs.ch/system/cache/accounts/headers/109/336/314/760/996/915/original/04ce92ac9a56d10b.jpg\",\"header_static\":\"https://emacs.ch/system/cache/accounts/headers/109/336/314/760/996/915/original/04ce92ac9a56d10b.jpg\",\"followers_count\":8416,\"following_count\":1232,\"statuses_count\":29636,\"last_status_at\":\"2022-11-16\",\"emojis\":[],\"fields\":[{\"name\":\"PayPal\",\"value\":\"\\u003ca
-        href=\\\"https://paypal.me/delsdoodles\\\" rel=\\\"nofollow noopener noreferrer\\\"
+      string: "[{\"id\":\"114868870289384644\",\"created_at\":\"2025-07-17T13:44:19.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://mstdn.party/users/holeinthehead2/statuses/114868870157702805\",\"url\":\"https://mstdn.party/@holeinthehead2/114868870157702805\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109367379574158437\",\"username\":\"holeinthehead2\",\"acct\":\"holeinthehead2@mstdn.party\",\"display_name\":\"Holeintheheadesign\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-18T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\U0001F621LIBERAL,\U0001F621RESIST,\U0001F60EI
+        comment w/pics,Just putting stuff out there, the rest is up to you. Paint
+        reverse on glass.\\u003c/p\\u003e\",\"url\":\"https://mstdn.party/@holeinthehead2\",\"uri\":\"https://mstdn.party/users/holeinthehead2\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/367/379/574/158/437/original/c3b9d580763c570d.png\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/367/379/574/158/437/original/c3b9d580763c570d.png\",\"header\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/367/379/574/158/437/original/2e4aec9f089cc6f9.jpeg\",\"header_static\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/367/379/574/158/437/original/2e4aec9f089cc6f9.jpeg\",\"followers_count\":399,\"following_count\":178,\"statuses_count\":42389,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},\"media_attachments\":[{\"id\":\"114868870219190582\",\"type\":\"image\",\"url\":\"https://cdn.fosstodon.org/cache/media_attachments/files/114/868/870/219/190/582/original/61cab94ef3d83cc6.jpeg\",\"preview_url\":\"https://cdn.fosstodon.org/cache/media_attachments/files/114/868/870/219/190/582/small/61cab94ef3d83cc6.jpeg\",\"remote_url\":\"https://files.mstdn.party/media_attachments/files/114/868/870/022/239/167/original/4f2c076afb2c8e65.jpeg\",\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"original\":{\"width\":1282,\"height\":1014,\"size\":\"1282x1014\",\"aspect\":1.2642998027613412},\"small\":{\"width\":540,\"height\":427,\"size\":\"540x427\",\"aspect\":1.2646370023419204}},\"description\":null,\"blurhash\":\"UJLz?V~U-;Dj-=%hXA%L_LtSM~xtxbRPnhM|\"}],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868870247911436\",\"created_at\":\"2025-07-17T13:44:20.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"fr\",\"uri\":\"https://piaille.fr/users/Carabosse/statuses/114868870226404001\",\"url\":\"https://piaille.fr/@Carabosse/114868870226404001\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eEntre
+        deux lectures de propositions infâmes, dégueulasses, ignobles, abjectes, je
+        me refais 8 minutes de l'épisode 5 de Nodame Cantabile, de 25'40 à 32'30 -
+        Rhapsody in Blue façon big band japonais, génial.\\u003cbr\\u003eÇa me permet
+        de reprendre mes lectures sans vomir. \\u003cbr\\u003eEt après je recommence
+        en alternant.\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109371508373802345\",\"username\":\"Carabosse\",\"acct\":\"Carabosse@piaille.fr\",\"display_name\":\"Carabosse\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2022-11-18T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eEx
+        médecin hospitalier EPSM\\u003cbr\\u003eJe suis d'humeur égale : toujours
+        mauvaise.\\u003c/p\\u003e\",\"url\":\"https://piaille.fr/@Carabosse\",\"uri\":\"https://piaille.fr/users/Carabosse\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/371/508/373/802/345/original/8bd73b85b30483b8.jpg\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/371/508/373/802/345/original/8bd73b85b30483b8.jpg\",\"header\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/371/508/373/802/345/original/5d73501230bbc60d.jpg\",\"header_static\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/371/508/373/802/345/original/5d73501230bbc60d.jpg\",\"followers_count\":197,\"following_count\":168,\"statuses_count\":5971,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868870213513199\",\"created_at\":\"2025-07-17T13:29:05.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://threads.net/ap/users/17841404428606692/post/18088912096664142/\",\"url\":\"https://www.threads.com/@theleftistlawyer/post/DMNenc7Onyn\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eI
+        am begging people to remember that \\\"illegal\\\" =/= \\\"impossible.\\\"\\u003cbr\\u003e\\u003cbr\\u003eIt
+        means \\\"might be punished by the government.\\\"\\u003cbr\\u003e\\u003cbr\\u003eAnd
+        that's a BIG difference.\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"113076577484461221\",\"username\":\"theleftistlawyer\",\"acct\":\"theleftistlawyer@threads.net\",\"display_name\":\"Sheryl
+        Weikal\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2024-09-04T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eProudly
+        trans pay-whatever-you-can lawyer in IL. Happily gay married to @mistymotors.
+        She/her. No legal advice here; not your lawyer. Free Palestine.\\u003c/p\\u003e\",\"url\":\"https://threads.net/@theleftistlawyer/\",\"uri\":\"https://threads.net/ap/users/17841404428606692/\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/113/076/577/484/461/221/original/6ae630567c46e2ba.jpg\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/113/076/577/484/461/221/original/6ae630567c46e2ba.jpg\",\"header\":\"https://fosstodon.org/headers/original/missing.png\",\"header_static\":\"https://fosstodon.org/headers/original/missing.png\",\"followers_count\":88690,\"following_count\":4084,\"statuses_count\":35090,\"last_status_at\":\"2025-07-17\",\"hide_collections\":true,\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868870198808745\",\"created_at\":\"2025-07-17T13:44:19.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://mastodon.social/users/tibrnowplayingbot/statuses/114868870143504692\",\"url\":\"https://mastodon.social/@tibrnowplayingbot/114868870143504692\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eNow
+        playing:\\u003c/p\\u003e\\u003cp\\u003e Station:\\tThe Indie Beat Radio -
+        Jazz\\u003cbr\\u003e Title:\\tOut of Body Experience\\u003cbr\\u003e Artist:\\tRandy
+        Resnick (\\u003cspan class=\\\"h-card\\\" translate=\\\"no\\\"\\u003e\\u003ca
+        href=\\\"https://mastodon.social/@randulo\\\" class=\\\"u-url mention\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e@\\u003cspan\\u003erandulo\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e)\\u003cbr\\u003e
+        Album:\\t Lockdown Jazz\\u003cbr\\u003e Support:\\t\\u003ca href=\\\"https://bandwagon.fm/@6714a32943cfc445b45e5a19\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ebandwagon.fm/@6714a32943cfc445\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003eb45e5a19\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr\\u003e
+        Live:\\t\\u003ca href=\\\"https://theindiebeat.fm/jazz/\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003etheindiebeat.fm/jazz/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003eUp
+        next:\\tEddie Lang - April Kisses\\u003c/p\\u003e\\u003cp\\u003eVisit:\\t\\u003ca
+        href=\\\"https://theindiebeat.fm\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"
         target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003epaypal.me/delsdoodles\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Website\",\"value\":\"\\u003ca
-        href=\\\"http://delsdoodles.com\\\" rel=\\\"nofollow noopener noreferrer\\\"
-        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttp://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003edelsdoodles.com\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"KoFi\",\"value\":\"\\u003ca
-        href=\\\"https://ko-fi.com/welshpixie\\\" rel=\\\"nofollow noopener noreferrer\\\"
+        class=\\\"\\\"\\u003etheindiebeat.fm\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003c/p\\u003e\\u003cp\\u003e\\u003ca href=\\\"https://mastodon.social/tags/tibrNowPlaying\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003etibrNowPlaying\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.social/tags/theIndieBeatNowPlaying\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003etheIndieBeatNowPlaying\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://mastodon.social/tags/tibrTheIndieBeatRadioJazz\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003etibrTheIndieBeatRadioJazz\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"114042703185046040\",\"username\":\"tibrnowplayingbot\",\"acct\":\"tibrnowplayingbot@mastodon.social\",\"display_name\":\"Now
+        Playing on The Indie Beat\",\"locked\":false,\"bot\":true,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2025-02-21T00:00:00.000Z\",\"note\":\"\\u003cp\\u003e\U0001F916
+        Bot account posting the currently playing tracks on all channels of The Indie
+        Beat Radio -\\u0026gt; \\u003ca href=\\\"https://theindiebeat.fm/\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003etheindiebeat.fm/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003e⚠️
+        Frequent posts, auto-deleted after 1 week.\\u003c/p\\u003e\\u003cp\\u003eSuggestions:
+        \\u003cbr\\u003e\U0001F3B5 Follow, but put the account in a list and choose
+        \\\"Hide posts from Home\\\"\\u003cbr\\u003e\U0001F3B5 Search \\u003ca href=\\\"https://mastodon.social/tags/tibrNowPlaying\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003etibrNowPlaying\\u003c/span\\u003e\\u003c/a\\u003e
+        to find the latest posts.\\u003cbr\\u003e\U0001F496  Find \\u0026amp; boost
+        tracks you love!\\u003c/p\\u003e\",\"url\":\"https://mastodon.social/@tibrnowplayingbot\",\"uri\":\"https://mastodon.social/users/tibrnowplayingbot\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/114/042/703/185/046/040/original/3a2c392764a0ab69.jpg\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/114/042/703/185/046/040/original/3a2c392764a0ab69.jpg\",\"header\":\"https://cdn.fosstodon.org/cache/accounts/headers/114/042/703/185/046/040/original/b6a67a725528e302.jpg\",\"header_static\":\"https://cdn.fosstodon.org/cache/accounts/headers/114/042/703/185/046/040/original/b6a67a725528e302.jpg\",\"followers_count\":108,\"following_count\":3,\"statuses_count\":6614,\"last_status_at\":\"2025-07-17\",\"hide_collections\":true,\"emojis\":[],\"fields\":[{\"name\":\"Web\",\"value\":\"\\u003ca
+        href=\\\"https://theindiebeat.fm\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"
         target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003eko-fi.com/welshpixie\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Book\",\"value\":\"\\u003ca
-        href=\\\"http://welshpixie.rocks/warden-a-gay-fantasy-romance-novella/\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttp://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ewelshpixie.rocks/warden-a-gay-\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003efantasy-romance-novella/\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109352994219105523\",\"created_at\":\"2022-11-16T10:24:30.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://macaw.social/users/andypiper/statuses/109352994127186763\",\"url\":\"https://macaw.social/@andypiper/109352994127186763\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eMy
-        chat with \\u003cspan class=\\\"h-card\\\"\\u003e\\u003ca href=\\\"https://mastodon.social/@g0g0gadget\\\"
-        class=\\\"u-url mention\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e@\\u003cspan\\u003eg0g0gadget\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e
-        about \\u003ca href=\\\"https://macaw.social/tags/MicroPython\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eMicroPython\\u003c/span\\u003e\\u003c/a\\u003e
-        is available to rewatch on YouTube \U0001F4FA \\u003ca href=\\\"https://youtu.be/G7_PKvbjQBI\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003eyoutu.be/G7_PKvbjQBI\\u003c/span\\u003e\\u003cspan
-        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109349611119683177\",\"username\":\"andypiper\",\"acct\":\"andypiper@macaw.social\",\"display_name\":\"Andy
-        Piper\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-11-12T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eTech
-        speaker, developer advocate \\u003ca href=\\\"https://macaw.social/tags/DevRel\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eDevRel\\u003c/span\\u003e\\u003c/a\\u003e,
-        supporter, communities person. I do things with code, and tinker with gadgets
-        \\u003ca href=\\\"https://macaw.social/tags/MicroPython\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eMicroPython\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://macaw.social/tags/MQTT\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eMQTT\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://macaw.social/tags/LEGO\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eLEGO\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://macaw.social/tags/BoardGames\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eBoardGames\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://macaw.social/tags/DoctorWho\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eDoctorWho\\u003c/span\\u003e\\u003c/a\\u003e
-        … and I am one-third of a weekly \\u003ca href=\\\"https://macaw.social/tags/podcast\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003epodcast\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003cspan class=\\\"h-card\\\"\\u003e\\u003ca href=\\\"https://botsin.space/@gamesatwork_biz\\\"
-        class=\\\"u-url mention\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e@\\u003cspan\\u003egamesatwork_biz\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e\\u003c/p\\u003e\",\"url\":\"https://macaw.social/@andypiper\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/349/611/119/683/177/original/07bee7b05b811f4f.jpeg\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/349/611/119/683/177/original/07bee7b05b811f4f.jpeg\",\"header\":\"https://emacs.ch/system/cache/accounts/headers/109/349/611/119/683/177/original/3d3f5b86eabd614c.png\",\"header_static\":\"https://emacs.ch/system/cache/accounts/headers/109/349/611/119/683/177/original/3d3f5b86eabd614c.png\",\"followers_count\":1220,\"following_count\":962,\"statuses_count\":28,\"last_status_at\":\"2022-11-16\",\"emojis\":[],\"fields\":[{\"name\":\"\U0001F5FA️
-        links\",\"value\":\"\\u003ca href=\\\"https://andypiper.me\\\" rel=\\\"nofollow
-        noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003eandypiper.me\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-11-15T20:22:57.804+00:00\"},{\"name\":\"\U0001F3A7
-        podcast\",\"value\":\"\\u003ca href=\\\"https://gamesatwork.biz\\\" rel=\\\"nofollow
-        noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003egamesatwork.biz\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-11-15T20:22:58.697+00:00\"},{\"name\":\"\U0001F9D1\U0001F3FC‍\U0001F4BB
-        code\",\"value\":\"\\u003ca href=\\\"https://github.com/andypiper\\\" rel=\\\"nofollow
-        noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003egithub.com/andypiper\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2022-11-15T20:22:58.852+00:00\"},{\"name\":\"\U0001F464
-        pronouns\",\"value\":\"he/they/them\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[{\"id\":\"109348581755492870\",\"username\":\"g0g0gadget\",\"url\":\"https://mastodon.social/@g0g0gadget\",\"acct\":\"g0g0gadget@mastodon.social\"}],\"tags\":[{\"name\":\"micropython\",\"url\":\"https://emacs.ch/tags/micropython\"}],\"emojis\":[],\"card\":{\"url\":\"https://www.youtube.com/watch?v=G7_PKvbjQBI\\u0026feature=youtu.be\",\"title\":\"MicroPython
-        with Andy Piper\",\"description\":\"\",\"type\":\"video\",\"author_name\":\"Laura
-        Langdon\",\"author_url\":\"https://www.youtube.com/channel/UCYj25iGXK0R3Nvqy2vS4P-Q\",\"provider_name\":\"YouTube\",\"provider_url\":\"https://www.youtube.com/\",\"html\":\"\\u003ciframe
-        width=\\\"200\\\" height=\\\"113\\\" src=\\\"https://www.youtube.com/embed/G7_PKvbjQBI?feature=oembed\\\"
-        frameborder=\\\"0\\\" allowfullscreen=\\\"\\\" title=\\\"MicroPython with
-        Andy Piper\\\"\\u003e\\u003c/iframe\\u003e\",\"width\":200,\"height\":113,\"image\":\"https://emacs.ch/system/cache/preview_cards/images/000/008/780/original/3e5e8f64f5818205.jpg\",\"embed_url\":\"\",\"blurhash\":\"UGH:EdDPbcog^SkBoykB01-;aKV@xtofWBof\"},\"poll\":null},{\"id\":\"109352992915764141\",\"created_at\":\"2022-11-16T10:24:11.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"tr\",\"uri\":\"https://mastodon.com.tr/users/Cattie/statuses/109352992883343492\",\"url\":\"https://mastodon.com.tr/@Cattie/109352992883343492\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eYok
-        ama Yürümeyin Cumhuriyet Halk Partisi bey\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109349133596628366\",\"username\":\"Cattie\",\"acct\":\"Cattie@mastodon.com.tr\",\"display_name\":\"\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"group\":false,\"created_at\":\"2022-11-07T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eCenazem
-        mi var ışıl ışılsınız?\\u003c/p\\u003e\",\"url\":\"https://mastodon.com.tr/@Cattie\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/349/133/596/628/366/original/136cf1a1599184c1.jpeg\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/349/133/596/628/366/original/136cf1a1599184c1.jpeg\",\"header\":\"https://emacs.ch/system/cache/accounts/headers/109/349/133/596/628/366/original/ba76f3c5015c3e58.jpeg\",\"header_static\":\"https://emacs.ch/system/cache/accounts/headers/109/349/133/596/628/366/original/ba76f3c5015c3e58.jpeg\",\"followers_count\":53,\"following_count\":22,\"statuses_count\":940,\"last_status_at\":\"2022-11-16\",\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"card\":null,\"poll\":null},{\"id\":\"109352990196607705\",\"created_at\":\"2022-11-16T10:23:29.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://social.bund.de/users/GRS/statuses/109352990098950354\",\"url\":\"https://social.bund.de/@GRS/109352990098950354\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eDie
-        ukrainische Aufsichtsbehörde SNRIU meldete der IAEA heute Morgen, dass das
-        \\u003ca href=\\\"https://social.bund.de/tags/KKW\\\" class=\\\"mention hashtag\\\"
-        rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eKKW\\u003c/span\\u003e\\u003c/a\\u003e
-        \\u003ca href=\\\"https://social.bund.de/tags/Chmelnyzkyj\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eChmelnyzkyj\\u003c/span\\u003e\\u003c/a\\u003e
-        die Anbindung zum ukrainischen Landesnetz gestern Nachmittag, am 15.11. um
-        18:35 Uhr OZ, verloren hat, nachdem das Landesnetz infolge russischen Beschusses
-        beschädigt wurde. Die beiden WWER-1000-Blöcke am \\u003ca href=\\\"https://social.bund.de/tags/AKW\\\"
-        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eAKW\\u003c/span\\u003e\\u003c/a\\u003e-Standort,
-        die zu dem Zeitpunkt auf Volllast liefen, würden laut Meldung zurzeit über
-        die \\u003ca href=\\\"https://social.bund.de/tags/Notstromdiesel\\\" class=\\\"mention
-        hashtag\\\" rel=\\\"nofollow noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eNotstromdiesel\\u003c/span\\u003e\\u003c/a\\u003e
-        versorgt. Weitere Infos: \\u003ca href=\\\"https://t1p.de/r0qyv\\\" rel=\\\"nofollow
-        noopener noreferrer\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
-        class=\\\"\\\"\\u003et1p.de/r0qyv\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109348145087710860\",\"username\":\"GRS\",\"acct\":\"GRS@social.bund.de\",\"display_name\":\"GRS\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"group\":false,\"created_at\":\"2022-11-15T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eForschung
-        \\u0026amp; Begutachtung zu (fast) allem, was strahlt: \\u003cbr\\u003eAKW-Sicherheit
-        I Strahlenschutz I Stilllegung I Zwischen- \\u0026amp; Endlagerung I \\u003cbr\\u003eUmwelt
-        \\u0026amp; Energie – non-profit \\u003c/p\\u003e\\u003cp\\u003ewww.grs.de\\u003c/p\\u003e\",\"url\":\"https://social.bund.de/@GRS\",\"avatar\":\"https://emacs.ch/system/cache/accounts/avatars/109/348/145/087/710/860/original/4bc77dbca1cc8515.png\",\"avatar_static\":\"https://emacs.ch/system/cache/accounts/avatars/109/348/145/087/710/860/original/4bc77dbca1cc8515.png\",\"header\":\"https://emacs.ch/system/cache/accounts/headers/109/348/145/087/710/860/original/84eea50bf293dc95.jpg\",\"header_static\":\"https://emacs.ch/system/cache/accounts/headers/109/348/145/087/710/860/original/84eea50bf293dc95.jpg\",\"followers_count\":272,\"following_count\":0,\"statuses_count\":7,\"last_status_at\":\"2022-11-16\",\"emojis\":[],\"fields\":[]},\"media_attachments\":[{\"id\":\"109352990148282989\",\"type\":\"image\",\"url\":\"https://emacs.ch/system/cache/media_attachments/files/109/352/990/148/282/989/original/fbb1a98b633bfee3.jpeg\",\"preview_url\":\"https://emacs.ch/system/cache/media_attachments/files/109/352/990/148/282/989/small/fbb1a98b633bfee3.jpeg\",\"remote_url\":\"https://social.bund.de/system/media_attachments/files/109/352/989/816/841/132/original/2fe7714b6cfab492.jpeg\",\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"original\":{\"width\":1766,\"height\":1174,\"size\":\"1766x1174\",\"aspect\":1.504258943781942},\"small\":{\"width\":588,\"height\":391,\"size\":\"588x391\",\"aspect\":1.5038363171355498}},\"description\":null,\"blurhash\":\"UqE|C}%LRjf+.TxtRkWCR-axa#RjIUWXoffk\"}],\"mentions\":[],\"tags\":[{\"name\":\"kkw\",\"url\":\"https://emacs.ch/tags/kkw\"},{\"name\":\"chmelnyzkyj\",\"url\":\"https://emacs.ch/tags/chmelnyzkyj\"},{\"name\":\"akw\",\"url\":\"https://emacs.ch/tags/akw\"},{\"name\":\"notstromdiesel\",\"url\":\"https://emacs.ch/tags/notstromdiesel\"}],\"emojis\":[],\"card\":null,\"poll\":null}]"
-  recorded_at: 2022-11-16 10:32:31 GMT
-  recorded_with: vcr/1.1.0, webmockr/0.8.2
+        class=\\\"\\\"\\u003etheindiebeat.fm\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Bandwagon\",\"value\":\"\\u003ca
+        href=\\\"https://bandwagon.fm/\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"
+        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003ebandwagon.fm/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Bonkwave\",\"value\":\"\\u003ca
+        href=\\\"https://bonkwave.org/music/\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"
+        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003ebonkwave.org/music/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"NHAM\",\"value\":\"\\u003ca
+        href=\\\"https://nham.co.uk/\\\" rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"
+        target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003enham.co.uk/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[{\"id\":\"13433\",\"username\":\"randulo\",\"url\":\"https://mastodon.social/@randulo\",\"acct\":\"randulo@mastodon.social\"}],\"tags\":[{\"name\":\"tibrnowplaying\",\"url\":\"https://fosstodon.org/tags/tibrnowplaying\"},{\"name\":\"theindiebeatnowplaying\",\"url\":\"https://fosstodon.org/tags/theindiebeatnowplaying\"},{\"name\":\"tibrtheindiebeatradiojazz\",\"url\":\"https://fosstodon.org/tags/tibrtheindiebeatradiojazz\"}],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868870137582039\",\"created_at\":\"2025-07-17T13:44:17.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://infosec.exchange/users/gaz/statuses/114868869996439830\",\"url\":\"https://infosec.exchange/@gaz/114868869996439830\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eYou're
+        not ready for how powerful Custom Actions are.\\u003cbr\\u003eYou can now
+        build your own AI hacking sidekicks that rewrite requests for you.\\u003cbr\\u003eForget
+        typing payloads - just let your assistant do it.\\u003cbr\\u003e\U0001F525
+        Welcome to the future of offensive automation.\\u003c/p\\u003e\\u003cp\\u003eGet
+        the source code:\\u003cbr\\u003e\\u003ca href=\\\"https://github.com/PortSwigger/bambdas\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003egithub.com/PortSwigger/bambdas\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109302082399495796\",\"username\":\"gaz\",\"acct\":\"gaz@infosec.exchange\",\"display_name\":\"Gareth
+        Heyes :verified:\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-07T00:00:00.000Z\",\"note\":\"\\u003cp\\u003ejavascript:/*--\\u0026gt;\\u0026lt;/title\\u0026gt;\\u0026lt;/style\\u0026gt;\\u0026lt;/textarea\\u0026gt;\\u0026lt;/script\\u0026gt;\\u0026lt;/xmp\\u0026gt;\\u0026lt;svg/onload='-/\\\"/-/onmouseover=1/-/[*/[]/-alert(1)//'\\u0026gt;\\u2028\\u2029\\u003ca
+        href=\\\"https://garethheyes.co.uk/#latestBook\\\" rel=\\\"nofollow noopener\\\"
+        translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003egarethheyes.co.uk/#latestBook\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u2028\\u2028\\u003ca
+        href=\\\"https://leanpub.com/javascriptforhackers/\\\" rel=\\\"nofollow noopener\\\"
+        translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"ellipsis\\\"\\u003eleanpub.com/javascriptforhacke\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ers/\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://infosec.exchange/@gaz\",\"uri\":\"https://infosec.exchange/users/gaz\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/302/082/399/495/796/original/7ca7bafbb2fbfa3f.png\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/302/082/399/495/796/original/7ca7bafbb2fbfa3f.png\",\"header\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/302/082/399/495/796/original/857235572586ca7d.png\",\"header_static\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/302/082/399/495/796/original/857235572586ca7d.png\",\"followers_count\":2671,\"following_count\":238,\"statuses_count\":609,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[{\"shortcode\":\"verified\",\"url\":\"https://cdn.fosstodon.org/cache/custom_emojis/images/000/020/851/original/201e199e161441ca.png\",\"static_url\":\"https://cdn.fosstodon.org/cache/custom_emojis/images/000/020/851/static/201e199e161441ca.png\",\"visible_in_picker\":true}],\"fields\":[{\"name\":\"My
+        web site\",\"value\":\"\\u003ca href=\\\"https://garethheyes.co.uk/\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003egarethheyes.co.uk/\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2025-07-15T18:23:04.808+00:00\"},{\"name\":\"PortSwigger
+        Research\",\"value\":\"\\u003ca href=\\\"https://portswigger.net/research\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003eportswigger.net/research\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"Github\",\"value\":\"\\u003ca
+        href=\\\"https://github.com/hackvertor/\\\" target=\\\"_blank\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003egithub.com/hackvertor/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2025-07-15T18:23:05.086+00:00\"},{\"name\":\"My
+        blog\",\"value\":\"\\u003ca href=\\\"http://www.thespanner.co.uk/\\\" rel=\\\"nofollow
+        noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttp://www.\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003ethespanner.co.uk/\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null},{\"name\":\"JavaScript
+        for hackers\",\"value\":\"\\u003ca href=\\\"https://leanpub.com/javascriptforhackers/\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003eleanpub.com/javascriptforhacke\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ers/\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[{\"id\":\"114868870037563435\",\"type\":\"video\",\"url\":\"https://cdn.fosstodon.org/cache/media_attachments/files/114/868/870/037/563/435/original/a5f51753fdc423da.mp4\",\"preview_url\":\"https://cdn.fosstodon.org/cache/media_attachments/files/114/868/870/037/563/435/small/a5f51753fdc423da.png\",\"remote_url\":\"https://media.infosec.exchange/infosec.exchange/media_attachments/files/114/868/846/268/310/690/original/c51bc13cc938564d.mp4\",\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"original\":{\"width\":1920,\"height\":1080,\"frame_rate\":\"30/1\",\"duration\":20.2,\"bitrate\":1525244},\"small\":{\"width\":640,\"height\":360,\"size\":\"640x360\",\"aspect\":1.7777777777777777}},\"description\":null,\"blurhash\":\"U-7drKjuomj]ofjsayj@ofjZayj[off6ayj@\"}],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868870064397629\",\"created_at\":\"2025-07-17T13:44:17.017Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":null,\"uri\":\"https://agora.l0g.eu/objects/79545dc6-e0ef-44da-b874-ce35d13c8cbd\",\"url\":\"https://agora.l0g.eu/objects/79545dc6-e0ef-44da-b874-ce35d13c8cbd\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"now
+        i wonder if \\u003ca class=\\\"hashtag\\\" href=\\\"https://agora.l0g.eu/tag/microsoft\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#microsoft\\u003c/a\\u003e
+        does not have a plan to provide a full \\u003ca class=\\\"hashtag\\\" href=\\\"https://agora.l0g.eu/tag/linux\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#linux\\u003c/a\\u003e
+        system. WSL2 was already a step. If they wanted to do that move they wouldn't
+        have done differenty with a kind of windows11 sabotage.\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"114389180335127734\",\"username\":\"artlog\",\"acct\":\"artlog@agora.l0g.eu\",\"display_name\":\"artlog\",\"locked\":false,\"bot\":false,\"discoverable\":false,\"indexable\":false,\"group\":false,\"created_at\":\"2025-04-23T00:00:00.000Z\",\"note\":\"free
+        software open source freelance.\\u003cbr\\u003e\\u003cbr\\u003eastrolabe \\u003ca
+        href=\\\"https://www.astrolabe.coop/\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003ehttps://www.astrolabe.coop/\\u003c/a\\u003e\\u003cbr\\u003emember
+        of librezo \\u003ca href=\\\"https://librezo.fr/\\\" rel=\\\"nofollow noopener\\\"
+        target=\\\"_blank\\\"\\u003ehttps://librezo.fr/\\u003c/a\\u003e\\u003cbr\\u003e\\u003cbr\\u003e\\u003ca
+        href=\\\"https://www.artisanlogiciel.net\\\" rel=\\\"nofollow noopener\\\"
+        target=\\\"_blank\\\"\\u003ehttps://www.artisanlogiciel.net\\u003c/a\\u003e\\u003cbr\\u003e\\u003ca
+        href=\\\"https://artisan.l0g.eu\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003ehttps://artisan.l0g.eu\\u003c/a\\u003e\",\"url\":\"https://agora.l0g.eu/users/artlog\",\"uri\":\"https://agora.l0g.eu/users/artlog\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/114/389/180/335/127/734/original/e9148bd94e842540.png\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/114/389/180/335/127/734/original/e9148bd94e842540.png\",\"header\":\"https://fosstodon.org/headers/original/missing.png\",\"header_static\":\"https://fosstodon.org/headers/original/missing.png\",\"followers_count\":66,\"following_count\":92,\"statuses_count\":198,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[{\"name\":\"linux\",\"url\":\"https://fosstodon.org/tags/linux\"},{\"name\":\"microsoft\",\"url\":\"https://fosstodon.org/tags/microsoft\"}],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868869963873174\",\"created_at\":\"2025-07-17T13:08:57.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://flipboard.com/users/cbssports/statuses/3mo1zzD5QH6Fnm7sr6i6WA:a:729018323\",\"url\":\"https://flipboard.com/@cbssports/football-0rt5m0g7z/-/a-3mo1zzD5QH6Fnm7sr6i6WA%3Aa%3A729018323-%2F0\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eHow
+        to bet Arizona Cardinals in 2025: Super Bowl odds, win total, props, best
+        bets and what you need to know\\u003cbr\\u003e\\u003ca href=\\\"https://www.cbssports.com/nfl/news/how-to-bet-arizona-cardinals-in-2025-super-bowl-odds-win-total-props-best-bets-and-what-you-need-to-know/?utm_source=flipboard\\u0026amp;utm_medium=activitypub\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ecbssports.com/nfl/news/how-to-\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ebet-arizona-cardinals-in-2025-super-bowl-odds-win-total-props-best-bets-and-what-you-need-to-know/?utm_source=flipboard\\u0026amp;utm_medium=activitypub
+        \\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\\u003cp\\u003ePosted into
+        Football \\u003cspan class=\\\"h-card\\\" translate=\\\"no\\\"\\u003e\\u003ca
+        href=\\\"https://flipboard.com/@cbssports/football-0rt5m0g7z\\\" class=\\\"u-url
+        mention\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e@\\u003cspan\\u003efootball-cbssports\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/span\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"111557783606780522\",\"username\":\"cbssports\",\"acct\":\"cbssports@flipboard.com\",\"display_name\":\"CBS
+        Sports\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2023-11-14T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eSports
+        news, scores, video and fantasy games.\\u003c/p\\u003e\\u003cp\\u003eFollow
+        to see posts from the official \\u003ca href=\\\"https://flipboard.com/@cbssports\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003eCBS Sports\\u003c/a\\u003e
+        Flipboard profile.\\u003c/p\\u003e\",\"url\":\"https://flipboard.com/@cbssports\",\"uri\":\"https://flipboard.com/users/cbssports\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/111/557/783/606/780/522/original/9beb7e7331ac6163.png\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/111/557/783/606/780/522/original/9beb7e7331ac6163.png\",\"header\":\"https://fosstodon.org/headers/original/missing.png\",\"header_static\":\"https://fosstodon.org/headers/original/missing.png\",\"followers_count\":151921,\"following_count\":0,\"statuses_count\":659507,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[{\"id\":\"112338322878755602\",\"username\":\"football-cbssports\",\"url\":\"https://flipboard.com/@cbssports/football-0rt5m0g7z\",\"acct\":\"football-cbssports@flipboard.com\"}],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868869949294896\",\"created_at\":\"2025-07-17T13:44:13.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://mstdn.ca/users/cabinradio/statuses/114868869740942934\",\"url\":\"https://mstdn.ca/@cabinradio/114868869740942934\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003e\\\"Our
+        goal is to put the 'centre' back in Centre Square.\\\" Nunastar, the owner
+        of Yellowknife's Explorer Hotel, has acquired the Centre Square Mall's lower
+        level.\\u003c/p\\u003e\\u003cp\\u003e\\u003ca href=\\\"https://cabinradio.ca/249355/news/yellowknife/explorer-hotels-owner-buys-lower-centre-square-mall/\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003ecabinradio.ca/249355/news/yell\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003eowknife/explorer-hotels-owner-buys-lower-centre-square-mall/\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109450347302061505\",\"username\":\"cabinradio\",\"acct\":\"cabinradio@mstdn.ca\",\"display_name\":\"Cabin
+        Radio\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-12-02T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eHello
+        from Canada's Northwest Territories – once home of many mastodons, now home
+        of Cabin Radio's independent journalism and broadcasting.\\u003c/p\\u003e\",\"url\":\"https://mstdn.ca/@cabinradio\",\"uri\":\"https://mstdn.ca/users/cabinradio\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/450/347/302/061/505/original/4e28fa1b6f6ae2d1.png\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/450/347/302/061/505/original/4e28fa1b6f6ae2d1.png\",\"header\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/450/347/302/061/505/original/76ed72020d88ca84.jpeg\",\"header_static\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/450/347/302/061/505/original/76ed72020d88ca84.jpeg\",\"followers_count\":499,\"following_count\":9,\"statuses_count\":5565,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868869937920565\",\"created_at\":\"2025-07-17T13:44:13.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"en\",\"uri\":\"https://masto.ai/users/euractiv/statuses/114868869736881589\",\"url\":\"https://masto.ai/@euractiv/114868869736881589\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003eBrussels’
+        new tobacco tax plan sparks clash between industry and NGOs \\u003ca href=\\\"https://www.euractiv.com/section/health-consumers/news/brussels-new-tobacco-tax-plan-sparks-clash-between-industry-and-ngos/?utm_source=mastodon\\u0026amp;utm_medium=dlvr.it\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003eeuractiv.com/section/health-co\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ensumers/news/brussels-new-tobacco-tax-plan-sparks-clash-between-industry-and-ngos/?utm_source=mastodon\\u0026amp;utm_medium=dlvr.it\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109303576053059477\",\"username\":\"euractiv\",\"acct\":\"euractiv@masto.ai\",\"display_name\":\"Euractiv\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":false,\"group\":false,\"created_at\":\"2022-11-07T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eIndependent,
+        multilingual, pan-European, \\u0026amp; constructive. We build the European
+        public sphere.\\u003c/p\\u003e\\u003cp\\u003eGet us in your inbox: \\u003ca
+        href=\\\"https://euractiv.com/newsletters\\\" rel=\\\"nofollow noopener\\\"
+        translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003eeuractiv.com/newsletters\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"url\":\"https://masto.ai/@euractiv\",\"uri\":\"https://masto.ai/users/euractiv\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/303/576/053/059/477/original/ca4614460549ce4f.png\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/303/576/053/059/477/original/ca4614460549ce4f.png\",\"header\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/303/576/053/059/477/original/0d062ddad95be48a.png\",\"header_static\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/303/576/053/059/477/original/0d062ddad95be48a.png\",\"followers_count\":2826,\"following_count\":16,\"statuses_count\":26168,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[]},\"media_attachments\":[{\"id\":\"114868869830876991\",\"type\":\"image\",\"url\":\"https://cdn.fosstodon.org/cache/media_attachments/files/114/868/869/830/876/991/original/54d80d0df7bb0bfe.jpeg\",\"preview_url\":\"https://cdn.fosstodon.org/cache/media_attachments/files/114/868/869/830/876/991/small/54d80d0df7bb0bfe.jpeg\",\"remote_url\":\"https://s3.masto.ai/media_attachments/files/114/868/869/304/357/681/original/418887d962f7f5f2.jpeg\",\"preview_remote_url\":null,\"text_url\":null,\"meta\":{\"original\":{\"width\":1024,\"height\":683,\"size\":\"1024x683\",\"aspect\":1.499267935578331},\"small\":{\"width\":588,\"height\":392,\"size\":\"588x392\",\"aspect\":1.5}},\"description\":null,\"blurhash\":\"UEF62$xt?wxtX4WEM{t7.8oei_R+nhtRkWRj\"}],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null},{\"id\":\"114868869881389696\",\"created_at\":\"2025-07-17T13:44:12.000Z\",\"in_reply_to_id\":null,\"in_reply_to_account_id\":null,\"sensitive\":false,\"spoiler_text\":\"\",\"visibility\":\"public\",\"language\":\"de\",\"uri\":\"https://berlin.social/users/wikinaut/statuses/114868869681222948\",\"url\":\"https://berlin.social/@wikinaut/114868869681222948\",\"replies_count\":0,\"reblogs_count\":0,\"favourites_count\":0,\"edited_at\":null,\"favourited\":false,\"reblogged\":false,\"muted\":false,\"bookmarked\":false,\"content\":\"\\u003cp\\u003e85-jährige
+        Autofahrerin fährt Fußgängerin an - Berlin.de\\u003cbr\\u003e\\u003ca href=\\\"https://www.berlin.de/polizei/polizeimeldungen/2025/pressemitteilung.1581602.php\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan class=\\\"ellipsis\\\"\\u003eberlin.de/polizei/polizeimeldu\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003engen/2025/pressemitteilung.1581602.php\\u003c/span\\u003e\\u003c/a\\u003e\\u003c/p\\u003e\",\"filtered\":[],\"reblog\":null,\"account\":{\"id\":\"109432599611707895\",\"username\":\"wikinaut\",\"acct\":\"wikinaut@berlin.social\",\"display_name\":\"Wikinaut\",\"locked\":false,\"bot\":false,\"discoverable\":true,\"indexable\":true,\"group\":false,\"created_at\":\"2022-11-30T00:00:00.000Z\",\"note\":\"\\u003cp\\u003eBerliner
+        G♂öre\\u003c/p\\u003e\\u003cp\\u003e\\u003ca href=\\\"https://berlin.social/tags/Lifehacker\\\"
+        class=\\\"mention hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eLifehacker\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://berlin.social/tags/CMProfi\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eCMProfi\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr\\u003e\\u003ca
+        href=\\\"https://berlin.social/tags/B%C3%B6llerCiao\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eBöllerCiao\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://berlin.social/tags/Abschleppgruppe\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eAbschleppgruppe\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://berlin.social/tags/Verkehrswende\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eVerkehrswende\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://berlin.social/tags/UrbanRepairSquad\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eUrbanRepairSquad\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://berlin.social/tags/Linux\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eLinux\\u003c/span\\u003e\\u003c/a\\u003e
+        \\u003ca href=\\\"https://berlin.social/tags/Lastaradfari\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eLastaradfari\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr\\u003e\\u003ca
+        href=\\\"https://berlin.social/tags/Baumpate\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eBaumpate\\u003c/span\\u003e\\u003c/a\\u003e\\u003cbr\\u003e\\u003ca
+        href=\\\"https://berlin.social/tags/Radwegestopp\\\" class=\\\"mention hashtag\\\"
+        rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eRadwegestopp\\u003c/span\\u003e\\u003c/a\\u003e?
+        \\u003ca href=\\\"https://berlin.social/tags/NichtMitUns\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eNichtMitUns\\u003c/span\\u003e\\u003c/a\\u003e!
+        \\u003cbr\\u003e\\u003ca href=\\\"https://berlin.social/tags/Take3\\\" class=\\\"mention
+        hashtag\\\" rel=\\\"nofollow noopener\\\" target=\\\"_blank\\\"\\u003e#\\u003cspan\\u003eTake3\\u003c/span\\u003e\\u003c/a\\u003e
+        Initiative to pick up 3 pieces rubbish per day\\u003c/p\\u003e\\u003cp\\u003eKämpfer
+        gegen Artikel mit Verantwortungsdiffusion.\\u003c/p\\u003e\\u003cp\\u003e„Ich
+        bin aber auf mein Fahrrad angewiesen!“ \\u003c/p\\u003e\\u003cp\\u003eSarkasmusbeiträge
+        sind meistens gekennzeichnet. Falls ich das versehentlich oder absichtlich
+        vergessen habe sollte, bitte ich um Mitteilung.\\u003c/p\\u003e\\u003cp\\u003ePolitisches
+        Testament: siehe angeheften Post.\\u003c/p\\u003e\",\"url\":\"https://berlin.social/@wikinaut\",\"uri\":\"https://berlin.social/users/wikinaut\",\"avatar\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/432/599/611/707/895/original/4cd17a3a9ebb5738.png\",\"avatar_static\":\"https://cdn.fosstodon.org/cache/accounts/avatars/109/432/599/611/707/895/original/4cd17a3a9ebb5738.png\",\"header\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/432/599/611/707/895/original/79027637551f30c6.jpg\",\"header_static\":\"https://cdn.fosstodon.org/cache/accounts/headers/109/432/599/611/707/895/original/79027637551f30c6.jpg\",\"followers_count\":1408,\"following_count\":1410,\"statuses_count\":28278,\"last_status_at\":\"2025-07-17\",\"hide_collections\":false,\"emojis\":[],\"fields\":[{\"name\":\"\U0001F408
+        github\",\"value\":\"\\u003ca href=\\\"https://github.com/Wikinaut\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"\\\"\\u003egithub.com/Wikinaut\\u003c/span\\u003e\\u003cspan class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2025-07-14T22:05:05.523+00:00\"},{\"name\":\"Wikipedia\",\"value\":\"\\u003ca
+        href=\\\"https://de.wikipedia.org/wiki/Benutzer:Wikinaut\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan
+        class=\\\"ellipsis\\\"\\u003ede.wikipedia.org/wiki/Benutzer\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e:Wikinaut\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2025-07-14T22:05:05.629+00:00\"},{\"name\":\"MediaWiki\",\"value\":\"\\u003ca
+        href=\\\"https://www.mediawiki.org/wiki/User:Wikinaut\\\" target=\\\"_blank\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\"\\u003e\\u003cspan class=\\\"invisible\\\"\\u003ehttps://www.\\u003c/span\\u003e\\u003cspan
+        class=\\\"ellipsis\\\"\\u003emediawiki.org/wiki/User:Wikina\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003eut\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":\"2025-07-14T22:05:05.798+00:00\"},{\"name\":\"Fahrrad-
+        und Verkehrswende-Terminkalender (Admin)\",\"value\":\"\\u003ca href=\\\"https://fahrradtermine-berlin.de\\\"
+        rel=\\\"nofollow noopener\\\" translate=\\\"no\\\" target=\\\"_blank\\\"\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003ehttps://\\u003c/span\\u003e\\u003cspan class=\\\"\\\"\\u003efahrradtermine-berlin.de\\u003c/span\\u003e\\u003cspan
+        class=\\\"invisible\\\"\\u003e\\u003c/span\\u003e\\u003c/a\\u003e\",\"verified_at\":null}]},\"media_attachments\":[],\"mentions\":[],\"tags\":[],\"emojis\":[],\"quote\":null,\"card\":null,\"poll\":null}]"
+  recorded_at: 2025-07-17 13:44:26
+recorded_with: VCR-vcr/1.7.1.93

@@ -1,58 +1,36 @@
 http_interactions:
 - request:
-    method: post
+    method: POST
     uri: https://social.tchncs.de/api/v1/statuses
     body:
-      encoding: ''
-      string: status=testing in progress, please ignore,sensitive=false,visibility=public
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
-      Authorization: Bearer <<<MASTODON TOKEN>>>
+      fields:
+        status: testing in progress, please ignore
+        sensitive: 'false'
+        visibility: public
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 401
     headers:
-      cache-control: no-store
-      content-encoding: gzip
-      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
-        ''none''; font-src ''self'' https://social.tchncs.de; img-src ''self'' https:
-        data: blob: https://social.tchncs.de; style-src ''self'' https://social.tchncs.de
-        ''nonce-SGXgEbl0LfbIuDkOO0Czxg==''; media-src ''self'' https: data: https://social.tchncs.de;
-        frame-src ''self'' https:; manifest-src ''self'' https://social.tchncs.de;
-        connect-src ''self'' data: blob: https://social.tchncs.de https://f2.tchncs.de
-        wss://social.tchncs.de; script-src ''self'' https://social.tchncs.de ''unsafe-eval'';
-        child-src ''self'' blob: https://social.tchncs.de; worker-src ''self'' blob:
-        https://social.tchncs.de'
+      server: nginx
+      date: Thu, 17 Jul 2025 13:44:27 GMT
       content-type: application/json; charset=utf-8
-      date: Wed, 09 Nov 2022 17:57:27 GMT
-      etag: W/"980991ebe56075abc8ebb3657b123de9"
-      permissions-policy:
-      - interest-cohort=()
-      - interest-cohort=()
-      server: Mastodon
-      strict-transport-security: max-age=63072000; includeSubDomains
-      vary: Accept-Encoding, Origin
-      x-content-type-options: nosniff
+      content-length: '39'
       x-frame-options: DENY
-      x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '298'
-      x-ratelimit-reset: '2022-11-09T18:00:00.858672Z'
-      x-request-id: b84dd995-49d9-459b-8c82-ef004d14bb07
-      x-runtime: '0.075224'
+      x-content-type-options: nosniff
       x-xss-protection: '0'
+      referrer-policy: same-origin
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '270'
+      x-ratelimit-reset: '2025-07-17T13:45:00.320870Z'
+      vary: Authorization, Origin
+      cache-control: private, no-store
+      www-authenticate: Bearer realm="Doorkeeper", error="invalid_token", error_description="The
+        access token is invalid"
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
+      x-request-id: 02cd0025-b01e-41fc-a610-442502b5b4f5
+      x-runtime: '0.002760'
+      strict-transport-security: max-age=63072000; includeSubDomains
     body:
-      encoding: ''
-      file: no
-      string: '{"id":"109315139030795661","created_at":"2022-11-09T17:57:27.817Z","in_reply_to_id":null,"in_reply_to_account_id":null,"sensitive":false,"spoiler_text":"","visibility":"public","language":"en","uri":"https://social.tchncs.de/users/chainsawriot/statuses/109315139030795661","url":"https://social.tchncs.de/@chainsawriot/109315139030795661","replies_count":0,"reblogs_count":0,"favourites_count":0,"edited_at":null,"favourited":false,"reblogged":false,"muted":false,"bookmarked":false,"pinned":false,"content":"\u003cp\u003etesting
-        in progress, please ignore\u003c/p\u003e","reblog":null,"application":{"name":"rtoot
-        package","website":null},"account":{"id":"109281650341067731","username":"chainsawriot","acct":"chainsawriot","display_name":"chainsawriot","locked":false,"bot":false,"discoverable":false,"group":false,"created_at":"2022-11-03T00:00:00.000Z","note":"\u003cp\u003e\u003ca
-        href=\"http://www.chainsawriot.com\" target=\"_blank\" rel=\"nofollow noopener
-        noreferrer\"\u003e\u003cspan class=\"invisible\"\u003ehttp://www.\u003c/span\u003e\u003cspan
-        class=\"\"\u003echainsawriot.com\u003c/span\u003e\u003cspan class=\"invisible\"\u003e\u003c/span\u003e\u003c/a\u003e\u003c/p\u003e","url":"https://social.tchncs.de/@chainsawriot","avatar":"https://f2.tchncs.de/accounts/avatars/109/281/650/341/067/731/original/d6fcdd05fbfea82c.png","avatar_static":"https://f2.tchncs.de/accounts/avatars/109/281/650/341/067/731/original/d6fcdd05fbfea82c.png","header":"https://social.tchncs.de/headers/original/missing.png","header_static":"https://social.tchncs.de/headers/original/missing.png","followers_count":54,"following_count":40,"statuses_count":25,"last_status_at":"2022-11-09","emojis":[],"fields":[{"name":"Stack","value":"Linux,
-        emacs, stumpwm, R, git, Firefox","verified_at":null},{"name":"Research Interests","value":"I
-        don’t know","verified_at":null}]},"media_attachments":[],"mentions":[],"tags":[],"emojis":[],"card":null,"poll":null}'
-  recorded_at: 2022-11-09 17:57:27 GMT
-  recorded_with: vcr/1.1.0, webmockr/0.8.2
+      string: '{"error":"The access token is invalid"}'
+  recorded_at: 2025-07-17 13:44:27
+recorded_with: VCR-vcr/1.7.1.93

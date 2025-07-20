@@ -1,51 +1,37 @@
 http_interactions:
 - request:
-    method: get
-    uri: https://social.tchncs.de/api/v1/accounts/109281650341067731/lists
-    body:
-      encoding: ''
-      string: ''
-    headers:
-      Accept: application/json, text/xml, application/xml, */*
-      Authorization: Bearer <<<MASTODON TOKEN>>>
+    method: GET
+    uri: https://fosstodon.org/api/v1/accounts/109302436954721982/lists
   response:
-    status:
-      status_code: 200
-      category: Success
-      reason: OK
-      message: 'Success: (200) OK'
+    status: 200
     headers:
-      cache-control: no-store
-      content-encoding: gzip
-      content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
-        ''none''; font-src ''self'' https://social.tchncs.de; img-src ''self'' https:
-        data: blob: https://social.tchncs.de; style-src ''self'' https://social.tchncs.de
-        ''nonce-vXbtr1EamO3dLhsZ8j9zdw==''; media-src ''self'' https: data: https://social.tchncs.de;
-        frame-src ''self'' https:; manifest-src ''self'' https://social.tchncs.de;
-        connect-src ''self'' data: blob: https://social.tchncs.de https://f2.tchncs.de
-        wss://social.tchncs.de; script-src ''self'' https://social.tchncs.de ''unsafe-eval'';
-        child-src ''self'' blob: https://social.tchncs.de; worker-src ''self'' blob:
-        https://social.tchncs.de'
       content-type: application/json; charset=utf-8
-      date: Wed, 09 Nov 2022 09:47:40 GMT
-      etag: W/"98778948d2bac241f02b54474f4a0903"
-      permissions-policy:
-      - interest-cohort=()
-      - interest-cohort=()
       server: Mastodon
-      strict-transport-security: max-age=63072000; includeSubDomains
-      vary: Accept-Encoding, Origin
-      x-content-type-options: nosniff
       x-frame-options: DENY
-      x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '297'
-      x-ratelimit-reset: '2022-11-09T09:50:00.663036Z'
-      x-request-id: c8e1dee8-4062-477d-acad-64ea8b15e8dc
-      x-runtime: '0.010662'
+      x-content-type-options: nosniff
       x-xss-protection: '0'
+      referrer-policy: same-origin
+      x-ratelimit-limit: '300'
+      x-ratelimit-remaining: '279'
+      x-ratelimit-reset: '2025-07-17T13:45:00.714388Z'
+      cache-control: private, no-store
+      etag: W/"4f53cda18c2baa0c0354bb5f9a3ecbe5"
+      content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
+        'none'
+      x-request-id: 5cbffb7c-32a7-4f20-b8ab-6df491f9598b
+      x-runtime: '0.005498'
+      accept-ranges: bytes
+      via: 1.1 varnish, 1.1 varnish
+      date: Thu, 17 Jul 2025 13:44:09 GMT
+      x-served-by: cache-par-lfpb1150030-PAR, cache-muc13976-MUC
+      x-cache: MISS, MISS
+      x-cache-hits: 0, 0
+      x-timer: S1752759850.699265,VS0,VE28
+      vary: Authorization, Origin
+      strict-transport-security: max-age=300
+      alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+      content-length: '2'
     body:
-      encoding: ''
-      file: no
       string: '[]'
-  recorded_at: 2022-11-09 09:47:40 GMT
-  recorded_with: vcr/1.1.0, webmockr/0.8.2
+  recorded_at: 2025-07-17 13:44:09
+recorded_with: VCR-vcr/1.7.1.93
