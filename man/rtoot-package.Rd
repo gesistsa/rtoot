@@ -34,6 +34,7 @@ Useful links:
 Authors:
 \itemize{
   \item Chung-hong Chan \email{chainsawtiney@gmail.com} (\href{https://orcid.org/0000-0002-6232-7530}{ORCID})
+  \item Lluís Revilla Sancho \email{lluis.revilla@gmail.com} (\href{https://orcid.org/0000-0001-9747-2570}{ORCID})
 }
 
 Other contributors:
