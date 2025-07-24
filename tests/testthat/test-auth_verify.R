@@ -11,6 +11,7 @@ test_that("verify_envvar (Good case)", {
 test_that("verify_envvar (Good case), silent", {
   ## The cassette was created with a valid envvar
   skip_on_ci()
+  skip_on_cran()
   vcr::use_cassette("envvar_silent", {
     expect_silent(verify_envvar(verbose = FALSE))
   })
