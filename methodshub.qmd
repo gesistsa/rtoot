@@ -6,27 +6,79 @@ format:
   gfm: default
 ---
 
+# rtoot - Collecting and Analyzing Mastodon Data
+<!--
+General specifications:
+- This specification of the Methods Hub friendly README often uses the word 'should' to indicate the usual case. If you feel you need to do it differently, add a comment to argue for your case when you submit your method.
+- A Methods Hub friendly README should contain all sections below that are not marked as optional, and can contain more sections.
+- A Methods Hub friendly README should contain as few technical terms as possible and explain (or link to an explanation of) all used technical terms.
+- A Methods Hub friendly README should link to all code files that it mentions using the [text](URL relative to this file) format. The relative URL (i.e., no "https://github.com") is neccessary for proper versioning in Methods Hub.
+- A Methods Hub friendly README should contain an explanation (in the text) and an alternative for each image it contains (e.g., data models, pipeline, schema structure). Format: ![alternative text that describes what is visible in the image](URL relative to this file).
+- A Methods Hub friendly README should link to authoritative sources rather than containing a copy of the information (e.g., documentation).
+- A Methods Hub friendly README should use a uniform citation style for all references, for example APA7 https://apastyle.apa.org/style-grammar-guidelines/references/examples
+
+Title:
+1. The title must be the README's only first-level heading (line starting with a single '#').
+2. The title should make the method's purpose clear.
+3. The title (line 1 of this file) must be changed by you, but all other headings should be kept as they are.
+4. The title must be appropriate (not harmful, derogatory, etc.).
+
+Section templates:
+The README template comes with text templates for each section (after each comment) that can be used, customized or removed as desired.
+-->
+
 ## Description
+<!--
+1. Provide a brief and exact description of the method clearly mentioning its purpose i.e., what the method does or aims to achieve in abstract terms (avoiding technical details).
+2. The focus should be on explaining the method in a way that helps users with different levels of expertise understand what it does, without going into technical details. It should clearly describe what inputs are needed and what outputs can be expected.
+3. Briefly explain the input and output of the method and its note worthy features.
+4. Provide link(s) to related papers from the social science domain using the method or similar methods for solving social science research questions. 
+5. In a separate paragraph, highlight the reproducibility aspect of the method providing details or references to the resources used by the method, the data used in building the pre-trained modules etc.
+6. It should also discuss the decisions and parameters controlling the behavior of the method.
+-->
 
 An implementation of calls designed to collect and organize Mastodon data via its Application Program Interfaces (API), which can be found at the following URL: <https://docs.joinmastodon.org/>.
 
-## Keywords
-
-* Mastodon
-* Decentralized Social Network
-* Social Media Data
-
-## Science use cases
+## Use Cases
+<!--
+1. The use cases section should contain a list of use cases relevant to the social sciences.
+2. Each use case should start with a description of a task and then detail how one can use the method to assist in the task.
+3. Each use case may list publications in which the use case occurs (e.g., in APA7 style, https://apastyle.apa.org/style-grammar-guidelines/references/examples).
+-->
 
 This package was used in [Wähner et al. (2004)](https://doi.org/10.1007/s11616-024-00855-6) for collecting Mastodon data.
-
 Although not using this package, the data from the Mastodon API has been used in various social science publications on platform migration (e.g. [La Cava et al. 2023](https://doi.org/10.1038/s41598-023-48200-7)) and online network formation (e.g. [La Cava, et al. 2021](https://doi.org/10.1007/s41109-021-00392-5)).
 
-## Repository structure
+## Input Data
+<!--
+1. The input data section should illustrate the input data format by showing a (possibly abbreviated) example item and explaining (or linking to an explanation of) the data fields.
+2. The input data section should specify which parts of the input data are optional and what effect it has to not provide these.
+3. The input data section should link to a small example input file in the same repository that can be used to test the method (this test should be described in the section "How to Use").
+-->
 
-This repository follows [the standard structure of an R package](https://cran.r-project.org/doc/FAQ/R-exts.html#Package-structure).
+This method does not require any input data.
+
+## Output Data
+<!--
+1. The output data section should illustrate the output data format by showing a (possibly abbreviated) example item and explaining (or linking to an explanation of) the data fields.
+2. The output data section should link to a small example output file in the same repository that can be re-created (as far as the method is non-random) from the input data (as described in the section "How to Use").
+-->
+
+The output from this software is a [standard tibble](https://cran.r-project.org/package=tibble) of data collected from the Mastodon API.
+
+## Hardware Requirements
+<!--
+1. The hardware requirements section should list all requirements (storage, memory, compute, GPUs, cluster software, ...) that exceed the capabilities of a cheap virtual machine provided by cloud computing company (2 x86 CPU core, 4 GB RAM, 40GB HDD).
+2. If the method requires a GPU, the hardware requirements section must list the minimal GPU requirements (especially VRAM).
+-->
+
+This package runs on any hardware that can run R.
 
 ## Environment Setup
+<!--
+1. The environment setup section should list all requirements and provide all further steps to prepare an environment for running the method (installing requirements, downloading files, creating directoriees, etc.).
+2. The environment setup section should recommend to use a virtual environment or similar if the programming language supports one.
+-->
 
 With R installed:
 
@@ -34,20 +86,13 @@ With R installed:
 install.packages("rtoot")
 ```
 
-## Input Data 
-
-No applicable.
-
-## Sample Input and Output Data
-
-As a data collection software, this tool does not have any "sample input".
-
-The output from this software is a [standard tibble](https://cran.r-project.org/package=tibble) of data collected from the Mastodon API.
-
 ## How to Use
+<!--
+1. The how to use section should provide the list of steps that are necessary to produce the example output file (see section Output Data) after having set up the environment (see section Environment Setup).
+2. The how to use section should explain how to customize the steps to one's own needs, usually through configuration files or command line parameters, or refer to the appropriate open documentation.
+-->
 
 In general, one should first conduct the authentication to obtain an access token. This can be done with the provided function `auth_setup()`. For more information, please refer to the documentation on [authentication](https://gesistsa.github.io/rtoot/articles/auth.html).
-
 However, it is also possible to use some of functions with authentication. For example, it is possible to obtain the public timeline of a Mastodon instance, e.g. sciences.social.
 
 ```{r}
@@ -56,16 +101,33 @@ get_timeline_public(instance = "sciences.social")
 ```
 
 Other functions, e.g. `get_timeline_hashtag()`, `get_account_statuses()` require authentication.
-
 Please refer to the ["Introduction to rtoot"](https://gesistsa.github.io/rtoot/articles/rtoot.html) for a comprehensive introduction of the package.
 
-## Contact Details
+## Technical Details
+<!--
+1. The technical details section should proview a process overview, linking to key source code files at every step of the process.
+2. In case a publication provides the details mentioned below, the technical details section should link to this publication using a sentence like "See the [publication](url-of-publication-best-using-doi) for ...". In this case, the mentioned technical details can be omitted from the section.
+3. The technical details section should list all information needed to reproduce the method, including employed other methods and selected parameters.
+4. The input data section should link to external data it uses, preferably using a DOI to a dataset page or to API documentation.
+5. The technical details section should mention how other methods and their parameters were selected and which alternatives were tried.
+6. The technical details section should for employed machine learning models mention on what kind of data they were trained.
+-->
 
-Maintainer: David Schoch <david@schochastics.net>
+See the official [CRAN repository](https://cran.r-project.org/package=rtoot) for further information about technical details.
 
-Issue Tracker: [https://github.com/gesistsa/rtoot/issues](https://github.com/gesistsa/rtoot/issues)
-
-## Publications
+## References
+<!--
+1. The references section is optional, especially if they are cited in a publication that explains the technical details (see section Technical Details).
+2. The references section should provide references of publications related to this method (e.g., in APA7 style, https://apastyle.apa.org/style-grammar-guidelines/references/examples).
+-->
 
 1. Schoch, D., & Chan, C. H. (2023). Software presentation: Rtoot: Collecting and analyzing Mastodon data. *Mobile Media & Communication*, 11(3), 575-578. <https://doi.org/10.1177/20501579231176678>
 2. Wähner, M., Deubel, A., Breuer, J., &  Weller, K. "Don't research us"—How Mastodon instance rules connect to research ethics. *Publizistik* 69, 357–380 (2024). <https://doi.org/10.1007/s11616-024-00855-6>
+
+## Contact Details
+<!-- 
+1. The contact details section should specify whom to contact for questions or contributions and how (can be separate entitites; for example email addresses or links to the GitHub issue board).
+-->
+
+Maintainer: David Schoch <david@schochastics.net>
+Issue Tracker: [https://github.com/gesistsa/rtoot/issues](https://github.com/gesistsa/rtoot/issues)
