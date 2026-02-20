@@ -42,7 +42,7 @@ post_toot(
 \item{verbose}{logical whether to display messages}
 }
 \value{
-no return value, called for site effects
+API response, invisibly. If the status was posted successfully, the response will contain the posted status.
 }
 \description{
 Be aware that excessive automated posting is frowned upon (or even against the ToS) in many instances. Make sure to check the ToS of your instance and be mindful when using this function.

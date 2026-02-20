@@ -10,7 +10,7 @@
 #' @param visibility character, Visibility of the posted status. One of public (default), unlisted, private, direct.
 #' @param scheduled_at ISO 8601 Datetime at which to schedule a status. Must be at least 5 minutes in the future.
 #' @param language ISO 639 language code for this status.
-#' @return no return value, called for site effects
+#' @return API response, invisibly. If the status was posted successfully, the response will contain the posted status.
 #' @inheritParams auth_setup
 #' @examples
 #' \dontrun{
