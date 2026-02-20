@@ -1,5 +1,14 @@
 # Changelog
 
+## rtoot 0.3.6.9000
+
+- correct return value in
+  [`post_toot()`](https://gesistsa.github.io/rtoot/reference/post_toot.md)
+  documentation ([\#185](https://github.com/gesistsa/rtoot/issues/185))
+- added simple error handling in
+  [`post_toot()`](https://gesistsa.github.io/rtoot/reference/post_toot.md)
+  ([\#185](https://github.com/gesistsa/rtoot/issues/185))
+
 ## rtoot 0.3.6
 
 CRAN release: 2025-07-24
