@@ -84,6 +84,10 @@ post_toot <- function(
   )
   if (httr::status_code(r) == 200L) {
     sayif(verbose, "Your toot has been posted!")
+  } else {
+    cli::cli_abort(
+      "Failed to post toot. Status code: {httr::status_code(r)}"
+    )
   }
   invisible(r)
 }
