@@ -1,3 +1,8 @@
+# rtoot 0.3.6.9000
+
+* correct return value in `post_toot()` documentation (#185)
+* added simple error handling in `post_toot()` (#185)
+
 # rtoot 0.3.6
 
 * added better error messages when media upload fails  (#160)
