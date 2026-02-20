@@ -1,0 +1,65 @@
+# Authentication with rtoot
+
+## Obtain and use a token
+
+When a function in `rtoot` can’t find a valid token on your computer, it
+automatically starts authentication. If you want to start the process
+manually, you can do so by calling:
+
+``` r
+library(rtoot)
+auth_setup()
+```
+
+By default, the token is stored in a directory R has determined to make
+sense for you and it is called “rtoot_token.rds”. So you do not need to
+worry about it if you are only using `rtoot` on your local machine and
+you are only using one token.
+
+If you do not change the `path` argument of
+[`auth_setup()`](https://gesistsa.github.io/rtoot/reference/auth_setup.md)
+the tokens get stored in the location returned by
+`tools::R_user_dir("rtoot", "config")`. Look there, if you want to copy
+a token to a different computer (ideally in the directory returned by
+`tools::R_user_dir("rtoot", "config")` on the new machine).
+
+If you want to use multiple tokens, you should change the name of the
+file the token is saved in:
+
+``` r
+auth_setup(name = "account1")
+```
+
+To use this token, you can either read it into your environment and
+provide it to each function:
+
+``` r
+token <- readRDS(file.path(tools::R_user_dir("rtoot", "config"), "account1.rds"))
+get_status(id = "109297677620300632", instance = "mastodon.social", token = token)
+```
+
+Or you can set the default token in the options at the start of a
+session:
+
+``` r
+options("rtoot_token" = file.path(tools::R_user_dir("rtoot", "config"), "account1.rds"))
+```
+
+## Environment variable
+
+For advanced users, you can also store your token as an environment
+variable (envvar). You can either obtain a token by calling
+
+``` r
+auth_setup(clipboard = TRUE)
+```
+
+Or, if you already have a token
+
+``` r
+token <- readRDS(file.path(tools::R_user_dir("rtoot", "config"), "account1.rds"))
+content <- convert_token_to_envvar(token)
+```
+
+Paste the content from clipboard to your configuration file. If you
+don’t have access to clipboard, inspect `content`.
