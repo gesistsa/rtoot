@@ -42,12 +42,13 @@ post_list_create <- function(
   params <- list(title = title, replies_policy = replies_policy)
 
   url <- prepare_url(token$instance)
-  r <- httr::POST(
-    httr::modify_url(url = url, path = path),
-    body = params,
-    httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
-  )
-  if (httr::status_code(r) == 200L) {
+  r <- httr2::request(url_build(url)) |>
+    httr2::req_url_path(path) |>
+    httr2::req_headers(Authorization = paste0("Bearer ", token$bearer)) |>
+    httr2::req_body_form(!!!params) |>
+    httr2::req_error(is_error = function(resp) FALSE) |>
+    httr2::req_perform()
+  if (httr2::resp_status(r) == 200L) {
     sayif(verbose, paste0("successfully created the list: ", title))
   }
   invisible(r)
@@ -106,12 +107,13 @@ post_list_accounts <- function(id, account_ids, token = NULL, verbose = TRUE) {
   params <- ids_lst
 
   url <- prepare_url(token$instance)
-  r <- httr::POST(
-    httr::modify_url(url = url, path = path),
-    body = params,
-    httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
-  )
-  if (httr::status_code(r) == 200L) {
+  r <- httr2::request(url_build(url)) |>
+    httr2::req_url_path(path) |>
+    httr2::req_headers(Authorization = paste0("Bearer ", token$bearer)) |>
+    httr2::req_body_form(!!!params) |>
+    httr2::req_error(is_error = function(resp) FALSE) |>
+    httr2::req_perform()
+  if (httr2::resp_status(r) == 200L) {
     sayif(verbose, paste0("successfully added accounts to list: ", id))
   }
   invisible(r)

@@ -77,25 +77,27 @@ make_get_request <- function(
   if (is.null(instance)) {
     token <- check_token_rtoot(token)
     url <- prepare_url(token$instance)
-    config <- httr::add_headers(
-      Authorization = paste("Bearer", token$bearer)
-    )
+    bearer <- token$bearer
   } else {
     url <- prepare_url(instance)
-    config <- list()
+    bearer <- NULL
   }
   count <- 0
   while (TRUE) {
     if (count >= max_error) {
       cli::cli_abort("Too many errors.")
     }
-    request_results <- httr::GET(
-      httr::modify_url(url, path = path),
-      config,
-      query = params
-    )
+    req <- httr2::request(url_build(url)) |>
+      httr2::req_url_path(path) |>
+      httr2::req_url_query(!!!params) |>
+      httr2::req_error(is_error = function(resp) FALSE)
+    if (!is.null(bearer)) {
+      req <- req |>
+        httr2::req_headers(Authorization = paste("Bearer", bearer))
+    }
+    request_results <- httr2::req_perform(req)
 
-    status_code <- httr::status_code(request_results)
+    status_code <- httr2::resp_status(request_results)
     if (!status_code %in% c(200, 429)) {
       cli::cli_abort(
         paste("Unable to make the request. Status Code: ", status_code),
@@ -109,35 +111,56 @@ make_get_request <- function(
       break()
     }
   }
-  output <- httr::content(request_results)
-  headers <- parse_header(httr::headers(request_results))
+  output <- httr2::resp_body_json(request_results)
+  headers <- parse_header(httr2::resp_headers(request_results))
   attr(output, "headers") <- headers
   return(output)
 }
 
 # prepare urls
 prepare_url <- function(instance) {
-  url <- httr::parse_url("")
-  url$hostname <- instance
-  url$scheme <- "https"
-  url
+  list(
+    scheme = "https",
+    hostname = instance,
+    path = NULL,
+    query = NULL
+  )
+}
+
+# helper to build url from parsed url
+url_build <- function(url) {
+  base <- paste0(url$scheme, "://", url$hostname)
+  if (!is.null(url$path) && nzchar(url$path)) {
+    path <- sub("^/+", "", url$path)
+    base <- paste0(base, "/", path)
+  }
+  if (!is.null(url$query) && length(url$query) > 0) {
+    query_str <- paste(
+      names(url$query),
+      vapply(url$query, utils::URLencode, character(1), reserved = TRUE),
+      sep = "=",
+      collapse = "&"
+    )
+    base <- paste0(base, "?", query_str)
+  }
+  base
 }
 
 # process the header of a get request
 parse_header <- function(header) {
   df <- tibble::tibble(
-    rate_limit = header[["x-ratelimit-limit"]],
-    rate_remaining = header[["x-ratelimit-remaining"]],
-    rate_reset = format_date(header[["x-ratelimit-reset"]])
+    rate_limit = header$`x-ratelimit-limit`,
+    rate_remaining = header$`x-ratelimit-remaining`,
+    rate_reset = format_date(header$`x-ratelimit-reset`)
   )
   if ("link" %in% names(header)) {
     vars_to_search <- c("max_id", "min_id", "since_id")
     links <- regmatches(
-      header[["link"]],
-      gregexpr("https[^>]+", header[["link"]])
+      header$link,
+      gregexpr("https[^>]+", header$link)
     )[[1]]
     query_params <- lapply(links, function(x) {
-      query <- httr::parse_url(x)[["query"]]
+      query <- httr2::url_parse(x)[["query"]]
       query <- query[names(query) %in% vars_to_search]
     })
     page_param <- dplyr::bind_cols(query_params)
