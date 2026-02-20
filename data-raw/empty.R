@@ -25,6 +25,36 @@ empty[["account"]] <- tibble::tibble(
   fields = I(list(list()))
 )
 
-empty[["status"]] <- tibble::tibble(id = NA_character_, uri = NA_character_, created_at = NA_character_, content = NA_character_, visibility = NA_character_, sensitive = NA, spoiler_text = NA_character_, reblogs_count = 0, favourites_count = 0, replies_count = 0, url = NA_character_, in_reply_to_id = NA_character_, in_reply_to_account_id = NA_character_, language = NA_character_, text = NA_character_, application = I(list(list())), poll = I(list(list())), card = I(list(list())), account = I(list(list())), reblog = I(list(list())), media_attachments = I(list(list())), mentions = I(list(list())), tags = I(list(list())), emojis = I(list(list())), favourited = NA, reblogged = NA, muted = NA, bookmarked = NA, pinned = NA)
+empty[["status"]] <- tibble::tibble(
+  id = NA_character_,
+  uri = NA_character_,
+  created_at = NA_character_,
+  content = NA_character_,
+  visibility = NA_character_,
+  sensitive = NA,
+  spoiler_text = NA_character_,
+  reblogs_count = 0,
+  favourites_count = 0,
+  replies_count = 0,
+  url = NA_character_,
+  in_reply_to_id = NA_character_,
+  in_reply_to_account_id = NA_character_,
+  language = NA_character_,
+  text = NA_character_,
+  application = I(list(list())),
+  poll = I(list(list())),
+  card = I(list(list())),
+  account = I(list(list())),
+  reblog = I(list(list())),
+  media_attachments = I(list(list())),
+  mentions = I(list(list())),
+  tags = I(list(list())),
+  emojis = I(list(list())),
+  favourited = NA,
+  reblogged = NA,
+  muted = NA,
+  bookmarked = NA,
+  pinned = NA
+)
 
 usethis::use_data(empty, overwrite = TRUE)

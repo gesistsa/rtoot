@@ -10,12 +10,12 @@
 #' }
 #' @export
 get_lists <- function(id = "", token = NULL, parse = TRUE) {
-    process_request(
-        token = token,
-        path = paste0("api/v1/lists/", id),
-        parse = parse,
-        FUN = v(identity)
-    )
+  process_request(
+    token = token,
+    path = paste0("api/v1/lists/", id),
+    parse = parse,
+    FUN = v(identity)
+  )
 }
 
 #' Create a list
@@ -31,26 +31,26 @@ get_lists <- function(id = "", token = NULL, parse = TRUE) {
 #' }
 #' @export
 post_list_create <- function(
-    title,
-    replies_policy = "list",
-    token = NULL,
-    verbose = TRUE
+  title,
+  replies_policy = "list",
+  token = NULL,
+  verbose = TRUE
 ) {
-    token <- check_token_rtoot(token)
-    replies_policy <- match.arg(replies_policy, c("followed", "list", "none"))
-    path <- "/api/v1/lists/"
-    params <- list(title = title, replies_policy = replies_policy)
+  token <- check_token_rtoot(token)
+  replies_policy <- match.arg(replies_policy, c("followed", "list", "none"))
+  path <- "/api/v1/lists/"
+  params <- list(title = title, replies_policy = replies_policy)
 
-    url <- prepare_url(token$instance)
-    r <- httr::POST(
-        httr::modify_url(url = url, path = path),
-        body = params,
-        httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
-    )
-    if (httr::status_code(r) == 200L) {
-        sayif(verbose, paste0("successfully created the list: ", title))
-    }
-    invisible(r)
+  url <- prepare_url(token$instance)
+  r <- httr::POST(
+    httr::modify_url(url = url, path = path),
+    body = params,
+    httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
+  )
+  if (httr::status_code(r) == 200L) {
+    sayif(verbose, paste0("successfully created the list: ", title))
+  }
+  invisible(r)
 }
 
 #' View accounts in a list
@@ -67,24 +67,24 @@ post_list_create <- function(
 #' }
 #' @export
 get_list_accounts <- function(
-    id,
-    limit = 40L,
-    token = NULL,
-    parse = TRUE,
-    retryonratelimit = TRUE,
-    verbose = TRUE
+  id,
+  limit = 40L,
+  token = NULL,
+  parse = TRUE,
+  retryonratelimit = TRUE,
+  verbose = TRUE
 ) {
-    params <- handle_params(list(limit = min(limit, 40L)))
-    process_request(
-        token = token,
-        path = paste0("api/v1/lists/", id, "/accounts"),
-        params = params,
-        parse = parse,
-        FUN = v(parse_account),
-        n = limit,
-        retryonratelimit = retryonratelimit,
-        verbose = verbose
-    )
+  params <- handle_params(list(limit = min(limit, 40L)))
+  process_request(
+    token = token,
+    path = paste0("api/v1/lists/", id, "/accounts"),
+    params = params,
+    parse = parse,
+    FUN = v(parse_account),
+    n = limit,
+    retryonratelimit = retryonratelimit,
+    verbose = verbose
+  )
 }
 
 #' Add accounts to a list
@@ -99,20 +99,20 @@ get_list_accounts <- function(
 #' }
 #' @export
 post_list_accounts <- function(id, account_ids, token = NULL, verbose = TRUE) {
-    token <- check_token_rtoot(token)
-    path <- paste0("/api/v1/lists/", id, "/accounts")
-    ids_lst <- lapply(account_ids, identity)
-    names(ids_lst) <- rep("account_ids[]", length(ids_lst))
-    params <- ids_lst
+  token <- check_token_rtoot(token)
+  path <- paste0("/api/v1/lists/", id, "/accounts")
+  ids_lst <- lapply(account_ids, identity)
+  names(ids_lst) <- rep("account_ids[]", length(ids_lst))
+  params <- ids_lst
 
-    url <- prepare_url(token$instance)
-    r <- httr::POST(
-        httr::modify_url(url = url, path = path),
-        body = params,
-        httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
-    )
-    if (httr::status_code(r) == 200L) {
-        sayif(verbose, paste0("successfully added accounts to list: ", id))
-    }
-    invisible(r)
+  url <- prepare_url(token$instance)
+  r <- httr::POST(
+    httr::modify_url(url = url, path = path),
+    body = params,
+    httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
+  )
+  if (httr::status_code(r) == 200L) {
+    sayif(verbose, paste0("successfully added accounts to list: ", id))
+  }
+  invisible(r)
 }
