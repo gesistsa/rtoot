@@ -74,7 +74,8 @@ post_toot(
 
 ## Value
 
-no return value, called for site effects
+API response, invisibly. If the status was posted successfully, the
+response will contain the posted status.
 
 ## Examples
 
