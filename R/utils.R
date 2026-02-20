@@ -176,41 +176,69 @@ process_request <- function(
   } else {
     show_progress <- FALSE
   }
-  for (i in seq_len(pages)) {
-    api_response <- make_get_request(
-      token = token,
-      path = path,
-      instance = instance,
-      params = params,
-      anonymous = anonymous
-    )
-    output <- c(output, api_response)
-    attr(output, "headers") <- attr(api_response, "headers")
-    if (
-      break_process_request(
-        api_response = api_response,
-        retryonratelimit = retryonratelimit,
-        verbose = verbose,
-        pager = pager
-      )
-    ) {
-      break
-    }
-    params[[pager]] <- attr(api_response, "headers")[[pager]]
-    if (verbose && show_progress) {
-      utils::setTxtProgressBar(pb, i)
-    }
-  }
-  if (isTRUE(parse)) {
-    header <- attr(output, "headers")
 
-    output <- FUN(output)
-    attr(output, "headers") <- header
+  # Wrap the pagination loop in tryCatch to preserve partial results on error
+  result <- tryCatch(
+    {
+      for (i in seq_len(pages)) {
+        api_response <- make_get_request(
+          token = token,
+          path = path,
+          instance = instance,
+          params = params,
+          anonymous = anonymous
+        )
+        output <- c(output, api_response)
+        attr(output, "headers") <- attr(api_response, "headers")
+        if (
+          break_process_request(
+            api_response = api_response,
+            retryonratelimit = retryonratelimit,
+            verbose = verbose,
+            pager = pager
+          )
+        ) {
+          break
+        }
+        params[[pager]] <- attr(api_response, "headers")[[pager]]
+        if (verbose && show_progress) {
+          utils::setTxtProgressBar(pb, i)
+        }
+      }
+      list(output = output, error = NULL)
+    },
+    error = function(e) {
+      # On error, return what we have so far along with error information
+      list(output = output, error = e)
+    }
+  )
+
+  if (isTRUE(parse)) {
+    header <- attr(result$output, "headers")
+
+    result$output <- FUN(result$output)
+    attr(result$output, "headers") <- header
   }
+
+  # Add error information as an attribute if an error occurred
+  if (!is.null(result$error)) {
+    attr(result$output, "rtoot_error") <- result$error
+    attr(result$output, "partial_result") <- TRUE
+    if (verbose) {
+      cli::cli_warn(
+        c(
+          "Request interrupted by error. Returning partial results.",
+          "i" = "Error message: {result$error$message}",
+          "i" = "Retrieved {nrow(result$output)} items before error"
+        )
+      )
+    }
+  }
+
   if (show_progress) {
     cat("\n")
   }
-  return(output)
+  return(result$output)
 }
 
 ## vectorize function
