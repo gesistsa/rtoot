@@ -21,14 +21,15 @@ get_fedi_instances <- function(token = NA, n = 20, ...) {
   request_results <- httr2::request(
     "https://instances.social/api/1.0/instances/list"
   ) |>
-    httr2::req_headers(Authorization = paste("Bearer", token)) |>
+    httr2::req_headers(Authorization = format_bearer(token)) |>
     httr2::req_url_query(!!!params) |>
     httr2::req_error(is_error = function(resp) FALSE) |>
     httr2::req_perform()
-  status_code <- httr2::resp_status(request_results)
-  if (!status_code %in% c(200)) {
-    cli::cli_abort(paste("something went wrong. Status code:", status_code))
-  }
+  check_status_code(
+    request_results,
+    200,
+    "Failed to fetch instances. Status code: {httr2::resp_status(request_results)}"
+  )
   tbl <- dplyr::bind_rows(httr2::resp_body_json(request_results)$instances)
   tbl[["info"]] <- NULL
   tbl <- dplyr::distinct(tbl)

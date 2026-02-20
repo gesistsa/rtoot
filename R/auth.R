@@ -90,9 +90,7 @@ process_created_token <- function(
 #' @return an rtoot client object
 #' @references https://docs.joinmastodon.org/client/token/#creating-our-application
 get_client <- function(instance = "mastodon.social") {
-  url <- prepare_url(instance)
-  auth1 <- httr2::request(url_build(url)) |>
-    httr2::req_url_path("/api/v1/apps") |>
+  auth1 <- make_request(instance, "/api/v1/apps") |>
     httr2::req_body_form(
       client_name = "rtoot package",
       redirect_uris = "urn:ietf:wg:oauth:2.0:oob",
@@ -121,8 +119,7 @@ create_token <- function(client, type = "public", browser = TRUE) {
   }
   url <- prepare_url(client$instance)
   if (type == "public") {
-    auth2 <- httr2::request(url_build(url)) |>
-      httr2::req_url_path("oauth/token") |>
+    auth2 <- make_request(client$instance, "oauth/token") |>
       httr2::req_body_form(
         client_id = client$client_id,
         client_secret = client$client_secret,
@@ -157,15 +154,14 @@ create_token <- function(client, type = "public", browser = TRUE) {
       check_rstudio = TRUE,
       default = ""
     )
-    auth2 <- httr2::request(url_build(url)) |>
-      httr2::req_url_path("oauth/token") |>
+    auth2 <- make_request(client$instance, "oauth/token") |>
       httr2::req_body_form(
         client_id = client$client_id,
         client_secret = client$client_secret,
         redirect_uri = "urn:ietf:wg:oauth:2.0:oob",
         grant_type = "authorization_code",
         code = auth_code,
-        scope = "read write follow"
+        scopes = "read write follow"
       ) |>
       httr2::req_perform()
   }
@@ -195,16 +191,18 @@ verify_credentials <- function(token, verbose = TRUE) {
   type <- token$type
   url <- prepare_url(token$instance)
   if (type == "user") {
-    acc <- httr2::request(url_build(url)) |>
-      httr2::req_url_path("api/v1/accounts/verify_credentials") |>
-      httr2::req_headers(Authorization = paste0("Bearer ", token$bearer)) |>
-      httr2::req_error(is_error = function(resp) FALSE) |>
+    acc <- make_request(
+      token$instance,
+      "api/v1/accounts/verify_credentials",
+      token$bearer
+    ) |>
       httr2::req_perform()
   } else if (type == "public") {
-    acc <- httr2::request(url_build(url)) |>
-      httr2::req_url_path("api/v1/apps/verify_credentials") |>
-      httr2::req_headers(Authorization = paste0("Bearer ", token$bearer)) |>
-      httr2::req_error(is_error = function(resp) FALSE) |>
+    acc <- make_request(
+      token$instance,
+      "api/v1/apps/verify_credentials",
+      token$bearer
+    ) |>
       httr2::req_perform()
   } else {
     cli::cli_abort("unknown token type")

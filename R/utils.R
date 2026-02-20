@@ -87,14 +87,8 @@ make_get_request <- function(
     if (count >= max_error) {
       cli::cli_abort("Too many errors.")
     }
-    req <- httr2::request(url_build(url)) |>
-      httr2::req_url_path(path) |>
-      httr2::req_url_query(!!!params) |>
-      httr2::req_error(is_error = function(resp) FALSE)
-    if (!is.null(bearer)) {
-      req <- req |>
-        httr2::req_headers(Authorization = paste("Bearer", bearer))
-    }
+    req <- make_request(url$hostname, path, bearer) |>
+      httr2::req_url_query(!!!params)
     request_results <- httr2::req_perform(req)
 
     status_code <- httr2::resp_status(request_results)
@@ -144,6 +138,38 @@ url_build <- function(url) {
     base <- paste0(base, "?", query_str)
   }
   base
+}
+
+# helper to format bearer token header
+format_bearer <- function(token) {
+  paste0("Bearer ", token)
+}
+
+# helper to create base authenticated request
+make_request <- function(instance, path, bearer = NULL) {
+  url <- prepare_url(instance)
+  req <- httr2::request(url_build(url)) |>
+    httr2::req_url_path(path) |>
+    httr2::req_error(is_error = function(resp) FALSE)
+
+  if (!is.null(bearer)) {
+    req <- req |>
+      httr2::req_headers(Authorization = format_bearer(bearer))
+  }
+
+  req
+}
+
+# helper to check response status and abort on error
+check_status_code <- function(resp, expected = 200, error_msg = NULL) {
+  status <- httr2::resp_status(resp)
+  if (status != expected) {
+    if (is.null(error_msg)) {
+      error_msg <- paste("Request failed with status code:", status)
+    }
+    cli::cli_abort(error_msg, call. = FALSE)
+  }
+  invisible(status)
 }
 
 # process the header of a get request
