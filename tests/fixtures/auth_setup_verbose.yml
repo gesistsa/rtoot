@@ -3,10 +3,7 @@ http_interactions:
     method: POST
     uri: https://fosstodon.org/api/v1/apps
     body:
-      fields:
-        client_name: rtoot package
-        redirect_uris: urn:ietf:wg:oauth:2.0:oob
-        scopes: read write follow
+      string: client_name=rtoot%20package&redirect_uris=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&scopes=read%20write%20follow
   response:
     status: 200
     headers:
@@ -18,36 +15,32 @@ http_interactions:
       referrer-policy: same-origin
       x-ratelimit-limit: '5'
       x-ratelimit-remaining: '4'
-      x-ratelimit-reset: '2025-07-17T13:50:00.538403Z'
+      x-ratelimit-reset: '2026-02-20T12:10:00.879136Z'
       cache-control: private, no-store
-      etag: W/"8a1a835d71e63a80481da42e343b1374"
+      etag: W/"12e74c0f5392a0a8d9322a9bfe395bc1"
       content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
         'none'
-      x-request-id: 758d147d-cf8d-4332-9548-18d6cde0da6b
-      x-runtime: '0.006949'
+      x-request-id: 05aaba45-51d8-4460-8721-150fe090a3e6
+      x-runtime: '0.005429'
       content-encoding: gzip
       accept-ranges: bytes
       via: 1.1 varnish, 1.1 varnish
-      date: Thu, 17 Jul 2025 13:44:07 GMT
-      x-served-by: cache-par-lfpb1150060-PAR, cache-muc13976-MUC
+      date: Fri, 20 Feb 2026 12:09:51 GMT
+      x-served-by: cache-par-lfpb1150040-PAR, cache-fra-eddf8230114-FRA
       x-cache: MISS, MISS
       x-cache-hits: 0, 0
-      x-timer: S1752759848.522440,VS0,VE30
+      x-timer: S1771589392.869134,VS0,VE29
       vary: Accept-Encoding, Authorization, Origin
       strict-transport-security: max-age=300
       alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
     body:
-      string: '{"id":"927918","name":"rtoot package","website":null,"scopes":["read","write","follow"],"redirect_uris":["urn:ietf:wg:oauth:2.0:oob"],"vapid_key":"BHKY6hkaUL7WByhqx8H8Knbfrpixu8vqTNjiu3XblHR-H6eY2ZD9LYe7fUxOuav6eCfwmK2LHWmzL22vvwN8B2E=","redirect_uri":"urn:ietf:wg:oauth:2.0:oob","client_id":"s65UfCFjriE-yNqkuAPy-1AXBB27C30Wv5j1zF6Xmcc","client_secret":"Z4OfTw7y2TlBV0302yEpYhq6E6YEDMvSqiCxZqD04IM","client_secret_expires_at":0}'
-  recorded_at: 2025-07-17 13:44:07
+      string: '{"id":"935875","name":"rtoot package","website":null,"scopes":["read","write","follow"],"redirect_uris":["urn:ietf:wg:oauth:2.0:oob"],"vapid_key":"BHKY6hkaUL7WByhqx8H8Knbfrpixu8vqTNjiu3XblHR-H6eY2ZD9LYe7fUxOuav6eCfwmK2LHWmzL22vvwN8B2E=","redirect_uri":"urn:ietf:wg:oauth:2.0:oob","client_id":"L-0gwtZgg6-x3bP0B6B7pI-mYOazTsCjDnKWzQWFlt8","client_secret":"liSvYSCdjPYSs0TVgFOipB15mh0ynzn6KgCarfmHWwI","client_secret_expires_at":0}'
+  recorded_at: 2026-02-20 12:09:51
 - request:
     method: POST
     uri: https://fosstodon.org/oauth/token
     body:
-      fields:
-        client_id: s65UfCFjriE-yNqkuAPy-1AXBB27C30Wv5j1zF6Xmcc
-        client_secret: Z4OfTw7y2TlBV0302yEpYhq6E6YEDMvSqiCxZqD04IM
-        redirect_uri: urn:ietf:wg:oauth:2.0:oob
-        grant_type: client_credentials
+      string: client_id=L-0gwtZgg6-x3bP0B6B7pI-mYOazTsCjDnKWzQWFlt8&client_secret=liSvYSCdjPYSs0TVgFOipB15mh0ynzn6KgCarfmHWwI&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&grant_type=client_credentials
   response:
     status: 200
     headers:
@@ -59,7 +52,7 @@ http_interactions:
       referrer-policy: same-origin
       cache-control: no-store
       pragma: no-cache
-      etag: W/"83453aee791fc13e4bd13fd350721340"
+      etag: W/"cdf2d127fc5ded29dbaf6e85a9dd35e3"
       content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
         ''none''; font-src ''self'' https://fosstodon.org; img-src ''self'' data:
         blob: https://fosstodon.org https://cdn.fosstodon.org; media-src ''self''
@@ -68,23 +61,23 @@ http_interactions:
         worker-src ''self'' blob: https://fosstodon.org; connect-src ''self'' data:
         blob: https://fosstodon.org https://cdn.fosstodon.org wss://fosstodon.org;
         script-src ''self'' https://fosstodon.org ''wasm-unsafe-eval''; frame-src
-        ''self'' https:; style-src ''self'' https://fosstodon.org ''nonce-9K+JEJgtYvML011tcjkVjg=='''
-      x-request-id: 59e44b6d-8e04-407f-a6c1-711c2a3bffd5
-      x-runtime: '0.064883'
+        ''self'' https:; style-src ''self'' https://fosstodon.org ''nonce-KEZP0yjn2wAsOvAvjEllGg=='''
+      x-request-id: 571cbc0f-f576-443d-938b-38f71466d7c0
+      x-runtime: '0.167224'
       content-encoding: gzip
       accept-ranges: bytes
       via: 1.1 varnish, 1.1 varnish
-      date: Thu, 17 Jul 2025 13:44:07 GMT
-      x-served-by: cache-par-lfpg1960068-PAR, cache-muc13976-MUC
+      date: Fri, 20 Feb 2026 12:09:52 GMT
+      x-served-by: cache-par-lfpb1150067-PAR, cache-fra-eddf8230114-FRA
       x-cache: MISS, MISS
       x-cache-hits: 0, 0
-      x-timer: S1752759848.583079,VS0,VE86
-      vary: Accept-Encoding, Origin
+      x-timer: S1771589392.927594,VS0,VE190
+      vary: Accept-Encoding, Accept, Origin
       strict-transport-security: max-age=300
       alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
     body:
-      string: '{"access_token":"BWqUqwtEFgip7-FbX48C153l1fEPsk6Tg_Pneidm8i8","token_type":"Bearer","scope":"read","created_at":1752759847}'
-  recorded_at: 2025-07-17 13:44:07
+      string: '{"access_token":"AOyCh9PGiNl3D2TEkjWg0uTaAOFM3Ho_rd9JoUItcfg","token_type":"Bearer","scope":"read","created_at":1771589392}'
+  recorded_at: 2026-02-20 12:09:52
 - request:
     method: GET
     uri: https://fosstodon.org/api/v1/apps/verify_credentials
@@ -98,36 +91,33 @@ http_interactions:
       x-xss-protection: '0'
       referrer-policy: same-origin
       x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '292'
-      x-ratelimit-reset: '2025-07-17T13:45:00.723956Z'
+      x-ratelimit-remaining: '270'
+      x-ratelimit-reset: '2026-02-20T12:10:00.191536Z'
       cache-control: private, no-store
-      etag: W/"c44d8d11f264a5b3463eadb3e96a578d"
+      etag: W/"b46b8e8daedc3c267d342d99545bba0c"
       content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
         'none'
-      x-request-id: 9dd05c71-2945-43f2-84a8-920bc96ae7b3
-      x-runtime: '0.008265'
+      x-request-id: ce471e35-a69d-4e83-8d81-a5cfe7f388f0
+      x-runtime: '0.007661'
       content-encoding: gzip
       accept-ranges: bytes
       via: 1.1 varnish, 1.1 varnish
-      date: Thu, 17 Jul 2025 13:44:07 GMT
-      x-served-by: cache-par-lfpg1960059-PAR, cache-muc13976-MUC
+      date: Fri, 20 Feb 2026 12:09:52 GMT
+      x-served-by: cache-par-lfpg1960059-PAR, cache-fra-eddf8230114-FRA
       x-cache: MISS, MISS
       x-cache-hits: 0, 0
-      x-timer: S1752759848.708291,VS0,VE31
+      x-timer: S1771589392.156700,VS0,VE47
       vary: Accept-Encoding, Authorization, Origin
       strict-transport-security: max-age=300
       alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
     body:
-      string: '{"id":"927918","name":"rtoot package","website":null,"scopes":["read","write","follow"],"redirect_uris":["urn:ietf:wg:oauth:2.0:oob"],"vapid_key":"BHKY6hkaUL7WByhqx8H8Knbfrpixu8vqTNjiu3XblHR-H6eY2ZD9LYe7fUxOuav6eCfwmK2LHWmzL22vvwN8B2E=","redirect_uri":"urn:ietf:wg:oauth:2.0:oob"}'
-  recorded_at: 2025-07-17 13:44:07
+      string: '{"id":"935875","name":"rtoot package","website":null,"scopes":["read","write","follow"],"redirect_uris":["urn:ietf:wg:oauth:2.0:oob"],"vapid_key":"BHKY6hkaUL7WByhqx8H8Knbfrpixu8vqTNjiu3XblHR-H6eY2ZD9LYe7fUxOuav6eCfwmK2LHWmzL22vvwN8B2E=","redirect_uri":"urn:ietf:wg:oauth:2.0:oob"}'
+  recorded_at: 2026-02-20 12:09:52
 - request:
     method: POST
     uri: https://fosstodon.org/api/v1/apps
     body:
-      fields:
-        client_name: rtoot package
-        redirect_uris: urn:ietf:wg:oauth:2.0:oob
-        scopes: read write follow
+      string: client_name=rtoot%20package&redirect_uris=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&scopes=read%20write%20follow
   response:
     status: 200
     headers:
@@ -139,36 +129,32 @@ http_interactions:
       referrer-policy: same-origin
       x-ratelimit-limit: '5'
       x-ratelimit-remaining: '4'
-      x-ratelimit-reset: '2025-07-17T13:50:00.787068Z'
+      x-ratelimit-reset: '2026-02-20T12:10:00.280540Z'
       cache-control: private, no-store
-      etag: W/"1ff8aa31750b763ad987d539a43dc4cc"
+      etag: W/"41cdb56aa75c50d1ba03bc763233038a"
       content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
         'none'
-      x-request-id: 91b9ed08-ac42-4655-854f-0c848dde9af8
-      x-runtime: '0.006082'
+      x-request-id: 83b732e3-3003-4d27-ad22-fe36f54a1527
+      x-runtime: '0.007362'
       content-encoding: gzip
       accept-ranges: bytes
       via: 1.1 varnish, 1.1 varnish
-      date: Thu, 17 Jul 2025 13:44:07 GMT
-      x-served-by: cache-par-lfpg1960051-PAR, cache-muc13976-MUC
+      date: Fri, 20 Feb 2026 12:09:52 GMT
+      x-served-by: cache-par-lfpg1960026-PAR, cache-fra-eddf8230114-FRA
       x-cache: MISS, MISS
       x-cache-hits: 0, 0
-      x-timer: S1752759848.769764,VS0,VE31
+      x-timer: S1771589392.268192,VS0,VE26
       vary: Accept-Encoding, Authorization, Origin
       strict-transport-security: max-age=300
       alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
     body:
-      string: '{"id":"927919","name":"rtoot package","website":null,"scopes":["read","write","follow"],"redirect_uris":["urn:ietf:wg:oauth:2.0:oob"],"vapid_key":"BHKY6hkaUL7WByhqx8H8Knbfrpixu8vqTNjiu3XblHR-H6eY2ZD9LYe7fUxOuav6eCfwmK2LHWmzL22vvwN8B2E=","redirect_uri":"urn:ietf:wg:oauth:2.0:oob","client_id":"WNrw7Wk0jAC9ETgVnSKIPTiITuHv_QGQ0MuQ8ZkALyA","client_secret":"cHbYhufsUQcv4cSMX6mXGDZadc-iLDeHodCsGFGzncg","client_secret_expires_at":0}'
-  recorded_at: 2025-07-17 13:44:07
+      string: '{"id":"935876","name":"rtoot package","website":null,"scopes":["read","write","follow"],"redirect_uris":["urn:ietf:wg:oauth:2.0:oob"],"vapid_key":"BHKY6hkaUL7WByhqx8H8Knbfrpixu8vqTNjiu3XblHR-H6eY2ZD9LYe7fUxOuav6eCfwmK2LHWmzL22vvwN8B2E=","redirect_uri":"urn:ietf:wg:oauth:2.0:oob","client_id":"9cUI5BZY5cB4gskoWq6P6AGF4U5j9lDhjkbSpjf-Tz4","client_secret":"oGiH6nZsZmPmYvVbcCpXx2IGXqRSBQPitWL22Iu_S2Y","client_secret_expires_at":0}'
+  recorded_at: 2026-02-20 12:09:52
 - request:
     method: POST
     uri: https://fosstodon.org/oauth/token
     body:
-      fields:
-        client_id: WNrw7Wk0jAC9ETgVnSKIPTiITuHv_QGQ0MuQ8ZkALyA
-        client_secret: cHbYhufsUQcv4cSMX6mXGDZadc-iLDeHodCsGFGzncg
-        redirect_uri: urn:ietf:wg:oauth:2.0:oob
-        grant_type: client_credentials
+      string: client_id=9cUI5BZY5cB4gskoWq6P6AGF4U5j9lDhjkbSpjf-Tz4&client_secret=oGiH6nZsZmPmYvVbcCpXx2IGXqRSBQPitWL22Iu_S2Y&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&grant_type=client_credentials
   response:
     status: 200
     headers:
@@ -180,7 +166,7 @@ http_interactions:
       referrer-policy: same-origin
       cache-control: no-store
       pragma: no-cache
-      etag: W/"d6121cd864ce9722f562caf5bdfbcd3f"
+      etag: W/"e52dc3553d3b9e17c0bf52ab1943cc3d"
       content-security-policy: 'base-uri ''none''; default-src ''none''; frame-ancestors
         ''none''; font-src ''self'' https://fosstodon.org; img-src ''self'' data:
         blob: https://fosstodon.org https://cdn.fosstodon.org; media-src ''self''
@@ -189,23 +175,23 @@ http_interactions:
         worker-src ''self'' blob: https://fosstodon.org; connect-src ''self'' data:
         blob: https://fosstodon.org https://cdn.fosstodon.org wss://fosstodon.org;
         script-src ''self'' https://fosstodon.org ''wasm-unsafe-eval''; frame-src
-        ''self'' https:; style-src ''self'' https://fosstodon.org ''nonce-OniYbwnc+yh61SrswgdZ1g=='''
-      x-request-id: c4de687b-382d-42aa-8f50-61f7d7dcf006
-      x-runtime: '0.068829'
+        ''self'' https:; style-src ''self'' https://fosstodon.org ''nonce-uqnd9nNy6WM2RlGXyVH1fA=='''
+      x-request-id: fd69ec4c-4e2b-47da-ab8f-558aec865027
+      x-runtime: '0.063732'
       content-encoding: gzip
       accept-ranges: bytes
       via: 1.1 varnish, 1.1 varnish
-      date: Thu, 17 Jul 2025 13:44:07 GMT
-      x-served-by: cache-par-lfpg1960096-PAR, cache-muc13976-MUC
+      date: Fri, 20 Feb 2026 12:09:52 GMT
+      x-served-by: cache-par-lfpb1150050-PAR, cache-fra-eddf8230114-FRA
       x-cache: MISS, MISS
       x-cache-hits: 0, 0
-      x-timer: S1752759848.835210,VS0,VE93
-      vary: Accept-Encoding, Origin
+      x-timer: S1771589392.322091,VS0,VE93
+      vary: Accept-Encoding, Accept, Origin
       strict-transport-security: max-age=300
       alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
     body:
-      string: '{"access_token":"asxFJm9OJ4albetbHdcZEutwXj8ff90MYSBYmepzQng","token_type":"Bearer","scope":"read","created_at":1752759847}'
-  recorded_at: 2025-07-17 13:44:07
+      string: '{"access_token":"NuyWaX5WDphb1aJuqU2Wxa3AgqOOfZBLNUquCrlLOIM","token_type":"Bearer","scope":"read","created_at":1771589392}'
+  recorded_at: 2026-02-20 12:09:52
 - request:
     method: GET
     uri: https://fosstodon.org/api/v1/apps/verify_credentials
@@ -219,26 +205,26 @@ http_interactions:
       x-xss-protection: '0'
       referrer-policy: same-origin
       x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '291'
-      x-ratelimit-reset: '2025-07-17T13:45:00.988817Z'
+      x-ratelimit-remaining: '268'
+      x-ratelimit-reset: '2026-02-20T12:10:00.470179Z'
       cache-control: private, no-store
-      etag: W/"b4a1b45e5f3db502f34ccfb269f24d39"
+      etag: W/"77986ceec41096be346125d71173885d"
       content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
         'none'
-      x-request-id: c3d1873a-a8dd-4900-9fa7-a3aabd010bec
-      x-runtime: '0.006062'
+      x-request-id: a37c727b-1774-4d92-9de9-888fed723ae3
+      x-runtime: '0.011672'
       content-encoding: gzip
       accept-ranges: bytes
       via: 1.1 varnish, 1.1 varnish
-      date: Thu, 17 Jul 2025 13:44:08 GMT
-      x-served-by: cache-par-lfpg1960059-PAR, cache-muc13976-MUC
+      date: Fri, 20 Feb 2026 12:09:52 GMT
+      x-served-by: cache-par-lfpg1960059-PAR, cache-fra-eddf8230114-FRA
       x-cache: MISS, MISS
       x-cache-hits: 0, 0
-      x-timer: S1752759848.974394,VS0,VE28
+      x-timer: S1771589392.448890,VS0,VE36
       vary: Accept-Encoding, Authorization, Origin
       strict-transport-security: max-age=300
       alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
     body:
-      string: '{"id":"927919","name":"rtoot package","website":null,"scopes":["read","write","follow"],"redirect_uris":["urn:ietf:wg:oauth:2.0:oob"],"vapid_key":"BHKY6hkaUL7WByhqx8H8Knbfrpixu8vqTNjiu3XblHR-H6eY2ZD9LYe7fUxOuav6eCfwmK2LHWmzL22vvwN8B2E=","redirect_uri":"urn:ietf:wg:oauth:2.0:oob"}'
-  recorded_at: 2025-07-17 13:44:07
-recorded_with: VCR-vcr/1.7.1.93
+      string: '{"id":"935876","name":"rtoot package","website":null,"scopes":["read","write","follow"],"redirect_uris":["urn:ietf:wg:oauth:2.0:oob"],"vapid_key":"BHKY6hkaUL7WByhqx8H8Knbfrpixu8vqTNjiu3XblHR-H6eY2ZD9LYe7fUxOuav6eCfwmK2LHWmzL22vvwN8B2E=","redirect_uri":"urn:ietf:wg:oauth:2.0:oob"}'
+  recorded_at: 2026-02-20 12:09:52
+recorded_with: VCR-vcr/2.1.0

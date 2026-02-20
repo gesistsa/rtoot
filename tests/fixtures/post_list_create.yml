@@ -3,9 +3,7 @@ http_interactions:
     method: POST
     uri: https://fosstodon.org/api/v1/lists/
     body:
-      fields:
-        title: rtoot test
-        replies_policy: list
+      string: title=rtoot%20test&replies_policy=list
   response:
     status: 200
     headers:
@@ -16,26 +14,26 @@ http_interactions:
       x-xss-protection: '0'
       referrer-policy: same-origin
       x-ratelimit-limit: '300'
-      x-ratelimit-remaining: '273'
-      x-ratelimit-reset: '2025-07-17T13:45:00.221823Z'
+      x-ratelimit-remaining: '299'
+      x-ratelimit-reset: '2026-02-20T12:15:00.899680Z'
       cache-control: private, no-store
-      etag: W/"8d4118a3ba9bcf3b62f313b30109ad27"
+      etag: W/"76b55a21f2ecc988aea952af40434a92"
       content-security-policy: default-src 'none'; frame-ancestors 'none'; form-action
         'none'
-      x-request-id: c3e53947-9922-4c38-bd64-391c93125ba2
-      x-runtime: '0.009356'
+      x-request-id: a64d8773-dc1a-47f2-b5ad-0748452f76c3
+      x-runtime: '0.017458'
       content-encoding: gzip
       accept-ranges: bytes
       via: 1.1 varnish, 1.1 varnish
-      date: Thu, 17 Jul 2025 13:44:26 GMT
-      x-served-by: cache-par-lfpb1150072-PAR, cache-muc13941-MUC
+      date: Fri, 20 Feb 2026 12:10:23 GMT
+      x-served-by: cache-par-lfpg1960053-PAR, cache-fra-eddf8230027-FRA
       x-cache: MISS, MISS
       x-cache-hits: 0, 0
-      x-timer: S1752759866.205851,VS0,VE31
+      x-timer: S1771589424.881401,VS0,VE34
       vary: Accept-Encoding, Authorization, Origin
       strict-transport-security: max-age=300
       alt-svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
     body:
-      string: '{"id":"10490","title":"rtoot test","replies_policy":"list","exclusive":false}'
-  recorded_at: 2025-07-17 13:44:26
-recorded_with: VCR-vcr/1.7.1.93
+      string: '{"id":"10784","title":"rtoot test","replies_policy":"list","exclusive":false}'
+  recorded_at: 2026-02-20 12:10:23
+recorded_with: VCR-vcr/2.1.0
