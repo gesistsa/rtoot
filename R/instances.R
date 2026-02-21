@@ -17,18 +17,20 @@ get_fedi_instances <- function(token = NA, n = 20, ...) {
       call. = FALSE
     )
   }
-  config <- httr::add_headers(Authorization = paste('Bearer', token))
   params <- list(count = n, sort_by = "users", sort_order = "desc", ...)
-  request_results <- httr::GET(
-    "https://instances.social/api/1.0/instances/list",
-    query = params,
-    config
+  request_results <- httr2::request(
+    "https://instances.social/api/1.0/instances/list"
+  ) |>
+    httr2::req_headers(Authorization = format_bearer(token)) |>
+    httr2::req_url_query(!!!params) |>
+    httr2::req_error(is_error = function(resp) FALSE) |>
+    httr2::req_perform()
+  check_status_code(
+    request_results,
+    200,
+    "Failed to fetch instances. Status code: {httr2::resp_status(request_results)}"
   )
-  status_code <- httr::status_code(request_results)
-  if (!status_code %in% c(200)) {
-    cli::cli_abort(paste("something went wrong. Status code:", status_code))
-  }
-  tbl <- dplyr::bind_rows(httr::content(request_results)$instances)
+  tbl <- dplyr::bind_rows(httr2::resp_body_json(request_results)$instances)
   tbl[["info"]] <- NULL
   tbl <- dplyr::distinct(tbl)
   tbl[["users"]] <- as.integer(tbl[["users"]])

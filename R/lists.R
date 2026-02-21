@@ -41,15 +41,15 @@ post_list_create <- function(
   path <- "/api/v1/lists/"
   params <- list(title = title, replies_policy = replies_policy)
 
-  url <- prepare_url(token$instance)
-  r <- httr::POST(
-    httr::modify_url(url = url, path = path),
-    body = params,
-    httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
+  r <- make_request(token$instance, path, token$bearer) |>
+    httr2::req_body_form(!!!params) |>
+    httr2::req_perform()
+  check_status_code(
+    r,
+    200,
+    "Failed to create list. Status code: {httr2::resp_status(r)}"
   )
-  if (httr::status_code(r) == 200L) {
-    sayif(verbose, paste0("successfully created the list: ", title))
-  }
+  sayif(verbose, paste0("successfully created the list: ", title))
   invisible(r)
 }
 
@@ -105,14 +105,14 @@ post_list_accounts <- function(id, account_ids, token = NULL, verbose = TRUE) {
   names(ids_lst) <- rep("account_ids[]", length(ids_lst))
   params <- ids_lst
 
-  url <- prepare_url(token$instance)
-  r <- httr::POST(
-    httr::modify_url(url = url, path = path),
-    body = params,
-    httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
+  r <- make_request(token$instance, path, token$bearer) |>
+    httr2::req_body_form(!!!params) |>
+    httr2::req_perform()
+  check_status_code(
+    r,
+    200,
+    "Failed to add accounts to list. Status code: {httr2::resp_status(r)}"
   )
-  if (httr::status_code(r) == 200L) {
-    sayif(verbose, paste0("successfully added accounts to list: ", id))
-  }
+  sayif(verbose, paste0("successfully added accounts to list: ", id))
   invisible(r)
 }

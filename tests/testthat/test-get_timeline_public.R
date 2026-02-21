@@ -25,7 +25,7 @@ test_that("get_timeline_public", {
   })
   ## it should have only one type of hostname
   expect_equal(
-    length(unique(sapply(x$uri, function(uri) httr::parse_url(uri)$hostname))),
+    length(unique(sapply(x$uri, function(uri) httr2::url_parse(uri)$hostname))),
     1
   )
   vcr::use_cassette("get_timeline_public_anonymous", {

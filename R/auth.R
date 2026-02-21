@@ -90,16 +90,14 @@ process_created_token <- function(
 #' @return an rtoot client object
 #' @references https://docs.joinmastodon.org/client/token/#creating-our-application
 get_client <- function(instance = "mastodon.social") {
-  url <- prepare_url(instance)
-  auth1 <- httr::POST(
-    httr::modify_url(url = url, path = "/api/v1/apps"),
-    body = list(
+  auth1 <- make_request(instance, "/api/v1/apps") |>
+    httr2::req_body_form(
       client_name = "rtoot package",
       redirect_uris = "urn:ietf:wg:oauth:2.0:oob",
       scopes = "read write follow"
-    )
-  )
-  client <- httr::content(auth1)
+    ) |>
+    httr2::req_perform()
+  client <- httr2::resp_body_json(auth1)
   client <- client[c("client_id", "client_secret")]
   client$instance <- instance
   class(client) <- "rtoot_client"
@@ -121,29 +119,31 @@ create_token <- function(client, type = "public", browser = TRUE) {
   }
   url <- prepare_url(client$instance)
   if (type == "public") {
-    auth2 <- httr::POST(
-      httr::modify_url(url = url, path = "oauth/token"),
-      body = list(
+    auth2 <- make_request(client$instance, "oauth/token") |>
+      httr2::req_body_form(
         client_id = client$client_id,
         client_secret = client$client_secret,
         redirect_uri = "urn:ietf:wg:oauth:2.0:oob",
         grant_type = "client_credentials"
-      )
-    )
+      ) |>
+      httr2::req_perform()
   } else if (type == "user") {
-    url <- httr::modify_url(url = url, path = "oauth/authorize")
+    auth_url <- url
+    auth_url$path <- "oauth/authorize"
     query <- list(
       client_id = client$client_id,
       redirect_uri = "urn:ietf:wg:oauth:2.0:oob",
       scope = "read write follow",
       response_type = "code"
     )
+    auth_url$query <- query
+    full_url <- url_build(auth_url)
     if (browser) {
-      httr::BROWSE(url, query = query)
+      utils::browseURL(full_url)
     } else {
       cli::cli_inform(paste(
         "Navigate to",
-        httr::modify_url(url, query = query),
+        full_url,
         "to obtain an authorization code. Press Enter to the next step."
       ))
       rtoot_ask("", pass = FALSE, check_rstudio = FALSE)
@@ -154,19 +154,18 @@ create_token <- function(client, type = "public", browser = TRUE) {
       check_rstudio = TRUE,
       default = ""
     )
-    auth2 <- httr::POST(
-      httr::modify_url(url = url, path = "oauth/token"),
-      body = list(
+    auth2 <- make_request(client$instance, "oauth/token") |>
+      httr2::req_body_form(
         client_id = client$client_id,
         client_secret = client$client_secret,
         redirect_uri = "urn:ietf:wg:oauth:2.0:oob",
         grant_type = "authorization_code",
         code = auth_code,
-        scope = "read write follow"
-      )
-    )
+        scopes = "read write follow"
+      ) |>
+      httr2::req_perform()
   }
-  bearer <- list(bearer = httr::content(auth2)$access_token)
+  bearer <- list(bearer = httr2::resp_body_json(auth2)$access_token)
   bearer$type <- type
   bearer$instance <- client$instance
   class(bearer) <- "rtoot_bearer"
@@ -192,25 +191,23 @@ verify_credentials <- function(token, verbose = TRUE) {
   type <- token$type
   url <- prepare_url(token$instance)
   if (type == "user") {
-    acc <- httr::GET(
-      httr::modify_url(
-        url = url,
-        path = "api/v1/accounts/verify_credentials"
-      ),
-      httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
-    )
+    acc <- make_request(
+      token$instance,
+      "api/v1/accounts/verify_credentials",
+      token$bearer
+    ) |>
+      httr2::req_perform()
   } else if (type == "public") {
-    acc <- httr::GET(
-      httr::modify_url(
-        url = url,
-        path = "api/v1/apps/verify_credentials"
-      ),
-      httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
-    )
+    acc <- make_request(
+      token$instance,
+      "api/v1/apps/verify_credentials",
+      token$bearer
+    ) |>
+      httr2::req_perform()
   } else {
     cli::cli_abort("unknown token type")
   }
-  success <- isTRUE(acc[["status_code"]] == 200L)
+  success <- isTRUE(httr2::resp_status(acc) == 200L)
   if (success) {
     sayif(
       verbose,

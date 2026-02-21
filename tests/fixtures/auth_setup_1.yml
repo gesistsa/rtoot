@@ -3,10 +3,7 @@ http_interactions:
     method: POST
     uri: https://fosstodon.org/api/v1/apps
     body:
-      fields:
-        client_name: rtoot package
-        redirect_uris: urn:ietf:wg:oauth:2.0:oob
-        scopes: read write follow
+      string: client_name=rtoot%20package&redirect_uris=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&scopes=read%20write%20follow
   response:
     status: 200
     headers:
@@ -43,11 +40,7 @@ http_interactions:
     method: POST
     uri: https://fosstodon.org/oauth/token
     body:
-      fields:
-        client_id: yM79YEj3VCjm5_JsAbhNSCkI-Adl6UDUIz-KpZ3KgbE
-        client_secret: OHu66AIN7lXpyMZktmoggNPyJqmc8K3ucJFcIcY6NA4
-        redirect_uri: urn:ietf:wg:oauth:2.0:oob
-        grant_type: client_credentials
+      string: client_id=yM79YEj3VCjm5_JsAbhNSCkI-Adl6UDUIz-KpZ3KgbE&client_secret=OHu66AIN7lXpyMZktmoggNPyJqmc8K3ucJFcIcY6NA4&redirect_uri=urn%3Aietf%3Awg%3Aoauth%3A2.0%3Aoob&grant_type=client_credentials
   response:
     status: 200
     headers:

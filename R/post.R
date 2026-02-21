@@ -76,40 +76,36 @@ post_toot <- function(
   if (!is.null(language)) {
     params[["language"]] <- language
   }
-  url <- prepare_url(token$instance)
-  r <- httr::POST(
-    httr::modify_url(url = url, path = "api/v1/statuses"),
-    body = params,
-    httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
+  r <- make_request(token$instance, "api/v1/statuses", token$bearer) |>
+    httr2::req_body_form(!!!params) |>
+    httr2::req_perform()
+  check_status_code(
+    r,
+    200,
+    "Failed to post toot. Status code: {httr2::resp_status(r)}"
   )
-  if (httr::status_code(r) == 200L) {
-    sayif(verbose, "Your toot has been posted!")
-  } else {
-    cli::cli_abort(
-      "Failed to post toot. Status code: {httr::status_code(r)}"
-    )
-  }
+  sayif(verbose, "Your toot has been posted!")
   invisible(r)
 }
 
 upload_media_to_mastodon <- function(media, alt_text, token) {
-  url <- prepare_url(token$instance)
-  params <- list(file = httr::upload_file(media), description = alt_text)
-  r <- httr::POST(
-    httr::modify_url(url = url, path = "api/v1/media"),
-    body = params,
-    httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
-  )
-  if (httr::status_code(r) != 200) {
-    cli::cli_abort(paste0(
+  r <- make_request(token$instance, "api/v1/media", token$bearer) |>
+    httr2::req_body_multipart(
+      file = curl::form_file(media),
+      description = alt_text
+    ) |>
+    httr2::req_perform()
+  check_status_code(
+    r,
+    200,
+    paste0(
       "Error while uploading: ",
       media,
-      ". Status Code:",
-      httr::status_code(r)
-    ))
-  }
-
-  httr::content(r)$id
+      ". Status Code: ",
+      httr2::resp_status(r)
+    )
+  )
+  httr2::resp_body_json(r)$id
 }
 
 check_media <- function(media, alt_text) {
@@ -179,15 +175,15 @@ post_user <- function(
     params <- list()
   }
 
-  url <- prepare_url(token$instance)
-  r <- httr::POST(
-    httr::modify_url(url = url, path = path),
-    body = params,
-    httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
+  r <- make_request(token$instance, path, token$bearer) |>
+    httr2::req_body_form(!!!params) |>
+    httr2::req_perform()
+  check_status_code(
+    r,
+    200,
+    "Failed to perform action on user. Status code: {httr2::resp_status(r)}"
   )
-  if (httr::status_code(r) == 200L) {
-    sayif(verbose, "successfully performed action on user")
-  }
+  sayif(verbose, "successfully performed action on user")
   invisible(r)
 }
 
@@ -227,15 +223,15 @@ post_status <- function(
   path <- paste0("/api/v1/statuses/", id, "/", action)
   params <- list()
 
-  url <- prepare_url(token$instance)
-  r <- httr::POST(
-    httr::modify_url(url = url, path = path),
-    body = params,
-    httr::add_headers(Authorization = paste0("Bearer ", token$bearer))
+  r <- make_request(token$instance, path, token$bearer) |>
+    httr2::req_body_form(!!!params) |>
+    httr2::req_perform()
+  check_status_code(
+    r,
+    200,
+    "Failed to perform action on status. Status code: {httr2::resp_status(r)}"
   )
-  if (httr::status_code(r) == 200L) {
-    sayif(verbose, "successfully performed action on status")
-  }
+  sayif(verbose, "successfully performed action on status")
   invisible(r)
 }
 
@@ -279,7 +275,7 @@ post_thread <- function(
       language = language,
       verbose = FALSE
     )
-    resp <- httr::content(toot)
+    resp <- httr2::resp_body_json(toot)
     ids[msg_i] <- resp$id
     toot_id <- ids[msg_i]
   }

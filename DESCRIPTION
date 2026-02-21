@@ -20,13 +20,13 @@ License: MIT + file LICENSE
 URL: https://gesistsa.github.io/rtoot/, https://github.com/gesistsa/rtoot/
 BugReports: https://github.com/gesistsa/rtoot/issues
 Depends:
-    R (>= 3.6)
+    R (>= 4.2)
 Imports: 
     cli,
     clipr,
     curl,
     dplyr,
-    httr,
+    httr2,
     jsonlite,
     methods,
     tibble

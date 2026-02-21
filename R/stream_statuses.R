@@ -203,7 +203,10 @@ stream_toots <- function(
     append <- TRUE
   }
   sayif(verbose, "Writing to ", file_name)
-  url <- httr::modify_url(url, path = path, query = params)
+  stream_url <- url
+  stream_url$path <- path
+  stream_url$query <- params
+  url <- url_build(stream_url)
 
   stop_time <- Sys.time() + timeout
 
