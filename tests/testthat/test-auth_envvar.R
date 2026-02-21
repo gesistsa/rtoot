@@ -1,5 +1,3 @@
-original_envvar <- Sys.getenv("RTOOT_DEFAULT_TOKEN")
-
 test_that("convert_token_to_envvar", {
   fake_token <- list(bearer = paste0(rep("a", 43), collapse = ""))
   fake_token$type <- "user"
@@ -43,6 +41,9 @@ test_that("convert_token_to_envvar (clipboard)", {
 test_that("get_token_from_envvar", {
   ## NB: This is not an exported function
   skip_if(Sys.getenv("RTOOT_DEFAULT_TOKEN") == "")
+  original_envvar <- Sys.getenv("RTOOT_DEFAULT_TOKEN")
+  withr::defer(Sys.setenv(RTOOT_DEFAULT_TOKEN = original_envvar))
+
   x <- get_token_from_envvar()
   expect_true("rtoot_bearer" %in% class(x))
   ## temper the envvar
@@ -59,5 +60,3 @@ test_that("get_token_from_envvar", {
   expect_null(x)
   expect_false("rtoot_bearer" %in% class(x))
 })
-
-Sys.setenv(RTOOT_DEFAULT_TOKEN = original_envvar)

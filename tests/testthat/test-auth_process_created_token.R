@@ -1,5 +1,4 @@
-original_envvar <- Sys.getenv("RTOOT_DEFAULT_TOKEN")
-Sys.setenv(RTOOT_DEFAULT_TOKEN = "abc;user;fosstodon.org")
+withr::local_envvar(RTOOT_DEFAULT_TOKEN = "abc;user;fosstodon.org")
 fake_token <- get_token_from_envvar()
 
 testing_path <- file.path(tempdir(), "rtoot_check")
@@ -109,5 +108,3 @@ test_that("verify", {
     NA
   )
 })
-
-Sys.setenv(RTOOT_DEFAULT_TOKEN = original_envvar)
