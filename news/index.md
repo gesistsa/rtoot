@@ -8,6 +8,12 @@
 - added simple error handling in
   [`post_toot()`](https://gesistsa.github.io/rtoot/reference/post_toot.md)
   ([\#185](https://github.com/gesistsa/rtoot/issues/185))
+- use `withr` in tests
+  ([\#180](https://github.com/gesistsa/rtoot/issues/180))
+- switched to `httr2`
+  ([\#169](https://github.com/gesistsa/rtoot/issues/169))
+- use tryCatch for long running queries
+  ([\#142](https://github.com/gesistsa/rtoot/issues/142))
 
 ## rtoot 0.3.6
 
