@@ -115,7 +115,7 @@ test_that("get_account_lists", {
 
 test_that("get_account_relationships", {
   vcr::use_cassette("get_account_relationships_default", {
-    x <- get_account_relationships(id = id, token = fake_token)
+    x <- get_account_relationships(ids = id, token = fake_token)
   })
   expect_true("tbl_df" %in% class(x))
 })
