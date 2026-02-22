@@ -1,9 +1,6 @@
-## Update from 0.3.5 to 0.3.6
+## Update from 0.3.6 to 1.0.0
 
-* bug fixes
+non user-facing changes: added `withr` to tests and switched to `httr2`
 
 *(dontrun examples are used to not make unnecessary API calls)*
 
-## R CMD check results
-
-0 errors | 0 warnings | 0 notes

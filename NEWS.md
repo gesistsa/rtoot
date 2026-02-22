@@ -1,4 +1,4 @@
-# rtoot 0.3.6.9000
+# rtoot 1.0.0
 
 * correct return value in `post_toot()` documentation (#185)
 * added simple error handling in `post_toot()` (#185)
