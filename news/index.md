@@ -1,6 +1,6 @@
 # Changelog
 
-## rtoot 0.3.6.9000
+## rtoot 1.0.0
 
 - correct return value in
   [`post_toot()`](https://gesistsa.github.io/rtoot/reference/post_toot.md)
