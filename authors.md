@@ -19,7 +19,7 @@
 ## Citation
 
 Source:
-[`inst/CITATION`](https://github.com/gesistsa/rtoot/blob/main/inst/CITATION)
+[`inst/CITATION`](https://github.com/gesistsa/rtoot/blob/v1.0.0/inst/CITATION)
 
 Schoch, D. & Chan, C-h., (2023). Rtoot: Collecting and Analyzing
 Mastodon Data. Mobile Media & Communication.
