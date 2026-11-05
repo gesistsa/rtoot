@@ -7,6 +7,7 @@ automatically starts authentication. If you want to start the process
 manually, you can do so by calling:
 
 ``` r
+
 library(rtoot)
 auth_setup()
 ```
@@ -27,6 +28,7 @@ If you want to use multiple tokens, you should change the name of the
 file the token is saved in:
 
 ``` r
+
 auth_setup(name = "account1")
 ```
 
@@ -34,6 +36,7 @@ To use this token, you can either read it into your environment and
 provide it to each function:
 
 ``` r
+
 token <- readRDS(file.path(tools::R_user_dir("rtoot", "config"), "account1.rds"))
 get_status(id = "109297677620300632", instance = "mastodon.social", token = token)
 ```
@@ -42,6 +45,7 @@ Or you can set the default token in the options at the start of a
 session:
 
 ``` r
+
 options("rtoot_token" = file.path(tools::R_user_dir("rtoot", "config"), "account1.rds"))
 ```
 
@@ -51,12 +55,14 @@ For advanced users, you can also store your token as an environment
 variable (envvar). You can either obtain a token by calling
 
 ``` r
+
 auth_setup(clipboard = TRUE)
 ```
 
 Or, if you already have a token
 
 ``` r
+
 token <- readRDS(file.path(tools::R_user_dir("rtoot", "config"), "account1.rds"))
 content <- convert_token_to_envvar(token)
 ```

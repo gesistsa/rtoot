@@ -1,5 +1,11 @@
 # Changelog
 
+## rtoot (development version)
+
+- fixed [\#193](https://github.com/gesistsa/rtoot/issues/193): automatic
+  pagination stopped after the first page when `since_id` or `min_id`
+  was supplied
+
 ## rtoot 1.0.0
 
 CRAN release: 2026-02-22

@@ -1,6 +1,7 @@
 # Live streaming toots
 
 ``` r
+
 library("rtoot")
 ```
 
@@ -39,6 +40,7 @@ time has elapsed or any error occurs. Streaming itself shouldn’t be very
 memory intensive so you can start a new R instance in parallel.
 
 ``` r
+
 #stream a minute of all statuses
 stream_timeline_public(timeout = 60, file_name = "public.json")
 

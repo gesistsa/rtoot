@@ -20,12 +20,14 @@ For a BibTeX entry, use the output from `citation("rtoot")`.
 To get the current released version from CRAN:
 
 ``` r
+
 install.packages("rtoot")
 ```
 
 You can install the development version of rtoot from GitHub:
 
 ``` r
+
 pak::pak("gesistsa/rtoot")
 ```
 
@@ -35,6 +37,7 @@ First you should set up your own credentials (see also
 [`vignette("auth")`](https://gesistsa.github.io/rtoot/articles/auth.md))
 
 ``` r
+
 auth_setup()
 ```
 
@@ -62,6 +65,7 @@ General information about an instance can be obtained with
 [`get_instance_general()`](https://gesistsa.github.io/rtoot/reference/get_instance.md)
 
 ``` r
+
 get_instance_general(instance = "mastodon.social")
 ```
 
@@ -71,6 +75,7 @@ shows the activity for the last three months and
 the trending hashtags of the week.
 
 ``` r
+
 get_instance_activity(instance = "mastodon.social")
 get_instance_trends(instance = "mastodon.social")
 ```
@@ -81,6 +86,7 @@ To get the most recent toots of a specific instance use
 [`get_timeline_public()`](https://gesistsa.github.io/rtoot/reference/get_timeline_public.md)
 
 ``` r
+
 get_timeline_public(instance = "mastodon.social")
 ```
 
@@ -88,6 +94,7 @@ To get the most recent toots containing a specific hashtag use
 [`get_timeline_hashtag()`](https://gesistsa.github.io/rtoot/reference/get_timeline_hashtag.md)
 
 ``` r
+
 get_timeline_hashtag(hashtag = "rstats", instance = "mastodon.social")
 ```
 
@@ -96,6 +103,7 @@ The function
 allows you to get the most recent toots from your own timeline.
 
 ``` r
+
 get_timeline_home()
 ```
 
@@ -108,6 +116,7 @@ package you can get the id via
 [`search_accounts()`](https://gesistsa.github.io/rtoot/reference/search_accounts.md).
 
 ``` r
+
 search_accounts("schochastics")
 ```
 
@@ -122,6 +131,7 @@ and statuses with
 [`get_account_statuses()`](https://gesistsa.github.io/rtoot/reference/get_account_statuses.md).
 
 ``` r
+
 id <- "109302436954721982"
 get_account_followers(id)
 get_account_following(id)
@@ -133,12 +143,14 @@ get_account_statuses(id)
 You can post toots with:
 
 ``` r
+
 post_toot(status = "my first rtoot #rstats")
 ```
 
 It can also include media and alt_text.
 
 ``` r
+
 post_toot(
     status = "my first rtoot #rstats", media = "path/to/media",
     alt_text = "description of media"
@@ -159,6 +171,7 @@ any public status on any instance use
 [`stream_timeline_public()`](https://gesistsa.github.io/rtoot/reference/stream_timeline.md)
 
 ``` r
+
 stream_timeline_public(timeout = 30, file_name = "public.json")
 ```
 
@@ -171,6 +184,7 @@ by the token).
 streams all statuses containing a specific hashtag
 
 ``` r
+
 stream_timeline_hashtag("rstats", timeout = 30, file_name = "rstats_public.json")
 ```
 

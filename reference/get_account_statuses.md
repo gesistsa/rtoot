@@ -93,7 +93,11 @@ tibble or list of statuses
 
 For anonymous calls only public statuses are returned. If a user token
 is supplied also private statuses the user is authorized to see are
-returned
+returned.
+
+`limit` is the total number of statuses to return. Statuses are
+requested in pages of 20; if `limit` is larger than 20, pagination is
+used automatically.
 
 ## Examples
 
