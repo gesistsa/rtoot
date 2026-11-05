@@ -1,3 +1,7 @@
+# rtoot (development version)
+
+* fixed #193: automatic pagination stopped after the first page when `since_id` or `min_id` was supplied
+
 # rtoot 1.0.0
 
 * correct return value in `post_toot()` documentation (#185)

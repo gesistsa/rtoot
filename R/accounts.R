@@ -68,7 +68,9 @@ search_accounts <- function(
 #' @param exclude_reblogs logical, Whether to filter out boosts from the response.
 #' @param hashtag character, filter for statuses using a specific hashtag.
 #' @param retryonratelimit If TRUE, and a rate limit is exhausted, will wait until it refreshes. Most Mastodon rate limits refresh every 5 minutes. If FALSE, and the rate limit is exceeded, the function will terminate early with a warning; you'll still get back all results received up to that point.
-#' @details  For anonymous calls only public statuses are returned. If a user token is supplied also private statuses the user is authorized to see are returned
+#' @details  For anonymous calls only public statuses are returned. If a user token is supplied also private statuses the user is authorized to see are returned.
+#'
+#' `limit` is the total number of statuses to return. Statuses are requested in pages of 20; if `limit` is larger than 20, pagination is used automatically.
 #' @return tibble or list of statuses
 #' @examples
 #' \dontrun{
