@@ -94,3 +94,12 @@ test_that("process_request: n == page_size, and page_size is lower than API limi
 ##   })
 ##   expect_true(nrow(x) == n)
 ## })
+
+test_that("select_pager uses ids present in Mastodon's Link header (#193)", {
+  expect_equal(select_pager(list()), "max_id")
+  expect_equal(select_pager(list(max_id = 1)), "max_id")
+  expect_equal(select_pager(list(since_id = 1)), "max_id")
+  expect_equal(select_pager(list(max_id = 2, since_id = 1)), "max_id")
+  expect_equal(select_pager(list(min_id = 1)), "min_id")
+  expect_equal(select_pager(list(min_id = 1, max_id = 2)), "min_id")
+})

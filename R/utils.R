@@ -211,12 +211,7 @@ process_request <- function(
   retryonratelimit = TRUE,
   verbose = TRUE
 ) {
-  # if since_id is provided we page forward, otherwise we page backwards
-  if (!is.null(params[["since_id"]])) {
-    pager <- "since_id"
-  } else {
-    pager <- "max_id"
-  }
+  pager <- select_pager(params)
   pages <- ceiling(n / page_size)
   output <- vector("list")
   if (verbose && pages > 1) {
@@ -398,6 +393,16 @@ handle_params <- function(params, max_id, since_id, min_id) {
     params$min_id <- handle_id(min_id)
   }
   params
+}
+
+## Mastodon's Link header only carries max_id (next, older) and min_id (prev, newer).
+## min_id pages forward; otherwise page backwards with max_id while since_id
+## stays in params as a lower bound.
+select_pager <- function(params) {
+  if (!is.null(params[["min_id"]])) {
+    return("min_id")
+  }
+  "max_id"
 }
 
 ## a predicate to determine whether to break away from the for-loop of process_request

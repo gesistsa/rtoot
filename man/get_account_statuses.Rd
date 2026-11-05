@@ -54,7 +54,9 @@ tibble or list of statuses
 Get statuses from a user
 }
 \details{
-For anonymous calls only public statuses are returned. If a user token is supplied also private statuses the user is authorized to see are returned
+For anonymous calls only public statuses are returned. If a user token is supplied also private statuses the user is authorized to see are returned.
+
+\code{limit} is the total number of statuses to return. Statuses are requested in pages of 20; if \code{limit} is larger than 20, pagination is used automatically.
 }
 \examples{
 \dontrun{
